@@ -1,0 +1,79 @@
+body {
+	margin: 0px;
+}
+.crl{ clear: both;}
+
+/* ========== */
+
+
+/* =   top  = */
+
+
+/* ========== */
+
+#top {
+	height: 41px;
+	background: url('../images/t0133acb.png') center bottom no-repeat;
+	position: relative;
+	z-index: 3;
+}
+
+#top .toper {
+	height: 37px;
+	background: url('../images/t01267b1.png');
+}
+
+
+/*------------------------h_l----------------------------*/
+
+#top .h_l {
+	margin: 0px auto;
+	list-style: none;
+	float: left;
+	width: 492px;
+	height: 37px;
+}
+
+#top .h_l li {
+	float: left;
+}
+
+#top .h_l a {
+	float: left;
+	height: 37px;
+	padding: 0 12px;
+	color: white;
+	font-size: 14px;
+	line-height: 37px;
+	text-decoration: none;
+}
+
+#top .h_l a:hover {
+	color: gold;
+	text-decoration: none;
+}
+
+
+/*------------------------h_r-------------------------------*/
+
+#top .h_r {
+	margin: 0px auto;
+	margin-right: 10%;
+	list-style: none;
+	float: right;
+	width: 492px;
+	height: 37px;
+}
+
+#top .h_r li {
+	float: right;
+}
+
+#top .h_r a {
+	float: right;
+	height: 37px;
+	color: white;
+	font-size: 14px;
+	line-height: 37px;
+	text-decoration: none;
+}
