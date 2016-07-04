@@ -1,15 +1,16 @@
-<?php	
+<?php
 //	3.目录里面的文件 放到表格中
 	echo "<table width=600px border=1px align=center>";
 		echo "<tr>
-			<th>文件名</th>	
-			<th>文件大小</th>	
-			<th>文件类型</th>	
-			<th>创建时间</th>	
-			<th>修改时间</th>	
-			<th>访问时间</th>	
+		    <th>文件名</th>
+		    <th>文件大小</th>
+		    <th>文件类型</th>
+		    <th>创建时间</th>
+		    <th>修改时间</th>
+		    <th>访问时间</th>
 		</tr>";
-//	1.打开目录
+		
+//		1.打开目录
 	$path="./mydir/";
 	
 	$dir=opendir($path);
@@ -34,7 +35,6 @@
 		echo "</tr>";
 	}
 	
-	//3 关闭目录 释放资源
+//	3.关闭目录 释放资源
 	closedir($dir);
-	
-	echo "</table>";
+    echo "</table>";
