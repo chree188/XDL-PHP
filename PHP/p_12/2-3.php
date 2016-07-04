@@ -33,5 +33,20 @@
 //	3.遍历目录里面的文件
 	readdir($dir);
 	readdir($dir);
-	var_dump($f=readdir($dir));
+//	var_dump($f=readdir($dir));
+	echo "<hr>";
+	while (FALSE !== ($f=readdir($dir))) {
+//		屏蔽掉string "0" boolean为false的情况
+		echo $f."<br>";
+	}
 	
+//	FALSE boolean 7
+//	int 0
+//	float 0.0 0.00
+//	string "" "0"
+//	array array()
+//	boolean false
+
+//	4.关闭目录资源
+	closedir($dir);
+	var_dump($dir);
