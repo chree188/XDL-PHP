@@ -30,6 +30,7 @@
 	echo "<hr>";
 	rewind($dir);
 	
+//	3.遍历目录里面的文件
 	readdir($dir);
 	readdir($dir);
 	
@@ -38,3 +39,6 @@
 		echo $f."<br>";
 	}
 	
+//	4.关闭目录资源
+	closedir($dir);
+	var_dump($dir);
