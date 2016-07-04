@@ -23,6 +23,7 @@
 		
 //		拼接完整的想对路径
 		$ff=rtrim($path,"/")."/".$f;
+		date_default_timezone_set('PRC');	//设置时区
 		echo "<tr>";
 			echo "<td>{$f}</td>";
 			echo "<td>".filesize($ff)."</td>";
