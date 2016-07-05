@@ -48,7 +48,7 @@
 			$dir=opendir($path);
 //			遍历目录中的文件
 			while (false!==($f=readdir($dir))) {
-				if($f=="."||$f==".."||$f=="system.php"){
+				if($f=="."||$f==".."||$f=="system.php"||$f=="fileSystem.php"||$f=="FMS.php"){
 					continue;
 				}
 				$ff=rtrim($path,"/")."/".$f;
