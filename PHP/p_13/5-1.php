@@ -1,12 +1,12 @@
 <?php	
 //	文件的指针操作
 	$f=fopen("1.txt", "r");
-	echo fread($f, 2);	//结果为 ab
+//	echo fread($f, 2);	//结果为 ab
 //		内容:abcd
 //		指针：0123 4
 	
 //	当前指针位置
-	echo ftell($f);	//结果为2
+//	echo ftell($f);	//结果为2
 	
 //	当使用fread去读取的时候 读取1位指针位置向后移动一位
 //	使用fseek移动指针的时候 指针移动几位就在最后的那个位置那里
@@ -14,8 +14,8 @@
 //	移动文件指针
 //	fseek($f, SEEK_CUR);	//seek寻找 cur current 当前 SEEK_CUR当前位置
 //	fseek($f, -2,SEEK_END);	//SEEK_END 从末尾开始
-	echo "<hr>";
-	fseek($f, 2,SEEK_CUR);
+//	echo "<hr>";
+//	fseek($f, 2,SEEK_CUR);
 //  fseek($f,200,SEEK_CUR);
 //  直接移动指针 指针可以指向指定位置
 //  echo ftell($f);//结果为 4
