@@ -71,10 +71,11 @@
 		}
 
 		//5 随机文件名
+		date_default_timezone_set("PRC");
 		
 		$ext = pathinfo($upfile['name'],PATHINFO_EXTENSION);
 		do{
-			$newpic = time().rand(0001,9999).".".$ext;
+			$newpic = date("YmdHis").rand(0001,9999).".".$ext;
 		}while(file_exists($path.$newpic));
 
 
