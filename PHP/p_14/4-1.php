@@ -8,9 +8,10 @@
 //	1 设置参数
 	$path="./uploads";	//上传文件的存储目录
 	$path=rtrim($path,"/")."/";
-	$upfile=$_FILES['pic'];	//被上传的文件
-	$typelist=array("image/jpg","image/png","image/gif","image/jpeg");
+	@$upfile=$_FILES['pic'];	//被上传的文件
+//	$typelist=array("image/jpg","image/png","image/gif","image/jpeg");
 //	支持的上传文件类型 array()空数组表示不限制
+	$typelist=array();
 	$maxsize=0;	//限制最大文件上传的尺寸  自定义设置 0表示不限制
 
 //	2-4 都是上传失败的情况
@@ -60,10 +61,39 @@
 			die("文件上传失败：尺寸过大");
 		}
 	}
+	
+//	5 随机文件名
+//	5.1 后缀
+//	$ext=pathinfo($upfile['name'],PATHINFO_EXTENSION);	//1.jpg jpg
+////	5.2 随机文件名 并拼接
+//	date_default_timezone_set("PRC");
+//	$newpic=date("YmdHis").rand(0001, 9999).".".$ext;
+//	echo $newpic;
+////	5.3 如果生成的新文件名已经存在 重新生成一遍
+//	if(file_exists($path.$newpic)){
+//		$newpic=date("YmdHis").rand(0001, 9999).".".$ext;
+//	}
 
-
-
-
-
-
-
+//	使用循环语句判断文件名是否存在for while  do while
+//	先执行 后判断 使用do-while
+//	5.1--5.3可改写为''
+	date_default_timezone_set("PRC");
+	$ext=pathinfo($upfile['name'],PATHINFO_EXTENSION);
+	do{
+		$newpic=date("YmdHis").rand(0001, 9999).".".$ext;
+	}while(file_exists($path.$newpic));
+//	echo $newpic;
+	
+//	6 实现文件移动 上传
+//	move_uploaded_file($upfile['tmp_name'],$path.$newpic);
+	
+	if(is_uploaded_file($upfile['tmp_name'])){	//是否是post上传得到的文件
+//		文件的移动
+			if(move_uploaded_file($upfile['tmp_name'], $path.$newpic)){
+				echo $newpic."<br>";
+			}else{
+				die("文件上传失败：移动失败");
+			}
+	}else{
+		die("文件上传失败：不是上传的文件");
+	}
