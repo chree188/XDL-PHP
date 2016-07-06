@@ -15,9 +15,9 @@
 //	copy(源文件, 目标文件);
 
 //	指定上传文件的复制  文件目录操作的函数	
-//	copy($_FILES['pic']['tmp_name'], $_FILES['pic']['name']);
+//	copy($_FILES['pic1']['tmp_name'], $_FILES['pic1']['name']);
 	
 //	文件上传有自己专用的函数  剪切
 //	目录名后面要打斜线
-	move_uploaded_file($_FILES['pic']['tmp_name'], $_FILES['pic']['name']);
+	move_uploaded_file($_FILES['pic1']['tmp_name'], $_FILES['pic1']['name']);
 //	move 移动 upload上传 uploaded被上传的  已经上传的 file文件
