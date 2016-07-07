@@ -27,7 +27,6 @@
 		$typelist = array("image/jpg","image/png","image/gif","image/jpeg");
 		// 支持的上传文件的类型 array()空数组表示不限制
 		
-
 		//3 实现文件上传 
 		$pic = uploadfile($path,$upfile,$typelist);
 
@@ -37,6 +36,4 @@
 		}else{
 			echo "文件上传成功,新的文件名为: ".$pic['info']."<br>";//新的文件名
 		}
-
-
 	}
