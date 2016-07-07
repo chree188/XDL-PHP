@@ -75,7 +75,7 @@
 		
 		$ext = pathinfo($upfile['name'],PATHINFO_EXTENSION);
 		do{
-			$newpic = date("YmdHis").rand(0001,9999).".".$ext;
+			$newpic = date("YmdHis").rand(1000,9999).".".$ext;
 		}while(file_exists($path.$newpic));
 
 
