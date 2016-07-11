@@ -71,15 +71,15 @@
 	
 	
 	
-	
-	$path="./mydir/1.avi";
-	
-	$a=pathinfo($path);
-	
-	echo $a['extension'];
-	
-	echo "<pre>";
-	
-	print_r($a);
-	
-	
+//	
+//	$path="./mydir/1.avi";
+//	
+//	$a=pathinfo($path);
+//	
+//	echo $a['extension'];
+//	
+//	echo "<pre>";
+//	
+//	print_r($a);
+//	
+
