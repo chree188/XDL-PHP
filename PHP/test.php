@@ -83,3 +83,73 @@
 //	print_r($a);
 //	
 
+
+/* //我们定义一个泡到美女的变量($pao)为false，意思为没泡到
+ $pao = false;
+
+if($pao)
+    //你可以试试在这儿写多行代码会不会报错。
+    echo '我愿意去死';
+else
+    echo '我不愿意去死';
+
+    //if...else执行结束，后续代码*/
+    
+    
+    
+/*//我们定义一个泡到美女的变量($pao)为true，意思为泡到了
+ $pao = true;
+
+if($pao){
+    echo '我愿意去死';
+    echo '林志玲，我爱死你了。';
+}else{
+    echo '我不愿意去死';
+    echo '凤姐，我肯定不会爱你的';
+}
+ //if...else执行结束，后续代码*/
+
+ 
+ 
+ /*//声明变量为null
+$n = null;
+var_dump($n);
+
+//var_dump显示输出变量$meiyou，看看结果是什么？
+@var_dump($meiyou);
+
+//声明一个变量$iphone的值为字符串的手机
+$iphone = '手机';
+//unset销毁掉一个变量
+unset($iphone);
+@var_dump($iphone);*/
+ 
+ 
+/*  $apple = false;//null
+ if(empty($apple)){
+     echo '执行了真区间，凤姐，我爱你';
+ }else{
+    echo '行了假区间，你想凤姐了';
+ }*/
+ 
+/* 
+ //待会儿将变量$jia改为null再执行看看结果
+$jia = false;
+$jian = true;
+
+$result = isset($jia,$jian);
+
+var_dump($result);
+*/
+
+
+/*$one = 10;
+$two = false;
+$three = 0;
+$four = null;
+
+$result = isset($one , $two , $three , $four);
+//执行看看结果，是不是 false
+var_dump($result);*/
+
+
