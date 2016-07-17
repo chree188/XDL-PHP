@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/common.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+<!--[if IE 6]>
+<script src="js/DD_belatedPNG.js" mce_src="DD_belatedPNG.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('.png');
+</script>
+<![endif]-->
+<script src="js/ScrollPic.js"></script>
+</head>
+
+<body>
+<div class="content icontent">
+	<div class="top">
+    	<div class="link"><a class="i" href="#_">设为首页</a>&nbsp;&nbsp;<a class="a" href="#_">加入收藏</a>&nbsp;&nbsp;<a href="#_" class="sbutton">余额查询</a></div>
+    	<div class="logo"><a href="#_"></a></div>
+    </div>
+    <div class="nav">
+    	<div class="search">
+        	<input type="text" class="text" /><input type="button" value="" class="button" />
+        </div>
+    	<ul class="list">
+        	<li class="select">
+            	<a class="n01" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n02" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n03" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n04" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n05" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n06" href="#_"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="ctel">
+   	<img src="images/mark.jpg" width="22" height="21" />&nbsp;<span class="tt">养生热线：</span>0576-81234559 189065589661 </div>
+    <div class="inner">
+    	<div class="logon">
+        	<div class="money">
+            	<div class="tt">您好，尊敬的用户！</div>
+您的消费卡号为 <span class="orange">VIP12345678910</span>，卡内余额 <span class="red">1000.00</span> 元。<br /><br />
+点击 <a href="#_" class="orange">这里</a> 返回首页
+            </div>
+        </div>
+    </div>
+    <div class="footer">浙ICP备案12345678  版权所有 台州天慈天养土特产  技术支持：<a href="#_">千寻科技</a></div>
+</div>
+<script>
+$(function(){
+	var pli = $(".productbd").find(".pli");
+	pli.each(function(){
+		$(this).mouseover(function(){
+			$(this).addClass("plis")
+		})
+		$(this).mouseout(function(){
+			$(this).removeClass("plis")
+		})
+		
+	})
+})
+</script>
+<script>
+var big_img = $(".big-img").find("li");
+var small_img = $(".small-img").find("li");
+small_img.each(function (i){
+	$(this).click(function (){
+		small_img.each(function (j){
+			$(big_img[j]).css({display:"none"});
+			$(this).removeClass("select");
+		})
+		$(big_img[i]).fadeIn();
+		$(this).addClass("select");
+	})
+})
+</script>
+<script>
+$(function(){
+	var newsbd = $(".newsbd").find(".con");
+	newsbd.each(function(){
+	$(this).mouseover(function(){
+		$(this).children(".intro").css("display","block")
+	})
+	$(this).mouseout(function(){
+		$(this).children(".intro").css("display","none")
+	})
+	})
+})
+</script>
+</body>
+</html>

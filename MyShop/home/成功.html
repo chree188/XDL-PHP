@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/common.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+<!--[if IE 6]>
+<script src="js/DD_belatedPNG.js" mce_src="DD_belatedPNG.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('.png');
+</script>
+<![endif]-->
+<script src="js/ScrollPic.js"></script>
+</head>
+
+<body>
+<div class="content icontent">
+	<div class="top">
+    	<div class="link"><a class="i" href="#_">设为首页</a>&nbsp;&nbsp;<a class="a" href="#_">加入收藏</a><br />
+        <input type="text" class="text08" /><input type="button" class="button04" />&nbsp;&nbsp;<a href="#_" class="sbutton">余额查询</a></div>
+    	<div class="logo"><a href="#_"></a></div>
+    </div>
+    <div class="nav">
+    	<div class="search"><a href="#_"><img src="images/buycar.gif" width="182" height="41" /></a></div>
+    	<ul class="list">
+        	<li class="select">
+            	<a class="n01" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n02" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n03" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n04" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n05" href="#_"></a>
+            </li>
+            <li>
+            	<a class="n06" href="#_"></a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="inner">
+    	<div class="osuccess">
+        	<div class="hd">订单完成</div>
+            <div class="bd">
+            	<div class="m"><img src="images/mark03.jpg" width="172" height="149" /></div>
+                <div class="i">
+                	<div class="title">恭喜，您的订单已成功生成！</div>
+                    <div class="tt">请保持您的手机畅通，我们将有专人与您联系。</div>
+                    <div class="c">您可以选择 <a href="#_" class="orange">继续购物</a> ，或 <a href="#_" class="orange">返回首页</a> 。</div>
+                </div>
+          </div>
+        </div>
+    </div>
+    <div class="footer">浙ICP备案12345678  版权所有 台州天慈天养土特产  技术支持：<a href="#_">千寻科技</a></div>
+</div>
+<script>
+$(function(){
+	var pli = $(".productbd").find(".pli");
+	pli.each(function(){
+		$(this).mouseover(function(){
+			$(this).addClass("plis")
+		})
+		$(this).mouseout(function(){
+			$(this).removeClass("plis")
+		})
+		
+	})
+})
+</script>
+<script>
+var big_img = $(".big-img").find("li");
+var small_img = $(".small-img").find("li");
+small_img.each(function (i){
+	$(this).click(function (){
+		small_img.each(function (j){
+			$(big_img[j]).css({display:"none"});
+			$(this).removeClass("select");
+		})
+		$(big_img[i]).fadeIn();
+		$(this).addClass("select");
+	})
+})
+</script>
+<script>
+$(function(){
+	var numtext = $(".pdetail").find(".text07");
+	var jia = $(".pdetail").find(".jia");
+	var jian = $(".pdetail").find(".jian");
+	jia.click(function(){
+		var num = parseInt(numtext.val());
+		var j = num + 1;
+		numtext.val(j);
+	})
+	jian.click(function (){
+		var  i = parseInt(numtext.val());;
+		if(i > 1){
+			var  n = i - 1;
+			numtext.val(n)
+		}
+	})
+})
+</script>
+</body>
+</html>
