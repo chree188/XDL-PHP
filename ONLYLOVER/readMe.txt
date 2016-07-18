@@ -18,4 +18,6 @@ index.php  主页/首页
 
 footer.php  页脚
 
+details.php 商品详情
+
 onlyLover.sql  表数据库

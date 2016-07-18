@@ -12,6 +12,9 @@
 		<a class="a" href="register.php">
 			注册
 		</a>
+		<br />
+		<input type="text" class="text08" />
+		<input type="button" class="button04" />
 		&nbsp;&nbsp;
 		<a href="#_" class="sbutton">
 			余额查询
@@ -21,12 +24,11 @@
 		<a href="#_"></a>
 	</div>
 </div>
-
-<!--导航栏-->
 <div class="nav">
 	<div class="search">
-		<input type="text" class="text" />
-		<input type="button" value="" class="button" />
+		<a href="shopCar.php">
+			<img src="../public/img/buycar.gif" width="182" height="41" />
+		</a>
 	</div>
 	<ul class="list">
 		<li>
@@ -51,10 +53,4 @@
 			<a class="n07" href="#_"></a>
 		</li>
 	</ul>
-</div>
-
-<!--养生热线-->
-<div class="ctel">
-	<img src="../public/img/mark.jpg" width="22" height="21" />
-	&nbsp;<span class="tt">养生热线：</span>0570-6216550 13777399387
 </div>
