@@ -5,13 +5,16 @@
 		<script src="../public/js/ScrollPic.js"></script>
 	</head>
 	<body>
+		<!--网页主体content-->
 		<div class="content">
 			<?php
 			include 'header.php';
 			?>
 			<div class="banner">
 				<img src="../public/img/banner.jpg" alt="懒人图库">
+			<!--main-->
 			<div class="main">
+				<!--mleft-->
 				<div class="mleft">
 					<div class="lnav">
 						<div class="hd">

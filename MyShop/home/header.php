@@ -1,9 +1,11 @@
+<!--网站头部和导航栏-->
 <link href="../public/css/common.css" rel="stylesheet" />
 <link href="../public/css/style.css" rel="stylesheet" />
 
+<!--头部-->
 <div class="top">
 	<div class="link">
-		<a class="i" href="#_">
+		<a class="i" href="login.php">
 			登录
 		</a>
 		&nbsp;&nbsp;
@@ -19,6 +21,8 @@
 		<a href="#_"></a>
 	</div>
 </div>
+
+<!--导航栏-->
 <div class="nav">
 	<div class="search">
 		<input type="text" class="text" />
@@ -48,6 +52,8 @@
 		</li>
 	</ul>
 </div>
+
+<!--养生热线-->
 <div class="ctel">
 	<img src="../public/img/mark.jpg" width="22" height="21" />
 	&nbsp;<span class="tt">养生热线：</span>0570-6216550 13777399387
