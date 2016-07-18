@@ -31,7 +31,7 @@
 			$sex = array("1"=>"男","0"=>"女");
 			//六脉神剑 
 			//1 导入数据库配置文件
-			include("../../public/dbconfig.php");
+			include("../../public/sql/dbconfig.php");
 			//2 连接数据库
 			$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
 			//3 设置字符集 选择数据库

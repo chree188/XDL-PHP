@@ -5,7 +5,7 @@
 	//首先打开数据库 
 	
 	//1 导入配置文件 
-	include("../../public/dbconfig.php");
+	include("../../public/sql/dbconfig.php");
 	//2 连接数据库
 	$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
 	//3 选择数据库 设置字符集

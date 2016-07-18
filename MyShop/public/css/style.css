@@ -17,15 +17,15 @@
 	height:25px;
 }
 .top .link .i{
-	background:url(../images/mark03.gif) no-repeat 0 0px;
+	background:url(../img/mark03.gif) no-repeat 0 0px;
 	padding-left:20px;
 }
 .top .link .a{
-	background:url(../images/mark03.gif) no-repeat 0 -45px;
+	background:url(../img/mark03.gif) no-repeat 0 -45px;
 	padding-left:25px;
 }
 .top .link .sbutton{
-	background:url(../images/button.jpg) no-repeat;
+	background:url(../img/button.jpg) no-repeat;
 	color:#FFF;
 	font-size:14px;
 	width:73px;
@@ -36,25 +36,25 @@
 }
 .logo a{
 	display:block;
-	background:url(../images/logo.jpg) no-repeat;
+	background:url(../img/logo.jpg) no-repeat;
 	width:210px;
 	height:83px;
 }
 .nav{
-	background:url(../images/nav.jpg) no-repeat;
+	background:url(../img/nav.jpg) no-repeat;
 	height:40px;
 	line-height:40px;
 	margin:10px auto 0;
-	width:970px;
+	width:980px;
 	padding:0 10px 0 0;
 }
 .nav .search{
 	float:right;
-	margin-top:-6px;
+	margin-top:0px,auto;
 	_position:relative;
 }
 .text{
-	background:url(../images/text.jpg) no-repeat;
+	background:url(../img/text.jpg) no-repeat;
 	width:142px;
 	height:26px;
 	border:none;
@@ -63,7 +63,7 @@
 	line-height:26px;
 }
 .button{
-	background:url(../images/sbutton.jpg) no-repeat;
+	background:url(../img/sbutton.jpg) no-repeat;
 	border:none;
 	cursor:pointer;
 	width:75px;
@@ -77,77 +77,55 @@
 	display:block;
 	width:106px;
 	height:40px;
-	background:url(../images/line01.jpg) no-repeat right center;
+	background:url(../img/line01.jpg) no-repeat right center;
 }
 .nav .list .select .n01{
-	background:url(../images/navs.jpg) no-repeat 1px 0;
+	background:url(../img/navs.jpg) no-repeat 1px 0;
 }
 .nav .list .select .n02{
-	background:url(../images/navs.jpg) no-repeat -105px 0;
+	background:url(../img/navs.jpg) no-repeat -105px 0;
 }
 .nav .list .select .n03{
-	background:url(../images/navs.jpg) no-repeat -211px 0;
+	background:url(../img/navs.jpg) no-repeat -211px 0;
 }
 .nav .list .select .n04{
-	background:url(../images/navs.jpg) no-repeat -317px 0;
+	background:url(../img/navs.jpg) no-repeat -317px 0;
 }
 .nav .list .select .n05{
-	background:url(../images/navs.jpg) no-repeat -423px 0;
+	background:url(../img/navs.jpg) no-repeat -423px 0;
 }
 .nav .list .select .n06{
-	background:url(../images/navs.jpg) no-repeat -529px 0;
+	background:url(../img/navs.jpg) no-repeat -529px 0;
 }
 .nav .list .select .n07{
-	background:url(../images/navs.jpg) no-repeat -633px 0;
+	background:url(../img/navs.jpg) no-repeat -633px 0;
 }
-.nav .list li .n01:hover{
-	background:url(../images/navs.jpg) no-repeat 1px 0;
-}
-.nav .list li .n02:hover{
-	background:url(../images/navs.jpg) no-repeat -105px 0;
-}
-.nav .list li .n03:hover{
-	background:url(../images/navs.jpg) no-repeat -211px 0;
-}
-.nav .list li .n04:hover{
-	background:url(../images/navs.jpg) no-repeat -317px 0;
-}
-.nav .list li .n05:hover{
-	background:url(../images/navs.jpg) no-repeat -423px 0;
-}
-.nav .list li .n06:hover{
-	background:url(../images/navs.jpg) no-repeat -529px 0;
-}
-.nav .list li .n07:hover{
-	background:url(../images/navs.jpg) no-repeat -633px 0;
-}
-
 .nav .list li a:hover{
-	background:url(../images/navs.jpg) no-repeat;
+	background:url(../img/navs.jpg) no-repeat;
 }
 .nav .list li .n01:hover{
-	background:url(../images/navs.jpg) no-repeat 1px 0;
+	background:url(../img/navs.jpg) no-repeat 1px 0;
 }
 .nav .list li .n02:hover{
-	background:url(../images/navs.jpg) no-repeat -105px 0;
+	background:url(../img/navs.jpg) no-repeat -105px 0;
 }
 .nav .list li .n03:hover{
-	background:url(../images/navs.jpg) no-repeat -211px 0;
+	background:url(../img/navs.jpg) no-repeat -211px 0;
 }
 .nav .list li .n04:hover{
-	background:url(../images/navs.jpg) no-repeat -317px 0;
+	background:url(../img/navs.jpg) no-repeat -317px 0;
 }
 .nav .list li .n05:hover{
-	background:url(../images/navs.jpg) no-repeat -423px 0;
+	background:url(../img/navs.jpg) no-repeat -423px 0;
 }
 .nav .list li .n06:hover{
-	background:url(../images/navs.jpg) no-repeat -529px 0;
+	background:url(../img/navs.jpg) no-repeat -529px 0;
 }
 .nav .list li .n07:hover{
-	background:url(../images/navs.jpg) no-repeat -633px 0;
+	background:url(../img/navs.jpg) no-repeat -633px 0;
 }
 .ctel{
-	background:url(../images/line.jpg) no-repeat center bottom;
+	background:url(../img/line.jpg) no-repeat center bottom;
 	height:45px;
 	line-height:45px;
 	text-align:center;
@@ -252,7 +230,7 @@ Author:Manh
 
 .maxx-theme .nivoSlider {
 	position:relative;
-	background:#fff url(../images/loading.gif) no-repeat 50% 50%;
+	background:#fff url(../img/loading.gif) no-repeat 50% 50%;
 	height:575px;
 	width:980px;
 	margin:0px auto 0;
@@ -269,7 +247,7 @@ Author:Manh
 }
 
 .maxx-theme .nivo-controlNav,.maxx-theme .nivo-controlNav a,.maxx-theme .nivo-directionNav a{
-	background-image:url(../images/sprite.png);
+	background-image:url(../img/sprite.png);
 	background-repeat:no-repeat
 }
 .maxx-theme .nivo-controlNav {
@@ -290,14 +268,14 @@ Author:Manh
 	border:0;
 	margin:12px 3px 0 3px;
 	float:left;
-	background:url(../images/prve.png) no-repeat;
+	background:url(../img/prve.png) no-repeat;
 	
 }
 .maxx-theme .nivo-controlNav a:first-child{
 	margin-left:11px;
 }
 .maxx-theme .nivo-controlNav a.active {
-	background:url(../images/prves.png) no-repeat;
+	background:url(../img/prves.png) no-repeat;
 }
 
 .maxx-theme .nivo-directionNav a {
@@ -308,10 +286,10 @@ Author:Manh
 	border:0;
 }
 .maxx-theme .nivo-directionNav a.nivo-nextNav01 {
-	background:url(../images/prve01.png) no-repeat right 0;
+	background:url(../img/prve01.png) no-repeat right 0;
 }
 .maxx-theme .nivo-directionNav a.nivo-prevNav01 {
-	background:url(../images/prve01.png) no-repeat 0 0;
+	background:url(../img/prve01.png) no-repeat 0 0;
 }
 
 .maxx-theme .nivo-caption {
@@ -350,7 +328,7 @@ Author:Manh
 	margin-right:14px;
 }
 .lnav .hd{
-	background:#ffa800 url(../images/mark03.gif) no-repeat 207px -157px;
+	background:#ffa800 url(../img/mark03.gif) no-repeat 207px -157px;
 	height:45px;
 	line-height:45px;
 	font-size:18px;
@@ -365,7 +343,7 @@ Author:Manh
 }
 .lnav .list{
 	margin:10px 0;
-	background:url(../images/mark.gif) no-repeat;
+	background:url(../img/mark.gif) no-repeat;
 	overflow:hidden;
 	width:240px;
 }
@@ -392,8 +370,8 @@ Author:Manh
 	color:#4d4d4d;
 }
 .picgd {position:relative; width:722px; margin:0px auto 0;}
-.picgd a.up {background:url(../images/prve.jpg) no-repeat left center; display: block;height:92px; left:0px; overflow: hidden;position: absolute; text-indent: -9999px;top:40px;width:15px;}
-.picgd a.down{background:url(../images/prve.jpg) no-repeat right center; display: block;height:92px;overflow: hidden; position: absolute; right: 0px;text-indent: -9999px;top:40px;width:15px;}
+.picgd a.up {background:url(../img/prve.jpg) no-repeat left center; display: block;height:92px; left:0px; overflow: hidden;position: absolute; text-indent: -9999px;top:40px;width:15px;}
+.picgd a.down{background:url(../img/prve.jpg) no-repeat right center; display: block;height:92px;overflow: hidden; position: absolute; right: 0px;text-indent: -9999px;top:40px;width:15px;}
 .picgd .pic {height:164px;margin: 0 auto;overflow: hidden;width:430px; padding-top:5px;}
 .picgd .pic div {float: left;}
 .picgd .pic li {float: left; padding:0 6px;}
@@ -422,7 +400,7 @@ Author:Manh
 	border:1px #ccc solid;
 }
 .lnav01 .hd{
-	background:#90d325 url(../images/mark03.gif) no-repeat 207px -211px;
+	background:#90d325 url(../img/mark03.gif) no-repeat 207px -211px;
 	height:45px;
 	line-height:45px;
 	font-size:18px;
@@ -432,7 +410,7 @@ Author:Manh
 }
 .lnav01 .list{
 	margin:10px 0;
-	background:url(../images/mark01.gif) no-repeat center -5px;
+	background:url(../img/mark01.gif) no-repeat center -5px;
 	overflow:hidden;
 	width:240px;
 }
@@ -459,7 +437,7 @@ Author:Manh
 	color:#4d4d4d;
 }
 .lnav02 .hd{
-	background:#f00000 url(../images/mark03.gif) no-repeat 207px -260px;
+	background:#f00000 url(../img/mark03.gif) no-repeat 207px -260px;
 	height:45px;
 	line-height:45px;
 	font-size:18px;
@@ -469,7 +447,7 @@ Author:Manh
 }
 .lnav02 .list{
 	margin:10px 0;
-	background:url(../images/mark02.gif) no-repeat center -5px;
+	background:url(../img/mark02.gif) no-repeat center -5px;
 	overflow:hidden;
 	width:240px;
 }
@@ -568,7 +546,7 @@ Author:Manh
 	font-weight: bolder;
 }
 .tzabout{
-	background:url(../images/nbg02.jpg) no-repeat;
+	background:url(../img/nbg02.jpg) no-repeat;
 	padding:10px;
 	margin-top:10px;
 	float:left;
@@ -585,7 +563,7 @@ Author:Manh
 }
 .aboutus{
 	float:left;
-	background:url(../images/nbg.jpg) no-repeat;
+	background:url(../img/nbg.jpg) no-repeat;
 	padding:10px;
 	width:255px;
 	height:155px;
@@ -611,7 +589,7 @@ Author:Manh
 }
 .news{
 	float:left;
-	background:url(../images/nbg01.jpg) no-repeat;
+	background:url(../img/nbg01.jpg) no-repeat;
 	padding:10px;
 	width:400px;
 	height:155px;
@@ -707,7 +685,7 @@ Author:Manh
 	margin-right:0;
 }
 .icontent{
-	background:#e8e8e8 url(../images/bg.jpg) repeat-x center top;
+	background:#e8e8e8 url(../img/bg.jpg) repeat-x center top;
 }
 .ibanner01{
 	position:relative;
@@ -820,7 +798,7 @@ Author:Manh
 	margin-right:5px;
 }
 .ysbd{
-	background:url(../images/ys02.jpg) no-repeat left center;
+	background:url(../img/ys02.jpg) no-repeat left center;
 	padding-left:225px;
 	height:305px;
 	padding-top:30px;
@@ -831,21 +809,21 @@ Author:Manh
 }
 .ysbd .con{
 	width:380px;
-	background:url(../images/m.jpg) no-repeat left 3px;
+	background:url(../img/m.jpg) no-repeat left 3px;
 	padding-left:15px;
 	color:#666;
 }
 .ysbd .con01{
 	width:380px;
 	margin-top:30px;
-	background:url(../images/m.jpg) no-repeat 105px 3px;
+	background:url(../img/m.jpg) no-repeat 105px 3px;
 	padding-left:120px;
 	color:#666;
 }
 .ysbd .con02{
 	width:380px;
 	margin-top:30px;
-	background:url(../images/m.jpg) no-repeat 65px 3px;
+	background:url(../img/m.jpg) no-repeat 65px 3px;
 	padding-left:80px;
 	color:#666;
 }
@@ -1050,7 +1028,7 @@ Author:Manh
 	height:55px;
 }
 .tinner .bd{
-	background:url(../images/bd.png) repeat-y;
+	background:url(../img/bd.png) repeat-y;
 	padding:10px 30px;
 	overflow:hidden;
 	width:946px;
@@ -1065,7 +1043,7 @@ Author:Manh
 	margin-right:25px;
 }
 .ileft .title{
-	background:url(../images/lnavtt.jpg) no-repeat;
+	background:url(../img/lnavtt.jpg) no-repeat;
 	height:55px;
 	padding:0 20px;
 	line-height:55px;
@@ -1074,17 +1052,17 @@ Author:Manh
 	color:#FFF;
 }
 .ileft .list{
-	background:url(../images/lnavbd.jpg) repeat-y;
+	background:url(../img/lnavbd.jpg) repeat-y;
 	padding:10px 5px;
 }
 .ileft .list li{
-	background:url(../images/lnav.jpg) no-repeat 18px center;
+	background:url(../img/lnav.jpg) no-repeat 18px center;
 	padding-left:40px;
 	height:30px;
 	line-height:30px;
 }
 .ileft .list .select{
-	background:url(../images/lnavs.jpg) no-repeat 0px center;
+	background:url(../img/lnavs.jpg) no-repeat 0px center;
 	padding-left:40px;
 }
 .ileft .list li a{
@@ -1105,7 +1083,7 @@ Author:Manh
 	color:#999;
 }
 .iright .title{
-	background:url(../images/line02.jpg) no-repeat center bottom;
+	background:url(../img/line02.jpg) no-repeat center bottom;
 	padding-bottom:20px;
 	font-size:18px;
 	font-family:微软雅黑;
@@ -1219,7 +1197,7 @@ Author:Manh
 	position:absolute;
 	right:0;
 	bottom:25px;
-	background:url(../images/tel.jpg) no-repeat;
+	background:url(../img/tel.jpg) no-repeat;
 	width:119px;
 	padding-top:15px;
 	height:27px;
@@ -1249,14 +1227,14 @@ Author:Manh
 .oproduct .picgd .pic{
 	margin:0;
 }
-.oproduct .picgd a.up {background:url(../images/prve.jpg) no-repeat left center; display:none; height:92px; left:0px; overflow: hidden;position: absolute; text-indent: -9999px;top:40px;width:15px;}
-.oproduct .picgd a.down{background:url(../images/prve01.jpg) no-repeat right center; display: block;height:92px;overflow: hidden; position: absolute; right: 0px;text-indent: -9999px;top:40px;width:15px;}
+.oproduct .picgd a.up {background:url(../img/prve.jpg) no-repeat left center; display:none; height:92px; left:0px; overflow: hidden;position: absolute; text-indent: -9999px;top:40px;width:15px;}
+.oproduct .picgd a.down{background:url(../img/prve01.jpg) no-repeat right center; display: block;height:92px;overflow: hidden; position: absolute; right: 0px;text-indent: -9999px;top:40px;width:15px;}
 .oproduct .picgd .pic li{
 	padding:0 4px;
 }
 .picgd01 {position:relative; width:660px; margin:0px auto 0;}
-.picgd01 a.up {background:url(../images/prve02.jpg) no-repeat left center; display: block;height:92px; left:0px; overflow: hidden;position: absolute; text-indent: -9999px;top:261px;width:26px;}
-.picgd01 a.down{background:url(../images/prve02.jpg) no-repeat right center; display: block;height:92px;overflow: hidden; position: absolute; right: 0px;text-indent: -9999px;top:261px;width:26px;}
+.picgd01 a.up {background:url(../img/prve02.jpg) no-repeat left center; display: block;height:92px; left:0px; overflow: hidden;position: absolute; text-indent: -9999px;top:261px;width:26px;}
+.picgd01 a.down{background:url(../img/prve02.jpg) no-repeat right center; display: block;height:92px;overflow: hidden; position: absolute; right: 0px;text-indent: -9999px;top:261px;width:26px;}
 .picgd01 .pic {height:615px;margin: 0 auto;overflow: hidden;width:430px; padding-top:5px;}
 .picgd01 .pic div {float: left;}
 .picgd01 .pic li {float: left; width:570px;}
@@ -1268,7 +1246,7 @@ Author:Manh
 }
 .picgd01 .pic li .li{
 	float:left;
-	background:url(../images/pbg.jpg) no-repeat center top;
+	background:url(../img/pbg.jpg) no-repeat center top;
 	padding:0 15px;
 	width:255px;
 	margin-top:25px;
@@ -1308,7 +1286,7 @@ Author:Manh
 .brandl{
 	float:left;
 	width:660px;
-	background:url(../images/yxpbg.jpg) no-repeat center top;
+	background:url(../img/yxpbg.jpg) no-repeat center top;
 	margin-top:30px;
 }
 .brandr{
@@ -1418,7 +1396,7 @@ Author:Manh
 	border-top:1px #ccc solid;
 }
 .onews .tt{
-	background:#e6e6e6 url(../images/mark01.jpg) no-repeat 299px center;
+	background:#e6e6e6 url(../img/mark01.jpg) no-repeat 299px center;
 	height:30px;
 	line-height:30px;
 	text-align:right;
@@ -1457,7 +1435,7 @@ Author:Manh
 	height:488px;
 }
 .contactbd .cleft{
-	background:url(../images/ctusl.jpg) no-repeat;
+	background:url(../img/ctusl.jpg) no-repeat;
 	padding:20px;
 	width:195px;
 	color:#FFF;
@@ -1518,7 +1496,7 @@ Author:Manh
 	padding:5px;	
 }
 .text01{
-	background:url(../images/text01.jpg) no-repeat;
+	background:url(../img/text01.jpg) no-repeat;
 	border:none;
 	width:271px;
 	line-height:33px;
@@ -1526,7 +1504,7 @@ Author:Manh
 	padding:0 5px;
 }
 .text02{
-	background:url(../images/text02.jpg) no-repeat;
+	background:url(../img/text02.jpg) no-repeat;
 	border:none;
 	width:604px;
 	line-height:33px;
@@ -1534,7 +1512,7 @@ Author:Manh
 	padding:0 5px;
 }
 .text03{
-	background:url(../images/text03.jpg) no-repeat;
+	background:url(../img/text03.jpg) no-repeat;
 	border:none;
 	width:604px;
 	line-height:33px;
@@ -1542,14 +1520,14 @@ Author:Manh
 	padding:0 5px;
 }
 .button01{
-	background:url(../images/button04.jpg) no-repeat;
+	background:url(../img/button04.jpg) no-repeat;
 	cursor:pointer;
 	border:none;
 	width:97px;
 	height:34px;
 }
 .button02{
-	background:url(../images/button05.jpg) no-repeat;
+	background:url(../img/button05.jpg) no-repeat;
 	cursor:pointer;
 	border:none;
 	width:97px;
@@ -1563,7 +1541,7 @@ Author:Manh
 	border:5px #ffffff solid;
 }
 .button03{
-	background:url(../images/button07.jpg) no-repeat;
+	background:url(../img/button07.jpg) no-repeat;
 	font-size:16px;
 	font-family:微软雅黑;
 }
@@ -1581,7 +1559,7 @@ Author:Manh
 .logonl .hd{
 	border-bottom:1px #ffa800 solid;
 	padding:10px 0;
-	background:url(../images/m01.jpg) no-repeat 20px center;
+	background:url(../img/m01.jpg) no-repeat 20px center;
 	padding-left:80px;
 }
 .logonl .hd .tt{
@@ -1622,7 +1600,7 @@ Author:Manh
 	float:left;
 }
 .money{
-	background:url(../images/m02.jpg) no-repeat 100px 20px;
+	background:url(../img/m02.jpg) no-repeat 100px 20px;
 	height:200px;
 	padding-left:300px;
 	font-family:微软雅黑;
@@ -1653,7 +1631,7 @@ Author:Manh
 }
 .jian{
 	float:left;
-	background:url(../images/numbg.jpg) no-repeat;
+	background:url(../img/numbg.jpg) no-repeat;
 	width:23px;
 	height:23px;
 	cursor:pointer;
@@ -1673,7 +1651,7 @@ Author:Manh
 }
 .jia{
 	float:left;
-	background:url(../images/numbg.jpg) no-repeat right center;
+	background:url(../img/numbg.jpg) no-repeat right center;
 	width:23px;
 	height:23px;
 	cursor:pointer;
@@ -1685,7 +1663,7 @@ Author:Manh
 	margin-top:10px;
 }
 .pdetail .intro .blink a{
-	background:url(../images/button09.jpg) no-repeat;
+	background:url(../img/button09.jpg) no-repeat;
 	width:193px;
 	height:34px;
 	line-height:34px;
@@ -1699,7 +1677,7 @@ Author:Manh
 	margin-top:10px;
 }
 .pdetail .intro .blink01 a{
-	background:url(../images/button08.jpg) no-repeat;
+	background:url(../img/button08.jpg) no-repeat;
 	width:183px;
 	height:34px;
 	line-height:34px;
@@ -1717,14 +1695,14 @@ Author:Manh
 	margin-top:20px;
 }
 .text08{
-	background:url(../images/text04.jpg) no-repeat left center;
+	background:url(../img/text04.jpg) no-repeat left center;
 	width:140px;
 	height:28px;
 	line-height:28px;
 	border:none;
 }
 .button04{
-	background:url(../images/text04.jpg) no-repeat right center;
+	background:url(../img/text04.jpg) no-repeat right center;
 	cursor:pointer;
 	width:30px;
 	height:28px;
@@ -1732,7 +1710,7 @@ Author:Manh
 	border:none;
 }
 .pdetail .intro .cbg{
-	background:url(../images/numbg01.jpg) no-repeat;
+	background:url(../img/numbg01.jpg) no-repeat;
 	color:#fff;
 	width:44px;
 	height:21px;
