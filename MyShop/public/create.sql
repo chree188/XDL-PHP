@@ -3,7 +3,7 @@
 /*建库建表前先删除数据库*/
 drop database myshop;
 
-/*创建数据库myshop，指定数据库的字符编码用UTF-8 */
+/*创建数据库myshop，指定数据库的字符编码用UTF-8*/
 create database myshop character set utf8;
 
 /*打开数据库*/
