@@ -1,13 +1,13 @@
-
+					MyShop目录结构
 ============================================================================
 ==========MyShop===========
-admin 后台文件夹
+admin 后台资源文件夹
 
-home 前台文件夹
+home 前台资源文件夹
 
-public 功能资源文件夹
+public 公共资源文件夹
 
-index.php 前后台主页
+index.php MyShop主页
 
 
 ==========home 前台=============
@@ -35,20 +35,32 @@ details.php 商品详情
 
 
 ============admin 后台==============
-goods
+goods	商品模块资源文件夹
 
-include
+include	后台资源工具包文件夹
 
-orders
+orders	订单模块资源文件夹
 
-type
+type	类别模块资源文件夹
 
-users
+users	用户模块资源文件夹
 
 dologin.php	登录处理页
 
-index.php	主页/首页
+index.php	网站后台主页/首页
 
-login.php	登录
+login.php	后台管理员登录
 
-logout.php	登出
+logout.php	注销
+
+
+============public 公共资源===============
+css css样式资源文件夹
+
+fonts  字体资源文件夹
+
+img	  图片资源文件夹
+
+js	js资源文件夹
+
+sql 数据库资源文件夹

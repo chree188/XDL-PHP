@@ -22,7 +22,7 @@ body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y
 </head>
 <body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;">
 <div id="left-top">
-	<div><img src="images/main/member.gif" width="44" height="44" /></div>
+	<div><img src="./images/login/8.jpg" width="44" height="44" /></div>
     <span>用户：<?php echo $_SESSION['user']['username']; ?><br>角色：超级管理员</span>
 </div>
     <div style="float: left" id="my_menu" class="sdmenu">
