@@ -1,0 +1,10 @@
+		*{ margin:0; padding:0;}
+		img{ border:none;}
+		ul,li{list-style:none;}
+		a{text-decoration:none;}
+		#zc{line-height:40px;height:103px;}
+		#zc1{float:left;margin:10px;}
+		#zc2{float:right;margin:28px 90px;}
+		.zc123{float:left;line-height:30px;height:470px;width:1200px;}
+		.zczuo{float:left;margin:70px 280px;}
+		.zcyou{float:right;margin:-470px 150px;}

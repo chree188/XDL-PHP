@@ -48,15 +48,15 @@
 			<input type="reset">
 		</form>
 		<?php
-//处理添加表单的错误信息
-switch(@$_GET['errno']){
-case 1:
-echo "<h2 style='color:red; '>添加失败</h2>";
-break;
-case 2:
-echo "<h2 style='color:red; '>用户名不能空</h2>";
-break;
-}
+		//处理添加表单的错误信息
+		switch(@$_GET['errno']) {
+			case 1 :
+				echo "<h2 style='color:red; '>添加失败</h2>";
+				break;
+			case 2 :
+				echo "<h2 style='color:red; '>用户名不能空</h2>";
+				break;
+		}
 		?>
 	</body>
 </html>

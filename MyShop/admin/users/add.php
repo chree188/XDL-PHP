@@ -197,7 +197,7 @@ td.fenye {
   </tr>
   <tr>
     <td align="left" valign="top">
-    <form method="post" action="../users/action.php?a=insert">
+    <form method="post" action="./action.php?a=insert">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">账号：</td>
@@ -281,6 +281,17 @@ td.fenye {
         </tr>
     </table>
     </form>
+    <?php
+		//处理添加表单的错误信息
+		switch(@$_GET['errno']) {
+			case 1 :
+				echo "<h2 style='color:red; '>添加失败</h2>";
+				break;
+			case 2 :
+				echo "<h2 style='color:red; '>带*项不能为空</h2>";
+				break;
+		}
+	?>
     </td>
     </tr>
 </table>
