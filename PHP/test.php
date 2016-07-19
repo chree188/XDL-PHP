@@ -153,12 +153,15 @@ $result = isset($one , $two , $three , $four);
 var_dump($result);*/
 
 
-$shu = 'biao';
-$biao = 'wo';
-$wo = 'test';
-$test = 'sina';
-$sina = 'zhongguo';
-$zhongguo = 'china';
-$china = '我爱你';
-//别运行，自己去推理一下代码。也写几个可变变量玩玩吧！
-echo $$$$$$$shu;
+//$shu = 'biao';
+//$biao = 'wo';
+//$wo = 'test';
+//$test = 'sina';
+//$sina = 'zhongguo';
+//$zhongguo = 'china';
+//$china = '我爱你';
+////别运行，自己去推理一下代码。也写几个可变变量玩玩吧！
+//echo $$$$$$$shu;
+
+	$time = time();
+	echo $time;

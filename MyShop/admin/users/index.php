@@ -160,7 +160,6 @@ td.fenye {
         <th align="center" valign="middle" class="borderright">ID</th>
         <th align="center" valign="middle" class="borderright">帐号</th>
         <th align="center" valign="middle" class="borderright">姓名</th>
-        <th align="center" valign="middle" class="borderright">密码</th>
         <th align="center" valign="middle" class="borderright">性别</th>
         <th align="center" valign="middle" class="borderright">地址</th>
         <th align="center" valign="middle" class="borderright">邮编</th>
@@ -170,14 +169,54 @@ td.fenye {
         <th align="center" valign="middle" class="borderright">注册时间</th>
         <th align="center" valign="middle">操作</th>
       </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="center" valign="middle" class="borderright borderbottom">1</td>
-        <td align="center" valign="middle" class="borderright borderbottom">admin</td>
-        <td align="center" valign="middle" class="borderright borderbottom">创始人</td>
-        <td align="center" valign="middle" class="borderright borderbottom">已锁定</td>
-        <td align="center" valign="middle" class="borderright borderbottom">2013-04-26 11:00:59</td>
-        <td align="center" valign="middle" class="borderbottom"><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+      
+      <?php
+			//查看用户信息 select 输出到表格里面 
+			//设置默认时区
+			date_default_timezone_set('PRC');
+			// 设置性别
+			$sex = array("1"=>"男","0"=>"女");
+			// 设置权限
+			$state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
+			//六脉神剑 
+			//1 导入数据库配置文件
+			include("../../public/sql/dbconfig.php");
+			//2 连接数据库
+			$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
+			//3 设置字符集 选择数据库
+			mysqli_set_charset($link,"utf8");
+			mysqli_select_db($link,DBNAME);
+			//4 写sql语句 获得结果集 
+			$sql = "select * from users";
+			$result = mysqli_query($link,$sql);
+			//5 解析结果集 
+			while($row = mysqli_fetch_assoc($result)){
+				$regTime = date("Y-m-d H:i:s",$row['addtime']);
+$str = <<<swUse
+				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
+				onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['username']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['name']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$sex[$row['sex']]}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['address']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['phone']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['email']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['state']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$regTime}</td>
+        <td align="center" valign="middle" class="borderbottom">
+        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
+        <span class="gray">&nbsp;|&nbsp;</span>
+        <a href="action.php?a=del&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
       </tr>
+swUse;
+	echo $str;
+			}
+			//6 关闭数据库 释放结果集 
+			mysqli_close($link);
+			mysqli_free_result($result);
+		?>
     </table></td>
     </tr>
   <tr>

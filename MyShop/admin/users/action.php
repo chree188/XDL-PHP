@@ -18,14 +18,14 @@
 		case "insert"://添加
 		//接收表单传递过来的学生信息
 
-		if(!$_POST['name']){
+		if(!$_POST['username']||!$_POST['pass']||!$_POST['email']){		//带*号必填项不能为空
 			header("Location:add.php?errno=2");
 			exit;
 		}
 		
 		$username = $_POST['username'];
 		$name = $_POST['name'];
-		$pass = $_POST['pass'];
+		$pass = md5($_POST['pass']);	//使用md5 加密密码
 		$sex = $_POST['sex'];
 		$address = $_POST['address'];
 		$code = $_POST['code'];
@@ -35,10 +35,10 @@
 		$addtime = time();
 
 		//4 写sql语句 执行sql
-		$sql = "insert into user(username,name,pass,sex,address,code,phone,email,state,addtime) 
-		values('$username','$name','$pass','$sex','$address','$code','$phone','$email','$state','$addtime')";
+		$sql = "insert into users(username,name,pass,sex,address,code,phone,email,state,addtime) 
+		values('$username','$name','$pass','$sex','$address','$code','$phone','$email','$state',$addtime)";
 		mysqli_query($link,$sql);
-
+		
 		//5判断是否操作成功 
 		if(mysqli_insert_id($link)>0){
 			header("Location:index.php");

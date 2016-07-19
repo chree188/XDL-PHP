@@ -7,8 +7,8 @@ use myshop;
 insert into users(username,pass,email) values('zs',md5(123),'zs@qq.com');
 insert into users(username,pass,email) values('ls',md5(456),'ls@qq.com');
 insert into users(username,pass,email) values('ww',md5(789),'ww@qq.com');
-/*insert into users(username,name,pass,sex,address,code,phone,email,addtime) 
-values ('js','剑圣',md5(123456),1,'英雄联盟','324300','13777399387','zwt0706@126.com',now());*/
+/*insert into users(username,name,pass,sex,address,code,phone,email) 
+values ('js','剑圣',md5(123456),1,'英雄联盟','324300','13777399387','zwt0706@126.com');*/
 
 /*以下是商品分类信息*/
 insert into type (name)values('食用油');
