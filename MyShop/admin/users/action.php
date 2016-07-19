@@ -32,7 +32,7 @@
 		$phone = $_POST['phone'];
 		$email = $_POST['email'];
 		$state = $_POST['state'];
-		$addtime = $_POST['addtime'];
+		$addtime = time();
 
 		//4 写sql语句 执行sql
 		$sql = "insert into user(username,name,pass,sex,address,code,phone,email,addtime) 

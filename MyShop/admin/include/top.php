@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset=utf-8 />
 <title>后台页面头部</title>
 <link href="css/css.css" type="text/css" rel="stylesheet" />
 </head>
