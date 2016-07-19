@@ -1,11 +1,12 @@
 <?php
 	//验证码
-	
+	session_start();
 	////2 把验证码放到画布资源中
 	// 设置验证码的参数
 
-	$length = 4;
-	$code= getcode($length,3);
+	$length = 3;
+	$code= getcode($length,1);
+	$_SESSION['mycode'] = $code;
 	$width = 20*$length;
 	$height = 25;
 
@@ -45,14 +46,6 @@
 
 	imagedestroy($im);
 	
-
-	
-
-
-	
-
-
-
 
 	//1 出验证码
 /**

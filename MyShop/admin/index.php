@@ -1,3 +1,12 @@
+<?php
+	session_start();	
+	//登录验证
+	if(empty($_SESSION['user'])){
+		header('Location:login.php');
+		exit;
+	}
+?>
+
 <!DOCTYPE HTML >
 <html>
 	<head>

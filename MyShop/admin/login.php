@@ -14,5 +14,20 @@
 			<input type="submit" value="登录" />
 			<input type="reset" />
 		</form>
+		<?php	
+			//输出错误信息
+			$_GET['errno'] = empty($_GET['errno'])? '':$_GET['errno'];
+			switch($_GET['errno']){
+				case 1:
+					echo "<h2 style='color:red;'>用户不存在</h2>";
+				break;
+				case 2:
+					echo "<h2 style='color:red;'>密码错误</h2>";
+				break;
+				case 3:
+					echo "<h2 style='color:red;'>验证码错误</h2>";
+				break;
+			}
+		?>	
 	</body>
 </html>
