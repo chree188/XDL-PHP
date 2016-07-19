@@ -35,8 +35,8 @@
 		$addtime = time();
 
 		//4 写sql语句 执行sql
-		$sql = "insert into user(username,name,pass,sex,address,code,phone,email,addtime) 
-		values('$username','$name','$pass','$sex','$address','$code','$phone','$email','$addtime')";
+		$sql = "insert into user(username,name,pass,sex,address,code,phone,email,state,addtime) 
+		values('$username','$name','$pass','$sex','$address','$code','$phone','$email','$state','$addtime')";
 		mysqli_query($link,$sql);
 
 		//5判断是否操作成功 
@@ -45,7 +45,6 @@
 		}else{
 			header("Location:add.php?errno=1");
 		}
-
 		break;
 
 
