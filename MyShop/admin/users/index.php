@@ -131,6 +131,14 @@ td.fenye {
 </style>
 </head>
 <body>
+	<?php
+		//输出删除失败的提示
+		switch(@$_GET['errno']){
+			case 3: echo "<h3 style='color:red'>删除失败!</h3>";
+			break;
+		}
+
+	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
@@ -191,7 +199,7 @@ td.fenye {
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
 			while($row = mysqli_fetch_assoc($result)){
-				$regTime = date("Y-m-d H:i:s",$row['addtime']);
+				$regTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化注册时间戳
 $str = <<<swUse
 				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
 				onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -203,7 +211,7 @@ $str = <<<swUse
         <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['phone']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['email']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['state']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$state[$row['state']]}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$regTime}</td>
         <td align="center" valign="middle" class="borderbottom">
         <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>

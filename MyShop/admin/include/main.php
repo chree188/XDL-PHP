@@ -97,7 +97,7 @@ div.main-order {
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="main">
   <tr>
     <td colspan="2" align="left" valign="top">
-    <span class="time"><strong>上午好！<?php echo $_SESSION['user']['username']; ?></strong><u>[超级管理员]</u></span>
+    <span class="time"><strong>上午好！<?php echo $_SESSION['user']['name']; ?></strong><u>[超级管理员]</u></span>
     <div class="top">
 						<span class="left">您上次的登灵时间：2012-05-03  12:00   登录IP：127.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span>
 						<a href="index.html" target="mainFrame" onFocus="this.blur()">

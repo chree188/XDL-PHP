@@ -270,7 +270,7 @@ td.fenye {
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b style="color: red;">*</b></td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b style="color: red;">*</b>号项为必填项。。。</h4>
+        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b style="color: red;">*</b>号项为必填项，不能为空。。。</h4>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">

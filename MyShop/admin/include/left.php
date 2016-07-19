@@ -22,8 +22,13 @@ body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y
 </head>
 <body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;">
 <div id="left-top">
-	<div><img src="./images/login/8.jpg" width="44" height="44" /></div>
-    <span>用户：<?php echo $_SESSION['user']['username']; ?><br>角色：超级管理员</span>
+	<div><a href="./main.php" target="mainFrame" ><img src="./images/login/8.jpg" width="44" height="44" /></a></div>
+    <span>用户：<?php echo $_SESSION['user']['name']; ?><br>角色：
+    	<?php 
+		    $state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
+		    echo $state[$_SESSION['user']['state']]; 
+    	?>
+    </span>
 </div>
     <div style="float: left" id="my_menu" class="sdmenu">
       <div class="collapsed">

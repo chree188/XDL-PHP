@@ -12,17 +12,16 @@
 	mysqli_set_charset($link,"utf8");
 	mysqli_select_db($link,DBNAME);
 	
-
-	
-	switch(@$_GET['a']){
-		case "insert"://添加
+	$_GET['a'] = empty($_GET['a'])? 0 : $_GET['a'];
+	switch($_GET['a']){
+		
+		//添加
+		case "insert":
 		//接收表单传递过来的学生信息
-
 		if(!$_POST['username']||!$_POST['pass']||!$_POST['email']){		//带*号必填项不能为空
 			header("Location:add.php?errno=2");
 			exit;
 		}
-		
 		$username = $_POST['username'];
 		$name = $_POST['name'];
 		$pass = md5($_POST['pass']);	//使用md5 加密密码
@@ -33,12 +32,10 @@
 		$email = $_POST['email'];
 		$state = $_POST['state'];
 		$addtime = time();
-
 		//4 写sql语句 执行sql
 		$sql = "insert into users(username,name,pass,sex,address,code,phone,email,state,addtime) 
 		values('$username','$name','$pass','$sex','$address','$code','$phone','$email','$state',$addtime)";
 		mysqli_query($link,$sql);
-		
 		//5判断是否操作成功 
 		if(mysqli_insert_id($link)>0){
 			header("Location:index.php");
@@ -47,34 +44,42 @@
 		}
 		break;
 
-
-		case "del"://删除
+		
+		//删除
+		case "del":
 		//4 写sql语句 执行sql
-		$sql = "delete from stu where id={$_GET['id']}";
+		$sql = "delete from users where id={$_GET['id']}";
 		mysqli_query($link,$sql);
 
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
-			header("Location:index.php?errno=1");
+			header("Location:index.php");
 		}else{
-			header("Location:index.php?errno=2");
+			header("Location:index.php?errno=3");
 		}
 		break;
 
 
-		case "update"://修改
-		//接收表单传递过来的学生信息
-
-		if(!$_POST['name']){
-			header("Location:edit.php?errno=2");
+		//修改
+		case "update":
+		//接收表单传递过来的用户信息
+		if(!$_POST['username']||!$_POST['pass']||!$_POST['email']){		//带*号必填项不能为空
+			header("Location:add.php?errno=2");
 			exit;
 		}
-
+		$username = $_POST['username'];
+		$name = $_POST['name'];
+		$pass = md5($_POST['pass']);	//使用md5 加密密码
+		$sex = $_POST['sex'];
+		$address = $_POST['address'];
+		$code = $_POST['code'];
+		$phone = $_POST['phone'];
+		$email = $_POST['email'];
+		$state = $_POST['state'];
 		//4 写sql语句 执行sql
-		$sql = "update users set username='$username',name='$name',pass='$pass',sex='$sex',address='$address',
-		code='$code',phone='$phone',email='$email',state='$state',addtime='$addtime' where id={$_POST['id']}";
+		$sql = "update users set username='$username',name='$name',pass='$pass',sex=$sex,address='$address',
+		code='$code',phone='$phone',email='$email',state='$state' where id={$_POST['id']}";
 		mysqli_query($link,$sql);
-
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
