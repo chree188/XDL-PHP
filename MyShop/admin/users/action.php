@@ -64,7 +64,7 @@
 		case "update":
 		//接收表单传递过来的用户信息
 		if(!$_POST['username']||!$_POST['pass']||!$_POST['email']){		//带*号必填项不能为空
-			header("Location:add.php?errno=2");				/*这里应该改为edit修改页*/
+			header("Location:add.php?errno=2");				/*这里应该改为edit修改页==================================================*/
 			exit;
 		}
 		$username = $_POST['username'];
@@ -81,7 +81,8 @@
 		code='$code',phone='$phone',email='$email',state='$state' where id={$_POST['id']}";
 		mysqli_query($link,$sql);
 		
-		/*得再增加一判断密码修改不能为原密码相同*/
+		/*得再增加一判断密码修改不能为原密码相同=================================================*/
+		
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
