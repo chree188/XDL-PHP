@@ -43,7 +43,7 @@ create table goods(
 	id int(11) unsigned not null auto_increment primary key,
 	typeid int,
 	constraint gtfk foreign key(typeid) references type(id),
-	goods varchar(32),
+	goods varchar(32) not null unique,
 	company varchar(50),
 	descr text,
 	price double(6,2),

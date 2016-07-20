@@ -244,10 +244,10 @@ td.fenye {
 		//处理添加表单的错误信息
 		switch(@$_GET['errno']) {
 			case 1 :
-				echo "<h2 style='color:red; '>修改失败</h2>";
+				echo "<h2 style='color:red; '>修改失败>>该类型已存在</h2>";
 				break;
 			case 2 :
-				echo "<h2 style='color:red; '>类别项不能为空</h2>";
+				echo "<h2 style='color:red; '>修改失败>>>类别项不能为空</h2>";
 				break;
 		}
 	?>

@@ -36,20 +36,21 @@
 		}
 		break;
 
-		
-//		//删除
+		//删除
 //		case "del":
-//		//4 写sql语句 执行sql
-//		$sql = "delete from users where id={$_GET['id']}";
+//		$pid = $_POST['pid'];
+//		$path = $_POST['path'];
+		//4 写sql语句 执行sql
+//		$sql = "delete from type where id={$_GET['id']}";
 //		mysqli_query($link,$sql);
-//
-//		//5判断是否操作成功 
-//		if(mysqli_affected_rows($link)>0){
-//			header("Location:index.php");
-//		}else{
-//			header("Location:index.php?errno=3");
-//		}
-//		break;
+
+		//5判断是否操作成功 
+		if(mysqli_affected_rows($link)>0){
+			header("Location:index.php");
+		}else{
+			header("Location:index.php?errno=3");
+		}
+		break;
 
 
 		//修改
@@ -65,11 +66,14 @@
 		//4 写sql语句 执行sql
 		$sql = "update type set name='$name',pid='$pid',path='$path' where id={$_POST['id']}";
 		mysqli_query($link,$sql);
+//		var_dump(mysqli_query($link,$sql));
+//		exit;
+		
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
 		}else{
-			header("Location:edit.php?errno=1");
+			header("Location:edit.php?id={$_POST['id']}&errno=1");
 		}
 		break;
 	}
