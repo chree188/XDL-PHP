@@ -188,11 +188,11 @@ td.fenye {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">用户管理</a>&nbsp;&nbsp;>&nbsp;&nbsp;添加管理员</td>
+    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">用户模块</a>&nbsp;&nbsp;>&nbsp;&nbsp;添加用户</td>
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">
-    <a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增管理员</a>
+    <a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增用户</a>
     </td>
   </tr>
   <tr>
