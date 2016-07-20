@@ -1,4 +1,4 @@
-<?php session_start();	?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +22,7 @@ body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y
 </head>
 <body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;">
 <div id="left-top">
-	<div><a href="./main.php" target="mainFrame" ><img src="./images/login/8.jpg" width="44" height="44" /></a></div>
+	<div><a href="./main.php" target="mainFrame" ><img src="./images/login/<?php echo $_SESSION['user']['id']; ?>.jpg" width="44" height="44" /></a></div>
     <span>用户：<?php echo $_SESSION['user']['name']; ?><br>角色：
     	<?php 
 		    $state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
