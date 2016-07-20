@@ -21,7 +21,7 @@ create table users(
 	address varchar(255),
 	code char(6),
 	phone varchar(16),
-	email varchar(50) not null,
+	email varchar(50) not null unique,
 	state enum('0','1','2') default '1',
 	addtime int
 )engine=myisam default charset=utf8;
@@ -31,7 +31,7 @@ drop table if exists type;
 /*创建商品分类表 type*/
 create table type(
 	id int(11) unsigned not null auto_increment primary key,
-	name varchar(32),
+	name varchar(32) not null unique,
 	pid int(11) unsigned default '0',
 	path varchar(255)
 )engine=myisam default charset=utf8;

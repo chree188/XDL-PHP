@@ -33,7 +33,7 @@
 		$state = $_POST['state'];
 		$addtime = time();
 		//4 写sql语句 执行sql
-		$sql = "insert into users(username,name,pass,sex,address,code,phone,email,state,addtime) 
+		$sql = "insert ignore into users(username,name,pass,sex,address,code,phone,email,state,addtime) 
 		values('$username','$name','$pass','$sex','$address','$code','$phone','$email','$state',$addtime)";
 		mysqli_query($link,$sql);
 		//5判断是否操作成功 
