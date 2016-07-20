@@ -195,7 +195,7 @@ td.fenye {
 			mysqli_set_charset($link,"utf8");
 			mysqli_select_db($link,DBNAME);
 			//4 写sql语句 获得结果集 
-			$sql = "select * from users";
+			$sql = "select * from users order by id";
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
 			while($row = mysqli_fetch_assoc($result)){
