@@ -163,5 +163,6 @@ var_dump($result);*/
 ////别运行，自己去推理一下代码。也写几个可变变量玩玩吧！
 //echo $$$$$$$shu;
 
-	$time = time();
-	echo $time;
+//	$time = time();
+//	echo $time;
+

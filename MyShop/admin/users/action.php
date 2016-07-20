@@ -81,13 +81,10 @@
 		code='$code',phone='$phone',email='$email',state='$state' where id={$_POST['id']}";
 		mysqli_query($link,$sql);
 		
-		/*得再增加一判断密码修改不能为原密码相同=================================================*/
-		
-		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
 		}else{
-			header("Location:edit.php?errno=1");
+			header("Location:edit.php?id={$_POST['id']}&errno=1");
 		}
 		break;
 	}

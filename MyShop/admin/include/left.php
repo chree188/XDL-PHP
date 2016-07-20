@@ -33,13 +33,14 @@ body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y
     <div style="float: left" id="my_menu" class="sdmenu">
       <div class="collapsed">
         <span>用户模块</span>
-        <a href="../users/index.php" target="mainFrame" onFocus="this.blur()">查看用户</a>
         <a href="../users/add.php" target="mainFrame" onFocus="this.blur()">添加用户</a>
+        <a href="../users/index.php" target="mainFrame" onFocus="this.blur()">查看用户</a>
       </div>
       <div>
         <span>类别模块</span>
-        <a href="../type/index.php" target="mainFrame" onFocus="this.blur()">查看类别</a>
         <a href="../type/add.php" target="mainFrame" onFocus="this.blur()">添加类别</a>
+        <a href="../type/index.php" target="mainFrame" onFocus="this.blur()">查看类别</a>
+        <a href="../type/index2.php" target="mainFrame" onFocus="this.blur()">查看类别2</a>
       </div>
       <div>
         <span>商品模块</span>

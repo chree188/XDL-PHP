@@ -97,15 +97,58 @@ div.main-order {
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="main">
   <tr>
     <td colspan="2" align="left" valign="top">
-    <span class="time"><strong>上午好！<?php echo $_SESSION['user']['name']; ?></strong><u>[超级管理员]</u></span>
+    <span class="time"><strong>
+    	<?php
+    		//设置默认时区
+			date_default_timezone_set('PRC');
+			//根据当前登录时间小时数判断早上/中午/下午/晚上
+			$h = date('G');
+			if ($h < 11)
+				echo '早上好！';
+			else if ($h < 13)
+				echo '中午好！';
+			else if ($h < 17)
+				echo '下午好！';
+			else
+				echo '晚上好';
+			echo $_SESSION['user']['name'];
+		?>
+		</strong><u>[
+    	<?php 
+		    $state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
+		    echo $state[$_SESSION['user']['state']]; 
+    	?>
+    	]</u></span>
     <div class="top">
-						<span class="left">您上次的登灵时间：2012-05-03  12:00   登录IP：127.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span>
+						<span class="left">
+							<?php
+							if (!empty($_COOKIE['lastvisit'])) {	//先判断，是否存在cookie
+								echo "您上次访问时间是：" . $_COOKIE['lastvisit'];
+								setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
+							} else {
+								echo "您是第一次登录，欢迎！";
+								setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
+							}
+							echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+							//获取当前登录者的IP地址
+							$ip = $_SERVER["REMOTE_ADDR"];
+							echo "当前登录IP地址为：".$ip;
+						?>&nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span>
 						<a href="../users/edit.php?id=<?php echo $_SESSION['user']['id']; ?>" target="mainFrame" onFocus="this.blur()">
 							更改密码
 						</a>
 					</div>
 					<div class="sec">
-						这是您第<span class="num">10000</span>次,登录！
+						这是您第<span class="num">
+						<?php
+							if (isset($_SESSION['uesr'])) {
+								$_SESSION['uesr']++;
+							} else {
+								$_SESSION['uesr'] = 1;
+							}
+							echo $_SESSION['uesr'];
+						?>
+					</span>次,浏览该页面！
 					</div>
     </td>
   </tr>
@@ -119,7 +162,7 @@ div.main-order {
 						<br/>
 						管理员个数：<font color="#538ec6"><strong>6</strong></font> 人
 						<br/>
-						登陆者IP：192.168.1.156
+						登陆者IP：<?php echo $_SERVER['REMOTE_ADDR']; ?>
 						<br/>
 						程序编码：UTF-8
 						<br/>

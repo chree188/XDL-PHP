@@ -18,10 +18,11 @@ insert into `users` (`id`, `username`, `name`, `pass`, `sex`, `address`, `code`,
 values('11','gl','盖伦','f802b9669cdf882daa2c991724745b9b','1','德玛西亚','254187','13777399444','gl@126.com','1','1468936764');
 
 /*以下是商品分类信息*/
-insert into type (name)values('食用油');
-insert into type (name)values('五谷杂粮');
-insert into type (name)values('菌菇');
-insert into type (name)values('干果坚果');
+insert into `type` (`id`, `name`, `pid`, `path`) values('1','食用油','0','0,');
+insert into `type` (`id`, `name`, `pid`, `path`) values('2','五谷杂粮','0','0,');
+insert into `type` (`id`, `name`, `pid`, `path`) values('3','菌菇','0','0,');
+insert into `type` (`id`, `name`, `pid`, `path`) values('4','干果坚果','0','0,');
+insert into `type` (`id`, `name`, `pid`, `path`) values('5','菜籽油','1','0,1,');
 
 /*以下是商品信息*/
 insert into goods (typeid,goods,company,descr,price,picname,store,num,addtime) 

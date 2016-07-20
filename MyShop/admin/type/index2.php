@@ -183,27 +183,28 @@ td.fenye {
 			mysqli_set_charset($link,"utf8");
 			mysqli_select_db($link,DBNAME);
 			//4 写sql语句 获得结果集 
-			$sql = "select * from type order by concat(path,id)";	// 修改为一类别pid path排序
+			$sql = "select * from type order concat(path,id)";
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
 			while($row = mysqli_fetch_assoc($result)){
-$str = <<<swUse
-				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
-				onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['name']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['pid']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['path']}</td>
-        <td align="center" valign="middle" class="borderbottom">
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
-        <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="action.php?a=del&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">删除</a>
-        <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="add.php?pid={$row['id']}&path={$row['path']}{$row['id']},&type={$row['name']}" target="mainFrame" onFocus="this.blur()" class="add">添加子类</a>
-        </td>
-      </tr>
-swUse;
-	echo $str;
+				
+//$str = <<<swUse
+//				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
+//				onMouseOver="this.style.backgroundColor='#edf5ff'">
+//      <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
+//      <td align="center" valign="middle" class="borderright borderbottom">{$row['name']}</td>
+//      <td align="center" valign="middle" class="borderright borderbottom">{$row['pid']}</td>
+//      <td align="center" valign="middle" class="borderright borderbottom">{$row['path']}</td>
+//      <td align="center" valign="middle" class="borderbottom">
+//      <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
+//      <span class="gray">&nbsp;|&nbsp;</span>
+//      <a href="action.php?a=del&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">删除</a>
+//      <span class="gray">&nbsp;|&nbsp;</span>
+//      <a href="add.php?pid={$row['id']}&path={$row['path']}{$row['id']},&type={$row['name']}" target="mainFrame" onFocus="this.blur()" class="add">添加子类</a>
+//      </td>
+//    </tr>
+//swUse;
+//	echo $str;
 			}
 			//6 关闭数据库 释放结果集 
 			mysqli_close($link);
