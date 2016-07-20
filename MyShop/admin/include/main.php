@@ -125,33 +125,34 @@ div.main-order {
     <div class="top">
 						<span class="left">
 							<?php
-							if (!empty($_COOKIE['lastvisit'])) {	//先判断，是否存在cookie
-								echo "您上次访问时间是：" . $_COOKIE['lastvisit'];
-								setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
-							} else {
-								echo "您是第一次登录，欢迎！";
-								setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
-							}
-							echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-							//获取当前登录者的IP地址
-							$ip = $_SERVER["REMOTE_ADDR"];
-							echo "当前登录IP地址为：".$ip;
-						?>&nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span>
+								if (!empty($_COOKIE['lastvisit'])) {	//先判断，是否存在cookie
+									echo "您上次访问时间是：" . $_COOKIE['lastvisit'];
+									setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
+								} else {
+									echo "您是第一次登录，欢迎！";
+									setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
+								}
+								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+								//获取当前登录者的IP地址
+								$ip = $_SERVER["REMOTE_ADDR"];
+								echo "当前登录IP地址为：".$ip;
+						    ?>&nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时
+						</span>
 						<a href="../users/edit.php?id=<?php echo $_SESSION['user']['id']; ?>" target="mainFrame" onFocus="this.blur()">
 							更改密码
 						</a>
 					</div>
-					<div class="sec">
-						这是您第<span class="num">
-						<?php
-							if (isset($_SESSION['uesr'])) {
-								$_SESSION['uesr']++;
-							} else {
-								$_SESSION['uesr'] = 1;
-							}
-							echo $_SESSION['uesr'];
-						?>
-					</span>次,浏览该页面！
+					<div class="sec">这是您第
+						<span class="num">
+							<?php
+								if (isset($_SESSION['uesr'])) {
+									$_SESSION['uesr']++;
+								} else {
+									$_SESSION['uesr'] = 1;
+								}
+								echo $_SESSION['uesr'];
+							?>
+						</span>次,浏览该页面！
 					</div>
     </td>
   </tr>
