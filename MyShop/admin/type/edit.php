@@ -185,19 +185,6 @@ td.fenye {
 </style>
 </head>
 <body>
-	<?php	
-//		判断是否添加的子类
-		$pid = 0;
-		$path = "0,";
-		$name = "根类别";
-//		处理变量没有赋值
-		$_GET['pid'] = empty($_GET['pid']) ? 0 : $_GET['pid'];
-		if($_GET['pid']){
-			$pid = $_GET['pid'];
-			$path = $_GET['path'];
-			$name = $_GET['type'];
-		}
-	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
@@ -232,15 +219,15 @@ td.fenye {
 		}
 
 		?>
-    <form method="post" action="./action.php?a=insert">
+    <form method="post" action="./action.php?a=update">
+    <input type="hidden" name='id' value="<?php echo $row['id']?>" />
+    <input type="hidden" name="pid" value="<?php echo $row['pid']?>" />		<!--隐藏域传值-->
+    <input type="hidden" name="path" value="<?php echo $row['path']?>" />
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
-    	<!--  -->
-    	<input type="hidden" name="pid" value="<?php echo $pid;	?>" />
-    	<input type="hidden" name="path" value="<?php echo $path; ?>" />
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">类别：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="type" value="" class="text-word">
+        <input type="text" name="type" value="<?php echo $row['name']?>" class="text-word">
         </td>
         </tr>
       </tr>
@@ -248,7 +235,7 @@ td.fenye {
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input name="" type="submit" value="添加" class="text-but">
+        <input name="" type="submit" value="修改" class="text-but">
         <input name="" type="reset" value="重置" class="text-but"></td>
         </tr>
     </table>
@@ -257,10 +244,10 @@ td.fenye {
 		//处理添加表单的错误信息
 		switch(@$_GET['errno']) {
 			case 1 :
-				echo "<h2 style='color:red; '>添加失败</h2>";
+				echo "<h2 style='color:red; '>修改失败</h2>";
 				break;
 			case 2 :
-				echo "<h2 style='color:red; '>带*项不能为空</h2>";
+				echo "<h2 style='color:red; '>类别项不能为空</h2>";
 				break;
 		}
 	?>

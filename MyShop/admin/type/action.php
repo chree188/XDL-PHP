@@ -18,11 +18,15 @@
 		//添加
 		case "insert":
 		//接收表单传递过来的类别信息
+		if(!$_POST['type']){		//类别必填项不能为空
+			header("Location:add.php?errno=2");
+			exit;
+		}
 		$name = $_POST['type'];
 		$pid = $_POST['pid'];
 		$path = $_POST['path'];
 		//4 写sql语句 执行sql
-		$sql = "insert into type(name,pid,path) values('$name','$pid','$path')";
+		$sql = "insert ignore into type(name,pid,path) values('$name','$pid','$path')";
 		mysqli_query($link,$sql);
 		//5判断是否操作成功 
 		if(mysqli_insert_id($link)>0){
@@ -33,44 +37,34 @@
 		break;
 
 		
-		//删除
-		case "del":
-		//4 写sql语句 执行sql
-		$sql = "delete from users where id={$_GET['id']}";
-		mysqli_query($link,$sql);
-
-		//5判断是否操作成功 
-		if(mysqli_affected_rows($link)>0){
-			header("Location:index.php");
-		}else{
-			header("Location:index.php?errno=3");
-		}
-		break;
+//		//删除
+//		case "del":
+//		//4 写sql语句 执行sql
+//		$sql = "delete from users where id={$_GET['id']}";
+//		mysqli_query($link,$sql);
+//
+//		//5判断是否操作成功 
+//		if(mysqli_affected_rows($link)>0){
+//			header("Location:index.php");
+//		}else{
+//			header("Location:index.php?errno=3");
+//		}
+//		break;
 
 
 		//修改
 		case "update":
 		//接收表单传递过来的用户信息
-		if(!$_POST['username']||!$_POST['pass']||!$_POST['email']){		//带*号必填项不能为空
+		if(!$_POST['type']){		//类别必填项不能为空
 			header("Location:edit.php?id={$_POST['id']}&errno=2");
 			exit;
 		}
-		$username = $_POST['username'];
-		$name = $_POST['name'];
-		$pass = md5($_POST['pass']);	//使用md5 加密密码
-		$sex = $_POST['sex'];
-		$address = $_POST['address'];
-		$code = $_POST['code'];
-		$phone = $_POST['phone'];
-		$email = $_POST['email'];
-		$state = $_POST['state'];
+		$name = $_POST['type'];
+		$pid = $_POST['pid'];
+		$path = $_POST['path'];
 		//4 写sql语句 执行sql
-		$sql = "update users set username='$username',name='$name',pass='$pass',sex=$sex,address='$address',
-		code='$code',phone='$phone',email='$email',state='$state' where id={$_POST['id']}";
+		$sql = "update type set name='$name',pid='$pid',path='$path' where id={$_POST['id']}";
 		mysqli_query($link,$sql);
-		
-		/*得再增加一判断密码修改不能为原密码相同=================================================*/
-		
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
