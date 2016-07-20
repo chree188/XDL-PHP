@@ -66,8 +66,6 @@
 		//4 写sql语句 执行sql
 		$sql = "update type set name='$name',pid='$pid',path='$path' where id={$_POST['id']}";
 		mysqli_query($link,$sql);
-//		var_dump(mysqli_query($link,$sql));
-//		exit;
 		
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){

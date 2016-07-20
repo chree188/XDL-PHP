@@ -40,7 +40,7 @@ body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y
         <span>类别模块</span>
         <a href="../type/add.php" target="mainFrame" onFocus="this.blur()">添加类别</a>
         <a href="../type/index.php" target="mainFrame" onFocus="this.blur()">查看类别</a>
-        <a href="../type/index2.php" target="mainFrame" onFocus="this.blur()">查看类别2</a>
+        <!--<a href="../type/index2.php" target="mainFrame" onFocus="this.blur()">查看类别2</a>-->
       </div>
       <div>
         <span>商品模块</span>

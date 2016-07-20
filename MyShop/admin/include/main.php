@@ -107,10 +107,13 @@ div.main-order {
 				echo '早上好!';
 			else if ($h < 13)
 				echo '中午好!';
-			else if ($h < 17)
+			else if ($h < 18)
 				echo '下午好!';
-			else
+			else if ($h < 24)
 				echo '晚上好!';
+			else if ($h < 6)
+				echo '凌晨夜已深，注意休息!';
+			echo "&nbsp;";
 			echo $_SESSION['user']['name'];
 		?>
 		</strong><u>[
