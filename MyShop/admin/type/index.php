@@ -1,7 +1,6 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>主要内容区main</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
 <style> body {
@@ -133,7 +132,8 @@ td.fenye {
 <body>
 	<?php
 		//输出删除失败的提示
-		switch(@$_GET['errno']){
+		$_GET['errno'] = empty($_GET['errno']) ? '' : $_GET['errno'];
+		switch($_GET['errno']){
 			case 3: echo "<h3 style='color:red'>删除失败!</h3>";
 			break;
 		}

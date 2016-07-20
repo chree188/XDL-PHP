@@ -198,7 +198,7 @@ td.fenye {
   <tr>
     <td align="left" valign="top">
     	<?php
-		//需要获得被修改的学生信息
+		//需要获得被修改的用户信息
 		//1 导入配置文件 
 		
 		if(@$_GET['id']){

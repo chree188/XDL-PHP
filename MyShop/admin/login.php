@@ -16,10 +16,10 @@
             <li class="topC"></li>
             <li class="topD">
                 <ul class="login">
-                                                       用户名：<input type="text" name="name" /><br /><br />
+					用户名：<input type="text" name="name" /><br /><br />
 					密&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" /><br /><br />
 					验证码：<input type="text" name="code" size="5"/>
-				  			<img src="../public/code.php" onclick="this.src='../public/code.php?id='+Math.random();"/><br /><br />
+				  		<img src="../public/code.php" onclick="this.src='../public/code.php?id='+Math.random();"/><br /><br />
                 </ul>
             </li>
             <li class="topE"></li>
