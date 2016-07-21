@@ -13,7 +13,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="footer">
   <tr>
     <td align="left" valign="middle" class="footer_pad">COPYRIGHT©2016    版权所有 逗你玩科技有限公司 </td>
-    <td align="right" valign="middle" class="footer_pad"><img src="images/main/why.gif" width="12" height="12" alt="疑问图标" align="absmiddle">&nbsp;&nbsp;如有疑问请您联系TEL：010-88888888-8080</td>
+    <td align="right" valign="middle" class="footer_pad"><img src="images/main/why.gif" width="12" height="12" alt="疑问图标" align="absmiddle">&nbsp;&nbsp;如有疑问请您联系TEL：+86 13777399387</td>
   </tr>
 </table>
 </body>

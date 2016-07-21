@@ -39,8 +39,7 @@
 		//删除
 		case "del":
 //		判断类别底下有没有子类
-		$subject = $_GET['id'];
-		$sql = "select * from type where pid={$subject}";
+		$sql = "select * from type where pid={$_GET['id']}";
 		$result = mysqli_query($link, $sql);
 		$row = mysqli_fetch_assoc($result);
 		if($row){
