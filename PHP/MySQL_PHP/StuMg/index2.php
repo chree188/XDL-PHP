@@ -12,6 +12,15 @@
 		}
 
 	?>
+	<form action="index2.php">
+		姓名中含有 <input type="text" name="name" size="5" value="<?php echo $_GET['name']; ?>"/>
+		性别 <select name="sex" ">
+			<option value="">--请选择--</option>
+			<option value="m">--男--</option>
+			<option value="w">--女--</option>
+		</select>
+		<input type="submit" value="搜索" />
+	</form>
 
 	<table width="600px" border='1px'>
 		<tr>
@@ -28,35 +37,28 @@
 			include("dbconfig.php");
 			$link = @mysqli_connect(HOST,USER,PASS,DBNAME) or die("数据库连接失败");
 			mysqli_set_charset($link,"utf8");
-			/*==========实现分页============*/
-//			1 设置参数
-				$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
-				$maxPage = 0;	//一共显示多少页
-				$maxRow = 0;	//一共有多少条
-				$pageSize = 4;	//每页显示多少条	页大小
 			
-//			2 一共有多少条
-				$sql = "select * from stu";
-				$result = mysqli_query($link, $sql);
-				$maxRow = mysqli_num_rows($result);
+			/*==========封装搜索条件=========*/
+//			1 设置数组接收搜索条件
+				$wherelist = array();
 				
-//			3 一共显示多少页
-				$maxPage = ceil($maxRow/$pageSize);
-				
-//			4 判断页码	是否有效
-				if($page>$maxPage){
-					$page = $maxPage;
+//			2 接收搜索条件
+				$_GET['name'] = empty($_GET['name'])? ' ':$_GET['name'];
+				if(!empty($_GET['name'])){
+					$wherelist[] = " name like '%{$_GET['name']}%'";
 				}
-				if($page<1){
-					$page = 1;
+				$_GET['sex'] = empty($_GET['sex'])? ' ':$_GET['sex'];
+				if(!empty($_GET['sex'])){
+					$wherelist[] = "sex='{$_GET['sex']}'";
 				}
-				
-//				5 拼接limit
-				$limit = " limit ".($page-1) * $pageSize.",".$pageSize;
-				
-			/*==========实现分页============*/
+//			3 判断搜索条件的有效性
+				if(count($wherelist)>0){
+					$where = " where ".implode(" and ", $wherelist);
+				}
 			
-			$sql = "select * from stu".$limit;
+			/*==========封装搜索条件=========*/
+			
+			$sql = "select * from stu".$where;
 			$result = mysqli_query($link,$sql);
 			while($row = mysqli_fetch_assoc($result)){
 				echo "<tr>";
@@ -80,24 +82,6 @@
 
 		mysqli_close($link);
 		mysqli_free_result($result);
-		
-		echo "<hr>";
-		//1
-		echo "<a href='index1.php'>首页</a>";
-		echo "<a href='index1.php?p=".($page-1)."'>上一页</a>";
-		echo "<a href='index1.php?p=".($page+1)."'>下一页</a>";
-		echo "<a href='index1.php?p={$maxPage}'>末页</a>";
-		echo "<hr>";
-		//2
-		for($i=1;$i<=$maxPage;$i++){
-			echo "<a href='index1.php?p={$i}'>{$i}</a> ";
-		}
-		echo "<hr>";
-		//3 
-		echo "<form action='index1.php'>";
-		echo "<input type='text' name='p' size='5'>";
-		echo "<input type='submit' value='跳转'>";
-		echo  "</form>";
 	  ?>
 </body>
 </html>
