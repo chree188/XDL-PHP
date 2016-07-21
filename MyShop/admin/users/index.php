@@ -137,7 +137,9 @@ td.fenye {
 			case 3: echo "<h3 style='color:red'>删除失败!</h3>";
 			break;
 		}
-
+		
+		//设置报错情况	去除notice错误
+		error_reporting(E_ALL ^ E_NOTICE);
 	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
@@ -151,14 +153,14 @@ td.fenye {
    		 <td width="90%" align="left" valign="middle">
 	         <form action="index.php">
 			<?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
-	         <span>用户：</span>
+	         <span>查询条件：</span>
 	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
 			<span>性别：
 			<select name="sex">
 				<option value="">--请选择--</option>
-				<?php	$_GET['sex']=empty($_GET['sex']) ? " " : $_GET['sex'] ?>
+				<?php	$_GET['sex']=empty($_GET['sex']) ? 0 : $_GET['sex'] ?>
 				<option value="1" <?php echo $_GET['sex']=="1" ? "selected" : "";  ?>>--男--</option>
-				<option value="0" <?php echo $_GET['sex']=="0" ? "selected" : "";  ?>>--女--</option>
+				<option value="2" <?php echo $_GET['sex']=="2" ? "selected" : "";  ?>>--女--</option>
 			</select>
 			</span>
 	         <input name="" type="submit" value="查询" class="text-but">
@@ -192,7 +194,8 @@ td.fenye {
 			//设置默认时区
 			date_default_timezone_set('PRC');
 			// 设置性别
-			$sex = array("1"=>"男","0"=>"女");
+			$sex = array("1"=>"男","2"=>"女");
+			$unsex = array("男"=>"1","女"=>"2");
 			// 设置权限
 			$state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
 			//六脉神剑 
@@ -209,8 +212,15 @@ td.fenye {
 				$wherelist = array();
 				$urllist = array();	//封装url的状态维持的条件
 			//2 接收搜索条件 
-				if(!empty($_GET['name'])){
-					$wherelist[] =" name like '%{$_GET['name']}%'"; 
+				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
+					$wherelist[] =" (name like '%{$_GET['name']}%' 
+					or username like '%{$_GET['name']}%' 
+					or address like '%{$_GET['name']}%'
+					or username like '%{$_GET['name']}%'
+					or code like '%{$_GET['name']}%'
+					or phone like '%{$_GET['name']}%'
+					or email like '%{$_GET['name']}%'
+					or sex like '%{$unsex[$_GET['name']]}%')"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
 				if(!empty($_GET['sex'])){
@@ -251,8 +261,6 @@ td.fenye {
 			
 			//4 写sql语句 获得结果集 
 			@$sql = "select * from users $where order by id $limit";
-//			echo $sql;
-//			exit;
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
 			while($row = mysqli_fetch_assoc($result)){
