@@ -13,7 +13,8 @@
 
 	?>
 	<form action="index2.php">
-		姓名中含有 <input type="text" name="name" size="5" value="<?php echo $_GET['name']; ?>"/>
+		<?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
+		姓名 <input type="text" name="name" size="5" value="<?php echo $_GET['name']; ?>"/>
 		性别 <select name="sex" ">
 			<option value="">--请选择--</option>
 			<option value="m">--男--</option>
@@ -38,25 +39,46 @@
 			$link = @mysqli_connect(HOST,USER,PASS,DBNAME) or die("数据库连接失败");
 			mysqli_set_charset($link,"utf8");
 			
-			/*==========封装搜索条件=========*/
-//			1 设置数组接收搜索条件
+//			/*==========封装搜索条件=========*/
+////			1 设置数组接收搜索条件
+//				$wherelist = array();
+//				
+////			2 接收搜索条件
+//				$_GET['name'] = empty($_GET['name'])? ' ':$_GET['name'];
+//				if(!empty($_GET['name'])){
+//					$wherelist[] = " name like '%{$_GET['name']}%'";
+//				}
+//				$_GET['sex'] = empty($_GET['sex'])? ' ':$_GET['sex'];
+//				if(!empty($_GET['sex'])){
+//					$wherelist[] = "sex='{$_GET['sex']}'";
+//				}
+////			3 判断搜索条件的有效性
+//				if(count($wherelist)>0){
+//					$where = " where ".implode(" and ", $wherelist);
+//				}
+//			
+//			/*==========封装搜索条件=========*/
+
+			//=============封装搜索条件======================
+			//1 设置数组接收搜索条件
 				$wherelist = array();
-				
-//			2 接收搜索条件
-				$_GET['name'] = empty($_GET['name'])? ' ':$_GET['name'];
+
+			//2 接收搜索条件 
+				$_GET['name'] = empty($_GET['name'])? "":$_GET['name'];
 				if(!empty($_GET['name'])){
-					$wherelist[] = " name like '%{$_GET['name']}%'";
-				}
-				$_GET['sex'] = empty($_GET['sex'])? ' ':$_GET['sex'];
+					$wherelist[] =" name like '%{$_GET['name']}%'"; 
+				}	
+				$_GET['sex'] = empty($_GET['sex'])? "":$_GET['sex'];
 				if(!empty($_GET['sex'])){
 					$wherelist[] = "sex='{$_GET['sex']}'";
 				}
-//			3 判断搜索条件的有效性
+
+			//3 判断搜索条件的有效性	
 				if(count($wherelist)>0){
-					$where = " where ".implode(" and ", $wherelist);
+					$where = " where ".implode(" and ",$wherelist);
 				}
-			
-			/*==========封装搜索条件=========*/
+
+			//=============封装搜索条件======================
 			
 			$sql = "select * from stu".$where;
 			$result = mysqli_query($link,$sql);
