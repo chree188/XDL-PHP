@@ -244,7 +244,7 @@ td.fenye {
 				$maxRow = 0;	//一共有多少条
 				$pageSize = 8;	//每页显示多少条	页大小
 //				2 一共多少条
-				@$sql = "select * from users ".$where;
+				$sql = "select * from users ".$where;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -261,7 +261,7 @@ td.fenye {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			@$sql = "select * from users $where order by id $limit";
+			$sql = "select * from users $where order by id $limit";
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
 			$i = 0;

@@ -137,6 +137,9 @@ td.fenye {
 			case 3: echo "<h3 style='color:red'>删除失败!</h3>";
 			break;
 		}
+		
+		//设置报错情况	去除notice错误
+		error_reporting(E_ALL ^ E_NOTICE)
 
 	?>
 <!--main_top-->
@@ -149,10 +152,11 @@ td.fenye {
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
    		 <td width="90%" align="left" valign="middle">
-	         <form method="post" action="">
+	         <form action="index.php">
+			 <?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
 	         <span>类别：</span>
-	         <input type="text" name="" value="" class="text-word">
-	         <input name="" type="button" value="查询" class="text-but">
+	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
+	         <input name="" type="submit" value="查询" class="text-but">
 	         </form>
          </td>
   		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增类别</a></td>
@@ -165,6 +169,7 @@ td.fenye {
     
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr>
+      	<th align="center" valign="middle" class="borderright">序号</th>
         <th align="center" valign="middle" class="borderright">ID</th>
         <th align="center" valign="middle" class="borderright">类别</th>
         <th align="center" valign="middle" class="borderright">父ID</th>
@@ -182,14 +187,58 @@ td.fenye {
 			//3 设置字符集 选择数据库
 			mysqli_set_charset($link,"utf8");
 			mysqli_select_db($link,DBNAME);
+			
+			//=============封装搜索条件======================
+			//1 设置数组接收搜索条件
+				$wherelist = array();
+				$urllist = array();	//封装url的状态维持的条件
+			//2 接收搜索条件 
+				if(!empty($_GET['name'])){
+					$wherelist[] =" name like '%{$_GET['name']}%' ";
+					$urllist[] = "name={$_GET['name']}";
+				}
+			//3 判断搜索条件的有效性	
+				if(count($wherelist)>0){
+					$where = " where ".implode(" and ",$wherelist);
+					$url = "&".implode("&", $urllist);
+				}
+
+			//=============封装搜索条件======================
+			
+			/*================实现分页显示==================*/
+//				1 设置参数
+				$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
+				$maxPage = 0;	//一共显示多少页
+				$maxRow = 0;	//一共有多少条
+				$pageSize = 6;	//每页显示多少条	页大小
+//				2 一共多少条
+				$sql = "select * from type ".$where;
+				$res = mysqli_query($link, $sql);
+				$maxRow = mysqli_num_rows($res);
+//				3 一共显示多少页
+				$maxPage = ceil($maxRow/$pageSize);
+//				4 判断页码 是否有效
+				if($page>$maxPage){
+					$page = $maxPage;
+				}
+				if($page<1){
+					$page = 1;
+				}
+//				5 拼接limit
+				$limit = " limit ".($page-1)*$pageSize.",".$pageSize;
+			/*================实现分页显示==================*/
+			
 			//4 写sql语句 获得结果集 
-			$sql = "select * from type order by concat(path,id)";	// 修改为一类别pid path排序
+			$sql = "select * from type $where order by concat(path,id) $limit";
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
+			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
+				$i++;
 $str = <<<swUse
 				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
 				onMouseOver="this.style.backgroundColor='#edf5ff'">
+		<td align="center" valign="middle" class="borderright borderbottom">{$i}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['name']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['pid']}</td>
@@ -211,20 +260,25 @@ swUse;
 		?>
     </table></td>
     </tr>
-  <tr>
-				<td align="left" valign="top" class="fenye">11 条数据 1/1 页&nbsp;&nbsp;
-					<a href="#" target="mainFrame" onFocus="this.blur()">
-						首页
-					</a>&nbsp;&nbsp;
-					<a href="#" target="mainFrame" onFocus="this.blur()">
-						上一页
-					</a>&nbsp;&nbsp;
-					<a href="#" target="mainFrame" onFocus="this.blur()">
-						下一页
-					</a>&nbsp;&nbsp;
-					<a href="#" target="mainFrame" onFocus="this.blur()">
-						尾页
-					</a></td>
+  			<tr>
+				<td align="left" valign="top" class="fenye">
+					共查询到<?php  echo mysqli_num_rows($res)?>条类别信息 &nbsp;&nbsp;
+					<?php 
+						$url = empty($url)? "" : $url;
+						echo "<a href='index.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
+							首页
+						</a>&nbsp;&nbsp;";
+						echo "<a href='index.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+							上一页
+						</a>&nbsp;&nbsp;";
+						echo "<a href='index.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+							下一页
+						</a>&nbsp;&nbsp;";
+						echo "<a href='index.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
+							尾页
+						</a>";
+					?>
+				</td>
 			</tr>
 </table>
 </body>
