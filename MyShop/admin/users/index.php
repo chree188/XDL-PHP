@@ -124,6 +124,12 @@ td.fenye {
 	text-align: right;
 }
 
+span.num {
+	font-size: 30px;
+	color: #538ec6;
+	font-family: "Georgia", "Tahoma", "Arial";
+}
+
 .bggray {
 	background: #f9f9f9
 }
@@ -298,7 +304,7 @@ swUse;
     </tr>
   			<tr>
 				<td align="left" valign="top" class="fenye">
-					共查询到<?php  echo mysqli_num_rows($res)?>条用户信息 &nbsp;&nbsp;
+					共查询到<span class="num"><?php  echo mysqli_num_rows($res)?></span>条用户信息 &nbsp;&nbsp;
 					<?php 
 						$url = empty($url)? "" : $url;
 						echo "<a href='index.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>

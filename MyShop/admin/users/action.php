@@ -91,6 +91,6 @@
 		}
 		break;
 	}
-	//6 关闭数据库  
+	//6 关闭数据库  释放资源
 	mysqli_close($link);
-
+	mysqli_free_result($result);

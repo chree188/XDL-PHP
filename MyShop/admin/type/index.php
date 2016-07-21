@@ -118,6 +118,12 @@
 	color: #dbdbdb;
 }
 
+span.num {
+	font-size: 30px;
+	color: #538ec6;
+	font-family: "Georgia", "Tahoma", "Arial";
+}
+
 td.fenye {
 	padding: 10px 0 0 0;
 	text-align: right;
@@ -134,7 +140,9 @@ td.fenye {
 		//输出删除失败的提示
 		$_GET['errno'] = empty($_GET['errno']) ? '' : $_GET['errno'];
 		switch($_GET['errno']){
-			case 3: echo "<h3 style='color:red'>删除失败!</h3>";
+			case 1: echo "<h3 style='color:red'>类别下有子类,删除失败!</h3>";
+			break;
+			case 2: echo "<h3 style='color:red'>删除失败!</h3>";
 			break;
 		}
 		
@@ -262,7 +270,7 @@ swUse;
     </tr>
   			<tr>
 				<td align="left" valign="top" class="fenye">
-					共查询到<?php  echo mysqli_num_rows($res)?>条类别信息 &nbsp;&nbsp;
+					共查询到<span class="num"><?php  echo mysqli_num_rows($res)?></span>条类别信息 &nbsp;&nbsp;
 					<?php 
 						$url = empty($url)? "" : $url;
 						echo "<a href='index.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>

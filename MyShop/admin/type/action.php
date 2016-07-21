@@ -37,21 +37,27 @@
 		break;
 
 		//删除
-//		case "del":
-//		$pid = $_POST['pid'];
-//		$path = $_POST['path'];
-		//4 写sql语句 执行sql
-//		$sql = "delete from type where id={$_GET['id']}";
-//		mysqli_query($link,$sql);
+		case "del":
+//		判断类别底下有没有子类
+		$subject = $_GET['id'];
+		$sql = "select * from type where pid={$subject}";
+		$result = mysqli_query($link, $sql);
+		$row = mysqli_fetch_assoc($result);
+		if($row){
+			header("Location:index.php?errno=1");
+			exit;
+		}
+//		4 写sql语句 执行sql
+		$sql = "delete from type where id={$_GET['id']}";
+		mysqli_query($link,$sql);
 
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
 		}else{
-			header("Location:index.php?errno=3");
+			header("Location:index.php?errno=2");
 		}
 		break;
-
 
 		//修改
 		case "update":
@@ -74,6 +80,7 @@
 		}
 		break;
 	}
-	//6 关闭数据库  
+	//6 关闭数据库  释放资源 
 	mysqli_close($link);
+	mysqli_free_result($result);
 
