@@ -12,14 +12,14 @@
 		}
 
 	?>
-	<form action="index2.php">
+	<form action="index3.php">
 		<?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
 		姓名含有 <input type="text" name="name" size="5" value="<?php echo $_GET['name']; ?>"/>
 		性别 <select name="sex">
 			<option value="">--请选择--</option>
 			<?php	$_GET['sex']=empty($_GET['sex']) ? "" : $_GET['sex'] ?>
-			<option value="m" <?php echo $_GET['sex']=="m" ? "selected" : "";  ?>>--男--</option>
-			<option value="w" <?php echo $_GET['sex']=="w" ? "selected" : "";  ?>>--女--</option>
+			<option value="m" <?php echo $_GET['sex']=="m" ? "selected" : "";   ?>>--男--</option>
+			<option value="w" <?php echo $_GET['sex']=="w" ? "selected" : "";   ?>>--女--</option>
 		</select>
 		<input type="submit" value="搜索" />
 	</form>
@@ -44,27 +44,59 @@
 			//=============封装搜索条件======================
 			//1 设置数组接收搜索条件
 				$wherelist = array();
-
+				$urllist = array();	//封装url的状态维持的条件
 			//2 接收搜索条件 
 				if(!empty($_GET['name'])){
 					$wherelist[] =" name like '%{$_GET['name']}%'"; 
+					$urllist[] = "name={$_GET['name']}";
 				}	
 				if(!empty($_GET['sex'])){
 					$wherelist[] = "sex='{$_GET['sex']}'";
+					$urllist[] = "sex={$_GET['sex']}";
 				}
 
 			//3 判断搜索条件的有效性	
 				if(count($wherelist)>0){
 					$where = " where ".implode(" and ",$wherelist);
+					$url = "&".implode("&", $urllist);
 				}
 
 			//=============封装搜索条件======================
-			if(!$wherelist){	//判断搜索条件数组是否为空
-				$sql = "select * from stu";
-			}else{
-				$sql = "select * from stu".$where;
-			}
-//			@$sql = "select * from stu".$where;
+			
+			/*================实现分页显示==================*/
+//				1 设置参数
+				$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
+				$maxPage = 0;	//一共显示多少页
+				$maxRow = 0;	//一共有多少条
+				$pageSize = 4;	//每页显示多少条	页大小
+//				2 一共多少条
+//				if(!$wherelist){	//判断搜索条件数组是否为空
+//					$sql = "select * from stu";
+//				}else{
+//					$sql = "select * from stu".$where;
+//				}
+				@$sql = "select * from stu".$where;
+				$res = mysqli_query($link, $sql);
+				$maxRow = mysqli_num_rows($res);
+//				3 一共显示多少页
+				$maxPage = ceil($maxRow/$pageSize);
+//				4 判断页码 是否有效
+				if($page>$maxPage){
+					$page = $maxPage;
+				}
+				if($page<1){
+					$page = 1;
+				}
+//				5 拼接limit
+				$limit = " limit ".($page-1)*$pageSize.",".$pageSize;
+			/*================实现分页显示==================*/
+			
+//			if(!$wherelist){	//判断搜索条件数组是否为空
+//				$sql = "select * from stu";
+//			}else{
+//				$sql = "select * from stu".$where.$limit;
+//			}
+			@$sql = "select * from stu".$where.$limit;
 			$result = mysqli_query($link,$sql);
 			while($row = mysqli_fetch_assoc($result)){
 				echo "<tr>";
@@ -84,10 +116,19 @@
 		?>
 
 	</table>
-	<?php  echo "一共查询到".mysqli_num_rows($result)."条记录"; 
+	<?php  echo "一共查询到".mysqli_num_rows($res)."条记录"; 
 
 		mysqli_close($link);
 		mysqli_free_result($result);
+		$url = empty($url)? "" : $url;
+		echo "<hr>";
+		echo "<a href='index3.php?p=1{$url}'>首页</a> ";
+		echo "<a href='index3.php?p=".($page-1)."{$url}'>上一页</a> ";
+		echo "<a href='index3.php?p=".($page+1)."{$url}'>下一页</a> ";
+		echo "<a href='index3.php?p={$maxPage}{$url}'>末页</a> ";
+//		echo "<hr>";
+//		echo $_SERVER["HTTP_REFERER"];	//这个超全局常量可以告诉我们 是从哪里来的
+//		echo "<hr>";
 	  ?>
 </body>
 </html>

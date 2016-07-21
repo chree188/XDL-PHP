@@ -149,10 +149,19 @@ td.fenye {
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
    		 <td width="90%" align="left" valign="middle">
-	         <form method="post" action="">
+	         <form action="index.php">
+			<?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
 	         <span>用户：</span>
-	         <input type="text" name="" value="" class="text-word">
-	         <input name="" type="button" value="查询" class="text-but">
+	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
+			<span>性别：
+			<select name="sex">
+				<option value="">--请选择--</option>
+				<?php	$_GET['sex']=empty($_GET['sex']) ? " " : $_GET['sex'] ?>
+				<option value="1" <?php echo $_GET['sex']=="1" ? "selected" : "";  ?>>--男--</option>
+				<option value="0" <?php echo $_GET['sex']=="0" ? "selected" : "";  ?>>--女--</option>
+			</select>
+			</span>
+	         <input name="" type="submit" value="查询" class="text-but">
 	         </form>
          </td>
   		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增用户</a></td>
@@ -194,8 +203,56 @@ td.fenye {
 			//3 设置字符集 选择数据库
 			mysqli_set_charset($link,"utf8");
 			mysqli_select_db($link,DBNAME);
+			
+			//=============封装搜索条件======================
+			//1 设置数组接收搜索条件
+				$wherelist = array();
+				$urllist = array();	//封装url的状态维持的条件
+			//2 接收搜索条件 
+				if(!empty($_GET['name'])){
+					$wherelist[] =" name like '%{$_GET['name']}%'"; 
+					$urllist[] = "name={$_GET['name']}";
+				}	
+				if(!empty($_GET['sex'])){
+					$wherelist[] = "sex='{$_GET['sex']}'";
+					$urllist[] = "sex={$_GET['sex']}";
+				}
+
+			//3 判断搜索条件的有效性	
+				if(count($wherelist)>0){
+					$where = " where ".implode(" and ",$wherelist);
+					$url = "&".implode("&", $urllist);
+				}
+
+			//=============封装搜索条件======================
+			
+			/*================实现分页显示==================*/
+//				1 设置参数
+				$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
+				$maxPage = 0;	//一共显示多少页
+				$maxRow = 0;	//一共有多少条
+				$pageSize = 8;	//每页显示多少条	页大小
+//				2 一共多少条
+				@$sql = "select * from users ".$where;
+				$res = mysqli_query($link, $sql);
+				$maxRow = mysqli_num_rows($res);
+//				3 一共显示多少页
+				$maxPage = ceil($maxRow/$pageSize);
+//				4 判断页码 是否有效
+				if($page>$maxPage){
+					$page = $maxPage;
+				}
+				if($page<1){
+					$page = 1;
+				}
+//				5 拼接limit
+				$limit = " limit ".($page-1)*$pageSize.",".$pageSize;
+			/*================实现分页显示==================*/
+			
 			//4 写sql语句 获得结果集 
-			$sql = "select * from users order by id";
+			@$sql = "select * from users $where order by id $limit";
+//			echo $sql;
+//			exit;
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
 			while($row = mysqli_fetch_assoc($result)){
@@ -228,7 +285,7 @@ swUse;
     </table></td>
     </tr>
   <tr>
-				<td align="left" valign="top" class="fenye">11 条数据 1/1 页&nbsp;&nbsp;
+				<td align="left" valign="top" class="fenye"><?php  echo mysqli_num_rows($res)?>条数据 &nbsp;&nbsp;
 					<a href="#" target="mainFrame" onFocus="this.blur()">
 						首页
 					</a>&nbsp;&nbsp;

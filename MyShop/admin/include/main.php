@@ -129,7 +129,7 @@ div.main-order {
 									echo "您上次访问时间是：" . $_COOKIE['lastvisit'];
 									setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
 								} else {
-									echo "您是第一次登录，欢迎！";
+									echo "今天您是第一次登录，欢迎！";
 									setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
 								}
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -142,7 +142,7 @@ div.main-order {
 							更改密码
 						</a>
 					</div>
-					<div class="sec">这是您第
+					<div class="sec">这是您今天第
 						<span class="num">
 							<?php
 								if (isset($_SESSION['uesr'])) {

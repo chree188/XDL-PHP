@@ -53,7 +53,10 @@
 
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
-			header("Location:index.php");
+//			header("Location:index.php");
+			header("Location:{$_SERVER['HTTP_REFERER']}");
+			//这个常量可以告诉我们 是从哪里来的 
+			//你从哪里来 回到哪里去 
 		}else{
 			header("Location:index.php?errno=3");
 		}
