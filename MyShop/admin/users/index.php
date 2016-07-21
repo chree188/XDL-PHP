@@ -202,9 +202,12 @@ span.num {
 			date_default_timezone_set('PRC');
 			// 设置性别
 			$sex = array("1"=>"男","2"=>"女");
+			//反数据库性别
 			$unsex = array("男"=>"1","女"=>"2");
 			// 设置权限
 			$state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
+			//反数据库用户权限
+			$unstate = array("超级管理员"=>"0","一般管理员"=>"1","信息录入员"=>"2");	//********************************** c超级管理员不能使用0
 			//六脉神剑 
 			//1 导入数据库配置文件
 			include("../../public/sql/dbconfig.php");
@@ -219,6 +222,8 @@ span.num {
 				$wherelist = array();
 				$urllist = array();	//封装url的状态维持的条件
 			//2 接收搜索条件 
+				$unsex[$_GET['name']] = empty($unsex[$_GET['name']])? "{$_GET['name']}" : $unsex[$_GET['name']];	//判断是否传除男 女性别之外的条件
+				$unstate[$_GET['name']] = empty($unstate[$_GET['name']])? "{$_GET['name']}" : $unstate[$_GET['name']];	//判断是否传除超级管理员 一般管理员之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
 					$wherelist[] =" (name like '%{$_GET['name']}%' 
 					or username like '%{$_GET['name']}%' 
@@ -227,7 +232,8 @@ span.num {
 					or code like '%{$_GET['name']}%'
 					or phone like '%{$_GET['name']}%'
 					or email like '%{$_GET['name']}%'
-					or sex like '%{$unsex[$_GET['name']]}%')"; 
+					or sex like '%{$unsex[$_GET['name']]}%'
+					or state like '%{$unstate[$_GET['name']]}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
 				if(!empty($_GET['sex'])){
@@ -269,6 +275,7 @@ span.num {
 			//4 写sql语句 获得结果集 
 			$sql = "select * from users $where order by id $limit";
 			$result = mysqli_query($link,$sql);
+			echo $sql;	// 打印sql语句来排错		********************************
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){

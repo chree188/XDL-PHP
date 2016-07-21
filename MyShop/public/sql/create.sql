@@ -22,7 +22,7 @@ create table users(
 	code char(6),
 	phone varchar(16),
 	email varchar(50) not null unique,
-	state enum('0','1','2') default '1',
+	state enum('1','2','3') default '1',
 	addtime int
 )engine=myisam default charset=utf8;
 
