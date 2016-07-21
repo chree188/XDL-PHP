@@ -176,6 +176,7 @@ td.fenye {
     
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr>
+      	<th align="center" valign="middle" class="borderright">序号</th>
         <th align="center" valign="middle" class="borderright">ID</th>
         <th align="center" valign="middle" class="borderright">帐号</th>
         <th align="center" valign="middle" class="borderright">姓名</th>
@@ -263,11 +264,14 @@ td.fenye {
 			@$sql = "select * from users $where order by id $limit";
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
+			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
+				$i++;
 				$regTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化注册时间戳
 $str = <<<swUse
 				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
 				onMouseOver="this.style.backgroundColor='#edf5ff'">
+		<td align="center" valign="middle" class="borderright borderbottom">{$i}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['username']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['name']}</td>
@@ -292,20 +296,25 @@ swUse;
 		?>
     </table></td>
     </tr>
-  <tr>
-				<td align="left" valign="top" class="fenye"><?php  echo mysqli_num_rows($res)?>条数据 &nbsp;&nbsp;
-					<a href="#" target="mainFrame" onFocus="this.blur()">
-						首页
-					</a>&nbsp;&nbsp;
-					<a href="#" target="mainFrame" onFocus="this.blur()">
-						上一页
-					</a>&nbsp;&nbsp;
-					<a href="#" target="mainFrame" onFocus="this.blur()">
-						下一页
-					</a>&nbsp;&nbsp;
-					<a href="#" target="mainFrame" onFocus="this.blur()">
-						尾页
-					</a></td>
+  			<tr>
+				<td align="left" valign="top" class="fenye">
+					共查询到<?php  echo mysqli_num_rows($res)?>条用户信息 &nbsp;&nbsp;
+					<?php 
+						$url = empty($url)? "" : $url;
+						echo "<a href='index.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
+							首页
+						</a>&nbsp;&nbsp;";
+						echo "<a href='index.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+							上一页
+						</a>&nbsp;&nbsp;";
+						echo "<a href='index.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+							下一页
+						</a>&nbsp;&nbsp;";
+						echo "<a href='index.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
+							尾页
+						</a>";
+					?>
+				</td>
 			</tr>
 </table>
 </body>

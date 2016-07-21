@@ -9,11 +9,11 @@ values('12','rz','瑞兹','84d6c1089afa2c0a3e2f3c8a877df0f3','1','召唤师峡�
 insert into `users` (`id`, `username`, `name`, `pass`, `sex`, `address`, `code`, `phone`, `email`, `state`, `addtime`) 
 values('9','js','剑圣','a40f8f12d1f0656b6185c83a89a47001','1','召唤师峡谷','145287','13777399388','js@126.com','0','1468930349');
 insert into `users` (`id`, `username`, `name`, `pass`, `sex`, `address`, `code`, `phone`, `email`, `state`, `addtime`) 
-values('6','mgn','莫甘娜','e4eb4fd9377257d2011e193156003bf7','0','召唤师峡谷','124578','13777399001','mgn@126.com','1','1468926849');
+values('6','mgn','莫甘娜','e4eb4fd9377257d2011e193156003bf7','2','召唤师峡谷','124578','13777399001','mgn@126.com','1','1468926849');
 insert into `users` (`id`, `username`, `name`, `pass`, `sex`, `address`, `code`, `phone`, `email`, `state`, `addtime`) 
-values('13','qj','千珏','55431fe6c0743b0e9afde1e6f4b3cb84','0','符文之地','847521','13777333444','qj@126.com','0','1469005102');
+values('13','qj','千珏','55431fe6c0743b0e9afde1e6f4b3cb84','2','符文之地','847521','13777333444','qj@126.com','0','1469005102');
 insert into `users` (`id`, `username`, `name`, `pass`, `sex`, `address`, `code`, `phone`, `email`, `state`, `addtime`) 
-values('8','ax','艾希','2384ecc9f4a1618d2cc06639c3a16f0b','0','瓦罗兰','451278','13421826813','ax@126.com','0','1468927033');
+values('8','ax','艾希','2384ecc9f4a1618d2cc06639c3a16f0b','2','瓦罗兰','451278','13421826813','ax@126.com','0','1468927033');
 insert into `users` (`id`, `username`, `name`, `pass`, `sex`, `address`, `code`, `phone`, `email`, `state`, `addtime`) 
 values('11','gl','盖伦','f802b9669cdf882daa2c991724745b9b','1','德玛西亚','254187','13777399444','gl@126.com','1','1468936764');
 insert into `users` (`id`, `username`, `name`, `pass`, `sex`, `address`, `code`, `phone`, `email`, `state`, `addtime`) 
