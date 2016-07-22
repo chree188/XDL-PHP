@@ -45,7 +45,7 @@ body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y
       <div>
         <span>商品模块</span>
         <a href="../goods/index.php" target="mainFrame" onFocus="this.blur()">查看商品</a>
-        <a href="../goods/add.php" target="mainFrame" onFocus="this.blur()">添加商品</a>
+        <a href="../goods/doadd.php" target="mainFrame" onFocus="this.blur()">添加商品</a>
       </div>
       <div>
         <span>订单模块</span>

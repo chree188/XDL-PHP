@@ -124,6 +124,11 @@ td.fenye {
 	text-align: right;
 }
 
+.num {
+	color: #538ec6;
+	font-family: "Georgia", "Tahoma", "Arial";
+}
+
 span.num {
 	font-size: 30px;
 	color: #538ec6;
@@ -284,7 +289,7 @@ span.num {
 $str = <<<swUse
 				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
 				onMouseOver="this.style.backgroundColor='#edf5ff'">
-		<td align="center" valign="middle" class="borderright borderbottom">{$i}</td>
+		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['username']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['name']}</td>
@@ -312,6 +317,7 @@ swUse;
   			<tr>
 				<td align="left" valign="top" class="fenye">
 					共查询到<span class="num"><?php  echo mysqli_num_rows($res)?></span>条用户信息 &nbsp;&nbsp;
+					<span class="num"><?php  echo $page.'/'.$maxPage ?></span>页  &nbsp;&nbsp;
 					<?php 
 						$url = empty($url)? "" : $url;
 						echo "<a href='index.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>

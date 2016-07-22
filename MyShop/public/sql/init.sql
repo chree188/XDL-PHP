@@ -44,10 +44,10 @@ insert into `type` (`id`, `name`, `pid`, `path`) values('9','菜籽油','1','0,1
 
 /*以下是商品信息*/
 insert into goods (typeid,goods,company,descr,price,picname,store,num,addtime) 
-values(1,'芝麻油','绍兴清香食品厂','这是芝麻油',99.90,'../public/img/uploads/oil.jpg',100,15,20160715);
+values(1,'芝麻油','绍兴清香食品厂','这是芝麻油',99.90,'/img/uploads/oil.jpg',100,15,20160715);
 insert into goods (typeid,goods,company,descr,price,picname,store,num,addtime) 
-values(1,'玉米油','嘉兴清香食品厂','这是玉米油',55.80,'../public/img/uploads/oil.jpg',50,6,20160715);
+values(1,'玉米油','嘉兴清香食品厂','这是玉米油',55.80,'/img/uploads/oil.jpg',50,6,20160715);
 insert into goods (typeid,goods,company,descr,price,picname,state,store,num,addtime) 
-values(1,'花生油','山东廉价食品厂','~~~这是花生油',49.50,'../public/img/uploads/oil.jpg',2,80,3,20160715);
+values(1,'花生油','山东廉价食品厂','~~~这是花生油',49.50,'/img/uploads/oil.jpg',2,80,3,20160715);
 insert into goods (typeid,goods,company,descr,price,picname,state,store,addtime) 
-values(1,'橄榄油','上海旅游食品厂','这是橄榄油！！！',199.90,'../public/img/uploads/oil.jpg',3,30,20160715);
+values(1,'橄榄油','上海旅游食品厂','这是橄榄油！！！',199.90,'/img/uploads/oil.jpg',3,30,20160715);

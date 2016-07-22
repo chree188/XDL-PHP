@@ -1,8 +1,12 @@
 <center>
 	<style type="text/css">
+		a:hover{
+			color:cornflowerblue ;
+		}
 		a {
 			text-decoration: none;
 			color: yellowgreen;
+			
 		}
 	</style>
 	
