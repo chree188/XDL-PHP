@@ -122,6 +122,10 @@ td.fenye {
 	text-align: right;
 }
 
+textarea {
+	resize: none;
+}
+
 .bggray {
 	background: #f9f9f9;
 	font-size: 14px;
@@ -188,11 +192,11 @@ td.fenye {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">用户模块</a>&nbsp;&nbsp;>&nbsp;&nbsp;添加用户</td>
+    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">商品模块</a>&nbsp;&nbsp;>&nbsp;&nbsp;添加商品</td>
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">
-    <a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增用户</a>
+    <a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增商品</a>
     </td>
   </tr>
   <tr>
@@ -200,32 +204,70 @@ td.fenye {
     <form method="post" action="./action.php?a=insert">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">账号：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">所属类别：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="username" value="" class="text-word">
-        <b style="color: red;font-size: 20px;">*</b>
-        </td>
-        </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">真实姓名：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="name" value="" class="text-word">
-        </td>
-        </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户密码：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="pass" value="" class="text-word">
-        <b style="color: red;font-size: 20px;">*</b>
+        <select name="typeid" id="level" >
+        <?php
+			//查看类别信息 select 输出到表格里面 
+			//六脉神剑 
+			//1 导入数据库配置文件
+			include("../../public/sql/dbconfig.php");
+			//2 连接数据库
+			$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
+			//3 设置字符集 选择数据库
+			mysqli_set_charset($link,"utf8");
+			mysqli_select_db($link,DBNAME);
+			//4 写sql语句 获得结果集 
+			$sql = "select * from type order by concat(path,id)";	// 修改为一类别pid path排序
+			$result = mysqli_query($link,$sql);
+			//5 解析结果集 
+			while($row = mysqli_fetch_assoc($result)){
+//				显示下拉列表的形式
+				$disable = null;
+				if($row['pid']==0){
+					$disable = "disabled";
+				}
+				
+//				1 数逗号个数
+				$num = substr_count($row['path'], ',');
+//				2 输出空格
+				$pad = str_repeat("=>", $num-1);
+				
+				echo "<option value='{$row['id']}'{$disable}>{$pad}{$row['name']}</option>";
+			}	
+			//6 关闭数据库 释放结果集 
+			
+			mysqli_close($link);
+			mysqli_free_result($result);
+		?>
+        </select>
         </td>
       </tr>
-      <!--<tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">确认密码：</td>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">商品名称：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="pass" value="" class="text-word">
-        <b style="color: red;">*</b>
+        <input type="text" name="goods" value="" class="text-word">
+        <b style="color: red;font-size: 20px;">*</b>
         </td>
-        </tr>-->
+        </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">生产厂家：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="company" value="" class="text-word">
+        </td>
+        </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">简介：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <textarea name="descr" value="" cols="42px" rows="7px" class="text-word"></textarea>
+        </td>
+        </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">单价：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="price" value="" class="text-word"><b  style="color: gold;font-size: 20px;">￥</b>
+        </td>
+        </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">性别：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
@@ -255,22 +297,13 @@ td.fenye {
         <td align="right" valign="middle" class="borderright borderbottom bggray">Email：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="email" value="" class="text-word">
-        <b style="color: red;font-size: 20px;">*</b>
+        <b style="color: red;">*</b>
         </td>
       </tr>
+      
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户权限：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <select name="state" id="level">
-	    <option value="1" >&nbsp;&nbsp;超级管理员</option>
-	    <option value="2" >&nbsp;&nbsp;一般管理员</option>
-	    <option value="3" >&nbsp;&nbsp;信息录入员</option>
-        </select>
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b style="color: red;font-size: 20px;">*</b></td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b style="color: red;font-size: 20px;">*</b>号项为必填项，不能为空。。。</h4>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b style="color: red;">*</b></td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b style="color: red;">*</b>号项为必填项，不能为空。。。</h4>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
