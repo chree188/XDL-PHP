@@ -278,9 +278,9 @@ td.fenye {
         <td align="right" valign="middle" class="borderright borderbottom bggray">用户权限：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <select name="state" id="level">
-	    <option value="0"<?php echo $row['state']=='0' ? 'selected' :'';  ?> >&nbsp;&nbsp;超级管理员</option>
-	    <option value="1"<?php echo $row['state']=='1' ? 'selected' :'';  ?> >&nbsp;&nbsp;一般管理员</option>
-	    <option value="2"<?php echo $row['state']=='2' ? 'selected' :'';  ?> >&nbsp;&nbsp;信息录入员</option>
+	    <option value="1"<?php echo $row['state']=='0' ? 'selected' :'';  ?> >&nbsp;&nbsp;超级管理员</option>
+	    <option value="2"<?php echo $row['state']=='1' ? 'selected' :'';  ?> >&nbsp;&nbsp;一般管理员</option>
+	    <option value="3"<?php echo $row['state']=='2' ? 'selected' :'';  ?> >&nbsp;&nbsp;信息录入员</option>
         </select>
         </td>
       </tr>
