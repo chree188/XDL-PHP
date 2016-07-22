@@ -265,45 +265,32 @@ textarea {
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">单价：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="price" value="" class="text-word"><b  style="color: gold;font-size: 20px;">￥</b>
+        <input type="text" name="price" value="" class="text-word"><b style="color: gold;font-size: 20px;">￥</b>
+        </td>
+        </tr>
+       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">图片：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="file" name="picname" value="">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">性别：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">状态：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <label><input type="radio" name="sex" value="1" checked >男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><input type="radio" name="sex" value="2" >女</label>
+        <label><input type="radio" name="state" value="1" checked >新添加</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input type="radio" name="state" value="2" >在售</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input type="radio" name="state" value="3" >下架</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">地址：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">库存量：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="address" value="" class="text-word">
+        <input type="text" name="store" value="" class="text-word">
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">邮编：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="code" value="" class="text-word">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">电话：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="phone" value="" class="text-word">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">Email：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="email" value="" class="text-word">
-        <b style="color: red;">*</b>
-        </td>
-      </tr>
-      
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b style="color: red;">*</b></td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b style="color: red;">*</b>号项为必填项，不能为空。。。</h4>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b style="color: red;font-size: 20px;">*</b></td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b style="color: red;font-size: 20px;">*</b>号项为必填项，不能为空。。。</h4>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
