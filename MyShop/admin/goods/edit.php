@@ -206,8 +206,8 @@ textarea {
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">所属类别：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <select name="typeid" id="level" >
         <?php
-        echo "<select name='typeid' id='level' >";
 			//查看类别信息 select 输出到表格里面 
 			//六脉神剑 
 			//1 导入数据库配置文件
@@ -239,8 +239,8 @@ textarea {
 			
 			mysqli_close($link);
 			mysqli_free_result($result);
-        echo "</select>";
 		?>
+        </select>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -275,6 +275,14 @@ textarea {
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">状态：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <label><input type="radio" name="state" value="1" checked >新添加</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input type="radio" name="state" value="2" >在售</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input type="radio" name="state" value="3" >下架</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">库存量：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="store" value="" class="text-word">
@@ -297,7 +305,7 @@ textarea {
 		//处理添加表单的错误信息
 		switch(@$_GET['errno']) {
 			case 1 :
-				echo "<h2 style='color:red; '>添加失败,该商品已存在</h2>";
+				echo "<h2 style='color:red; '>添加失败,该账号已存在</h2>";
 				break;
 			case 2 :
 				echo "<h2 style='color:red; '>带*项不能为空</h2>";
