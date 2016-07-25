@@ -117,6 +117,11 @@ body {
 	color: #dbdbdb;
 }
 
+b {
+	color: red;
+	font-size: 20px;
+}
+
 td.fenye {
 	padding: 10px 0 0 0;
 	text-align: right;
@@ -226,7 +231,7 @@ td.fenye {
         <td align="right" valign="middle" class="borderright borderbottom bggray">账号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="username" value="<?php echo $row['username']?>" class="text-word">
-        <b style="color: red;">*</b>
+        <b>*</b>
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -239,7 +244,7 @@ td.fenye {
         <td align="right" valign="middle" class="borderright borderbottom bggray">用户密码：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="pass" value="" placeholder="请输入新密码" class="text-word">
-        <b style="color: red;">*</b>
+        <b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -271,7 +276,7 @@ td.fenye {
         <td align="right" valign="middle" class="borderright borderbottom bggray">Email：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="email" value="<?php echo $row['email']?>" class="text-word">
-        <b style="color: red;">*</b>
+        <b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -285,8 +290,8 @@ td.fenye {
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b style="color: red;">*</b></td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b style="color: red;">*</b>号项为必填项，不能为空。。。</h4>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b>*</b></td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b>*</b>号项为必填项，不能为空。。。</h4>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">

@@ -117,6 +117,11 @@ body {
 	color: #dbdbdb;
 }
 
+b {
+	color: red;
+	font-size: 20px;
+}
+
 td.fenye {
 	padding: 10px 0 0 0;
 	text-align: right;
@@ -247,7 +252,7 @@ textarea {
         <td align="right" valign="middle" class="borderright borderbottom bggray">商品名称：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="goods" value="" class="text-word">
-        <b style="color: red;font-size: 20px;">*</b>
+        <b>*</b>
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -265,7 +270,7 @@ textarea {
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">单价：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="price" value="" class="text-word"><b style="color: gold;font-size: 20px;">￥</b>
+        <input type="text" name="price" value="" class="text-word"><b>￥</b>
         </td>
         </tr>
        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -281,8 +286,8 @@ textarea {
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b style="color: red;font-size: 20px;">*</b></td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b style="color: red;font-size: 20px;">*</b>号项为必填项，不能为空。。。</h4>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b>*</b></td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b>*</b>号项为必填项，不能为空。。。</h4>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">

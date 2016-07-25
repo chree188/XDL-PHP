@@ -15,6 +15,8 @@
 		//执行添加 
 		//1 设置参数 
 		$upfile = $_FILES['pic'];
+		var_dump($upfile);
+		exit;
 		$path = "./uploads";
 		$typelist = array("image/png","image/jpeg","image/gif","image/pjpeg"); 
 

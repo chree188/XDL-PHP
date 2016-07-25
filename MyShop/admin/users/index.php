@@ -164,7 +164,7 @@ span.num {
    		 <td width="90%" align="left" valign="middle">
 	         <form action="index.php">
 			<?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
-	         <span>查询条件：</span>
+	         <span>关键字：</span>
 	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
 			<span>性别：
 			<select name="sex">
