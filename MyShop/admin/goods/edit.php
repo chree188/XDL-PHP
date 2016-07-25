@@ -229,6 +229,7 @@ textarea {
 		?>
     <form method="post" action="./action.php?a=update">
     <input type="hidden" name='id' value="<?php echo $row['id']?> ">
+    <input type="hidden" name='id' value="<?php echo $_GET['oldpicname']?> ">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">所属类别：</td>
@@ -250,7 +251,7 @@ textarea {
 			//5 解析结果集 
 			while($trow = mysqli_fetch_assoc($result)){
 //				显示下拉列表的形式
-				$disable = null;
+				$disable = null;	//祖父类默认不可选
 				if($trow['pid']==0){
 					$disable = "disabled";
 				}
@@ -259,8 +260,12 @@ textarea {
 				$num = substr_count($trow['path'], ',');
 //				2 输出空格
 				$pad = str_repeat("_>", $num-1);
+				$selected = null;		//修改时默认选中被修改是商品的父类
+				if($_GET['pid']==$trow['id']){
+					$selected = "selected";
+				}
 				
-				echo "<option value='{$trow['id']}'{$disable}>{$pad}{$trow['name']}</option>";
+				echo "<option value='{$trow['id']}'{$disable}{$selected}>{$pad}{$trow['name']}</option>";
 			}	
 			//6 关闭数据库 释放结果集 
 			
@@ -298,7 +303,7 @@ textarea {
        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">图片：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="picname" value="<?php echo $row['picname']?>">
+        <input type="file" name="picname" value="">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">

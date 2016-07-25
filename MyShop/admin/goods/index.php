@@ -280,7 +280,7 @@ $str = <<<swUse
         <td align="center" valign="middle" class="borderright borderbottom">{$row['store']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$regTime}</td>
         <td align="center" valign="middle" class="borderbottom">
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
+        <a href="edit.php?id={$row['id']}&oldpicname={$row['picname']}&pid={$row['typeid']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
         <span class="gray">&nbsp;|&nbsp;</span>
         <a href="action.php?a=del&id={$row['id']}&picname={$row['picname']}" target="mainFrame" onFocus="this.blur()" class="add">删除</a>
         </td>
