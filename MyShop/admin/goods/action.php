@@ -171,9 +171,8 @@
 		$state = $_POST['state'];
 		$store = $_POST['store'];
 		//4 写sql语句 执行sql
-		$sql = "update goods set typeid='$typeid',goods='$goods',company='$company',descr=$descr,price='$price',
+		$sql = "update goods set typeid='$typeid',goods='$goods',company='$company',descr='$descr',price='$price',
 		picname='$picname',state='$state',store='$store' where id={$_POST['id']}";
-		echo $sql;exit;													=============================================================
 		mysqli_query($link,$sql);
 		
 		if(mysqli_affected_rows($link)>0){
