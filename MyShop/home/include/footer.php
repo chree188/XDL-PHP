@@ -1,8 +1,8 @@
 <!--网站页脚-->
-<link href="../public/css/style.css" rel="stylesheet" />
+<link href="./include/css/style.css" rel="stylesheet" />
 <!--养生热线-->
 <div class="ctel">
-	<img src="../public/img/mark.jpg" width="22" height="21" />
+	<img src="./include/img/mark.jpg" width="22" height="21" />
 	&nbsp;<span class="tt">养生热线：</span>0570-6216550 13777399387
 </div>
 <div class="footer">

@@ -6,7 +6,7 @@
     <link href="./include/css/alogin.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <form id="form1" runat="server" action="dologin.php" method="post">
+    <form id="form" runat="server" action="dologin.php" method="post">
     <div class="Main">
         <ul>
             <li class="top"></li>

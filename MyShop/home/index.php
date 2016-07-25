@@ -1,17 +1,25 @@
+<?php
+	session_start();	
+	//登录验证
+	if(empty($_SESSION['user'])){
+		header('Location:login.php');
+		exit;
+	}
+?>
 <html>
 	<head>
 		<meta charset="UTF-8" />
 		<title>天慈天养</title>
-		<script src="../public/js/ScrollPic.js"></script>
+		<script src="./include/js/ScrollPic.js"></script>
 	</head>
 	<body>
 		<!--网页主体content-->
 		<div class="content">
 			<?php
-			include 'header.php';
+			include './include/header.php';
 			?>
 			<div class="banner">
-				<img src="../public/img/banner.jpg" alt="懒人图库">
+				<img src="./include/img/banner.jpg" alt="懒人图库">
 			<!--main-->
 			<div class="main">
 				<!--mleft-->
@@ -85,14 +93,14 @@
 					</div>
 					<div class="ad">
 						<a href="#_">
-							<img src="../public/img/ad04.jpg" width="240" height="286" />
+							<img src="./include/img/ad04.jpg" width="240" height="286" />
 						</a>
 					</div>
 				</div>
 				<div class="mright">
 					<div class="ad">
 						<div class="vcontainer" id="idTransformView">
-							<img src="../public/img/ad03.jpg" width="722" height="286" />
+							<img src="./include/img/ad03.jpg" width="722" height="286" />
 						</div>
 					</div>
 					<div class="commend">
@@ -108,7 +116,7 @@
 									<li>
 										<p class="media">
 											<a href="#_">
-												<img src="../public/img/p.jpg" width="203" height="131" />
+												<img src="./include/img/p.jpg" width="203" height="131" />
 											</a>
 										</p>
 										<p class="intro">
@@ -120,7 +128,7 @@
 									<li>
 										<p class="media">
 											<a href="#_">
-												<img src="../public/img/p.jpg" width="203" height="131" />
+												<img src="./include/img/p.jpg" width="203" height="131" />
 											</a>
 										</p>
 										<p class="intro">
@@ -132,7 +140,7 @@
 									<li>
 										<p class="media">
 											<a href="#_">
-												<img src="../public/img/p.jpg" width="203" height="131" />
+												<img src="./include/img/p.jpg" width="203" height="131" />
 											</a>
 										</p>
 										<p class="intro">
@@ -144,7 +152,7 @@
 									<li>
 										<p class="media">
 											<a href="#_">
-												<img src="../public/img/p.jpg" width="203" height="131" />
+												<img src="./include/img/p.jpg" width="203" height="131" />
 											</a>
 										</p>
 										<p class="intro">
@@ -156,7 +164,7 @@
 									<li>
 										<p class="media">
 											<a href="#_">
-												<img src="../public/img/p.jpg" width="203" height="131" />
+												<img src="./include/img/p.jpg" width="203" height="131" />
 											</a>
 										</p>
 										<p class="intro">
@@ -168,7 +176,7 @@
 									<li>
 										<p class="media">
 											<a href="#_">
-												<img src="../public/img/p.jpg" width="203" height="131" />
+												<img src="./include/img/p.jpg" width="203" height="131" />
 											</a>
 										</p>
 										<p class="intro">
@@ -242,7 +250,7 @@
 					</div>
 					<div class="ad">
 						<a href="#_">
-							<img src="../public/img/ad02.jpg" width="240" height="347" />
+							<img src="./include/img/ad02.jpg" width="240" height="347" />
 						</a>
 					</div>
 				</div>
@@ -289,7 +297,7 @@
 						<div class="first">
 							<div class="media">
 								<a href="#_">
-									<img src="../public/img/news.jpg" width="108" height="66" />
+									<img src="./include/img/news.jpg" width="108" height="66" />
 								</a>
 							</div>
 							<div class="intro">
@@ -325,7 +333,7 @@
 				</div>
 			</div>
 			<?php
-			include 'footer.php';
+			include './include/footer.php';
 			?>
 		</div>
 	</body>

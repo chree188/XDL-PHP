@@ -87,7 +87,7 @@
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
 		}else{
-			header("Location:edit.php?id={$_POST['id']}&errno=1");
+			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
 		}
 		break;
 	}

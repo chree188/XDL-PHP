@@ -42,14 +42,14 @@
 					?>
                 </div>
             </div>
-            <div class="logonr"><img src="../public/img/carm.jpg" />
+            <div class="logonr"><img src="./include/img/carm.jpg" />
             </div>
-            <div class="logonr"><img src="../public/img/carm.jpg" />
+            <div class="logonr"><img src="./include/img/carm.jpg" />
             </div>
         </div>
     </div>
     <div class="footer">
     	<?php	
-    		include'footer.php';
+    		include'./include/footer.php';
     	?>
     </div>

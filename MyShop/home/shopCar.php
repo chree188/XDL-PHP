@@ -6,12 +6,12 @@
 	<body>
 		<div class="content icontent">
 			<?php	
-				include'header.php';
+				include'./include/header.php';
 			?>
 			<div class="inner">
 				<div class="buyflow">
 					<div class="flow">
-						<img src="../public/img/flow.jpg" width="980" height="57" />
+						<img src="./include//img/flow.jpg" width="980" height="57" />
 					</div>
 					<div class="buylist">
 						<table width="100%">
@@ -33,7 +33,7 @@
 								<td>
 									<div class="m">
 										<a href="#_">
-											<img src="../public/img/p.jpg" width="85" height="55" />
+											<img src="./include//img/p.jpg" width="85" height="55" />
 										</a>
 									</div>
 									<div class="i">
@@ -59,7 +59,7 @@
 								<td>
 									<div class="m">
 										<a href="#_">
-											<img src="../public/img/p.jpg" width="85" height="55" />
+											<img src="./include//img/p.jpg" width="85" height="55" />
 										</a>
 									</div>
 									<div class="i">
@@ -85,7 +85,7 @@
 								<td>
 									<div class="m">
 										<a href="#_">
-											<img src="../public/img/p.jpg" width="85" height="55" />
+											<img src="./include//img/p.jpg" width="85" height="55" />
 										</a>
 									</div>
 									<div class="i">
@@ -120,17 +120,17 @@
 					<div class="but">
 						<div class="r">
 							<a href="shopCarTJ.php">
-								<img src="../public/img/button11.jpg" />
+								<img src="./include//img/button11.jpg" />
 							</a>
 						</div>
 						<a href="#_">
-							<img src="../public/img/button10.jpg" />
+							<img src="./include//img/button10.jpg" />
 						</a>
 					</div>
 				</div>
 			</div>
 			<?php	
-				include'footer.php';
+				include'./include/footer.php';
 			?>
 		</div>
 	</body>

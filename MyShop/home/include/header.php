@@ -1,12 +1,26 @@
+<?php 
+//设置报错情况	去除notice错误
+	error_reporting(E_ALL ^ E_NOTICE);
+	session_start(); 
+?>
 <!--网站头部和导航栏-->
-<link href="../public/css/common.css" rel="stylesheet" />
-<link href="../public/css/style.css" rel="stylesheet" />
+<link href="./include/css/common.css" rel="stylesheet" />
+<link href="./include/css/style.css" rel="stylesheet" />
 
 <!--头部-->
 <div class="top">
 	<div class="link">
-		<a class="i" href="login.php">
-			登录
+		<span>用户：<?php 
+			echo $_SESSION['user']['name']; 
+		?>&nbsp;&nbsp;角色：
+    	<?php 
+		    $state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
+		    echo $state[$_SESSION['user']['state']]; 
+    	?>
+    	</span>
+    	&nbsp;&nbsp;
+    	<a class="i" href="logout.php">
+			注销
 		</a>
 		&nbsp;&nbsp;
 		<a class="a" href="register.php">
@@ -21,13 +35,13 @@
 		</a>
 	</div>
 	<div class="logo">
-		<a href="#_"></a>
+		<a href="./index.php"></a>
 	</div>
 </div>
 <div class="nav">
 	<div class="search">
-		<a href="shopCar.php">
-			<img src="../public/img/buycar.gif" width="182" height="41" />
+		<a href="./shopCar.php">
+			<img src="./include/img/buycar.gif" width="182" height="41" />
 		</a>
 	</div>
 	<ul class="list">

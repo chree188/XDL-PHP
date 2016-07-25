@@ -6,7 +6,7 @@
 	<body>
 		<div class="content icontent">
 			<?php
-				include 'header.php';
+				include './include/header.php';
 			?>
 			<div class="inner">
 				<div class="osuccess">
@@ -15,7 +15,7 @@
 					</div>
 					<div class="bd">
 						<div class="m">
-							<img src="../public/img/mark03.jpg" width="172" height="149" />
+							<img src="./include/img/mark03.jpg" width="172" height="149" />
 						</div>
 						<div class="i">
 							<div class="title">
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 			<?php
-include'footer.php';
+				include'./include/footer.php';
 			?>
 		</div>
 	</body>

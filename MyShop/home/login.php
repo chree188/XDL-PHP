@@ -1,9 +1,15 @@
-<link href="../public/css/common.css" rel="stylesheet" />
-<link href="../public/css/style.css" rel="stylesheet" />
-
+<!DOCTYPE html>
+<html>
+<head runat="server">
+	<meta charset=utf-8 />
+    <title>用户登录界面</title>
+	<link href="../public/css/common.css" rel="stylesheet" />
+	<link href="../public/css/style.css" rel="stylesheet" />
+</head>
+<body>
 <div class="top">
 	<div class="logo">
-		<a href="#_"></a>
+		<a href="index.php"></a>
 	</div>
 </div>
  <div class="inner">
@@ -22,6 +28,23 @@
 					<input type="submit" value="登录" class="button03" />
 					<input type="reset" class="button03" />
                 </div>
+                <div>
+                	<?php	
+				//输出错误信息
+					$_GET['errno'] = empty($_GET['errno'])? '':$_GET['errno'];
+					switch($_GET['errno']){
+						case 1:
+							echo "<h2 style='color:red; margin:0px auto;'>账户或密码错误</h2>";
+						break;
+						case 2:
+							echo "<h2 style='color:red; margin:0px auto;'>账户或密码错误</h2>";
+						break;
+						case 3:
+							echo "<h2 style='color:red; margin:0px auto;'>验证码错误</h2>";
+						break;
+					}
+				?>
+                </div>
             </div>
             <div class="logonr"><img src="../public/img/carm.jpg" />
             </div>
@@ -29,6 +52,8 @@
     </div>
     <div class="footer">
     	<?php	
-    		include'footer.php';
+    		include'./include/footer.php';
     	?>
     </div>
+</body>
+</html>

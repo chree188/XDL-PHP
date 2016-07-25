@@ -2,20 +2,20 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>商品详情</title>
-		<script src="../public/js/ScrollPic.js"></script>
+		<script src="./include/js/ScrollPic.js"></script>
 	</head>
 	<body>
 		<div class="content icontent">
 			<?php
-			include 'header.php';
+			include './include/header.php';
 			?>
 			<div class="inner">
 				<div class="ibanner">
-					<img src="../public/img/ibanner04.jpg" width="980" height="249" />
+					<img src="./include/img/ibanner04.jpg" width="980" height="249" />
 				</div>
 				<div class="tinner">
 					<div class="hd">
-						<img class="png" src="../public/img/hd.png" width="1006" height="29" />
+						<img class="png" src="./include/img/hd.png" width="1006" height="29" />
 					</div>
 					<div class="bd png">
 						<div class="ileft">
@@ -65,7 +65,7 @@
 								</li>
 							</ul>
 							<div class="lft">
-								<img src="../public/img/lnavft.jpg" width="222" height="15" />
+								<img src="./include/img/lnavft.jpg" width="222" height="15" />
 							</div>
 						</div>
 						<div class="iright">
@@ -89,21 +89,21 @@
 										<ul class="big-img">
 											<li class="select">
 												<a href="#_">
-													<img src="../public/img/p.jpg" width="445" height="287" />
+													<img src="./include/img/p.jpg" width="445" height="287" />
 												</a>
 											</li>
 											<li>
 												<a href="#_">
-													<img src="../public/img/p.jpg" width="445" height="287" />
+													<img src="./include/img/p.jpg" width="445" height="287" />
 												</a>
 											</li>
 										</ul>
 										<ul class="small-img">
 											<li class="select">
-												<img src="../public/img/p.jpg" width="70" height="45" />
+												<img src="./include/img/p.jpg" width="70" height="45" />
 											</li>
 											<li>
-												<img src="../public/img/p.jpg" width="70" height="45" />
+												<img src="./include/img/p.jpg" width="70" height="45" />
 											</li>
 										</ul>
 									</div>
@@ -167,7 +167,7 @@
 								</div>
 								<div class="link">
 									<a href="#_">
-										<img src="../public/img/button02.jpg" width="87" height="27" />
+										<img src="./include/img/button02.jpg" width="87" height="27" />
 									</a>
 								</div>
 							</div>
@@ -187,7 +187,7 @@
 											<li>
 												<p class="media">
 													<a href="#_">
-														<img src="../public/img/p.jpg" width="203" height="131" />
+														<img src="./include/img/p.jpg" width="203" height="131" />
 													</a>
 												</p>
 												<p class="intro">
@@ -199,7 +199,7 @@
 											<li>
 												<p class="media">
 													<a href="#_">
-														<img src="../public/img/p.jpg" width="203" height="131" />
+														<img src="./include/img/p.jpg" width="203" height="131" />
 													</a>
 												</p>
 												<p class="intro">
@@ -211,7 +211,7 @@
 											<li>
 												<p class="media">
 													<a href="#_">
-														<img src="../public/img/p.jpg" width="203" height="131" />
+														<img src="./include/img/p.jpg" width="203" height="131" />
 													</a>
 												</p>
 												<p class="intro">
@@ -223,7 +223,7 @@
 											<li>
 												<p class="media">
 													<a href="#_">
-														<img src="../public/img/p.jpg" width="203" height="131" />
+														<img src="./include/img/p.jpg" width="203" height="131" />
 													</a>
 												</p>
 												<p class="intro">
@@ -235,7 +235,7 @@
 											<li>
 												<p class="media">
 													<a href="#_">
-														<img src="../public/img/p.jpg" width="203" height="131" />
+														<img src="./include/img/p.jpg" width="203" height="131" />
 													</a>
 												</p>
 												<p class="intro">
@@ -247,7 +247,7 @@
 											<li>
 												<p class="media">
 													<a href="#_">
-														<img src="../public/img/p.jpg" width="203" height="131" />
+														<img src="./include/img/p.jpg" width="203" height="131" />
 													</a>
 												</p>
 												<p class="intro">
@@ -281,13 +281,13 @@
 						</div>
 					</div>
 					<div class="ft">
-						<img class="png" src="../public/img/ft.png" width="1006" height="29" />
+						<img class="png" src="./include/img/ft.png" width="1006" height="29" />
 					</div>
 				</div>
 			</div>
-			<?php
-			include 'footer.php';
-			?>
 		</div>
+		<?php
+			include './include/footer.php';
+			?>
 	</body>
 </html>
