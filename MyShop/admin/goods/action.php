@@ -132,17 +132,13 @@
 		$uppic = fileupload($upfile,$path,$typelist);
 		if(!$uppic['error']){
 			exit("文件上传失败".$uppic['info']);
-		}else{
-			unlink($path.'/'.$_POST['oldpicname']);	//获得editpost来的oldpicname  修改新图片成功删除已上传的旧图片文件
-			unlink($path.'/s_'.$_POST['oldpicname']);
-			unlink($path.'/m_'.$_POST['oldpicname']);
 		}
 		
 		//3 实现文件下载的时候需要的信息 
 		// 原图片名 原图大小 原图片类型  新图片名  新路径
-		$pic['oldname'] = $upfile['name'];
-		$pic['size'] = $upfile['size'];
-		$pic['type'] = $upfile['type'];
+//		$pic['oldname'] = $upfile['name'];
+//		$pic['size'] = $upfile['size'];
+//		$pic['type'] = $upfile['type'];
 		$pic['newname'] = $uppic['info'];
 		$pic['newpath'] = $path.'/'.$pic['newname'];
 		$pic['newSpath'] = $path.'/s_'.$pic['newname'];
@@ -156,7 +152,10 @@
 		/*===============修改商品信息===================*/
 		//接收表单传递过来的商品信息
 		if(!$_POST['goods']){		//带*号必填项不能为空
-			header("Location:edit.php?errno=2");
+//			header("Location:edit.php?errno=2");
+			header("Location:{$_SERVER['HTTP_REFERER']}&errno=2");
+			//这个常量可以告诉我们 是从哪里来的 
+			//你从哪里来 回到哪里去 
 			unlink($pic['newpath']);	//修改失败删除已上传的文件
 			unlink($pic['newSpath']);
 			unlink($pic['newMpath']);
@@ -177,6 +176,9 @@
 		
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
+			unlink($path.'/'.$_POST['oldpicname']);	//获得editpost来的oldpicname  修改新图片成功删除已上传的旧图片文件
+			unlink($path.'/s_'.$_POST['oldpicname']);
+			unlink($path.'/m_'.$_POST['oldpicname']);
 		}else{
 			header("Location:edit.php?id={$_POST['id']}&errno=1");
 			unlink($pic['newpath']);	//修改失败删除已上传的文件

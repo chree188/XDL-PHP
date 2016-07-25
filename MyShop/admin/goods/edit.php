@@ -207,6 +207,9 @@ textarea {
   <tr>
     <td align="left" valign="top">
     	<?php
+    	//设置报错情况	去除notice错误
+		error_reporting(E_ALL ^ E_NOTICE);
+		
 		//需要获得被修改的商品信息
 		//1 导入配置文件 
 		
@@ -237,7 +240,7 @@ textarea {
         <select name="typeid" id="level" >
         <?php
 			//查看类别信息 select 输出到表格里面 
-			//六脉神剑   上面获得被修改的商品信息已经使用，所以这里注释
+			//六脉神剑   ======上面获得被修改的商品信息已经使用，所以这里注释
 			//1 导入数据库配置文件
 //			include("../../public/sql/dbconfig.php");
 //			//2 连接数据库
@@ -303,15 +306,15 @@ textarea {
        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">图片：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="pic" value="">
+        <input type="file" name="pic" value="<?php echo $_GET['oldpicname']?>"><b>*</b>
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">状态：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <label><input type="radio" name="state" value="1" checked >新添加</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><input type="radio" name="state" value="2" >在售</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><input type="radio" name="state" value="3" >下架</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input type="radio" name="state" value="1" <?php echo $row['state']=='1' ? 'checked' :'';  ?>>新添加</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input type="radio" name="state" value="2" <?php echo $row['state']=='2' ? 'checked' :'';  ?>>在售</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input type="radio" name="state" value="3" <?php echo $row['state']=='3' ? 'checked' :'';  ?>>下架</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -328,7 +331,7 @@ textarea {
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input name="" type="submit" value="提交" class="text-but">
+        <input name="" type="submit" value="修改" class="text-but">
         <input name="" type="reset" value="重置" class="text-but"></td>
         </tr>
     </table>
