@@ -191,10 +191,17 @@ td.fenye {
         <th align="center" valign="middle" class="borderright">状态</th>
         <th align="center" valign="middle" class="borderright">库存量</th>
         <th align="center" valign="middle" class="borderright">添加时间</th>
+        <th align="center" valign="middle">操作</th>
       </tr>
       
       <?php
-			//查看类别信息 select 输出到表格里面 
+			//查看类别信息 select 输出到表格里面
+			//设置默认时区
+			date_default_timezone_set('PRC');
+			//设置状态
+			$state = array("1"=>"新添加","2"=>"在售","3"=>"下架");
+			//反数据库商品状态
+			$unstate = array("新添加"=>"1","在售"=>"2","下架"=>"3");
 			//六脉神剑 
 			//1 导入数据库配置文件
 			include("../../public/sql/dbconfig.php");
@@ -209,8 +216,13 @@ td.fenye {
 				$wherelist = array();
 				$urllist = array();	//封装url的状态维持的条件
 			//2 接收搜索条件 
+				$unstate[$_GET['name']] = empty($unstate[$_GET['name']])? "{$_GET['name']}" : $unstate[$_GET['name']];	//判断是否传除新添加 在售 下架之外的条件
 				if(!empty($_GET['name'])){
-					$wherelist[] =" name like '%{$_GET['name']}%' ";
+					$wherelist[] =" (goods like '%{$_GET['name']}%' 
+					or company like '%{$_GET['name']}%' 
+					or descr like '%{$_GET['name']}%'
+					or state like '%{$unstate[$_GET['name']]}%'
+					or store like '%{$_GET['name']}%' )";
 					$urllist[] = "name={$_GET['name']}";
 				}
 			//3 判断搜索条件的有效性	
@@ -245,26 +257,28 @@ td.fenye {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select * from goods $where order by concat(typeid,id) $limit";
+			
+			$sql = "select g.* from goods g $where order by concat(typeid,id) $limit";
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
 				$i++;
+				$regTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化注册时间戳
 $str = <<<swUse
 				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
 				onMouseOver="this.style.backgroundColor='#edf5ff'">
 		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
-        <td align="center" valign="middle" class="borderright borderbottom"><a href='./uploads/m_{$row['picname']}'>{$row['id']}</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
         <td align="center" valign="middle" class="borderright borderbottom"><img src='./uploads/s_{$row['picname']}'></td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['typeid']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href='./uploads/m_{$row['picname']}'>{$row['goods']}</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['company']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['descr']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['price']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$state[$row['state']]}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['store']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$regTime}</td>
         <td align="center" valign="middle" class="borderbottom">
         <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
         <span class="gray">&nbsp;|&nbsp;</span>
