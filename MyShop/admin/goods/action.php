@@ -181,7 +181,7 @@
 			unlink($path.'/m_'.$_POST['oldpicname']);
 		}else{
 			header("Location:edit.php?id={$_POST['id']}&errno=1");
-			unlink($pic['newpath']);	//修改失败删除已上传的文件
+			unlink($pic['newpath']);	//修改失败删除已上传的新文件
 			unlink($pic['newSpath']);
 			unlink($pic['newMpath']);
 		}

@@ -258,7 +258,7 @@ td.fenye {
 			
 			//4 写sql语句 获得结果集 
 			
-			$sql = "select * from goods $where order by concat(typeid,id) desc $limit";
+			$sql = "select * from goods $where order by concat(typeid,id) $limit";
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
 			$i = 0;
