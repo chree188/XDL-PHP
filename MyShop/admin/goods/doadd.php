@@ -16,7 +16,7 @@
 		//1 设置参数 
 		$upfile = $_FILES['pic'];
 		$path = "./uploads";
-		$typelist = array("image/png","image/jpeg","image/gif","image/pjpeg"); 
+		$typelist = array("image/png","image/jpg","image/gif","image/jpeg"); 
 
 		//文件上传成功之后再来处理信息 
 		//2 执行文件上传 

@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>主要内容区main</title>
+<title>查看用户</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
 <style> body {

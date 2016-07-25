@@ -17,7 +17,38 @@
 		
 		//添加
 		case "insert":
-		//接收表单传递过来的用户信息
+			
+		/*======================先处理图片文件上传===========================*/
+		//加载文件上传的函数 
+		require("../../public/functions.php");
+		//执行添加 
+		//1 设置参数 
+		$upfile = $_FILES['pic'];
+		$path = "./uploads";
+		$typelist = array("image/png","image/jpg","image/gif","image/jpeg"); 
+
+		//文件上传成功之后再来处理信息 
+		//2 执行文件上传 
+		$uppic = fileupload($upfile,$path,$typelist);
+		if(!$uppic['error']){
+			exit("图片上传失败".$uppic['info']);
+		}
+		
+		//3 实现文件下载的时候需要的信息 
+		// 原图片名 原图大小 原图片类型  新图片名
+		$pic['oldname'] = $upfile['name'];
+		$pic['size'] = $upfile['size'];
+		$pic['type'] = $upfile['type'];
+		$pic['newname'] = $uppic['info'];
+		
+		//4 实现图片的压缩
+		imageZoom($pic['newname'],$path,$width=100,$height=100,$pre="s_");
+		imageZoom($pic['newname'],$path,$width=300,$height=300,$pre="m_");
+		/*======================图片文件上传结束===========================*/
+		
+		
+		/*===============执行商品添加=====================*/
+		//接收表单传递过来的商品信息
 		if(!$_POST['goods']){		//带*号必填项不能为空
 			header("Location:add.php?errno=2");
 			exit;
@@ -27,12 +58,14 @@
 		$company = $_POST['company'];
 		$descr = $_POST['descr'];
 		$price = $_POST['price'];
-		$picname = $_POST['picname'];
+//		$picname = $pic['newname']；
 		$store = $_POST['store'];
 		$addtime = time();
-		//4 写sql语句 执行sql
-		$sql = "insert ignore into users(username,name,pass,sex,address,code,phone,email,state,addtime) 
-		values('$username','$name','$pass','$sex','$address','$code','$phone','$email','$state',$addtime)";
+		//4 写sql语句 执行sql  ignore不能添加重复信息
+		$sql = "insert ignore into goods(typeid,goods,company,descr,price,picname,store,addtime) 
+		values($typeid,'$goods','$company','$descr','$price','$picname',$store,$addtime)";
+		echo $sql;
+		exit;
 		mysqli_query($link,$sql);
 		//5判断是否操作成功 
 		if(mysqli_insert_id($link)>0){
@@ -41,8 +74,9 @@
 			header("Location:add.php?errno=1");
 		}
 		break;
+		/*===============执行商品添加=====================*/
 
-		
+				
 		//删除
 		case "del":
 		//4 写sql语句 执行sql
