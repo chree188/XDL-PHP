@@ -117,6 +117,11 @@ body {
 	color: #dbdbdb;
 }
 
+b {
+	color: red;
+	font-size: 20px;
+}
+
 td.fenye {
 	padding: 10px 0 0 0;
 	text-align: right;
@@ -201,7 +206,29 @@ textarea {
   </tr>
   <tr>
     <td align="left" valign="top">
-    <form method="post" action="./action.php?a=insert">
+    	<?php
+		//需要获得被修改的商品信息
+		//1 导入配置文件 
+		
+		if(@$_GET['id']){
+
+			include("../../public/sql/dbconfig.php");
+			//2 连接数据库
+			$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
+			//3 选择数据库 设置字符集
+			mysqli_set_charset($link,"utf8");
+			mysqli_select_db($link,DBNAME);
+			//4 写sql语句 执行sql
+			$sql = "select * from goods where id={$_GET['id']}";
+			$result = mysqli_query($link,$sql);
+
+			//5 解析结果集 
+			$row = mysqli_fetch_assoc($result);
+		}
+
+		?>
+    <form method="post" action="./action.php?a=update">
+    <input type="hidden" name='id' value="<?php echo $row['id']?> ">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">所属类别：</td>
@@ -209,31 +236,31 @@ textarea {
         <select name="typeid" id="level" >
         <?php
 			//查看类别信息 select 输出到表格里面 
-			//六脉神剑 
+			//六脉神剑   上面获得被修改的商品信息已经使用，所以这里注释
 			//1 导入数据库配置文件
-			include("../../public/sql/dbconfig.php");
-			//2 连接数据库
-			$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
-			//3 设置字符集 选择数据库
-			mysqli_set_charset($link,"utf8");
-			mysqli_select_db($link,DBNAME);
+//			include("../../public/sql/dbconfig.php");
+//			//2 连接数据库
+//			$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
+//			//3 设置字符集 选择数据库
+//			mysqli_set_charset($link,"utf8");
+//			mysqli_select_db($link,DBNAME);
 			//4 写sql语句 获得结果集 
 			$sql = "select * from type order by concat(path,id)";	// 修改为一类别pid path排序
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
-			while($row = mysqli_fetch_assoc($result)){
+			while($trow = mysqli_fetch_assoc($result)){
 //				显示下拉列表的形式
 				$disable = null;
-				if($row['pid']==0){
+				if($trow['pid']==0){
 					$disable = "disabled";
 				}
 				
 //				1 数逗号个数
-				$num = substr_count($row['path'], ',');
+				$num = substr_count($trow['path'], ',');
 //				2 输出空格
 				$pad = str_repeat("_>", $num-1);
 				
-				echo "<option value='{$row['id']}'{$disable}>{$pad}{$row['name']}</option>";
+				echo "<option value='{$trow['id']}'{$disable}>{$pad}{$trow['name']}</option>";
 			}	
 			//6 关闭数据库 释放结果集 
 			
@@ -246,32 +273,32 @@ textarea {
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">商品名称：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="goods" value="" class="text-word">
-        <b style="color: red;font-size: 20px;">*</b>
+        <input type="text" name="goods" value="<?php echo $row['goods']?>" class="text-word">
+        <b>*</b>
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">生产厂家：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="company" value="" class="text-word">
+        <input type="text" name="company" value="<?php echo $row['company']?>" class="text-word">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">简介：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <textarea name="descr" value="" cols="42px" rows="7px" class="text-word"></textarea>
+        <textarea name="descr" value="" cols="42px" rows="7px" class="text-word"><?php echo $row['descr']?></textarea>
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">单价：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="price" value="" class="text-word"><b style="color: gold;font-size: 20px;">￥</b>
+        <input type="text" name="price" value="<?php echo $row['price']?>" class="text-word"><b style="color: gold;font-size: 20px;">￥</b>
         </td>
         </tr>
        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">图片：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="picname" value="">
+        <input type="file" name="picname" value="<?php echo $row['picname']?>">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -285,12 +312,12 @@ textarea {
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">库存量：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="store" value="" class="text-word">
+        <input type="text" name="store" value="<?php echo $row['store']?>" class="text-word">
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b style="color: red;font-size: 20px;">*</b></td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b style="color: red;font-size: 20px;">*</b>号项为必填项，不能为空。。。</h4>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b>*</b></td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b>*</b>号项为必填项，不能为空。。.状态只能修改为<b>在售 或 下架</b></h4>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">

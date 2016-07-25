@@ -183,7 +183,7 @@ td.fenye {
       	<th align="center" valign="middle" class="borderright">序号</th>
         <th align="center" valign="middle" class="borderright">ID</th>
         <th align="center" valign="middle" class="borderright">图片</th>
-        <th align="center" valign="middle" class="borderright">类别</th>
+        <th align="center" valign="middle" class="borderright">父类别</th>
         <th align="center" valign="middle" class="borderright">商品名称</th>
         <th align="center" valign="middle" class="borderright">生产厂家</th>
         <th align="center" valign="middle" class="borderright">描述</th>
@@ -258,7 +258,7 @@ td.fenye {
 			
 			//4 写sql语句 获得结果集 
 			
-			$sql = "select g.* from goods g $where order by concat(typeid,id) $limit";
+			$sql = "select * from goods $where order by concat(typeid,id) desc $limit";
 			$result = mysqli_query($link,$sql);
 			//5 解析结果集 
 			$i = 0;
@@ -282,7 +282,7 @@ $str = <<<swUse
         <td align="center" valign="middle" class="borderbottom">
         <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
         <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="action.php?a=del&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">删除</a>
+        <a href="action.php?a=del&id={$row['id']}&picname={$row['picname']}" target="mainFrame" onFocus="this.blur()" class="add">删除</a>
         </td>
       </tr>
 swUse;

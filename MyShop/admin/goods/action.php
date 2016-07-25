@@ -23,8 +23,8 @@
 		require("../../public/functions.php");
 		//执行添加 
 		//1 设置参数 
-		$upfile = $_FILES['pic'];
 		$path = "./uploads";
+		$upfile = $_FILES['pic'];
 		$typelist = array("image/png","image/jpg","image/jpeg","image/gif","image/pjpeg");
 
 		//文件上传成功之后再来处理信息 
@@ -87,8 +87,12 @@
 		//删除
 		case "del":
 		//4 写sql语句 执行sql
-		$sql = "delete from users where id={$_GET['id']}";
+		$sql = "delete from goods where id={$_GET['id']}";
 		mysqli_query($link,$sql);
+		$path = "./uploads";
+		unlink($path.'/'.$_GET['picname']);	//删除已上传的图片文件
+		unlink($path.'/s_'.$_GET['picname']);
+		unlink($path.'/m_'.$_GET['picname']);
 
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
@@ -104,8 +108,44 @@
 
 		//修改
 		case "update":
+		
+		/*======================先处理修改里图片文件上传===========================*/
+		//加载文件上传的函数 
+		require("../../public/functions.php");
+		//执行修改添加
+		//1 设置参数 
+		$path = "./uploads";
+		$upfile = $_FILES['pic'];
+		$typelist = array("image/png","image/jpg","image/jpeg","image/gif","image/pjpeg");
+
+		//文件上传成功之后再来处理信息 
+		//2 执行文件上传 
+		$uppic = fileupload($upfile,$path,$typelist);
+		if(!$uppic['error']){
+			exit("文件上传失败".$uppic['info']);
+		}else{
+			unlink($path.'/'.$_GET['picname']);	//修改新图片成功删除已上传的旧图片文件
+			unlink($path.'/s_'.$_GET['picname']);
+			unlink($path.'/m_'.$_GET['picname']);
+		}
+		
+		//3 实现文件下载的时候需要的信息 
+		// 原图片名 原图大小 原图片类型  新图片名  新路径
+		$pic['oldname'] = $upfile['name'];
+		$pic['size'] = $upfile['size'];
+		$pic['type'] = $upfile['type'];
+		$pic['newname'] = $uppic['info'];
+		$pic['newpath'] = $path.'/'.$pic['newname'];
+		$pic['newSpath'] = $path.'/s_'.$pic['newname'];
+		$pic['newMpath'] = $path.'/m_'.$pic['newname'];
+		
+		//4 实现图片的压缩
+		imageZoom($pic['newname'],$path,$width=100,$height=100,$pre="s_");
+		imageZoom($pic['newname'],$path,$width=300,$height=300,$pre="m_");
+		/*======================图片文件上传结束===========================*/
+		
 		//接收表单传递过来的用户信息
-		if(!$_POST['username']||!$_POST['pass']||!$_POST['email']){		//带*号必填项不能为空
+		if(!$_POST['goods']){		//带*号必填项不能为空
 			header("Location:edit.php?id={$_POST['id']}&errno=2");
 			exit;
 		}
