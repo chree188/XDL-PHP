@@ -227,9 +227,9 @@ textarea {
 		}
 
 		?>
-    <form method="post" action="./action.php?a=update">
+    <form method="post" action="./action.php?a=update" enctype="multipart/form-data">
     <input type="hidden" name='id' value="<?php echo $row['id']?> ">
-    <input type="hidden" name='id' value="<?php echo $_GET['oldpicname']?> ">
+    <input type="hidden" name='oldpicname' value="<?php echo $_GET['oldpicname']?> ">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">所属类别：</td>
@@ -303,7 +303,7 @@ textarea {
        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">图片：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="picname" value="">
+        <input type="file" name="pic" value="">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -337,7 +337,7 @@ textarea {
 		//处理添加表单的错误信息
 		switch(@$_GET['errno']) {
 			case 1 :
-				echo "<h2 style='color:red; '>添加失败,该账号已存在</h2>";
+				echo "<h2 style='color:red; '>修改失败,该商品已存在</h2>";
 				break;
 			case 2 :
 				echo "<h2 style='color:red; '>带*项不能为空</h2>";

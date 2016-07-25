@@ -127,16 +127,15 @@
 		$path = "./uploads";
 		$upfile = $_FILES['pic'];
 		$typelist = array("image/png","image/jpg","image/jpeg","image/gif","image/pjpeg");
-
 		//文件上传成功之后再来处理信息 
 		//2 执行文件上传 
 		$uppic = fileupload($upfile,$path,$typelist);
 		if(!$uppic['error']){
 			exit("文件上传失败".$uppic['info']);
 		}else{
-			unlink($path.'/'.$_GET['picname']);	//修改新图片成功删除已上传的旧图片文件
-			unlink($path.'/s_'.$_GET['picname']);
-			unlink($path.'/m_'.$_GET['picname']);
+			unlink($path.'/'.$_POST['oldpicname']);	//获得editpost来的oldpicname  修改新图片成功删除已上传的旧图片文件
+			unlink($path.'/s_'.$_POST['oldpicname']);
+			unlink($path.'/m_'.$_POST['oldpicname']);
 		}
 		
 		//3 实现文件下载的时候需要的信息 
@@ -154,32 +153,43 @@
 		imageZoom($pic['newname'],$path,$width=300,$height=300,$pre="m_");
 		/*======================图片文件上传结束===========================*/
 		
-		//接收表单传递过来的用户信息
+		/*===============修改商品信息===================*/
+		//接收表单传递过来的商品信息
 		if(!$_POST['goods']){		//带*号必填项不能为空
-			header("Location:edit.php?id={$_POST['id']}&errno=2");
+			header("Location:edit.php?errno=2");
+			unlink($pic['newpath']);	//修改失败删除已上传的文件
+			unlink($pic['newSpath']);
+			unlink($pic['newMpath']);
 			exit;
 		}
-		$username = $_POST['username'];
-		$name = $_POST['name'];
-		$pass = md5($_POST['pass']);	//使用md5 加密密码
-		$sex = $_POST['sex'];
-		$address = $_POST['address'];
-		$code = $_POST['code'];
-		$phone = $_POST['phone'];
-		$email = $_POST['email'];
+		$typeid = $_POST['typeid'];
+		$goods = $_POST['goods'];
+		$company = $_POST['company'];
+		$descr = $_POST['descr'];
+		$price = $_POST['price'];
+		$picname = $pic['newname'];
 		$state = $_POST['state'];
+		$store = $_POST['store'];
 		//4 写sql语句 执行sql
-		$sql = "update users set username='$username',name='$name',pass='$pass',sex=$sex,address='$address',
-		code='$code',phone='$phone',email='$email',state='$state' where id={$_POST['id']}";
+		$sql = "update goods set typeid='$typeid',goods='$goods',company='$company',descr=$descr,price='$price',
+		picname='$picname',state='$state',store='$store' where id={$_POST['id']}";
+		echo $sql;exit;													=============================================================
 		mysqli_query($link,$sql);
 		
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
 		}else{
 			header("Location:edit.php?id={$_POST['id']}&errno=1");
+			unlink($pic['newpath']);	//修改失败删除已上传的文件
+			unlink($pic['newSpath']);
+			unlink($pic['newMpath']);
 		}
 		break;
 	}
+		/*===============修改商品信息===================*/
+	
+
+
 	//6 关闭数据库  释放资源
 	mysqli_close($link);
 	mysqli_free_result($result);
