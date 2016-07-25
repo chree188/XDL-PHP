@@ -3,11 +3,16 @@
 <head runat="server">
 	<meta charset=utf-8 />
     <title>用户登录界面</title>
-	<link href="../public/css/common.css" rel="stylesheet" />
-	<link href="../public/css/style.css" rel="stylesheet" />
+	<link href="./include/css/common.css" rel="stylesheet" />
+	<link href="./include/css/style.css" rel="stylesheet" />
 </head>
 <body>
 <div class="top">
+	<div class="link">
+		<a class="a" href="register.php">
+			注册
+		</a>
+	</div>
 	<div class="logo">
 		<a href="index.php"></a>
 	</div>
@@ -18,6 +23,7 @@
             	<div class="hd">
                 	<div class="tt">用户登录</div>
                     <div class="c">登录用户，尽享VIP购物。</div>
+                    <div class="c">还没有账号？请点击右上角的注册按钮进行注册。</div>
                 </div>
                 <div class="bd">
                 	<form action="dologin.php" method="post">
@@ -46,7 +52,7 @@
 				?>
                 </div>
             </div>
-            <div class="logonr"><img src="../public/img/carm.jpg" />
+            <div class="logonr"><img src="./include/img/carm.jpg" />
             </div>
         </div>
     </div>

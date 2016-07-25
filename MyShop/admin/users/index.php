@@ -4,7 +4,8 @@
 <title>查看用户</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
-<style> body {
+<style> 
+body {
 	overflow-x: hidden;
 	background: #f2f0f5;
 	padding: 15px 0px 10px 5px;

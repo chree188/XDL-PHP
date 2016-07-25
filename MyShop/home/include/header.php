@@ -23,8 +23,10 @@
 			注销
 		</a>
 		&nbsp;&nbsp;
-		<a class="a" href="register.php">
-			注册
+		<a class="a" href="edit.php?id=<?php 
+			echo $_SESSION['user']['id']; 
+		?>">
+			修改账号信息
 		</a>
 		<br />
 		<input type="text" class="text08" />
