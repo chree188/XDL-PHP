@@ -255,6 +255,29 @@
 					</div>
 				</div>
 			</div>
+			<!---->
+                    <ul class="plist">
+                    	<li>
+                        	<div class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></div>
+                        	<div class="intro">
+                            	<div class="tt"><a href="#_">野生菌菇</a></div>
+                                <div class="c">野生菌是云南省特有的野生食用菌，生长在海拔2000--4000米，地形地貌复杂的立体气候地。云南野生食用菌分为二个纲、十一个目、三十五个科、九十六个属、约二百五十种，占了全世界食用菌一半以上，中国食用菌的三分之二。</div>
+                                <div class="more"><a href="#_"><img src="./include/img/button01.jpg" width="130" height="38" /></a></div>
+                            </div>
+                        </li>
+                        <li class="llast">
+                        	<div class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></div>
+                        	<div class="intro">
+                            	<div class="tt"><a href="#_">野生菌菇</a></div>
+                                <div class="c">野生菌是云南省特有的野生食用菌，生长在海拔2000--4000米，地形地貌复杂的立体气候地。云南野生食用菌分为二个纲、十一个目、三十五个科、九十六个属、约二百五十种，占了全世界食用菌一半以上，中国食用菌的三分之二。</div>
+                                <div class="more"><a href="#_"><img src="./include/img/button01.jpg" width="130" height="38" /></a></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="page">
+  					<span class="disabled">«上一页</span><span class="current">1</span><a href="/newslist/0/2.aspx">2</a><a href="/newslist/0/3.aspx">3</a><a href="/newslist/0/4.aspx">4</a><a href="/newslist/0/2.aspx">下一页»</a>
+					</div>
+			<!---->
 			<div class="main">
 				<div class="tzabout">
 					<div class="title">
