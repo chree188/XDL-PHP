@@ -8,7 +8,7 @@
 </style>
 <div class="top">
 	<div class="logo">
-		<a href="#_"></a>
+		<a href="index.php"></a>
 	</div>
 </div>
  <div class="inner">
@@ -20,43 +20,43 @@
                 </div>
                 <div class="bd">
                 	<?php
-					//需要获得被修改的用户信息
-					//1 导入配置文件 
-					
-					if(@$_GET['id']){
-			
-						include("../../public/sql/dbconfig.php");
-						//2 连接数据库
-						$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
-						//3 选择数据库 设置字符集
-						mysqli_set_charset($link,"utf8");
-						mysqli_select_db($link,DBNAME);
-						//4 写sql语句 执行sql
-						$sql = "select * from users where id={$_GET['id']}";
-						$result = mysqli_query($link,$sql);
-			
-						//5 解析结果集 
-						$row = mysqli_fetch_assoc($result);
-			
-					}
+						//需要获得被修改的用户信息
+						//1 导入配置文件 
+						
+						if(@$_GET['id']){
+				
+							include("../public/sql/dbconfig.php");
+							//2 连接数据库
+							$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
+							//3 选择数据库 设置字符集
+							mysqli_set_charset($link,"utf8");
+							mysqli_select_db($link,DBNAME);
+							//4 写sql语句 执行sql
+							$sql = "select * from users where id={$_GET['id']}";
+							$result = mysqli_query($link,$sql);
+				
+							//5 解析结果集 
+							$row = mysqli_fetch_assoc($result);
+						}
 					?>
                 	<form action="./users/action.php?a=update" method="post">
-							账&nbsp;&nbsp;号: <input type="text" name="username" class="text05"><b>*</b><br><br>
-							真实姓名: <input type="text" name="name" class="text05"><br><br>
-							密&nbsp;&nbsp;码: <input type="text" name="pass" class="text05"><b>*</b><br><br>
-							<label>性&nbsp;&nbsp;别: <input type="radio" name="sex" value="1" checked>男</label>
-							<label><input type="radio" name="sex" value="0">女</label><br><br>
-							地&nbsp;&nbsp;址: <input type="text" name="address" class="text05"><br><br>
-							邮&nbsp;&nbsp;编: <input type="text" name="code" class="text05"><br><br>
-							电&nbsp;&nbsp;话: <input type="text" name="phone" class="text05"><br><br>
-							Email :&nbsp; <input type="text" name="email" class="text05"><b>*</b><br><br>
+                			<input type="hidden" name='id' value="<?php echo $row['id']?> ">
+							账&nbsp;&nbsp;号: <input type="text" name="username" value="<?php echo $row['username']?>" class="text05"><b>*</b><br><br>
+							真实姓名: <input type="text" name="name" value="<?php echo $row['name']?>" class="text05"><br><br>
+							密&nbsp;&nbsp;码: <input type="text" name="pass" value="" placeholder="请输入新密码" class="text05"><b>*</b><br><br>
+							<label>性&nbsp;&nbsp;别: <input type="radio" name="sex" value="1"<?php echo $row['sex']=='1' ? 'checked' :'';  ?> >男</label>
+							<label><input type="radio" name="sex" value="2"<?php echo $row['sex']=='2' ? 'checked' :'';  ?> >女</label><br><br>
+							地&nbsp;&nbsp;址: <input type="text" name="address" value="<?php echo $row['address']?>" class="text05"><br><br>
+							邮&nbsp;&nbsp;编: <input type="text" name="code" value="<?php echo $row['code']?>" class="text05"><br><br>
+							电&nbsp;&nbsp;话: <input type="text" name="phone" value="<?php echo $row['phone']?>" class="text05"><br><br>
+							Email :&nbsp; <input type="text" name="email" value="<?php echo $row['email']?>" class="text05"><b>*</b><br><br>
 							<input type="submit" value="修改" class="button03"> <input type="reset" class="button03">
 					</form>
 					<?php
 						//处理修改表单的错误信息
 						switch(@$_GET['errno']){
 							case 1: 
-							echo "<h2 style='color:red; '>修改失败</h2>";
+							echo "<h2 style='color:red; '> 新密码与原密码相同,修改失败</h2>";
 							break;
 							case 2: 
 							echo "<h2 style='color:red; '>带<b>*</b>项不能为空</h2>";

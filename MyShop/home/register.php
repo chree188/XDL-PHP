@@ -8,7 +8,7 @@
 </style>
 <div class="top">
 	<div class="logo">
-		<a href="#_"></a>
+		<a href="index.php"></a>
 	</div>
 </div>
  <div class="inner">
@@ -24,12 +24,12 @@
 							真实姓名: <input type="text" name="name" class="text05"><br><br>
 							密&nbsp;&nbsp;码: <input type="text" name="pass" class="text05"><b>*</b><br><br>
 							<label>性&nbsp;&nbsp;别: <input type="radio" name="sex" value="1" checked>男</label>
-							<label><input type="radio" name="sex" value="0">女</label><br><br>
+							<label><input type="radio" name="sex" value="2">女</label><br><br>
 							地&nbsp;&nbsp;址: <input type="text" name="address" class="text05"><br><br>
 							邮&nbsp;&nbsp;编: <input type="text" name="code" class="text05"><br><br>
 							电&nbsp;&nbsp;话: <input type="text" name="phone" class="text05"><br><br>
 							Email :&nbsp; <input type="text" name="email" class="text05"><b>*</b><br><br>
-							验证码：&nbsp;<input type="text" name="code" size="5"/>
+							验证码：&nbsp;<input type="text" name="mycode" size="5"/>
 							<img src="../public/code.php" class="text06" onclick="this.src='../public/code.php?id='+Math.random();"/><br /><br />
 							<input type="submit" value="提交注册" class="button03"> <input type="reset" class="button03">
 					</form>
