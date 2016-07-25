@@ -9,14 +9,14 @@
 		//载入导航页面
 		include("menu.php");
 		//加载文件上传的函数 
-		require("functions.php");
+		require("../../public/functions.php");
 		//设置时区 
 		date_default_timezone_set("PRC");
 		//执行添加 
 		//1 设置参数 
 		$upfile = $_FILES['pic'];
 		$path = "./uploads";
-		$typelist = array("image/png","image/jpg","image/gif","image/jpeg"); 
+		$typelist = array("image/png","image/jpeg","image/gif","image/pjpeg"); 
 
 		//文件上传成功之后再来处理信息 
 		//2 执行文件上传 

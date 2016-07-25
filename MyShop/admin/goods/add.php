@@ -201,7 +201,7 @@ textarea {
   </tr>
   <tr>
     <td align="left" valign="top">
-    <form method="post" action="./action.php?a=insert">
+    <form method="post" action="./action.php?a=insert" enctype="multipart/form-data">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">所属类别：</td>
@@ -271,7 +271,7 @@ textarea {
        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">图片：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="pic" value="">
+        <input type="file" name="pic">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
