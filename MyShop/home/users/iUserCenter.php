@@ -15,9 +15,7 @@
 <div id="navbar" class="fixed">
     <div class="container w">
         <ul class="nav fl">
-            <li><a href="javascript:void;" title="首页">首页</a></li>
-            <li><a href="javascript:void;" title="店铺">店铺</a></li>
-            <li><a href="javascript:void;" title="我的商圈">我的商圈</a></li>
+            <li><a href="../index.php" title="首页">首页</a></li>
             <li class="dropdown">
                 <a href="javascript:void;" title="应用服务">
                     应用服务<b class="caret"></b>
@@ -33,12 +31,13 @@
         <ul class="navserve fr">
             <li class="message">
                 <a href="javascript:void;" title="信息">信息</a>
-                <span>16</span>
+                <span>3</span>
             </li>
-            <li class="mobile"><a href="javascript:void;" title="手机版">手机版</a></li>
             <li class="mycenter dropdown">
                 <a href="javascript:void;">
-                    <span>sbr</span>
+                    <span><?php 
+							echo $_SESSION['user']['name']; 
+						?></span>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -89,7 +88,7 @@
             <div class="con-center grid-81">
                 <!--请将你要的代码写在此处 并写明注释-->
                 <div class="blank20"></div>
-                <!--工厂信息开始-->
+                <!--会员信息开始-->
                 <div class='factory-info'>
                     <div class='factory-info-l'>
                         <div class='fl fac-head'>
@@ -113,7 +112,7 @@
 												?>
 											</span><i class='icon-certificate'></i></p>
                             <p class='account'>
-                                <span>余额：<em class='account-balance'>￥0.00</em></span>
+                                <span>余额：<em class='account-balance'>13145.20</em></span>
                                 <a class="btn" title="充值"href="javascript:;" target="_blank">充 值</a>
                                 <a class="btn" title="充值"href="javascript:;" target="_blank">提 现</a>
                             </p>
@@ -121,13 +120,13 @@
                                 <i class='from-icon'></i><span>来自浙江杭州</span>
                             </p>
                             <p class='shop-addr'>
-                                <i class='addr-icon'></i><span>店铺地址：<a href='javascript:;'>http://localhost</a><span>
+                                <i class='addr-icon'></i><span>店铺地址：<a href='../index.php'>http://localhost/</a><span>
                             </p>
                         </div>
                     </div>
                     <div class='factory-info-r'>
-                        <p>采购等级：<i class='purchase-star4'></i></p>
-                        <p>供应等级：<i class='supply-star3'></i></p>
+                        <p>会员等级：<i class='purchase-star4'></i></p>
+                        <p>信誉等级：<i class='supply-star3'></i></p>
                         <p>网站积分：100000</p>
                         <div class='safe-level'>
                             <p>我的账户安全级别:</p>
@@ -135,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- 工厂信息结束 -->
+                <!-- 会员信息结束 -->
                 <!-- 左侧 -->
                 <div class='fl b-main grid-61'>
                     <!-- 交易提醒 -->
@@ -165,7 +164,7 @@
                         <ul>
                             <li class='may-like-item'>
                                 <div class='p-img'>
-                                    <a href='javascript:;'><img src="img/upload/1.jpg" alt=""></a>
+                                    <a href='javascript:;'><img src="../include/img/zz01.jpg" width="80" height="80" alt=""></a>
                                     <p class='p-info'><span class='p-num'>采购量：1万个</span><span class='p-time'>还剩<em>2</em>天</span></p>
                                 </div>
                                 <p class='p-name'><a href='javascript:;'>珍珠领项链</a></p>
@@ -173,7 +172,7 @@
                             </li>
                             <li class='may-like-item'>
                                 <div class='p-img'>
-                                    <a href='javascript:;'><img src="img/upload/1.jpg" alt=""></a>
+                                    <a href='javascript:;'><img src="../include/img/zz02.jpg" width="80" height="80" alt=""></a>
                                     <p class='p-info'><span class='p-num'>采购量：1万个</span><span class='p-time'>还剩<em>10</em>天</span></p>
                                 </div>
                                 <p class='p-name'><a href='javascript:;'>生产用纸箱</a></p>
@@ -189,12 +188,12 @@
     </div>
 </div>
 <!--回到顶部，留言，联系客服 先保留-->
-<!--<div class="aside-panel" id="j-panel">-->
-<!--<a href="javascript:;" title="" id="j-gotop" class="backtop">顶部</a>-->
-<!--<a href="javascript:;" title="" id="j-message">留言</a>-->
-<!--<a href="javascript:;" title=""  id="j-service">客服</a>-->
-<!--</div>-->
-<script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript" src="js/perform.js"></script>
+<div class="aside-panel" id="j-panel">
+<a href="javascript:;" title="" id="j-gotop" class="backtop">顶部</a>
+<a href="javascript:;" title="" id="j-message">留言</a>
+<a href="javascript:;" title=""  id="j-service">客服</a>
+</div>
+<script type="text/javascript" src="../include/js/common.js"></script>
+<script type="text/javascript" src="../include/js/perform.js"></script>
 </body>
 </html>

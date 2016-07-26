@@ -13,10 +13,11 @@
 		<script type="text/javascript" src="./include/js/jquery-1.6.4.min.js"></script>
 		<script type="text/javascript" src="./include/js/jquery.nivo.slider.js"></script>
 		<script type="text/javascript" src="./include/js/cufon-yui.js"></script>
+		<script type="text/javascript" src="./include/js/ScrollPic.js"></script>
 		<script type="text/javascript" src="./include/js/scripts.js"></script>
 		<script type="text/javascript" src="./include/js/custom.js"></script>
-		<script src="./include/js/ScrollPic.js"></script>
-		<script src="./include/js/tab.js" type="text/javascript"></script>
+		<script type="text/javascript" src="./include/js/tab.js"></script>
+    
 	</head>
 	<body>
 		<!--网页主体content-->
@@ -40,7 +41,7 @@
     <div class="main">
     	<div class="mleft">
             <div class="lnav">
-                <div class="hd">粮油/干货</div>
+                <div class="hd">产品类别</div>
                 <ul class="list">
               <li>
                         <div class="m"><a href="#_"></a></div>
@@ -50,19 +51,19 @@
                         <div class="m"><a href="#_"></a></div>
                         <div class="i"><a href="#_">菌菇类</a></div>
                     </li>
-              <li class="llast">
+              <li>
                         <div class="m"><a href="#_"></a></div>
                         <div class="i"><a href="#_">食用油</a></div>
                     </li>
-              <li class="bottom">
+              <li>
                         <div class="m"><a href="#_"></a></div>
                         <div class="i"><a href="#_">野菜干菜</a></div>
                     </li>
-              <li class="bottom">
+              <li>
                         <div class="m"><a href="#_"></a></div>
                         <div class="i"><a href="#_">干果坚果</a></div>
                     </li>
-              <li class="bottom llast">
+              <li>
                         <div class="m"><a href="#_"></a></div>
                         <div class="i"><a href="#_">大米</a></div>
                     </li>
@@ -91,30 +92,19 @@
             	<div class="picgd"> <a href="#" onclick="return false" title="上翻" id="LeftArr" class="up png">上翻</a> <a href="#" onclick="return false" title="下翻" id="RightArr" class="down png">下翻</a>
                   <div id="pic" class="pic">
                     <ul id="scrollPic">
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油1</a></p>
+                    	<?php	
+                    		$sql = "select * from goods ";
+							$result = mysqli_query($link,$sql);
+							while($row = mysqli_fetch_assoc($result)){
+$str = <<<aa
+					  <li>
+                        <p class="media"><a href="#_"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
+                      	<p class="intro"><a href="#_">{$row['goods']}</a></p>
                       </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油2</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油3</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油4</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油5</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油6</a></p>
-                      </li>
+aa;
+					echo $str;
+							}
+                    	?>
                     </ul>
                   </div>
                 </div>
@@ -181,30 +171,19 @@
             	<div class="picgd"> <a href="#" onclick="return false" title="上翻" id="LeftArr01" class="up png">上翻</a> <a href="#" onclick="return false" title="下翻" id="RightArr01" class="down png">下翻</a>
                   <div id="pic01" class="pic">
                     <ul id="scrollPic01">
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油111</a></p>
+                    	<?php	
+                    		$sql = "select * from goods ";
+							$result = mysqli_query($link,$sql);
+							while($row = mysqli_fetch_assoc($result)){
+$str = <<<aa
+					  <li>
+                        <p class="media"><a href="#_"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
+                      	<p class="intro"><a href="#_">{$row['goods']}</a></p>
                       </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油222</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油333</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油444</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油555</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油666</a></p>
-                      </li>
+aa;
+					echo $str;
+							}
+                    		?>
                     </ul>
                   </div>
                 </div>
@@ -271,30 +250,22 @@
             	<div class="picgd"> <a href="#" onclick="return false" title="上翻" id="LeftArr02" class="up png">上翻</a> <a href="#" onclick="return false" title="下翻" id="RightArr02" class="down png">下翻</a>
                   <div id="pic02" class="pic">
                     <ul id="scrollPic02">
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油</a></p>
+                      <?php	
+                    		$sql = "select * from goods ";
+							$result = mysqli_query($link,$sql);
+							while($row = mysqli_fetch_assoc($result)){
+$str = <<<aa
+					  <li>
+                        <p class="media"><a href="#_"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
+                      	<p class="intro"><a href="#_">{$row['goods']}</a></p>
                       </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油</a></p>
-                      </li>
-                      <li>
-                        <p class="media"><a href="#_"><img src="./include/img/p.jpg" width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">精选葵花籽油</a></p>
-                      </li>
+aa;
+					echo $str;
+							}
+                    		//关闭数据库 释放结果集 
+							mysqli_close($link);
+							mysqli_free_result($result);
+                    		?>
                     </ul>
                   </div>
                 </div>
