@@ -1,7 +1,15 @@
 <?php 
 //设置报错情况	去除notice错误
 	error_reporting(E_ALL ^ E_NOTICE);
+//	开启session
 	session_start(); 
+	
+	//连接数据库
+	include("../public/sql/dbconfig.php");
+	$link  = @mysqli_connect(HOST,USER,PASS,DBNAME) or die("数据库连接失败");
+	// var_dump($link);
+	mysqli_set_charset($link,"utf8");
+	
 ?>
 <!--网站头部和导航栏-->
 <link href="./include/css/common.css" rel="stylesheet" />
@@ -48,13 +56,13 @@
 	</div>
 	<ul class="list">
 		<li>
-			<a class="n01" href="#_"></a>
+			<a class="n01" href="./about.php"></a>
 		</li>
 		<li>
 			<a class="n02" href="#_"></a>
 		</li>
 		<li>
-			<a class="n03" href="#_"></a>
+			<a class="n03" href="./lists.php"></a>
 		</li>
 		<li>
 			<a class="n04" href="#_"></a>
