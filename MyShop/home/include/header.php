@@ -10,9 +10,9 @@
 <!--头部-->
 <div class="top">
 	<div class="link">
-		<span>用户：<?php 
+		<span>用户：<a href="./users/iUserCenter.php"><?php 
 			echo $_SESSION['user']['name']; 
-		?>&nbsp;&nbsp;角色：
+		?></a>&nbsp;&nbsp;角色：
     	<?php 
 		    $state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
 		    echo $state[$_SESSION['user']['state']]; 
