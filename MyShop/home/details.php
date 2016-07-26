@@ -121,6 +121,7 @@ $str = <<<aa
 												<td class="t" width="75"><span class="cbg">总价</span></td>
 												<td><span class="numcon">￥<span class="num">{$row['price']}</span></span></td>
 											</tr>
+											***************************************************************************购物车
 											
 										</table>
 										<div class="blink">
