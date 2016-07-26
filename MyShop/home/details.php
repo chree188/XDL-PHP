@@ -5,10 +5,10 @@
 		<script src="./include/js/ScrollPic.js"></script>
 	</head>
 	<body>
-		<div class="content icontent">
 			<?php
-			include './include/header.php';
+				include './include/header.php';		//导入header
 			?>
+		<div class="content">
 			<div class="inner">
 				<div class="ibanner">
 					<img src="./include/img/ibanner04.jpg" width="980" height="249" />
@@ -20,49 +20,23 @@
 					<div class="bd png">
 						<div class="ileft">
 							<div class="title">
-								精选产品
+								商品详情
 							</div>
 							<ul class="list">
-								<li class="select">
-									<a href="#_">
-										精选菌菇类产品
-									</a>
-								</li>
-								<li>
-									<a href="#_">
-										精选菌菇类产品
-									</a>
-								</li>
-								<li>
-									<a href="#_">
-										精选菌菇类产品
-									</a>
-								</li>
-								<li>
-									<a href="#_">
-										精选菌菇类产品
-									</a>
-								</li>
-								<li>
-									<a href="#_">
-										精选菌菇类产品
-									</a>
-								</li>
-								<li>
-									<a href="#_">
-										精选菌菇类产品
-									</a>
-								</li>
-								<li>
-									<a href="#_">
-										精选菌菇类产品
-									</a>
-								</li>
-								<li>
-									<a href="#_">
-										精选菌菇类产品
-									</a>
-								</li>
+						<?php	
+                    		$sql = "select * from type where pid = 0";
+							$result = mysqli_query($link,$sql);
+							while($row = mysqli_fetch_assoc($result)){
+$str = <<<aa
+					<li>
+						<a href="#_？{$row['id']}">
+							精选{$row['name']}类产品
+						</a>
+					</li>
+aa;
+					echo $str;
+							}
+                    	?>
 							</ul>
 							<div class="lft">
 								<img src="./include/img/lnavft.jpg" width="222" height="15" />
@@ -71,39 +45,40 @@
 						<div class="iright">
 							<div class="position">
 								当前位置&nbsp;&nbsp;
-								<a href="#_">
+								<a href="index.php">
 									首页
 								</a>
 								|
-								<a href="#_">
-									精选产品
+								<a href="">
+									商品详情
 								</a>
-								|<span class="orange">精选菌菇类产品</span>
 							</div>
-							<div class="title">
-								野生菌菇
+							<?php	
+                    		$sql = "select * from goods where id = {$_GET['id']}";
+							$result = mysqli_query($link,$sql);
+							//设置状态
+							$state = array("1"=>"新添加","2"=>"在售","3"=>"下架");
+							while($row = mysqli_fetch_assoc($result)){
+$str = <<<aa
+					  <div class="title">
+								{$row['goods']}
 							</div>
 							<div class="pdetail">
 								<div class="mdetail">
 									<div class="media">
 										<ul class="big-img">
 											<li class="select">
-												<a href="#_">
-													<img src="./include/img/p.jpg" width="445" height="287" />
-												</a>
-											</li>
-											<li>
-												<a href="#_">
-													<img src="./include/img/p.jpg" width="445" height="287" />
+												<a href="../admin/goods/uploads/{$row['picname']}">
+													<img src="../admin/goods/uploads/{$row['picname']}" width="445" height="287" />
 												</a>
 											</li>
 										</ul>
 										<ul class="small-img">
 											<li class="select">
-												<img src="./include/img/p.jpg" width="70" height="45" />
+												<img src="../admin/goods/uploads/m_{$row['picname']}" width="70" height="45" />
 											</li>
 											<li>
-												<img src="./include/img/p.jpg" width="70" height="45" />
+												<img src="../admin/goods/uploads/m_{$row['picname']}" width="70" height="45" />
 											</li>
 										</ul>
 									</div>
@@ -111,7 +86,7 @@
 										<table width="100%">
 											<tr>
 												<td class="t" width="75"><span class="cbg">价格</span></td>
-												<td><span class="numcon">￥<span class="num">135</span></span></td>
+												<td><span class="numcon">￥<span class="num">{$row['price']}</span></span></td>
 											</tr>
 											<tr>
 												<td class="t">计量单位</td>
@@ -119,15 +94,15 @@
 											</tr>
 											<tr>
 												<td class="t">产地</td>
-												<td>西藏</td>
+												<td>{$row['company']}</td>
 											</tr>
 											<tr>
-												<td class="t">规格</td>
-												<td>500g</td>
+												<td class="t">状态</td>
+												<td>{$state[$row['state']]}</td>
 											</tr>
 											<tr>
-												<td class="t">等级</td>
-												<td>一等品</td>
+												<td class="t">库存</td>
+												<td>{$row['store']}</td>
 											</tr>
 											<tr>
 												<td class="t">数量</td>
@@ -146,27 +121,21 @@
 												加入购物车
 											</a>
 										</div>
-										<div class="paytype">
-											<span class="gray">支付方式</span>&nbsp;&nbsp;&nbsp;&nbsp;送货上门&nbsp;|&nbsp;货到付款
-										</div>
 									</div>
 								</div>
-
 								<div class="clearfix"></div>
 								<div class="tt">
 									产品介绍
 								</div>
 								<div class="c">
-									野生菌一般生长于云南松、高山松、占风松等针叶林和混交林地带，单身至群生。野生菌因地理环境的不同和各地所生长的植被的不同也就带来了野生菌的种类多样化。
-
-									一般来说，野生菌生长受到气温、日照、地势、周期等自然条件的影响，并且不同环境下生长的野生菌氨基酸、蛋白质等有效成分含量不同，铜、锌等微量元素的种类与含量也不同。
-
-									大型野生食用菌生长在林区，生长的环境受污染少或有的地方生长环境几乎没有受到任何的外界污染，因此天然的大型野生食用菌是绿色食品，也是蛋白质、氨基酸含量丰富和脂肪含量极低、维生素及微量元素较多的保健食品。
-
-									云南复杂的地形地貌，多样的森林类型、土壤种类以及独特的立体气候条件，孕育了丰富的野生食用菌资源，种类多，分布广，产量大。云南食用菌分为二个纲、十一个目、三十五个科、九十六个属、约二百五十种，占了全世界食用菌一半以上，中国食用菌的三分之二。
+									{$row['descr']}
 								</div>
+aa;
+					echo $str;
+							}
+                    	?>
 								<div class="link">
-									<a href="#_">
+									<a href="lists.php">
 										<img src="./include/img/button02.jpg" width="87" height="27" />
 									</a>
 								</div>
@@ -184,78 +153,27 @@
 									</a>
 									<div id="pic" class="pic">
 										<ul id="scrollPic">
+											<?php	
+					                    		$sql = "select * from goods ";
+												$result = mysqli_query($link,$sql);
+												while($row = mysqli_fetch_assoc($result)){
+$str = <<<aa
 											<li>
 												<p class="media">
-													<a href="#_">
-														<img src="./include/img/p.jpg" width="203" height="131" />
+													<a href="./details.php?id={$row['id']}">
+														<img src="../admin/goods/uploads/m_{$row['picname']}" width="203" height="131" />
 													</a>
 												</p>
 												<p class="intro">
-													<a href="#_">
-														精选葵花籽油
+													<a href="./details.php?id={$row['id']}">
+														{$row['goods']}
 													</a>
 												</p>
 											</li>
-											<li>
-												<p class="media">
-													<a href="#_">
-														<img src="./include/img/p.jpg" width="203" height="131" />
-													</a>
-												</p>
-												<p class="intro">
-													<a href="#_">
-														精选葵花籽油
-													</a>
-												</p>
-											</li>
-											<li>
-												<p class="media">
-													<a href="#_">
-														<img src="./include/img/p.jpg" width="203" height="131" />
-													</a>
-												</p>
-												<p class="intro">
-													<a href="#_">
-														精选葵花籽油
-													</a>
-												</p>
-											</li>
-											<li>
-												<p class="media">
-													<a href="#_">
-														<img src="./include/img/p.jpg" width="203" height="131" />
-													</a>
-												</p>
-												<p class="intro">
-													<a href="#_">
-														精选葵花籽油
-													</a>
-												</p>
-											</li>
-											<li>
-												<p class="media">
-													<a href="#_">
-														<img src="./include/img/p.jpg" width="203" height="131" />
-													</a>
-												</p>
-												<p class="intro">
-													<a href="#_">
-														精选葵花籽油
-													</a>
-												</p>
-											</li>
-											<li>
-												<p class="media">
-													<a href="#_">
-														<img src="./include/img/p.jpg" width="203" height="131" />
-													</a>
-												</p>
-												<p class="intro">
-													<a href="#_">
-														精选葵花籽油
-													</a>
-												</p>
-											</li>
+aa;
+												echo $str;
+														}
+							                    	?>
 										</ul>
 									</div>
 								</div>

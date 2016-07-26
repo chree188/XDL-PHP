@@ -14,9 +14,21 @@
 	<a href="javascript:;" title="" id="j-message">留言</a>
 	<a href="javascript:;" title=""  id="j-service">客服</a>
 	</div>
+<div align="center">
+	<span class="tt">友情链接：</span>
+	<a href="https://taobao.com/">
+		淘宝网
+	</a>
+	<a href="https://jd.com/">
+		京东商城
+	</a>
+	<a href="https://github.com/">
+		github
+	</a>
+</div>
 <div class="footer">
 	浙ICP备案12345678  版权所有 天慈天养土特产  技术支持：
-	<a href="#_">
+	<a href="https://github.com/gitzwt">
 		逗你玩科技
 	</a>
 </div>

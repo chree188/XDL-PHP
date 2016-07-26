@@ -3,7 +3,11 @@
 	error_reporting(E_ALL ^ E_NOTICE);
 //	开启session
 	session_start(); 
-	
+	//登录验证
+	if(empty($_SESSION['user'])){
+		header('Location:login.php');
+		exit;
+	}
 	//连接数据库
 	include("../public/sql/dbconfig.php");
 	$link  = @mysqli_connect(HOST,USER,PASS,DBNAME) or die("数据库连接失败");
@@ -22,7 +26,7 @@
 			echo $_SESSION['user']['name']; 
 		?></a>&nbsp;&nbsp;角色：
     	<?php 
-		    $state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
+		    $state = array("1"=>"钻石会员","2"=>"黄金会员","3"=>"普通用户");
 		    echo $state[$_SESSION['user']['state']]; 
     	?>
     	</span>
@@ -35,13 +39,6 @@
 			echo $_SESSION['user']['id']; 
 		?>">
 			修改账号信息
-		</a>
-		<br />
-		<input type="text" class="text08" />
-		<input type="button" class="button04" />
-		&nbsp;&nbsp;
-		<a href="#_" class="sbutton">
-			余额查询
 		</a>
 	</div>
 	<div class="logo">
