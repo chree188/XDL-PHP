@@ -32,3 +32,11 @@
 		逗你玩科技
 	</a>
 </div>
+
+<?php
+	// 关闭数据库 释放结果集
+	
+	mysqli_close($link);
+	// mysqli_free_result($result);
+	
+?>

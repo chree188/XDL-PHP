@@ -1,4 +1,4 @@
-					MyShop目录结构
+						MyShop目录结构
 ============================================================================
 ==========MyShop===========
 admin 后台资源文件夹
@@ -11,27 +11,35 @@ index.php MyShop主页
 
 
 ==========home 前台=============
-shopCarTJ.php  订单页/订单提交页
+include 公共库文件夹 >> css、img、js 及 footer.php 和 header.php 文件
 
-shopCarCG.php  订单页/订单提交成功页
+users 文件夹 >> action.php 执行用户注册与修改操作  iUserCenter.php  个人中心
 
-lists.php  品牌页/商品列表页
+**********由于路径问题，把以下页面写在了home根目录*****************
 
-header.php  导航栏头部
+about.php 关于我们页
 
-iUserCenter.php  个人中心
+details.php 商品详情
 
-shopCar.php  购物车页
+dologin.php	执行登录用户判断
 
-login.php  前台登录页
-
-register.php  注册页
+edit.php 注册用户信息修改
 
 index.php  前台主页/首页
 
-footer.php  页脚
+lists.php  品牌页/商品列表页
 
-details.php 商品详情
+login.php  前台登录页
+
+logout.php	用户注销
+
+register.php  用户注册页
+
+shopCar.php  购物车页
+
+shopCarCG.php  订单页/订单提交成功页
+
+shopCarTJ.php  订单页/订单提交页
 
 
 ============admin 后台==============

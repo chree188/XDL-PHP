@@ -23,18 +23,21 @@
 								商品详情
 							</div>
 							<ul class="list">
-						<?php	
+						<?php
+							//商品类别表里面的一级类别遍历出来	
                     		$sql = "select * from type where pid = 0";
-							$result = mysqli_query($link,$sql);
-							while($row = mysqli_fetch_assoc($result)){
+							$result = mysqli_query($link,$sql);	//成功是结果集对象 失败false
+							if($result){
+								while($row = mysqli_fetch_assoc($result)){
 $str = <<<aa
 					<li>
-						<a href="#_？{$row['id']}">
+						<a href="lists.php?typeid={$row['id']}">
 							精选{$row['name']}类产品
 						</a>
 					</li>
 aa;
 					echo $str;
+								}
 							}
                     	?>
 							</ul>
@@ -106,6 +109,7 @@ $str = <<<aa
 											</tr>
 											<tr>
 												<td class="t">数量</td>
+												*******************************************************************购物车
 												<td><span class="jian"></span><span class="txt">
 													<input type="text" value="1" class="text07" />
 													</span><span class="jia"></span></td>
