@@ -92,10 +92,6 @@ $str = <<<aa
 												<td><span class="numcon">￥<span class="num">{$row['price']}</span></span></td>
 											</tr>
 											<tr>
-												<td class="t">计量单位</td>
-												<td>散装</td>
-											</tr>
-											<tr>
 												<td class="t">产地</td>
 												<td>{$row['company']}</td>
 											</tr>
@@ -107,14 +103,25 @@ $str = <<<aa
 												<td class="t">库存</td>
 												<td>{$row['store']}</td>
 											</tr>
+											
+											***************************************************************************购物车
 											<tr>
 												<td class="t">数量</td>
+												<td>
+			                                    	<span class="jian"></span>
+			                                        <span class="txt"><input type="text" value="1" class="text07" /></span>
+			                                        <span class="jia"></span>
+			                                    </td>
 												
-												
-												<td><span class="jian"></span><span class="txt">
-													<input type="text" value="1" class="text07" />
-													</span><span class="jia"></span></td>
+												<td><button onclick=\"window.location='shopaction.php?a=edit&id={$row['id']}
+												&m=-1'\">-</button> {$row['m']} <button onclick=\"window.location='shopaction.php?a=edit&id=
+												{$row['id']}&m=1'\">+</button></td>
 											</tr>
+											<tr>
+												<td class="t" width="75"><span class="cbg">总价</span></td>
+												<td><span class="numcon">￥<span class="num">{$row['price']}</span></span></td>
+											</tr>
+											
 										</table>
 										<div class="blink">
 											<a href="#_">
