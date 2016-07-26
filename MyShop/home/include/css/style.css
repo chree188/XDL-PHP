@@ -143,6 +143,11 @@
 	margin:0 auto;
 	width:980px;
 }
+.num {
+	font-size: 30px;
+	color: #538ec6;
+	font-family: "Georgia", "Tahoma", "Arial";
+}
 .nivoSlider {
 	position:relative;
 	z-index:1

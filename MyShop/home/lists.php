@@ -46,23 +46,53 @@ aa;
                     <ul class="plist">
                     	
                     	<?php
+                    		//=============封装搜索条件======================
 							//where 使用封装搜索条件
 							//1 设置数组来接收搜索的条件 
 							$wherelist = array();
-			
+							$urllist = array();	//封装url的状态维持的条件
+							
 							//2 判断get方式传值 搜索条件是否存在
 							if(!empty($_GET['typeid'])){
 								$wherelist[] = "typeid in(select id from type where path like '%,{$_GET['typeid']},%')";
+								$urllist[] = "typeid={$_GET['typeid']}";
 							}
 			
 							//3 查看搜索条件数组是否有值 
 							if(count($wherelist)>0){
 								$where  = " where ".implode(" and ",$wherelist);
+								$url = "&".implode("&", $urllist);
 							}
+							//=============封装搜索条件======================
 			
-							//4 拼接sql语句
+							/*================实现分页显示==================*/
+							//1 设置参数
+							$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
+							$maxPage = 0;	//一共显示多少页
+							$maxRow = 0;	//一共有多少条
+							$pageSize = 2;	//每页显示多少条	页大小
+							//2 一共多少条
 							$sql = "select * from goods ".$where;
+							$res = mysqli_query($link, $sql);
+							$maxRow = mysqli_num_rows($res);
+							//3 一共显示多少页
+							$maxPage = ceil($maxRow/$pageSize);
+							//4 判断页码 是否有效
+							if($page>$maxPage){
+								$page = $maxPage;
+							}
+							if($page<1){
+								$page = 1;
+							}
+							//5 拼接limit
+							$limit = " limit ".($page-1)*$pageSize.",".$pageSize;
+							/*================实现分页显示==================*/
+							
+							//4 拼接sql语句
+							$sql = "select * from goods $where order by concat(typeid,id) $limit";
 							$result = mysqli_query($link,$sql);
+							
+							//5 解析结果集 
 							while($row = mysqli_fetch_assoc($result)){
 $str = <<<aa
 		
@@ -79,9 +109,25 @@ aa;
 							}
 						?>
                     </ul>
-                    <div class="page">
-  <span class="disabled">«上一页</span><span class="current">1</span><a href="/newslist/0/2.aspx">2</a><a href="/newslist/0/3.aspx">3</a><a href="/newslist/0/4.aspx">4</a><a href="/newslist/0/2.aspx">下一页»</a>
-</div>
+                    <div >
+                    	共查询到<span class="num"><?php  echo mysqli_num_rows($res)?></span>条类别信息 &nbsp;&nbsp;
+						<span class="num"><?php  echo $page.'/'.$maxPage ?></span>页  &nbsp;&nbsp;
+						<?php 
+							$url = empty($url)? "" : $url;
+							echo "<a href='lists.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
+								首页
+							</a>&nbsp;&nbsp;";
+							echo "<a href='lists.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+								«上一页
+							</a>&nbsp;&nbsp;";
+							echo "<a href='lists.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+								下一页»
+							</a>&nbsp;&nbsp;";
+							echo "<a href='lists.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
+								尾页
+							</a>";
+						?>
+					</div>
                 </div>
             </div>
             <div class="ft"><img class="png" src="./include/img/ft.png" width="1006" height="29" /></div>
