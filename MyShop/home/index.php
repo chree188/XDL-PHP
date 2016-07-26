@@ -1,11 +1,3 @@
-<?php
-	session_start();	
-	//登录验证
-	if(empty($_SESSION['user'])){
-		header('Location:login.php');
-		exit;
-	}
-?>
 <html>
 	<head>
 		<meta charset="UTF-8" />
@@ -23,7 +15,7 @@
 		<!--网页主体content-->
 		<div class="content">
 			<?php
-			include './include/header.php';
+			include './include/header.php';		//导入header
 			?>
 			<div class="banner">
     	<div class="clear" id="slider-bg">
@@ -43,30 +35,19 @@
             <div class="lnav">
                 <div class="hd">产品类别</div>
                 <ul class="list">
-              <li>
+                	<?php	
+                    		$sql = "select * from type where pid = 0";
+							$result = mysqli_query($link,$sql);
+							while($row = mysqli_fetch_assoc($result)){
+$str = <<<aa
+					<li>
                         <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">五谷杂粮</a></div>
+                        <div class="i"><a href="#_">{$row['name']}</a></div>
                     </li>
-              <li>
-                        <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">菌菇类</a></div>
-                    </li>
-              <li>
-                        <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">食用油</a></div>
-                    </li>
-              <li>
-                        <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">野菜干菜</a></div>
-                    </li>
-              <li>
-                        <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">干果坚果</a></div>
-                    </li>
-              <li>
-                        <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">大米</a></div>
-                    </li>
+aa;
+					echo $str;
+							}
+                    	?>
                 </ul>
             </div>
             <div class="ad"><a href="#_"><img src="./include/img/ad04.jpg" width="240" height="286" /></a></div>
@@ -98,8 +79,8 @@
 							while($row = mysqli_fetch_assoc($result)){
 $str = <<<aa
 					  <li>
-                        <p class="media"><a href="#_"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">{$row['goods']}</a></p>
+                        <p class="media"><a href="./details.php?id={$row['id']}"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
+                      	<p class="intro"><a href="./details.php?id={$row['id']}">{$row['goods']}</a></p>
                       </li>
 aa;
 					echo $str;
@@ -177,8 +158,8 @@ aa;
 							while($row = mysqli_fetch_assoc($result)){
 $str = <<<aa
 					  <li>
-                        <p class="media"><a href="#_"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">{$row['goods']}</a></p>
+                        <p class="media"><a href="./details.php?id={$row['id']}"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
+                      	<p class="intro"><a href="./details.php?id={$row['id']}">{$row['goods']}</a></p>
                       </li>
 aa;
 					echo $str;
@@ -208,88 +189,6 @@ aa;
             </div>
         </div>
     </div>
-    <div class="main main01">
-    	<div class="mleft">
-            <div class="lnav02">
-                <div class="hd">滋补/饮品</div>
-                <ul class="list">
-                  <li class="bottom">
-                        <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">厨房调味</a></div>
-                    </li>
-                  <li class="bottom">
-                        <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">器具茶具</a></div>
-                    </li>
-                  <li class="bottom llast">
-                        <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">水果</a></div>
-                    </li>
-                </ul>
-            </div>
-            <div class="ad"><a href="#_"><img src="./include/img/ad04.jpg" width="240" height="347" /></a></div>
-        </div>
-        <div class="mright">
-        	<div class="ad">
-            	<div class="vcontainer" id="idTransformView02">
-                    <ul class="vslider" id="idSlider02">
-                        <li><img src="./include/img/ad03.jpg" width="722" height="286" /></li>
-                        <li><img src="./include/img/ad05.jpg" width="722" height="286" /></li>
-                        <li><img src="./include/img/ad03.jpg" width="722" height="286" /></li>
-                        <li><img src="./include/img/ad05.jpg" width="722" height="286" /></li>
-                    </ul>
-                    <ul class="vnum png" id="idNum02">
-                      <li class="on">●</li>
-                      <li>●</li>
-                      <li>●</li>
-                      <li>●</li>
-                    </ul>
-                </div>
-            </div>
-        	<div class="commend">
-            	<div class="picgd"> <a href="#" onclick="return false" title="上翻" id="LeftArr02" class="up png">上翻</a> <a href="#" onclick="return false" title="下翻" id="RightArr02" class="down png">下翻</a>
-                  <div id="pic02" class="pic">
-                    <ul id="scrollPic02">
-                      <?php	
-                    		$sql = "select * from goods ";
-							$result = mysqli_query($link,$sql);
-							while($row = mysqli_fetch_assoc($result)){
-$str = <<<aa
-					  <li>
-                        <p class="media"><a href="#_"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
-                      	<p class="intro"><a href="#_">{$row['goods']}</a></p>
-                      </li>
-aa;
-					echo $str;
-							}
-                    		//关闭数据库 释放结果集 
-							mysqli_close($link);
-							mysqli_free_result($result);
-                    		?>
-                    </ul>
-                  </div>
-                </div>
-                <script>   
-                function pic(v){return document.getElementById(v);}
-                        
-                            var scrollPic_03 = new ScrollPic();
-                            scrollPic_03.scrollContId   = "pic02"; //内容容器ID
-                            scrollPic_03.arrLeftId      = "LeftArr02";//左箭头ID
-                            scrollPic_03.arrRightId     = "RightArr02"; //右箭头ID
-                    
-                            scrollPic_03.frameWidth     = 655;//显示框宽度
-                            scrollPic_03.pageWidth      = 217; //翻页宽度
-                    
-                            scrollPic_03.speed          = 20; //移动速度(单位毫秒，越小越快)
-                            scrollPic_03.space          = 20; //每次移动像素(单位px，越大越快)
-                            scrollPic_03.autoPlay       = true; //自动播放
-                            scrollPic_03.autoPlayTime   = 3; //自动播放间隔时间(秒)
-                            scrollPic_03.initialize(); //初始化
-        
-                 </script>
-            </div>
-        </div>
-    </div>
     <div class="main">
     	<div class="tzabout">
         	<div class="title"><a href="#_">台州特色名品</a></div>
@@ -301,9 +200,9 @@ aa;
         	<div class="title">天慈生灵，天养生辉</div>
             <div class="con">
             	作为绿色食品的崇尚者，我们把绿色环保深入到
-经营的各个角落——绿色包装，绿色推广，绿色
-经营。天慈天养致力于打造消费者信得过，彰显
-身份的品牌、
+				经营的各个角落——绿色包装，绿色推广，绿色
+				经营。天慈天养致力于打造消费者信得过，彰显
+				身份的品牌、
             </div>
             <div class="more"><a href="#_">READ MORE</a></div>
         </div>
@@ -334,7 +233,7 @@ aa;
         </div>
     </div>
 			<?php
-			include './include/footer.php';
+			include './include/footer.php';			//导入footer
 			?>
 		</div>
 	</body>
