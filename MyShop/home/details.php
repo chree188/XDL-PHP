@@ -11,7 +11,7 @@
 		<div class="content">
 			<div class="inner">
 				<div class="ibanner">
-					<img src="./include/img/ibanner04.jpg" width="980" height="249" />
+					<img src="./include/img/ibanner05.jpg" width="980" height="249" />
 				</div>
 				<div class="tinner">
 					<div class="hd">
@@ -109,7 +109,8 @@ $str = <<<aa
 											</tr>
 											<tr>
 												<td class="t">数量</td>
-												*******************************************************************购物车
+												
+												
 												<td><span class="jian"></span><span class="txt">
 													<input type="text" value="1" class="text07" />
 													</span><span class="jia"></span></td>
