@@ -9,6 +9,7 @@
 			<?php	
 				include'./include/header.php';
 			?>
+			
 			<div class="inner">
 				<div class="buyflow">
 					<div class="flow">
@@ -68,6 +69,15 @@
 									</td>
 								</tr>
 							</table>
+							<div class="but">
+								<div class="r">
+									<input type="image" src="./include/img/button11.jpg" onclick="javascript:document.forms['Form_2'].submit();" />
+								</div>
+								<a href="./shopCar.php">	<!--返回购物车-->
+									<img src="./include/img/button10.jpg" />
+								</a>
+								</div>
+							</form>
 						</div>
 						<!--------------------------------------------------------------------------------------->
 						<div class="detail">
@@ -116,18 +126,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="but">
-						<div class="r">
-							<a href="./shopCarCG.php">
-								<img src="./include/img/button11.jpg" />
-							</a>
-						</div>
-						<a href="./shopCar.php">	<!--返回购物车-->
-							<img src="./include/img/button10.jpg" />
-						</a>
-					</div>
 				</div>
 			</div>
+			
 		</div>
 		<?php	
 			include'./include/footer.php';

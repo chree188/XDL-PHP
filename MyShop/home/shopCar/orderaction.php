@@ -3,7 +3,7 @@
 header("Content-Type:text/html;charset=utf-8");
 	session_start(); //启用会话session
 	//1.导入配置文件
-	require("dbconfig.php");
+	require("../../public/sql/dbconfig.php");
 	//2.连接数据库
 	$link = @mysql_connect(HOST,USER,PASS)or die('数据库连接失败！');
 	//3.选择数据库，设置编码
@@ -15,12 +15,14 @@ header("Content-Type:text/html;charset=utf-8");
 	switch($_GET['a']){
 		case "add":  //订单信息添加
 			//执行订单信息添加
-			$linkman=$_POST['linkman'];
-			$address=$_POST['address'];
-			$code=$_POST['code'];
-			$phone=$_POST['phone'];
-			$uid=$_SESSION['loginvip']['id']; //当前登陆者id
-			$total=$_SESSION['total']; //总金额
+			$odid=$_POST['odid'];	//订单号
+			$linkman=$_POST['linkman'];	//联系人
+			$address=$_POST['address'];	//收件地址
+			$code=$_POST['code'];	//邮编
+			$phone=$_POST['phone'];	//手机号
+			$uid=$_POST['uid']; //当前登陆者id
+			$total=$_POST['total']; //总金额
+			$status=$_POST['status'];
 			$addtime=time();
 			//拼装订单添加sql语句
 			$sql = "insert into orders values(null,'{$uid}','{$linkman}','{$address}','{$code}','{$phone}','{$addtime}','{$total}',0)";
