@@ -7,11 +7,15 @@ home 前台资源文件夹
 
 public 公共资源文件夹
 
+favicon.ico	网站图标ico文件
+
 index.php MyShop主页
 
 
 ==========home 前台=============
 include 公共库文件夹 >> css、img、js 及 footer.php 和 header.php 文件
+
+shopCar 文件夹>> orderaction.php、shopaction.php	该文件夹下放着购物车及订单的处理动作action
 
 users 文件夹 >> action.php 执行用户注册与修改操作  iUserCenter.php  个人中心
 
@@ -71,12 +75,10 @@ logout.php	注销
 
 
 ============public 公共资源===============
-css css样式资源文件夹
-
 fonts  字体资源文件夹
 
-img	  图片资源文件夹
-
-js	js资源文件夹
-
 sql 数据库资源文件夹
+
+code.php  验证码
+
+functions.php  文件上传自定义函数

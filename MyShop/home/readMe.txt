@@ -1,6 +1,8 @@
 ==========home 前台=============
 include 公共库文件夹 >> css、img、js 及 footer.php 和 header.php 文件
 
+shopCar 文件夹>> orderaction.php、shopaction.php	该文件夹下放着购物车及订单的处理动作action
+
 users 文件夹 >> action.php 执行用户注册与修改操作  iUserCenter.php  个人中心
 
 **********由于路径问题，把以下页面写在了home根目录*****************

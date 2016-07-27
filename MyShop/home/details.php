@@ -25,6 +25,8 @@
 							</div>
 							<ul class="list">
 						<?php
+							//设置默认时区
+							date_default_timezone_set('PRC');
 							//商品类别表里面的一级类别遍历出来	
                     		$sql = "select * from type where pid = 0";
 							$result = mysqli_query($link,$sql);	//成功是结果集对象 失败false
@@ -63,6 +65,7 @@ aa;
 							//设置状态
 							$state = array("1"=>"新添加","2"=>"在售","3"=>"下架");
 							while($row = mysqli_fetch_assoc($result)){
+								$addTime = date("Y-m-d",$row['addtime']);	//格式化注册时间戳
 $str = <<<aa
 					  <div class="title">
 								{$row['goods']}
@@ -73,7 +76,7 @@ $str = <<<aa
 										<ul class="big-img">
 											<li class="select">
 												<a href="../admin/goods/uploads/{$row['picname']}">
-													<img src="../admin/goods/uploads/{$row['picname']}" width="445" height="287" />
+													<img src="../admin/goods/uploads/{$row['picname']}" width="360" height="200" />
 												</a>
 											</li>
 										</ul>
@@ -101,33 +104,17 @@ $str = <<<aa
 												<td>{$state[$row['state']]}</td>
 											</tr>
 											<tr>
+												<td class="t">添加时间</td>
+												<td>{$addTime}</td>
+											</tr>
+											<tr>
 												<td class="t">库存</td>
 												<td>{$row['store']}</td>
 											</tr>
-											
-											***************************************************************************购物车
-											<tr>
-												<td class="t">数量</td>
-												<td>
-			                                    	<span class="jian"></span>
-			                                        <span class="txt"><input type="text" value="1" class="text07" /></span>
-			                                        <span class="jia"></span>
-			                                    </td>
-											</tr>
-											<tr>
-												<td class="t" width="75"><span class="cbg">总价</span></td>
-												<td><span class="numcon">￥<span class="num">{$row['price']}</span></span></td>
-											</tr>
-											***************************************************************************购物车
-											
 										</table>
-										<div class="blink">
-											<a href="#_">
-												立即购买
-											</a>
-										</div>
+										
 										<div class="blink01">
-											<a href="#_">
+											<a href="./shopCar/shopaction.php?a=add&id={$row['id']}">
 												加入购物车
 											</a>
 										</div>
