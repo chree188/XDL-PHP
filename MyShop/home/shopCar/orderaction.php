@@ -22,7 +22,8 @@ header("Content-Type:text/html;charset=utf-8");
 			$phone=$_POST['phone'];	//手机号
 			$uid=$_POST['uid']; //当前登陆者id
 			$total=$_POST['total']; //总金额
-			$status=$_POST['status'];
+			$status=$_POST['status']; //订单状态
+			$descr=$_POST['descr']; //备注信息
 			$addtime=time();
 			//拼装订单添加sql语句
 			$sql = "insert into orders values(null,'{$uid}','{$linkman}','{$address}','{$code}','{$phone}','{$addtime}','{$total}',0)";
