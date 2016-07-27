@@ -60,4 +60,3 @@ header("Content-Type:text/html;charset=utf-8");
 		mysqli_free_result($result||$res);	
 	}
 	
-	// select * from orders;		select * from detail;

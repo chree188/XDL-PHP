@@ -27,11 +27,11 @@
 							</div>
 							<div class="c">
 								您可以选择
-								<a href="#_" class="orange">
+								<a href="./lists.php" class="orange">
 									继续购物
 								</a>
 								，或
-								<a href="index.php" class="orange">
+								<a href="./index.php" class="orange">
 									返回首页
 								</a>
 								。

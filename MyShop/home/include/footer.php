@@ -10,7 +10,7 @@
 </div>
 <!--回到顶部，留言，联系客服 先保留-->
 	<div class="aside-panel" id="j-panel">
-	<a href="javascript:;" title="" id="j-message">留言</a>
+	<a href="./shopCar.php" title="" id="j-message">购物车</a>
 	<a href="javascript:;" title=""  id="j-service">客服</a>
 	<a href="#top" title=""  id="j-service">回顶部</a>
 	</div>

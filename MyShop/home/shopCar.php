@@ -24,7 +24,7 @@
 								<td width="130" class="tt">小计</td>
 								<td class="tt">操作</td>
 							</tr>
-			<!--展示购物车-->
+			<!--展示购物车信息-->
 			<?php
 				//判断购物车中是否有商品，并遍历输出
 				$total=0; //定义一个存放总金额的变量
@@ -60,7 +60,7 @@
 						//将统计出来的总金额存放到session中
 						$_SESSION['total']=$total;
 			?>
-			<!--展示购物车-->
+			<!--展示购物车信息-->
 					</div>
 					<div class="but">
 						<div class="r">
