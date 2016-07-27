@@ -81,6 +81,7 @@ CREATE TABLE `orders` (
   `address` varchar(255) DEFAULT NULL,
   `code` char(6) DEFAULT NULL,
   `phone` varchar(16) DEFAULT NULL,
+  `descr` text,
   `addtime` int(11) DEFAULT NULL,
   `total` double(8,2) DEFAULT NULL,
   `status` enum('0','1','2','3') DEFAULT NULL,

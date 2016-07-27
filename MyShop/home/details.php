@@ -25,8 +25,6 @@
 							</div>
 							<ul class="list">
 						<?php
-							//设置默认时区
-							date_default_timezone_set('PRC');
 							//商品类别表里面的一级类别遍历出来	
                     		$sql = "select * from type where pid = 0";
 							$result = mysqli_query($link,$sql);	//成功是结果集对象 失败false

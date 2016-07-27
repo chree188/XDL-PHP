@@ -14,7 +14,7 @@
 					<div class="flow">
 						<img src="./include/img/flow01.jpg" width="980" height="57" />
 					</div>
-					<div class="flowtt">
+					<div class="num">
 						填写收货地址并核对订单信息
 					</div>
 					<div class="ordercon">
@@ -24,23 +24,15 @@
 						<div class="address">
 							<table width="100%">
 								<tr>
-									<td class="l">收货人</td>
+									<td class="l">订单号</td>
 									<td>
-										<input type="text" class="text09" />
+										<input type="text" class="text09" readonly value="<?php echo date('YmdHis',time()).substr(microtime(),2,4);?>"/>
 									</td>
 								</tr>
 								<tr>
-									<td class="l">所在地区</td>
+									<td class="l">用户ID号</td>
 									<td>
-										<select>
-											<option>浙江</option>
-										</select>
-										<select>
-											<option>浙江</option>
-										</select>
-										<select>
-											<option>浙江</option>
-										</select>
+										<input type="text" class="text06" readonly value="<?php echo $_SESSION['user']['id'];?>"/>
 									</td>
 								</tr>
 								<tr>

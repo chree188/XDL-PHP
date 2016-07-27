@@ -1,6 +1,8 @@
 <?php 
 	//设置报错情况	去除notice错误
 	error_reporting(E_ALL ^ E_NOTICE);
+	//设置默认时区
+	date_default_timezone_set('PRC');
 	//开启session
 	session_start(); 
 	//首先执行登录验证
