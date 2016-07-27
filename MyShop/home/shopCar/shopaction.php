@@ -57,6 +57,7 @@
 						if($_SESSION['shoplist'][$id]['m']<1){
 							$_SESSION['shoplist'][$id]['m']=1;
 						}
-						echo "<script>window.location='showshop.php';</script>";
+						header("Location:../shopCar.php");
+						//echo "<script>window.location='../shopCar.php';</script>";	//这个方法页面刷新太大
 						break;
 				}

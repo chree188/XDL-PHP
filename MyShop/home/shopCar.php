@@ -24,83 +24,46 @@
 								<td width="130" class="tt">小计</td>
 								<td class="tt">操作</td>
 							</tr>
-							<!---->
-							<?php
+			<!--展示购物车-->
+			<?php
 				//判断购物车中是否有商品，并遍历输出
 				$total=0; //定义一个存放总金额的变量
 				if(!empty($_SESSION['shoplist'])){
 					foreach($_SESSION['shoplist'] as $shop){
 						echo "<tr>";
-						echo "<td>{$shop['goods']}</td>";
-						echo "<td><img src='./uploads/s_{$shop['picname']}'/></td>";
-						echo "<td>{$shop['price']}</td>";
-						echo "<td><button onclick=\"window.location='shopaction.php?a=edit&id={$shop['id']}&m=-1'\">-</button> {$shop['m']} <button onclick=\"window.location='shopaction.php?a=edit&id={$shop['id']}&m=1'\">+</button></td>";
-						echo "<td>".($shop['m']*$shop['price'])."</td>";
-						echo "<td><a href='shopaction.php?a=del&id={$shop['id']}'>删除</a></td>";
+						echo "<td>";
+						echo "<div class='m'>";
+						echo "<img src='../admin/goods/uploads/s_{$shop['picname']}' width='85' height='55' />";
+						echo "</div>";
+						echo "<div class='i'>";
+						echo "<a href='../admin/goods/uploads/m_{$shop['picname']}'>{$shop['goods']}</a>";
+						echo "</div>";
+						echo "</td>";
+						echo "<td>￥{$shop['price']}</td>";
+						echo "<td>{$shop['store']}</td>";
+						echo "<td><button onclick=\"window.location='./shopCar/shopaction.php?a=edit&id={$shop['id']}&m=-1'\">-</button>
+						 {$shop['m']} <button onclick=\"window.location='./shopCar/shopaction.php?a=edit&id={$shop['id']}&m=1'\">+</button></td>";
+						echo "<td>";
+						echo "<span class='numcon'>￥<span class='num'>".($shop['m']*$shop['price'])."</span></span>";
+						echo "</td>";
+						echo "<td>";
+						echo "<a href='./shopCar/shopaction.php?a=del&id={$shop['id']}' class='thd orange'>删除</a>";
+						echo "</td>";
 						echo "</tr>";
 						$total +=$shop['m']*$shop['price']; //累加每次的小计
 					}
 				}
-				echo "<tr>";
-				echo "<th>总计：</th>";
-				echo "<td colspan='4' align='right'>{$total}</td>";
-				echo "<td>&nbsp;</td>";
-				echo "</tr>";
-				
-				//将统计出来的总金额存放到session中
-				$_SESSION['total']=$total;
+						echo "</table>";
+						echo "<div class='handdle'>";
+						echo "<div class='allprice'>
+								金额总计：<span class='numcon'>￥<span class='num'>{$total}</span></span>
+							</div>";
+						echo "<div class='del'><a href='#_'>清空购物车</a></div>";
+						echo "</div>";
+						//将统计出来的总金额存放到session中
+						$_SESSION['total']=$total;
 			?>
-							
-			<!--<?php
-				//判断购物车中是否有商品，并遍历输出
-				$total=0; //定义一个存放总金额的变量
-				if(!empty($_SESSION['shoplist'])){
-					foreach($_SESSION['shoplist'] as $shop){
-$str = <<<aa
-							<tr>
-								<td>
-									<div class="m">
-										<a href="#_">
-											<img src="./include//img/p.jpg" width="85" height="55" />
-										</a>
-									</div>
-									<div class="i">
-										<a href="#_">
-											野生菌菇
-										</a>
-									</div></td>
-								<td>￥135</td>
-								<td>有货</td>
-								<td><span class="jian"></span>
-										<span class="txt">
-											<input type="text" value="1" class="text07" />
-										</span>
-									<span class="jia"></span>
-								</td>
-								<td><span class="numcon">￥<span class="num">135</span></span></td>
-								<td>
-									<a href="#_" class="thd orange">
-										删除
-									</a></td>
-							</tr>
-aa;
-					//将统计出来的总金额存放到session中
-					$_SESSION['total']=$total;
-					echo $str;
-							}
-                    	?>-->
-						</table>
-						<div class="handdle">
-							<div class="allprice">
-								金额总计：<span class="numcon">￥<span class="num">135</span></span>
-							</div>
-							<div class="del">
-								<a href="#_">
-									删除选中的商品
-								</a>
-							</div>
-						</div>
-
+			<!--展示购物车-->
 					</div>
 					<div class="but">
 						<div class="r">
