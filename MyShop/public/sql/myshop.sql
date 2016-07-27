@@ -84,7 +84,7 @@ CREATE TABLE `orders` (
   `descr` text,
   `addtime` int(11) DEFAULT NULL,
   `total` double(8,2) DEFAULT NULL,
-  `status` enum('0','1','2','3') DEFAULT NULL,
+  `status` enum('1','2','3','4') DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
