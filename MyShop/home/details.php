@@ -113,10 +113,6 @@ $str = <<<aa
 			                                        <span class="txt"><input type="text" value="1" class="text07" /></span>
 			                                        <span class="jia"></span>
 			                                    </td>
-												
-												<td><button onclick=\"window.location='shopaction.php?a=edit&id={$row['id']}
-												&m=-1'\">-</button> {$row['m']} <button onclick=\"window.location='shopaction.php?a=edit&id=
-												{$row['id']}&m=1'\">+</button></td>
 											</tr>
 											<tr>
 												<td class="t" width="75"><span class="cbg">总价</span></td>
