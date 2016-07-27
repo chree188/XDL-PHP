@@ -26,8 +26,7 @@ header("Content-Type:text/html;charset=utf-8");
 			$descr=$_POST['descr']; //备注信息
 			$addtime=time();
 			//拼装订单添加sql语句
-			$sql = "insert into orders values(null,'{$uid}','{$linkman}','{$address}','{$code}','{$phone}','{$addtime}','{$total}',0)";
-			//echo $sql;
+			$sql = "insert ignore into orders values(null,'{$odid}','{$uid}','{$linkman}','{$address}','{$code}','{$phone}','{$descr}','{$addtime}','{$total}','{$status}')";
 			mysql_query($sql,$link);
 			//获取订单添加成功的自增id（订单号）
 			$orderid = mysql_insert_id();
@@ -35,14 +34,15 @@ header("Content-Type:text/html;charset=utf-8");
 				//添加订单详情
 				foreach($_SESSION['shoplist'] as $shop){
 					//拼装订单详情语句
-					$sql = "insert into detail values(null,{$orderid},{$shop['id']},'{$shop['goods']}','{$shop['price']}','{$shop['m']}')";
+					$sql = "insert ignore into detail values(null,{$orderid},{$shop['id']},'{$shop['goods']}','{$shop['price']}','{$shop['m']}')";
 					//执行添加
 					mysql_query($sql,$link);
 				}
 				//销毁session
 				unset($_SESSION['shoplist']);
 				unset($_SESSION['total']);
-				echo "订单处理成功！订单号：".$orderid;
+				header("Location:../shopCarCG.php");
+//				echo "订单处理成功！订单号：".$orderid;
 			}else{
 				die("订单处理失败！");
 			}
@@ -52,5 +52,12 @@ header("Content-Type:text/html;charset=utf-8");
 			break;
 			
 	}
+	//is_resource() 检测变量是否为资源类型
+	if(is_resource($link)) {	//判断是否为空资源，为空 即关闭数据库连接和释放资源
+		mysqli_close($link);	
+	}
+	if(is_resource($result||$res)) {
+		mysqli_free_result($result||$res);	
+	}
 	
-	mysql_close($link);
+	// select * from orders;		select * from detail;

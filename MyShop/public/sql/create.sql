@@ -60,7 +60,7 @@ drop table if exists orders;
 /*创建订单表 orders*/
 create table orders(
 	id int(11) unsigned not null auto_increment primary key,
-	odid int,
+	odid varchar(32),
 	uid int,
 	linkman varchar(32),
 	address varchar(255),

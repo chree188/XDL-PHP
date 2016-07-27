@@ -40,8 +40,8 @@
 	if(is_resource($link)) {	//判断是否为空资源，为空 即关闭数据库连接和释放资源
 		mysqli_close($link);	
 	}
-	if(is_resource($result)) {
-		mysqli_free_result($result);	
+	if(is_resource($result||$res)) {
+		mysqli_free_result($result||$res);	
 	}
 	
 	

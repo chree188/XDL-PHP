@@ -75,7 +75,7 @@ INSERT INTO `goods` VALUES ('16', '21', '珍品海参', '福建滋养保健品�
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `odid` int(11) DEFAULT NULL,
+  `odid` varchar(32) DEFAULT NULL,
   `uid` int(11) DEFAULT NULL,
   `linkman` varchar(32) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
