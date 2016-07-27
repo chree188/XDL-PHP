@@ -66,13 +66,13 @@
 			<a class="n03" href="./lists.php"></a>
 		</li>
 		<li>
-			<a class="n04" href="#_"></a>
+			<a class="n04" href="./yxpp.php"></a>
 		</li>
 		<li>
-			<a class="n05" href="#_"></a>
+			<a class="n05" href="./tzts.php"></a>
 		</li>
 		<li>
-			<a class="n06" href="#_"></a>
+			<a class="n06" href="./xwzx.php"></a>
 		</li>
 		<li>
 			<a class="n07" href="#_"></a>

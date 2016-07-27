@@ -29,4 +29,8 @@ shopCarCG.php  订单页/订单提交成功页
 
 shopCarTJ.php  订单页/订单提交页
 
+tzts.php  台州特色
 
+xwzx.php  新闻资讯
+
+yxpp.php  优选品牌
