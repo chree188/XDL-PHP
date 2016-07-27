@@ -283,8 +283,8 @@ td.fenye {
         <td align="right" valign="middle" class="borderright borderbottom bggray">用户权限：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <select name="state" id="level">
-	    <option value="1"<?php echo $row['state']=='1' ? 'selected' :'';  ?> >&nbsp;&nbsp;钻石会员</option>
-	    <option value="2"<?php echo $row['state']=='2' ? 'selected' :'';  ?> >&nbsp;&nbsp;黄金会员</option>
+	    <option value="1"<?php echo $row['state']=='1' ? 'selected' :'';  ?> >&nbsp;&nbsp;超级管理员</option>
+	    <option value="2"<?php echo $row['state']=='2' ? 'selected' :'';  ?> >&nbsp;&nbsp;TCTY会员</option>
 	    <option value="3"<?php echo $row['state']=='3' ? 'selected' :'';  ?> >&nbsp;&nbsp;普通用户</option>
         </select>
         </td>

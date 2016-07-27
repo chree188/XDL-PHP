@@ -22,9 +22,9 @@
             <div class="full-width-wrapper" id="slider-frame">
                 <div class="fixed-width-wrapper maxx-theme" id="slider-wrapper">
                     <div id="slider" class="nivoSlider">
-                    <a href="javascript:void(0)"><img src="./include/img/banner.jpg" alt="懒人图库"></a>
-                    <a href="javascript:void(0)"><img src="./include/img/banner01.jpg" alt="懒人图库"></a>
-                    <a href="javascript:void(0)"><img src="./include/img/banner.jpg" alt="懒人图库"></a>
+                    <img src="./include/img/banner.jpg" alt="懒人图库">
+                    <img src="./include/img/banner01.jpg" alt="懒人图库">
+                    <img src="./include/img/banner.jpg" alt="懒人图库">
                     </div>
                 </div>
             </div>
@@ -41,8 +41,8 @@
 							while($row = mysqli_fetch_assoc($result)){
 $str = <<<aa
 					<li>
-                        <div class="m"><a href="#_"></a></div>
-                        <div class="i"><a href="#_">{$row['name']}</a></div>
+                        <div class="m"><a href="lists.php?typeid={$row['id']}"></a></div>
+                        <div class="i"><a href="lists.php?typeid={$row['id']}">{$row['name']}</a></div>
                     </li>
 aa;
 					echo $str;

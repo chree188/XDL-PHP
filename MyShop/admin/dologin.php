@@ -35,6 +35,10 @@
 			//密码不正确
 			header('Location:login.php?errno=2');
 			exit;
+		}elseif ($row['state'] != 1) {
+			//非超级管理员 不允许登录后台
+			header('Location:login.php?errno=4');
+			exit;
 		}
 		//3 登录信息写入session中
 		$_SESSION['user']=$row;

@@ -34,13 +34,16 @@
 					$_GET['errno'] = empty($_GET['errno'])? '':$_GET['errno'];
 					switch($_GET['errno']){
 						case 1:
-							echo "<h2 style='color:red; margin:0px auto;'>账户或密码错误</h2>";
+							echo "<h2 style='color:red; margin:0px auto;'>用户名或密码错误</h2>";
 						break;
 						case 2:
-							echo "<h2 style='color:red; margin:0px auto;'>账户或密码错误</h2>";
+							echo "<h2 style='color:red; margin:0px auto;'>用户名或密码错误</h2>";
 						break;
 						case 3:
 							echo "<h2 style='color:red; margin:0px auto;'>验证码错误</h2>";
+						break;
+						case 4:
+							echo "<h2 style='color:red; margin:0px auto;'>非超级管理员无法登录后台</h2>";
 						break;
 					}
 				?>

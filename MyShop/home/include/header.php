@@ -1,7 +1,7 @@
 <?php 
-//设置报错情况	去除notice错误
+	//设置报错情况	去除notice错误
 	error_reporting(E_ALL ^ E_NOTICE);
-//	开启session
+	//开启session
 	session_start(); 
 	//登录验证
 	if(empty($_SESSION['user'])){
@@ -26,7 +26,7 @@
 			echo $_SESSION['user']['name']; 
 		?></a>&nbsp;&nbsp;角色：
     	<?php 
-		    $state = array("1"=>"钻石会员","2"=>"黄金会员","3"=>"普通用户");
+		    $state = array("1"=>"超级管理员","2"=>"TCTY会员","3"=>"普通用户");
 		    echo $state[$_SESSION['user']['state']]; 
     	?>
     	</span>
@@ -39,6 +39,10 @@
 			echo $_SESSION['user']['id']; 
 		?>">
 			修改账号信息
+		</a>
+		<br />
+		<a class="i" href="../admin/login.php">
+			商城后台登录
 		</a>
 	</div>
 	<div class="logo">

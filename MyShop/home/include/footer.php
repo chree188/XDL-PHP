@@ -34,9 +34,15 @@
 </div>
 
 <?php
-	// 关闭数据库 释放结果集
+	//设置报错情况	去除notice错误
+	error_reporting(E_ALL ^ E_NOTICE);
+	//is_resource() 检测变量是否为资源类型
+	if(is_resource($link)) {	//判断是否为空资源，为空 即关闭数据库连接和释放资源
+		mysqli_close($link);	
+	}
+	if(is_resource($result)) {
+		mysqli_free_result($result);	
+	}
 	
-	mysqli_close($link);
-	// mysqli_free_result($result);
 	
 ?>

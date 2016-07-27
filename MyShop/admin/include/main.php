@@ -118,7 +118,7 @@ div.main-order {
 		?>
 		</strong><u>[
     	<?php 
-		    $state = array("0"=>"超级管理员","1"=>"一般管理员","2"=>"信息录入员");
+		    $state = array("1"=>"超级管理员","2"=>"TCTY会员","3"=>"普通用户");
 		    echo $state[$_SESSION['user']['state']]; 
     	?>
     	]</u></span>
