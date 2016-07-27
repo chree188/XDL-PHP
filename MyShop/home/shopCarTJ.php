@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>天慈天养_购物车_提交订单</title>
+		<title>购物车_提交订单</title>
 		<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 	</head>
 	<body>
@@ -140,11 +140,11 @@
 					<div class="but">
 						<div class="r">
 							金额总计：<span class="numcon">￥<span class="num">135</span></span>
-							<a href="shopCarCG.php">
+							<a href="./shopCarCG.php">
 								<img src="./include/img/button11.jpg" />
 							</a>
 						</div>
-						<a href="#_">
+						<a href="./shopCar.php">	<!--返回购物车-->
 							<img src="./include/img/button10.jpg" />
 						</a>
 					</div>

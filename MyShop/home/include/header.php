@@ -3,7 +3,7 @@
 	error_reporting(E_ALL ^ E_NOTICE);
 	//开启session
 	session_start(); 
-	//登录验证
+	//首先执行登录验证
 	if(empty($_SESSION['user'])){
 		header('Location:login.php');
 		exit;

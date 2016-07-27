@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>天慈天养_购物车_成功</title>
+		<title>购物车_订单提交成功</title>
 		<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 	</head>
 	<body>

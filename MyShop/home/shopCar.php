@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>天慈天养_购物车</title>
+		<title>购物车</title>
 		<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 	</head>
 	<body>
@@ -49,14 +49,12 @@
 						echo "<a href='./shopCar/shopaction.php?a=del&id={$shop['id']}' class='thd orange'>删除</a>";
 						echo "</td>";
 						echo "</tr>";
-						$total +=$shop['m']*$shop['price']; //累加每次的小计
+						$total += $shop['m'] * $shop['price']; //累加每次的小计
 					}
 				}
 						echo "</table>";
 						echo "<div class='handdle'>";
-						echo "<div class='allprice'>
-								金额总计：<span class='numcon'>￥<span class='num'>{$total}</span></span>
-							</div>";
+						echo "<div class='allprice'>金额总计：<span class='numcon'>￥<span class='num'>{$total}</span></span></div>";
 						echo "<div class='del'><a href='./shopCar/shopaction.php?a=clear'>清空购物车</a></div>";
 						echo "</div>";
 						//将统计出来的总金额存放到session中

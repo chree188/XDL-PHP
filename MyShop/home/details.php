@@ -153,7 +153,7 @@ aa;
 											<?php	
 					                    		$sql = "select * from goods ";
 												$result = mysqli_query($link,$sql);
-												while($row = mysqli_fetch_assoc($result)){
+												while($row = mysqli_fetch_assoc($result)){		//相关优选品牌遍历显示
 $str = <<<aa
 											<li>
 												<p class="media">
