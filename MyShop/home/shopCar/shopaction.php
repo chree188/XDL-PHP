@@ -33,19 +33,19 @@
 							//购物车已存在，修改商品数量即可
 							$_SESSION['shoplist'][$id]['m']+=1;
 						}
-						echo "<script> alert('添加购物车成功');parent.location.href='../details.php?id=$id'; </script>"; 
+						echo "<script>alert('添加购物车成功');window.location='../details.php?id=$id'; </script>"; 
 						break;
 					
 					/****************删除购物车中某件商品***************/
 					case "del":  //从购物车中移除一个商品
 						unset($_SESSION['shoplist'][$_GET['id']]);
-						echo "<script>alert('删除成功！');window.location='showshop.php';</script>";
+						echo "<script>alert('删除成功！');window.location='../shopCar.php';</script>";
 						break;
 					
 					/****************清空购物车中***************/
 					case "clear": //清空购物车操作
 						unset($_SESSION['shoplist']);
-						echo "<script>alert('购物车已清空！');window.location='showshop.php';</script>";
+						echo "<script>alert('购物车已清空！');window.location='../shopCar.php';</script>";
 						break;
 					
 					/****************修改购物车中某件商品数量***************/

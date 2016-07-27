@@ -57,7 +57,7 @@
 						echo "<div class='allprice'>
 								金额总计：<span class='numcon'>￥<span class='num'>{$total}</span></span>
 							</div>";
-						echo "<div class='del'><a href='#_'>清空购物车</a></div>";
+						echo "<div class='del'><a href='./shopCar/shopaction.php?a=clear'>清空购物车</a></div>";
 						echo "</div>";
 						//将统计出来的总金额存放到session中
 						$_SESSION['total']=$total;
@@ -70,7 +70,7 @@
 								<img src="./include/img/button11.jpg" />
 							</a>
 						</div>
-						<a href="./lists.php">
+						<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">	<!--返回继续购物，从哪里来回哪里去-->
 							<img src="./include/img/button10.jpg" />
 						</a>
 					</div>
