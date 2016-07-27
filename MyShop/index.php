@@ -1,3 +1,7 @@
+<head>
+	<title>天慈天养商城</title>
+	<link link rel="shortcut icon" type="imagex-icon" href="favicon.ico" />
+</head>
 <center>
 	<style type="text/css">
 		a:hover{

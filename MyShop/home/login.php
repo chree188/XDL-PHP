@@ -3,6 +3,7 @@
 <head runat="server">
 	<meta charset=utf-8 />
     <title>用户登录界面</title>
+    <link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 	<link href="./include/css/common.css" rel="stylesheet" />
 	<link href="./include/css/style.css" rel="stylesheet" />
 </head>

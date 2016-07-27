@@ -2,6 +2,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>优选品牌</title>
+		<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 	</head>
 	<body>
 			<?php
@@ -27,8 +28,8 @@
 	    <div class="yc" style=" background:url(./include/img/h_18.jpg) no-repeat center top; height:90px;"></div>
 	    <div class="yc" style=" background:url(./include/img/h_19.jpg) no-repeat center top; height:39px;"><a href="./lists.php"></a>&nbsp;&nbsp;<a href="#top"></a></div>
 	    <div class="yc" style=" background:url(./include/img/h_20.jpg) no-repeat center top; height:77px;"> </div>
-		<?php
-			include './include/footer.php';
-		?>
+			<?php
+				include './include/footer.php';
+			?>
 	</body>
 </html>

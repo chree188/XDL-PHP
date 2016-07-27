@@ -2,6 +2,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>商品详情</title>
+		<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 		<script src="./include/js/ScrollPic.js"></script>
 	</head>
 	<body>

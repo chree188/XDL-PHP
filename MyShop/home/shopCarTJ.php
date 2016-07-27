@@ -2,6 +2,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>天慈天养_购物车_提交订单</title>
+		<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 	</head>
 	<body>
 		<div class="content icontent">

@@ -1,3 +1,4 @@
+<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 <link href="../public/css/common.css" rel="stylesheet" />
 <link href="../public/css/style.css" rel="stylesheet" />
 <style>

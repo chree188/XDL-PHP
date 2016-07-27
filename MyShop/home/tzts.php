@@ -2,6 +2,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>台州名品</title>
+		<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 	</head>
 	<body>
 			<?php

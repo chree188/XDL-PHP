@@ -21,6 +21,8 @@ login.php  前台登录页
 
 logout.php	用户注销
 
+lxwm.php  联系我们
+
 register.php  用户注册页
 
 shopCar.php  购物车页

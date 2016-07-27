@@ -2,6 +2,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>精选商品</title>
+		<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 		<script type="text/javascript" src="./include/js/jquery-1.6.4.min.js"></script>
 	</head>
 	<body>

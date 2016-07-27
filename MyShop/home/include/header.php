@@ -60,7 +60,7 @@
 			<a class="n01" href="./about.php"></a>
 		</li>
 		<li>
-			<a class="n02" href="#_"></a>
+			<a class="n02" href="#_" onClick="return confirm('企业定制暂未开放，敬请期待 ！！！');"></a>
 		</li>
 		<li>
 			<a class="n03" href="./lists.php"></a>
@@ -75,7 +75,7 @@
 			<a class="n06" href="./xwzx.php"></a>
 		</li>
 		<li>
-			<a class="n07" href="#_"></a>
+			<a class="n07" href="./lxwm.php"></a>
 		</li>
 	</ul>
 </div>
