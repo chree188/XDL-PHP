@@ -71,75 +71,54 @@
 								</tr>
 							</table>
 						</div>
-						<div class="payt">
-							<span class="title">支付及配送方式</span>&nbsp;&nbsp;&nbsp;&nbsp;送货上门|货到付款
-						</div>
 						<div class="detail">
 							<div class="title">
 								商品清单
 							</div>
 							<div class="c">
+								
 								<table width="100%">
-									<tr>
-										<td class="t">商品</td>
-										<td class="t">数量</td>
-										<td class="t">小计</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="m">
-												<a href="#_">
-													<img src="./include/img/p.jpg" width="85" height="55" />
-												</a>
-											</div>
-											<div class="i">
-												<a href="#_">
-													野生菌菇
-												</a>
-											</div></td>
-										<td>×2</td>
-										<td>￥135</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="m">
-												<a href="#_">
-													<img src="./include/img/p.jpg" width="85" height="55" />
-												</a>
-											</div>
-											<div class="i">
-												<a href="#_">
-													野生菌菇
-												</a>
-											</div></td>
-										<td>×2</td>
-										<td>￥135</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="m">
-												<a href="#_">
-													<img src="./include/img/p.jpg" width="85" height="55" />
-												</a>
-											</div>
-											<div class="i">
-												<a href="#_">
-													野生菌菇
-												</a>
-											</div></td>
-										<td>×2</td>
-										<td>￥135</td>
-									</tr>
-									<tr>
-										<td class="llast" colspan="3">共 <span class="orange">3</span> 件商品，总商品金额：  ￥688.00</td>
-									</tr>
-								</table>
+							<tr>
+								<td width="200" class="tt">商品</td>
+								<td width="130" class="tt">价格</td>
+								<td width="95" class="tt">数量</td>
+								<td width="130" class="tt">小计</td>
+							</tr>
+			<!--展示购物车-->
+			<?php
+				//判断购物车中是否有商品，并遍历输出
+				$total=0; //定义一个存放总金额的变量
+				if(!empty($_SESSION['shoplist'])){
+					foreach($_SESSION['shoplist'] as $shop){
+						echo "<tr>";
+						echo "<td>";
+						echo "<div class='m'>";
+						echo "<img src='../admin/goods/uploads/s_{$shop['picname']}' width='85' height='55' />";
+						echo "</div>";
+						echo "<div class='i'>{$shop['goods']}</div>";
+						echo "</td>";
+						echo "<td class='num'>￥{$shop['price']}</td>";
+						echo "<td class='num'>{$shop['m']}</td>";
+						echo "<td>";
+						echo "<span class='num'>￥<span class='num'>".($shop['m']*$shop['price'])."</span></span>";
+						echo "</td>";
+						echo "</tr>";
+						$total += $shop['m'] * $shop['price']; //累加每次的小计
+						$num += $shop['m'];
+					}
+				}
+						echo "</table>";
+						echo "<div class='handdle'>";
+						echo "<div class='allprice'>金额总计：<span class='num'>￥<span class='num'>{$total}</span></span>&nbsp;&nbsp;数量总计：<span class='num'>{$num}</span></div>";
+						echo "</div>";
+						//将统计出来的总金额存放到session中
+						$_SESSION['total']=$total;
+			?>		
 							</div>
 						</div>
 					</div>
 					<div class="but">
 						<div class="r">
-							金额总计：<span class="numcon">￥<span class="num">135</span></span>
 							<a href="./shopCarCG.php">
 								<img src="./include/img/button11.jpg" />
 							</a>
