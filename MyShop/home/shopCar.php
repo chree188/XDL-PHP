@@ -65,7 +65,7 @@
 					<div class="but">
 						<div class="r">
 							<a href="shopCarTJ.php">
-								<img src="./include/img/button11.jpg" />
+								<img src="./include/img/button11.jpg" />	<!--提交订单-->
 							</a>
 						</div>
 						<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">	<!--返回继续购物，从哪里来回哪里去-->

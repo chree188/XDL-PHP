@@ -42,7 +42,7 @@ header("Content-Type:text/html;charset=utf-8");
 				unset($_SESSION['shoplist']);
 				unset($_SESSION['total']);
 				header("Location:../shopCarCG.php");
-//				echo "订单处理成功！订单号：".$orderid;
+				//echo "订单处理成功！订单号：".$orderid;
 			}else{
 				die("订单处理失败！");
 			}
