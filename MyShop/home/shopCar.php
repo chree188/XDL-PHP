@@ -41,8 +41,7 @@
 						echo "</td>";
 						echo "<td>￥{$shop['price']}</td>";
 						echo "<td>{$shop['store']}</td>";
-						echo "<td><button onclick=\"window.location='./shopCar/shopaction.php?a=edit&id={$shop['id']}&m=-1'\">-</button>
-						 {$shop['m']} <button onclick=\"window.location='./shopCar/shopaction.php?a=edit&id={$shop['id']}&m=1'\">+</button></td>";
+						echo "<td><button onclick=\"window.location='./shopCar/shopaction.php?a=edit&id={$shop['id']}&m=-1'\"><span class='jian'></span></button><input type='text' value='{$shop['m']}' class='text07' /><button onclick=\"window.location='./shopCar/shopaction.php?a=edit&id={$shop['id']}&m=1'\"><span class='jia'></span></button></td>";
 						echo "<td>";
 						echo "<span class='numcon'>￥<span class='num'>".($shop['m']*$shop['price'])."</span></span>";
 						echo "</td>";
