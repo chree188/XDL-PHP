@@ -183,7 +183,7 @@ span.num {
       	<th align="center" valign="middle" class="borderright">序号</th>
         <th align="center" valign="middle" class="borderright">ID</th>
         <th align="center" valign="middle" class="borderright">订单号</th>
-        <th align="center" valign="middle" class="borderright">会员ID号</th>
+        <th align="center" valign="middle" class="borderright">会员账号</th>
         <th align="center" valign="middle" class="borderright">收件人</th>
         <th align="center" valign="middle" class="borderright">收件人地址</th>
         <th align="center" valign="middle" class="borderright">邮编</th>
@@ -221,10 +221,11 @@ span.num {
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
 					$wherelist[] =" (odid like '%{$_GET['name']}%' 
 					or uid like '%{$_GET['name']}%' 
-					or address like '%{$_GET['name']}%'
+					or users.username like '%{$_GET['name']}%' 
+					or orders.address like '%{$_GET['name']}%'
 					or linkman like '%{$_GET['name']}%'
-					or code like '%{$_GET['name']}%'
-					or phone like '%{$_GET['name']}%'
+					or orders.code like '%{$_GET['name']}%'
+					or orders.phone like '%{$_GET['name']}%'
 					or total like '%{$_GET['name']}%'
 					or status like '%{$unstatus[$_GET['name']]}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
@@ -245,7 +246,7 @@ span.num {
 				$maxRow = 0;	//一共有多少条
 				$pageSize = 8;	//每页显示多少条	页大小
 //				2 一共多少条
-				$sql = "select * from orders ".$where;
+				$sql = "select orders.* , users.username from orders inner join users on orders.uid = users.id ".$where;	//查询两张表
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -262,7 +263,7 @@ span.num {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select orders.* , users.username from orders inner join users on orders.uid = users.id $where order by id $limit";
+			$sql = "select orders.* , users.username from orders inner join users on orders.uid = users.id $where order by id $limit";		//查询两张表
 			$result = mysqli_query($link,$sql);
 //			echo $sql;	// 打印sql语句来排错		********************************
 			//5 解析结果集 
