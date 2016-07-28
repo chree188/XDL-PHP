@@ -180,12 +180,13 @@
         
     </div>
 </div>
-<!--回到顶部，留言，联系客服 先保留-->
-<div class="aside-panel" id="j-panel">
-<a href="javascript:;" title="" id="j-gotop" class="backtop">顶部</a>
-<a href="javascript:;" title="" id="j-message">留言</a>
-<a href="javascript:;" title=""  id="j-service">客服</a>
 </div>
+	<div class="aside-panel" id="j-panel">
+		<a href="../shopCar.php" title="" id="j-message">购物车</a>
+		<a href="javascript:;" title=""  id="j-service">评论</a>
+		<a href="../index.php" title=""  id="j-service">首页</a>
+		<a href="#top" title=""  id="j-service">回顶部</a>
+	</div>
 <script type="text/javascript" src="../include/js/common.js"></script>
 <script type="text/javascript" src="../include/js/perform.js"></script>
 </body>

@@ -8,7 +8,6 @@
 	<img src="./include/img/mark.jpg" width="22" height="21" />
 	&nbsp;<span class="tt">养生热线：</span>0570-6216550 13777399387
 </div>
-<!--回到顶部，留言，联系客服 先保留-->
 	<div class="aside-panel" id="j-panel">
 	<a href="./shopCar.php" title="" id="j-message">购物车</a>
 	<a href="javascript:;" title=""  id="j-service">评论</a>
