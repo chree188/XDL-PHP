@@ -64,9 +64,13 @@
 					</div>
 					<div class="but">
 						<div class="r">
-							<a href="shopCarTJ.php">
-								<img src="./include/img/button11.jpg" />	<!--提交订单-->
-							</a>
+							<?php 
+								if($_SESSION['total'] > 0){		// 通过总金额来判断购物车是否为空
+									echo "<a href='shopCarTJ.php'>";
+									echo "<img src='./include/img/button11.jpg' />";	//<!--提交订单-->
+									echo "</a>";
+								}
+							?>
 						</div>
 						<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">	<!--返回继续购物，从哪里来回哪里去-->
 							<img src="./include/img/button10.jpg" />
