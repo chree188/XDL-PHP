@@ -12,7 +12,7 @@
 	<div class="aside-panel" id="j-panel">
 	<a href="./shopCar.php" title="" id="j-message">购物车</a>
 	<a href="javascript:;" title=""  id="j-service">评论</a>
-	<a href="javascript:;" title=""  id="j-service">客服</a>
+	<a href="./index.php" title=""  id="j-service">首页</a>
 	<a href="#top" title=""  id="j-service">回顶部</a>
 	</div>
 <div align="center">
