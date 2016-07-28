@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50709
 File Encoding         : 65001
 
-Date: 2016-07-27 14:50:49
+Date: 2016-07-28 09:47:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,11 +28,18 @@ CREATE TABLE `detail` (
   `num` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `gtfk` (`orderid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of detail
 -- ----------------------------
+INSERT INTO `detail` VALUES ('1', '1', '11', '临安山核桃', '89.00', '2');
+INSERT INTO `detail` VALUES ('2', '1', '10', '金龙鱼', '59.90', '1');
+INSERT INTO `detail` VALUES ('3', '2', '15', '香蕉', '8.90', '5');
+INSERT INTO `detail` VALUES ('4', '2', '16', '珍品海参', '119.89', '3');
+INSERT INTO `detail` VALUES ('5', '2', '14', '大草鱼', '26.00', '1');
+INSERT INTO `detail` VALUES ('6', '2', '1', '江南菜籽油', '59.99', '1');
+INSERT INTO `detail` VALUES ('7', '3', '1', '江南菜籽油', '59.99', '1');
 
 -- ----------------------------
 -- Table structure for goods
@@ -86,11 +93,14 @@ CREATE TABLE `orders` (
   `total` double(8,2) DEFAULT NULL,
   `status` enum('1','2','3','4') DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
+INSERT INTO `orders` VALUES ('1', '201607280915001122', '1', '章佳鑫', '召唤师峡谷', '458712', '13777399112', '早点发货哦。。。。。。。。。。。。。', '1469668523', '237.90', '1');
+INSERT INTO `orders` VALUES ('2', '201607280921407050', '1', '轮回', '召唤师峡谷2', '458712', '13777399387', '早点发货，包装完好。。。', '1469668941', '490.16', '1');
+INSERT INTO `orders` VALUES ('3', '201607280933233119', '1', '老章', '召唤师峡谷', '458712', '13777399112', '快递', '1469669617', '59.99', '1');
 
 -- ----------------------------
 -- Table structure for type
@@ -143,7 +153,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users

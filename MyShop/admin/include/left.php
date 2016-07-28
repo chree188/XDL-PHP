@@ -49,8 +49,8 @@ body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y
       </div>
       <div>
         <span>订单模块</span>
-        <a href="../orders/index.php" target="mainFrame" onFocus="this.blur()">最新订单</a>
-        <a href="../orders/index2.php" target="mainFrame" onFocus="this.blur()">浏览订单</a>
+        <a href="../orders/index.php" target="mainFrame" onFocus="this.blur()">查看用户订单</a>
+        <a href="../orders/index2.php" target="mainFrame" onFocus="this.blur()">查看发货订单</a>
       </div>
     </div>
 </body>

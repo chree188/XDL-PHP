@@ -30,6 +30,7 @@
 							邮&nbsp;&nbsp;编: <input type="text" name="code" class="text05"><br><br>
 							电&nbsp;&nbsp;话: <input type="text" name="phone" class="text05"><br><br>
 							Email :&nbsp; <input type="text" name="email" class="text05"><b>*</b><br><br>
+							<input type="hidden" name="state" value="3" />	<!--隐藏域传前台注册用户默认权限为3_普通用户-->
 							验证码：&nbsp;<input type="text" name="mycode" size="5"/>
 							<img src="../public/code.php" class="text06" onclick="this.src='../public/code.php?id='+Math.random();"/><br /><br />
 							<input type="submit" value="提交注册" class="button03"> <input type="reset" class="button03">

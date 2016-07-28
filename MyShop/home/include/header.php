@@ -43,7 +43,7 @@
 			修改账号信息
 		</a>
 		<br />
-		<a class="i" href="../admin/login.php">
+		<a class="i" href="../admin/index.php">
 			商城后台登录
 		</a>
 	</div>

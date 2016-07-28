@@ -1,7 +1,7 @@
 <?php
 	session_start();	
 	//登录验证
-	if(empty($_SESSION['user'])){
+	if($_SESSION['user']['state'] != 1){	//判断session里state非超级管理员 不允许登录后台
 		header('Location:login.php');
 		exit;
 	}

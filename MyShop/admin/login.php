@@ -12,7 +12,7 @@
             <li class="top"></li>
             <li class="top2"></li>
             <li class="topA"></li>
-            <li class="topB"><span><img src="./include/images/login/logo.jpg" alt="" style="" /></span></li>
+            <li class="topB"><span><a href="../home/index.php"><img src="./include/images/login/logo.jpg" alt="" style="" /></a></span></li>
             <li class="topC"></li>
             <li class="topD">
                 <ul class="login">
