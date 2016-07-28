@@ -5,7 +5,7 @@
 	<style type="text/css">
 		body{
 			background-image: url("./public/bg.jpg");
-			background-size: 100%;
+			background-size: cover;
 		}
 		/*浮动tool*/
 		.aside-panel{
