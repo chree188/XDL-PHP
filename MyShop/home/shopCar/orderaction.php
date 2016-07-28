@@ -5,10 +5,10 @@ header("Content-Type:text/html;charset=utf-8");
 	//1.导入配置文件
 	require("../../public/sql/dbconfig.php");
 	//2.连接数据库
-	$link = @mysql_connect(HOST,USER,PASS)or die('数据库连接失败！');
+	$link = @mysqli_connect(HOST,USER,PASS)or die('数据库连接失败！');
 	//3.选择数据库，设置编码
-	mysql_select_db(DBNAME,$link);
-	mysql_set_charset("utf8");
+	mysqli_set_charset($link,"utf8");
+	mysqli_select_db($link,DBNAME);
 	
 
 	//获取参数a的值，并执行对应的操作
@@ -27,16 +27,16 @@ header("Content-Type:text/html;charset=utf-8");
 			$addtime=time();
 			//拼装订单添加sql语句
 			$sql = "insert ignore into orders values(null,'{$odid}','{$uid}','{$linkman}','{$address}','{$code}','{$phone}','{$descr}','{$addtime}','{$total}','{$status}')";
-			mysql_query($sql,$link);
+			mysqli_query($link, $sql);
 			//获取订单添加成功的自增id（订单号）
-			$orderid = mysql_insert_id();
+			$orderid = mysqli_insert_id($link);
 			if($orderid>0){
 				//添加订单详情
 				foreach($_SESSION['shoplist'] as $shop){
 					//拼装订单详情语句
 					$sql = "insert ignore into detail values(null,{$orderid},{$shop['id']},'{$shop['goods']}','{$shop['price']}','{$shop['m']}')";
 					//执行添加
-					mysql_query($sql,$link);
+					mysqli_query($link, $sql);
 				}
 				//销毁session
 				unset($_SESSION['shoplist']);
@@ -50,7 +50,6 @@ header("Content-Type:text/html;charset=utf-8");
 			
 		case "edit": //修改订单状态
 			break;
-			
 	}
 	//is_resource() 检测变量是否为资源类型
 	if(is_resource($link)) {	//判断是否为空资源，为空 即关闭数据库连接和释放资源
