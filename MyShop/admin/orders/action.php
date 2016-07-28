@@ -35,26 +35,18 @@
 		//修改
 		case "update":
 		//接收表单传递过来的用户信息
-		if(!$_POST['username']||!$_POST['pass']||!$_POST['email']){		//带*号必填项不能为空
-			header("Location:edit.php?id={$_POST['id']}&errno=2");
-			exit;
-		}
-		$username = $_POST['username'];
-		$name = $_POST['name'];
-		$pass = md5($_POST['pass']);	//使用md5 加密密码
-		$sex = $_POST['sex'];
-		$address = $_POST['address'];
-		$code = $_POST['code'];
-		$phone = $_POST['phone'];
-		$email = $_POST['email'];
-		$state = $_POST['state'];
+		$linkman = $_POST['linkman'];	//收件人
+		$address = $_POST['address'];	//收件人地址
+		$code = $_POST['code'];			//邮编
+		$phone = $_POST['phone'];		//电话
+		$status = $_POST['status'];		//订单状态
 		//4 写sql语句 执行sql
-		$sql = "update users set username='$username',name='$name',pass='$pass',sex=$sex,address='$address',
-		code='$code',phone='$phone',email='$email',state='$state' where id={$_POST['id']}";
+		$sql = "update orders set linkman='$linkman',address='$address',
+		code='$code',phone='$phone',status='$status' where id={$_POST['id']}";
 		mysqli_query($link,$sql);
 		
 		if(mysqli_affected_rows($link)>0){
-			header("Location:{$_SERVER['HTTP_REFERER']}");
+			header("Location:./index.php");
 		}else{
 			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
 		}
@@ -72,7 +64,7 @@
 		if(mysqli_affected_rows($link)>0){
 			header("Location:{$_SERVER['HTTP_REFERER']}");
 		}else{
-			header("Location:{$_SERVER['HTTP_REFERER']}?errno=3");
+			header("Location:{$_SERVER['HTTP_REFERER']}?errno=1");
 		}
 		break;
 	}

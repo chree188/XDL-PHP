@@ -190,19 +190,25 @@ td.fenye {
 </style>
 </head>
 <body>
+	<?php
+		//处理添加表单的错误信息
+		$_GET['errno'] = empty($_GET['errno'])? '' : $_GET['errno'];
+		switch($_GET['errno']) {
+			case 1 :
+				echo "<h2 style='color:red; '>订单信息未修改。。</h2>";
+				break;
+		}
+	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">用户管理</a>&nbsp;&nbsp;>&nbsp;&nbsp;修改用户</td>
-  </tr>
-  <tr>
-    <td align="left" valign="top" id="addinfo">
-    <a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增管理员</a>
-    </td>
+    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">查看用户订单</a>&nbsp;&nbsp;>&nbsp;&nbsp;修改订单</td>
   </tr>
   <tr>
     <td align="left" valign="top">
     	<?php
+    	//设置默认时区
+		date_default_timezone_set('PRC');
 		//需要获得被修改的用户信息
 		//1 导入配置文件 
 		
@@ -215,7 +221,7 @@ td.fenye {
 			mysqli_set_charset($link,"utf8");
 			mysqli_select_db($link,DBNAME);
 			//4 写sql语句 执行sql
-			$sql = "select * from users where id={$_GET['id']}";
+			$sql = "select orders.* , users.username from orders inner join users on orders.uid = users.id where orders.id={$_GET['id']}";
 			$result = mysqli_query($link,$sql);
 
 			//5 解析结果集 
@@ -228,38 +234,29 @@ td.fenye {
     <input type="hidden" name='id' value="<?php echo $row['id']?> ">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">账号：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">订单号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="username" value="<?php echo $row['username']?>" class="text-word">
-        <b>*</b>
+        <input type="text" name="odid" readonly value="<?php echo $row['odid']?>" class="text-word">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">真实姓名：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">会员账号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="name" value="<?php echo $row['name']?>" class="text-word">
+        <input type="text" name="username" readonly value="<?php echo $row['username']?>" class="text-word">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户密码：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">收件人：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="pass" value="" placeholder="请输入新密码" class="text-word">
-        <b>*</b>
+        <input type="text" name="linkman" value="<?php echo $row['linkman']?>" class="text-word">
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">性别：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <label><input type="radio" name="sex" value="1"<?php echo $row['sex']=='1' ? 'checked' :'';  ?> >男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><input type="radio" name="sex" value="2"<?php echo $row['sex']=='2' ? 'checked' :'';  ?> >女</label>
-        </td>
-        </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">地址：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">收件人地址：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="address" value="<?php echo $row['address']?>" class="text-word">
         </td>
-      </tr>
+        </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">邮编：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
@@ -273,25 +270,33 @@ td.fenye {
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">Email：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">用户备注信息：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="email" value="<?php echo $row['email']?>" class="text-word">
+        <textarea name="descr" readonly value="" cols="42px" rows="7px" class="text-word"><?php echo $row['descr']?></textarea>
+        </td>
+      </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">购买时间：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="addtime" readonly value="<?php echo date("Y-m-d H:i:s",$row['addtime'])?>" class="text-word">
+        </td>
+      </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">总金额：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="total" readonly value="<?php echo $row['total']?>" class="text-word">
         <b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户权限：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">订单状态：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <select name="state" id="level">
-	    <option value="1"<?php echo $row['state']=='1' ? 'selected' :'';  ?> >&nbsp;&nbsp;超级管理员</option>
-	    <option value="2"<?php echo $row['state']=='2' ? 'selected' :'';  ?> >&nbsp;&nbsp;TCTY会员</option>
-	    <option value="3"<?php echo $row['state']=='3' ? 'selected' :'';  ?> >&nbsp;&nbsp;普通用户</option>
+        <select name="status" id="level">
+	    <option value="1"<?php echo $row['status']=='1' ? 'selected' :'';  ?> >&nbsp;&nbsp;新订单</option>
+	    <option value="2"<?php echo $row['status']=='2' ? 'selected' :'';  ?> >&nbsp;&nbsp;已发货</option>
+	    <option value="3"<?php echo $row['status']=='3' ? 'selected' :'';  ?> >&nbsp;&nbsp;已收货</option>
+	    <option value="3"<?php echo $row['status']=='4' ? 'selected' :'';  ?> >&nbsp;&nbsp;无效订单</option>
         </select>
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b>*</b></td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b>*</b>号项为必填项，不能为空。。。</h4>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -302,18 +307,6 @@ td.fenye {
         </tr>
     </table>
     </form>
-    <?php
-		//处理添加表单的错误信息
-		$_GET['errno'] = empty($_GET['errno'])? '' : $_GET['errno'];
-		switch($_GET['errno']) {
-			case 1 :
-				echo "<h2 style='color:red; '>用户信息未被修改 >> 新密码与原密码相同</h2>";
-				break;
-			case 2 :
-				echo "<h2 style='color:red; '>带*项不能为空 >> 修改失败</h2>";
-				break;
-		}
-	?>
     </td>
     </tr>
 </table>

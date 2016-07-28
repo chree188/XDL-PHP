@@ -1,8 +1,7 @@
-<?php session_start();	?>
 <html>
 <head>
 <meta charset=utf-8 />
-<title>查看用户</title>
+<title>查看订单</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
@@ -147,7 +146,7 @@ span.num {
 	<?php
 		//输出删除失败的提示
 		switch(@$_GET['errno']){
-			case 3: echo "<h3 style='color:red'>订单已发货!</h3>";
+			case 1: echo "<h3 style='color:red'>订单已发货!</h3>";
 			break;
 		}
 		
@@ -157,7 +156,7 @@ span.num {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：用户管理</td>
+    <td width="99%" align="left" valign="top">您的位置：查看用户订单</td>
   </tr>
   <tr>
     <td align="left" valign="top">

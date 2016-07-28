@@ -194,6 +194,17 @@ textarea {
 </style>
 </head>
 <body>
+	<?php
+		//处理添加表单的错误信息
+		switch(@$_GET['errno']) {
+			case 1 :
+				echo "<h2 style='color:red; '>修改失败,该商品已存在</h2>";
+				break;
+			case 2 :
+				echo "<h2 style='color:red; '>带*项不能为空</h2>";
+				break;
+		}
+	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
@@ -336,17 +347,6 @@ textarea {
         </tr>
     </table>
     </form>
-    <?php
-		//处理添加表单的错误信息
-		switch(@$_GET['errno']) {
-			case 1 :
-				echo "<h2 style='color:red; '>修改失败,该商品已存在</h2>";
-				break;
-			case 2 :
-				echo "<h2 style='color:red; '>带*项不能为空</h2>";
-				break;
-		}
-	?>
     </td>
     </tr>
 </table>

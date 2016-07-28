@@ -190,6 +190,18 @@ td.fenye {
 </style>
 </head>
 <body>
+	<?php
+		//处理添加表单的错误信息
+		$_GET['errno'] = empty($_GET['errno'])? '' : $_GET['errno'];
+		switch($_GET['errno']) {
+			case 1 :
+				echo "<h2 style='color:red; '>用户信息未被修改 >> 新密码与原密码相同</h2>";
+				break;
+			case 2 :
+				echo "<h2 style='color:red; '>带*项不能为空 >> 修改失败</h2>";
+				break;
+		}
+	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
@@ -302,18 +314,6 @@ td.fenye {
         </tr>
     </table>
     </form>
-    <?php
-		//处理添加表单的错误信息
-		$_GET['errno'] = empty($_GET['errno'])? '' : $_GET['errno'];
-		switch($_GET['errno']) {
-			case 1 :
-				echo "<h2 style='color:red; '>用户信息未被修改 >> 新密码与原密码相同</h2>";
-				break;
-			case 2 :
-				echo "<h2 style='color:red; '>带*项不能为空 >> 修改失败</h2>";
-				break;
-		}
-	?>
     </td>
     </tr>
 </table>
