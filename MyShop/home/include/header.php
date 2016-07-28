@@ -24,6 +24,7 @@
 <!--头部-->
 <div class="top">
 	<div class="link">
+		<br />
 		<span>用户：<a href="./users/iUserCenter.php"><?php 
 			echo $_SESSION['user']['name']; 
 		?></a>&nbsp;&nbsp;角色：
@@ -36,13 +37,6 @@
     	<a class="i" href="logout.php">
 			注销
 		</a>
-		&nbsp;&nbsp;
-		<a class="a" href="edit.php?id=<?php 
-			echo $_SESSION['user']['id']; 
-		?>">
-			修改账号信息
-		</a>
-		<br />
 		<a class="i" href="../admin/index.php">
 			商城后台登录
 		</a>

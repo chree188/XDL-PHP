@@ -42,9 +42,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="">我的设置</a></li>
-                    <li><a href="">我发布的需求</a></li>
                     <li><a href="">我的订单</a></li>
-                    <li><a href="">我的凭单</a></li>
                 </ul>
             </li>
         </ul>
@@ -54,27 +52,16 @@
     <div class="container w">
         <div class="aside fl grid-17">
             <dl class="purchase">
-                <dt><i>1</i>采购管理</dt>
+                <dt><i>1</i>我的信息</dt>
                 <dd>
-                    <a href="javascript:void;" title="发布">发布</a>
-                    <a href="javascript:void;" title="我的采购" class="active">我的采购</a>
-                </dd>
-            </dl>
-            <dl class="supply">
-                <dt><i>2</i>供应管理</dt>
-                <dd>
-                    <a href="javascript:void;" title="发布">发布</a>
-                    <a href="javascript:void;" title="在售产品">在售产品</a>
-                    <a href="javascript:void;" title="待售产品">待售产品</a>
-                    <a href="javascript:void;" title="报价管理">报价管理</a>
-                    <a href="javascript:void;" title="草稿箱">草稿箱</a>
+                    <a href="javascript:void;" title="查看信息" class="active">查看信息</a>
+                    <a href="../edit.php?id=<?php echo $_SESSION['user']['id']; ?>" title="修改信息">修改信息</a>
                 </dd>
             </dl>
             <dl class="trading">
                 <dt><i>3</i>交易管理</dt>
                 <dd>
-                    <a href="javascript:void;" title="采购订单">采购订单</a>
-                    <a href="javascript:void;" title="销售订单">销售订单</a>
+                    <a href="javascript:void;" title="我的订单">我的订单</a>
                 </dd>
             </dl>
             <div class="inner">
@@ -117,7 +104,9 @@
                                 <a class="btn" title="充值"href="javascript:;" target="_blank">提 现</a>
                             </p>
                             <p class='from'>
-                                <i class='from-icon'></i><span>来自浙江杭州</span>
+                                <i class='from-icon'></i><span>来自<?php 
+													echo $_SESSION['user']['address']; 
+												?></span>
                             </p>
                             <p class='shop-addr'>
                                 <i class='addr-icon'></i><span>店铺地址：<a href='../index.php'>http://localhost/</a><span>

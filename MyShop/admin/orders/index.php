@@ -189,7 +189,7 @@ span.num {
         <th align="center" valign="middle" class="borderright">电话</th>
         <th align="center" valign="middle" class="borderright">备注</th>
         <th align="center" valign="middle" class="borderright">购买时间</th>
-        <th align="center" valign="middle" class="borderright">总金额</th>
+        <th align="center" valign="middle" class="borderright">总金额(￥)</th>
         <th align="center" valign="middle" class="borderright">订单状态</th>
         <th align="center" valign="middle">操作</th>
       </tr>

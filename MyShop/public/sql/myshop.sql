@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50709
 File Encoding         : 65001
 
-Date: 2016-07-28 09:47:44
+Date: 2016-07-28 18:34:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,7 +28,7 @@ CREATE TABLE `detail` (
   `num` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `gtfk` (`orderid`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of detail
@@ -40,6 +40,8 @@ INSERT INTO `detail` VALUES ('4', '2', '16', '珍品海参', '119.89', '3');
 INSERT INTO `detail` VALUES ('5', '2', '14', '大草鱼', '26.00', '1');
 INSERT INTO `detail` VALUES ('6', '2', '1', '江南菜籽油', '59.99', '1');
 INSERT INTO `detail` VALUES ('7', '3', '1', '江南菜籽油', '59.99', '1');
+INSERT INTO `detail` VALUES ('8', '4', '13', '鲤鱼', '26.00', '1');
+INSERT INTO `detail` VALUES ('9', '5', '1', '江南菜籽油', '59.99', '3');
 
 -- ----------------------------
 -- Table structure for goods
@@ -93,14 +95,16 @@ CREATE TABLE `orders` (
   `total` double(8,2) DEFAULT NULL,
   `status` enum('1','2','3','4') DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
 INSERT INTO `orders` VALUES ('1', '201607280915001122', '1', '章佳鑫', '召唤师峡谷', '458712', '13777399112', '早点发货哦。。。。。。。。。。。。。', '1469668523', '237.90', '1');
 INSERT INTO `orders` VALUES ('2', '201607280921407050', '1', '轮回', '召唤师峡谷2', '458712', '13777399387', '早点发货，包装完好。。。', '1469668941', '490.16', '1');
-INSERT INTO `orders` VALUES ('3', '201607280933233119', '1', '老章', '召唤师峡谷', '458712', '13777399112', '快递', '1469669617', '59.99', '1');
+INSERT INTO `orders` VALUES ('3', '201607280933233119', '1', '老章', '召唤师峡谷', '458712', '13777399112', '快递', '1469669617', '59.99', '2');
+INSERT INTO `orders` VALUES ('4', '201607281457583810', '2', '剑圣', '召唤师峡谷', '145287', '13777399388', '5555', '1469689085', '26.00', '2');
+INSERT INTO `orders` VALUES ('5', '201607281501015819', '3', '莫甘娜', '召唤师峡谷', '124566', '13777399001', '兄弟连', '1469689270', '179.97', '2');
 
 -- ----------------------------
 -- Table structure for type
@@ -153,7 +157,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
@@ -176,4 +180,5 @@ INSERT INTO `users` VALUES ('15', 'zx', '赵信', 'f52f7720f135c6a848fae08d50791
 INSERT INTO `users` VALUES ('16', 'ln', '李楠', '819bf6016a77718965d0b043cf2e3f62', '1', '浙江省开化县', '324300', '13777399582', 'ln@126.com', '1', '1469444255');
 INSERT INTO `users` VALUES ('17', 'zs', '张三', 'cdc6d1963928d5c349a4eebf11c8b4a5', '1', '上海兄弟连', '458725', '13777388366', 'zs@126.com', '3', '1469454152');
 INSERT INTO `users` VALUES ('18', 'lks', '拉克丝', '1a0f4688de8fd0fe93f7d95e41758c82', '2', '德玛西亚', '785457', '13777888999', 'lks@126.com', '2', '1469454306');
-INSERT INTO `users` VALUES ('19', 'wjj', '雷克塞', 'c9ddf11557230c99246f1c99a3597da5', '2', '召唤师峡谷', '578422', '13777444666', 'wjj@126.com', '', '1469456486');
+INSERT INTO `users` VALUES ('19', 'wjj', '雷克塞', 'c9ddf11557230c99246f1c99a3597da5', '2', '召唤师峡谷', '578422', '13777444666', 'wjj@126.com', '3', '1469456486');
+INSERT INTO `users` VALUES ('21', 'max', '麦克斯', 'd1696816bc1a7afe92f1c8787ac222c3', '1', '疯狂麦克斯', '187254', '13777389963', 'max@126.com', '3', '1469670969');

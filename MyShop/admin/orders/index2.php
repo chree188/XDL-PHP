@@ -1,8 +1,7 @@
-<?php session_start();	?>
 <html>
 <head>
 <meta charset=utf-8 />
-<title>查看用户</title>
+<title>出库单</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
@@ -147,7 +146,7 @@ span.num {
 	<?php
 		//输出删除失败的提示
 		switch(@$_GET['errno']){
-			case 3: echo "<h3 style='color:red'>删除失败!</h3>";
+			case 1: echo "<h3 style='color:red'>出库失败!请检查库存</h3>";
 			break;
 		}
 		
@@ -157,7 +156,7 @@ span.num {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：用户管理</td>
+    <td width="99%" align="left" valign="top">您的位置：查看用户订单</td>
   </tr>
   <tr>
     <td align="left" valign="top">
@@ -165,21 +164,12 @@ span.num {
   		<tr>
    		 <td width="90%" align="left" valign="middle">
 	         <form action="index.php">
-			<?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
+			 <?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
 	         <span>关键字：</span>
 	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
-			<span>性别：
-			<select name="sex">
-				<option value="">--请选择--</option>
-				<?php	$_GET['sex']=empty($_GET['sex']) ? 0 : $_GET['sex'] ?>
-				<option value="1" <?php echo $_GET['sex']=="1" ? "selected" : "";  ?>>--男--</option>
-				<option value="2" <?php echo $_GET['sex']=="2" ? "selected" : "";  ?>>--女--</option>
-			</select>
-			</span>
 	         <input name="" type="submit" value="查询" class="text-but">
 	         </form>
          </td>
-  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增用户</a></td>
   		</tr>
 	</table>
     </td>
@@ -191,30 +181,18 @@ span.num {
       <tr>
       	<th align="center" valign="middle" class="borderright">序号</th>
         <th align="center" valign="middle" class="borderright">ID</th>
-        <th align="center" valign="middle" class="borderright">帐号</th>
-        <th align="center" valign="middle" class="borderright">姓名</th>
-        <th align="center" valign="middle" class="borderright">性别</th>
-        <th align="center" valign="middle" class="borderright">地址</th>
-        <th align="center" valign="middle" class="borderright">邮编</th>
-        <th align="center" valign="middle" class="borderright">电话</th>
-        <th align="center" valign="middle" class="borderright">邮箱</th>
-        <th align="center" valign="middle" class="borderright">权限</th>
-        <th align="center" valign="middle" class="borderright">注册时间</th>
+        <th align="center" valign="middle" class="borderright">订单ID</th>
+        <th align="center" valign="middle" class="borderright">商品ID</th>
+        <th align="center" valign="middle" class="borderright">商品名称</th>
+        <th align="center" valign="middle" class="borderright">单价(￥)</th>
+        <th align="center" valign="middle" class="borderright">购买数量</th>
         <th align="center" valign="middle">操作</th>
       </tr>
       
       <?php
+      		//设置报错情况	去除notice错误
+			error_reporting(E_ALL ^ E_NOTICE);
 			//查看用户信息 select 输出到表格里面 
-			//设置默认时区
-			date_default_timezone_set('PRC');
-			// 设置性别
-			$sex = array("1"=>"男","2"=>"女");
-			//反数据库性别
-			$unsex = array("男"=>"1","女"=>"2");
-			// 设置权限
-			$state = array("1"=>"超级管理员","2"=>"TCTY会员","3"=>"普通用户");
-			//反数据库用户权限
-			$unstate = array("超级管理员"=>"1","TCTY会员"=>"2","普通用户"=>"3");
 			//六脉神剑 
 			//1 导入数据库配置文件
 			include("../../public/sql/dbconfig.php");
@@ -229,24 +207,13 @@ span.num {
 				$wherelist = array();
 				$urllist = array();	//封装url的状态维持的条件
 			//2 接收搜索条件 
-				$unsex[$_GET['name']] = empty($unsex[$_GET['name']])? "{$_GET['name']}" : $unsex[$_GET['name']];	//判断是否传除男 女性别之外的条件
-				$unstate[$_GET['name']] = empty($unstate[$_GET['name']])? "{$_GET['name']}" : $unstate[$_GET['name']];	//判断是否传除超级管理员 一般管理员之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
-					$wherelist[] =" (name like '%{$_GET['name']}%' 
-					or username like '%{$_GET['name']}%' 
-					or address like '%{$_GET['name']}%'
-					or username like '%{$_GET['name']}%'
-					or code like '%{$_GET['name']}%'
-					or phone like '%{$_GET['name']}%'
-					or email like '%{$_GET['name']}%'
-					or sex like '%{$unsex[$_GET['name']]}%'
-					or state like '%{$unstate[$_GET['name']]}%' )"; 
+					$wherelist[] =" (orderid like '%{$_GET['name']}%' 
+					or name like '%{$_GET['name']}%' 
+					or price like '%{$_GET['name']}%' 
+					or num like '%{$_GET['name']}%')"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
-				if(!empty($_GET['sex'])){
-					$wherelist[] = "sex='{$_GET['sex']}'";
-					$urllist[] = "sex={$_GET['sex']}";
-				}
 
 			//3 判断搜索条件的有效性	
 				if(count($wherelist)>0){
@@ -263,7 +230,7 @@ span.num {
 				$maxRow = 0;	//一共有多少条
 				$pageSize = 8;	//每页显示多少条	页大小
 //				2 一共多少条
-				$sql = "select * from users ".$where;
+				$sql = "select * from detail ".$where;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -280,34 +247,27 @@ span.num {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select * from users $where order by id $limit";
+			$sql = "select * from detail $where order by id $limit";
 			$result = mysqli_query($link,$sql);
 //			echo $sql;	// 打印sql语句来排错		********************************
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
 				$i++;
-				$regTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化注册时间戳
-$str = <<<swUse
+$str = <<<swOrders
 				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
 				onMouseOver="this.style.backgroundColor='#edf5ff'">
 		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['username']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['orderid']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['goodsid']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['name']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$sex[$row['sex']]}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['address']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['phone']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['email']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$state[$row['state']]}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$regTime}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['price']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['num']}</td>
         <td align="center" valign="middle" class="borderbottom">
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
-        <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="action.php?a=del&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        <a href="action2.php?a=CKupdate&id={$row['goodsid']}&num={$row['num']}" target="mainFrame" onFocus="this.blur()" class="add">出库</a></td>
       </tr>
-swUse;
+swOrders;
 	echo $str;
 			}
 			//6 关闭数据库 释放结果集 
@@ -322,16 +282,16 @@ swUse;
 					<span class="num"><?php  echo $page.'/'.$maxPage ?></span>页  &nbsp;&nbsp;
 					<?php 
 						$url = empty($url)? "" : $url;
-						echo "<a href='index.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='index2.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
 							首页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='index2.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
 							上一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='index2.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
 							下一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='index2.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
 							尾页
 						</a>";
 					?>
