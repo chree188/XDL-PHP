@@ -115,16 +115,16 @@ aa;
 						<span class="num"><?php  echo $page.'/'.$maxPage ?></span>页  &nbsp;&nbsp;
 						<?php 
 							$url = empty($url)? "" : $url;
-							echo "<a href='lists.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
+							echo "<a href='lists.php?p=1{$url}' onFocus='this.blur()'>
 								首页
 							</a>&nbsp;&nbsp;";
-							echo "<a href='lists.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+							echo "<a href='lists.php?p=".($page-1)."{$url}' onFocus='this.blur()'>
 								«上一页
 							</a>&nbsp;&nbsp;";
-							echo "<a href='lists.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+							echo "<a href='lists.php?p=".($page+1)."{$url}' onFocus='this.blur()'>
 								下一页»
 							</a>&nbsp;&nbsp;";
-							echo "<a href='lists.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
+							echo "<a href='lists.php?p={$maxPage}{$url}' onFocus='this.blur()'>
 								尾页
 							</a>";
 						?>

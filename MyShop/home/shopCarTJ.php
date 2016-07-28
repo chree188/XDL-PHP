@@ -71,6 +71,9 @@
 							</table>
 							<div class="but">
 								<div class="r">
+									<?php
+										echo "金额总计：<span class='num'>￥<span class='num'>{$_SESSION['total']}</span></span>&nbsp;&nbsp;数量总计：<span class='num'>{$_SESSION['num']}</span>&nbsp;";
+									?>
 									<input type="image" src="./include/img/button11.jpg" onclick="javascript:document.forms['Form_2'].submit();" />
 								</div>
 								<a href="./shopCar.php">	<!--返回购物车-->
@@ -117,9 +120,11 @@
 					}
 				}
 						echo "</table>";
-						echo "<div class='handdle'>";
+						/*echo "<div class='handdle'>";			//总金额和总数量已经放在提交订单按钮前显示
 						echo "<div class='allprice'>金额总计：<span class='num'>￥<span class='num'>{$total}</span></span>&nbsp;&nbsp;数量总计：<span class='num'>{$num}</span></div>";
-						echo "</div>";
+						echo "</div>";*/
+						//将统计出来的总数量存放到session中
+						$_SESSION['num'] = $num;
 						//将统计出来的总金额存放到session中
 						$_SESSION['total'] = $total;
 			?>		

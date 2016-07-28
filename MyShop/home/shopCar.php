@@ -72,7 +72,7 @@
 								}
 							?>
 						</div>
-						<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">	<!--返回继续购物，从哪里来回哪里去-->
+						<a href="./lists.php">	<!--返回继续购物，从哪里来回哪里去-->
 							<img src="./include/img/button10.jpg" />
 						</a>
 					</div>
