@@ -1,5 +1,4 @@
 <?php
-
 	//处理用户信息表的增 删 改 
 
 	//首先打开数据库 
@@ -60,7 +59,22 @@
 			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
 		}
 		break;
+		
+		
+		//发货修改
+		case "FHupdate":
+		//接收表单传递过来的订单信息
+		//4写sql语句 执行sql
+		$sql = "update orders set status={$_GET['status']} where id={$_GET['id']}";
+//		echo $sql;exit;
+		mysqli_query($link,$sql);
+		
+		if(mysqli_affected_rows($link)>0){
+			header("Location:{$_SERVER['HTTP_REFERER']}");
+		}else{
+			header("Location:{$_SERVER['HTTP_REFERER']}?errno=3");
+		}
+		break;
 	}
 	//6 关闭数据库  释放资源
 	mysqli_close($link);
-	mysqli_free_result($result);

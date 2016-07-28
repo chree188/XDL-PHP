@@ -147,7 +147,7 @@ span.num {
 	<?php
 		//输出删除失败的提示
 		switch(@$_GET['errno']){
-			case 3: echo "<h3 style='color:red'>删除失败!</h3>";
+			case 3: echo "<h3 style='color:red'>订单已发货!</h3>";
 			break;
 		}
 		
@@ -262,7 +262,7 @@ span.num {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select * from orders $where order by id $limit";
+			$sql = "select orders.* , users.username from orders inner join users on orders.uid = users.id $where order by id $limit";
 			$result = mysqli_query($link,$sql);
 //			echo $sql;	// 打印sql语句来排错		********************************
 			//5 解析结果集 
@@ -276,7 +276,7 @@ $str = <<<swOrders
 		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['odid']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['uid']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['username']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['linkman']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['address']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
@@ -288,7 +288,7 @@ $str = <<<swOrders
         <td align="center" valign="middle" class="borderbottom">
         <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
         <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="action.php?a=shipments&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">发货</a></td>
+        <a href="action.php?a=FHupdate&status=2&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">发货</a></td>
       </tr>
 swOrders;
 	echo $str;
