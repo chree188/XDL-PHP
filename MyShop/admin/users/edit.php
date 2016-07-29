@@ -200,6 +200,9 @@ td.fenye {
 			case 2 :
 				echo "<h2 style='color:red; '>带*项不能为空 >> 修改失败</h2>";
 				break;
+			case 3 :
+				echo "<h2 style='color:red; '>管理员账户不能被修改 >> 修改失败</h2>";
+				break;
 		}
 	?>
 <!--main_top-->

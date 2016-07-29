@@ -109,6 +109,10 @@ $str = <<<aa
 												<td class="t">库存</td>
 												<td>{$row['store']}</td>
 											</tr>
+											<tr>
+												<td class="t">销量</td>
+												<td>{$row['num']}</td>
+											</tr>
 										</table>
 										
 										<div class="blink01">
@@ -151,7 +155,7 @@ aa;
 											<?php	
 					                    		$sql = "select * from goods ";
 												$result = mysqli_query($link,$sql);
-												while($row = mysqli_fetch_assoc($result)){		//相关优选品牌遍历显示
+												while($row = mysqli_fetch_assoc($result) and $row['state']!=3){		//下架产品不予显示		//相关优选品牌遍历显示
 $str = <<<aa
 											<li>
 												<p class="media">

@@ -36,7 +36,7 @@
             <div class="lnav">
                 <div class="hd">产品类别</div>
                 <ul class="list">
-                	<?php	
+                	<?php	//遍历数据库里产品类别
                     		$sql = "select * from type where pid = 0";
 							$result = mysqli_query($link,$sql);
 							while($row = mysqli_fetch_assoc($result)){
@@ -74,10 +74,10 @@ aa;
             	<div class="picgd"> <a href="#" onclick="return false" title="上翻" id="LeftArr" class="up png">上翻</a> <a href="#" onclick="return false" title="下翻" id="RightArr" class="down png">下翻</a>
                   <div id="pic" class="pic">
                     <ul id="scrollPic">
-                    	<?php	
+                    	<?php	//遍历数据库商品
                     		$sql = "select * from goods ";
 							$result = mysqli_query($link,$sql);
-							while($row = mysqli_fetch_assoc($result)){
+							while($row = mysqli_fetch_assoc($result) and $row['state']!=3){		//下架产品不予显示
 $str = <<<aa
 					  <li>
                         <p class="media"><a href="./details.php?id={$row['id']}"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
@@ -153,10 +153,10 @@ aa;
             	<div class="picgd"> <a href="#" onclick="return false" title="上翻" id="LeftArr01" class="up png">上翻</a> <a href="#" onclick="return false" title="下翻" id="RightArr01" class="down png">下翻</a>
                   <div id="pic01" class="pic">
                     <ul id="scrollPic01">
-                    	<?php	
+                    	<?php	//遍历数据库商品
                     		$sql = "select * from goods ";
 							$result = mysqli_query($link,$sql);
-							while($row = mysqli_fetch_assoc($result)){
+							while($row = mysqli_fetch_assoc($result) and $row['state']!=3){		//下架产品不予显示
 $str = <<<aa
 					  <li>
                         <p class="media"><a href="./details.php?id={$row['id']}"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>

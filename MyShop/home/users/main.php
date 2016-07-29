@@ -154,6 +154,7 @@ div.main-order {
     <span class="time">
     	<strong>
     	<?php
+    		ob_start();
     		//设置默认时区
 			date_default_timezone_set('PRC');
 			//根据当前登录时间小时数判断早上/中午/下午/晚上
@@ -178,19 +179,21 @@ div.main-order {
 		    echo $state[$_SESSION['user']['state']]; 
     	?>
     	]</u>
-    	<?php
+    	<!--由于设置setcookie出问题，所以这里先放置-->
+    	<!--<?php
 			if (!empty($_COOKIE['lastvisit'])) {	//先判断，是否存在cookie
 				echo "您上次访问时间是：" . $_COOKIE['lastvisit'];
 				setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
 				} else {
 				echo "今天您是第一次登录，欢迎！";
-					setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
+				setCookie("lastvisit", date("Y-m-d H:i:s"), time() + 3600 * 24 * 360);
 				}
 				echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 				//获取当前登录者的IP地址
 				$ip = $_SERVER["REMOTE_ADDR"];
-					echo "当前登录IP地址为：".$ip;
-		?>&nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时
+				echo "当前登录IP地址为：".$ip;
+		?>-->
+		&nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时
     	<a href="../edit.php?id=<?php echo $_SESSION['user']['id']; ?>" target="_black" onFocus="this.blur()">更改密码</a>
     </span>
     </td>

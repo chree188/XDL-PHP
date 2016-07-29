@@ -190,6 +190,7 @@ td.fenye {
         <th align="center" valign="middle" class="borderright">单价</th>
         <th align="center" valign="middle" class="borderright">状态</th>
         <th align="center" valign="middle" class="borderright">库存量</th>
+        <th align="center" valign="middle" class="borderright">销量</th>
         <th align="center" valign="middle" class="borderright">添加时间</th>
         <th align="center" valign="middle">操作</th>
       </tr>
@@ -222,7 +223,8 @@ td.fenye {
 					or company like '%{$_GET['name']}%' 
 					or descr like '%{$_GET['name']}%'
 					or state like '%{$unstate[$_GET['name']]}%'
-					or store like '%{$_GET['name']}%' )";
+					or store like '%{$_GET['name']}%'
+					or num like '%{$_GET['name']}%' )";
 					$urllist[] = "name={$_GET['name']}";
 				}
 			//3 判断搜索条件的有效性	
@@ -264,7 +266,7 @@ td.fenye {
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
 				$i++;
-				$regTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化注册时间戳
+				$addTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化注册时间戳
 $str = <<<swUse
 				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
 				onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -278,7 +280,8 @@ $str = <<<swUse
         <td align="center" valign="middle" class="borderright borderbottom">{$row['price']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$state[$row['state']]}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['store']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$regTime}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['num']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$addTime}</td>
         <td align="center" valign="middle" class="borderbottom">
         <a href="edit.php?id={$row['id']}&oldpicname={$row['picname']}&pid={$row['typeid']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
         <span class="gray">&nbsp;|&nbsp;</span>

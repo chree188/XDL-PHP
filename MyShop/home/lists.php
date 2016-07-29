@@ -94,7 +94,7 @@ aa;
 							$result = mysqli_query($link,$sql);
 							
 							//5 解析结果集 
-							while($row = mysqli_fetch_assoc($result)){
+							while($row = mysqli_fetch_assoc($result) and $row['state']!=3){		//下架产品不予显示
 $str = <<<aa
 		
 						<li>
