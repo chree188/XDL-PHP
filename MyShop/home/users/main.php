@@ -199,9 +199,47 @@ div.main-order {
     </td>
   </tr>
   <tr>
-    <td align="left" valign="top" width="50%">
-    <div class="main-tit">网站信息</div>
-    <div class="main-con">
+    <td align="left" valign="top" width="15%">
+    	<div class="main-tit">用户信息</div>
+   		<div class="main-con">
+						用户ID：<strong><?php echo $_SESSION['user']['id']; ?></strong>
+						<br/>
+						用户账号：<strong><?php echo $_SESSION['user']['username']; ?></strong>
+						<br/>
+						用户姓名：<strong><?php echo $_SESSION['user']['name']; ?></strong>
+						<br/>
+						性别：<strong><?php 
+						// 设置性别
+						$sex = array("1"=>"男","2"=>"女");
+						echo $sex[$_SESSION['user']['sex']]; ?></strong>
+						<br/>
+						用户住址：<strong><?php echo $_SESSION['user']['address']; ?></strong>
+						<br/>
+					</div>
+    </td>
+    
+    <td align="left" valign="top" width="15%">
+    	<div class="main-tit">用户信息</div>
+    	<div class="main-con">
+						邮编：<strong><?php echo $_SESSION['user']['code']; ?></strong>
+						<br/>
+						电话：<strong><?php echo $_SESSION['user']['phone']; ?></strong>
+						<br/>
+						Email：<strong><?php echo $_SESSION['user']['email']; ?></strong>
+						<br/>
+						注册时间：<strong><?php 
+						//设置默认时区
+						date_default_timezone_set('PRC');
+						$addTime = date("Y-m-d H:i:s",$_SESSION['user']['addtime']);	//格式化注册时间戳
+						echo $addTime; 
+						?></strong>
+						<br/>
+					</div>
+    </td>
+    
+    <td align="left" valign="top" width="70%">
+    	<div class="main-tit">网站信息</div>
+    	<div class="main-con">
 						会员注册：开启
 						<br/>
 						访问本页面次数：<span class="num">
@@ -215,22 +253,13 @@ div.main-order {
 							?>
 						</span>
 						<br/>
-						登陆者IP：<?php echo $_SERVER['REMOTE_ADDR']; ?>
-					</div>
-    </td>
-    <td align="left" valign="top" width="49%">
-    <div class="main-tit">服务器信息</div>
-   	<div class="main-con">
-						服务器软件：Apache/2.2.6 (Win32) PHP/5.2.5
-						<br/>
-						PHP版本：5.2.5
-						<br/>
-						MYSQL版本：5.0.45-community-nt
-						<br/>
-						魔术引用：开启 (建议开启)
-						<br/>
-						使用域名：192.168.1.124
-						<br/>
+						登陆者IP：<?php 
+						if($_SERVER['REMOTE_ADDR']=='::1'){
+							echo '127.0.0.1';
+						}else{
+							echo $_SERVER['REMOTE_ADDR'];
+						}
+						?>
 					</div>
     </td>
   </tr>
