@@ -288,27 +288,29 @@ span.num {
 			while($row = mysqli_fetch_assoc($result)){
 				$i++;
 				$regTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化注册时间戳
-$str = <<<swUse
-				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
-				onMouseOver="this.style.backgroundColor='#edf5ff'">
-		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['username']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['name']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$sex[$row['sex']]}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['address']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['phone']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['email']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$state[$row['state']]}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$regTime}</td>
-        <td align="center" valign="middle" class="borderbottom">
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
-        <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="action.php?a=del&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
-      </tr>
-swUse;
-	echo $str;
+				echo "<tr onMouseOut=\"this.style.backgroundColor='#ffffff'\" 
+				onMouseOver=\"this.style.backgroundColor='#edf5ff'\">";
+				echo "<td align='center' valign='middle' class='borderright borderbottom num'>{$i}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['id']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['username']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['name']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$sex[$row['sex']]}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['address']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['code']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['phone']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['email']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$state[$row['state']]}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$regTime}</td>";
+		        echo "<td align='center' valign='middle' class='borderbottom'>";
+		        if($row['state']!=1){
+			        echo "<a href='edit.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>编辑</a>";
+			        echo "<span class='gray'>&nbsp;|&nbsp;</span>";
+			        echo "<a href=action.php?a=del&id={$row['id']} target='mainFrame' onFocus='this.blur()' class='add'>删除</a></td>";
+		        }else{
+		        	echo "管理员账户不可被修改及删除";
+		        }
+				
+		      	echo "</tr>";
 			}
 			//6 关闭数据库 释放结果集 
 			mysqli_close($link);

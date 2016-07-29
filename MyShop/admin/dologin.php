@@ -35,8 +35,8 @@
 			//密码不正确
 			header('Location:login.php?errno=2');
 			exit;
-		}elseif ($row['state'] != 1) {
-			//判断登录时非超级管理员 不允许登录后台
+		}elseif ($row['state'] !=1){	//普通用户不允许登录后台
+			//判断登录时非超级管理员 及TCTY会员不允许登录后台
 			header('Location:login.php?errno=4');
 			exit;
 		}

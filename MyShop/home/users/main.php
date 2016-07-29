@@ -29,7 +29,7 @@ body {
 
 #main div.top {
 	width: 100%;
-	background: url(images/main/main_r2_c2.jpg) no-repeat 0 10px;
+	background: url(../../admin/include/images/main/main_r2_c2.jpg) no-repeat 0 10px;
 	padding: 0 0 0 15px;
 	line-height: 35px;
 	float: left
@@ -37,7 +37,7 @@ body {
 
 #main div.sec {
 	width: 100%;
-	background: url(images/main/main_r2_c2.jpg) no-repeat 0 15px;
+	background: url(../../admin/include/images/main/main_r2_c2.jpg) no-repeat 0 15px;
 	padding: 0 0 0 15px;
 	line-height: 35px;
 	float: left
@@ -65,7 +65,7 @@ div.main-tit {
 	font-size: 14px;
 	font-weight: bold;
 	color: #4e4e4e;
-	background: url(images/main/main_r4_c2.jpg) no-repeat 0 33px;
+	background: url(../../admin/include/images/main/main_r4_c2.jpg) no-repeat 0 33px;
 	width: 100%;
 	padding: 30px 0 0 20px;
 	float: left
@@ -82,7 +82,7 @@ div.main-corpy {
 	font-size: 14px;
 	font-weight: bold;
 	color: #4e4e4e;
-	background: url(images/main/main_r6_c2.jpg) no-repeat 0 33px;
+	background: url(../../admin/include/images/main/main_r6_c2.jpg) no-repeat 0 33px;
 	width: 100%;
 	padding: 30px 0 0 20px;
 	float: left
@@ -141,7 +141,7 @@ div.main-order {
                         <p>网站积分：100000</p>
                         <div class='safe-level'>
                             <p>我的账户安全级别:</p>
-                            <i class='safe-low'></i><span class='level-text'>低</span>
+                            <i class='safe-high'></i><span class='level-text'>高</span>
                         </div>
                     </div>
                 </div>
@@ -228,15 +228,12 @@ div.main-order {
 						Email：<strong><?php echo $_SESSION['user']['email']; ?></strong>
 						<br/>
 						注册时间：<strong><?php 
-						//设置默认时区
-						date_default_timezone_set('PRC');
 						$addTime = date("Y-m-d H:i:s",$_SESSION['user']['addtime']);	//格式化注册时间戳
 						echo $addTime; 
 						?></strong>
 						<br/>
 					</div>
     </td>
-    
     <td align="left" valign="top" width="70%">
     	<div class="main-tit">网站信息</div>
     	<div class="main-con">
