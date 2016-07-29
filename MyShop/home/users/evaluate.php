@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>查看订单</title>
+<title>查看评价</title>
 <link href="../../admin/include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../../admin/include/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
@@ -156,7 +156,7 @@ span.num {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：查看订单</td>
+    <td width="99%" align="left" valign="top">您的位置：查看评价</td>
   </tr>
   <tr>
     <td align="left" valign="top">
@@ -180,16 +180,13 @@ span.num {
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr>
       	<th align="center" valign="middle" class="borderright">序号</th>
-        <th align="center" valign="middle" class="borderright">ID</th>
         <th align="center" valign="middle" class="borderright">订单号</th>
         <th align="center" valign="middle" class="borderright">收件人</th>
-        <th align="center" valign="middle" class="borderright">收件人地址</th>
-        <th align="center" valign="middle" class="borderright">邮编</th>
         <th align="center" valign="middle" class="borderright">电话</th>
-        <th align="center" valign="middle" class="borderright">备注</th>
-        <th align="center" valign="middle" class="borderright">购买时间</th>
         <th align="center" valign="middle" class="borderright">总金额(￥)</th>
-        <th align="center" valign="middle" class="borderright">订单状态</th>
+        <th align="center" valign="middle" class="borderright">购买时间</th>
+        <th align="center" valign="middle" class="borderright">备注</th>
+        <th align="center" valign="middle" class="borderright">评价</th>
         <th align="center" valign="middle" class="borderright">操作</th>
       </tr>
       
@@ -197,10 +194,6 @@ span.num {
 			//查看用户信息 select 输出到表格里面 
 			//设置默认时区
 			date_default_timezone_set('PRC');
-			// 设置状态			1:新订单；2：已发货；3：已收货，4：无效订单
-			$status = array("1"=>"新订单","2"=>"已发货","3"=>"已收货","4"=>"无效订单");
-			//反数据库状态信息
-			$unstatus = array("新订单"=>"1","已发货"=>"2","已收货"=>"3","无效订单"=>"3");
 			//六脉神剑 
 			//1 导入数据库配置文件
 			include("../../public/sql/dbconfig.php");
@@ -216,16 +209,11 @@ span.num {
 				$urllist = array();	//封装url的状态维持的条件
 				$where = " where uid = {$_GET['id']}";	//当前登录用户订单
 			//2 接收搜索条件 
-				$unstatus[$_GET['name']] = empty($unstatus[$_GET['name']])? "{$_GET['name']}" : $unstatus[$_GET['name']];	//判断是否传除 1:新订单；2：已发货；3：已收货，4：无效订单 之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
 					$wherelist[] =" (odid like '%{$_GET['name']}%' 
-					or uid like '%{$_GET['name']}%' 
-					or address like '%{$_GET['name']}%'
 					or linkman like '%{$_GET['name']}%'
-					or code like '%{$_GET['name']}%'
 					or phone like '%{$_GET['name']}%'
-					or total like '%{$_GET['name']}%'
-					or status like '%{$unstatus[$_GET['name']]}%' )"; 
+					or total like '%{$_GET['name']}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
 
@@ -266,27 +254,22 @@ span.num {
 //			echo $sql;	// 打印sql语句来排错		********************************
 			//5 解析结果集 
 			$i = 0;
-			while($row = mysqli_fetch_assoc($result) and $row['status']!=4){	//无效订单不予显示
+			while($row = mysqli_fetch_assoc($result)){	//无效订单不予显示
 				$i++;
 				$shopTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化购买时间戳
 $str = <<<swOrders
 				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
 				onMouseOver="this.style.backgroundColor='#edf5ff'">
 		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['odid']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['linkman']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['address']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['phone']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['descr']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$shopTime}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['total']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$status[$row['status']]}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$shopTime}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['descr']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['evaluate']}</td>
         <td align="center" valign="middle" class="borderbottom">
-        <a href="action.php?a=QRSHupdate&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">确认收货</a>
-        <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">评价</a></td>
+        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">修改评价</a></td>
       </tr>
 swOrders;
 	echo $str;

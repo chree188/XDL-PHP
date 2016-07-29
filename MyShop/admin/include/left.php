@@ -51,6 +51,7 @@ body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y
         <span>订单模块</span>
         <a href="../orders/index.php" target="mainFrame" onFocus="this.blur()">查看用户订单</a>
         <a href="../orders/index2.php" target="mainFrame" onFocus="this.blur()">查看发货订单</a>
+        <a href="../orders/evaluate.php" target="mainFrame" onFocus="this.blur()">查看用户评价</a>
       </div>
     </div>
 </body>

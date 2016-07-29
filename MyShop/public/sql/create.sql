@@ -67,6 +67,7 @@ create table orders(
 	code char(6),
 	phone varchar(16),
 	descr text,
+	evaluate text,
 	addtime int,
 	total double(8,2),
 	status enum('1','2','3','4')

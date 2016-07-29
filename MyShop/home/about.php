@@ -29,7 +29,7 @@
     	<div class="ibanner"><img src="./include/img/ibanner.jpg" width="980" height="334" /></div>
     	<ul class="aboutusbd">
         	<li>
-            	<div class="media"><a href="#_"><img src="./include/img/aboutus.jpg" /></a></div>
+            	<div class="media"><a href="lxwm.php"><img src="./include/img/aboutus.jpg" /></a></div>
             	<div class="name"><img src="./include/img/aword.jpg" /></div>
                 <div class="con">
                 	作为绿色食品的崇尚者，我们把绿色环保深入到经营的各个角落——绿色包装，绿色推广，绿色经营...

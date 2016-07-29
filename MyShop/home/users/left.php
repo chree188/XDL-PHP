@@ -39,6 +39,7 @@ body{overflow-x:hidden; background:url(../../admin/include/images/main/leftbg.jp
       <div>
         <span>订单模块</span>
         <a href="./orders.php?id=<?php echo $_SESSION['user']['id']; ?>" target="mainFrame" onFocus="this.blur()">查看订单</a>
+        <a href="./evaluate.php?id=<?php echo $_SESSION['user']['id']; ?>" target="mainFrame" onFocus="this.blur()">查看评价</a>
       </div>
     </div>
 </body>
