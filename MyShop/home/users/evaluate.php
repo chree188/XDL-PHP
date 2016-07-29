@@ -147,11 +147,6 @@ span.num {
 		//设置报错情况	去除notice错误
 		error_reporting(E_ALL ^ E_NOTICE);
 		
-		//输出删除失败的提示
-		switch($_GET['errno']){
-			case 1: echo "<h3 style='color:red'>已确认收货!</h3>";
-			break;
-		}
 	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
@@ -230,9 +225,10 @@ span.num {
 				$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
 				$maxPage = 0;	//一共显示多少页
 				$maxRow = 0;	//一共有多少条
-				$pageSize = 8;	//每页显示多少条	页大小
+				$pageSize = 4;	//每页显示多少条	页大小
 //				2 一共多少条
 				$sql = "select * from orders ".$where;
+				echo $sql;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -286,16 +282,16 @@ swOrders;
 					<span class="num"><?php  echo $page.'/'.$maxPage ?></span>页  &nbsp;&nbsp;
 					<?php 
 						$url = empty($url)? "" : $url;
-						echo "<a href='index.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='evaluate.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
 							首页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='evaluate.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
 							上一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='evaluate.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
 							下一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='evaluate.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
 							尾页
 						</a>";
 					?>

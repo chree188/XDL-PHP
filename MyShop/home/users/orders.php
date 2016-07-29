@@ -303,16 +303,16 @@ swOrders;
 					<span class="num"><?php  echo $page.'/'.$maxPage ?></span>页  &nbsp;&nbsp;
 					<?php 
 						$url = empty($url)? "" : $url;
-						echo "<a href='index.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='orders.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
 							首页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='orders.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
 							上一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='orders.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
 							下一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='orders.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
 							尾页
 						</a>";
 					?>
