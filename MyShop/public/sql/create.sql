@@ -82,5 +82,6 @@ create table detail(
 	goodsid int,
 	name varchar(32),
 	price double(6,2),
-	num int
+	num int,
+	status enum('1','2') default '1'
 )engine=myisam default charset=utf8;

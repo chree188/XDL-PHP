@@ -26,6 +26,7 @@
 	</frameset>
 <!--bottom样式-->
 	<frame src="./include/bottom.php" name="bottomFrame" scrolling="No" noresize="noresize" id="bottomFrame" title="bottomFrame" />
-</frameset><noframes></noframes>
+</frameset>
+<noframes></noframes>
 <!--不可以删除-->
 </html>

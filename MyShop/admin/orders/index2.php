@@ -146,7 +146,7 @@ span.num {
 	<?php
 		//输出删除失败的提示
 		switch(@$_GET['errno']){
-			case 1: echo "<h3 style='color:red'>出库失败!请检查库存</h3>";
+			case 1: echo "<h3 style='color:red'>出库失败!商品已出库或库存不足;请检查库存...</h3>";
 			break;
 		}
 		
@@ -156,7 +156,7 @@ span.num {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：查看用户订单</td>
+    <td width="99%" align="left" valign="top">您的位置：查看出库订单</td>
   </tr>
   <tr>
     <td align="left" valign="top">
@@ -186,12 +186,17 @@ span.num {
         <th align="center" valign="middle" class="borderright">商品名称</th>
         <th align="center" valign="middle" class="borderright">单价(￥)</th>
         <th align="center" valign="middle" class="borderright">购买数量</th>
+        <th align="center" valign="middle" class="borderright">订单状态</th>
         <th align="center" valign="middle">操作</th>
       </tr>
       
       <?php
       		//设置报错情况	去除notice错误
 			error_reporting(E_ALL ^ E_NOTICE);
+			// 设置状态			1:未出库；2：已出库；
+			$status = array("1"=>"未出库","2"=>"已出库");
+			//反数据库状态信息
+			$unstatus = array("未出库"=>"1","已出库"=>"2");
 			//查看用户信息 select 输出到表格里面 
 			//六脉神剑 
 			//1 导入数据库配置文件
@@ -207,11 +212,13 @@ span.num {
 				$wherelist = array();
 				$urllist = array();	//封装url的状态维持的条件
 			//2 接收搜索条件 
+				$unstatus[$_GET['name']] = empty($unstatus[$_GET['name']])? "{$_GET['name']}" : $unstatus[$_GET['name']];	//判断是否传除 1:未出库；2：已出库； 之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
 					$wherelist[] =" (orderid like '%{$_GET['name']}%' 
 					or name like '%{$_GET['name']}%' 
 					or price like '%{$_GET['name']}%' 
-					or num like '%{$_GET['name']}%')"; 
+					or num like '%{$_GET['name']}%'
+					or status like '%{$unstatus[$_GET['name']]}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
 
@@ -264,6 +271,7 @@ $str = <<<swOrders
         <td align="center" valign="middle" class="borderright borderbottom">{$row['name']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['price']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['num']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$status[$row['status']]}</td>
         <td align="center" valign="middle" class="borderbottom">
         <a href="action2.php?a=CKupdate&id={$row['goodsid']}&num={$row['num']}" target="mainFrame" onFocus="this.blur()" class="add">出库</a></td>
       </tr>

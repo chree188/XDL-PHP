@@ -13,22 +13,22 @@
 	$_GET['a'] = empty($_GET['a'])? 0 : $_GET['a'];
 	switch($_GET['a']){
 		
-		//修改
+		//出库修改
 		case "CKupdate":
-		// 写sql语句 执行sql
-		$sql = "update goods set store = store - {$_GET['num']} where id = {$_GET['id']}";
-		mysqli_query($link,$sql);
-		//判断是否操作成功 
-		if(mysqli_affected_rows($link)>0){
-			//删除
 			// 写sql语句 执行sql
-			$sqli = "delete from detail where goodsid = {$_GET['id']}";
-			mysqli_query($link,$sqli);
-			header("Location:{$_SERVER['HTTP_REFERER']}");
-		}else{
-				header("Location:{$_SERVER['HTTP_REFERER']}?errno=1");
-			}
-		break;
+			$sql = "update goods set store = store - {$_GET['num']} where id = {$_GET['id']} and (select status from detail where goodsid = {$_GET['id']})=1";
+			mysqli_query($link,$sql);
+			//判断是否操作成功 
+			if(mysqli_affected_rows($link)>0){
+				//出库成功删除发货单记录
+				//写sql语句 执行sql
+				$sqli = "update detail set status = 2 where goodsid = {$_GET['id']}";
+				mysqli_query($link,$sqli);
+				header("Location:{$_SERVER['HTTP_REFERER']}");
+			}else{
+					header("Location:{$_SERVER['HTTP_REFERER']}?errno=1");
+				}
+			break;
 	}
 	// 关闭数据库
 	mysqli_close($link);

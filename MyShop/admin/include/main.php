@@ -6,7 +6,8 @@
 <link href="css/css.css" type="text/css" rel="stylesheet" />
 <link href="css/main.css" type="text/css" rel="stylesheet" />
 <link rel="shortcut icon" href="images/main/favicon.ico" />
-<style> body {
+<style> 
+body {
 	overflow-x: hidden;
 	background: #f2f0f5;
 	padding: 15px 0px 10px 5px;

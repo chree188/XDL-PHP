@@ -2,8 +2,8 @@
 <head>
 <meta charset=utf-8 />
 <title>查看订单</title>
-<link href="../include/css/css.css" type="text/css" rel="stylesheet" />
-<link href="../include/css/main.css" type="text/css" rel="stylesheet" />
+<link href="../../admin/include/css/css.css" type="text/css" rel="stylesheet" />
+<link href="../../admin/include/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
 body {
 	overflow-x: hidden;
@@ -46,7 +46,7 @@ body {
 	height: 24px;
 	line-height: 24px;
 	width: 55px;
-	background: url(../include/images/main/list_input.jpg) no-repeat left top;
+	background: url(../../admin/include/images/main/list_input.jpg) no-repeat left top;
 	border: none;
 	cursor: pointer;
 	font-family: "Microsoft YaHei", "Tahoma", "Arial", '宋体';
@@ -57,7 +57,7 @@ body {
 }
 
 #search a.add {
-	background: url(../include/images/main/add.jpg) no-repeat -3px 7px #548fc9;
+	background: url(../../admin/include/images/main/add.jpg) no-repeat -3px 7px #548fc9;
 	padding: 0 10px 0 26px;
 	height: 40px;
 	line-height: 40px;
@@ -80,7 +80,7 @@ body {
 
 #main-tab th {
 	font-size: 12px;
-	background: url(../include/images/main/list_bg.jpg) repeat-x;
+	background: url(../../admin/include/images/main/list_bg.jpg) repeat-x;
 	height: 32px;
 	line-height: 32px;
 }
@@ -144,26 +144,26 @@ span.num {
 </head>
 <body>
 	<?php
-		//输出删除失败的提示
-		switch(@$_GET['errno']){
-			case 1: echo "<h3 style='color:red'>订单已发货!请去查看发货订单并出库。。。</h3>";
-			break;
-		}
-		
 		//设置报错情况	去除notice错误
 		error_reporting(E_ALL ^ E_NOTICE);
+		
+		//输出删除失败的提示
+		switch($_GET['errno']){
+			case 1: echo "<h3 style='color:red'>已确认收货!</h3>";
+			break;
+		}
 	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：查看用户订单</td>
+    <td width="99%" align="left" valign="top">您的位置：查看订单</td>
   </tr>
   <tr>
     <td align="left" valign="top">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
    		 <td width="90%" align="left" valign="middle">
-	         <form action="index.php">
+	         <form action="orders.php">
 			 <?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
 	         <span>关键字：</span>
 	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
@@ -182,7 +182,6 @@ span.num {
       	<th align="center" valign="middle" class="borderright">序号</th>
         <th align="center" valign="middle" class="borderright">ID</th>
         <th align="center" valign="middle" class="borderright">订单号</th>
-        <th align="center" valign="middle" class="borderright">会员账号</th>
         <th align="center" valign="middle" class="borderright">收件人</th>
         <th align="center" valign="middle" class="borderright">收件人地址</th>
         <th align="center" valign="middle" class="borderright">邮编</th>
@@ -191,7 +190,7 @@ span.num {
         <th align="center" valign="middle" class="borderright">购买时间</th>
         <th align="center" valign="middle" class="borderright">总金额(￥)</th>
         <th align="center" valign="middle" class="borderright">订单状态</th>
-        <th align="center" valign="middle">操作</th>
+        <th align="center" valign="middle" class="borderright">操作</th>
       </tr>
       
       <?php
@@ -215,16 +214,16 @@ span.num {
 			//1 设置数组接收搜索条件
 				$wherelist = array();
 				$urllist = array();	//封装url的状态维持的条件
+				$where = " where uid = {$_GET['id']}";
 			//2 接收搜索条件 
 				$unstatus[$_GET['name']] = empty($unstatus[$_GET['name']])? "{$_GET['name']}" : $unstatus[$_GET['name']];	//判断是否传除 1:新订单；2：已发货；3：已收货，4：无效订单 之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
 					$wherelist[] =" (odid like '%{$_GET['name']}%' 
 					or uid like '%{$_GET['name']}%' 
-					or users.username like '%{$_GET['name']}%' 
-					or orders.address like '%{$_GET['name']}%'
+					or address like '%{$_GET['name']}%'
 					or linkman like '%{$_GET['name']}%'
-					or orders.code like '%{$_GET['name']}%'
-					or orders.phone like '%{$_GET['name']}%'
+					or code like '%{$_GET['name']}%'
+					or phone like '%{$_GET['name']}%'
 					or total like '%{$_GET['name']}%'
 					or status like '%{$unstatus[$_GET['name']]}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
@@ -245,7 +244,7 @@ span.num {
 				$maxRow = 0;	//一共有多少条
 				$pageSize = 8;	//每页显示多少条	页大小
 //				2 一共多少条
-				$sql = "select orders.* , users.username from orders inner join users on orders.uid = users.id ".$where;	//查询两张表
+				$sql = "select * from orders ".$where;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -262,12 +261,12 @@ span.num {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select orders.* , users.username from orders inner join users on orders.uid = users.id $where order by id $limit";		//查询两张表
+			$sql = "select * from orders $where order by id $limit";
 			$result = mysqli_query($link,$sql);
 //			echo $sql;	// 打印sql语句来排错		********************************
 			//5 解析结果集 
 			$i = 0;
-			while($row = mysqli_fetch_assoc($result)){
+			while($row = mysqli_fetch_assoc($result) and $row['status']!=4){	//无效订单不予显示
 				$i++;
 				$shopTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化购买时间戳
 $str = <<<swOrders
@@ -276,7 +275,6 @@ $str = <<<swOrders
 		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['odid']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['username']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['linkman']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['address']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
@@ -286,9 +284,7 @@ $str = <<<swOrders
         <td align="center" valign="middle" class="borderright borderbottom">{$row['total']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$status[$row['status']]}</td>
         <td align="center" valign="middle" class="borderbottom">
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
-        <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="action.php?a=FHupdate&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">发货</a></td>
+        <a href="action.php?a=QRSHupdate&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">确认收货</a></td>
       </tr>
 swOrders;
 	echo $str;

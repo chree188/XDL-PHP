@@ -295,7 +295,7 @@ td.fenye {
 	    <option value="1"<?php echo $row['status']=='1' ? 'selected' :'';  ?> >&nbsp;&nbsp;新订单</option>
 	    <option value="2"<?php echo $row['status']=='2' ? 'selected' :'';  ?> >&nbsp;&nbsp;已发货</option>
 	    <option value="3"<?php echo $row['status']=='3' ? 'selected' :'';  ?> >&nbsp;&nbsp;已收货</option>
-	    <option value="3"<?php echo $row['status']=='4' ? 'selected' :'';  ?> >&nbsp;&nbsp;无效订单</option>
+	    <option value="4"<?php echo $row['status']=='4' ? 'selected' :'';  ?> >&nbsp;&nbsp;无效订单</option>
         </select>
         </td>
       </tr>

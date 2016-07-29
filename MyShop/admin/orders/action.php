@@ -13,26 +13,8 @@
 	
 	$_GET['a'] = empty($_GET['a'])? 0 : $_GET['a'];
 	switch($_GET['a']){
-		
-		//删除
-		case "del":
-		//4 写sql语句 执行sql
-		$sql = "delete from users where id={$_GET['id']}";
-		mysqli_query($link,$sql);
 
-		//5判断是否操作成功 
-		if(mysqli_affected_rows($link)>0){
-//			header("Location:index.php");
-			header("Location:{$_SERVER['HTTP_REFERER']}");
-			//这个常量可以告诉我们 是从哪里来的 
-			//你从哪里来 回到哪里去 
-		}else{
-			header("Location:index.php?errno=3");
-		}
-		break;
-
-
-		//修改
+		//修改订单
 		case "update":
 		//接收表单传递过来的用户信息
 		$linkman = $_POST['linkman'];	//收件人
@@ -53,11 +35,11 @@
 		break;
 		
 		
-		//发货修改
+		//发货修改订单状态
 		case "FHupdate":
 		//接收表单传递过来的订单信息
-		//4写sql语句 执行sql
-		$sql = "update orders set status={$_GET['status']} where id={$_GET['id']}";
+		//写sql语句 执行sql
+		$sql = "update orders set status=2 where id={$_GET['id']}";
 //		echo $sql;exit;
 		mysqli_query($link,$sql);
 		
