@@ -115,7 +115,7 @@
 		mysqli_query($link,$sql);
 		
 		if(mysqli_affected_rows($link)>0){
-			header("Location:{$_SERVER['HTTP_REFERER']}");
+			header("Location:evaluate.php?id={$_POST['id']}");
 		}else{
 			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
 		}

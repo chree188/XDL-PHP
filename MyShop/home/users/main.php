@@ -102,7 +102,7 @@ div.main-order {
                     <div class='factory-info-l'>
                         <div class='fl fac-head'>
                             <p class='fac-img'>
-                                <img src="../include/img/head/<?php echo $_SESSION['user']['id']; ?>.jpg"  width="100" height="100" />
+                                <img src="../../admin/include/images/login/<?php echo $_SESSION['user']['id']; ?>.jpg"  width="100" height="100" />
                             </p>
                             <div>
                                 <ul class='fac-popularity'>

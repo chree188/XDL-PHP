@@ -198,9 +198,9 @@ span.num {
 			//设置默认时区
 			date_default_timezone_set('PRC');
 			// 设置状态			1:新订单；2：已发货；3：已收货，4：无效订单
-			$status = array("1"=>"新订单","2"=>"已发货","3"=>"已收货","4"=>"无效订单");
+			$status = array("1"=>"新订单","2"=>"已发货","3"=>"已收货","4"=>"无效订单","5"=>"已评价");
 			//反数据库状态信息
-			$unstatus = array("新订单"=>"1","已发货"=>"2","已收货"=>"3","无效订单"=>"3");
+			$unstatus = array("新订单"=>"1","已发货"=>"2","已收货"=>"3","无效订单"=>"3","已评价"=>"4");
 			//六脉神剑 
 			//1 导入数据库配置文件
 			include("../../public/sql/dbconfig.php");
@@ -269,27 +269,43 @@ span.num {
 			while($row = mysqli_fetch_assoc($result) and $row['status']!=4){	//无效订单不予显示
 				$i++;
 				$shopTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化购买时间戳
-$str = <<<swOrders
-				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
-				onMouseOver="this.style.backgroundColor='#edf5ff'">
-		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['odid']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['linkman']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['address']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['phone']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['descr']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$shopTime}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['total']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$status[$row['status']]}</td>
-        <td align="center" valign="middle" class="borderbottom">
-        <a href="action.php?a=QRSHupdate&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">确认收货</a>
-        <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">评价</a></td>
-      </tr>
-swOrders;
-	echo $str;
+				echo "<tr onMouseOut=\"this.style.backgroundColor='#ffffff'\" 
+				onMouseOver=\"this.style.backgroundColor='#edf5ff'\">";
+				echo "<td align='center' valign='middle' class='borderright borderbottom num'>{$i}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['id']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['odid']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['linkman']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['address']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['code']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['phone']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['descr']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$shopTime}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['total']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$status[$row['status']]}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>";
+				switch($row['status']){
+					case "1";
+						echo "未发货";
+					break;
+					case "2";
+						echo "<a href=\"action.php?a=QRSHupdate&id={$row['id']}\" target='mainFrame' onFocus='this.blur()' class='add'>确认收货</a>";
+					break;
+					case "3";
+						echo "<a href=\"edit.php?id={$row['id']}\" target='mainFrame' onFocus='this.blur()' class='add'>评价</a>";
+					break;
+					case "5";
+						echo "已评价";
+				}
+				
+//		        if($row['status'] == 2){
+//			        echo "<a href=\"action.php?a=QRSHupdate&id={$row['id']}\" target='mainFrame' onFocus='this.blur()' class='add'>确认收货</a>";
+//		        }elseif($row['status'] == 3){
+//			        echo "<a href=\"edit.php?id={$row['id']}\" target='mainFrame' onFocus='this.blur()' class='add'>评价</a>";
+//		        }else{
+//		        	echo "未发货";
+//		        }
+		        echo "</td>";
+		      	echo "</tr>";
 			}
 			//6 关闭数据库 释放结果集 
 			mysqli_close($link);

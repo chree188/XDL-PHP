@@ -253,22 +253,24 @@ span.num {
 			while($row = mysqli_fetch_assoc($result)){	//无效订单不予显示
 				$i++;
 				$shopTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化购买时间戳
-$str = <<<swOrders
-				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
-				onMouseOver="this.style.backgroundColor='#edf5ff'">
-		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['odid']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['linkman']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['phone']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['total']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$shopTime}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['descr']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['evaluate']}</td>
-        <td align="center" valign="middle" class="borderbottom">
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">修改评价</a></td>
-      </tr>
-swOrders;
-	echo $str;
+				echo "<tr onMouseOut=\"this.style.backgroundColor='#ffffff'\" 
+				onMouseOver=\"this.style.backgroundColor='#edf5ff'\">";
+				echo "<td align='center' valign='middle' class='borderright borderbottom num'>{$i}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['odid']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['linkman']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['phone']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['total']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$shopTime}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['descr']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['evaluate']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>";
+				if($row['status'] == 5){
+			        echo "<a href=\"edit.php?id={$row['id']}\" target='mainFrame' onFocus='this.blur()' class='add'>改评价</a>";
+				}else{
+					echo "未评价";
+				}
+		        echo "</td>";
+		      	echo "</tr>";
 			}
 			//6 关闭数据库 释放结果集 
 			mysqli_close($link);

@@ -70,7 +70,7 @@ create table orders(
 	evaluate text,
 	addtime int,
 	total double(8,2),
-	status enum('1','2','3','4')
+	status enum('1','2','3','4','5')
 )engine=myisam default charset=utf8;
 
 
