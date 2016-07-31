@@ -158,12 +158,6 @@ span.num {
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
    		 <td width="90%" align="left" valign="middle">
-	         <form action="orders.php">
-			 <?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
-	         <span>关键字：</span>
-	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
-	         <input name="" type="submit" value="查询" class="text-but">
-	         </form>
          </td>
   		</tr>
 	</table>
@@ -198,29 +192,8 @@ span.num {
 			mysqli_set_charset($link,"utf8");
 			mysqli_select_db($link,DBNAME);
 			
-			//=============封装搜索条件======================
-			//1 设置数组接收搜索条件
-				$wherelist = array();
-				$urllist = array();	//封装url的状态维持的条件
-				$where = " where uid = {$_GET['id']}";	//当前登录用户订单
-			//2 接收搜索条件 
-				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
-					$wherelist[] =" (odid like '%{$_GET['name']}%' 
-					or linkman like '%{$_GET['name']}%'
-					or phone like '%{$_GET['name']}%'
-					or total like '%{$_GET['name']}%' )"; 
-					$urllist[] = "name={$_GET['name']}";
-				}	
-
-			//3 判断搜索条件的有效性	
-				if(count($wherelist)>0){
-					$where = " where ".implode(" and ",$wherelist);
-					$url = "&".implode("&", $urllist);
-				}
-
-			//=============封装搜索条件======================
-			
 			/*================实现分页显示==================*/
+//				$where = " where uid = {$_GET['id']}";	//当前登录用户订单
 //				1 设置参数
 				$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
 				$maxPage = 0;	//一共显示多少页
@@ -228,7 +201,6 @@ span.num {
 				$pageSize = 4;	//每页显示多少条	页大小
 //				2 一共多少条
 				$sql = "select * from orders ".$where;
-				echo $sql;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -283,17 +255,16 @@ span.num {
 					共查询到<span class="num"><?php  echo mysqli_num_rows($res)?></span>条用户信息 &nbsp;&nbsp;
 					<span class="num"><?php  echo $page.'/'.$maxPage ?></span>页  &nbsp;&nbsp;
 					<?php 
-						$url = empty($url)? "" : $url;
-						echo "<a href='evaluate.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='evaluate.php?p=1' target='mainFrame' onFocus='this.blur()'>
 							首页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='evaluate.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='evaluate.php?p=".($page-1)."' target='mainFrame' onFocus='this.blur()'>
 							上一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='evaluate.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='evaluate.php?p=".($page+1)."' target='mainFrame' onFocus='this.blur()'>
 							下一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='evaluate.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='evaluate.php?p={$maxPage}' target='mainFrame' onFocus='this.blur()'>
 							尾页
 						</a>";
 					?>

@@ -26,15 +26,15 @@ header("Content-Type:text/html;charset=utf-8");
 			$descr=$_POST['descr']; //备注信息
 			$addtime=time();
 			//拼装订单添加sql语句
-			$sql = "insert ignore into orders values(null,'{$odid}','{$uid}','{$linkman}','{$address}','{$code}','{$phone}','{$descr}','{$addtime}','{$total}','{$status}')";
-			mysqli_query($link, $sql);
+			$sql = "insert ignore into orders values(null,'{$odid}','{$uid}','{$linkman}','{$address}','{$code}','{$phone}','{$descr}',null,'{$addtime}','{$total}','{$status}')";
+			mysqli_query($link, $sql);			
 			//获取订单添加成功的自增id（订单号）
 			$orderid = mysqli_insert_id($link);
 			if($orderid>0){
 				//添加订单详情
 				foreach($_SESSION['shoplist'] as $shop){
 					//拼装订单详情语句
-					$sql = "insert ignore into detail values(null,{$orderid},{$shop['id']},'{$shop['goods']}','{$shop['price']}','{$shop['m']}')";
+					$sql = "insert ignore into detail values(null,{$orderid},{$shop['id']},'{$shop['goods']}','{$shop['price']}','{$shop['m']}','{$status}')";
 					//执行添加
 					mysqli_query($link, $sql);
 				}

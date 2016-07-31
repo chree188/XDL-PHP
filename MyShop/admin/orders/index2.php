@@ -163,7 +163,7 @@ span.num {
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
    		 <td width="90%" align="left" valign="middle">
-	         <form action="index.php">
+	         <form action="index2.php">
 			 <?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
 	         <span>关键字：</span>
 	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
@@ -221,7 +221,7 @@ span.num {
 					or status like '%{$unstatus[$_GET['name']]}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
-
+				
 			//3 判断搜索条件的有效性	
 				if(count($wherelist)>0){
 					$where = " where ".implode(" and ",$wherelist);
@@ -238,6 +238,7 @@ span.num {
 				$pageSize = 8;	//每页显示多少条	页大小
 //				2 一共多少条
 				$sql = "select * from detail ".$where;
+//				echo $sql;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -273,7 +274,7 @@ $str = <<<swOrders
         <td align="center" valign="middle" class="borderright borderbottom">{$row['num']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$status[$row['status']]}</td>
         <td align="center" valign="middle" class="borderbottom">
-        <a href="action2.php?a=CKupdate&id={$row['goodsid']}&num={$row['num']}" target="mainFrame" onFocus="this.blur()" class="add">出库</a></td>
+        <a href="action.php?a=CKupdate&id={$row['goodsid']}&num={$row['num']}" target="mainFrame" onFocus="this.blur()" class="add">出库</a></td>
       </tr>
 swOrders;
 	echo $str;

@@ -110,12 +110,12 @@
 		case "PJupdate":
 		//接收表单传递过来的订单信息
 		//写sql语句 执行sql
-		$sql = "update orders set evaluate='{$_POST['evaluate']}' where id={$_POST['id']}";
+		$sql = "update orders set evaluate='{$_POST['evaluate']}',status=5 where id={$_POST['id']}";
 //		echo $sql;exit;
 		mysqli_query($link,$sql);
 		
 		if(mysqli_affected_rows($link)>0){
-			header("Location:evaluate.php?id={$_POST['id']}");
+			header("Location:evaluate.php?id={$_SESSION['user']['id']}");
 		}else{
 			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
 		}

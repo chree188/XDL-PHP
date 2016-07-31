@@ -37,18 +37,37 @@
 		
 		//发货修改订单状态
 		case "FHupdate":
-		//接收表单传递过来的订单信息
-		//写sql语句 执行sql
-		$sql = "update orders set status=2 where id={$_GET['id']}";
-//		echo $sql;exit;
-		mysqli_query($link,$sql);
+			//接收表单传递过来的订单信息
+			//写sql语句 执行sql
+			$sql = "update orders set status=2 where id={$_GET['id']}";
+//			echo $sql;exit;
+			mysqli_query($link,$sql);
+			
+			if(mysqli_affected_rows($link)>0){
+				header("Location:{$_SERVER['HTTP_REFERER']}");
+			}else{
+				header("Location:{$_SERVER['HTTP_REFERER']}?errno=1");
+			}
+			break;
 		
-		if(mysqli_affected_rows($link)>0){
-			header("Location:{$_SERVER['HTTP_REFERER']}");
-		}else{
-			header("Location:{$_SERVER['HTTP_REFERER']}?errno=1");
-		}
-		break;
+		
+		//出库修改
+		case "CKupdate":
+			// 写sql语句 执行sql
+			$sql = "update goods set store = store - {$_GET['num']},num = num + {$_GET['num']} where id = {$_GET['id']}";
+//			echo $sql;exit;
+			mysqli_query($link,$sql);
+			//判断是否操作成功 
+			if(mysqli_affected_rows($link)>0){
+				//出库成功更改detail表状态
+				//写sql语句 执行sql
+				$sqli = "update detail set status = 2 where goodsid = {$_GET['id']}";
+				mysqli_query($link,$sqli);
+				header("Location:{$_SERVER['HTTP_REFERER']}");
+			}else{
+					header("Location:{$_SERVER['HTTP_REFERER']}?errno=1");
+				}
+			break;
 	}
-	//6 关闭数据库  释放资源
+	//6 关闭数据库 
 	mysqli_close($link);

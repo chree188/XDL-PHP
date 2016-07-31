@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>查看订单</title>
+<title>查看评价</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
@@ -156,7 +156,7 @@ span.num {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：查看用户订单</td>
+    <td width="99%" align="left" valign="top">您的位置：查看用户评价</td>
   </tr>
   <tr>
     <td align="left" valign="top">
@@ -180,28 +180,22 @@ span.num {
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr>
       	<th align="center" valign="middle" class="borderright">序号</th>
-        <th align="center" valign="middle" class="borderright">ID</th>
+      	<th align="center" valign="middle" class="borderright">ID</th>
         <th align="center" valign="middle" class="borderright">订单号</th>
-        <th align="center" valign="middle" class="borderright">会员账号</th>
         <th align="center" valign="middle" class="borderright">收件人</th>
-        <th align="center" valign="middle" class="borderright">收件人地址</th>
+        <th align="center" valign="middle" class="borderright">收件地址</th>
         <th align="center" valign="middle" class="borderright">邮编</th>
         <th align="center" valign="middle" class="borderright">电话</th>
-        <th align="center" valign="middle" class="borderright">备注</th>
-        <th align="center" valign="middle" class="borderright">购买时间</th>
         <th align="center" valign="middle" class="borderright">总金额(￥)</th>
-        <th align="center" valign="middle" class="borderright">订单状态</th>
-        <th align="center" valign="middle">操作</th>
+        <th align="center" valign="middle" class="borderright">购买时间</th>
+        <th align="center" valign="middle" class="borderright">备注</th>
+        <th align="center" valign="middle" class="borderright">评价</th>
       </tr>
       
       <?php
 			//查看用户信息 select 输出到表格里面 
 			//设置默认时区
 			date_default_timezone_set('PRC');
-			// 设置状态			1:新订单；2：已发货；3：已收货，4：无效订单
-			$status = array("1"=>"新订单","2"=>"已发货","3"=>"已收货","4"=>"无效订单","5"=>"已评价");
-			//反数据库状态信息
-			$unstatus = array("新订单"=>"1","已发货"=>"2","已收货"=>"3","无效订单"=>"4","已评价"=>"5");
 			//六脉神剑 
 			//1 导入数据库配置文件
 			include("../../public/sql/dbconfig.php");
@@ -216,17 +210,11 @@ span.num {
 				$wherelist = array();
 				$urllist = array();	//封装url的状态维持的条件
 			//2 接收搜索条件 
-				$unstatus[$_GET['name']] = empty($unstatus[$_GET['name']])? "{$_GET['name']}" : $unstatus[$_GET['name']];	//判断是否传除 1:新订单；2：已发货；3：已收货，4：无效订单 之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
 					$wherelist[] =" (odid like '%{$_GET['name']}%' 
-					or uid like '%{$_GET['name']}%' 
-					or users.username like '%{$_GET['name']}%' 
-					or orders.address like '%{$_GET['name']}%'
 					or linkman like '%{$_GET['name']}%'
-					or orders.code like '%{$_GET['name']}%'
-					or orders.phone like '%{$_GET['name']}%'
-					or total like '%{$_GET['name']}%'
-					or status like '%{$unstatus[$_GET['name']]}%' )"; 
+					or phone like '%{$_GET['name']}%'
+					or total like '%{$_GET['name']}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
 
@@ -243,9 +231,10 @@ span.num {
 				$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
 				$maxPage = 0;	//一共显示多少页
 				$maxRow = 0;	//一共有多少条
-				$pageSize = 8;	//每页显示多少条	页大小
+				$pageSize = 4;	//每页显示多少条	页大小
 //				2 一共多少条
-				$sql = "select orders.* , users.username from orders inner join users on orders.uid = users.id ".$where;	//查询两张表
+				$sql = "select * from orders ".$where;
+				echo $sql;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -262,7 +251,7 @@ span.num {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select orders.* , users.username from orders inner join users on orders.uid = users.id $where order by id $limit";		//查询两张表
+			$sql = "select * from orders $where order by id $limit";
 			$result = mysqli_query($link,$sql);
 //			echo $sql;	// 打印sql语句来排错		********************************
 			//5 解析结果集 
@@ -276,19 +265,14 @@ $str = <<<swOrders
 		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['odid']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['username']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['linkman']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['address']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['phone']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['descr']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$shopTime}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{$row['total']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$status[$row['status']]}</td>
-        <td align="center" valign="middle" class="borderbottom">
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
-        <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="action.php?a=FHupdate&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">发货</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$shopTime}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['descr']}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{$row['evaluate']}</td>
       </tr>
 swOrders;
 	echo $str;

@@ -270,28 +270,42 @@ span.num {
 			while($row = mysqli_fetch_assoc($result)){
 				$i++;
 				$shopTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化购买时间戳
-$str = <<<swOrders
-				<tr onMouseOut="this.style.backgroundColor='#ffffff'" 
-				onMouseOver="this.style.backgroundColor='#edf5ff'">
-		<td align="center" valign="middle" class="borderright borderbottom num">{$i}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['id']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['odid']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['username']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['linkman']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['address']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['code']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['phone']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['descr']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$shopTime}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$row['total']}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{$status[$row['status']]}</td>
-        <td align="center" valign="middle" class="borderbottom">
-        <a href="edit.php?id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
-        <span class="gray">&nbsp;|&nbsp;</span>
-        <a href="action.php?a=FHupdate&id={$row['id']}" target="mainFrame" onFocus="this.blur()" class="add">发货</a></td>
-      </tr>
-swOrders;
-	echo $str;
+				echo "<tr onMouseOut=\"this.style.backgroundColor='#ffffff'\" 
+				onMouseOver=\"this.style.backgroundColor='#edf5ff'\">";
+				echo "<td align='center' valign='middle' class='borderright borderbottom num'>{$i}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['id']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['odid']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['username']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['linkman']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['address']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['code']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['phone']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['descr']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$shopTime}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['total']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$status[$row['status']]}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>";
+				switch($row['status']){
+					case "1";
+				        echo "<a href=\"edit.php?id={$row['id']}\" target='mainFrame' onFocus='this.blur()' class='add'>编辑</a>
+				        <span class='gray'>&nbsp;|&nbsp;</span>
+				        <a href=\"action.php?a=FHupdate&id={$row['id']}\" target='mainFrame' onFocus='this.blur()' class='add'>发货</a>";
+					break;
+					case "2";
+						echo "<a href='index2.php' target='mainFrame' onFocus='this.blur()' class='add'>已发货，去出库</a>";
+					break;
+					case "3";
+						echo "客户已收货,待评价";
+					break;
+					case "4";
+						echo "无效订单！";
+					break;
+					case "5";
+						echo "<a href='evaluate.php' target='mainFrame' onFocus='this.blur()' class='add'>查看用户评价</a>";
+					break;
+				}
+		        echo "</td>";
+		      	echo "</tr>";
 			}
 			//6 关闭数据库 释放结果集 
 			mysqli_close($link);

@@ -72,7 +72,9 @@
 							<div class="but">
 								<div class="r">
 									<?php
-										echo "金额总计：<span class='num'>￥<span class='num'>{$_SESSION['total']}</span></span>&nbsp;&nbsp;数量总计：<span class='num'>{$_SESSION['num']}</span>&nbsp;";
+										echo "金额总计：<span class='num'>￥<span class='num'>{$_SESSION['total']}</span></span>&nbsp;&nbsp;
+										</span>&nbsp;";
+//										数量总计：<span class='num'>{$_SESSION['num']}	出bug,单独提出来，以后解决了再放进
 									?>
 									<input type="image" src="./include/img/button11.jpg" onclick="javascript:document.forms['Form_2'].submit();" />
 								</div>
