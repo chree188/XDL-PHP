@@ -77,7 +77,8 @@ aa;
                     	<?php	//遍历数据库商品
                     		$sql = "select * from goods ";
 							$result = mysqli_query($link,$sql);
-							while($row = mysqli_fetch_assoc($result) and $row['state']!=3){		//下架产品不予显示
+							while($row = mysqli_fetch_assoc($result)){		//下架产品不予显示
+							if($row['state']!=3){
 $str = <<<aa
 					  <li>
                         <p class="media"><a href="./details.php?id={$row['id']}"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
@@ -85,6 +86,7 @@ $str = <<<aa
                       </li>
 aa;
 					echo $str;
+							}
 							}
                     	?>
                     </ul>
@@ -156,7 +158,8 @@ aa;
                     	<?php	//遍历数据库商品
                     		$sql = "select * from goods ";
 							$result = mysqli_query($link,$sql);
-							while($row = mysqli_fetch_assoc($result) and $row['state']!=3){		//下架产品不予显示
+							while($row = mysqli_fetch_assoc($result)){		//下架产品不予显示
+							if($row['state']!=3){
 $str = <<<aa
 					  <li>
                         <p class="media"><a href="./details.php?id={$row['id']}"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
@@ -165,7 +168,8 @@ $str = <<<aa
 aa;
 					echo $str;
 							}
-                    		?>
+							}
+                    	?>
                     </ul>
                   </div>
                 </div>

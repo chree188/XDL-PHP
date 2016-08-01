@@ -152,27 +152,21 @@ aa;
 									</a>
 									<div id="pic" class="pic">
 										<ul id="scrollPic">
-											<?php	
-					                    		$sql = "select * from goods ";
-												$result = mysqli_query($link,$sql);
-												while($row = mysqli_fetch_assoc($result) and $row['state']!=3){		//下架产品不予显示		//相关优选品牌遍历显示
+											<?php	//遍历数据库商品
+                    		$sql = "select * from goods ";
+							$result = mysqli_query($link,$sql);
+							while($row = mysqli_fetch_assoc($result)){		//下架产品不予显示
+							if($row['state']!=3){
 $str = <<<aa
-											<li>
-												<p class="media">
-													<a href="./details.php?id={$row['id']}">
-														<img src="../admin/goods/uploads/m_{$row['picname']}" width="203" height="131" />
-													</a>
-												</p>
-												<p class="intro">
-													<a href="./details.php?id={$row['id']}">
-														{$row['goods']}
-													</a>
-												</p>
-											</li>
+					  <li>
+                        <p class="media"><a href="./details.php?id={$row['id']}"><img src='../admin/goods/uploads/m_{$row['picname']}' width="203" height="131" /></a></p>
+                      	<p class="intro"><a href="./details.php?id={$row['id']}">{$row['goods']}</a></p>
+                      </li>
 aa;
-												echo $str;
-														}
-							                    	?>
+					echo $str;
+							}
+							}
+                    	?>
 										</ul>
 									</div>
 								</div>
