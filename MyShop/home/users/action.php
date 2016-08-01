@@ -79,7 +79,7 @@
 		mysqli_query($link,$sql);
 		
 		if(mysqli_affected_rows($link)>0){
-			header("Location:./index.php");
+			header("Location:./iUserCenter.php");
 		}else{
 			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
 		}

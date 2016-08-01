@@ -234,7 +234,7 @@ span.num {
 				$pageSize = 4;	//每页显示多少条	页大小
 //				2 一共多少条
 				$sql = "select * from orders ".$where;
-				echo $sql;
+//				echo $sql;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
