@@ -204,29 +204,30 @@ span.num {
 			mysqli_set_charset($link,"utf8");
 			mysqli_select_db($link,DBNAME);
 			
-			/*================实现分页显示==================*/
-//				$where = " where uid = {$_GET['id']}";	//当前登录用户订单
-//				1 设置参数
-				$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
-				$maxPage = 0;	//一共显示多少页
-				$maxRow = 0;	//一共有多少条
-				$pageSize = 8;	//每页显示多少条	页大小
-//				2 一共多少条
-				$sql = "select * from orders ".$where;
-				$res = mysqli_query($link, $sql);
-				$maxRow = mysqli_num_rows($res);
-//				3 一共显示多少页
-				$maxPage = ceil($maxRow/$pageSize);
-//				4 判断页码 是否有效
-				if($page>$maxPage){
-					$page = $maxPage;
-				}
-				if($page<1){
-					$page = 1;
-				}
-//				5 拼接limit
-				$limit = " limit ".($page-1)*$pageSize.",".$pageSize;
-			/*================实现分页显示==================*/
+				$where = " where uid = {$_GET['id']}";	//当前登录用户订单
+				
+//			/*================实现分页显示==================*/
+////				1 设置参数
+//				$page = empty($_GET['p'])? 1 : $_GET['p'];	//页码
+//				$maxPage = 0;	//一共显示多少页
+//				$maxRow = 0;	//一共有多少条
+//				$pageSize = 8;	//每页显示多少条	页大小
+////				2 一共多少条
+//				$sql = "select * from orders ".$where;
+//				$res = mysqli_query($link, $sql);
+//				$maxRow = mysqli_num_rows($res);
+////				3 一共显示多少页
+//				$maxPage = ceil($maxRow/$pageSize);
+////				4 判断页码 是否有效
+//				if($page>$maxPage){
+//					$page = $maxPage;
+//				}
+//				if($page<1){
+//					$page = 1;
+//				}
+////				5 拼接limit
+//				$limit = " limit ".($page-1)*$pageSize.",".$pageSize;
+//			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
 			$sql = "select * from orders $where order by id $limit";
@@ -273,7 +274,7 @@ span.num {
 		?>
     </table></td>
     </tr>
-  			<tr>
+  			<!--<tr>
 				<td align="left" valign="top" class="fenye">
 					共查询到<span class="num"><?php  echo mysqli_num_rows($res)?></span>条用户信息 &nbsp;&nbsp;
 					<span class="num"><?php  echo $page.'/'.$maxPage ?></span>页  &nbsp;&nbsp;
@@ -292,7 +293,7 @@ span.num {
 						</a>";
 					?>
 				</td>
-			</tr>
+			</tr>-->
 </table>
 </body>
 </html>
