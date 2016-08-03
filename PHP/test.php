@@ -166,4 +166,6 @@ var_dump($result);*/
 //	$time = time();
 //	echo $time;
 
-echo phpinfo();
+//echo phpinfo();
+
+echo "<input type='date'/>";
