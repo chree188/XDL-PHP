@@ -52,14 +52,13 @@ create table users(
 	addpic varchar(255) not null,
 	idapic varchar(255) not null,
 	idbpic varchar(255) not null,
-	alipaypic varchar(255) not null,
-	tenpaypic varchar(255),
+	alipaypic varchar(255) not null
+)engine=myisam default charset=utf8;
+
+
+	/*tenpaypic varchar(255),
 	ippic varchar(255),
 	lifepic varchar(255),
 	twocardpic varchar(255),
 	onemonthpic varchar(255),
-	videoidpic varchar(255)
-)engine=myisam default charset=utf8;
-
-
-
+	videoidpic varchar(255)*/

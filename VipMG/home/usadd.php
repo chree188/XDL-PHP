@@ -190,6 +190,20 @@ td.fenye {
 </style>
 </head>
 <body>
+	<?php
+		//处理添加表单的错误信息
+		switch(@$_GET['errno']) {
+			case 1 :
+				echo "<h2 style='color:red; '>您的入会注册申请已提交，等待管理员审核。</h2>";
+				break;
+			case 2 :
+				echo "<h2 style='color:red; '>带<b>*</b>项不能为空。</h2>";
+				break;
+			case 3 :
+				echo "<h2 style='color:red; '>注册失败！请核对您的信息是否正确后重新提交。</h2>";
+				break;
+		}
+	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
@@ -328,10 +342,10 @@ td.fenye {
         <input type="file" name="alipaypic"><b>*</b>
         </td>
       </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+      <!--<tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">财付通实名认证截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="tenpic">
+        <input type="file" name="tenpaypic">
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -357,8 +371,7 @@ td.fenye {
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="file" name="onemonthpic">
         </td>
-      </tr>
-      </tr>
+      </tr>-->
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b>*</b></td>
         <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b>*</b>号项为必填项，不能为空。。。</h4>
@@ -369,20 +382,9 @@ td.fenye {
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input name="" type="submit" value="提交" class="text-but">
         <input name="" type="reset" value="重置" class="text-but"></td>
-        </tr>
+      </tr>
     </table>
     </form>
-    <?php
-		//处理添加表单的错误信息
-		switch(@$_GET['errno']) {
-			case 1 :
-				echo "<h2 style='color:red; '>您的入会注册申请已提交，等待管理员审核。</h2>";
-				break;
-			case 2 :
-				echo "<h2 style='color:red; '>带<b>*</b>项不能为空</h2>";
-				break;
-		}
-	?>
     </td>
     </tr>
 </table>
