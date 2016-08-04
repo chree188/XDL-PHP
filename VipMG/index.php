@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="./public/css/base.css"/>
 		<style type="text/css">
 		body{
-			background-image: url("./public/img/bg.jpg");	/*index页背景图*/
+			background-image: url("./public/img/bg.jpg");	/*index页背景图,图片路径在/public/img/下*/
 			background-size: cover;
 		}
 		/*浮动tool*/
@@ -40,7 +40,8 @@
 	</head>
 	<body>
 		<div class="aside-panel" id="j-panel">
-		<a href="./home/index.php" title="" id="j-message">会员<br />注册</a>
+		<a href="./home/usadd.php" title="" id="j-message">会员<br />注册</a>
+		<a href="./home/meradd.php" title="" id="j-message">商家<br />注册</a>
 		<a href="./admin/index.php" title=""  id="j-service">后台<br />登录</a>
 	</div>
 	</body>
