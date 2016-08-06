@@ -90,6 +90,21 @@
 		
 		/*==============================================刷手会员部分=========================================================*/
 		
+		//删除
+		case "del2":
+		//4 写sql语句 执行sql		实际生活中项目数据库删除乃大忌
+		$sql = "update users set status=2 where id={$_GET['id']}";	//删除执行更改状态为2，不予显示；数据库数据不做删除操作
+		mysqli_query($link,$sql);
+
+		//5判断是否操作成功 
+		if(mysqli_affected_rows($link)>0){
+			header("Location:{$_SERVER['HTTP_REFERER']}");
+			//这个常量可以告诉我们 是从哪里来的 
+			//你从哪里来 回到哪里去 
+		}else{
+			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
+		}
+		break;
 		
 	}
 	//关闭数据库  释放资源

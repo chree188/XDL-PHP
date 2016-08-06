@@ -172,7 +172,7 @@ span.num {
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
    		 <td width="90%" align="left" valign="middle">
-	         <form action="index.php">
+	         <form action="index2.php">
 			<?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
 	         <span>关键字：</span>
 	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
@@ -237,14 +237,11 @@ span.num {
         <th align="center" valign="middle" class="borderright">年龄</th>
         <th align="center" valign="middle" class="borderright">推荐人</th>
         <th align="center" valign="middle" class="borderright">常用手机号</th>
-        <th align="center" valign="middle" class="borderright">备用手机号</th>
-        <th align="center" valign="middle" class="borderright">入会用QQ号</th>
-        <th align="center" valign="middle" class="borderright">备用QQ号</th>
+        <th align="center" valign="middle" class="borderright">常用QQ号</th>
         <th align="center" valign="middle" class="borderright">身份证号</th>
         <th align="center" valign="middle" class="borderright">身份证上住址</th>
         <th align="center" valign="middle" class="borderright">现住址</th>
         <th align="center" valign="middle" class="borderright">实名支付宝账号</th>
-        <th align="center" valign="middle" class="borderright">实名财富通账号</th>
         <th align="center" valign="middle" class="borderright">各类信息截图</th>
         <th align="center" valign="middle">操作</th>
       </tr>
@@ -276,22 +273,27 @@ span.num {
 					$wherelist[] =" (name like '%{$_GET['name']}%' 
 					or username like '%{$_GET['name']}%' 
 					or address like '%{$_GET['name']}%'
-					or username like '%{$_GET['name']}%'
-					or code like '%{$_GET['name']}%'
-					or phone like '%{$_GET['name']}%'
-					or email like '%{$_GET['name']}%'
+					or nowaddr like '%{$_GET['name']}%'
+					or age like '%{$_GET['name']}%'
+					or phone1 like '%{$_GET['name']}%'
+					or qq1 like '%{$_GET['name']}%'
 					or sex like '%{$unsex[$_GET['name']]}%'
-					or state like '%{$unstate[$_GET['name']]}%' )"; 
+					or idcard like '%{$_GET['name']}%' 
+					or alipay like '%{$_GET['name']}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
 				if(!empty($_GET['sex'])){
 					$wherelist[] = "sex='{$_GET['sex']}'";
 					$urllist[] = "sex={$_GET['sex']}";
 				}
+				if(!empty($_GET['adminid'])){
+					$wherelist[] = "adminid='{$_GET['adminid']}'";
+					$urllist[] = "adminid={$_GET['adminid']}";
+				}
 
 			//3 判断搜索条件的有效性	
 				if(count($wherelist)>0){
-					$where = " where ".implode(" and ",$wherelist);
+					$where = " and ".implode(" and ",$wherelist);
 					$url = "&".implode("&", $urllist);
 				}
 
@@ -304,7 +306,7 @@ span.num {
 				$maxRow = 0;	//一共有多少条
 				$pageSize = 8;	//每页显示多少条	页大小
 //				2 一共多少条
-				$sql = "select * from users ".$where;
+				$sql = "select users.* , admin.name as adname from users inner join admin on users.adminid = admin.id where users.status = 1 ".$where;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -321,9 +323,9 @@ span.num {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select * from users $where order by id $limit";
+			$sql = "select users.* , admin.name as adname from users inner join admin on users.adminid = admin.id where users.status = 1 $where order by adminid $limit";
 			$result = mysqli_query($link,$sql);
-//			echo $sql;	// 打印sql语句来排错		********************************
+//			echo $sql;	// 打印sql语句来排错
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
@@ -336,21 +338,21 @@ span.num {
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['username']}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['name']}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$sex[$row['sex']]}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['age']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['adname']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['phone1']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['qq1']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['idcard']}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['address']}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['code']}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['phone']}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['email']}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$state[$row['state']]}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$regTime}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['nowaddr']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['alipay']}</td>";
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['picname']}</td>";
 		        echo "<td align='center' valign='middle' class='borderbottom'>";
-		        if($row['state']!=1){
-			        echo "<a href='edit.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>编辑</a>";
-			        echo "<span class='gray'>&nbsp;|&nbsp;</span>";
-			        echo "<a href=action.php?a=del&id={$row['id']} target='mainFrame' onFocus='this.blur()' class='add'>删除</a></td>";
-		        }else{
-		        	echo "管理员账户不可被修改及删除";
-		        }
-				
+			    echo "<a href='details.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>详情</a>";
+				echo "<span class='gray'>&nbsp;|&nbsp;</span>";
+			    echo "<a href='edit2.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>编辑</a>";
+			    echo "<span class='gray'>&nbsp;|&nbsp;</span>";
+			    echo "<a href=action.php?a=del2&id={$row['id']} target='mainFrame' onFocus='this.blur()' class='add'>删除</a></td>";
 		      	echo "</tr>";
 			}
 			//6 关闭数据库 释放结果集 
@@ -365,16 +367,16 @@ span.num {
 					<span class="num"><?php  echo $page.'/'.$maxPage ?></span>页  &nbsp;&nbsp;
 					<?php 
 						$url = empty($url)? "" : $url;
-						echo "<a href='index.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='index2.php?p=1{$url}' target='mainFrame' onFocus='this.blur()'>
 							首页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='index2.php?p=".($page-1)."{$url}' target='mainFrame' onFocus='this.blur()'>
 							上一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='index2.php?p=".($page+1)."{$url}' target='mainFrame' onFocus='this.blur()'>
 							下一页
 						</a>&nbsp;&nbsp;";
-						echo "<a href='index.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
+						echo "<a href='index2.php?p={$maxPage}{$url}' target='mainFrame' onFocus='this.blur()'>
 							尾页
 						</a>";
 					?>
