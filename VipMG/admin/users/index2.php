@@ -270,7 +270,7 @@ span.num {
 			//2 接收搜索条件 
 				$unsex[$_GET['name']] = empty($unsex[$_GET['name']])? "{$_GET['name']}" : $unsex[$_GET['name']];	//判断是否传除男 女性别之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
-					$wherelist[] =" users.(name like '%{$_GET['name']}%' 
+					$wherelist[] =" (name like '%{$_GET['name']}%' 
 					or username like '%{$_GET['name']}%' 
 					or address like '%{$_GET['name']}%'
 					or nowaddr like '%{$_GET['name']}%'

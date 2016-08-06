@@ -281,7 +281,7 @@ span.num {
 			//4 写sql语句 获得结果集 
 			$sql = "select * from admin where status = 1 $where order by id $limit";
 			$result = mysqli_query($link,$sql);
-			echo $sql;	// 打印sql语句来排错
+//			echo $sql;	// 打印sql语句来排错
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
