@@ -47,9 +47,14 @@
 			$pic['newpath'] = $path.'/'.$pic['newname'];
 			$pic['newSpath'] = $path.'/s_'.$pic['newname'];
 			$pic['newMpath'] = $path.'/m_'.$pic['newname'];
+//			$addpic = $uppic['info'];
+//			$idapic = $uppic['info'];
+//			$idbpic = $uppic['info'];
+//			$alipaypic = $uppic['info'];
+//			echo $addpic;echo $idapic;echo $idbpic;echo $alipaypic;
 			
 			//4 实现图片的压缩
-			imageZoom($pic['newname'],$path,$width=100,$height=100,$pre="s_");
+//			imageZoom($pic['newname'],$path,$width=100,$height=100,$pre="s_");
 			imageZoom($pic['newname'],$path,$width=300,$height=300,$pre="m_");
 		
 		/*======================图片文件上传结束===========================*/
@@ -84,12 +89,11 @@
 				unlink($pic['newMpath']);
 				exit;
 			}
-			var_dump($picname);
 			//4 写sql语句 执行sql  ignore不能添加重复信息
-//			$sql = "insert ignore into goods(adminid,addtime,username,name,sex,age,phone1,phone2,qq1,qq2,idcard,address,
-//			nowaddr,alipay,tenpay,addpic,idapic,idbpic,alipaypic,tenpaypic,ippic,lifepic,twocardpic,onemonthpic,videoidpic) 
+//			$sql = "insert ignore into goods(adminid,addtime,username,name,sex,age,phone1,phone2,qq1,qq2,
+//			idcard,address,nowaddr,alipay,tenpay,addpic,idapic,idbpic,alipaypic) 
 //			values((select id from admin where name = $adminid ;),'$addtime','$username','$name',$sex,$age,'$phone1','$phone2','$qq1','$qq2',
-//			'$idcard','$address','$nowaddr','$alipay','$tenpay','$picname','$picname','$picname','$picname')";
+//			'$idcard','$address','$nowaddr','$alipay','$tenpay','$picname')";
 //			echo $sql;
 //			mysqli_query($link,$sql);
 //			//5判断是否操作成功 
@@ -104,7 +108,6 @@
 		}
 		/*===============执行用户添加=====================*/
 	}
-
 	//6 关闭数据库  释放资源
 	//is_resource() 检测变量是否为资源类型
 	if(is_resource($link)) {	//判断是否为空资源，为空 即关闭数据库连接和释放资源

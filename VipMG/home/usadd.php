@@ -9,11 +9,9 @@ body {
 	background: #f2f0f5;
 	padding: 15px 0px 10px 5px;
 }
-
 #searchmain {
 	font-size: 12px;
 }
-
 #search {
 	font-size: 12px;
 	background: #548fc9;
@@ -22,14 +20,12 @@ body {
 	width: 100%;
 	color: #FFF
 }
-
 #search form span {
 	height: 40px;
 	line-height: 40px;
 	padding: 0 0px 0 10px;
 	float: left;
 }
-
 #search form input.text-word {
 	height: 24px;
 	line-height: 24px;
@@ -39,7 +35,6 @@ body {
 	float: left;
 	border: 1px solid #FFF;
 }
-
 #search form input.text-but {
 	height: 24px;
 	line-height: 24px;
@@ -53,7 +48,6 @@ body {
 	margin: 8px 0 0 6px;
 	display: inline;
 }
-
 #search a.add {
 	background: url(../include/images/main/add.jpg) no-repeat 0px 6px;
 	padding: 0 10px 0 26px;
@@ -63,70 +57,56 @@ body {
 	font-weight: bold;
 	color: #FFF
 }
-
 #search a:hover.add {
 	text-decoration: underline;
 	color: #d2e9ff;
 }
-
 #main-tab {
 	border: 1px solid #eaeaea;
 	background: #FFF;
 	font-size: 12px;
 }
-
 #main-tab th {
 	font-size: 12px;
 	background: url(../include/images/main/list_bg.jpg) repeat-x;
 	height: 32px;
 	line-height: 32px;
 }
-
 #main-tab td {
 	font-size: 12px;
 	line-height: 40px;
 }
-
 #main-tab td a {
 	font-size: 12px;
 	color: #548fc9;
 }
-
 #main-tab td a:hover {
 	color: #565656;
 	text-decoration: underline;
 }
-
 .bordertop {
 	border-top: 1px solid #ebebeb
 }
-
 .borderright {
 	border-right: 1px solid #ebebeb
 }
-
 .borderbottom {
 	border-bottom: 1px solid #ebebeb
 }
-
 .borderleft {
 	border-left: 1px solid #ebebeb
 }
-
 .gray {
 	color: #dbdbdb;
 }
-
 b {
 	color: red;
 	font-size: 20px;
 }
-
 td.fenye {
 	padding: 10px 0 0 0;
 	text-align: right;
 }
-
 .bggray {
 	background: #f9f9f9;
 	font-size: 14px;
@@ -134,11 +114,9 @@ td.fenye {
 	padding: 10px 10px 10px 0;
 	width: 120px;
 }
-
 .main-for {
 	padding: 10px;
 }
-
 .main-for input.text-word {
 	width: 310px;
 	height: 36px;
@@ -148,7 +126,6 @@ td.fenye {
 	font-family: "Microsoft YaHei", "Tahoma", "Arial", '宋体';
 	padding: 0 10px;
 }
-
 .main-for select {
 	width: 310px;
 	height: 36px;
@@ -158,7 +135,6 @@ td.fenye {
 	font-family: "Microsoft YaHei", "Tahoma", "Arial", '宋体';
 	color: #666;
 }
-
 .main-for input.text-but {
 	width: 100px;
 	height: 40px;
@@ -174,7 +150,6 @@ td.fenye {
 	font-size: 14px;
 	font-weight: bold;
 }
-
 #addinfo a {
 	font-size: 14px;
 	font-weight: bold;
@@ -182,11 +157,9 @@ td.fenye {
 	padding: 0px 0 0px 20px;
 	line-height: 45px;
 }
-
 #addinfo a:hover {
 	background: url(../include/images/main/addinfoblue.jpg) no-repeat 0 1px;
 }
-
 </style>
 </head>
 <body>
@@ -342,7 +315,7 @@ td.fenye {
         <input type="file" name="alipaypic"><b>*</b>
         </td>
       </tr>
-      <!--<tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">财付通实名认证截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="file" name="tenpaypic">
@@ -371,7 +344,7 @@ td.fenye {
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="file" name="onemonthpic">
         </td>
-      </tr>-->
+      </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b>*</b></td>
         <td align="left" valign="middle" class="borderright borderbottom main-for"><h4>加<b>*</b>号项为必填项，不能为空。。。</h4>
