@@ -3,6 +3,7 @@
 <head runat="server">
 	<meta charset=utf-8 />
     <title>后台管理登录界面</title>
+	<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
     <link href="./include/css/alogin.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -41,6 +42,9 @@
 						break;
 						case 3:
 							echo "<h2 style='color:red; margin:0px auto;'>验证码错误</h2>";
+						break;
+						case 4:
+							echo "<h2 style='color:red; margin:0px auto;'>该管理员已被超级管理员删除</h2>";
 						break;
 					}
 				?>

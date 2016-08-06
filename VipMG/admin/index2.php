@@ -2,8 +2,8 @@
 	//开启session接收消息
 	session_start();	
 	//登录验证
-	if(empty($_SESSION['user'])){
-		header('Location:login.php');
+	if($_SESSION['user']['status'] != 1){	//判断session里status为已删除管理员不予登录后台
+		header('Location:./login.php?errno=4');
 		exit;
 	}
 ?>

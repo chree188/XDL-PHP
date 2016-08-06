@@ -15,11 +15,13 @@
 	$_GET['a'] = empty($_GET['a'])? 0 : $_GET['a'];
 	switch($_GET['a']){
 		
+		/*=========================================管理员账户操作部分=========================================================*/
+		
 		//添加
 		case "insert":
 		//接收表单传递过来的用户信息
 		if(!$_POST['username']||!$_POST['name']||!$_POST['pass']||!$_POST['phone']){		//带*号必填项不能为空
-			header("Location:add.php?errno=2");
+			header("Location:add.php?errno=1");
 			exit;
 		}
 		$username = $_POST['username'];
@@ -28,33 +30,33 @@
 		$sex = $_POST['sex'];
 		$address = $_POST['address'];
 		$phone = $_POST['phone'];
+		$addtime = time();
 		//4 写sql语句 执行sql
-		$sql = "insert ignore into admin(username,name,pass,sex,address,phone) 
-		values('$username','$name','$pass','$sex','$address','$phone')";
+		$sql = "insert ignore into admin(username,name,pass,sex,address,phone,logintime) 
+		values('$username','$name','$pass','$sex','$address','$phone','$addtime')";
 		mysqli_query($link,$sql);
 		//5判断是否操作成功 
 		if(mysqli_insert_id($link)>0){
 			header("Location:index.php");
 		}else{
-			header("Location:add.php?errno=1");
+			header("Location:{$_SERVER['HTTP_REFERER']}&errno=2");
 		}
 		break;
 
 		
 		//删除
 		case "del":
-		//4 写sql语句 执行sql
-		$sql = "delete from admin where id={$_GET['id']}";
+		//4 写sql语句 执行sql		实际生活中项目数据库删除乃大忌
+		$sql = "update admin set status=2 where id={$_GET['id']}";	//删除执行更改状态为2，不予显示；数据库数据不做删除操作
 		mysqli_query($link,$sql);
 
 		//5判断是否操作成功 
 		if(mysqli_affected_rows($link)>0){
-//			header("Location:index.php");
 			header("Location:{$_SERVER['HTTP_REFERER']}");
 			//这个常量可以告诉我们 是从哪里来的 
 			//你从哪里来 回到哪里去 
 		}else{
-			header("Location:index.php?errno=3");
+			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
 		}
 		break;
 
@@ -63,7 +65,7 @@
 		case "update":
 		//接收表单传递过来的用户信息
 		if(!$_POST['username']||!$_POST['name']||!$_POST['pass']||!$_POST['phone']){	//带*号必填项不能为空
-			header("Location:edit.php?id={$_POST['id']}&errno=2");
+			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
 			exit;
 		}
 		$username = $_POST['username'];
@@ -75,16 +77,26 @@
 		//4 写sql语句 执行sql
 		$sql = "update admin set username='$username',name='$name',pass='$pass',sex=$sex,address='$address',
 		phone='$phone' where id={$_POST['id']}";
-//		echo $sql;exit;
+		//echo $sql;exit;	//echo来排错
 		mysqli_query($link,$sql);
 		
 		if(mysqli_affected_rows($link)>0){
 			header("Location:index.php");
 		}else{
-			header("Location:{$_SERVER['HTTP_REFERER']}&errno=1");
+			header("Location:{$_SERVER['HTTP_REFERER']}&errno=2");
 		}
 		break;
+		/*===========================================管理员账户部分操作结束======================================================*/
+		
+		/*==============================================刷手会员部分=========================================================*/
+		
+		
 	}
-	//6 关闭数据库  释放资源
-	mysqli_close($link);
-	mysqli_free_result($result);
+	//关闭数据库  释放资源
+	//is_resource() 检测变量是否为资源类型
+	if(is_resource($link)) {	//判断是否为资源，为资源  即关闭数据库连接和释放资源
+		mysqli_close($link);	
+	}
+	if(is_resource($result||$res)) {
+		mysqli_free_result($result||$res);	
+	}

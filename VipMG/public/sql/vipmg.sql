@@ -29,14 +29,15 @@ CREATE TABLE `admin` (
   `address` varchar(255) DEFAULT NULL,
   `phone` varchar(16) NOT NULL,
   `state` enum('1','2') NOT NULL DEFAULT '2',
+  `status` enum('1','2') NOT NULL DEFAULT '1',
   `logintime` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `admin` */
 
-insert  into `admin`(`id`,`username`,`name`,`pass`,`sex`,`address`,`phone`,`state`,`logintime`) values (1,'admin','admin','21232f297a57a5a743894a0e4a801fc3',1,'浙江省开化县','12345678912','1',1469409209);
+insert  into `admin`(`id`,`username`,`name`,`pass`,`sex`,`address`,`phone`,`state`,`status`,`logintime`) values (1,'admin','admin','21232f297a57a5a743894a0e4a801fc3',1,'浙江省开化县','12345678912','1','1',1470474484),(2,'js','剑圣','a40f8f12d1f0656b6185c83a89a47001',1,'英雄联盟','123','2','2',1470474150),(3,'mgn','莫甘娜','a5ffe5487f62ef75d8e5cf78c18525a5',2,'英雄联盟','123','2','1',1470474171);
 
 /*Table structure for table `users` */
 

@@ -22,6 +22,7 @@ create table admin(
 	address varchar(255),
 	phone varchar(16) not null,
 	state enum('1','2')  not null default '2',
+	status enum('1','2')  not null default '1',
 	logintime int(11)
 )engine=myisam default charset=utf8;
 

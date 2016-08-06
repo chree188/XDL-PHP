@@ -195,25 +195,17 @@ td.fenye {
 		$_GET['errno'] = empty($_GET['errno'])? '' : $_GET['errno'];
 		switch($_GET['errno']) {
 			case 1 :
-				echo "<h2 style='color:red; '>用户信息未被修改 >> 新密码与原密码相同</h2>";
+				echo "<h2 style='color:red; '>带*项不能为空 >> 修改失败！</h2>";
 				break;
 			case 2 :
-				echo "<h2 style='color:red; '>带*项不能为空 >> 修改失败</h2>";
-				break;
-			case 3 :
-				echo "<h2 style='color:red; '>管理员账户不能被修改 >> 修改失败</h2>";
+				echo "<h2 style='color:red; '>信息未被修改 >> 修改失败！</h2>";
 				break;
 		}
 	?>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">用户管理</a>&nbsp;&nbsp;>&nbsp;&nbsp;修改管理员</td>
-  </tr>
-  <tr>
-    <td align="left" valign="top" id="addinfo">
-    <a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增管理员</a>
-    </td>
+    <td width="99%" align="left" valign="top">您的位置：修改信息</td>
   </tr>
   <tr>
     <td align="left" valign="top">

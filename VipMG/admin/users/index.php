@@ -1,4 +1,12 @@
-<?php session_start();	?>
+<?php
+	//开启session接收消息
+	session_start();	
+	//登录验证
+	if($_SESSION['user']['state'] != 1){	//判断session里state非超级管理员 不允许进入超级管理员页后台
+		header('Location:../login.php');
+		exit;
+	}
+?>
 <html>
 <head>
 <meta charset=utf-8 />
@@ -147,7 +155,7 @@ span.num {
 	<?php
 		//输出删除失败的提示
 		switch(@$_GET['errno']){
-			case 3: echo "<h3 style='color:red'>删除失败!</h3>";
+			case 1: echo "<h3 style='color:red'>删除失败!</h3>";
 			break;
 		}
 		
@@ -241,7 +249,7 @@ span.num {
 
 			//3 判断搜索条件的有效性	
 				if(count($wherelist)>0){
-					$where = " where ".implode(" and ",$wherelist);
+					$where = " and ".implode(" and ",$wherelist);
 					$url = "&".implode("&", $urllist);
 				}
 
@@ -254,7 +262,7 @@ span.num {
 				$maxRow = 0;	//一共有多少条
 				$pageSize = 8;	//每页显示多少条	页大小
 //				2 一共多少条
-				$sql = "select * from admin ".$where;
+				$sql = "select * from admin where status = 1 ".$where;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -271,9 +279,9 @@ span.num {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select * from admin $where order by id $limit";
+			$sql = "select * from admin where status = 1 $where order by id $limit";
 			$result = mysqli_query($link,$sql);
-//			echo $sql;	// 打印sql语句来排错		********************************
+//			echo $sql;	// 打印sql语句来排错
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
