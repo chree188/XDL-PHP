@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>查看用户</title>
+<title>查看名下会员</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
@@ -157,7 +157,7 @@ span.num {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：用户管理</td>
+    <td width="99%" align="left" valign="top">您的位置：查看名下会员</td>
   </tr>
   <tr>
     <td align="left" valign="top">
@@ -179,7 +179,6 @@ span.num {
 	         <input name="" type="submit" value="查询" class="text-but">
 	         </form>
          </td>
-  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增用户</a></td>
   		</tr>
 	</table>
     </td>

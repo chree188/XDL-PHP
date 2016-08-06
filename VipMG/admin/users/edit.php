@@ -208,7 +208,7 @@ td.fenye {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">用户管理</a>&nbsp;&nbsp;>&nbsp;&nbsp;修改用户</td>
+    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">用户管理</a>&nbsp;&nbsp;>&nbsp;&nbsp;修改管理员</td>
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">
@@ -230,7 +230,7 @@ td.fenye {
 			mysqli_set_charset($link,"utf8");
 			mysqli_select_db($link,DBNAME);
 			//4 写sql语句 执行sql
-			$sql = "select * from users where id={$_GET['id']}";
+			$sql = "select * from admin where id={$_GET['id']}";
 			$result = mysqli_query($link,$sql);
 
 			//5 解析结果集 
@@ -248,17 +248,18 @@ td.fenye {
         <input type="text" name="username" value="<?php echo $row['username']?>" class="text-word">
         <b>*</b>
         </td>
-        </tr>
+      </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">密码：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="pass" value="" placeholder="请输入新密码" class="text-word">
+        <b>*</b>
+        </td>
+      </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">真实姓名：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="name" value="<?php echo $row['name']?>" class="text-word">
-        </td>
-        </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户密码：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="pass" value="" placeholder="请输入新密码" class="text-word">
         <b>*</b>
         </td>
       </tr>
@@ -268,7 +269,7 @@ td.fenye {
         <label><input type="radio" name="sex" value="1"<?php echo $row['sex']=='1' ? 'checked' :'';  ?> >男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <label><input type="radio" name="sex" value="2"<?php echo $row['sex']=='2' ? 'checked' :'';  ?> >女</label>
         </td>
-        </tr>
+      </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">地址：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
@@ -276,32 +277,10 @@ td.fenye {
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">邮编：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="code" value="<?php echo $row['code']?>" class="text-word">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">电话：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="phone" value="<?php echo $row['phone']?>" class="text-word">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">Email：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="email" value="<?php echo $row['email']?>" class="text-word">
         <b>*</b>
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户权限：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <select name="state" id="level">
-	    <option value="1"<?php echo $row['state']=='1' ? 'selected' :'';  ?> >&nbsp;&nbsp;超级管理员</option>
-	    <option value="2"<?php echo $row['state']=='2' ? 'selected' :'';  ?> >&nbsp;&nbsp;TCTY会员</option>
-	    <option value="3"<?php echo $row['state']=='3' ? 'selected' :'';  ?> >&nbsp;&nbsp;普通用户</option>
-        </select>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">

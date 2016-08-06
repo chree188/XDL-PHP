@@ -17,7 +17,7 @@
 	//2 验证验证码 账号 密码
 	$_SESSION['mycode'] = empty($_SESSION['mycode'])? '':$_SESSION['mycode'];
 	if($code != $_SESSION['mycode']){
-		header("Location:login.php?errno=2");
+		header("Location:login.php?errno=3");
 		exit;
 	}
 	
@@ -50,4 +50,16 @@
 	}else{
 		header('Location:index2.php');	//二级管理员页面
 	}
+	//更新最后登录时间
+	$uptime = time();
+	$uptime = "update admin set logintime ='$uptime' where username='{$name}'";
+	mysqli_query($link,$uptime);
 	
+	//关闭数据库  释放资源
+	//is_resource() 检测变量是否为资源类型
+	if(is_resource($link)) {	//判断是否为空资源，为空 即关闭数据库连接和释放资源
+		mysqli_close($link);	
+	}
+	if(is_resource($result||$res)) {
+		mysqli_free_result($result||$res);	
+	}

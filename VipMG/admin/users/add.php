@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
+<title>添加管理员</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
 <style> 

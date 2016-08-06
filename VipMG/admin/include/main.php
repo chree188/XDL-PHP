@@ -136,10 +136,9 @@ div.main-order {
 								//获取当前登录者的IP地址
 								$ip = $_SERVER["REMOTE_ADDR"];
 								echo "当前登录IP地址为：".$ip;
-						    ?>&
-						nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时 </span>
+						    ?>&nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时 </span>
 						<a href="../users/edit.php?id=<?php echo $_SESSION['user']['id']; ?>" target="mainFrame" onFocus="this.blur()">
-							更改密码
+							更改账号信息
 						</a>
 					</div>
     </td>

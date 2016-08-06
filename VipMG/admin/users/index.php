@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>查看用户</title>
+<title>查看管理员</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
@@ -157,7 +157,7 @@ span.num {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：用户管理</td>
+    <td width="99%" align="left" valign="top">您的位置：查看管理员</td>
   </tr>
   <tr>
     <td align="left" valign="top">
@@ -179,7 +179,7 @@ span.num {
 	         <input name="" type="submit" value="查询" class="text-but">
 	         </form>
          </td>
-  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增用户</a></td>
+  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增管理员</a></td>
   		</tr>
 	</table>
     </td>
@@ -195,11 +195,9 @@ span.num {
         <th align="center" valign="middle" class="borderright">姓名</th>
         <th align="center" valign="middle" class="borderright">性别</th>
         <th align="center" valign="middle" class="borderright">地址</th>
-        <th align="center" valign="middle" class="borderright">邮编</th>
         <th align="center" valign="middle" class="borderright">电话</th>
-        <th align="center" valign="middle" class="borderright">邮箱</th>
-        <th align="center" valign="middle" class="borderright">权限</th>
-        <th align="center" valign="middle" class="borderright">注册时间</th>
+        <th align="center" valign="middle" class="borderright">状态</th>
+        <th align="center" valign="middle" class="borderright">最后登录时间</th>
         <th align="center" valign="middle">操作</th>
       </tr>
       
@@ -211,10 +209,8 @@ span.num {
 			$sex = array("1"=>"男","2"=>"女");
 			//反数据库性别
 			$unsex = array("男"=>"1","女"=>"2");
-			// 设置权限
-			$state = array("1"=>"超级管理员","2"=>"TCTY会员","3"=>"普通用户");
-			//反数据库用户权限
-			$unstate = array("超级管理员"=>"1","TCTY会员"=>"2","普通用户"=>"3");
+			// 设置状态
+			$state = array("1"=>"超级管理员","2"=>"管理员");
 			//六脉神剑 
 			//1 导入数据库配置文件
 			include("../../public/sql/dbconfig.php");
@@ -230,17 +226,12 @@ span.num {
 				$urllist = array();	//封装url的状态维持的条件
 			//2 接收搜索条件 
 				$unsex[$_GET['name']] = empty($unsex[$_GET['name']])? "{$_GET['name']}" : $unsex[$_GET['name']];	//判断是否传除男 女性别之外的条件
-				$unstate[$_GET['name']] = empty($unstate[$_GET['name']])? "{$_GET['name']}" : $unstate[$_GET['name']];	//判断是否传除超级管理员 一般管理员之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
 					$wherelist[] =" (name like '%{$_GET['name']}%' 
 					or username like '%{$_GET['name']}%' 
 					or address like '%{$_GET['name']}%'
-					or username like '%{$_GET['name']}%'
-					or code like '%{$_GET['name']}%'
 					or phone like '%{$_GET['name']}%'
-					or email like '%{$_GET['name']}%'
-					or sex like '%{$unsex[$_GET['name']]}%'
-					or state like '%{$unstate[$_GET['name']]}%' )"; 
+					or sex like '%{$unsex[$_GET['name']]}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
 				if(!empty($_GET['sex'])){
@@ -263,7 +254,7 @@ span.num {
 				$maxRow = 0;	//一共有多少条
 				$pageSize = 8;	//每页显示多少条	页大小
 //				2 一共多少条
-				$sql = "select * from users ".$where;
+				$sql = "select * from admin ".$where;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -280,14 +271,14 @@ span.num {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select * from users $where order by id $limit";
+			$sql = "select * from admin $where order by id $limit";
 			$result = mysqli_query($link,$sql);
 //			echo $sql;	// 打印sql语句来排错		********************************
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
 				$i++;
-				$regTime = date("Y-m-d H:i:s",$row['addtime']);	//格式化注册时间戳
+				$loginTime = date("Y-m-d H:i:s",$row['logintime']);	//格式化最后登录时间戳
 				echo "<tr onMouseOut=\"this.style.backgroundColor='#ffffff'\" 
 				onMouseOver=\"this.style.backgroundColor='#edf5ff'\">";
 				echo "<td align='center' valign='middle' class='borderright borderbottom num'>{$i}</td>";
@@ -296,20 +287,21 @@ span.num {
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['name']}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$sex[$row['sex']]}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['address']}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['code']}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['phone']}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['email']}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$state[$row['state']]}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$regTime}</td>";
+				if($row['state']!=1){
+		        	echo "<td align='center' valign='middle' class='borderright borderbottom'>{$state[$row['state']]}</td>";
+				}else{
+					echo "<td align='center' valign='middle' class='borderright borderbottom'><font color='red'>{$state[$row['state']]}</font></td>";
+				}
+		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$loginTime}</td>";
 		        echo "<td align='center' valign='middle' class='borderbottom'>";
-		        if($row['state']!=1){
+			    if($row['state']!=1){
 			        echo "<a href='edit.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>编辑</a>";
 			        echo "<span class='gray'>&nbsp;|&nbsp;</span>";
 			        echo "<a href=action.php?a=del&id={$row['id']} target='mainFrame' onFocus='this.blur()' class='add'>删除</a></td>";
 		        }else{
-		        	echo "管理员账户不可被修改及删除";
+		        	echo "<a href='edit.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>编辑</a>";
 		        }
-				
 		      	echo "</tr>";
 			}
 			//6 关闭数据库 释放结果集 

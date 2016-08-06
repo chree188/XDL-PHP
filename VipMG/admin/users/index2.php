@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>查看用户</title>
+<title>查看会员</title>
 <link href="../include/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../include/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
