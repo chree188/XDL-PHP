@@ -270,7 +270,7 @@ span.num {
 			//2 接收搜索条件 
 				$unsex[$_GET['name']] = empty($unsex[$_GET['name']])? "{$_GET['name']}" : $unsex[$_GET['name']];	//判断是否传除男 女性别之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
-					$wherelist[] =" (name like '%{$_GET['name']}%' 
+					$wherelist[] =" users.(name like '%{$_GET['name']}%' 
 					or username like '%{$_GET['name']}%' 
 					or address like '%{$_GET['name']}%'
 					or nowaddr like '%{$_GET['name']}%'
@@ -283,8 +283,8 @@ span.num {
 					$urllist[] = "name={$_GET['name']}";
 				}	
 				if(!empty($_GET['sex'])){
-					$wherelist[] = "sex='{$_GET['sex']}'";
-					$urllist[] = "sex={$_GET['sex']}";
+					$wherelist[] = "users.sex='{$_GET['sex']}'";
+					$urllist[] = "users.sex={$_GET['sex']}";
 				}
 				if(!empty($_GET['adminid'])){
 					$wherelist[] = "adminid='{$_GET['adminid']}'";
@@ -325,7 +325,7 @@ span.num {
 			//4 写sql语句 获得结果集 
 			$sql = "select users.* , admin.name as adname from users inner join admin on users.adminid = admin.id where users.status = 1 $where order by adminid $limit";
 			$result = mysqli_query($link,$sql);
-//			echo $sql;	// 打印sql语句来排错
+			echo $sql;	// 打印sql语句来排错
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
@@ -348,7 +348,7 @@ span.num {
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['alipay']}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['picname']}</td>";
 		        echo "<td align='center' valign='middle' class='borderbottom'>";
-			    echo "<a href='details.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>详情</a>";
+			    echo "<a href='details2.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>详情</a>";
 				echo "<span class='gray'>&nbsp;|&nbsp;</span>";
 			    echo "<a href='edit2.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>编辑</a>";
 			    echo "<span class='gray'>&nbsp;|&nbsp;</span>";
