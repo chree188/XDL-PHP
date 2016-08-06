@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
+<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 <link href="../public/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../public/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
@@ -192,7 +193,36 @@ td.fenye {
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">推荐人姓名：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="adminid" value="" placeholder="请输入推荐人姓名" class="text-word">
+        	<?php
+		        echo "<select name='adminid'>";
+					echo "<option value=''>--请选择--</option>";
+					//查看类别信息 select 输出到表格里面 
+					//六脉神剑 
+					//1 导入数据库配置文件
+					include("../public/sql/dbconfig.php");
+					//2 连接数据库
+					$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
+					//3 设置字符集 选择数据库
+					mysqli_set_charset($link,"utf8");
+					mysqli_select_db($link,DBNAME);
+					//4 写sql语句 获得结果集 
+					$sql = "select * from admin";	// 修改为一类别pid path排序
+					$result = mysqli_query($link,$sql);
+					//5 解析结果集 
+					while($row = mysqli_fetch_assoc($result)){
+						//显示下拉列表的形式
+						$disable = null;
+						if($row['id']==1){
+							$disable = "disabled";
+						}
+						echo "<option value='{$row['id']}'{$disable}>{$row['name']}</option>";
+					}	
+					//6 关闭数据库 释放结果集 
+					
+					mysqli_close($link);
+					mysqli_free_result($result);
+		        echo "</select>";
+			?>
         <b>*</b>
         </td>
       </tr>

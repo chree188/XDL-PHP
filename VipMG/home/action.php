@@ -54,7 +54,7 @@
 //			echo $addpic;echo $idapic;echo $idbpic;echo $alipaypic;
 			
 			//4 实现图片的压缩
-//			imageZoom($pic['newname'],$path,$width=100,$height=100,$pre="s_");
+			imageZoom($pic['newname'],$path,$width=100,$height=100,$pre="s_");
 			imageZoom($pic['newname'],$path,$width=300,$height=300,$pre="m_");
 		
 		/*======================图片文件上传结束===========================*/
@@ -63,6 +63,7 @@
 		/*===============执行用户添加=====================*/
 			//获取注册页面post提交的表单信息
 			$adminid = $_POST['adminid'];//带*项不为空
+			echo $adminid;exit;
 			$addtime = $_POST['addtime'];//带*项不为空
 			$username = $_POST['username'];//带*项不为空
 			$name = $_POST['name'];//带*项不为空

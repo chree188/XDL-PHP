@@ -26,7 +26,7 @@ create table admin(
 	logintime int(11)
 )engine=myisam default charset=utf8;
 
-/*插入超级管理员账号*/
+/*插入超级管理员账号,默认账号：admin 密码：admin*/
 insert into admin(id,username,name,pass,sex,address,phone,state,logintime) values (1,'admin','admin','21232f297a57a5a743894a0e4a801fc3',1,'浙江省开化县','12345678912','1',1469409209);
 
 
@@ -34,7 +34,7 @@ drop table if exists users;
 /*创建用户表 users*/
 create table users(
 	id int(11) unsigned not null auto_increment primary key,
-    adminid int(11) not null,
+    adminid int(11) not null default 1,
     constraint gtfk foreign key(adminid) references admin(id),
     addtime varchar(16) not null,
 	username varchar(16) not null unique,
@@ -50,5 +50,6 @@ create table users(
 	nowaddr varchar(255) not null,
 	alipay varchar(255) not null,
 	tenpay varchar(255),
-	picname varchar(255) not null
+	picname varchar(255) not null,
+	status enum('1','2')  not null default '1'
 )engine=myisam default charset=utf8;

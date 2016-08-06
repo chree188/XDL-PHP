@@ -237,14 +237,11 @@ span.num {
         <th align="center" valign="middle" class="borderright">年龄</th>
         <th align="center" valign="middle" class="borderright">推荐人</th>
         <th align="center" valign="middle" class="borderright">常用手机号</th>
-        <th align="center" valign="middle" class="borderright">备用手机号</th>
-        <th align="center" valign="middle" class="borderright">入会用QQ号</th>
-        <th align="center" valign="middle" class="borderright">备用QQ号</th>
+        <th align="center" valign="middle" class="borderright">常用QQ号</th>
         <th align="center" valign="middle" class="borderright">身份证号</th>
         <th align="center" valign="middle" class="borderright">身份证上住址</th>
         <th align="center" valign="middle" class="borderright">现住址</th>
         <th align="center" valign="middle" class="borderright">实名支付宝账号</th>
-        <th align="center" valign="middle" class="borderright">实名财富通账号</th>
         <th align="center" valign="middle" class="borderright">各类信息截图</th>
         <th align="center" valign="middle">操作</th>
       </tr>
@@ -291,7 +288,7 @@ span.num {
 
 			//3 判断搜索条件的有效性	
 				if(count($wherelist)>0){
-					$where = " where ".implode(" and ",$wherelist);
+					$where = " and ".implode(" and ",$wherelist);
 					$url = "&".implode("&", $urllist);
 				}
 
@@ -304,7 +301,7 @@ span.num {
 				$maxRow = 0;	//一共有多少条
 				$pageSize = 8;	//每页显示多少条	页大小
 //				2 一共多少条
-				$sql = "select * from users ".$where;
+				$sql = "select * from users where status = 1 ".$where;
 				$res = mysqli_query($link, $sql);
 				$maxRow = mysqli_num_rows($res);
 //				3 一共显示多少页
@@ -321,9 +318,9 @@ span.num {
 			/*================实现分页显示==================*/
 			
 			//4 写sql语句 获得结果集 
-			$sql = "select * from users $where order by id $limit";
+			$sql = "select * from users where status = 1 $where order by id $limit";
 			$result = mysqli_query($link,$sql);
-//			echo $sql;	// 打印sql语句来排错		********************************
+//			echo $sql;	// 打印sql语句来排错
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){

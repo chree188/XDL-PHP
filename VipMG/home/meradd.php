@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
+<link link rel="shortcut icon" type="imagex-icon" href="../favicon.ico" />
 <link href="../public/css/css.css" type="text/css" rel="stylesheet" />
 <link href="../public/css/main.css" type="text/css" rel="stylesheet" />
 <style> 
