@@ -14,9 +14,9 @@
 		/*======================先处理图片文件上传===========================*/
 		//加载文件上传的函数 
 		require("../public/functions.php");
-		echo "<pre>";
-		print_r($_FILES);
-		echo "</br>";
+//		echo "<pre>";
+//		print_r($_FILES);
+//		echo "</br>";
 		//执行多文件上传
 		foreach ($_FILES as $upfile ) {
 		
@@ -29,10 +29,9 @@
 			$uppic = fileupload($upfile,$path,$typelist);
 			
 		//	4 判断是否上传成功	
-			if($uppic['error']){
-				$picname = $uppic['info']."##";	//新的文件名
+			if(!$uppic['error']){
+				exit("文件上传失败".$uppic['info']);
 			}
-		//	echo $picname;	//echo下新文件名在数据库里怎么拼接
 			
 			//5 实现文件下载的时候需要的信息 
 			// 原图片名 原图大小 原图片类型  新图片名  新路径
@@ -88,11 +87,12 @@
 			//3 选择数据库 设置字符集
 			mysqli_set_charset($link,"utf8");
 			mysqli_select_db($link,DBNAME);
-			//4 写sql语句 执行sql  ignore不能添加重复信息
+			// 写sql语句 执行sql  ignore不能添加重复信息
 			$sql = "insert ignore into goods(adminid,addtime,username,name,sex,age,phone1,phone2,qq1,qq2,
 			idcard,address,nowaddr,alipay,tenpay,picname) 
-			values((select id from admin where name = $adminid ;),'$addtime','$username','$name',$sex,$age,'$phone1','$phone2','$qq1','$qq2',
-			'$idcard','$address','$nowaddr','$alipay','$tenpay','$picname')";
+			values('$adminid','$addtime','$username','$name',$sex,$age,'$phone1','$phone2','$qq1','$qq2',
+			'$idcard','$address','$nowaddr','$alipay','$tenpay','')";
+			echo $sql;
 		/*===============执行用户添加=====================*/
 		
 	//关闭数据库  释放资源
