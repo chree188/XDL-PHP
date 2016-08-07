@@ -47,11 +47,6 @@
 			$pic['newpath'] = $path.'/'.$pic['newname'];
 			$pic['newSpath'] = $path.'/s_'.$pic['newname'];
 			$pic['newMpath'] = $path.'/m_'.$pic['newname'];
-//			$addpic = $uppic['info'];
-//			$idapic = $uppic['info'];
-//			$idbpic = $uppic['info'];
-//			$alipaypic = $uppic['info'];
-//			echo $addpic;echo $idapic;echo $idbpic;echo $alipaypic;
 			
 			//4 实现图片的压缩
 			imageZoom($pic['newname'],$path,$width=100,$height=100,$pre="s_");
@@ -92,7 +87,7 @@
 			}
 			//4 写sql语句 执行sql  ignore不能添加重复信息
 //			$sql = "insert ignore into goods(adminid,addtime,username,name,sex,age,phone1,phone2,qq1,qq2,
-//			idcard,address,nowaddr,alipay,tenpay,addpic,idapic,idbpic,alipaypic) 
+//			idcard,address,nowaddr,alipay,tenpay,picname) 
 //			values((select id from admin where name = $adminid ;),'$addtime','$username','$name',$sex,$age,'$phone1','$phone2','$qq1','$qq2',
 //			'$idcard','$address','$nowaddr','$alipay','$tenpay','$picname')";
 //			echo $sql;
