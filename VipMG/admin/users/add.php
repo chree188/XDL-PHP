@@ -194,7 +194,7 @@ td.fenye {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">用户模块</a>&nbsp;&nbsp;>&nbsp;&nbsp;添加管理员</td>
+    <td width="99%" align="left" valign="top">您的位置：<a href="index.php">查看管理员</a>&nbsp;&nbsp;>&nbsp;&nbsp;添加管理员</td>
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">

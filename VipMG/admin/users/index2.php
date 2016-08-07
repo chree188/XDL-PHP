@@ -270,16 +270,16 @@ span.num {
 			//2 接收搜索条件 
 				$unsex[$_GET['name']] = empty($unsex[$_GET['name']])? "{$_GET['name']}" : $unsex[$_GET['name']];	//判断是否传除男 女性别之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
-					$wherelist[] =" (name like '%{$_GET['name']}%' 
-					or username like '%{$_GET['name']}%' 
-					or address like '%{$_GET['name']}%'
-					or nowaddr like '%{$_GET['name']}%'
-					or age like '%{$_GET['name']}%'
-					or phone1 like '%{$_GET['name']}%'
-					or qq1 like '%{$_GET['name']}%'
-					or sex like '%{$unsex[$_GET['name']]}%'
-					or idcard like '%{$_GET['name']}%' 
-					or alipay like '%{$_GET['name']}%' )"; 
+					$wherelist[] =" (users.name like '%{$_GET['name']}%' 
+					or users.username like '%{$_GET['name']}%' 
+					or users.address like '%{$_GET['name']}%'
+					or users.nowaddr like '%{$_GET['name']}%'
+					or users.age like '%{$_GET['name']}%'
+					or users.phone1 like '%{$_GET['name']}%'
+					or users.qq1 like '%{$_GET['name']}%'
+					or users.sex like '%{$unsex[$_GET['name']]}%'
+					or users.idcard like '%{$_GET['name']}%' 
+					or users.alipay like '%{$_GET['name']}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
 				if(!empty($_GET['sex'])){
@@ -325,7 +325,7 @@ span.num {
 			//4 写sql语句 获得结果集 
 			$sql = "select users.* , admin.name as adname from users inner join admin on users.adminid = admin.id where users.status = 1 $where order by adminid $limit";
 			$result = mysqli_query($link,$sql);
-			echo $sql;	// 打印sql语句来排错
+//			echo $sql;	// 打印sql语句来排错
 			//5 解析结果集 
 			$i = 0;
 			while($row = mysqli_fetch_assoc($result)){
@@ -346,13 +346,22 @@ span.num {
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['address']}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['nowaddr']}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['alipay']}</td>";
-		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['picname']}</td>";
+		      	echo "<td align='center' valign='middle' class='borderright borderbottom'>";
+			    echo "<a href='' target='mainFrame' onFocus='this.blur()' class='add'>打款</a>";
+				echo "<span class='gray'>&nbsp;|&nbsp;</span>";
+			    echo "<a href='' target='mainFrame' onFocus='this.blur()' class='add'>身份证A</a>";
+				echo "<span class='gray'>&nbsp;|&nbsp;</span>";
+			    echo "<a href='' target='mainFrame' onFocus='this.blur()' class='add'>身份证B</a>";
+				echo "<span class='gray'>&nbsp;|&nbsp;</span>";
+			    echo "<a href='' target='mainFrame' onFocus='this.blur()' class='add'>支付宝</a>";
+			    echo "<span class='gray'>&nbsp;|&nbsp;</span>";
+			    echo "<a href='' target='mainFrame' onFocus='this.blur()' class='add'>手持身份证</a></td>";
 		        echo "<td align='center' valign='middle' class='borderbottom'>";
 			    echo "<a href='details2.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>详情</a>";
 				echo "<span class='gray'>&nbsp;|&nbsp;</span>";
 			    echo "<a href='edit2.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>编辑</a>";
 			    echo "<span class='gray'>&nbsp;|&nbsp;</span>";
-			    echo "<a href=action.php?a=del2&id={$row['id']} target='mainFrame' onFocus='this.blur()' class='add'>删除</a></td>";
+			    echo "<a href='action.php?a=del2&id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>删除</a></td>";
 		      	echo "</tr>";
 			}
 			//6 关闭数据库 释放结果集 

@@ -155,7 +155,13 @@ span.num {
 	<?php
 		//输出删除失败的提示
 		switch(@$_GET['errno']){
-			case 1: echo "<h3 style='color:red'>删除失败!</h3>";
+			case 1: echo "<h3 style='color:red'>添加成功!</h3>";
+			break;
+			case 2: echo "<h3 style='color:red'>删除成功!</h3>";
+			break;
+			case 3: echo "<h3 style='color:red'>删除失败!</h3>";
+			break;
+			case 4: echo "<h3 style='color:red'>修改成功!</h3>";
 			break;
 		}
 		

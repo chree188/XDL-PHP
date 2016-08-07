@@ -28,7 +28,7 @@ body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y
     <div style="float: left" id="my_menu" class="sdmenu">
       <div class="collapsed">
         <span>用户模块</span>
-        <a href="../users/add.php" target="mainFrame" onFocus="this.blur()">添加管理员</a>
+        <!--<a href="../users/add.php" target="mainFrame" onFocus="this.blur()">添加管理员</a>-->
         <a href="../users/index.php" target="mainFrame" onFocus="this.blur()">查看管理员</a>
         <a href="../users/index2.php" target="mainFrame" onFocus="this.blur()">查看刷手会员</a>
         <a href="../users/index3.php" target="mainFrame" onFocus="this.blur()">查看合作商家</a>

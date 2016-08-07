@@ -170,11 +170,15 @@ td.fenye {
 #addinfo a:hover {
 	background: url(../include/images/main/addinfoblue.jpg) no-repeat 0 1px;
 }
+
 </style>
 </head>
 <body>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
+  <tr>
+    <td width="99%" align="left" valign="top">您的位置：查看会员详情</td>
+  </tr>
   <tr>
     <td align="left" valign="top">
     	<?php
@@ -200,7 +204,6 @@ td.fenye {
 		}
 
 		?>
-    <form method="post" action="./action.php?a=insert" enctype="multipart/form-data">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <!--基础信息注册用户输入部分-->
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -294,63 +297,62 @@ td.fenye {
         <input type="text" name="tenpay" readonly value="<?php echo $row['tenpay']?>" class="text-word">
         </td>
       </tr>
-      <!--以下为信息截图部分-->
+      <!--------------------------------------以下为信息截图部分---------------------------------------------------------->
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">入会打款截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="addpic"><b>*</b>
+        <img src='../../uploads/s_{$row['picname']}'>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">身份证正面截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="idapic"><b>*</b>
+        <img src='../../uploads/s_{$row['picname']}'>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">身份证反面截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="idbpic"><b>*</b>
+        <img src='../../uploads/s_{$row['picname']}'>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">支付宝实名认证截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="alipaypic"><b>*</b>
+        <img src='../../uploads/s_{$row['picname']}'>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">财付通实名认证截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="tenpaypic">
+        <img src='../../uploads/s_{$row['picname']}'>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">ip地址截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="ippic">
+        <img src='../../uploads/s_{$row['picname']}'>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">近期生活照截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="lifepic">
+        <img src='../../uploads/s_{$row['picname']}'>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">第二证件截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="twocardpic">
+        <img src='../../uploads/s_{$row['picname']}'>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">通话记录截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="onemonthpic">
+        <img src='../../uploads/s_{$row['picname']}'>
         </td>
       </tr>
     </table>
-    </form>
     </td>
     </tr>
 </table>

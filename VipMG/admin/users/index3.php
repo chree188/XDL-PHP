@@ -165,7 +165,7 @@ span.num {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：商家管理</td>
+    <td width="99%" align="left" valign="top">您的位置：会员管理</td>
   </tr>
   <tr>
     <td align="left" valign="top">
@@ -270,21 +270,21 @@ span.num {
 			//2 接收搜索条件 
 				$unsex[$_GET['name']] = empty($unsex[$_GET['name']])? "{$_GET['name']}" : $unsex[$_GET['name']];	//判断是否传除男 女性别之外的条件
 				if(!empty($_GET['name'])){	//在表的各字段里根据条件模糊查询
-					$wherelist[] =" (name like '%{$_GET['name']}%' 
-					or username like '%{$_GET['name']}%' 
-					or address like '%{$_GET['name']}%'
-					or nowaddr like '%{$_GET['name']}%'
-					or age like '%{$_GET['name']}%'
-					or phone1 like '%{$_GET['name']}%'
-					or qq1 like '%{$_GET['name']}%'
-					or sex like '%{$unsex[$_GET['name']]}%'
-					or idcard like '%{$_GET['name']}%' 
-					or alipay like '%{$_GET['name']}%' )"; 
+					$wherelist[] =" (users.name like '%{$_GET['name']}%' 
+					or users.username like '%{$_GET['name']}%' 
+					or users.address like '%{$_GET['name']}%'
+					or users.nowaddr like '%{$_GET['name']}%'
+					or users.age like '%{$_GET['name']}%'
+					or users.phone1 like '%{$_GET['name']}%'
+					or users.qq1 like '%{$_GET['name']}%'
+					or users.sex like '%{$unsex[$_GET['name']]}%'
+					or users.idcard like '%{$_GET['name']}%' 
+					or users.alipay like '%{$_GET['name']}%' )"; 
 					$urllist[] = "name={$_GET['name']}";
 				}	
 				if(!empty($_GET['sex'])){
-					$wherelist[] = "sex='{$_GET['sex']}'";
-					$urllist[] = "sex={$_GET['sex']}";
+					$wherelist[] = "users.sex='{$_GET['sex']}'";
+					$urllist[] = "users.sex={$_GET['sex']}";
 				}
 				if(!empty($_GET['adminid'])){
 					$wherelist[] = "adminid='{$_GET['adminid']}'";
@@ -348,7 +348,7 @@ span.num {
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['alipay']}</td>";
 		        echo "<td align='center' valign='middle' class='borderright borderbottom'>{$row['picname']}</td>";
 		        echo "<td align='center' valign='middle' class='borderbottom'>";
-			    echo "<a href='details.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>详情</a>";
+			    echo "<a href='details2.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>详情</a>";
 				echo "<span class='gray'>&nbsp;|&nbsp;</span>";
 			    echo "<a href='edit2.php?id={$row['id']}' target='mainFrame' onFocus='this.blur()' class='add'>编辑</a>";
 			    echo "<span class='gray'>&nbsp;|&nbsp;</span>";

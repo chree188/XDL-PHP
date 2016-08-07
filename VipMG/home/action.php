@@ -63,7 +63,7 @@
 		/*===============执行用户添加=====================*/
 			//获取注册页面post提交的表单信息
 			$adminid = $_POST['adminid'];//带*项不为空
-			echo $adminid;exit;
+//			echo $adminid;exit;
 			$addtime = $_POST['addtime'];//带*项不为空
 			$username = $_POST['username'];//带*项不为空
 			$name = $_POST['name'];//带*项不为空

@@ -177,7 +177,7 @@ td.fenye {
 		//处理添加表单的错误信息
 		switch(@$_GET['errno']) {
 			case 1 :
-				echo "<h2 style='color:red; '>您的入会注册申请已提交，等待管理员审核。</h2>";
+				echo "<h2 style='color:red; '>会员信息修改成功。</h2>";
 				break;
 			case 2 :
 				echo "<h2 style='color:red; '>带<b>*</b>项不能为空。</h2>";
@@ -190,198 +190,120 @@ td.fenye {
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td align="center" valign="top" id="addinfo">
-    <h1>会员入会申请</h1>
-    </td>
+    <td width="99%" align="left" valign="top">您的位置：修改会员信息</td>
   </tr>
   <tr>
     <td align="left" valign="top">
-    <form method="post" action="./action.php?a=insert" enctype="multipart/form-data">
+    <form method="post" action="./action.php?a=update2" enctype="multipart/form-data">
+    	<?php
+		//需要获得被修改的用户信息
+		//1 导入配置文件 
+		
+		if(@$_GET['id']){
+
+			include("../../public/sql/dbconfig.php");
+			//2 连接数据库
+			$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
+			//3 选择数据库 设置字符集
+			mysqli_set_charset($link,"utf8");
+			mysqli_select_db($link,DBNAME);
+			//4 写sql语句 执行sql
+			$sql = "select * from users where id={$_GET['id']}";
+//			echo $sql;
+			$result = mysqli_query($link,$sql);
+
+			//5 解析结果集 
+			$row = mysqli_fetch_assoc($result);
+
+		}
+
+		?>
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <!--基础信息注册用户输入部分-->
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">推荐人姓名：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        	<?php
-		        echo "<select name='adminid'>";
-					echo "<option value=''>--请选择--</option>";
-					//查看类别信息 select 输出到表格里面 
-					//六脉神剑 
-					//1 导入数据库配置文件
-					include("../../public/sql/dbconfig.php");
-					//2 连接数据库
-					$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
-					//3 设置字符集 选择数据库
-					mysqli_set_charset($link,"utf8");
-					mysqli_select_db($link,DBNAME);
-					//4 写sql语句 获得结果集 
-					$sql = "select * from admin";	// 修改为一类别pid path排序
-					$result = mysqli_query($link,$sql);
-					//5 解析结果集 
-					while($row = mysqli_fetch_assoc($result)){
-						//显示下拉列表的形式
-						$disable = null;
-						if($row['id']==1){
-							$disable = "disabled";
-						}
-						echo "<option value='{$row['id']}'{$disable}>{$row['name']}</option>";
-					}	
-					//6 关闭数据库 释放结果集 
-					
-					mysqli_close($link);
-					mysqli_free_result($result);
-		        echo "</select>";
-			?>
-        <b>*</b>
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">入会日期：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="date" name="addtime" value="" class="text-word">
-        <b>*</b>
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">昵称：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="username" value="" placeholder="请输入昵称(两字)" maxlength="2" class="text-word" >
-        <b>*</b>
+        <input type="text" name="username" value="<?php echo $row['username']?>" class="text-word" ><b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">真实姓名：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="name" value="" placeholder="请输入您真实姓名" class="text-word">
-        <b>*</b>
+        <input type="text" name="name" value="<?php echo $row['name']?>" class="text-word"><b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">性别：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <label><input type="radio" name="sex" value="1" checked >男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><input type="radio" name="sex" value="2" >女</label>
+        <label><input type="radio" name="sex" value="1"<?php echo $row['sex']=='1' ? 'checked' :'';  ?> >男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input type="radio" name="sex" value="2"<?php echo $row['sex']=='2' ? 'checked' :'';  ?> >女</label>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">年龄：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="age" value="" placeholder="请输入年龄" maxlength="3" class="text-word">
+        <input type="text" name="age" value="<?php echo $row['age']?>" class="text-word">
         </td>
       </tr>  
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">常用手机号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="phone1" value="" placeholder="请输入您常用手机号" maxlength="11" class="text-word">
-        <b>*</b>
+        <input type="text" name="phone1" value="<?php echo $row['phone1']?>" class="text-word"><b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">备用手机号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="phone2" value="" placeholder="请输入备用手机号" maxlength="11" class="text-word">
+        <input type="text" name="phone2" value="<?php echo $row['phone2']?>" class="text-word">
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">入会用QQ号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="qq1" value="" placeholder="请输入您入会用QQ号" maxlength="11" class="text-word">
-        <b>*</b>
+        <input type="text" name="qq1" value="<?php echo $row['qq1']?>" class="text-word"><b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">备用QQ号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="qq2" value="" placeholder="请输入备用QQ号" maxlength="11" class="text-word">
+        <input type="text" name="qq2" value="<?php echo $row['qq2']?>" class="text-word">
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">身份证号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="idcard" value="" placeholder="请输入您本人的身份证号" maxlength="18" class="text-word">
-        <b>*</b>
+        <input type="text" name="idcard" value="<?php echo $row['idcard']?>" class="text-word"><b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">身份证上住址：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="address" value="" placeholder="请输入您身份证上住址" class="text-word">
-        <b>*</b>
+        <input type="text" name="address" value="<?php echo $row['address']?>" class="text-word"><b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">现住址：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="nowaddr" value="" placeholder="请输入您现住址" class="text-word">
-        <b>*</b>
+        <input type="text" name="nowaddr" value="<?php echo $row['nowaddr']?>" class="text-word"><b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">实名支付宝号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="alipay" value="" placeholder="请输入您实名认证支付宝账号" class="text-word">
-        <b>*</b>
+        <input type="text" name="alipay" value="<?php echo $row['alipay']?>" class="text-word"><b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">实名财付通号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="tenpay" value="" placeholder="请输入您实名认证财付通账号" class="text-word">
+        <input type="text" name="tenpay" value="<?php echo $row['tenpay']?>" class="text-word">
         </td>
       </tr>
       <!--以下为信息截图部分-->
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">入会打款截图：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">手持身份证截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="addpic"><b>*</b>
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">身份证正面截图：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="idapic"><b>*</b>
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">身份证反面截图：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="idbpic"><b>*</b>
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">支付宝实名认证截图：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="alipaypic"><b>*</b>
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">财付通实名认证截图：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="tenpaypic">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">ip地址截图：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="ippic">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">近期生活照截图：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="lifepic">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">第二证件截图：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="twocardpic">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">通话记录截图：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="file" name="onemonthpic">
+        <input type="file" name="videoidpic"><b>*</b>
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
