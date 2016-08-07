@@ -4,8 +4,8 @@
 //	1 加载上传文件的函数
 	require("uploadfile.php");
 	
-//	echo "<pre>";
-//	print_r($_FILES);
+	echo "<pre>";
+	print_r($_FILES);
 
 //	$_FILES此时是一个二维array,要变成一维array使用foreach()遍历
 

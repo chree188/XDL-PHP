@@ -187,7 +187,7 @@ td.fenye {
   </tr>
   <tr>
     <td align="left" valign="top">
-    <form method="post" action="./action.php?a=insert" enctype="multipart/form-data">
+    <form method="post" action="./usaction.php" enctype="multipart/form-data">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <!--基础信息注册用户输入部分-->
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -257,7 +257,7 @@ td.fenye {
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">年龄：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="age" value="" placeholder="请输入年龄" maxlength="3" class="text-word">
+        <input type="text" name="age" value="" placeholder="请输入年龄" maxlength="2" class="text-word">
         </td>
       </tr>  
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -320,7 +320,7 @@ td.fenye {
         <input type="text" name="tenpay" value="" placeholder="请输入您实名认证财付通账号" class="text-word">
         </td>
       </tr>
-      <!--以下为信息截图部分-->
+      <!-------------------------------------------以下为信息截图部分------------------------------------------------>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">入会打款截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
@@ -345,7 +345,8 @@ td.fenye {
         <input type="file" name="alipaypic"><b>*</b>
         </td>
       </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+      <!---------------------------------不是必填项，由于报错原因；暂时搁置-------------------------------------->
+      <!--<tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">财付通实名认证截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="file" name="tenpaypic">
@@ -373,7 +374,8 @@ td.fenye {
         <td align="right" valign="middle" class="borderright borderbottom bggray">通话记录截图：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="file" name="onemonthpic">
-        </td>
+      </td>-->
+      <!---------------------------------不是必填项，由于报错原因；暂时搁置-------------------------------------->
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">注意输入框末尾的 <b>*</b></td>
