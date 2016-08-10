@@ -248,6 +248,11 @@
 		return  $return;
 	}
 
+	/**
+	 * [autoOpen ]
+	 * @param  [string]  $img_path 	[]
+	 * @return [source]   $img_info   []
+	 */
 	function autoOpen($img_path){
 		$arr = getimagesize($img_path);
 		$img_info['width'] = $arr[0];

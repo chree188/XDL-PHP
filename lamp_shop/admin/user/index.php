@@ -91,6 +91,7 @@
 					<?php if(empty($v['icon'])): ?>
 						<img src="<?= PUB_IMG?>icon.jpg" width=50>
 					<?php else: ?>
+						<img src="<?=$v['icon']?>" width=50>
 					<?php endif; ?>
 					
 

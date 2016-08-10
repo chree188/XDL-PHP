@@ -74,7 +74,7 @@
 				$field_value .= time().' ," '.$filename.'"  ' ;
 
 				$sql = 'insert into user('.$field_key.')  values('.$field_value.')';
-//				echo $sql;
+//				echo $sql;exit;
 				$result = zsg($sql);
 				if($result){
 					notice('添加用户成功，正在使劲跳转...','index.php');
