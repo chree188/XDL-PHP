@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='UTF-8'>
+	<title>Document</title>
+	<link rel="stylesheet" href="<?= PUB_CSS?>common.css">
+	<link rel="stylesheet" href="<?= CSS?>index.css">
+</head>
+<body>
+	<div id='header'>
+		<div class='header_top'>
+			<div class='header_top_cont'>
+				<div class="left">
+					<a class="sc" href="index.php">加入收藏夹</a>
+					<span class="line">|</span>
+					<a class="m_daq" href="index.php">触屏版</a>
+					<span class="line">|</span>
+					<a class="m_daq fb" href="index.php">意见反馈</a></div>
+				<div class="right">
+					<?php if (empty($_SESSION['web'])): ?>
+						<a class="login" href="login.php">登录</a>
+						<span class="line">|</span>
+						<a class="reg" href="register.php">注册</a>
+					<?php else: ?>
+						<a class="login" href="member.php"><?=$_SESSION['web']['nickname']?></a>
+						<span class="line">|</span>
+						<a class="reg" href="login.php?bz=logout">退出</a>
+					<?php endif ?>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>

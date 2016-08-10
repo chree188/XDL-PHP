@@ -168,4 +168,4 @@ var_dump($result);*/
 
 //echo phpinfo();
 
-echo "<input type='date'/>";
+echo time();

@@ -14,9 +14,19 @@
 		/*======================先处理图片文件上传===========================*/
 		//加载文件上传的函数 
 		require("../public/functions.php");
-//		echo "<pre>";
-//		print_r($_FILES);
-//		echo "</br>";
+		//echo "<pre>";
+		//print_r($_FILES);
+		//echo "</br>";
+
+		//首先打开数据库 
+			//1 导入配置文件 
+			include("../public/sql/dbconfig.php");
+			//2 连接数据库
+			$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
+			//3 选择数据库 设置字符集
+			mysqli_set_charset($link,"utf8");
+			mysqli_select_db($link,DBNAME);
+		
 		//执行多文件上传
 		foreach ($_FILES as $upfile ) {
 		
@@ -43,6 +53,8 @@
 			$pic['newSpath'] = $path.'/s_'.$pic['newname'];
 			$pic['newMpath'] = $path.'/m_'.$pic['newname'];
 			
+			$sql1 = "update users set piname = picname & #" .$pic['newname'];
+			echo $sql1;
 			//6实现图片的压缩
 			imageZoom($pic['newname'],$path,$width=100,$height=100,$pre="s_");
 			imageZoom($pic['newname'],$path,$width=300,$height=300,$pre="m_");
@@ -74,26 +86,17 @@
 				unlink($pic['newMpath']);
 				exit;
 			}
-		}
 		/*======================图片文件上传结束===========================*/
 		
-		
 		/*===============执行用户添加=====================*/
-			//首先打开数据库 
-			//1 导入配置文件 
-			include("../public/sql/dbconfig.php");
-			//2 连接数据库
-			$link = @mysqli_connect(HOST,USER,PASS) or die("数据库连接失败");
-			//3 选择数据库 设置字符集
-			mysqli_set_charset($link,"utf8");
-			mysqli_select_db($link,DBNAME);
 			// 写sql语句 执行sql  ignore不能添加重复信息
-			$sql = "insert ignore into goods(adminid,addtime,username,name,sex,age,phone1,phone2,qq1,qq2,
-			idcard,address,nowaddr,alipay,tenpay,picname) 
+			$sql2 = "insert ignore into users(adminid,addtime,username,name,sex,age,phone1,phone2,qq1,qq2,
+			idcard,address,nowaddr,alipay,tenpay) 
 			values('$adminid','$addtime','$username','$name',$sex,$age,'$phone1','$phone2','$qq1','$qq2',
-			'$idcard','$address','$nowaddr','$alipay','$tenpay','')";
-			echo $sql;
+			'$idcard','$address','$nowaddr','$alipay','$tenpay')";
+		  //echo $sql2;
 		/*===============执行用户添加=====================*/
+		}
 		
 	//关闭数据库  释放资源
 	//is_resource() 检测变量是否为资源类型
