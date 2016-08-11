@@ -9,14 +9,6 @@
 	$user_list = $result[1];
 	$page = $result[0];
 
-	// insert into user values
-	// (null,'13345678890','何亚飞',md5('123456'),2, '1991-10-25', 'heyafei125927@163.com',default,default, UNIX_TIMESTAMP()),
-	// (null,'13345678891','曾侃熙',md5('123456'),1, '1992-10-25', 'heyafei125927@163.com',default,default, UNIX_TIMESTAMP()),
-	// (null,'13345678892','张亮',md5('123456'),2, '1993-10-25', 'heyafei125927@163.com',default,default, UNIX_TIMESTAMP()),
-	// (null,'13345678893','徐剑',md5('123456'),1, '1994-10-25', 'heyafei125927@163.com',default,default, UNIX_TIMESTAMP()),
-	// (null,'13345678894','德总',md5('123456'),2, '1995-10-25', 'heyafei125927@163.com',default,default, UNIX_TIMESTAMP()),
-	// (null,'13345678895','吴总',md5('123456'),2, '1996-10-25', 'heyafei125927@163.com',default,default, UNIX_TIMESTAMP());
-
 
  ?>
 <!DOCTYPE html>
@@ -79,35 +71,26 @@
 			<th>注册时间</th>
 			<th>操作</th>
 		</tr>
-		<?php 
-			foreach($user_list as $v): 
-			// 设置性别
-			$sex = array("1"=>"男","2"=>"女");
-			// 设置状态
-			$status = array("1"=>"激活","2"=>"禁用");
-		?>
+		<?php foreach($user_list as $v): ?>
 			<tr>
 				<td>
 					<?php if(empty($v['icon'])): ?>
 						<img src="<?= PUB_IMG?>icon.jpg" width=50>
 					<?php else: ?>
-						<img src="<?=$v['icon']?>" width=50>
+						<img src="<?= img_url($v['icon'])?>" width=50>
 					<?php endif; ?>
-					
-
-
 				</td>
 				<td><?= $v['id']?></td>
 				<td><?= $v['nickname']?></td>
-				<td><?= $sex[$v['sex']]?></td>
+				<td><?= $v['sex']==1?'男':'女';?></td>
 				<td><?= $v['birthday']?></td>
 				<td><?= $v['tel']?></td>
 				<td><?= $v['email']?></td>
-				<td><?= $status[$v['status']]?></td>
+				<td><a href=''><?= $v['status']==1?'激活':'禁用';?></a></td>
 				<td><?= date("Y-m-d H:i:s",$v['regtime'])?></td>
 				<td>
-					<a href="">编辑</a>
-					<a href="">删除</a>
+					<a href="edit.php?id=<?= $v['id']?>">编辑</a>
+					<a href="action.php?bz=del&id=<?= $v['id']?>">删除</a>
 				</td>
 			</tr>
 		<?php endforeach; ?>

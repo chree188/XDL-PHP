@@ -249,7 +249,7 @@
 	}
 
 	/**
-	 * [autoOpen ]
+	 * [autoOpen 图片自动打开]
 	 * @param  [string]  $img_path 	[]
 	 * @return [source]   $img_info   []
 	 */
@@ -299,4 +299,18 @@
 			}
 			
 		return $filename;
+	}
+
+	/**
+	 * [img_url 图片存放路径]
+	 * @param  string  $filename  [图片名]
+	 * @return [string] $filepath [文件路径]
+	 */
+	function img_url($filename,$pre=50){
+		$filepath = URL.'uploads/';
+		$filepath .= substr($filename,0,4).'/';
+		$filepath .= substr($filename,4,2).'/';
+		$filepath .= substr($filename,6,2).'/';
+		$filepath .= $pre.'_'.$filename;
+		return $filepath;
 	}

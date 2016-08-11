@@ -71,7 +71,7 @@
 				}
 
 				$field_key .= '`regtime`, `icon`';
-				$field_value .= time().' ," '.$filename.'"  ' ;
+				$field_value .= time().', "'.$filename.'"  ' ;
 
 				$sql = 'insert into user('.$field_key.')  values('.$field_value.')';
 //				echo $sql;exit;
