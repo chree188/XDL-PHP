@@ -58,6 +58,33 @@
 	</style>
 </head>
 <body>
+	<table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
+  <tr>
+    <td width="99%" align="left" valign="top">您的位置：用户管理</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
+  		<tr>
+   		 <td width="90%" align="left" valign="middle">
+	         <form action="index.php">
+			 <?php $_GET['name'] = empty($_GET['name'])? "":$_GET['name']; ?>
+	         <span>关键字：</span>
+	         <input type="text" name="name" value="<?php echo $_GET['name']; ?>" class="text-word">
+			<span>性别：
+			<select name="sex">
+				<option value="">--请选择--</option>
+				<?php	$_GET['sex']=empty($_GET['sex']) ? 0 : $_GET['sex'] ?>
+				<option value="1" <?php echo $_GET['sex']=="1" ? "selected" : "";  ?>>--男--</option>
+				<option value="2" <?php echo $_GET['sex']=="2" ? "selected" : "";  ?>>--女--</option>
+			</select>
+			</span>
+	         <input name="" type="submit" value="查询" class="text-but">
+	         </form>
+         </td>
+  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.php" target="mainFrame" onFocus="this.blur()" class="add">新增用户</a></td>
+  		</tr>
+	</table>
 	<table class='table'>
 		<tr>
 			<th>头像</th>
