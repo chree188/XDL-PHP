@@ -1,7 +1,7 @@
 <?php 
 	include '../init.php';
 
-	$sql = 'select * from admin';
+	$sql = 'select * from admin order by id';
 	// echo $sql;exit;
 
 	$result = page($sql);
@@ -61,6 +61,12 @@
 		
 		a{text-decoration:none;}
 		
+		span.num {
+			font-size: 30px;
+			color: #538ec6;
+			font-family: "Georgia", "Tahoma", "Arial";
+		}
+		
 	</style>
 </head>
 <body>
@@ -97,7 +103,7 @@
 					<?php if(empty($v['icon'])): ?>
 						<img src="<?= PUB_IMG?>icon.jpg" width=50>
 					<?php else: ?>
-						<img src="<?= img_url($v['icon'])?>" width=50>
+						<img src="<?= img_url($v['icon'],50)?>" width=50>
 					<?php endif; ?>
 				</td>
 				<td><?= $v['id']?></td>
@@ -107,11 +113,13 @@
 				<td><?= $v['address']?></td>
 				<td><?= $v['phone']?></td>
 				<td><?= $v['state']==1?'<font color=red>超级管理员</font>':'管理员';?></td>
-				<td><a href=''><?= $v['status']==1?'激活':'禁用';?></a></td>
+				<td>
+					<?= $v['state']==1?'<font color=red>超管</font>':'<a href=action.php?bz=status&id='.$v['id'].'&status='.$v['status'].'>'.($v['status']==1?'激活':'禁用').'</a>';?>
+				</td>
 				<td><?= date("Y-m-d H:i:s",$v['logintime'])?></td>
 				<td>
-					<a href="edit.php?id=<?= $v['id']?>">编辑</a>
-					<a href="action.php?bz=del&id=<?= $v['id']?>">删除</a>
+					<?= $v['state']==1?'<a href=edit.php?id='.$v['id'].'>编辑</a>':'<a href=edit.php?id='.$v['id'].'>编辑</a>
+					<a href=action.php?bz=del&id='.$v['id'].'>删除</a>';?>
 				</td>
 			</tr>
 		<?php endforeach; ?>

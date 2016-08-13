@@ -10,13 +10,14 @@
 		body{background-color: #2F2E2E;}
 		.logo_admin{font:35px/65px 华文新魏;color:#fff; width:250px; height:100%; position:absolute; background-color:#00CC99; text-align:center;}
 		.login_info{width: 500px; height: 100%; position:absolute; color:#fff; font-size:20px; right:0; text-align:right; line-height:65px; margin-right:50px;}
+		.name{font:35px/65px 华文新魏;color:#00CC99;}
 		a{color:red;}
 	</style>
 </head>
 <body>
 	<div class='logo_admin'>QT助手</div>
 	<div class='login_info'>
-		欢迎 <?= $_SESSION['admin']['name']?> 进入刷手后台管理系统 
+		欢迎 <font class='name'><?= $_SESSION['admin']['name']?></font> 进入刷手后台管理系统 
 		[<a href='action.php?bz=logout' target="_top"> 退出 </a>]
 	</div>
 </body>

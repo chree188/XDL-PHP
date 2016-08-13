@@ -115,9 +115,10 @@
 
 		$str = "
 			<div class='page'>
+				共查询到<span class='num'>{$sum}</span>条信息 &nbsp;
 				<a href='{$script_name}?page=1' class='pc'>首页</a>
 				<a href='{$script_name}?page={$prev}' class='pc'>上一页</a>
-				{$num_list}
+				&nbsp;<span class='num'>{$page}/{$amount}</span>&nbsp;
 				<a href='{$script_name}?page={$next}' class='pc'>下一页</a>
 				<a href='{$script_name}?page={$amount}' class='pc'>尾页</a>
 			</div>
@@ -279,7 +280,7 @@
 	function up_img($img_name='icon', $save_path, $size1= 50, $size2=240, $size3=360){
 			// 上传图片
 			$filename = upload($img_name, $save_path);
-
+			// var_dump( $filename );exit;
 			// 图片保存路径
 			$filepath = $save_path;
 			$filepath .= substr($filename,0,4).'/';
@@ -306,7 +307,7 @@
 	 * @param  string  $filename  [图片名]
 	 * @return [string] $filepath [文件路径]
 	 */
-	function img_url($filename,$pre=50){
+	function img_url($filename,$pre){
 		$filepath = URL.'uploads/';
 		$filepath .= substr($filename,0,4).'/';
 		$filepath .= substr($filename,4,2).'/';

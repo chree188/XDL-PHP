@@ -29,16 +29,10 @@
 				}
 
 				// 判断密码是否正确
-				$sql = 'select id,username from admin where username="'.$admin_list['username'].'" and passwd="'.md5($admin_list['passwd']).'"';
+				$sql = 'select id,name from admin where username="'.$admin_list['username'].'" and passwd="'.md5($admin_list['passwd']).'"';
 				$result = query($sql);
 				if(!$result){
 					notice('您的密码有误,请重新输入...');
-				}
-				
-				// 判断管理员类型
-				$sql= 'select state from admin where username="'.$admin_list['username'].'" and state = 1';
-				if(!query($sql)){
-					notice('登录成功,欢迎您:'.$admin_list['username'].' 正在拼命加载中....','index2.php');
 				}
 				
 				// 判断管理员状态
@@ -48,9 +42,22 @@
 				}
 
 				$_SESSION['admin']['id'] = $result[0]['id'];
-				$_SESSION['admin']['username'] = $result[0]['username'];
+				$_SESSION['admin']['name'] = $result[0]['name'];
 				unset($_SESSION['v_code']);
-				notice('登录成功,欢迎您:'.$admin_list['username'].' 正在拼命加载中....','index.php');
+				
+				// 判断管理员类型
+				$sql= 'select state from admin where username="'.$admin_list['username'].'" and state = 1';
+				if(query($sql)){
+					//更新最后登录时间
+					$sql = 'update admin set logintime = '.time() .' where id = '.$result[0]['id'];
+					zsg($sql);
+					notice('登录成功,欢迎您:'.$admin_list['username'].' 正在拼命加载中....','index.php');
+				}else{
+					//更新最后登录时间
+					$sql = 'update admin set logintime = '.time() .' where id = '.$result[0]['id'];
+					zsg($sql);
+					notice('登录成功,欢迎您:'.$admin_list['username'].' 正在拼命加载中....','index2.php');
+				}
 			break;
 		case 'logout':
 				unset($_SESSION['admin']);
