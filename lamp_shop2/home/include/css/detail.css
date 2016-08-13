@@ -1,0 +1,49 @@
+#header-first{width:1200px;height:9543px;margin:0 auto;}
+#header-first .header-hair{width:1200px;height:30px;line-height:30px;color:#ccc;}
+#header-first .header-forehead{width:1200px;height:549px;margin-top:15px;}
+#header-first .header-forehead .header-temple{width:440px;height:549px;float:left;margin-left:100px;}
+#header-first .header-forehead .header-temple .header-pit{width:440px;height:440px;}
+#header-first .header-forehead .header-temple .header-navel{width:440px;height:20px;margin-top:10px;text-align:center;color:orange;}
+#header-first .header-forehead .header-temple .header-abdomen{width:440px;height:73px;}
+#header-first .header-forehead .header-temple .header-abdomen .header-thigh{width:70px;height:73px;float:left;margin-left:14px;}
+#header-first .header-forehead .header-chest{width:640px;height:549px;float:right;}
+#header-first .header-forehead .header-chest .shoulder{width:640px;height:30px;line-height:30px;color:#ccc;}
+#header-first .header-forehead .header-chest .back{width:640px;height:50px;border:1px solid #ccc;margin-top:10px;}
+#header-first .header-forehead .header-chest .back .back-one{width:75px;height:20px;margin-top:5px;font-size:11px;line-height:20px;float:left;}
+#header-first .header-forehead .header-chest .back .back-two{width:120px;height:50px;margin-left:10px;font-size:30px;line-height:50px;text-align:center;color:red;float:left;}
+#header-first .header-forehead .header-chest .back .back-three{width:260px;height:50px;margin-left:12px;float:left;font-size:10px;line-height:50px;color:red;}
+#header-first .header-forehead .header-chest .waist{width:640px;height:50px;}
+#header-first .header-forehead .header-chest .waist .waist-one{width:100px;height:20px;float:left;}
+#header-first .header-forehead .header-chest .waist .waist-two{width:95px;height:30px;border:1px solid #ccc;float:left;margin-left:10px;margin-top:10px;line-height:30px;text-align:center;}
+#header-first .header-forehead .header-chest .hip{width:640px;height:50px;}
+#header-first .header-forehead .header-chest .hip .hip-one{width:100px;height:20px;float:left;margin-top:10px;}
+#header-first .header-forehead .header-chest .hip .hip-two{width:500px;height:30px;float:left;margin-left:10px;margin-top:10px;}
+#header-first .header-forehead .header-chest .buttock{width:640px;height:50px;}
+#header-first .header-forehead .header-chest .buttock .buttock-one{width:100px;height:20px;float:left;}
+#header-first .header-forehead .header-chest .buttock .buttock-two{width:150px;height:40px;background:#C40000;float:left;margin-left:10px;margin-top:6px;font-size:30px;text-align:center;line-height:40px;color:white;}
+#header-first .header-forehead .header-chest .skull{width:640px;height:50px;}
+#header-first .header-forehead .header-chest .skull .skull-one{width:600px;height:50px;border:1px solid #ccc;float:left;margin-left:40px;line-height:50px;text-align:center;color:red;}
+#header-first .header-forehead .header-chest .collarbone{width:640px;height:167px;}
+#header-first .header-forehead .header-chest .collarbone .collarbone-one{width:640px;height:50px;background:#ccc;}
+#header-first .header-forehead .header-chest .collarbone .collarbone-one .one-one{width:80px;height:35px;border:1px solid red;line-height:35px;float:left;text-align:center;margin-top:5px;}
+#header-first .header-forehead .header-chest .rib{width:640px;height:30px;}
+#header-first .header-forehead .header-chest .rib .rib-one{width:85px;height:30px;float:left;line-height:30px;text-align:center;margin-left:100px;}
+#header-first .header-forehead .header-chest .rib .rib-two{width:80px;height:30px;margin-left:20px;float:left;line-height:30px;text-align:center;color:red;}
+#header-first .header-forehead .header-chest .backbone{width:640px;height:65px;}
+#header-first .header-forehead .header-chest .backbone .backbone-one{width:170px;height:45px;background:#C40000;float:left;margin-left:100px;margin-top:8px;line-height:45px;text-align:center;font-size:20px;color:white;}
+#header-first .header-forehead .header-chest .backbone .backbone-two{width:170px;height:45px;background:#C40000;float:left;margin-left:50px;margin-top:8px;line-height:45px;text-align:center;font-size:20px;color:white;}
+#header-first .header-forehead .header-chest .pelvis{width:640px;height:60px;}
+#header-first .header-forehead .header-chest .pelvis .pelvis-one{width:85px;height:30px;line-height:30px;float:left;}
+#header-first .header-forehead .header-chest .pelvis .pelvis-two{width:85px;height:30px;line-height:30px;float:left;margin-top:10px;margin-left:10px;}
+#header-first .kneecap{width:1200px;height:30px;}
+#header-first .kneecap .kneecap-one{width:118px;height:30px;background:#ff6700;margin-left:100px;float:left;font-size:25px;color:white;}
+#header-first .kneecap .kneecap-two{width:118px;height:30px;float:left;font-size:25px;}
+#header-first .kneecap .kneecap-three{width:118px;height:30px;float:left;font-size:25px;}
+#header-first .bone{width:790px;height:1152px;margin-left:100px;}
+#header-first .sinew{width:790px;height:1140px;margin-left:100px;}
+#header-first .muscle{width:790px;height:1180px;margin-left:100px;}
+#header-first .joint{width:790px;height:1118px;margin-left:100px;}
+#header-first .vein{width:790px;height:1062px;margin-left:100px;}
+#header-first .artery{width:790px;height:1211px;margin-left:100px;}
+#header-first .capillary{width:790px;height:1116px;margin-left:100px;}
+#header-first .nerve{width:790px;height:918px;margin-left:100px;}

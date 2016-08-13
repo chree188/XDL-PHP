@@ -1,0 +1,20 @@
+*{margin:0;padding:0;list-style:none;text-decoration:none;}
+.clear::before,.clear::after{content:''; clear:both; display:table;}
+#head{width:1200px;height:800px;margin:0 auto;}
+#head .throat{width:1200px;height:57px;text-align:center;}
+#head .chest{width:1200px;height:57px;line-height:57px;margin-top:10px;}
+#head #pit{width:1200px;height:750px;border:1px solid #ccc;}
+#head #pit .navel{width:200px;height:37px;line-height:37px;margin-left:30px;}
+#head #pit .abdomen{width:1200px;height:710px;}
+#head #pit .abdomen .l{width:200px;height:50px;font-size:25px;}
+#head #pit .abdomen .text06{width:200px;height:30px;margin-left:-83px;}
+#head #pit .abdomen .text08{width:200px;height:30px;margin-left:-83px;}
+#head #pit .abdomen .text10{width:200px;height:30px;margin-left:-83px;}
+#head #pit .abdomen .text09{width:200px;height:30px;margin-left:10px;}
+#head #pit .abdomen .text11{width:200px;height:30px;margin-left:-83px;}
+#head #pit .abdomen .text-word{width:300px;height:200px;margin-left:-83px;}
+#head #pit .abdomen #thigh{width:1200px;height:50px;border:1px solid #ccc;}
+#head #pit .abdomen #thigh .thigh-one{width:200px;height:50px;float:left;}
+#head #pit .abdomen #thigh .thigh-two{width:200px;height:50px;float:left;margin-left:356px;line-height:50px;}
+#head #pit .abdomen #thigh .thigh-three{width:200px;height:50px;float:left;margin-left:20px;line-height:50px;}
+#head #pit .abdomen #thigh .thigh-four{width:200px;height:50px;float:right;}

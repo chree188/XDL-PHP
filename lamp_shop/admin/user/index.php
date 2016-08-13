@@ -43,7 +43,11 @@
 
 		.table tr:hover{background-color: #EFF4F7;}
 
-		.pc{color:red;height:34px;border:1px solid #e1e2e3;display:inline-block;cursor:pointer;text-align:center;color:blue;margin:0 2px;padding:0 10px;line-height:34px;}
+		.pc{
+			color:red;height:34px;border:1px solid #e1e2e3;
+			display:inline-block;cursor:pointer;text-align:center;
+			color:blue;margin:0 2px;padding:0 10px;line-height:34px;
+		}
 
 		.pc:hover{
 		    border:1px solid #3388FF;
@@ -74,7 +78,7 @@
 			<span>性别：
 			<select name="sex">
 				<option value="">--请选择--</option>
-				<?php	$_GET['sex']=empty($_GET['sex']) ? 0 : $_GET['sex'] ?>
+				<?php $_GET['sex']=empty($_GET['sex']) ? 0 : $_GET['sex'] ?>
 				<option value="1" <?php echo $_GET['sex']=="1" ? "selected" : "";  ?>>--男--</option>
 				<option value="2" <?php echo $_GET['sex']=="2" ? "selected" : "";  ?>>--女--</option>
 			</select>

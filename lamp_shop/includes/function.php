@@ -197,7 +197,7 @@
 		}
 
 
-	//6.  move_uploaded_file()  移动文件到指定 目录中
+	// 6.  move_uploaded_file()  移动文件到指定 目录中
 		if(  !move_uploaded_file($_FILES[$name]['tmp_name'], $dir.$filename) ){
 			$error[] = '上传失败';
 			return $error;
