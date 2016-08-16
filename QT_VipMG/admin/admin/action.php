@@ -98,14 +98,12 @@
 				$id = $_GET['id'];
 				$sql = 'select icon from admin where id ='.$id;
 				$result = query($sql);
-				if(){
-					unlink(img_url($result[0]['icon']));
-					unlink(img_url($result[0]['icon'],50));
-					unlink(img_url($result[0]['icon'],240));
-					unlink(img_url($result[0]['icon'],360));
-				}
+				unlink(img_url($result[0]['icon']));
+				unlink(img_url($result[0]['icon'],50));
+				unlink(img_url($result[0]['icon'],240));
+				unlink(img_url($result[0]['icon'],360));
 
-//				$sql = 'delete from admin where id='.$id;
+				$sql = 'delete from admin where id='.$id;
 
 				if(zsg($sql)){
 					header('location:'.$_SERVER['HTTP_REFERER']);
