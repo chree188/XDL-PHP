@@ -48,6 +48,7 @@ class Model
         echo $sql = "SELECT {$keys} FROM {$this->tabName} {$where} {$order} {$limit}";
         return $this->query($sql);
     }
+	
     //查询单条数据 
     public function find($findValue, $findKey = 'id')
     {
@@ -72,6 +73,7 @@ class Model
         $this->order = $order;
         return $this;//返回自己
     }
+	
     //获取排序条件
     public function limit($limit)
     {
@@ -211,6 +213,7 @@ class Model
             return false;
         }
     }
+	
     //获取数据表内的所有字段 和主键
     private function getField()
     {
