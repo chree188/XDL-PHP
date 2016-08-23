@@ -27,7 +27,7 @@ $list = $model->limit($page->limit())->select();
     <center>
         <h1>信息列表</h1>
         <hr>
-        <input type="text" name=""  value="" /><a href="">搜索</a>
+        <?php echo $page->search(); ?>
         <table border="1" width="600" cellspacing="0">
             <tr>
                 <th>ID</th>

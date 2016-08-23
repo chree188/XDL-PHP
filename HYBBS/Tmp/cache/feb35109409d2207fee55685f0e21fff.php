@@ -1,3 +1,3 @@
 <?php
-//000000000060a:0:{}
+//000000000060a:1:{i:0;a:21:{s:2:"id";s:1:"1";s:3:"fid";s:1:"0";s:3:"uid";s:1:"2";s:5:"title";s:18:"新主题新主题";s:7:"summary";s:19:"新的,新的主题";s:5:"atime";s:10:"1471928909";s:5:"btime";s:10:"1471928909";s:4:"buid";s:1:"0";s:5:"views";s:1:"4";s:5:"posts";s:1:"0";s:5:"goods";s:1:"0";s:3:"nos";s:1:"0";s:3:"img";s:0:"";s:9:"img_count";s:1:"0";s:3:"top";s:1:"0";s:5:"files";s:1:"0";s:4:"hide";s:1:"0";s:4:"gold";s:1:"0";s:5:"state";s:1:"0";s:4:"user";s:2:"js";s:6:"avatar";a:3:{s:1:"a";s:52:"upload/avatar/32981a13284db7a021131df49e6cd203-a.jpg";s:1:"b";s:52:"upload/avatar/32981a13284db7a021131df49e6cd203-b.jpg";s:1:"c";s:52:"upload/avatar/32981a13284db7a021131df49e6cd203-c.jpg";}}}
 ?>

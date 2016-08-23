@@ -61,4 +61,11 @@ class Page
 		$limit = ($this->page - 1) * $this->num.','.$this->num;	//x,y
 		return $limit;
 	}
+	
+	//	生成搜索条件的HTML代码
+	public function search()
+	{
+		$html = "<input type='text' name='search'  value='' /><a href='{$this->url}&' style='text-decoration: none;'>搜索</a>";
+        return $html;
+	}
 }

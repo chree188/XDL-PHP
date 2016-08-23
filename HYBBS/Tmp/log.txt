@@ -47,3 +47,34 @@
 
 [Warning] : Invalid argument supplied for foreach() in File D:\PHP\wamp64\www\HYBBS\HY\View\exception.htm, Line: 110
 
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1622
+
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1622</dd><dd><b style="width:100px">错误翻译:</b><font color="red">[警告] : file_get_contents():  错误来自于文件: D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, 错误行: 1622</font> on line 180
+[Notice] : Array to string conversion in File D:\PHP\wamp64\www\HYBBS\HY\lib\exception.php, Line: 41
+
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1622
+
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1622</dd><dd><b style="width:100px">错误翻译:</b><font color="red">[警告] : file_get_contents():  错误来自于文件: D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, 错误行: 1622</font> on line 180
+[Notice] : Array to string conversion in File D:\PHP\wamp64\www\HYBBS\HY\lib\exception.php, Line: 41
+
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1692
+
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1692</dd><dd><b style="width:100px">错误翻译:</b><font color="red">[警告] : file_get_contents():  错误来自于文件: D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, 错误行: 1692</font> on line 180
+[Notice] : Array to string conversion in File D:\PHP\wamp64\www\HYBBS\HY\lib\exception.php, Line: 41
+
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1622
+
+[Warning] : file_get_contents(http://bbs.hyphp.cn/ajax/update):  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1622
+
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1692
+
+[Warning] : file_get_contents(http://app.hyphp.cn/json/get_ip):  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1692
+
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1622
+
+[Warning] : file_get_contents(http://bbs.hyphp.cn/ajax/update):  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1622
+
+[Warning] : file_get_contents():  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1692
+
+[Warning] : file_get_contents(http://app.hyphp.cn/json/get_ip):  in File D:\PHP\wamp64\www\HYBBS\Tmp\AdminAction_7305a22810c94cd5fcdc5a42219908c1.php, Line: 1692
+
