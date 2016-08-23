@@ -1,0 +1,260 @@
+<include file="Public/right_chat_panel"/>
+<php> D('Common/Member')->need_login();</php>
+<!--[if lt IE 8]>
+<div class="alert alert-danger" style="margin-bottom: 0">{:L('_TIP_BROWSER_DEPRECATED_1_')} <strong>{:L('_TIP_BROWSER_DEPRECATED_2_')}</strong>
+    {:L('_TIP_BROWSER_DEPRECATED_3_')} <a target="_blank"
+                                          href="http://browsehappy.com/">{:L('_TIP_BROWSER_DEPRECATED_4_')}</a>
+    {:L('_TIP_BROWSER_DEPRECATED_5_')}
+</div>
+<![endif]-->
+<script src="__PUBLIC__/js/canvas.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[data-role="show_hide"]').click(function () {
+            $("#search_box").slideToggle("slow");
+        });
+        $('[data-role="close"]').click(function () {
+            $("#search_box").slideToggle("slow");
+        });
+        });
+
+</script>
+<div class="container-fluid topp-box">
+    <div class="col-xs-2 box">
+        <div class="img-wrap">
+            <php>$logo = get_cover(modC('LOGO',0,'Config'),'path');
+                $logo = $logo?$logo:'__ROOT__/Public/images/logo.png';
+            </php>
+            <a class="navbar-brand logo" href="{:U('Home/Index/index')}"><img src="{$logo}"/></a>
+        </div>
+    </div>
+    <div class="col-xs-7 box ">
+        <div id="nav_bar" class="nav_bar">
+            <div class=" sat-nav">
+                <ul>
+                    <think:nav name="nav" tree="true">
+                        <neq name="nav['_']" value="">
+                            <li class="dropdown">
+                                <a title="{$nav.title}" class="dropdown-toggle nav_item" data-toggle="dropdown"
+                                   href="#">
+                                    <i class="os-icon-{$nav.icon} app-icon"></i>
+                                    {$nav.title}
+                                    <i class="icon-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu nav-menu" style="text-align: left">
+                                    <volist name="nav._" id="subnav">
+                                        <if condition="($subnav.icon eq 1) or ($subnav.icon eq 2) or ($subnav.icon eq 3) or ($subnav.icon eq 4) or ($subnav.icon eq 5) or ($subnav.icon eq 6) or ($subnav.icon eq 7) or ($subnav.icon eq 8) or ($subnav.icon eq 9) or ($subnav.icon eq 10) or ($subnav.icon eq 11) or ($subnav.icon eq 12) or ($subnav.icon eq 13) or ($subnav.icon eq 14)">
+                                            <li role="presentation">
+                                                <a role="menuitem" tabindex="-1" href="{$subnav.url|get_nav_url}" target="<eq name='subnav.target' value='1'>_blank<else/>_self</eq>">
+                                                    <div style="display: inline;margin-left:10px; " >
+                                                        <img  src="Application/Admin/Static/images/customedit/{$subnav.icon}.png">
+                                                    </div>
+                                                    <div style="display: inline;margin-left: 10px ">{$subnav.title}</div>
+                                                    <div style="margin-left: 45px">
+                                                        <span style="color:#9f9f9f;font-size: 10px">{$subnav.band_text}</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <else/>
+                                            <li role="presentation">
+                                                <a role="menuitem" tabindex="-1" href="{$subnav.url|get_nav_url}" target="<eq name='subnav.target' value='1'>_blank<else/>_self</eq>">
+                                                    <div style="display: inline;margin-left:10px; ">
+                                                        <i class="os-icon-{$subnav.icon}"></i>
+                                                    </div>
+                                                    <div style="display: inline;margin-left: 10px ">{$subnav.title}</div>
+                                                    <div style="margin-left: 45px">
+                                                        <span style="color:#9f9f9f;font-size: 10px">{$subnav.band_text}</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </if>
+                                    </volist>
+                                </ul>
+                            </li>
+                            <else/>
+                            <li class="<eq name='nav.url|get_nav_active' value='1'>active<else/></eq>">
+                                <a title="{$nav.title}" href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+                                    <i class="os-icon-{$nav.icon} app-icon "></i>
+                                    <span >{$nav.title}</span>
+                                    <span class="label label-badge rank-label" title="{$nav.band_text}" style="background: {$nav.band_color} !important;color:white !important;">{$nav.band_text}</span>
+                                </a>
+                            </li>
+                        </neq>
+                    </think:nav>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3 box" style="text-align: right">
+        <if condition="is_login()">
+            <li class="dropdown li-hover">
+                <php>
+                    $common_header_user = query_user(array('nickname'));
+                    $common_header_title = query_user(array('title'));
+                    $avatar = query_user(array('avatar32'));
+                    $uid = is_login();
+                    $reg_time = D('member')->where(array('uid' => $uid))->getField('reg_time');
+                    $reg_date = date('Y-m-d', $reg_time);
+                </php>
+                <a role="button" class="dropdown-toggle dropdown-toggle-avatar" data-toggle="dropdown">
+                    <span><img src="{$avatar.avatar32}" class="avatar-img nav-img"></span>
+                    <span>{$common_header_user.nickname}</span>
+                </a>
+                <ul class="dropdown-menu text-left  name-card" role="menu">
+                    <div class="top-box">
+                        <a class="link-change-avatar" href="{:U('Ucenter/Config/avatar')}" title="更换头像"><img src="{$avatar.avatar128}" class="avatar-img" title="更换头像"></a>
+                        <p>{$common_header_user.nickname}-{$common_header_title.title}
+                            <small>注册于{$reg_date}</small>
+                        </p>
+                    </div>
+                    <div class="info-box">
+                        <div class="row">
+                            <a href="{:U('Ucenter/index/fans',array('uid'=>$self['uid']))}" title="{:L('_FANS_COUNT_')}">
+                                <div class="col-xs-4 text-center rank-list">
+                                    {:L('_FANS_')}
+                                </div>
+                            </a>
+                            <a href="{:U('Ucenter/index/following',array('uid'=>$self['uid']))}" title="{:L('_FOLLOW_COUNT_')}">
+                                <div class="col-xs-4 text-center rank-list">
+                                    {:L('_FOLLOW_')}
+                                </div>
+                            </a>
+                            <a href="{:U('Ucenter/index/ranking')}">
+                                <div class="col-xs-4 text-center rank-list">
+                                    排行榜
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <div class="pull-left">
+                            <a title="{:L('_EDIT_INFO_')}" href="{:U('ucenter/Config/index')}" class="btn btn-default btn-flat">{:L('_EDIT_INFO_')}</a>
+                        </div>
+                        <div class="pull-right">
+                            <a event-node="logout" class="btn btn-default btn-flat">{:L('_LOGOUT_')}</a>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="li-hover">
+                <a data-role="open-slider-box">
+                    <div class="message-num" data-role="now-message-num"  style="display: none;"></div>
+                    <i class="os-icon-bell"></i>
+                </a>
+            </li>
+            <li class="li-hover">
+                <a href="javascript:" id="show_box" data-role="show_hide">
+                    <i class="icon-search"></i>
+                </a>
+            </li>
+            <li class="dropdown-toggle dropdown-toggle-avatar li-hover">
+                <a title="{:L('_EDIT_INFO_')}" href="#" data-toggle="dropdown" >
+                    <i class="icon-cog"></i>
+                </a>
+                    <ul class="dropdown-menu text-left drop-self" role="menu">
+                        <php>
+                            $user_nav=S('common_user_nav');
+                            if($user_nav===false){
+                            $user_nav=D('UserNav')->order('sort asc')->where('status=1')->select();
+                            S('common_user_nav',$user_nav);
+                            }
+
+                        </php>
+
+                        <volist name="user_nav" id="vo">
+                            <li><a style="color:{$vo.color}"
+                                   target="<eq name='vo.target' value='1'>_blank<else/>_self</eq>"
+                                   href="{:get_nav_url($vo['url'])}"><span
+                                    class="icon-{$vo.icon}"></span>&nbsp;&nbsp;{$vo.title} <span
+                                    class="label label-badge rank-label" title="{$vo.band_text}"
+                                    style="background: {$vo.band_color} !important;color:white !important;">{$vo.band_text}</span></a>
+                            </li>
+                        </volist>
+
+                        <php>
+                            $register_type=modC('REGISTER_TYPE','normal','Invite');
+                            $register_type=explode(',',$register_type);
+                            if(in_array('invite',$register_type)){
+                        </php>
+                        <li><a href="{:U('ucenter/Invite/invite')}"><span
+                                class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;{:L('_INVITE_FRIENDS_')}</a>
+                        </li>
+                        <php>}</php>
+
+                        {:hook('personalMenus')}
+                        <if condition="check_auth('Admin/Index/index')">
+                            <li><a href="{:U('Admin/Index/index')}" target="_blank"><span
+                                    class="glyphicon glyphicon-dashboard"></span>&nbsp;&nbsp;{:L('_MANAGE_BACKGROUND_')}</a>
+                            </li>
+                        </if>
+                    </ul>
+
+
+            </li>
+            <else/>
+            <php>
+                $open_quick_login=modC('OPEN_QUICK_LOGIN', 0, 'USERCONFIG');
+                $register_type=modC('REGISTER_TYPE','normal','Invite');
+                $register_type=explode(',',$register_type);
+                $only_open_register=0;
+                if(in_array('invite',$register_type)&&!in_array('normal',$register_type)){
+                $only_open_register=1;
+                }
+            </php>
+            <script>
+                var OPEN_QUICK_LOGIN = "{$open_quick_login}";
+                var ONLY_OPEN_REGISTER = "{$only_open_register}";
+            </script>
+                <a class="top-btn" data-login="do_login">{:L('_LOGIN_')}</a>
+                <a class="top-btn" data-role="do_register" data-url="{:U('Ucenter/Member/register')}">{:L('_REGISTER_')}</a>
+        </if>
+
+        <li class="li-hover">
+            <a class="top-btn icon-align-justify" data-toggle="dropdown"></a>
+            <ul class="dropdown-menu drop-more" role="menu" aria-labelledby="dropdownMenu1">
+                <li>
+                    <a href="http://www.opensns.cn/custom.html" target="_blank">购买OS</a>
+                </li>
+                <li>
+                    <a href="https://jxxt.kf5.com/hc/" target="_blank">在线工单</a>
+                </li>
+                <li>
+                    <a href="http://www.opensns.cn/" target="_blank">OS产品站</a>
+                </li>
+            </ul>
+        </li>
+
+    </div>
+    <div class="container-fluid search-box" id="search_box" style="display: none">
+        <canvas width="1835" height="374"></canvas>
+        <div class="text-wrap">
+            <div class="container text-box">
+                <h1>无处不在,搜你所想</h1>
+                <form class="navbar-form " action="{:U('Home/Index/search')}" method="post"
+                      role="search" id="search">
+                    <div class="search">
+                        <span class="pull-left"><input type="text" name="keywords" class="input" placeholder="全站搜索"></span>
+                        <a data-role="search"><i class="icon icon-search pull-right"></i></a>
+                    </div>
+
+                    </span>
+                </form>
+
+            </div>
+            <div class="close-box" data-role="close">X</div>
+        </div>
+    </div>
+</div>
+
+
+<include file="Public/_system"/>
+
+
+<script>
+    $(function() {
+        $('[data-role="search"]').click(function() {
+            $("#search").submit();
+        })
+    })
+</script>
