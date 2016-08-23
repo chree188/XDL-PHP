@@ -1,0 +1,206 @@
+{include header}
+<div class="wrapper">
+    {include header_menu}
+    {include left_menu}
+    <style>
+    .gallery-list .gallery-item {
+        position: relative;
+        display: inline-block;
+        
+      
+    }
+    .gallery-list .gallery-item .gallery-wrapper .gallery-title.action{
+        background-color: #2baab1;
+    }
+    .gallery-list .gallery-item .gallery-wrapper .gallery-overlay .gallery-action.action {
+        background-color: #2baab1;
+    }
+    </style>
+    <div class="main-container">
+        <div class="padding-md">
+            <h2 class="header-text no-margin">
+				外观 & 模板 
+                <form action="{#WWW}admin" method="post" style="display:inline-block" class="form-horizontal no-margin form-border">
+                <input name="one1" type="hidden" value="on">
+                <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> 清理缓存</button>
+                </form>
+                
+			</h2>
+            <div class="gallery-filter m-top-md">
+				<ul class="clearfix">
+					<li class="active"><a href="{#WWW}admin{#EXP}view">我的</a></li>
+					<li><a href="{#WWW}admin{#EXP}viewol">线上</a></li>
+                    
+                    <li class="pull-right active"><a href="#" onclick="$('#gn1').val('add');;$('#zti').text('新建模板')" data-toggle="modal" data-target="#normalModal1"><i class="fa fa-plus"></i> 制作模板</a></li>
+
+				</ul>
+			</div>
+
+
+
+            <form method="post" id="form">
+            <div class="modal fade in" id="normalModal1" aria-hidden="false">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+			        		<h4 class="modal-title" id="zti">新建模板</h4>
+			      		</div>
+			      		<div class="modal-body" id="md1">
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">模板名</label>
+                                        <input type="text" name="name" class="form-control input-sm">
+                                    </div>
+                                </div><!-- /.col -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">英文名</label>
+                                        <input type="text" name="name2" class="form-control input-sm">
+                                    </div>
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label">作者名</label>
+                                        <input type="text" name="user" class="form-control input-sm">
+                                    </div>
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            <div class="form-group">
+                                <label class="control-label">模板描述</label>
+                                <textarea class="form-control" name="mess" placeholder="" rows="3" ></textarea>
+                            </div>
+                            <h4 class="header-text">可选结构 (你可以跳过这步)</h4>
+                            <div class="form-group">
+                                <label class="control-label">必装插件</label>
+                                <div id="lib">
+
+                                    <div class="lib1"></div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="text" class="form-control"  placeholder="请输入插件英文名">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="button" onclick="add_lib()">按插件英文名-添加</button>
+                                </span>
+                            </div>
+                            
+        
+                        
+			      		</div>
+			      		<div class="modal-footer">
+                            <button type="button" class="btn btn-success" onclick="create_viee()">建立</button>
+			        		
+
+			      		</div>
+
+			    	</div>
+			  	</div>
+			</div>
+            </form>
+            
+            <div class="row m-top-md" id="list">
+            {foreach $data as $key => $v}
+            
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xs-12">
+                    <div class="panel">
+                        <div class="panel-body no-padding">
+                            <div class="owl-carousel no-controls owl-theme owl-loaded">
+                                <div class="owl-stage-outer owl-height" style="padding-left: 0px; padding-right: 0px;height: 200px;overflow: hidden; ">
+                               
+                                <span style="background:url('{#WWW}View/{$v}/back.png');display: inline-block;width: 100%;height: 100%;background-position: center 0;background-repeat: no-repeat;background-size: cover;-webkit-background-size: cover;-o-background-size: cover;background-color: #404040;">
+                                    
+                                </span>
+                                    <!-- <img src="{#WWW}View/{$v}/back.png"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer bg-white">
+                            <div class="h3 text-success">
+                                {$qj[$key]['name']} - {$v} 
+                            </div>
+                            <span class=" block" style="color: purple;font-size:14px">
+                                作者:{$qj[$key]['user']} <span style="color: darkcyan;">版本:{$qj[$key]['version']}</span>
+                            </span>
+                            <span class=" block" style="margin-top:5px">
+                                {$qj[$key]['mess']}
+                            </span>
+                            {if $qj[$key]['code']}
+                            <hr>
+                            <label>使用模板-必装插件</label>
+                            <div id="lib1">
+                                {foreach explode(",",$qj[$key]['code']) as $vv}
+                                <span class="label label-{if is_plugin_dir($vv)}success{else}danger{/if}">{$vv}</span>
+                                {/foreach}
+                                
+                                <div style="clear: both;"></div>
+                            </div>
+                            {/if}
+                            <hr>
+                            <div class="clearfix">
+                                <a class="btn btn-{if strcasecmp(THEME_NAME,$v) == 0}danger disabled{else}success {/if}" href="{#WWW}admin{#EXP}view{#EXP}edit{#EXP}{$v}" {if strcasecmp(THEME_NAME,$v) == 0}disabled{/if}>
+                                    <i class="fa fa-check fa-lg"></i> {if strcasecmp(THEME_NAME,$v) == 0}已启用{else}应用模板{/if}
+                                </a>
+
+                                {if is_file(VIEW_PATH . $v . '/conf.html')}<a class="btn btn-warning" href="{#WWW}admin{#EXP}view{#EXP}op{#EXP}{$v}">配置</a>{/if}
+                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {/foreach}
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<style type="text/css">
+.lib1{
+        clear: both;
+    }
+    #lib,#lib1{
+        min-height: 30px;
+    border: 1px solid #DDD;
+    padding: 10px;
+    }
+    
+    #lib .label,#lib1 .label{
+        margin-right: 10px;
+        margin-bottom: 10px;
+            float: left;
+    }
+    .lte{
+            font-style: normal;
+    }
+
+
+</style>
+<script type="text/javascript">
+    function add_lib(){
+        if($("#text").val()=='')
+            return;
+        $(".lib1").before('<span class="label label-success"><i class="lte">'+$("#text").val()+'</i> &nbsp;<i class="fa fa-close" onclick="$(this).parent().remove()"></i></span>');
+        $("#text").val('');
+    }
+    function create_viee(){
+        var code = $("#form").serialize();
+        code+="&code=";
+        $("#lib .lte").each(function(){
+            code+=$(this).text()+",";
+        });
+        $.post(window.location.pathname,code,function(e){
+            if(e.error)
+                window.location.reload()
+            else
+                alert(e.info);
+        },'json');
+    }
+
+</script>
+{include footer}

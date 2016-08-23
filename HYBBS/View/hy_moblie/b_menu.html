@@ -1,0 +1,28 @@
+<!--{hook t_m_b_menu_0}-->
+<div class="hy-fix-b hy-bo-t hy-footer-nav">
+    <!--<!--{hook t_m_b_menu_1}-->-->
+    <a href="{#WWW}" {if ACTION_NAME=='Index' || ACTION_NAME=='New' || ACTION_NAME=='Btime'} class="a"{/if}>
+        <span class="icon icon-yahoo2"></span>论坛
+    </a>
+    <!--<!--{hook t_m_b_menu_2}-->-->
+    <a href="{#WWW}forum" {if ACTION_NAME=='Forum'} class="a"{/if}>
+        <span class="icon icon-grid2"></span>板块
+    </a>
+    <!--{hook t_m_b_menu_3}-->
+    <a class="" href="{#WWW}post">
+        <span class="hy-footer-c icon icon-plus"></span>
+        &nbsp;&nbsp;&nbsp;
+    </a>
+    <!--{hook t_m_b_menu_4}-->
+    <a href="{if IS_LOGIN}javascript:void(0);{else}{#WWW}user{#EXP}login{/if}" {if IS_LOGIN}onclick="tog_friend_box()"{/if}>
+        <span class="icon icon-users" ></span>好友{if IS_LOGIN}{if $user['mess']}<i id="hy-mess">(<em class="hy-font-warning">{$user.mess}</em>)</i>{/if}{/if}
+    </a>
+    <!--{hook t_m_b_menu_5}-->
+    <a onclick="$.hy.canvas_show1('right')">
+        <span class="icon icon-star" ></span>我的
+    </a>
+    <!--{hook t_m_b_menu_6}-->
+</div>
+
+
+<!--{hook t_m_b_menu_7}-->

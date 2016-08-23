@@ -1,0 +1,76 @@
+{include h}
+{include user_header1}
+<section class="body" id="user_add_body">
+<div>
+	<div class="hy-box" style="margin-top:20px">
+		<form id="form">
+			
+			<!--{hook t_m_user_add_1}-->
+		    <div class="hy-input-box">
+		        <input type="text" name="user" placeholder="请输入用户名">
+		    </div>
+		    <!--{hook t_m_user_add_2}-->
+		    <div class="hy-input-box">
+		        <input type="text" name="email" placeholder="请输入安全邮箱">
+		    </div>
+		    <!--{hook t_m_user_add_3}-->
+		    <div class="hy-input-box">
+		        <input type="password" name="pass1" placeholder="请输入密码">
+		    </div>
+		    <!--{hook t_m_user_add_4}-->
+		    <div class="hy-input-box">
+		        <input type="password" name="pass2" placeholder="确认密码">
+		    </div>
+		    <!--{hook t_m_user_add_5}-->
+	    </form>
+
+	</div>
+	<!--{hook t_m_user_add_55}-->
+	<div style="padding:10px;    text-align: center;">
+		<button id="login" type="button" class="hy-btn hy-btn-danger hy-btn-block" style="padding: 8px 0;">注册</button>
+		<a href="{#WWW}user{#EXP}login" ajax="true" pos="right" rgb="#f1f4f9" type="button" class="hy-btn hy-btn-link" style="color: #a2a2a2;">
+                    已有账号？点击登录
+        </a>
+        <div style="height:40px"></div>
+	</div>
+</div>
+</section>
+
+<!--{hook t_m_user_add_js}-->
+<script>
+$(function(){
+    $('#form').submit(function() {return false;});
+    $("#login").click(function(){
+        var postdata = $('#form').serialize();
+        <!--{hook t_user_add_js_1}-->
+        $.post("{#WWW}user{#EXP}add", postdata,  function(e){
+        	<!--{hook t_user_add_js_2}-->
+            if(e.error){
+                if(e.url !='')
+                    window.location.href=e.url;
+                else
+                    window.location.href="{#WWW}";
+            }else{
+            	$.hy.warning( e.info);
+            }
+            <!--{hook t_user_add_js_3}-->
+        },'json');
+        <!--{hook t_user_add_js_4}-->
+
+    });
+    window.user_add_body = new IScroll('#user_add_body', {
+        disableMouse: true,
+        disablePointer: true,
+        mouseWheel: true,
+        scrollbars: true,
+        fadeScrollbars:true,
+        preventDefault: false,
+        preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ },
+        shrinkScrollbars:'scale'
+      
+    });
+
+
+});
+</script>
+{include f}

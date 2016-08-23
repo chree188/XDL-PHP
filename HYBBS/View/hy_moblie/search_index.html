@@ -1,0 +1,157 @@
+{include h}
+{include index_header}
+<!--{hook t_m_search_index_1}-->
+<section class="body" id="index_body">
+<div style="padding-bottom: 5px;position: relative;">
+<!--{hook t_m_search_index_2}-->
+	<div id="forum-body-top" class="iscroll iscrollTop index_body">  
+        <span class="icon-undo2"></span>
+        <p>下拉刷新内容</p>
+  	</div> 
+<!--{hook t_m_search_index_3}-->
+  <div style="height:36px"></div>
+  <div class="rebtn bor active" style="margin-left: 15px;left: 0;">
+    <form action="{#WWW}search" method="get">
+    <input type="text" name="key" value="{$search_key}">
+    </form>
+    <button class="icon-search"></button>
+  </div>
+<!--{hook t_m_search_index_4}-->
+
+	<list id="forum-list">
+	{foreach $data as $v}
+	<!--{hook t_m_search_index_5}-->
+	{include thread_list}
+	<!--{hook t_m_search_index_6}-->
+	{/foreach}
+	</list>
+  <!--{hook t_m_search_index_7}-->
+	<div id="forum-body-bottom" class="index_body iscrollBottom iscroll">  
+        <span class="icon-undo2"></span>
+        <p>向上拉继续加载</p>
+  </div>
+  <!--{hook t_m_search_index_8}-->
+</div>
+<script type="text/javascript">
+$(function(){
+window.is_fid = 'search';
+var index_body = new IScroll('#index_body', {
+	 disableMouse: true,
+    disablePointer: true,
+    mouseWheel: true,
+    scrollbars: true,
+  	fadeScrollbars:true,
+  	preventDefault: false,
+  	preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ },
+  	shrinkScrollbars:'scale',
+    probeType:1,
+    fid:'search'
+});
+
+
+window.search_text1=false;
+window.search_text2=false;
+index_body.on('scroll',function(){
+  //console.log(this);
+  gd_b1(this.y);
+  if(this.distY > 200) {
+    if(window.search_text1)
+      return;
+    window.search_text1=true;
+    
+ 
+    $("#forum-body-top .icon-undo2").addClass("fa-spin1").next().text('释放你的爪');
+
+  }else if(this.distY < -200){
+    if(window.search_text2)
+      return;
+    window.search_text2=true;
+    $("#forum-body-bottom .icon-undo2").addClass("fa-spin1").next().text('释放你的爪');
+  }else{
+    window.search_text1=false;
+    window.search_text2=false;
+  }
+});
+
+$('#index_body').on('touchend', function (e) {
+  gd_b1(index_body.y);
+  if(index_body.distY > 200){
+    $("#forum-body-top").addClass("loading");
+  }
+  else if(index_body.distY < -200){
+    $("#forum-body-bottom").addClass("loading");
+  }else{
+    if(!window.is_loading)
+        $('.loading').removeClass('loading');
+  }
+});
+
+window.is_loading = false;
+window.search_page = 2;
+index_body.on('scrollEnd',function(){  
+
+  window.search_text1=false;
+  window.search_text2=false;
+  gd_b1(this.y);
+
+  //console.log("滚动结束",this.options.fid,this);
+  	if(this.options.fid != window.is_fid){
+  		console.log('out');
+    	this.destroy();
+    
+    }
+
+	if(this.distY > 200) {
+		if(window.is_loading)
+			return;
+		window.is_loading = true;
+		
+		window.history.pushState("","",'{#WWW}search?key={$search_key}');
+    window.search_page=2;
+
+		$("#forum-body-top .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
+		index_body.refresh();
+    $.ajax({
+      url:'{#WWW}search?key={$search_key}',
+      dataType:'html',
+      success:function(e){
+        window.is_loading=false;
+        $("#forum-body-top").removeClass("loading");
+        $("#forum-body-top .icon-undo2").removeClass("fa-spin1").next().text('下拉刷新内容');
+        $("#forum-list").html(e.match(/<list id="forum-list">([\s\S]*?)<\/list>/)[1]);
+        index_body.refresh();
+        
+      }
+    })
+
+	}else if(this.distY < -200){
+    if(window.is_loading)
+      return;
+    window.is_loading = true;
+    
+    
+    $("#forum-body-bottom .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
+    index_body.refresh();
+    var href='{#WWW}search{#EXP}'+(search_page++)+'?key={$search_key}';
+    window.history.pushState("","",href);
+
+    $.ajax({
+      url:href,
+      dataType:'html',
+      success:function(e){
+      	window.is_loading=false;
+      	$("#forum-list").append(e.match(/<list id="forum-list">([\s\S]*?)<\/list>/)[1]);
+        $("#forum-body-bottom").removeClass("loading");
+        $("#forum-body-bottom .icon-undo2").removeClass("fa-spin1").next().text('向上拉继续加载');
+        index_body.refresh();
+        
+      }
+    })
+  }
+            
+});  
+})
+</script>
+</section>
+
+{include f}

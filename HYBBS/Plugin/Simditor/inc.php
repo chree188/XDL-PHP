@@ -1,0 +1,2 @@
+<?php !defined('HY_PATH') && exit('HY_PATH not defined.'); ?>
+{"toolbar":"'title','bold','italic','underline','strikethrough','fontScale','color','video','mark','blockquote','ol','ul','code','table','link','image','hr','emoji','indent','outdent','alignment','html'","name":"Simditor","allowedTags":"'br', 'span', 'a', 'img', 'b', 'strong', 'i', 'strike', 'u', 'font', 'p', 'ul', 'ol', 'li', 'blockquote', 'pre', 'code', 'h1', 'h2', 'h3', 'h4', 'hr','iframe','embed'","allowedAttributes":"iframe : ['src','width','height'] ,embed : ['src','width','height']","su":"1","gn":"op"}

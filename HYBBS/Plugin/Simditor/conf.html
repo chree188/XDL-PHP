@@ -1,0 +1,30 @@
+<div class="form-group">
+	<label class="col-lg-12 control-label">编辑器工具栏按钮列表</label>
+	<div class="col-lg-12">
+		<textarea class="form-control" name="toolbar">{$inc.toolbar}</textarea>
+		<span class="help-block">编辑器的按钮列表,格式为 '按钮','按钮2'  ; 最后一位请勿输入 , 号</span>
+	</div>
+	
+</div>
+<div class="form-group">
+	<label class="col-lg-12 control-label">编辑器标签安全过滤(白名单)</label>
+	<div class="col-lg-12">
+		<textarea class="form-control" name="allowedTags">{$inc.allowedTags}</textarea>
+		<span class="help-block">编辑器标签白名单</span>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-lg-12 control-label">标签属性白名单</label>
+	<div class="col-lg-12">
+		<textarea class="form-control" name="allowedAttributes">{$inc.allowedAttributes}</textarea>
+		<span class="help-block">比如 iframe 的src属性不被删除 则输入 iframe : ['src'] , img : ['src','alt'] 多个数组</span>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-lg-12 control-label">@用户带上摘要</label>
+	<div class="col-lg-12">
+		<textarea class="form-control" name="su">{$inc.su}</textarea>
+		<span class="help-block">@用户时候在编辑器加上 他的摘要 0=关闭 1=开启</span>
+	</div>
+</div>
+<p>.</p>

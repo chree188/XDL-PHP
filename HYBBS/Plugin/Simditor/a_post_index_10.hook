@@ -1,0 +1,18 @@
+//<?php
+
+$tmp_img = explode(',',$img);
+
+$img='';
+if(!empty($tmp_img)){
+	foreach ($tmp_img as $key => $v) {
+		if(strpos($v,'/emoji/') !== FALSE || empty($v)){
+			unset($tmp_img[$key]);
+			continue;
+		}
+		$img.=$v.',';
+	}
+	
+	$sz = count($tmp_img);
+
+}
+$img=trim($img,',');

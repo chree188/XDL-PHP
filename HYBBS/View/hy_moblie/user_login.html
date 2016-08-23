@@ -1,0 +1,108 @@
+{include h}
+{include user_header1}
+<section class="body" id="user_body">
+<div>
+	<div class="hy-box" style="margin-top:20px">
+		<form id="form">
+            <!--{hook t_m_user_login_1}-->
+		    <div class="hy-input-box">
+		        <input type="text" name="user" placeholder="请输入用户名">
+		    </div>
+            <!--{hook t_m_user_login_2}-->
+		    <div class="hy-input-box">
+		        <input type="password" name="pass" placeholder="请输入密码">
+		    </div>
+            <!--{hook t_m_user_login_3}-->
+	    </form>
+	</div>
+    <!--{hook t_m_user_login_33}-->
+	<div style="padding:10px;    text-align: center;">
+		<button id="login" type="button" class="hy-btn hy-btn-danger hy-btn-block" style="padding: 8px 0;">登录</button>
+		<a href="{#WWW}user{#EXP}add"  ajax="true" pos="right" rgb="#f1f4f9"  type="button" class="hy-btn hy-btn-link" style="color: #a2a2a2;">
+            注册新账号
+        </a>
+        <a href="{#WWW}user{#EXP}repass"  ajax="true" pos="right" rgb="#f1f4f9" type="button" class="hy-btn hy-btn-link" style="color: #a2a2a2;">忘记密码?</a>
+        <hr style="
+    border-top: 1px solid #d4d4d4;
+    margin: 10px 0;">
+{if is_plugin_on('hy_qq_login')}
+        <a href="{#WWW}user{#EXP}qqlogin" class="icon icon-qq" style="
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 40px;
+    background: #FFF;
+    padding: 12px 12px 12px 12px;
+    color: #3cf;
+    border: solid 1px #DDD;
+    {if is_plugin_on('hy_weibo_login')}
+        margin-right: 40px;
+       {/if}
+"></a>
+{/if}
+{if is_plugin_on('hy_weibo_login')}
+        <a href="{#WWW}user{#EXP}weibologin" class="icon icon-weibo" style="
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 40px;
+    background: #FFF;
+    padding: 12px 12px 12px 12px;
+    color: #f33;
+    border: solid 1px #DDD;
+"></a>
+{/if}
+    <div style="height:40px"></div>
+	</div>
+</div>
+</section>
+<!--{hook t_m_user_login_js}-->
+<script>
+$(function(){
+
+	$("#user").blur(function(){
+		$.get("{#WWW}ajax{#EXP}useravatar",{user:$(this).val()},function(e){
+			$("#img").attr('src',"{#WWW}"+e.b)
+		},'json');
+	});
+    $('#form').submit(function() {
+    	return false;
+    });
+    $("#login").click(function(){
+        var postdata = $('#form').serialize();
+        <!--{hook t_user_login_js_1}-->
+        $.post("{#WWW}user{#EXP}login", postdata,  function(e){
+        	<!--{hook t_user_login_js_2}-->
+            if(e.error){
+                if(e.url !='')
+                    window.location.href=e.url;
+                else
+                    window.location.href="{#WWW}";
+            }else{
+            	$.hy.warning(e.info);
+            }
+            <!--{hook t_user_login_js_3}-->
+        },'json');
+        <!--{hook t_user_login_js_4}-->
+    });
+    window.user_body = new IScroll('#user_body', {
+        disableMouse: true,
+        disablePointer: true,
+        mouseWheel: true,
+        scrollbars: true,
+        fadeScrollbars:true,
+        preventDefault: false,
+        preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ },
+        shrinkScrollbars:'scale'
+      
+    });
+
+
+
+
+
+});
+</script>
+{include f}

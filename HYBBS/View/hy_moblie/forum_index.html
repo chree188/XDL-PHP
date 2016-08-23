@@ -1,0 +1,25 @@
+{include h}
+{include forum_header}
+<section class="body"  id="index_body">
+	<!--{hook t_m_forum_index_1}-->
+	<div class="hy-box hy-bo-b hy-bo-t" style="margin-top:10px">
+	    <div class="hy-input-box">
+	        <input type="text" placeholder="搜索论坛">
+	    </div>
+	</div>
+	<!--{hook t_m_forum_index_2}-->
+	<div class="hy-list hy-bo-t hy-bo-b">
+	    {foreach $forum as $key => $v}
+	    <!--{hook t_m_forum_index_3}-->
+	    <a href="<?php echo WWW.URL('forum','',EXP.$v['id']); ?>"> 
+	        <img src="{#WWW}upload/forum{$key}.png" width="40" height="40" style="margin-right:10px" onerror="this.src='{#WWW}upload/de.png'">
+	        <span class="title">{$v.name}</span>
+	        <span class="icon icon-chevron-right"></span>
+	    </a>
+	    <!--{hook t_m_forum_index_4}-->
+	    {/foreach}
+	</div>
+	<!--{hook t_m_forum_index_5}-->
+</section>
+
+{include f}

@@ -1,0 +1,39 @@
+.checkdiv {
+  overflow: hidden;
+  border: 3px solid #f2f2f2;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #FFFFFF;
+  height: 50px;
+  line-height: 42px;
+}
+.checkdiv .ico_calendar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+.checkdiv .btn-sign {
+  color: #333333;
+  font-size: 16px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 5px;
+}
+.sign-calendar {
+  background-color: #fff;
+  border: 3px solid #f2f2f2;
+  border-top-color: transparent;
+}
+.sign-calendar .cell-day.signed .heading {
+  background: url('../images/signed.png') center center;
+}
+.sign-calendar .day > .heading {
+  text-align: center;
+  line-height: 30px;
+}
+.sign-calendar .day > .heading > .month {
+  display: none !important;
+}
+.sign-calendar .day > .content {
+  display: none !important;
+}

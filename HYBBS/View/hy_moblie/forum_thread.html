@@ -1,0 +1,181 @@
+{include h}
+{include forum_thread_header}
+<!--{hook t_m_forum_thread_1}-->
+<section class="body" id="index_body">
+<!--{hook t_m_forum_thread_2}-->
+<div style="padding-bottom: 5px;position: relative;">
+<!--{hook t_m_forum_thread_3}-->
+	<div id="forum-body-top" class="iscroll iscrollTop index_body">  
+        <span class="icon-undo2"></span>
+        <p>下拉刷新内容</p>
+  	</div> 
+    <!--{hook t_m_forum_thread_4}-->
+	<span class="Select">
+		<select class="Select-input FormControl">
+			<option value="{php echo WWW.URL('forum',$fid.EXP.'new');}" {if isset($_GET['HY_URL'][2])}{if $_GET['HY_URL'][2] == 'new'}selected{/if}{/if}>最新主题</option>
+			<option value="{php echo WWW.URL('forum',$fid.EXP.'btime');}" {if isset($_GET['HY_URL'][2])}{if $_GET['HY_URL'][2] == 'btime'}selected{/if}{/if}>最新回复</option>
+      <!--{hook t_m_forum_thread_5}-->
+		</select>
+		<script type="text/javascript">
+      $(".FormControl").change(function(){
+          window.location.href = $(this).val();
+      })
+      </script>
+      <!--{hook t_m_forum_thread_6}-->
+		<i class="icon icon-sort Select-caret"></i>
+	</span>
+  <!--{hook t_m_forum_thread_7}-->
+  <div class="rebtn bor" >
+    <form action="{#WWW}search" method="get">
+    <input type="text" name="key">
+    </form>
+    <button class="icon-search" onclick="$('.rebtn').toggleClass('active')"></button>
+    <!--{hook t_m_forum_thread_8}-->
+  </div>
+<!--{hook t_m_forum_thread_99}-->
+	{foreach $top_list as $v}
+	{include thread_list}
+	{/foreach}
+	{foreach $top_f_data as $v}
+	{include thread_list}
+	{/foreach}
+	<list id="forum-list">
+	{foreach $data as $v}
+	<!--{hook t_m_forum_thread_9}-->
+	{include thread_list}
+	<!--{hook t_m_forum_thread_10}-->
+	{/foreach}
+	</list>
+	<div id="forum-body-bottom" class="index_body iscrollBottom iscroll">  
+        <span class="icon-undo2"></span>
+        <p>向上拉继续加载</p>
+  </div>
+  <!--{hook t_m_forum_thread_11}-->
+</div>
+<script type="text/javascript">
+$(function(){
+  <!--{hook t_m_forum_thread_12}-->
+window.is_fid = '{$fid}';
+var index_body = new IScroll('#index_body', {
+	 disableMouse: true,
+    disablePointer: true,
+    mouseWheel: true,
+    scrollbars: true,
+  	fadeScrollbars:true,
+  	preventDefault: false,
+  	preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ },
+  	shrinkScrollbars:'scale',
+    probeType:1,
+    fid:'{$fid}'
+});
+
+<!--{hook t_m_forum_thread_13}-->
+
+window.forum_text1=false;
+window.forum_text2=false;
+index_body.on('scroll',function(){
+  //console.log(this);
+  gd_b1(this.y);
+  if(this.distY > 200) {
+    if(window.forum_text1)
+      return;
+    window.forum_text1=true;
+    
+ 
+    $("#forum-body-top .icon-undo2").addClass("fa-spin1").next().text('释放你的爪');
+
+
+  }else if(this.distY < -200){
+    if(window.forum_text2)
+      return;
+    window.forum_text2=true;
+    $("#forum-body-bottom .icon-undo2").addClass("fa-spin1").next().text('释放你的爪');
+  }else{
+    window.forum_text1=false;
+    window.forum_text2=false;
+  }
+});
+
+$('#index_body').on('touchend', function (e) {
+  gd_b1(index_body.y);
+  if(index_body.distY > 200){
+    $("#forum-body-top").addClass("loading");
+  }
+  else if(index_body.distY < -200){
+  	//console.log(index_body.distY);
+    $("#forum-body-bottom").addClass("loading");
+  }else{
+    if(!window.is_loading)
+        $('.loading').removeClass('loading');
+  }
+});
+
+window.is_loading = false;
+window.forum_page = 2;
+index_body.on('scrollEnd',function(){  
+
+  window.forum_text1=false;
+  window.forum_text2=false;
+  gd_b1(this.y);
+
+  //console.log("滚动结束",this.options.fid,this);
+  	if(this.options.fid != window.is_fid){
+  		console.log('out');
+    	this.destroy();
+    
+    }
+
+	if(this.distY > 200) {
+		if(window.is_loading)
+			return;
+		window.is_loading = true;
+		
+		window.history.pushState("","",'{#WWW}f{#EXP}{$fid}{#EXP}{$type}');
+    window.forum_page=2;
+
+		$("#forum-body-top .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
+		index_body.refresh();
+    $.ajax({
+      url:'{#WWW}f{#EXP}{$fid}{#EXP}{$type}',
+      dataType:'html',
+      success:function(e){
+        window.is_loading=false;
+        $("#forum-body-top").removeClass("loading");
+        $("#forum-body-top .icon-undo2").removeClass("fa-spin1").next().text('下拉刷新内容');
+        $("#forum-list").html(e.match(/<list id="forum-list">([\s\S]*?)<\/list>/)[1]);
+        index_body.refresh();
+        
+      }
+    })
+
+	}else if(this.distY < -200){
+    if(window.is_loading)
+      return;
+    window.is_loading = true;
+    
+    
+    $("#forum-body-bottom .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
+    index_body.refresh();
+    var href='{#WWW}f{#EXP}{$fid}{#EXP}{$type}{#EXP}'+forum_page++;
+    window.history.pushState("","",href);
+
+    $.ajax({
+      url:href,
+      dataType:'html',
+      success:function(e){
+      	window.is_loading=false;
+      	$("#forum-list").append(e.match(/<list id="forum-list">([\s\S]*?)<\/list>/)[1]);
+        $("#forum-body-bottom").removeClass("loading");
+        $("#forum-body-bottom .icon-undo2").removeClass("fa-spin1").next().text('向上拉继续加载');
+        index_body.refresh();
+        
+      }
+    })
+  }
+            
+});  
+})
+</script>
+</section>
+
+{include f}

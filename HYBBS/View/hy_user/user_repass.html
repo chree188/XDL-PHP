@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>注册 {$conf.title2}</title>
+
+<link href="{#WWW}View/hy_user/css/login.css" rel="stylesheet">
+<link href="{#WWW}public/css/alert.css" rel="stylesheet">
+<!--[if (gte IE 9)|!(IE)]><!-->
+	<script src="{#WWW}public/js/jquery.min.js"></script>
+	<!--<![endif]-->
+	<!--[if lte IE 8 ]>
+	<script src="{#WWW}public/js/jquery1.11.3.min.js"></script>
+	<![endif]-->
+<script src="{#WWW}public/js/sweet-alert.min.js"></script>
+<!--{hook t_user_repass_header}-->
+</head>
+<body>
+
+	<div class="main">
+		<div class="login-form">
+			<h1 style="padding-top:30px">找回密码</h1>
+
+			<form id="form">
+				<!--{hook t_user_login_8}-->
+				<label for="email">邮箱地址</label>
+				<input type="text" id="email" name="email" class="text" value="" placeholder="你注册账号所填的邮箱"/>
+				<label for="code">邮箱验证码 <small><a onclick="send_code(this)" href="javascript:void(0)" style="color: #46699E;">点击获取验证码</a></small></label>
+				<input type="text" id="code" name="code" class="text" value="" placeholder="你邮箱接收到的验证码"/>
+				<label for="pass">更改密码</label>
+				<input type="password" name="pass1" value=""/>
+				<label for="pass">确认密码</label>
+				<input type="password" name="pass2" value="" />
+				<!--{hook t_user_login_9}-->
+				<div class="submit">
+					<input id="repass" type="submit" value="修改" >
+				</div>
+				<!--{hook t_user_login_10}-->
+
+				<p><a href="{#WWW}user{#EXP}login">返回登录</a></p>
+			</form>
+		</div>
+	</div>
+<script>
+var send_b = false;
+function send_code(obj){
+	// if(send_b)
+	// 	return ;
+	 var _this = $(obj);
+	// send_b=true;
+	
+	
+	//_this.attr("disabled","disabled");
+	//_this.css("color","#757575");
+	$.ajax({
+		url: '{#WWW}user{#EXP}recode',
+		type:"POST",
+		cache: false,
+		data:{
+			email:$("#email").val(),
+			<!--{hook t_user_repass_js_1}-->
+		},
+		dataType: 'json'
+	}).then(function(e) {
+		<!--{hook t_user_repass_js_2}-->
+		if(e.error){
+			swal("发送成功","请到你的"+$("#email").val()+"查看邮件获得验证码,可能邮件会被放入垃圾箱或已删除",'success');
+		}else{
+			swal('发送失败',e.info,'error');
+		}
+		<!--{hook t_user_repass_js_3}-->
+	}, function() {
+	 swal("发送失败",'服务器繁忙');
+	});
+    
+}
+$(function(){
+    $('#form').submit(function() {return false;});
+    $("#repass").click(function(){
+        var postdata = $('#form').serialize();
+        <!--{hook t_user_repass_js_4}-->
+        $.post("{#WWW}user{#EXP}recode2", postdata,  function(e){
+        	<!--{hook t_user_repass_js_5}-->
+            if(e.error){
+                swal("修改成功","密码修改成功,请自行登录!",'success');
+            }else{
+            	swal("修改失败", e.info, "error");
+            }
+            <!--{hook t_user_repass_js_6}-->
+        },'json');
+        <!--{hook t_user_repass_js_7}-->
+    })
+
+
+
+});
+</script>
+</body>
+</html>

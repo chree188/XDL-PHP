@@ -1,0 +1,76 @@
+{include h}
+{include user_header}
+{include user_menu}
+<!--{hook t_m_user_mess_1}-->
+{foreach $mess_data as $v}
+<a class="hy-box" href="{php echo WWW.URL('user','mess',EXP.'id'.EXP.$v['id']);}" style="display: inline-block;    width: 100%;">
+    <div class="thread">
+        <!--{hook t_m_user_mess_2}-->
+        <h3 class="title1">{$v.title}</h3>
+        
+        <p class="p" style="text-align: right;">
+        
+        {if $v['type']}
+        <label class="hy-lable hy-lable-success l">{$v.user} @了你</label>
+        {else}
+        <label class="hy-lable hy-lable-blue l">{$v.user} 回复了你</label>
+        {/if}
+<!--{hook t_m_user_mess_3}-->
+
+        消息来自时间 <?php echo humandate($v['atime']);?> {if !$v['view']}<label class="hy-lable hy-lable-danger ">未读</label>{/if}
+        </p>
+                    
+        <!--{hook t_m_user_mess_4}-->
+    </div>
+</a>
+{/foreach}
+<!--{hook t_m_user_mess_5}-->
+<div class="hy-box" style="padding:10px">
+<!--{hook t_m_user_mess_6}-->
+    {if $pageid!=1}
+    <span class="pg-item" disabled>
+        <a class="hy-btn hy-btn-danger" href="{php echo WWW.URL('my',$data['user'],EXP.'mess'.EXP.($pageid-1));}">上一页</a>
+    </span>
+    {/if}
+    <!--{hook t_m_user_mess_7}-->
+    <?php $tmp = $page_count ; ?>
+    {for $i=($pageid-5 < 1) ? 1 : $pageid -5; $i< (($pageid + 5 > $tmp) ? $tmp+1 : $pageid + 5) ; $i++}
+    <!--{hook t_m_user_mess_8}-->
+
+    <span class="pg-item ">
+        <{if $pageid == $i}span{else}a{/if} class="hy-btn hy-btn-danger {if $pageid == $i}disabled{/if}" href="{php echo WWW.URL('my',$data['user'],EXP.'mess'.EXP.($i));}">
+            {$i}
+        </{if $pageid == $i}span{else}a{/if}>
+    </span>
+    <!--{hook t_m_user_mess_9}-->
+    {/for}
+    {if $pageid!=$page_count}
+    <span class="pg-item" >
+        <a class="next hy-btn hy-btn-danger" href="{php echo WWW.URL('my',$data['user'],EXP.'mess'.EXP.($pageid+1));}">下一页</a>
+    </span>
+    {/if}
+    <!--{hook t_m_user_mess_10}-->
+</div>
+<script type="text/javascript">
+    $(function(){
+        $(window).scroll(function(){
+            <!--{hook t_m_user_mess_11}-->
+            if(this.scrollY > 100  ){
+                $(".hy-header").css('background','#f65d5b');
+            }else{
+                $(".hy-header").css('background','rgba(0, 0, 0, 0)');
+                    
+            }
+            <!--{hook t_m_user_mess_12}-->
+        });
+        <!--{hook t_m_user_mess_13}-->
+
+    })
+</script>
+<style type="text/css">
+    .hy-btn{
+            padding: 4px 8px;
+            font-size: 12px;
+    }
+</style>
+{include f}
