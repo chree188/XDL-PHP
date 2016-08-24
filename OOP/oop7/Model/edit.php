@@ -4,7 +4,7 @@ require './Model.class.php';
 require './config.php';
 
 $model = new Model('s50_user');
-$row = $model->find(3);
+$row = $model->find($_GET['id']);
 echo '<pre>';
     print_r($row);
 echo '</pre>';

@@ -59,15 +59,14 @@ $list = $model->limit($page->limit())->where($where)->select();
                         <td>
                             <?php 
                             switch ($val['sex']) {
-                                case 0: echo '女';break;
-                                case 1: echo '男';break;
-                                case 2: echo '保密';break;
+                                case 'woman': echo '女';break;
+                                case 'man': echo '男';break;
                             }
                              ?>
                         </td>
                         <td><?php echo $val['age'] ?></td>
                         <td>
-                            <a href="#">编辑</a>
+                            <a href="./edit.php?id=<?= $val['id'] ?>">编辑</a>
                             <a href="#">删除</a>
                         </td>
                     </tr>
