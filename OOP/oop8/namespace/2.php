@@ -8,8 +8,7 @@ function var_dump()
 {
     echo '哈哈<br>';
 }
+
 var_dump();
 \dds\var_dump();
 \var_dump('12345');
-
-
