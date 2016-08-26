@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>倒计时</h1>
+		<button onclick="start()">开始</button>
+		<hr />
+		<h1 id="box">
+			10
+		</h1>
+		<script>
+			var m = 10;
+			function start(){
+				var h1 = document.getElementById('box');
+				console.log(h1);
+				m--;
+				h1.innerHTML = m;
+				if(m <= 0){
+					return;
+				}
+				setTimeout('start()',500);
+			}
+		</script>
+	</body>
+</html>
