@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS</title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				border: 5px solid #999;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>获取页面中的元素</h1>
+		<hr />
+		<div id="box"></div>
+		<script>
+//			div 元素
+			var div = document.getElementById('box');
+			console.log(div);
+			
+			div.style.backgroundColor = "#f90";
+			div.style.color = "#00f";
+			div.innerHTML = "hello,艳艳";
+		</script>
+	</body>
+</html>

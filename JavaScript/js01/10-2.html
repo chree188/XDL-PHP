@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS</title>
+	</head>
+	<body>
+		<h1>改变页面中的元素</h1>
+		<hr />
+		<button onclick="makeBig()">点我变大</button>
+		<hr />
+		<img src="1.jpg" width="100" id="myimg"/>
+		<script>
+			function makeBig(){
+				var img = document.getElementById('myimg');
+				img.width += 100;
+				console.log(img.width);
+			}
+		</script>
+	</body>
+</html>

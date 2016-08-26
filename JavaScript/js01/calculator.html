@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简单计算器</title>
+	</head>
+	<body>
+		<h1>简单计算器</h1>
+			<input type="text" id="tex1" /><br /><br />
+			<input type="text" id="cnt" value="" size="1" />输入运算符<br /><br />
+			<input type="text" id="tex2" /><br /><br />
+			<h3 id="result">=</h3><br />
+			<button onclick="cnt()">计算</button>
+		<script>
+			function cnt(){
+				var cnt1 = document.getElementById('tex1');
+				var cnt = document.getElementById('cnt');
+				var cnt2 = document.getElementById('tex2');
+				console.log(cnt1.value);
+				console.log(cnt.value);
+				console.log(cnt2.value);
+				
+				switch (cnt.value){
+					case '+':
+					var res = (parseInt(cnt1.value) + parseInt(cnt2.value));
+						break;
+					case '-':
+					var res = (parseInt(cnt1.value) - parseInt(cnt2.value));
+						break;
+					case '*':
+					var res = (parseInt(cnt1.value) * parseInt(cnt2.value));
+						break;
+					case '/':
+					var res = (parseInt(cnt1.value) / parseInt(cnt2.value));
+						break;
+				}
+				console.log(res);
+				var result = document.getElementById('result');
+				result.innerHTML = res;
+			}
+		</script>
+	</body>
+</html>

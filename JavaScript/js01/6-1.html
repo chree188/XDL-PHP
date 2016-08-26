@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS</title>
+		<script>
+			var num = 123;
+			var num = 010;
+			var num = 0x10;
+			var num = 3e5;
+			var num = 3e-5;
+			
+			console.log('值:'+num);
+	        console.log('类型'+typeof(num));
+	
+	        var num = NaN;  //Not a Number
+	        if (NaN == NaN) {
+	            console.log('相等');
+	        } else{
+	            console.log('不相等');
+	        }
+	        console.log(NaN + 100);//NaN
+	
+	
+	
+	        //转换类型 为数值 ,转不动 就是NaN
+	        // Number()  parseInt()  parseFloat()
+	        var a = 'hello'; //N
+	        var a = '123hello'; //N
+	        var a = '123'; //Y
+	        var a = ''; //Y 0
+	        var a = true; //Y 1
+	        var a = false; //Y 0
+	        var a = null; //Y 0
+	        var a = undefined; //N
+	
+	        var n = Number(a);
+	        console.log('值:'+n);
+	        console.log('类型'+typeof(n));
+	
+	        var a = 'hello'; //N
+	        var a = '123hello'; //Y 123
+	        var a = '123.999hello'; //Y I 123  F 123.9999
+	       /* var a = ''; //N 
+	        var a = true; //N*/
+	        // var n = parseInt(a);
+	        var n = parseFloat(a);
+	        console.log('值:'+n);
+	        console.log('类型'+typeof(n));
+	
+	        // 函数 isNaN() 判断一个类型 是否是NaN  返回true/false
+	        console.log(isNaN('12abc'));
+	        console.log(isNaN('12'));
+	
+	        //false
+	        if (NaN) {
+	            console.log('NaN做判断是:'+true);
+	        } else{
+	            console.log('NaN做判断是:'+false);
+	        };
+		</script>
+	</head>
+	<body>
+		<h1>在JS中的数值</h1>
+		<hr />
+		<script>
+//			JS代码
+		</script>
+	</body>
+</html>
