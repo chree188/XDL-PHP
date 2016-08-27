@@ -1,0 +1,129 @@
+
+.clear{clear: both}
+#LOGIN-BOX{
+	width: 1200px;
+	height: 480px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+#LOGIN{
+	width: 400px;
+	height: 36px;
+	margin: 0 auto; 
+	padding: 50px;
+}
+#LOGIN img{
+	float:left;
+	margin-left: 110px;
+	line-height: 50px;
+}
+#LOGIN span{
+	float:right;
+	margin-right: 110px;
+	font-family: 微软雅黑;
+	font-size: 24px;
+	color: #8d6a54;
+	line-height: 36px;
+}
+#LOGIN-BOX form{
+	width: 400px;
+	height: 290px;
+	margin: 0 auto;
+}
+#LOGIN-BOX form ul{
+	width: 400px;
+	padding: 0;
+}
+#LOGIN-BOX form ul li{
+	list-style: none;
+	margin-top: 2px;
+}
+#LOGIN-BOX form ul .identify a{
+	color: #70A4C1;
+	font-size: 14px;
+	font-family: 微软雅黑;
+	text-decoration: none;
+	float: right; 
+	margin-right: 15px;
+	margin-top: 20px;
+}
+#LOGIN-BOX form ul .identify a:hover{
+	text-decoration: underline; 
+}
+#LOGIN-BOX form ul li .loginname{
+	width: 378px;
+	height: 18px;
+	font-size: 14px;
+	padding: 16px 0 16px 20px;
+	border: none;
+}
+#LOGIN-BOX form ul li .password{
+	width: 378px;
+	height: 18px;
+	font-size: 14px;
+	padding: 16px 0 16px 20px;
+	border: none;
+}
+#LOGIN-BOX form ul li .phone-identify{
+	width: 250px;
+	height: 18px;
+	font-size: 14px;
+	padding: 16px 0 16px 20px;
+	border: none;
+}
+#LOGIN-BOX form ul .remember{
+	width: 400px;
+	height: 30px;
+	padding-top: 10px;
+}
+#LOGIN-BOX form ul .remember div{
+	width: 20px;
+	height: 30px;
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+#LOGIN-BOX form ul .remember .is_remember{
+	padding-top: 5px;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+#LOGIN-BOX form ul .remember label{
+	font-size: 12px;
+	font-family: 微软雅黑;
+	color: #491903;
+	margin-left: 2px;
+	margin-top: 15px;
+	float: left;
+}
+#LOGIN-BOX form ul .remember a{
+	color: #70A4C1;
+	font-size: 12px;
+	font-family: 微软雅黑;
+	text-decoration: none;
+	float: left;
+	margin-top: 14.5px;
+}
+#LOGIN-BOX form ul .remember a:hover{
+	text-decoration: underline;
+}
+#LOGIN-BOX form ul .remember span{
+	float: left;
+	font-size: 12px;
+	font-family: 微软雅黑;
+	margin-top: 14.5px;
+}
+#LOGIN-BOX form ul li .dl{
+	height: 52px;
+	width: 400px;
+	font-size: 16px;
+	font-family: 微软雅黑;
+	color: white;
+	padding: 0; 
+	background: #491903;
+	border: 0;
+}
+#LOGIN-BOX form ul li .dl:hover{
+	cursor: pointer;
+}

@@ -1,0 +1,121 @@
+
+	 	body{
+	 			margin: 0;
+				padding:0;
+				min-width: 1000px;
+				
+			}
+		a{
+			font-family: 'Microsoft Yahei';
+		}
+			@font-face{
+				font-family: 'aa';
+				src:url('./fonts/iconfont.ttf'),
+					url('./fonts/iconfont.svg'),
+					url('./fonts/iconfont.woff'),
+					url('./fonts/iconfont.eot');
+			}
+
+		.clear{clear: both;}
+		#NAV{
+			width: 100%;
+			height: 78px;
+			background: white;
+			border-bottom: 2px solid #e8e3dd;
+			position: relative;
+			top: 0px;
+			left: 0px;
+			margin: 0 auto;
+		}
+		#NAV #NAV-l{
+			float: left;
+			padding-left: 20px;
+		}
+		#NAV #NAV-l .logo{
+			margin: 0 20px 0 0;
+    		display: block;
+    		float: left;
+		}
+		#NAV #NAV-l .add{
+			position: absolute;
+		    top: 15px;
+		    left: 240px;
+			float: left;
+		}
+		#NAV #NAV-l .add select{
+			background:#b59e90;
+			border-radius:4px;
+			outline:none;
+		}
+		#NAV #NAV-l .add select option{
+			background:white;
+			outline:none;
+			border: 1px solid white;
+		}
+		#NAV #NAV-l .nav{
+			margin: 0;
+			padding: 0;
+			padding-top: 46px;
+			float: left;
+			list-style: none;
+		}
+		#NAV #NAV-l .nav li{
+			list-style: none;
+			float: left; 
+		}
+		#NAV #NAV-l .nav li a{
+			text-decoration: none;
+			padding: 2px 16px;
+			font-size: 10px;
+			color: #8e6a55;
+			font-family: "Microsoft Yahei";
+		}
+		#NAV #NAV-l .nav li a:hover{
+			color: #432818;
+		}
+		#BODY{
+			width: 100%;
+			height: 1500px;
+			background: #ccc;
+		}
+		#NAV #NAV-r{
+			float: right;
+			padding-right:30px; 
+		}
+		#NAV #NAV-r .nav{
+			margin: 0;
+			padding: 0;
+			padding-top: 46px;
+			float: right;
+			list-style: none;
+		}
+		#NAV #NAV-r .nav li{
+			list-style: none;
+			float: right;
+		}
+		#NAV #NAV-r .nav li span{
+			font-family: 'aa';
+			padding-top: 1.5px;
+			color: #b59e90;
+		}
+		#NAV #NAV-r .nav li a{
+			text-decoration: none;
+			padding: 2px 10px;
+			font-size: 10px;
+			color: #b59e90;
+			font-family: "Microsoft Yahei";
+		}
+		#NAV #NAV-r .nav span{
+			list-style: none;
+			float: right;
+			text-decoration: none;
+			font-size: 10px;
+			color: #8e6a55;
+			font-family: "Microsoft Yahei";
+		}
+		#NAV #NAV-r .nav li a:hover{
+			color: #432818;
+		}
+		.com{
+			font-family: 'Mircosoft Yahei';
+		}

@@ -1,0 +1,58 @@
+
+
+body{
+	margin: 0;
+	padding: 0;
+}
+.clear{clear: both;}
+#big-box{
+	width: 1200px;
+	height: 360px;
+	margin: 10px auto;
+}
+#big-box .hd{
+	width: 1200px;
+	height: 24px;
+	padding: 10px 0;
+	color: #604136;
+	font-size: 16px;
+	font-family: 'Microsoft Yahei';
+}
+#big-box .bd{
+	width: 1200px;
+	height: 316px;
+}
+#big-box .bd .goods-list{
+	padding: 0;
+}
+#big-box .bd .goods-list li{
+	width: 240px;
+	height: 316px;
+	float: left;
+	list-style: none;
+}
+#big-box .bd .goods-list li .goods-pic{
+	width: 220px;
+	height: 220px;
+	margin: 0 auto;
+}
+#big-box .bd .goods-list li .goods-info .goods-name{
+	width: 240px;
+	margin-bottom: 10px;
+}
+#big-box .bd .goods-list li .goods-info .goods-name a{
+	font-size: 10px;
+	font-family: '微软雅黑';
+	color: #8c6a55;
+	text-decoration: none;
+}
+#big-box .bd .goods-list li .goods-info .goods-name a:hover{
+	text-decoration: underline;
+}
+#big-box .bd .goods-list li .goods-info .goods-price{
+	font-size: 10px;
+	font-family: '微软雅黑';
+	color: #604136;
+	width: 240px;
+	height: 18px;
+}

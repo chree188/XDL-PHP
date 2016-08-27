@@ -1,0 +1,231 @@
+body{
+	min-width: 1000px;
+}
+body,h1,h2,h3,h4,h5,h6,p,div,span,ul,ol,li,dl,dt,dd{
+				margin: 0;
+				padding:0;
+				font-size: 10px;
+				font-family: 'Microsoft Yahei';
+				color: #8e6a55;
+}
+.clear{clear: both;}
+
+#bread-crumbs{
+	width: 1200px;
+	height: 18px;
+	padding: 15px;
+	margin: 0 auto;
+}
+#bread-crumbs span a{
+	text-decoration: none;
+	color: #8e6a55;
+}
+#bread-crumbs span{
+	color: #8e6a55;
+}
+#bread-crumbs .now{
+	color: #dacbc3;
+}
+
+#filter_lists{
+	width: 1200px;
+	height: 23px;
+	margin: 0 auto;
+}
+#filter_lists dl{
+	width: 1200px;
+	height: 23px;
+	margin-bottom: 5px;
+	color: #8e6a55;
+}
+#filter_lists dl dt{
+	width: 76px;
+	height: 20px;
+	text-align: right;
+	float: left;
+	margin-right: 3px;
+	line-height: 20px;
+}
+#filter_lists dl dd{
+	width: 1070px;
+	height: 23px;
+	margin-left: 80px;
+	margin-right: 50px;
+}
+#filter_lists dl dd span{
+	height: 20px;
+	padding: 0 5px;
+	line-height: 20px;
+	margin: 0 13px 3px 13px;
+	display: inline-block;
+}
+#filter_lists dl dd span a{
+	text-decoration: none;
+	color: #8e6a55;
+}
+#filter_lists dl dd span a:hover{
+	text-decoration: none;
+	color: #dacbc3;
+}
+
+#BOX{
+	width: 1200px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+#BOX #GOODS-BOX{
+	margin-top: 10px;
+}
+#BOX #GOODS-BOX ul{
+	padding: 0;
+	margin: 0;
+}
+#BOX #GOODS-BOX ul .a{
+	width: 1200px;
+	height: 220px;
+	padding-bottom: 10px;
+	background: white;
+	text-decoration: none;
+	list-style: none;
+	margin:0 auto; 
+	display: block;
+}
+
+#BOX #GOODS-BOX ul li .goods-pic{
+	width: 220px;
+	height: 220px;
+	float: left;
+	overflow: hidden;
+    text-align: center;
+}
+#BOX #GOODS-BOX ul li .goods-pic img:hover{
+	box-shadow: 5px 5px 15px -8px gray;
+	transition:box-shadow 0.5s linear;
+}
+
+
+
+#BOX #GOODS-BOX ul li .goods-action{
+	width: 172px;
+	height: 103px;
+	float: right;
+	padding: 48px 0;
+	margin-left: 10px;
+	background: #fdf7f2;
+}
+#BOX #GOODS-BOX ul li .goods-action .goods-buy{
+	width: 172px;
+	height: 103px;
+}
+#BOX #GOODS-BOX ul li .goods-action .goods-buy a{
+	text-decoration: none;
+}
+#BOX #GOODS-BOX ul li .goods-action .goods-buy button{
+	border: none;
+	padding: 0;
+	background: #fdf7f2;
+}
+#BOX #GOODS-BOX ul li .goods-action .goods-buy button:hover{
+	border: none;
+	cursor: pointer;
+	outline:none;
+}
+#BOX #GOODS-BOX ul li .goods-action .goods-buy .detail div{
+	width: 172px;
+	height: 52px;
+	border-top: 1px solid #fff; 
+	border-bottom: 1px solid #fff;
+	position: relative; 
+}
+#BOX #GOODS-BOX ul li .goods-action .goods-buy .joincart div{
+	width: 172px;
+	height: 52px;
+	border-bottom: 1px solid #fff;
+	position: relative;
+	text-decoration: none;
+}
+#BOX #GOODS-BOX ul li .goods-action .goods-buy div:hover{
+	background: #FCF2EB;
+}
+#BOX #GOODS-BOX ul li .goods-action .goods-buy img{
+	position: absolute;
+	top: 11px;
+	left: 25px;
+}
+#BOX #GOODS-BOX ul li .goods-action .goods-buy span{
+	font-size: 14px;
+	line-height: 54px;
+	display: block;
+	left: 70px;
+	position: absolute;
+}
+
+
+#BOX #GOODS-BOX ul li .goods-price{
+	width: 180px;
+	height: 133px;
+	float: right;
+	margin-top: 10px;
+}
+#BOX #GOODS-BOX ul li .goods-price ul{
+	width: 180px;
+	height: 133px;
+}
+#BOX #GOODS-BOX ul li .goods-price ul li{
+	list-style: none;
+	padding-top: 75px;
+	width: 180px;
+	height: 18px;
+	font-size: 12px;
+	font-family:Arial;
+	color: #491903;
+}
+#BOX #GOODS-BOX ul li .goods-price ul li span{
+	font-size: 14px;
+	font-family:Arial;
+	color: #491903;
+}
+#BOX #GOODS-BOX ul li .goods-price ul a{
+	font-size: 12px;
+	color: #8e6a55;
+	text-decoration: none;
+	line-height: 35px;
+}
+
+
+#BOX #GOODS-BOX ul li .goods-info{
+    padding-top: 40px;
+    margin-right: 440px;
+    margin-left: 230px;
+}
+#BOX #GOODS-BOX ul li .goods-info .goods-name{
+	height: 24px;
+	display: block;
+	font-size: 16px;
+	font-family: 'Microsoft YaHei';
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color:#8e6a55;
+}
+#BOX #GOODS-BOX ul li .goods-info .goods-name:hover{
+	color: #432818;
+}
+#BOX #GOODS-BOX ul li .goods-info .goods-desc{
+	font-size: 10px;
+	font-family: 'Microsoft YaHei';
+	color:#8e6a55;
+	width: 530px;
+	line-height: 1.5;
+	display: block;
+}
+
+
+#paging{
+	width: 1200px;
+	height: 18px;
+	margin: 0 auto;
+	color: #604136;
+	text-align: center;
+}
+

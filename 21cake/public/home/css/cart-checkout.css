@@ -1,0 +1,289 @@
+
+body{
+	line-height: 1.5;
+	font-family: 'Microsoft Yahei';
+}
+td,th{
+	display: table-cell;
+    vertical-align: inherit;
+    padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #8e6a55;
+}
+li{
+	list-style: none;
+}
+
+#title{
+	width: 1190px;
+	height: 30px;
+	padding: 40px 0 5px 10px;
+	margin: 0 auto;
+	color: #8e6a55;
+	font-size: 20px;
+	font-family: 黑体;
+}
+.form{
+	width: 1200px;
+	margin: 0 auto;
+}
+#cart_main{
+	color: #8e6a55;
+	table-layout: auto;
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table{
+	border-collapse: collapse;
+    border-spacing: 0;
+    width: 1200px;
+}
+thead{
+	display: table-header-group;
+    vertical-align: middle;
+}
+#cart_main thead tr{
+	height: 30px;
+    line-height: 30px;
+    border: solid 1px #eee;
+}
+#cart_main thead th{
+	padding: 0;
+	color: #8e6a55;
+    height: 42px;
+    line-height: 42px;
+    background: #f7f7f7;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: inherit;
+}
+.th1{
+	width: 453px;
+	height: 42px;
+}
+.th2{
+	width: 142px;
+}
+.th3{
+	width: 169px;
+}
+.th4{
+	width: 212px;
+}
+.th5{
+	width: 159px;
+}
+.th6{
+	width: 64px;
+}
+    
+.cart-product{
+	width: 1200px;
+	height: 125px;
+}
+div{
+	display: block;
+}
+.p-pic {
+    width: 120px;
+    height: 120px;
+    margin: 2px auto;
+    display: block;
+    border: none;
+    overflow: hidden;
+}
+.cart-main .p-pic img{
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 80px;
+    max-height: 80px;
+    vertical-align: middle;
+}
+.cart-item{
+	border-bottom: 1px solid #f1f1f1;
+}
+.cart-main .cart-item .last td {
+    vertical-align: middle;
+}
+.cart-main .p-info {
+    text-align: left;
+    font-size: 12px;
+}
+.cart-main .cart-product td.p-info div.p-title {
+    padding-left: 0;
+    margin-bottom: 5px;
+    background: none;
+    color: #8e6a55;
+}
+.p-title a{
+	font-size: 12px;
+}
+.cart-product .td1{
+	width: 169px;
+	height: 125px;
+	padding: 0;
+	vertical-align: none;
+}
+.cart-main .cart-item .cart-product td div{
+	display: block;
+    line-height: 20px;
+}
+.bang{
+	text-align: center;
+	font-size: 12px;
+}
+.zs{
+	text-align: center;
+	font-size: 12px;
+	color: #cab3a7;
+}
+.p-price{
+	text-align: center;
+	font-size: 12px;
+	color: #8e6a55;
+}
+
+
+.num{
+	display: inline-block;
+}
+
+.num .number{
+	width: 48px;
+	height: 24px;
+	color: #8e6a55;
+	text-align: center;
+	line-height: 24px;
+	float: left;
+	margin: 0 4px;
+	padding: 0; 
+	display: block;
+	border: solid 1px #d5c2b9; 
+}
+
+.NUM{
+	text-align: center;
+}
+.p-subtotal{
+	text-align: center;
+	font-size: 12px;
+	color: #8e6a55;
+}
+.p-action{
+	text-align: center;
+}
+
+
+tfoot{
+	width: 1200px;
+}
+.hr-bg{
+	padding-left:0; 
+	background: #f7f7f7;
+	border-bottom: 1px solid #f1f1f1;
+}
+.order-price{
+	padding: 15px 0 10px 0;
+}
+ul .goods{
+	height: 30px;
+}
+#cart-main .order-price .label {
+    float: left;
+    text-align: right;
+    width: 200px;
+}
+#cart-main .order-price .price {
+    width: auto;
+    padding-right: 15px;
+    color: #491903;
+}
+#cart_main .cart-left{
+	text-align: left;
+    vertical-align: middle;	
+    padding: 10px 5px;
+}
+#cart_main .cart-right{
+	text-align: right;
+    padding: 10px 15px;
+}
+#cart-main .cart-left .btn-link{
+	font-family: "微软雅黑";
+    width: 148px;
+    height: 48px;
+    background: #F8F6F7;
+    border: solid 1px #d5c2b9;
+    color: #8e6a55;
+    display: inline-block;
+    line-height: 48px;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+.shdz{
+	height: 60px;
+	padding-left:0; 
+}
+
+#shxx{
+	width: 1190px;
+	height: 30px;
+	padding: 40px 0 5px 10px;
+	margin: 0 auto;
+	color: #8e6a55;
+	font-size: 20px;
+	font-family: 黑体;
+}
+
+.tjadd{
+	height: 68px;
+	margin-bottom: 30px;
+}
+.btn{
+	height: 26px;
+	display: block;
+	line-height: 26px;
+	background: #f7f7f7;
+    border: 1px solid #bda99c;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+#fkxx{
+	width: 1190px;
+	height: 30px;
+	padding-left: 5px;
+	margin: 0 auto;
+	color: #8e6a55;
+	font-size: 20px;
+	font-family: 黑体;
+}
+.pay{
+	display: block;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+.right .com{
+	margin-bottom: 10px;
+}
+.right .com td{
+	border: none;
+	padding: 10px;
+}
+
+.right .com td input{
+	border: none;
+	width: 100%;
+	padding: 10px;
+}
+.right .com .fk{
+	margin-top: 20px;
+}
