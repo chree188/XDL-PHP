@@ -1,44 +1,72 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-<title>进度条</title> 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<style> 
-*{ 
-    margin:0; 
-    padding:0; 
-} 
-body{font-size:12px;}h1{font-size:15px;} 
-.wrap{ 
-    font-size: 12px; 
-    margin:40px auto; 
-    width:400px; 
-} 
-/*进度条样式*/ 
-.progressbar_1{ 
-    background-color:#eee; 
-    height:16px; 
-    width:150px; 
-    border:1px solid #bbb; 
-    color:#222; 
-} 
-.progressbar_1 .bar { 
-    background-color:#6CAF00; 
-    height:16px; 
-    width:0; 
-} 
-</style> 
-</head> 
-<body> 
-<div class="wrap"> 
-        正在下载_50%： 
-    <div class="progressbar_1"> 
-        <div class="bar" style="width: 50%;"></div> 
-    </div>
-    <input type="button" onclick="" value="重新下载">&nbsp;&nbsp;&nbsp;<input type="button" onclick="" value="重新下载"/>
-</div> 
-<script> 
+<!DOCTYPE html>
+<html>
 
-</script> 
-</body> 
-</html> 
+	<head>
+		<title>进度条</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font-size: 12px;
+			}
+			
+			h1 {
+				font-size: 15px;
+			}
+			
+			.wrap {
+				font-size: 12px;
+				margin: 40px auto;
+				width: 400px;
+			}
+			
+			/*进度条样式*/
+			.progressbar_1 {
+				background-color: #eee;
+				height: 16px;
+				width: 150px;
+				border: 1px solid #bbb;
+				color: #222;
+			}
+			
+			.progressbar_1 .bar {
+				background-color: #6CAF00;
+				height: 16px;
+				width: 0;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="progressbar_1">
+				<div id="box" class="bar" style=""></div>
+			</div>
+			<input type="button" onclick="timer = setInterval('action()',500)" id="ipt1" value="下载">&nbsp;&nbsp;&nbsp;<input type="button" onclick="timer = setInterval('action()',500)" name="ipt2" value="重新下载" />
+		</div>
+		<script>
+			var i = 0;
+			function action(){
+				var val = document.getElementById('ipt1').value;
+				var div = document.getElementById('box');
+				console.log(val);
+				if(val == "下载"){
+					i=i+5;
+					val = "暂停";
+					div.style.width = i + '%';
+					if(i >= 100){
+//					清除定时
+					clearInterval(timer);
+				}
+				console.log(i);
+				}
+			}
+		</script>
+	</body>
+
+</html>
