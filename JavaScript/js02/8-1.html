@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数参数</title>
+	</head>
+<body>
+    <h1>JS函数参数</h1>
+    <hr>
+    <script>
+        function demo(m, n){
+            console.log(m + '宣' + n + '好久了');
+        }
+        demo('静静','小宇');
+        demo('静静','小宇','老王');//多余的参数会被忽略
+        demo('静静');//会提示 undefined
+
+//		参数的默认值
+//		function test(m, n='小黑'){  //默认参数  错的!
+        function test(m, n){  //默认参数  错的!
+//		如果没有传参数 ,就是赋值默认值
+            if (n === undefined) {
+                n = '小黑';
+            };
+            console.log(m + '和' + n + '跳舞');
+        }
+        test('小白');
+        test('小白','小绿');
+
+    </script>
+</body>
+</html>

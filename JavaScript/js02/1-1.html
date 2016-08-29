@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计算器</title>
+		<style>
+			#box{
+				widows: 200px;
+				height: 50px;
+				border: 1px solid #999;
+				font-size: 25px;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>简易计算器</h1>
+		<hr />
+		数1:<input type="text" id="num1"/><br />
+		数2:<input type="text" id="num2"/><br />
+		<button onclick="sum(1)">加</button>
+		<button onclick="sum(2)">减</button>
+		<button onclick="sum(3)">乘</button>
+		<button onclick="sum(4)">除</button>
+		<hr />
+		<div id="box">暂无结果</div>
+		<script type="text/javascript">
+//			执行运算的函数
+			function sum(m){
+				var num1 = document.getElementById('num1').value;
+				var num2 = document.getElementById('num2').value;
+				console.log(num1);
+				console.log(num2);
+//				判断 用户输入的是否是非数字
+				if(isNaN(num1)){
+					alert('数1  不是一个数字');
+					return;
+				}
+				if(isNaN(num2)){
+					alert('数2  不是一个数字');
+					return;
+				}
+				
+//				数据类型的转换
+				num1 = Number(num1);
+				num2 = Number(num2);
+//				执行运算
+				switch(m){
+					case 1: var result = num1 + num2; break;
+					case 2: var result = num1 - num2; break;
+					case 3: var result = num1 * num2; break;
+					case 4:
+					if(num2 == 0){
+						alert('除数不能为0!');
+						return;
+					}
+					var result = num1 / num2;
+					break;
+				}
+//				输出结果到指定位置,四舍五入两位小数
+				document.getElementById('box').innerHTML = result.toFixed(2);
+			}
+		</script>
+	</body>
+</html>

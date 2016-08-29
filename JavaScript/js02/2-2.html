@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定时器</title>
+		<style>
+			#box{
+				width: 200px;
+				height: 50px;
+				border: 1px solid #999;
+				font-size: 25px;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>定时器</h1>
+		<button onclick="stop()">取消多次定时</button>
+		<hr />
+		<script type="text/javascript">
+//			单次定时
+			setTimeout("console.log('hello,静静')",2000);
+//			多次定时
+			var i = 0;
+			var timer = setInterval("console.log('hello,艳艳'+i);i++",50);
+			function stop(){
+				clearInterval(timer);
+			}
+		</script>
+	</body>
+</html>

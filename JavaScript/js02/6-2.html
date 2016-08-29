@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数的调用</title>
+	</head>
+<body>
+    <h1>JS函数调用</h1>
+    <hr>
+    <script>
+        demo();
+//		使用function关键字
+        function demo(){
+            console.log('demo....');
+            return '12345';
+        }
+        var a = demo();//调用 得到返回值
+        var b = demo;//b就是 函数本身
+
+        console.log('a:'+ a);
+        console.log('b:'+ b);
+
+        b();
+        console.log(typeof(b));
+        
+//		直接写函数本身
+        setInterval(function(){
+            console.log('how old are you!');
+        },100);
+
+//		引用方式
+        function run(){
+            console.log('running.....');
+        }
+        setInterval(run,100);
+
+    </script>
+</body>
+</html>

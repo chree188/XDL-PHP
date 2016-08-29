@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>可变参数个数的函数</title>
+	</head>
+<body>
+    <h1>JS可变参数个数的函数</h1>
+    <hr>
+    <script>
+//		实现所有参数相加的函数
+        function sum(){
+            console.log(arguments);
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;//返回处理结果
+        }
+
+        console.log(sum(1,2,3,4,5,99,100,101));
+        console.log(sum(1,2,3,4,5));
+        console.log(sum(1,99));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post" name="agree"> 
+		 	<input type="submit" class="button" value="" name="agreeb"> 
+		</form>
+		<script> 
+			var secs = 30; 
+			document.agree.agreeb.disabled=true; 
+			for(var i=0;i<=secs;i++) { 
+			 window.setTimeout("update(" + i + ")", i * 500); 
+			} 
+			function update(num) { 
+			 if(num == secs) { 
+			 document.agree.agreeb.value ="获取验证码"; 
+			 document.agree.agreeb.disabled=false; 
+			 } 
+			 else { 
+			 var printnr = secs-num; 
+			 document.agree.agreeb.value = "(" + printnr +")秒后再次获取"; 
+			 } 
+			} 
+			</script>
+	</body>
+</html>
