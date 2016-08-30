@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>阶乘计算器</title>
+		<style>
+			#box{
+				widows: 200px;
+				height: 50px;
+				border: 1px solid #999;
+				font-size: 25px;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>阶乘计算器</h1>
+		<hr />
+		阶乘数:<input type="text" id="num"/><br />
+		<button onclick="sum()">阶乘</button>
+		<hr />
+		<div id="box">暂无结果</div>
+		<script type="text/javascript">
+//			执行运算的函数
+			function sum(){
+				var num = document.getElementById('num').value;
+				console.log(num);
+//				判断 用户输入的是否是非数字
+				if(isNaN(num)){
+					alert('阶乘数  不是一个数字');
+					return;
+				}
+				
+//				数据类型的转换
+				num = Number(num);
+//				执行运算
+				result = 1;
+				for (var i = num; i > 0; i--) {
+					var result = result * i;
+					console.log(i);
+				}
+//				输出结果到指定位置
+				document.getElementById('box').innerHTML = result;
+			}
+		</script>
+	</body>
+</html>

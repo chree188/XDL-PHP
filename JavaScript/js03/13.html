@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>音乐条</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font-size: 12px;
+			}
+			
+			h1 {
+				font-size: 15px;
+			}
+			
+			/*进度条样式*/
+			.progressbar_1 {
+				background-color: aqua;
+				height: 150px;
+				width: 15px;
+			}
+			.progressbar_2 {
+				background-color: brown;
+				margin: -150px 20px;
+				height: 150px;
+				width: 15px;
+			}
+			.progressbar_3 {
+				background-color: coral;
+				margin: -150px 40px;
+				height: 150px;
+				width: 15px;
+			}
+			.progressbar_4 {
+				background-color: darkolivegreen;
+				margin: -150px 60px;
+				height: 150px;
+				width: 15px;
+			}
+			.progressbar_5 {
+				background-color: deeppink;
+				margin: -150px 80px;
+				height: 150px;
+				width: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+			<div class="progressbar_1"></div>
+			<div class="progressbar_2"></div>
+			<div class="progressbar_3"></div>
+			<div class="progressbar_4"></div>
+			<div class="progressbar_5"></div>
+			
+		<script>
+			var i = 0;
+			function action(){
+				var val = document.getElementById('ipt1').value;
+				var div = document.getElementById('box');
+				console.log(val);
+				if(val == "下载"){
+					i=i+5;
+					div.style.width = i + '%';
+					if(i >= 100){
+//					清除定时
+					clearInterval(timer);
+					return;
+				}
+				console.log(i);
+				}
+			}
+		</script>
+	</body>
+
+</html>

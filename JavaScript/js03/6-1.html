@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>Js数组 遍历</h1>
+		<hr />
+		<ul id="nav">
+			<li>红红</li>
+			<li>艳艳</li>
+			<li>晴晴</li>
+			<li>静静</li>
+			<li>兰兰</li>
+		</ul>
+		<li>老王</li>
+		
+		<script type="text/javascript">
+			var nav = document.getElementById('nav'); //ul的元素集合
+//			通过标签 获取元素集合
+	        var lis = nav.getElementsByTagName('li');//  获取到的是 数组
+	        console.log(nav);
+	        console.log(lis.length);
+	
+//			加边框  li
+//	        lis.style.border = "1px solid #f00";
+	        for (var i= 0; i< lis.length; i++){
+	            lis[i].style.border = "1px solid #00F";
+	        }
+	
+	        /*for (var i in lis){
+	            lis[i].style.backgroundColor = "#feeeed";
+	            console.log(i + ':' + lis[i]);
+	        }*/
+		</script>
+	</body>
+</html>

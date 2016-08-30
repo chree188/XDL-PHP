@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>JS boolean</h1>
+		<hr />
+		<script type="text/javascript">
+//			直接赋值
+			var b = true;
+//			构造函数
+			var b = new Boolean();	//false
+			var b = new Boolean(20);	//true
+			var b = new Boolean(-20);	//true
+//			转换函数
+			var b = Boolean('1');
+			var b = Boolean('');
+			var b = Boolean(0);
+			
+			console.log(b);
+			console.log(typeof(b));
+			console.log(b.constructor);
+		</script>
+	</body>
+</html>

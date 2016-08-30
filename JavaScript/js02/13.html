@@ -57,11 +57,11 @@
 				console.log(val);
 				if(val == "下载"){
 					i=i+5;
-					val = "暂停";
 					div.style.width = i + '%';
 					if(i >= 100){
 //					清除定时
 					clearInterval(timer);
+					return;
 				}
 				console.log(i);
 				}

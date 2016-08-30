@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS原型</title>
+	</head>
+	<body>
+		<h1>原型 prototype</h1>
+		<hr />
+		<script type="text/javascript">
+//			自定义构造函数
+			function User(){
+				this.name = '莉莉';
+				this.age = 18;
+				this.getInfo = function(){
+					document.write('hello<br>');
+				}
+			}
+			
+			User.prototype.getMsg = function(){
+				document.write('hi<br>');
+			}
+			
+			var o1 = new User();
+			var o2 = new User();
+			
+//			给o1添加方法
+			/*o1.getMsg = function(){
+				document.write('hi<br>');
+			}*/
+			
+			o1.getMsg();
+			o2.getMsg();
+			
+			var a = 100;
+			console.log(a.constructor);
+			
+			/*Number.prototype.hehe = function(){
+				alert(this);
+			}
+			a.hehe();*/
+			
+//			相加的方法
+			Number.prototype.add = function(num){
+				return this + num;
+			}
+			
+//			测试
+			console.log(a.add(10));
+//			console.log(100.add$(10));	//点的问题
+			console.log((50).add(10));
+			console.log(89.5.add(10));
+			console.log(100..add(10));
+			console.log((100.).add(10));
+		</script>
+	</body>
+</html>

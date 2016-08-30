@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			button{
+				width: 200px;
+				height: 70px;
+				color: #fff;
+				background-color: #333;
+				font-size: 30px;
+				border-radius: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>10s倒计时</h1>
+		<hr />
+		<button id="btn" disabled="disabled" onclick="alert('已同意')">同意(10)</button>
+		<script type="text/javascript">
+			m = 10;
+			function showbtn(){
+				var btn = document.getElementById('btn');
+				if(m <= 0){
+					btn.disabled = false;
+					btn.innerHTML = '同意';
+					return;
+				}
+				btn.innerHTML = '同意(' + m + ')';
+				m--;
+				setTimeout("showbtn()",1000);
+			}
+			showbtn();
+		</script>
+	</body>
+</html>

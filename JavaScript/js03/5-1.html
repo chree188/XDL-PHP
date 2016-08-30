@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>Js数组 遍历</h1>
+		<hr />
+		<script type="text/javascript">
+			var list = ['静静','红红','兰兰','吕梁','嘿嘿嘿','欢欢','艳艳'];
+			
+			for (var i = 0; i < list.length; i++) {
+				document.write(i + ':' + list[i] + '<br>');
+			}
+			
+			document.write('<hr>');
+	        for (var i in list){
+	            document.write(i + ':' + list[i] + '<br>');
+	        }
+			
+			document.write('<hr />');
+			var obj = {name:'安娜',age:80,sex:'women'};
+			console.log(obj.name);
+			for(var i in obj){
+				document.write(i + ':' + obj[i] + '<br>');
+			}
+		</script>
+	</body>
+</html>

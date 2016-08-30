@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h1>问卷调查</h1>
+		<div id="box">
+			<table border="1px" width="600px">
+				<tr>
+					<td><label><input type="checkbox" name="num1" value="666" />666</label></td>
+					<td><label><input type="checkbox" name="num2" value="不错" />不错</label></td>
+					<td><label><input type="checkbox" name="num3" value="不好" />不好</label></td>
+					<td><label><input type="checkbox" name="num4" value="满意" />满意</label></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="全选" onclick="allNum()" /></td>
+					<td><input type="button" value="全取消" onclick="nothing()" /></td>
+					<td><input type="button" value="反选" onclick="oth()" /></td>
+					<td><input type="button" value="提交" onclick="commit()" /></td>
+				</tr>
+				<tr>
+					<td colspan="4" id="show">暂无选择</td>
+				</tr>
+			</table>
+		</div>
+		<script>
+			var box = document.getElementById('box');
+			var num = box.getElementsByTagName('input');
+
+			function allNum() {
+				for(var i = 0; i < num.length; i++) {
+					num[i].checked = true;
+				}
+			}
+
+			function nothing() {
+				for(var i = 0; i < num.length; i++) {
+					num[i].checked = false;
+				}
+			}
+
+			function oth() {
+				for(var i = 0; i < num.length; i++) {
+					num[i].checked = !num[i].checked;
+				}
+			}
+			
+			function commit() {
+				for(var i = 0; i < num.length; i++) {
+					
+				}
+			}
+		</script>
+	</body>
+
+</html>

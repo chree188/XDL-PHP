@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>删除对象中的成员 delete</h1>
+		<hr />
+		<script type="text/javascript">
+			var obj = {name:"红红",age:19,getInfo:function(){
+				console.log('呵呵哒....');
+			}}
+			
+			delete obj.name;
+			delete obj.age;
+			
+			console.log(obj);
+			obj.getInfo();
+		</script>
+	</body>
+</html>
