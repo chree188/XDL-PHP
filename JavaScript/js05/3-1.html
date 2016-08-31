@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="list">
+			<li>11111</li>
+			<li>22222</li>
+			<li>33333</li>
+			<li>44444</li>
+			<li>55555</li>
+		</ul>
+		
+		<script type="text/javascript">
+//			获取li 的集合
+			var lis = document.getElementById('list').getElementsByTagName('li');
+			console.log(lis);
+			for (var i = 0; i < lis.length; i++) {
+				lis[i].onclick = function(){
+					alert(this.innerHTML);
+				}
+			}
+		</script>
+	</body>
+</html>
