@@ -2,27 +2,30 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>时间</title>
 	</head>
 	<body>
 		<h1 id="h1" align="center"></h1>
 		<script type="text/javascript">
-			function clock(){
-				today = new Date();
-				hour = today.getHours();
-				min = today.getMinutes(); 
-				secs = today.getSeconds();
-				if (min <= 9) {
+			function clock() {
+				now = new Date();
+				year = now.getFullYear();
+				mon = now.getMonth();
+				day = now.getDate();
+				hour = now.getHours();
+				min = now.getMinutes();
+				secs = now.getSeconds();
+				if(min <= 9) {
 					min = "0" + min;
-				}else{
+				} else {
 					min = min;
 				}
-				if (secs <= 9) {
+				if(secs <= 9) {
 					secs = "0" + secs;
 				} else {
 					secs = secs;
 				}
-				time = hour + ":" + min + ":" + secs;
+				time = "现在时间: " + year + "/" + (mon+1) + "/" + day +　"  "  + hour + ":" + min + ":" + secs;
 				document.getElementById('h1').innerHTML = time;
 				setTimeout('clock()', 1000);
 			}
