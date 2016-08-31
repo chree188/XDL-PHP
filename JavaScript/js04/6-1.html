@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>JS内置对象 --  Math</h1>
+    <hr>
+
+    <script>
+        /*console.log(Math);
+        console.log(Math.constructor);*/
+
+        console.log('PI : ' + Math.PI);
+        console.log('E : ' + Math.E);
+
+        //开平方根
+        console.log('sqrt : '+ Math.sqrt(4));
+        console.log('sqrt : '+ Math.sqrt(16));
+        console.log('sqrt : '+ Math.sqrt(25));
+
+        //最大最小
+        console.log('max : '+ Math.max(100,200,250));
+        console.log('min : '+ Math.min(100,200,250));
+
+        //三个好基友
+        //舍去取整
+        console.log('floor : '+ Math.floor(12.999));
+        //进一取整
+        console.log('ceil : '+ Math.ceil(11.000001));
+        //四舍五入
+        console.log('round : '+ Math.round(11.6));
+        console.log('round : '+ Math.round(11.4));
+
+        //随机数: 可以随即到0  但是无法随机到1
+        document.write('随机数 : '+ Math.random() + '<br>');
+
+        //0-9:
+        document.write('0-9 随机数 : '+ Math.floor(Math.random() *10) + '<br>'); 
+        //0-10:
+        document.write('0-10 随机数 : '+ Math.ceil(Math.random() *10) + '<br>');
+        
+        document.write('0-9 随机数 : '+ Math.floor(Math.random()*100000000 %10 ) + '<br>'); 
+        document.write('0-10 随机数 : '+ Math.ceil(Math.random() *100000 % 10) + '<br>');
+
+        // 6-15
+        document.write('6-15 随机数: '+ Math.floor(Math.random()*100000000 %10 +6 ) + '<br>'); 
+
+        // 55-100   差45
+        // Math.round(Math.random()*w+n)
+        document.write('55-100 随机数:' + Math.round(Math.random()*45+55) + '<br>');
+        
+        
+//		生成20-50，包含20但不包含50的整数  差30
+		document.write('20-50 随机数:' + parseInt(Math.random()*30+20, 10)  + '<br>');
+
+//		生成20-50，不包含20但包含50的整数  差30
+		document.write('20-50 随机数:' + (Math.floor(Math.random()*30+20) + 1) + '<br>');
+		
+//		生成20-50，不包含20和50的整数  差30
+		document.write('20-50 随机数:' + Math.round(Math.random()*30+20+1) + '<br>');
+		
+//		生成20-50，包含20和50的整数  差30
+		document.write('20-50 随机数:' + Math.round(Math.random()*30+20) + '<br>');
+        // n-m
+        /*
+        JS随机数的产生.
+        Math.random()函数返回0和1之间的伪随机数，可能为0，但总是小于1，(0,1)
+
+	        生成n-m，包含n但不包含m的整数：
+	        第一步 算出 m-n的值，假设等于w
+	        第二步 Math.random()*w
+	        第三步 Math.random()*w+n
+	        第四步 parseInt(Math.random()*w+n, 10)
+	
+	        生成n-m，不包含n但包含m的整数：​
+	        第一步 算出 m-n的值，假设等于w
+	        第二步 Math.random()*w
+	        第三步 Math.random()*w+n
+	        第四步 Math.floor(Math.random()*w+n) + 1
+	
+	        生成n-m，不包含n和m的整数：
+	        第一步 算出 m-n-2的值，假设等于w
+	        第二步 Math.random()*w
+	        第三步 Math.random()*w+n +1
+	        第四步 Math.round(Math.random()*w+n+1) 或者 Math.ceil(Math.random()*w+n+1)
+	
+	        生成n-m，包含n和m的随机数：
+	        第一步 算出 m-n的值，假设等于w
+	        第二步 Math.random()*w
+	        第三步 Math.random()*w+n
+	        第四步 Math.round(Math.random()*w+n) 或者 Math.ceil(Math.random()*w+n)
+         */
+    </script>
+	</body>
+</html>

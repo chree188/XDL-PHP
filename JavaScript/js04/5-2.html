@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>JS内置对象 --  Date</h1>
+    <hr>
+
+    <script>
+        var date = new Date();
+        console.log(date);
+        console.log(typeof(date));
+        console.log(date.constructor);
+
+        //各种设置
+        // date.setUTCHours(6);
+
+        //获取年月日时分秒
+        //当前年  从1900开始算
+        document.write('当前年: '+ date.getYear() + '<br>');
+        document.write('当前年(公元纪年): '+ date.getFullYear() + '<br>');
+
+        //月份 warning:  只有月份要 +1  默认从0开始数的
+        document.write('当前月: '+ (date.getMonth() +1 ) + '<br>');
+        //星期
+        document.write('当前星期: '+ date.getDay() + '<br>');
+        //日期
+        document.write('当前日期: '+ date.getDate() + '<br>');
+
+        //小时
+        document.write('当前小时: '+ date.getHours() + '<br>');
+        document.write('当前分钟: '+ date.getMinutes() + '<br>');
+        document.write('当前秒: '+ date.getSeconds() + '<br>');
+        document.write('当前毫秒: '+ date.getMilliseconds() + '<br>');
+        document.write('当前时间戳: '+ date.getTime() + '<br>');
+
+        //标准时区事件 UTC 
+        document.write('标准时区时间: '+ date.getUTCFullYear() + '<br>');
+        document.write('标准时区时间: '+ date.getUTCHours() + '<br>');
+
+        console.log(date.toString());
+        console.log(date.toUTCString());
+        console.log(date.toLocaleString());//本地方式输出时间
+    </script>
+	</body>
+</html>
