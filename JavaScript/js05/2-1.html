@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>JS的事件的解除绑定</h1>
+		<hr />
+		<button onclick="alert('啊,好疼!')" id="btn5">点我啊</button>
+		
+		<button id="btn">咬我啊</button>
+		<button id="btn1">打我啊</button>
+		
+		<button id="removeBtn">解除绑定</button>
+		
+		<hr />
+		<button id="btn2">点击(事件监听)</button>
+		
+		<script type="text/javascript">
+//			获取button按钮 为对象
+			var btn = document.getElementById('btn');
+//			给btn按钮添加事件
+			btn.onclick = function(){
+				alert('不要');
+			}
+			
+			var btn1 = document.getElementById('btn1');
+//			给元素对象绑定指定函数名的时候,不加括号
+			btn1.onclick = demo;
+			function demo(){
+				alert('打我干嘛?');
+			}
+			
+//			事件监听
+			var btn2 = document.getElementById('btn2');
+//			添加兼容的事件绑定
+			if(btn2.addEventListener){
+//				可以就正常绑定
+				btn2.addEventListener('click',fun1,false);
+				btn2.addEventListener('click',function(){
+					alert('你又监听我!!');
+				},false);
+			}else{
+//				不可用,就用IE的模式
+				btn2.attachEvent('onclick',function(){
+					alert('啊,你监听我!');
+				})
+				btn2.attachEvent('onclick',function(){
+					alert('你又监听我!!');
+				})
+			}
+			function fun1(){
+				alert('啊,你监听我!');
+			}
+			
+			var remove = document.getElementById('removeBtn');
+			remove.onclick = function(){
+//				console.log(btn5);
+//				给元素事件 覆盖新的function内容
+				btn5.onclick = function(){}
+				btn.onclick = function(){}
+				btn1.onclick = function(){}
+				
+//				无法解除 监听事件的绑定
+				btn2.onclick = function(){}
+				btn2.removeEventListener('click',fun1);
+			}
+		</script>
+		
+	</body>
+</html>

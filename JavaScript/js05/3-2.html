@@ -12,22 +12,26 @@
 		</style>
 	</head>
 	<body>
+		<h1>JS的事件</h1>
+		<hr />
 		<ul id="list">
-			<li>11111</li>
-			<li>22222</li>
-			<li>33333</li>
-			<li>44444</li>
-			<li>55555</li>
+			<li>舌尖上的 鹅</li>
+			<li>鹅鹅鹅</li>
+			<li>曲项用刀割</li>
+			<li>拔毛用开水</li>
+			<li>炖鹅用大锅</li>
 		</ul>
 		<!--传入this 表示 该元素对象-->
-		<button onclick="btn1(this)">666666</button>
+		<button onclick="btn1(this)">锄禾日当午,汗滴禾下土</button>
 		
 		<script type="text/javascript">
 //			获取li 的集合
 			var lis = document.getElementById('list').getElementsByTagName('li');
 			console.log(lis);
+//			遍历绑定事件
 			for (var i = 0; i < lis.length; i++) {
 				lis[i].onclick = function(){
+//					取得到的li对象,里面自己的html文本内容
 					alert(this.innerHTML);
 				}
 			}
