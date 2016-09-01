@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+	        ul,li{
+	            padding: 0;
+	            margin: 0;
+	            list-style: none;
+	        }
+	        #nav{
+	            width: 200px;
+	            border:1px solid #999;
+	            box-shadow: 5px 5px 5px #ccc;
+	            position: absolute;
+	            top:10px;
+	            left:10px;
+	            background-color: #fff;
+	            display: none;
+	        }
+	        #nav li{
+	            height: 38px;
+	            line-height: 38px;
+	            padding: 0 20px;
+	            cursor: pointer;
+	        }
+	    </style>
+	</head>
+	<body>
+		<h1>JS的自定义菜单</h1>
+	    <hr>
+	    <ul id="nav">
+	        <li>复制</li>
+	        <li>粘贴</li>
+	        <li>刷新</li>
+	        <li>使用快播下载...</li>
+	        <li>剪贴</li>
+	        <li>属性</li>
+	    </ul>
+	    
+	    <script type="text/javascript">
+//	    	获取菜单对象
+			var nav = document.getElementById('nav');
+//			绑定右击事件
+			document.oncontextmenu = function(en){
+				nav.style.display = 'block';
+//				获取event对象
+				var en = en || window.event;
+//				console.log(en);
+				
+//				获取鼠标位置
+				var x = en.clientX;
+				var y = en.clientY;
+//				输出到标题栏
+				document.title = 'X:' + x + ' | Y:' + y;
+				
+//				改变元素位置
+				nav.style.top = y + 'px';
+				nav.style.left = x + 'px';
+				return false;
+			}
+			
+//			单击事件
+			document.onclick = function(){
+				nav.style.display = 'none';
+			}
+			
+//			获取li集合
+			var lis = nav.getElementsByTagName('li');
+			for (var i = 0; i < lis.length; i++) {
+//				悬停
+				lis[i].onmouseover = function(){
+					this.style.backgroundColor = '#ccc';
+				}
+//				移出
+				lis[i].onmouseout = function(){
+					this.style.backgroundColor = '#fff';
+				}
+			}
+	    </script>
+	</body>
+</html>

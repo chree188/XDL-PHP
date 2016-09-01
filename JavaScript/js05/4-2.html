@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#list li{
+				width: 300px;
+				line-height: 40px;
+				border-bottom: 1px solid #999;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>JS的事件</h1>
+	    <hr>
+	    <ul id="list">
+	        <li>小静静,  你宣我吗? 宣</li>
+	        <li>小艳艳,  你宣我吗? 宣</li>
+	        <li>小红红,  你宣我吗? 宣</li>
+	        <li>小晴晴,  你宣我吗? 宣</li>
+	        <li>小翠翠,  你宣我吗? 宣</li>
+	    </ul>
+	
+	    <div id="btnList">
+	        <button>获取第1句话</button>
+	        <button>获取第2句话</button>
+	        <button>获取第3句话</button>
+	        <button>获取第4句话</button>
+	        <button>获取第5句话</button>
+	    </div>
+	    
+	    <script type="text/javascript">
+//	    	获取 li集合
+			var lis = document.getElementById('list').getElementsByTagName('li');
+			for (var i = 0; i < lis.length; i++) {
+//				循环绑定
+				lis[i].onclick = function(){
+//					获取不到i 都是5
+					alert(i);
+				}
+			}
+			
+//			获取btn的集合
+			var btns = document.getElementById('btnList').getElementsByTagName('button');
+			console.log(btns);
+//			遍历给按钮绑定事件
+			for (var i = 0; i < btns.length; i++) {
+//				闭包
+				(function(i){
+//					循环绑定
+					btns[i].onclick = function(){
+						alert(lis[i].innerHTML);
+					}
+				})(i)
+			}
+	    </script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+	        #box{
+	            width: 400px;
+	            height: 200px;
+	            border: 1px solid #999;
+	        }
+	    </style>
+	</head>
+	<body>
+		<h1>JS的鼠标 按下-抬起-移动</h1>
+	    <hr>
+	    <div id="box"></div>
+	    <!-- onmousedown  鼠标按下
+	        onmouseup    鼠标抬起
+	        onmousemove  鼠标移动 -->
+	        
+	    <script type="text/javascript">
+//	    	按下
+			box.onmousedown = function(){
+				this.style.backgroundColor = '#369';
+			}
+//			抬起
+			box.onmouseup = function(){
+				this.style.backgroundColor = '#f90';
+			}
+//			移动
+			box.onmousemove = function(en){
+				console.log('我在动:'+Math.random());
+				document.title = en.clientX + ',' + en.clientY;
+			}
+	    </script>
+	</body>
+</html>

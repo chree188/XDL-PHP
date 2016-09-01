@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 100px;
+				height: 100px;
+				border: 1px solid #999;
+				background-color: #369;
+				cursor: pointer;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>JS的鼠标 按下-抬起-移动</h1>
+	    <hr>
+	    <div id="box"></div>
+	    
+	    <script type="text/javascript">
+//	    	按下
+	        box.onmousedown = function (env){
+	            this.style.backgroundColor = "#369";
+//	        	按下时 计算出鼠标在div上的相对位置
+	            var env = env || window.event;
+	            var left  = env.clientX - box.offsetLeft;
+	            var top  = env.clientY - box.offsetTop;
+	
+//	        	绑定移动事件
+	            document.onmousemove = function (en){
+	                var e = en || window.event;
+	                //获取鼠标位置
+	                var x = e.clientX - left;
+	                var y = e.clientY - top;
+	
+	                box.style.left = x + 'px';
+	                box.style.top = y + 'px';
+	            }
+	        }
+//			抬起
+	        document.onmouseup = function (){
+	            box.style.backgroundColor = "#f90";
+//	        	绑定移动事件
+	            document.onmousemove = function (){}
+	        }
+	    </script>
+	</body>
+</html>

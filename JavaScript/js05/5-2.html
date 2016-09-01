@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+	        #list li{
+	            width: 300px;
+	            line-height: 40px;
+	            border-bottom:1px solid #999;
+	        }
+    	</style>
+	</head>
+	<body>
+		<h1>JS的鼠标事件</h1>
+	    <hr>
+	    <ul id="list">
+	        <li>小xx,你选我吗?</li>
+	        <li>小xx,你选我吗?</li>
+	        <li id="yy" style="background:#ccc">小静静,你选我吗?</li>
+	        <li>小xx,你选我吗?</li>
+	        <li>小xx,你选我吗?</li>
+	    </ul>
+	    
+	    <script type="text/javascript">
+//	    	获取元素
+			var li = document.getElementById('yy');
+//			双击
+			li.ondblclick = function(){
+				alert('你竟然双击我!');
+			}
+//			右击
+			li.oncontextmenu = function(){
+				alert('你右击了我!!!');
+//				阻止系统菜单弹出
+				return false;
+			}
+	    </script>
+	</body>
+</html>
