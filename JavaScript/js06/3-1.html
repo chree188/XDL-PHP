@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>表单事件</h1>
+		<hr />
+		搜索:<input type="text" id="s" value="请输入搜索内容" name="" placeholder="请输入搜索内容" style="color:#ccc">
+		
+		<script type="text/javascript">
+			var ipt = document.getElementById('s');
+			ipt.onfocus = function(){
+				console.log('啊.我获得焦点了!');
+				this.value = '';
+				this.style.color = '#000';
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#warspce{
+				width: 800px;
+				height: 500px;
+				background-color: #999;
+				position: relative;
+			}
+			#fly{
+				width: 40px;
+				height: 50px;
+				background: url(imgs/z6.png);
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+			.egg{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				background: url(imgs/RedEgg.png);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>打飞机</h1>
+		<hr />
+		<div id="warspce">
+			<div id="fly" style="left: 400px;top: 400px;"></div>
+			<div id="egg1" class="egg" style="display:none;"></div>
+			<div id="egg2" class="egg" style="display:none;"></div>
+			<div id="egg3" class="egg" style="display:none;"></div>
+			<div id="egg4" class="egg" style="display:none;"></div>
+			<div id="egg5" class="egg" style="display:none;"></div>
+			<div id="egg6" class="egg" style="display:none;"></div>
+			<div id="egg7" class="egg" style="display:none;"></div>
+			<div id="egg8" class="egg" style="display:none;"></div>
+			<div id="egg9" class="egg" style="display:none;"></div>
+		</div>
+		
+		<script type="text/javascript">
+//			控制飞机
+			document.onkeydown = function(e){
+//				获取飞机元素
+				var fly = document.getElementById('fly');
+				var x = fly.style.left;
+				var y = fly.style.top;
+				
+//				获取event对象
+				var e = e || window.event;
+				switch (e.keyCode){
+					case 37: fly.style.left = Math.max(parseInt(x) - 10,0) + 'px';
+						break;
+					case 38: fly.style.top = Math.max(parseInt(y) - 10,0) + 'px';
+						break;
+					case 39: fly.style.left = Math.min(parseInt(x) + 10,760) + 'px';
+						break;
+					case 40: fly.style.top = Math.max(parseInt(y) + 10,450) + 'px';
+						break;
+					case 32: fire(parseInt(x),parseInt(y));	//使用空格 发射炮弹!
+						break;
+				}
+			}
+			
+//			发射炮弹
+			function fire(x,y){
+				for (var i = 1; i <= 9 ; i++) {
+					var egg = document.getElementById('egg'+i);
+//					没有飞行的炮弹	 才能再有定位
+//					已显示的炮弹,不能有重新定位
+					if(egg.style.display == 'none'){
+//						给炮弹定位
+						egg.style.left = (x + 10) + 'px';
+						egg.style.top = (y - 10) + 'px';
+						egg.style.display = 'block';
+//						让炮弹停一下 再飞
+						return true;
+					}
+				}
+			}
+			
+//			炮弹飞行
+			setInterval(run,50);
+			function run(){
+				for (var i = 1; i <= 9; i++) {
+					var egg = document.getElementById('egg' + i);
+					if(egg.style.display == 'block'){
+						egg.style.top = (parseInt(egg.style.top) - 10) + 'px';
+//						炮弹回收
+						if(parseInt(egg.style.top) <= 0){
+							egg.style.display = 'none';
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

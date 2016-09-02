@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>表单事件 onchange 地址联动</h1>
+	    <hr>
+	        请选择您的地址:
+	        <select id="con"></select>
+	        <select id="city"></select>
+	        
+	    <script type="text/javascript">
+//	    	声明数组
+//			国家的信息
+	        var conList = ['中国', '美国', '英国', '日本', '德国'];
+//			城市的信息 二维数组
+	        var cityList = new Array();
+	        cityList[0] = ['北京', '上海', '天津', '重庆', '南京'];
+	        cityList[1] = ['纽约', '洛杉矶', '芝加哥', '旧金山', '华盛顿'];
+	        cityList[2] = ['伦敦', '伯明翰', '曼彻斯特', '剑桥', '爱丁堡'];
+	        cityList[3] = ['东京', '北海道', '福冈县', '广岛', '大阪'];
+	        cityList[4] = ['柏林', '汉堡', '慕尼黑', '科隆', '法兰克福'];
+	
+//			获取select下拉框
+	        var con = document.getElementById('con');
+	        var city = document.getElementById('city');
+//			填充第一个select 框的值
+	        for (var i = 0; i < conList.length; i++) {
+//				参1 内容, 参2 value值
+	            con.add(new Option(conList[i] , i));
+	        }
+	
+//			绑定onchange事件
+	        con.onchange = function (){
+//				清空之前的选项
+	            city.options.length = 0;
+//				根据value值,获取选择的option选项内容
+	            var index = con.value;
+	            console.log(index);
+//				根据索引取出,对应的城市信息
+	            var citys = cityList[index];
+	            console.log(citys);
+//				遍历
+	            for (var i = 0; i < citys.length; i++) {
+	                city.add(new Option(citys[i], i));
+	            }
+	        }
+//			手工触发 onchange事件
+	        con.onchange();
+	    </script>
+	</body>
+</html>
