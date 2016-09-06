@@ -23,6 +23,26 @@ class Stu
 		$this->classe = $classe;
 	}
 	
+	public function __set($key,$value)
+	{
+		$this->$key = $value;
+	}
+	
+	public function __get($key)
+	{
+		return $this->$key;
+	}
+	
+	public function __isset($key)
+	{
+		return isset($this->$key);
+	}
+	
+	public function __unset($key)
+	{
+		unset($this->$key);
+	}
+	
 	public function getInfo()
 	{
 		echo '学号:'.$this->id.'<br>';
@@ -33,8 +53,10 @@ class Stu
 }
 
 $zs = new Stu(23,'张三');
+$zs->sex = '女';
 $zs->getInfo();
 echo '<hr>';
 $jj = new Stu(1,'静静','女','S50');
+$jj->classe = 'S51';
 $jj->getInfo();
 
