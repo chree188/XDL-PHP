@@ -8,8 +8,7 @@ echo '<pre>';
 print_r($_POST);
 echo '</pre>';
 
-$model = new Model('s50_user');
-//var_dump($model->add());
+$model = new Model('user');
+var_dump($model->add());
 
 echo $model->count();
-$model->add();
