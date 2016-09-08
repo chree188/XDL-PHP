@@ -39,7 +39,7 @@ class Person {
 
 	public static function fun2() {
 		echo '我是fun2';
-		var_dump($this);
+//		var_dump($this);
 	}
 
 }
