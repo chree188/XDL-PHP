@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22d4124-2f94-4107-9164-eadcfd43065a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/10-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/10-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/11-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/11-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/12-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/12-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/13-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/13-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/14-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/14-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/15-1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/15-2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop05/16.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OOP.iws" />
@@ -41,20 +32,7 @@
     <favorites_list name="OOP" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="15-1.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/oop05/15-1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-              <folding>
-                <element signature="e#6#84#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -63,8 +41,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/oop5/16.php" />
-        <option value="$PROJECT_DIR$/oop5/Model/UserModel.class.php" />
         <option value="$PROJECT_DIR$/oop03/Model/edit.php" />
         <option value="$PROJECT_DIR$/oop03/Model/Model.class.php" />
         <option value="dbtable:/cde20d64/c4e18806-8aeb-459b-9bea-c189adcfdb43/s50.user" />
@@ -114,6 +90,8 @@
         <option value="$PROJECT_DIR$/oop05/14-1.php" />
         <option value="$PROJECT_DIR$/oop05/14-2.php" />
         <option value="$PROJECT_DIR$/oop05/15-1.php" />
+        <option value="$PROJECT_DIR$/oop05/15-2.php" />
+        <option value="$PROJECT_DIR$/oop05/16.php" />
       </list>
     </option>
   </component>
@@ -128,8 +106,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="267" />
-    <option name="y" value="13" />
+    <option name="x" value="273" />
+    <option name="y" value="39" />
     <option name="width" value="1400" />
     <option name="height" value="859" />
   </component>
@@ -196,6 +174,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="OOP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OOP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OOP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -291,12 +279,12 @@
       <workItem from="1473562302505" duration="1130000" />
       <workItem from="1473660084989" duration="2633000" />
       <workItem from="1473663325907" duration="11200000" />
-      <workItem from="1473681791118" duration="5675000" />
+      <workItem from="1473681791118" duration="6887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49656000" />
+    <option name="totallyTimeSpent" value="50868000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -308,7 +296,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="267" y="13" width="1400" height="859" extended-state="0" />
+    <frame x="273" y="39" width="1400" height="859" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15522388" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -373,20 +361,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/oop04/2-2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop04/4-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oop04/3-2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
@@ -789,6 +763,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop05/15-2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop05/16.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
           </folding>
