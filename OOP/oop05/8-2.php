@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: hui
  * Date: 2016/9/12
- * Time: 18:52
+ * Time: 19:04
  */
 
 header("content-type:text/html;charset=utf-8");
@@ -13,7 +13,7 @@ header("content-type:text/html;charset=utf-8");
     unserialize() 反串行化
 */
 
-/*$arr = [1,2,3,'name'=>'艳艳','age'=>18];
+/*$arr = [1,2,3,'name'=>'yanyan','age'=>18];
 $info = serialize($arr);
 echo $info;
 */
@@ -31,9 +31,8 @@ class Person
 }
 
 //实例化
-$p = new  Person('晴晴',20);
+$p = new Person('晴晴',20);
 var_dump($p);
-
 
 //给对象 进行串行化操作
 $info = serialize($p);
