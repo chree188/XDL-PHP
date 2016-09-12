@@ -3,26 +3,27 @@
  * Created by PhpStorm.
  * User: hui
  * Date: 2016/9/12
- * Time: 15:07
+ * Time: 16:52
  */
 
 header("content-type:text/html;charset=utf-8");
 
 /*__call()
     当调用 不存在的方法时 自动触发
-    参1,调用的不存在的静态方法名
-    参2,调用的不存在的静态方法的参数
+    参1 调用的不存在的方法名
+    参2 调用的不存在的方法的参数
 
 __callStatic()
     当调用 不存在的静态方法时 自动触发
-    参1,调用的不存在的静态方法名
-    参2,调用的不存在的静态方法的参数
+    参1 调用的不存在的静态的方法名
+    参2 调用的不存在的静态方法的参数
 */
+
 class Person
 {
-    public  function say()
+    public function say()
     {
-        echo 'I say....<br>';
+        echo 'I say...<br>';
     }
     public function eat()
     {
@@ -54,4 +55,4 @@ $p->eat();
 $p->run(1,2,3,4,5);
 $p->hehe('嘿嘿','呵呵','哈哈','heiheihei');
 
-Person::daye('我大爷','你大爷','他大爷');
+Person::daye('你大爷','我大爷','他大爷');
