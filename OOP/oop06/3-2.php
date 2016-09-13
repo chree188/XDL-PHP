@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: hui
  * Date: 2016/9/13
- * Time: 14:38
+ * Time: 14:49
  */
 
 header("content-type:text/html;charset=utf-8");
@@ -14,7 +14,7 @@ function demo($a,$b)
 //    除数不能为0
     if ($b == 0) {
 //        抛出异常
-        throw new Exception('除数不能为0!!!');
+        throw new Exception('除数不能为0!');
     }
     return $a / $b;
 }
@@ -36,7 +36,7 @@ class Person
 //异常的过程
 try{
 //    echo demo(100,0);
-    new Person(-5);
+    new Person(180);
 } catch (Exception $e) {
     echo $e->getMessage();
 }
