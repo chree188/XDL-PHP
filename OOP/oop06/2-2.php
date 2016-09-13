@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: hui
  * Date: 2016/9/13
- * Time: 14:19
+ * Time: 14:35
  */
 
 /*
@@ -45,13 +45,12 @@ echo '吃饭<br>';
 echo '路上<br>';
 */
 
-
 //异常的过程
 try{
     echo '睁眼<br>';
     if (true) {
 //        抛出异常 throw(扔)
-        throw new Exception('啊,我睁不开眼了,继续睡.......');
+        throw new Exception('啊,我睁不开眼了,继续睡........');
     }
     echo '下床<br>';
     echo '洗脸<br>';
@@ -61,4 +60,4 @@ try{
     echo $e->getMessage();
 }
 
-echo '我司try外面的';    //外面的代码依旧可以执行
+echo '我是try外面的';    //外面代码依旧可以执行
