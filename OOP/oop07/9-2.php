@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: hui
- * Date: 2016/9/14
- * Time: 16:31
- */
 
 header("content-type:text/html;charset=utf-8");
 require 'pdoconfig.php';
@@ -31,16 +25,16 @@ try {
 }
 
 try {
-/*//    1.定义SQL 关键部分 使用占位符 ? 问号
-    $sql = "INSERT INTO user (name,sex,age) VALUES (?,?,?)";
-//    2.预处理SQL 返回的是PDOStatement对象
-    $stmt = $pdo->prepare($sql);
-//    3.绑定参数 给占位符部分绑定参数
-    $stmt->bindValue(1,'小艳艳1');
-    $stmt->bindValue(2,'女');
-    $stmt->bindValue(3,'18');
-//    4. 正式执行SQL
-    $stmt->execute();*/
+    /*//    1.定义SQL 关键部分 使用占位符 ? 问号
+        $sql = "INSERT INTO user (name,sex,age) VALUES (?,?,?)";
+    //    2.预处理SQL 返回的是PDOStatement对象
+        $stmt = $pdo->prepare($sql);
+    //    3.绑定参数 给占位符部分绑定参数
+        $stmt->bindValue(1,'小艳艳1');
+        $stmt->bindValue(2,'女');
+        $stmt->bindValue(3,'18');
+    //    4. 正式执行SQL
+        $stmt->execute();*/
 
     //1. 定义SQL   关键部分 使用占位符 :xxx  冒号
     $sql = "INSERT INTO user (name,sex,age) VALUES(:name,:sex,:age)";
