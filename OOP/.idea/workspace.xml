@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22d4124-2f94-4107-9164-eadcfd43065a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/1-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/10.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/4.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/6.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/7.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/8.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/9.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/fun2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/fun3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/namespace/function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/1-1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/1-2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/2-1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/2-2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/3-1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/3-2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/4-1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/4-2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/5-1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/5-2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/6-1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/6-2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/7-1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/7-2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OOP.iws" />
@@ -49,7 +50,20 @@
     <favorites_list name="OOP" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="7-2.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/oop08/trait/7-2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <folding>
+                <element signature="e#6#84#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -58,20 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/oop06/9-1.php" />
-        <option value="$PROJECT_DIR$/oop06/9-2.php" />
-        <option value="$PROJECT_DIR$/oop06/Model/Page.class.php" />
-        <option value="$PROJECT_DIR$/oop06/Model/index.php" />
-        <option value="$PROJECT_DIR$/oop06/Model/Model.class.php" />
-        <option value="$PROJECT_DIR$/oop07/1-1.php" />
-        <option value="$PROJECT_DIR$/oop07/1-2.php" />
-        <option value="$PROJECT_DIR$/oop07/2-1.php" />
-        <option value="$PROJECT_DIR$/oop07/2-2.php" />
-        <option value="$PROJECT_DIR$/oop07/3-1.php" />
-        <option value="$PROJECT_DIR$/oop07/3-2.php" />
-        <option value="$PROJECT_DIR$/oop07/pdoconfig.php" />
-        <option value="$PROJECT_DIR$/oop07/4-1.php" />
-        <option value="$PROJECT_DIR$/oop07/4-2.php" />
         <option value="$PROJECT_DIR$/oop07/5-1.php" />
         <option value="$PROJECT_DIR$/oop07/5-2.php" />
         <option value="$PROJECT_DIR$/oop07/6-1.php" />
@@ -109,6 +109,20 @@
         <option value="$PROJECT_DIR$/oop08/namespace/fun3.php" />
         <option value="$PROJECT_DIR$/oop08/namespace/9.php" />
         <option value="$PROJECT_DIR$/oop08/namespace/10.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/1-1.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/1-2.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/2-1.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/2-2.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/3-1.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/3-2.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/4-1.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/4-2.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/5-1.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/5-2.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/6-1.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/6-2.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/7-1.php" />
+        <option value="$PROJECT_DIR$/oop08/trait/7-2.php" />
       </list>
     </option>
   </component>
@@ -123,8 +137,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="270" />
-    <option name="y" value="33" />
+    <option name="x" value="228" />
+    <option name="y" value="46" />
     <option name="width" value="1400" />
     <option name="height" value="859" />
   </component>
@@ -215,6 +229,10 @@
               <option name="myItemId" value="oop08" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -227,10 +245,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="oop08" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="namespace" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,7 +351,7 @@
       <workItem from="1473835322669" duration="8195000" />
       <workItem from="1473866012873" duration="45000" />
       <workItem from="1474101743747" duration="816000" />
-      <workItem from="1474175625702" duration="6902000" />
+      <workItem from="1474175625702" duration="13720000" />
     </task>
     <task id="LOCAL-00001" summary="9.17 update">
       <created>1474102095435</created>
@@ -353,11 +367,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474179700477</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="9.18 update1">
+      <created>1474182547040</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1474182547040</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83111000" />
+    <option name="totallyTimeSpent" value="89929000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -369,7 +390,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="270" y="33" width="1400" height="859" extended-state="0" />
+    <frame x="228" y="46" width="1400" height="859" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18880597" sideWeight="0.49570817" order="0" side_tool="false" content_ui="combo" />
@@ -430,7 +451,8 @@
     </ignored-roots>
     <MESSAGE value="9.17 update" />
     <MESSAGE value="9.18 update" />
-    <option name="LAST_COMMIT_MESSAGE" value="9.18 update" />
+    <MESSAGE value="9.18 update1" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.18 update1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -439,145 +461,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/oop06/Model/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/1-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="69" column="3" selection-start-line="8" selection-start-column="0" selection-end-line="69" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/1-2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/2-2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-            <marker date="1473835551632" expanded="true" signature="319:337" ph="SELECT * FRO... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/2-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="26" column="16" selection-start-line="8" selection-start-column="0" selection-end-line="26" selection-end-column="16" />
-          <folding>
-            <marker date="1473834746953" expanded="true" signature="319:337" ph="SELECT * FRO... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/3-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/3-2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/4-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/4-2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/5-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="2" selection-start-line="10" selection-start-column="0" selection-end-line="17" selection-end-column="2" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-            <marker date="1473837602248" expanded="true" signature="668:688" ph="SELECT * FRO... aabbcc" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/5-2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-            <marker date="1473837991872" expanded="true" signature="674:694" ph="SELECT * FRO... aabbcc" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/6-2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/6-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="53" column="1" selection-start-line="8" selection-start-column="0" selection-end-line="53" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-            <marker date="1473838509517" expanded="true" signature="533:556" ph="INSERT INTO user... " />
-            <marker date="1473838509517" expanded="true" signature="533:581" ph="INSERT INTO user... " />
-            <marker date="1473838509517" expanded="true" signature="750:789" ph="UPDATE user " />
-            <marker date="1473838509517" expanded="true" signature="883:914" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oop07/7-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-            <marker date="1473839263246" expanded="true" signature="1010:1028" ph="SELECT * FRO... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.project">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -826,7 +709,7 @@
         <state relative-caret-position="315">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#6#84#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -844,7 +727,7 @@
         <state relative-caret-position="315">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#6#84#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -854,7 +737,7 @@
         <state relative-caret-position="378">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#6#84#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -864,7 +747,7 @@
         <state relative-caret-position="336">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#6#84#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -874,7 +757,7 @@
         <state relative-caret-position="372">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#6#84#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -884,7 +767,7 @@
         <state relative-caret-position="357">
           <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#6#84#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -904,7 +787,7 @@
         <state relative-caret-position="540">
           <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
           <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#6#84#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -933,6 +816,124 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/1-1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/1-2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/2-1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/2-2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/3-1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/3-2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/4-1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/4-2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/5-1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/5-2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/6-1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/6-2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/7-1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oop08/trait/7-2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
           </folding>
