@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22d4124-2f94-4107-9164-eadcfd43065a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/1-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/1-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/2-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/2-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/3-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/3-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/4-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/4-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/5-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/5-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/6-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/6-2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/7-1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oop08/trait/7-2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OOP.iws" />
@@ -50,20 +36,7 @@
     <favorites_list name="OOP" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="7-2.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/oop08/trait/7-2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-              <folding>
-                <element signature="e#6#84#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -216,38 +189,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OOP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OOP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oop08" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trait" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OOP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OOP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oop08" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -351,7 +292,7 @@
       <workItem from="1473835322669" duration="8195000" />
       <workItem from="1473866012873" duration="45000" />
       <workItem from="1474101743747" duration="816000" />
-      <workItem from="1474175625702" duration="13720000" />
+      <workItem from="1474175625702" duration="13854000" />
     </task>
     <task id="LOCAL-00001" summary="9.17 update">
       <created>1474102095435</created>
@@ -374,11 +315,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474182547040</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="9.18 update2">
+      <created>1474189370891</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1474189370891</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89929000" />
+    <option name="totallyTimeSpent" value="90063000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -390,15 +338,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="228" y="46" width="1400" height="859" extended-state="0" />
+    <frame x="228" y="46" width="1400" height="859" extended-state="1" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18880597" sideWeight="0.49570817" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18880597" sideWeight="0.49570817" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32618025" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32689655" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13006397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32551724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32551724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16965227" sideWeight="0.4860515" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32618025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13166311" sideWeight="0.50429183" order="2" side_tool="true" content_ui="tabs" />
@@ -452,7 +400,8 @@
     <MESSAGE value="9.17 update" />
     <MESSAGE value="9.18 update" />
     <MESSAGE value="9.18 update1" />
-    <option name="LAST_COMMIT_MESSAGE" value="9.18 update1" />
+    <MESSAGE value="9.18 update2" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.18 update2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
