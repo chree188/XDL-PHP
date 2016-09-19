@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js1/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js1/10-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js1/10-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js1/9-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js1/9-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js1/jsq.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScript.iws" />
@@ -67,6 +63,7 @@
         <option value="$PROJECT_DIR$/js1/9-2.html" />
         <option value="$PROJECT_DIR$/js1/10-1.html" />
         <option value="$PROJECT_DIR$/js1/10-2.html" />
+        <option value="$PROJECT_DIR$/js1/jsq.html" />
       </list>
     </option>
   </component>
@@ -77,8 +74,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="658" />
-    <option name="y" value="55" />
+    <option name="x" value="162" />
+    <option name="y" value="49" />
     <option name="width" value="1240" />
     <option name="height" value="880" />
   </component>
@@ -228,7 +225,7 @@
       <option name="presentableId" value="Default" />
       <updated>1474255183220</updated>
       <workItem from="1474255184424" duration="1218000" />
-      <workItem from="1474264893748" duration="9159000" />
+      <workItem from="1474264893748" duration="12694000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -244,11 +241,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474273264375</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="9.19 update4">
+      <created>1474274583894</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1474274583894</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10377000" />
+    <option name="totallyTimeSpent" value="13912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -260,7 +264,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="658" y="55" width="1240" height="880" extended-state="0" />
+    <frame x="162" y="49" width="1240" height="880" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1530782" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -314,7 +318,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="9.19 update2" />
     <MESSAGE value="9.19 update3" />
-    <option name="LAST_COMMIT_MESSAGE" value="9.19 update3" />
+    <MESSAGE value="9.19 update4" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.19 update4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -502,6 +507,26 @@
         <state relative-caret-position="231">
           <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js01/calculator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js1/jsq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#271#277#0" expanded="true" />
+            <element signature="e#320#326#0" expanded="true" />
+            <element signature="e#369#375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS计算器</title>
+</head>
+<body>
+    <h1>简易计算器</h1>
+    <hr>
+    数1:<input type="text" id="a">
+    <br><br>
+    数2:<input type="text" id="b">
+    <br><br>
+    <button onclick="sum(1)">加(+)</button>&nbsp;
+    <button onclick="sum(2)">减(-)</button>&nbsp;
+    <button onclick="sum(3)">乘(*)</button>&nbsp;
+    <button onclick="sum(4)">除(/)</button>
+    <hr>
+    计算结果:<h2 id="c">暂无结果</h2>
+
+    <script>
+        function sum(n) {
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            console.log(a);
+            console.log(b);
+
+//            数据类型转换,不然相加就两字符串连接
+            a = Number(a);
+            b = Number(b);
+
+            switch (n) {
+                case 1:var res = a + b;break;
+                case 2:var res = a - b;break;
+                case 3:var res = a * b;break;
+                case 4:
+                    if (b == 0) {
+                        alert('除数不能为0!!!');
+                        return;
+                    }
+                    var res = a / b;
+                    break;
+            }
+            document.getElementById('c').innerHTML = res;
+        }
+    </script>
+</body>
+</html>
