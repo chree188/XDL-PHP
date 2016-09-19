@@ -10,15 +10,15 @@
 
     <script>
         var num = 123;
-        var num = 010;  //8进制
-        var num = 0x10; //16进制
-        var num = 3e2;  //300 科学记数法
+        var num = 010;  //8
+        var num = 0x10; //16
+        var num = 3e2;  //300
         var num = 12e-3;    //0.012
 
         console.log('值:' + num);
         console.log('类型:' + typeof (num));
 
-//        特殊数值类型  Not a Number
+//        特殊数值类型 Not a Number
         var num = NaN;
         if (NaN == NaN) {
             console.log('相等');
@@ -27,7 +27,7 @@
         }
         console.log(NaN + 100); //NaN
 
-//        Number() parseInt() parseFloat()
+//        Number()    parseInt()  parseFloat()
 //        可以将其它类型转换为 number
         var a = 'hello';    //NO
         var a = '123.999hello'; //NO
@@ -44,7 +44,7 @@
         console.log('值1:' + n);
         console.log('类型1:' + typeof (n));
 
-//        isNaN(); 判断一个类型是否是NaN 转换规则同number
+//        isNaN();    判断一个类型是否是NaN    转换规则同number
         console.log(isNaN('12ABC'));    //true  是NaN
         console.log(isNaN('12'));   //false 不是NaN
 
