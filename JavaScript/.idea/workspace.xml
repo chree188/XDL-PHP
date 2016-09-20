@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/11.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js03/10-1.html" afterPath="$PROJECT_DIR$/js03/10-1.html" />
     </list>
     <ignored path="JavaScript.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -185,7 +180,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.meteor" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -275,7 +270,7 @@
       <workItem from="1474359876810" duration="13000" />
       <workItem from="1474360016868" duration="5191000" />
       <workItem from="1474367971372" duration="864000" />
-      <workItem from="1474370174693" duration="1555000" />
+      <workItem from="1474370174693" duration="1648000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -333,11 +328,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474366690957</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="9.20 update3">
+      <created>1474371744494</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1474371744494</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30795000" />
+    <option name="totallyTimeSpent" value="30888000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -408,11 +410,24 @@
     <MESSAGE value="9.20 update" />
     <MESSAGE value="9.20 update1" />
     <MESSAGE value="9.20 update2" />
-    <option name="LAST_COMMIT_MESSAGE" value="9.20 update2" />
+    <MESSAGE value="9.20 update3" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.20 update3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JavaScript" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JavaScript" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js01/8-1.html">
@@ -748,6 +763,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
