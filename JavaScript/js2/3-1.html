@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 50px;
+            border: 1px solid #999;
+            padding: 20px;
+            font-size: 50px;
+            color: #f00;
+            font-weight: 700;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>倒计时</h1>
+    <hr>
+    <button onclick="timer = setInterval('start()',500)">开始</button>
+    <hr>
+    <div id="box">10</div>
+
+    <script>
+        var m = 10;
+        function start() {
+//            找对象 该属性
+            var div = document.getElementById('box');
+            console.log(div);
+            m--;
+            div.innerHTML = m;
+            if (m == 0) {
+//                清除定时
+                clearInterval(timer);
+            }
+        }
+    </script>
+</body>
+</html>
