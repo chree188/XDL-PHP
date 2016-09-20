@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/4-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/5-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/5-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/6-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/6-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/7-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/7-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/8-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/10-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/10-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/8-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/9-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js2/9-2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScript.iws" />
@@ -34,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="8-1.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js2/8-1.html">
+      <file leaf-file-name="10-2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js2/10-2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="477">
+              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -97,6 +94,11 @@
         <option value="$PROJECT_DIR$/js2/7-1.html" />
         <option value="$PROJECT_DIR$/js2/7-2.html" />
         <option value="$PROJECT_DIR$/js2/8-1.html" />
+        <option value="$PROJECT_DIR$/js2/8-2.html" />
+        <option value="$PROJECT_DIR$/js2/9-1.html" />
+        <option value="$PROJECT_DIR$/js2/9-2.html" />
+        <option value="$PROJECT_DIR$/js2/10-1.html" />
+        <option value="$PROJECT_DIR$/js2/10-2.html" />
       </list>
     </option>
   </component>
@@ -263,7 +265,7 @@
       <workItem from="1474351343946" duration="2995000" />
       <workItem from="1474354613345" duration="5175000" />
       <workItem from="1474359876810" duration="13000" />
-      <workItem from="1474360016868" duration="1107000" />
+      <workItem from="1474360016868" duration="3972000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -307,11 +309,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474356518631</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="9.20 update1">
+      <created>1474361137970</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1474361137970</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24292000" />
+    <option name="totallyTimeSpent" value="27157000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,7 +389,8 @@
     <MESSAGE value="9.19 update4" />
     <MESSAGE value="9.19 update5" />
     <MESSAGE value="9.20 update" />
-    <option name="LAST_COMMIT_MESSAGE" value="9.20 update" />
+    <MESSAGE value="9.20 update1" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.20 update1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -704,6 +714,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js2/8-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js2/9-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js2/9-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js2/10-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js2/10-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
           <folding />
         </state>
       </provider>
