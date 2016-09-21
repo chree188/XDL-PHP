@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 数组</title>
+</head>
+<body>
+    <h1>JS 数组</h1>
+    <hr>
+
+    <script>
+        var list = ['丽丽','艳艳','静静','红红','达达','花花','超草','月月'];
+        console.log(list.length);
+        console.log('原list数组: ' + list);
+//        合并新数组
+        console.log('concat:' + list.concat([1,2,3],'abc'));
+//        将数组连接为字符串
+        console.log('join: ' + list.join('--'));
+//        截取数组中的一部分,[x,y]从x到y,不包括y
+        console.log('slice: ' + list.slice(2,4));
+        console.log('新list数组: ' + list);
+//        以上都是 不会改变原数组的方法
+        console.warn('------------------------------------------------------------');
+
+        console.log('原list数组: ' + list);
+//        反转数组 改变原数组
+        console.log('reverse: ' + list.reverse());
+        console.log('list数组: ' + list);
+
+//        向数组最后一个位置追加元素,返回新长度,改变原数组
+        console.log('push: ' + list.push('abc'));
+        console.log('list数组: ' + list);
+
+//        删除数组最后一个元素,返回被删除的元素,改变原数组
+        console.log('pop: ' + list.pop());
+        console.log('list数组: ' + list);
+
+//        向数组首个位置追加元素,返回新长度,改变原数组
+        console.log('unshift: ' + list.unshift('hds'));
+        console.log('list数组: ' + list);
+
+//        删除数组首个元素,返回被删除的元素,改变原数组
+        console.log('shift: ' + list.shift());
+        console.log('list数组: ' + list);
+
+//        数组排序,改变原数组 ASCII
+        console.log('sort: ' + list.shift());
+        console.log('list数组: ' + list);
+    </script>
+</body>
+</html>

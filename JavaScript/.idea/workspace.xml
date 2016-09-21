@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js3/3-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js3/4-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js3/5-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js3/6-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js3/7-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js3/8-1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js3/1-1.html" afterPath="$PROJECT_DIR$/js3/1-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js3/2-1.html" afterPath="$PROJECT_DIR$/js3/2-1.html" />
     </list>
     <ignored path="JavaScript.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +27,18 @@
     <favorites_list name="JavaScript" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="8-1.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js3/8-1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,8 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js1/1-2.html" />
-        <option value="$PROJECT_DIR$/js1/my.js" />
         <option value="$PROJECT_DIR$/js1/2-1.html" />
         <option value="$PROJECT_DIR$/js1/2-2.html" />
         <option value="$PROJECT_DIR$/js1/3-1.html" />
@@ -101,6 +106,8 @@
         <option value="$PROJECT_DIR$/js3/3-1.html" />
         <option value="$PROJECT_DIR$/js3/2-1.html" />
         <option value="$PROJECT_DIR$/js3/1-1.html" />
+        <option value="$PROJECT_DIR$/js3/7-1.html" />
+        <option value="$PROJECT_DIR$/js3/8-1.html" />
       </list>
     </option>
   </component>
@@ -115,8 +122,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="591" />
-    <option name="y" value="23" />
+    <option name="x" value="339" />
+    <option name="y" value="94" />
     <option name="width" value="1239" />
     <option name="height" value="880" />
   </component>
@@ -276,7 +283,7 @@
       <workItem from="1474367971372" duration="864000" />
       <workItem from="1474370174693" duration="1803000" />
       <workItem from="1474372679903" duration="4318000" />
-      <workItem from="1474450989003" duration="4255000" />
+      <workItem from="1474450989003" duration="6127000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -369,11 +376,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474454091466</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="9.21 update1">
+      <created>1474455797419</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1474455797419</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39616000" />
+    <option name="totallyTimeSpent" value="41488000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,7 +399,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="591" y="23" width="1239" height="880" extended-state="0" />
+    <frame x="339" y="94" width="1239" height="880" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15154038" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -447,7 +461,8 @@
     <MESSAGE value="9.20 update3" />
     <MESSAGE value="9.20 update4" />
     <MESSAGE value="9.21 update" />
-    <option name="LAST_COMMIT_MESSAGE" value="9.21 update" />
+    <MESSAGE value="9.21 update1" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.21 update1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -466,20 +481,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js1/7-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js1/8-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js1/8-2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -828,6 +829,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-111">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js3/7-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js3/8-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
           <folding />
         </state>
       </provider>

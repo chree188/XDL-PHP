@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 创建对象</title>
+</head>
+<body>
+    <h1>JS 对象</h1>
+    <hr>
+
+    <script>
+//        JS自定义构造函数
+        function User() {
+            this.name = '静静';
+            this.age = 40;
+            this.getInfo = function () {
+                document.write('hi~<br>');
+            }
+        }
+
+        User.prototype.getMsg = function () {
+            document.write('hello<br>');
+        };
+
+//        得到对象
+        var o1 = new User();
+        var o2 = new User();
+
+        /*o1.getMsg = function () {
+            document.write('hello<br>');
+        }*/
+        o1.getMsg();
+        o2.getMsg();
+
+//        a就是一个对象
+        var a = 100;
+        console.log(a.constructor);//Number()
+        Number.prototype.hehe = function () {
+//            弹出框 弹出自己的值
+            alert(this);
+        };
+//        a.hehe();
+
+        Number.prototype.add = function (num) {
+            return this + num;
+        };
+
+        console.log(a.add(10));
+        console.log(a.add(100));
+//        console.log(50.add(100));//报错
+        console.log((50).add(100));
+        console.log(99.9.add(100));
+//        第一个小数点  第二个对象连接符
+        console.log(50..add(100));
+    </script>
+</body>
+</html>
