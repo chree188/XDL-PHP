@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 创建对象</title>
+</head>
+<body>
+    <h1>JS 创建对象</h1>
+    <hr>
+
+    <script>
+//        Object 构造函数
+        var obj = new Object();
+        console.log(obj);
+
+        obj.name = '红红';
+        obj.age = 10;
+        obj.getInfo = function () {
+            document.write('obj<br>');
+        }
+
+        console.log(obj.name);
+        console.log(obj.age);
+        obj.getInfo();
+
+//        简单方式 JSON
+        var obj1 = {
+            age:10,
+            sex:"女",
+            getInfo:function () {
+                document.write('obj<br>');
+            }
+        };
+        obj1.name = '艳艳';
+        console.log(obj1);
+        obj1.getInfo();
+
+//        JS自定义构造函数
+        function User() {
+            this.name = '静静';
+            this.age = 40;
+            this.getInfo = function () {
+                document.write('obj2<br>');
+            }
+        }
+        var obj2 = new User();
+        console.log(obj2);
+        obj2.getInfo();
+
+//        表达式 和 自定义方式的结合体
+//        匿名构造函数
+        var  obj3 = new function () {
+            this.name = '晴晴';
+            this.age = 18;
+            this.getInfo = function () {
+                document.write('obj3<br>');
+            }
+        };
+        console.log(obj3);
+        obj3.getInfo();
+
+        console.log('obj: '+obj.constructor);//Object
+        console.log('obj1: '+obj1.constructor);//Object
+        console.log('obj2: '+obj2.constructor);//User
+        console.log('obj3: '+obj3.constructor);//匿名
+
+        var a = document.getElementsByTagName('body');
+        console.log('Body元素对象的构造函数是: '+ a.constructor);//HTMLCollection
+
+    </script>
+</body>
+</html>
