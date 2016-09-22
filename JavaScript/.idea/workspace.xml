@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js4/7-1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScript.iws" />
@@ -283,7 +282,7 @@
       <workItem from="1474370174693" duration="1803000" />
       <workItem from="1474372679903" duration="4318000" />
       <workItem from="1474450989003" duration="10973000" />
-      <workItem from="1474539011346" duration="10273000" />
+      <workItem from="1474539011346" duration="10291000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -411,11 +410,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474548785939</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="9.22 update2">
+      <created>1474550213173</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1474550213173</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56607000" />
+    <option name="totallyTimeSpent" value="56625000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -494,7 +500,8 @@
     <MESSAGE value="9.21 update3" />
     <MESSAGE value="9.22 update" />
     <MESSAGE value="9.22 update1" />
-    <option name="LAST_COMMIT_MESSAGE" value="9.22 update1" />
+    <MESSAGE value="9.22 update2" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.22 update2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
