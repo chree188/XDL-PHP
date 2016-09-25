@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS事件绑定</title>
+    <style>
+        #list li {
+            width: 300px;
+            line-height: 40px;
+            border-bottom: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+<h1>JS事件绑定</h1>
+<hr>
+<ul id="list">
+    <li>小静静,你宣我吗? 宣</li>
+    <li>小艳艳,你宣我吗? 宣</li>
+    <li>小达达,你宣我吗? 宣</li>
+    <li>小红红,你宣我吗? 宣</li>
+    <li>小莉莉,你宣我吗? 宣</li>
+</ul>
+
+<hr>
+<button onclick="demo(this)">锄禾日当午,汗滴和下土</button>
+
+<script>
+    function demo(obj) {
+        alert(obj.innerHTML);
+    }
+
+    //    获取li集合
+    var lis = document.getElementById('list').getElementsByTagName('li');
+    console.log(lis);
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onclick = function () {
+            alert(this.innerHTML);
+            // alert('ok');
+            // alert(lis[i].innerHTML);//报错
+            // alert(lis[i]);
+            // alert(i);
+            // alert(this);//得到的是li对象
+        }
+    }
+</script>
+</body>
+</html>
