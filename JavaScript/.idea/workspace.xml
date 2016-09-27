@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/10.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/8.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/9.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/11.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScript.iws" />
@@ -28,7 +26,18 @@
     <favorites_list name="JavaScript" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="11.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js7/11.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,7 +56,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js3/3-1.html" />
         <option value="$PROJECT_DIR$/js3/2-1.html" />
         <option value="$PROJECT_DIR$/js3/1-1.html" />
         <option value="$PROJECT_DIR$/js3/7-1.html" />
@@ -98,6 +106,7 @@
         <option value="$PROJECT_DIR$/js7/8.html" />
         <option value="$PROJECT_DIR$/js7/9.html" />
         <option value="$PROJECT_DIR$/js7/10.html" />
+        <option value="$PROJECT_DIR$/js7/11.html" />
       </list>
     </option>
   </component>
@@ -112,8 +121,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="680" />
-    <option name="y" value="56" />
+    <option name="x" value="508" />
+    <option name="y" value="93" />
     <option name="width" value="1239" />
     <option name="height" value="863" />
   </component>
@@ -149,30 +158,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="JavaScript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaScript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaScript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaScript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaScript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -283,7 +268,7 @@
       <workItem from="1474856417124" duration="9366000" />
       <workItem from="1474895852266" duration="134000" />
       <workItem from="1474942967858" duration="84000" />
-      <workItem from="1474971024687" duration="7190000" />
+      <workItem from="1474971024687" duration="8670000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -509,11 +494,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474977238002</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="9.27 update2">
+      <created>1474978777940</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1474978777940</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88224000" />
+    <option name="totallyTimeSpent" value="89704000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,7 +517,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="680" y="56" width="1239" height="863" extended-state="0" />
+    <frame x="508" y="93" width="1239" height="863" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20399667" sideWeight="0.49463806" order="1" side_tool="false" content_ui="combo" />
@@ -596,7 +588,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="9.19 update3" />
     <MESSAGE value="9.19 update4" />
     <MESSAGE value="9.19 update5" />
     <MESSAGE value="9.20 update" />
@@ -621,7 +612,8 @@
     <MESSAGE value="9.26 update3" />
     <MESSAGE value="9.27 update" />
     <MESSAGE value="9.27 update1" />
-    <option name="LAST_COMMIT_MESSAGE" value="9.27 update1" />
+    <MESSAGE value="9.27 update2" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.27 update2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -640,13 +632,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js02/4-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js4/7-1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -1006,6 +991,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js7/11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding />
         </state>
       </provider>
