@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <h1>location</h1>
+    <hr>
+    <button onclick="location.reload()">刷新</button>
+    <button onclick="location.assign('http://www.qq.com')">assign</button>
+    <button onclick="location.replace('http://www.taobao.com')">replace</button>
+    <button onclick="location.href='http://www.163.com'">href</button>
+
+    <script>
+        console.log(window.location);
+        console.log('URl: ' + location.href);
+        console.log('主机名和端口号: ' + location.host);
+        console.log('主机名: ' + location.hostname);
+
+        console.log('协议名: ' + location.protocol);
+        console.log('pathname: ' + location.pathname);
+
+        console.log('search: ' + location.search);//获取参数
+        console.log('hash: ' + location.hash);//获取锚点
+
+//        改URL地址 或改参数/锚点
+//        location.href = 'http://www.jd.com';//可以跳转
+//        location.href = 'www.jd.com';//不带http:// 跳转错误!!!
+//        location.search = '?p=999';
+//        location.hash = '#id:0000';
+
+    </script>
+</body>
+</html>
