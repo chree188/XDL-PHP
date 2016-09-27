@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <script>
+        /*window.onload = function () {
+            alert('loading success!');
+            console.log(box + '前');
+        }*/
+       /* window.onunload = function () {
+            alert('你确定要关闭吗?);
+        }*/
+        window.onbeforeunload = function () {
+//            alert('欧巴,卡其吗!');
+            return '长腿欧巴,卡其吗!';
+        }
+    </script>
+</head>
+<body>
+    <h1>文档事件</h1>
+    <hr>
+    <!--<img src="http://www.google.com/imgs/1.jpg">-->
+    <div id="box"></div>
+
+    <script>
+
+    </script>
+</body>
+</html>

@@ -2,6 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv001.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv002.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv003.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv004.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv005.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv006.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv007.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv008.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv009.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv010.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv011.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv012.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv015.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv016.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv017.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/Meinv018.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/error.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/home.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/loading2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/imgs/theme.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js7/3.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScript.iws" />
@@ -44,10 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js2/9-1.html" />
-        <option value="$PROJECT_DIR$/js2/9-2.html" />
-        <option value="$PROJECT_DIR$/js2/10-1.html" />
-        <option value="$PROJECT_DIR$/js03/10-1.html" />
         <option value="$PROJECT_DIR$/js2/10-2.html" />
         <option value="$PROJECT_DIR$/js2/11.html" />
         <option value="$PROJECT_DIR$/js2/12.html" />
@@ -95,6 +117,10 @@
         <option value="$PROJECT_DIR$/js06/5-1.html" />
         <option value="$PROJECT_DIR$/js6/5-2.html" />
         <option value="$PROJECT_DIR$/js6/6.html" />
+        <option value="$USER_HOME$/桌面/郑文涛/home/9.html" />
+        <option value="$PROJECT_DIR$/js7/1.html" />
+        <option value="$PROJECT_DIR$/js7/2.html" />
+        <option value="$PROJECT_DIR$/js7/3.html" />
       </list>
     </option>
   </component>
@@ -109,8 +135,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="502" />
-    <option name="y" value="99" />
+    <option name="x" value="808" />
+    <option name="y" value="68" />
     <option name="width" value="1239" />
     <option name="height" value="863" />
   </component>
@@ -139,7 +165,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -159,8 +184,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,6 +215,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PHP\wamp64\www\JavaScript\js7" />
       <recent name="D:\PHP\wamp64\www\JavaScript\js6" />
       <recent name="D:\PHP\wamp64\www\JavaScript\js1" />
     </key>
@@ -264,6 +305,8 @@
       <workItem from="1474851279355" duration="4796000" />
       <workItem from="1474856417124" duration="9366000" />
       <workItem from="1474895852266" duration="134000" />
+      <workItem from="1474942967858" duration="84000" />
+      <workItem from="1474971024687" duration="1230000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -479,7 +522,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80950000" />
+    <option name="totallyTimeSpent" value="82264000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,26 +534,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="502" y="99" width="1239" height="863" extended-state="0" />
+    <frame x="808" y="68" width="1239" height="863" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20399667" sideWeight="0.49463806" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20399667" sideWeight="0.49463806" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2585837" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24798928" sideWeight="0.5087427" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34705076" sideWeight="0.49125728" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34705076" sideWeight="0.49125728" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1473772" sideWeight="0.49463806" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20386267" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20399667" sideWeight="0.5053619" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -605,34 +648,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js4/3-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js4/4-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js4/5-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js4/6-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js01/1-1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -959,6 +974,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-478">
           <caret line="19" column="30" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/桌面/郑文涛/home/9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js7/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js7/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js7/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
