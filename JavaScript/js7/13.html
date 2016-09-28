@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <style>
+        *{
+            font-size:25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>年龄的地址联动</h1>
+    <hr>
+    <div>请选择你的年龄区间</div>
+    <select name="" id="age1"></select>
+    <select name="" id="age2"></select>
+
+    <script>
+        var age1 = document.getElementById('age1');
+        var age2 = document.getElementById('age2');
+
+//        在第一个select框中输出默认值
+        for (var i = 21; i < 40; i++) {
+            age1.add(new Option(i,i));
+        }
+
+//        给第一个select绑定change事件,改变第二个select的值
+        age1.onchange = function () {
+//            清空之前生成option
+            age2.options.length = 0;
+//            获取要选择的option
+            var index = age1.value;
+//            遍历生成的age2的option
+            for (var i = index; i < 40; i++) {
+                age2.add(new Option(i,i));
+            }
+        }
+//        调用用于加载页面时显示一个默认信息
+        age1.onchange();
+    </script>
+</body>
+</html>
