@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <style>
+        *{list-style: none;}
+        #banner{
+            width: 800px;
+            margin: 0 auto;
+        }
+        img{
+            width: 800px;
+            height: 400px;
+        }
+        #play{
+            z-index: 999;
+            width:800px;
+            height:400px;
+            position: relative;
+        }
+        #iconlist{
+            position: absolute;
+            bottom:10px;
+            right:20px;
+        }
+        #iconlist li{
+            float: left;
+            width: 25px;
+            height: 25px;
+            background-color: #999;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 13px;
+            color: #fff;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>轮播图</h1>
+    <hr>
+    <div id="banner">
+        <div id="play">
+            <div id="imglist">
+                <a href="#"><img src="./imgs/1.jpg" alt="" style="display:block"></a>
+                <a href="#"><img src="./imgs/2.jpg" alt="" style="display:none"></a>
+                <a href="#"><img src="./imgs/3.jpg" alt="" style="display:none"></a>
+                <a href="#"><img src="./imgs/4.jpg" alt="" style="display:none"></a>
+                <a href="#"><img src="./imgs/5.jpg" alt="" style="display:none"></a>
+            </div>
+            <div id="iconlist">
+                <ul>
+                    <li style="background-color: #f00">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var play = document.getElementById('play');
+        var imglist = play.getElementsByTagName('img');
+        var iconlist = play.getElementsByTagName('li');
+
+        //设置循环变量
+        var m = 1;
+        function run(){
+            if (m > 4) {
+                m = 0;
+            }
+            console.log(m);
+            img(m);//当前的显示图片号传入
+            icon(m);//当前显示的控制号码
+            m++;
+        }
+        //设置定时器
+        var timer = setInterval(run,3000);
+
+        function img(m){
+            for (var i = 0; i < imglist.length; i++) {
+                imglist[i].style.display = 'none';
+            }
+            imglist[m].style.display = 'block';
+        }
+
+        function icon(m){
+            for (var i = 0; i < iconlist.length; i++) {
+                iconlist[i].style.backgroundColor = '#999';
+            }
+            iconlist[m].style.backgroundColor = '#f00';
+        }
+
+        //鼠标划过  轮播图 定时要停止
+        play.onmouseover = function (){
+            clearInterval(timer);
+        }
+
+        play.onmouseout = function (){
+            timer = setInterval(run,3000);
+        }
+
+        //给所有的控制图片的按钮 绑定 鼠标划过事件
+        for (var i = 0; i < iconlist.length; i++) {
+            (function(i){
+                iconlist[i].onmouseover = function (){
+                    img(i);
+                    icon(i);
+                    m = i + 1
+                }
+            })(i)
+        }
+    </script>
+</body>
+</html>
