@@ -31,6 +31,7 @@
             background-color: #999;
             text-align: center;
             line-height: 25px;
+
             border-radius: 13px;
             color: #fff;
             cursor: pointer;
@@ -98,11 +99,11 @@
         //鼠标划过  轮播图 定时要停止
         play.onmouseover = function (){
             clearInterval(timer);
-        }
+        };
 
         play.onmouseout = function (){
             timer = setInterval(run,3000);
-        }
+        };
 
         //给所有的控制图片的按钮 绑定 鼠标划过事件
         for (var i = 0; i < iconlist.length; i++) {
