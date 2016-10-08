@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/3-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/4-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/4-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/5-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/5-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/5.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/6-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/6-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/6.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js11/4.php" afterPath="$PROJECT_DIR$/js11/4.php" />
     </list>
     <ignored path="JavaScript.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +34,18 @@
     <favorites_list name="JavaScript" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="6-2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js11/6-2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,13 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js6/3.html" />
-        <option value="$PROJECT_DIR$/js6/4.html" />
-        <option value="$PROJECT_DIR$/js6/4-2.html" />
-        <option value="$PROJECT_DIR$/js6/5.html" />
-        <option value="$PROJECT_DIR$/js06/5-1.html" />
-        <option value="$PROJECT_DIR$/js6/5-2.html" />
-        <option value="$PROJECT_DIR$/js6/6.html" />
         <option value="$USER_HOME$/桌面/郑文涛/home/9.html" />
         <option value="$PROJECT_DIR$/js7/1.html" />
         <option value="$PROJECT_DIR$/js7/2.html" />
@@ -97,8 +106,15 @@
         <option value="$PROJECT_DIR$/js11/3.php" />
         <option value="$PROJECT_DIR$/js11/3-1.html" />
         <option value="$PROJECT_DIR$/js11/3-2.html" />
-        <option value="$PROJECT_DIR$/js11/4.php" />
         <option value="$PROJECT_DIR$/js11/4-1.html" />
+        <option value="$PROJECT_DIR$/js11/4-2.html" />
+        <option value="$PROJECT_DIR$/js11/5-1.html" />
+        <option value="$PROJECT_DIR$/js11/5.php" />
+        <option value="$PROJECT_DIR$/js11/4.php" />
+        <option value="$PROJECT_DIR$/js11/5-2.html" />
+        <option value="$PROJECT_DIR$/js11/6.php" />
+        <option value="$PROJECT_DIR$/js11/6-1.html" />
+        <option value="$PROJECT_DIR$/js11/6-2.html" />
       </list>
     </option>
   </component>
@@ -114,8 +130,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="603" />
-    <option name="y" value="10" />
+    <option name="x" value="678" />
+    <option name="y" value="13" />
     <option name="width" value="1400" />
     <option name="height" value="919" />
   </component>
@@ -290,7 +306,7 @@
       <workItem from="1475888346122" duration="2050000" />
       <workItem from="1475894937465" duration="1692000" />
       <workItem from="1475919866453" duration="653000" />
-      <workItem from="1475920575381" duration="6213000" />
+      <workItem from="1475920575381" duration="11734000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -586,11 +602,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475927183364</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="10.8 update4">
+      <created>1475929613548</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1475929613548</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116094000" />
+    <option name="totallyTimeSpent" value="121615000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -602,7 +625,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="603" y="10" width="1400" height="919" extended-state="0" />
+    <frame x="678" y="13" width="1400" height="919" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11567164" sideWeight="0.49463806" order="1" side_tool="false" content_ui="combo" />
@@ -678,7 +701,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="9.21 update2" />
     <MESSAGE value="9.21 update3" />
     <MESSAGE value="9.22 update" />
     <MESSAGE value="9.22 update1" />
@@ -703,7 +725,8 @@
     <MESSAGE value="10.8 update1" />
     <MESSAGE value="10.8 update2" />
     <MESSAGE value="10.8 update3" />
-    <option name="LAST_COMMIT_MESSAGE" value="10.8 update3" />
+    <MESSAGE value="10.8 update4" />
+    <option name="LAST_COMMIT_MESSAGE" value="10.8 update4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -722,49 +745,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/桌面/郑文涛/home/9.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js7/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js7/2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js7/3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js7/4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js7/5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/phrase.rnc" />
     <entry file="file://$PROJECT_DIR$/js7/6.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -987,14 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js11/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js11/1.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1050,7 +1022,7 @@
         <state relative-caret-position="168">
           <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#6#84#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1071,20 +1043,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js11/4-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/4-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js11/4.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="147">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/5-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="45" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="136" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/5-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/6.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js11/4-1.html">
+    <entry file="file://$PROJECT_DIR$/js11/6-1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
+        <state relative-caret-position="420">
+          <caret line="20" column="61" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/6-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding />
         </state>
       </provider>
