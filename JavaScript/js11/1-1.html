@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+</head>
+<body>
+    <h1>Ajax</h1>
+    <hr>
+
+    <script>
+//        创建请求对象
+        var xhr = new XMLHttpRequest();
+//        console.log(xhr);//得到XHR对象
+
+//        事件回调 xhr
+        xhr.onreadystatechange = function () {
+//            console.log(xhr.readyState);
+            if (xhr.status == 200 && xhr.readyState == 4) {
+//                获取服务端的响应文本
+                alert(xhr.responseText);
+            }
+        };
+
+//        请求初始化
+        xhr.open('get','1.php',true);
+
+//        正式发送请求
+        xhr.send();
+    </script>
+</body>
+</html>
