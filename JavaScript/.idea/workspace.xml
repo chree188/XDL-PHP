@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/2-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/2-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/3-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/3-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/4-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js11/4.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScript.iws" />
@@ -50,9 +48,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js5/9.html" />
-        <option value="$PROJECT_DIR$/js6/1.html" />
-        <option value="$PROJECT_DIR$/js6/2.html" />
         <option value="$PROJECT_DIR$/js6/3.html" />
         <option value="$PROJECT_DIR$/js6/4.html" />
         <option value="$PROJECT_DIR$/js6/4-2.html" />
@@ -101,6 +96,9 @@
         <option value="$PROJECT_DIR$/js11/2-2.html" />
         <option value="$PROJECT_DIR$/js11/3.php" />
         <option value="$PROJECT_DIR$/js11/3-1.html" />
+        <option value="$PROJECT_DIR$/js11/3-2.html" />
+        <option value="$PROJECT_DIR$/js11/4.php" />
+        <option value="$PROJECT_DIR$/js11/4-1.html" />
       </list>
     </option>
   </component>
@@ -116,8 +114,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="490" />
-    <option name="y" value="54" />
+    <option name="x" value="603" />
+    <option name="y" value="10" />
     <option name="width" value="1400" />
     <option name="height" value="919" />
   </component>
@@ -292,7 +290,7 @@
       <workItem from="1475888346122" duration="2050000" />
       <workItem from="1475894937465" duration="1692000" />
       <workItem from="1475919866453" duration="653000" />
-      <workItem from="1475920575381" duration="3787000" />
+      <workItem from="1475920575381" duration="6213000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -581,11 +579,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475921138347</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="10.8 update3">
+      <created>1475927183364</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1475927183364</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113668000" />
+    <option name="totallyTimeSpent" value="116094000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -597,7 +602,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="490" y="54" width="1400" height="919" extended-state="0" />
+    <frame x="603" y="10" width="1400" height="919" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11567164" sideWeight="0.49463806" order="1" side_tool="false" content_ui="combo" />
@@ -673,7 +678,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="9.21 update1" />
     <MESSAGE value="9.21 update2" />
     <MESSAGE value="9.21 update3" />
     <MESSAGE value="9.22 update" />
@@ -698,7 +702,8 @@
     <MESSAGE value="10.8 update" />
     <MESSAGE value="10.8 update1" />
     <MESSAGE value="10.8 update2" />
-    <option name="LAST_COMMIT_MESSAGE" value="10.8 update2" />
+    <MESSAGE value="10.8 update3" />
+    <option name="LAST_COMMIT_MESSAGE" value="10.8 update3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -717,27 +722,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js06/7-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js06/8-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js06/9.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-478">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/桌面/郑文涛/home/9.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -1075,6 +1059,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/3-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js11/4-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
           <folding />
         </state>
       </provider>
