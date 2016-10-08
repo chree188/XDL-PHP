@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <style>
+        #box{
+            width:400px;
+            height:300px;
+            padding: 20px;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML...</h1>
+    <hr>
+
+
+    <div id="box">
+        <h3>好诗</h3>
+        <p>
+            锄禾日当午
+            <img src="./imgs/Meinv008.jpg" width="200">
+        </p>
+        呵呵哒......
+        <div style="width:1000px;height:1000px;"></div>
+    </div>
+    <hr>
+
+    <script>
+        /*document.write('innerHTML: ' + box.innerHTML + '<hr>');
+        document.write('innerText: ' + box.innerText + '<hr>');
+        document.write('outerHTML: ' + box.outerHTML + '<hr>');*/
+
+        //盒子模型
+        console.log('box.offsetWidth : ' + box.offsetWidth);
+        console.log('box.offsetHeight : ' + box.offsetHeight);
+        //内容+内边距
+        console.log('box.clientWidth : ' + box.clientWidth);
+        console.log('box.clientHeight : ' + box.clientHeight);
+        //宽高 +  内边距 + 计算元素内部的大小
+        console.log('box.scrollWidth : ' + box.scrollWidth);
+        console.log('box.scrollHeight : ' + box.scrollHeight);
+
+        //视口的高度
+        console.log('视口的高度: '+  document.documentElement.clientHeight);
+        //文档的高度
+        console.log('文档的高度: '+  document.documentElement.scrollHeight);
+    </script>
+</body>
+</html>
