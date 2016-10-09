@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #999;
+        }
+    </style>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $box = $('#box');//JQ
+            var box = document.getElementById('box');//JS
+
+//            查看
+            console.log('JS DOM: ' + box);
+            console.log('JQ DOM: ' + $box);
+
+            //改变box 的样式
+            // box.style.backgroundColor = '#ccc';
+            // $box.style.backgroundColor = '#369';//NO
+
+            // $box.css('background-color','#369');
+            // box.css('background-color','#369');//NO
+
+//            JQdom
+//            $('img').width = 600;//NO
+            $('img').attr('width',600);
+
+//            JSdom 和 JQdom 的互相转化
+//            JSdom -> JQdom
+//            将JSdom用JQ函数转化为JQdom
+            $(box).css('background-color','#369');
+
+//            JQdom -> JSdom
+            console.log('JQdom的集合:' + $box.length);
+            console.log('div的集合:' + $('div').length);
+            console.log($('div'));
+            console.log($box[0]);
+
+            $box[0].style.backgroundColor = '#f00';
+        })
+    </script>
+</head>
+<body>
+    <h1>JQurey dom对象 和 JS dom对象的区别</h1>
+    <hr>
+    <div id="box"></div>
+    <img src="../js10/imgs/Meinv009.jpg" alt="妹子">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
