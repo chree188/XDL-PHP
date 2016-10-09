@@ -226,6 +226,13 @@ class AjaxAction extends HYBBS {
         //{hook a_ajax_buythread_v}
         return $this->json(array('error'=>true,'info'=>'购买成功'));
     }
+    public function clear_mess(){
+        if(!IS_LOGIN)
+            $this->json(array('error'=>false,'info'=>'请重新登录'));
+        S("Chat_count")->update(array('c'=>0),array('uid'=>NOW_UID));
+        S("Friend")->update(array('c'=>0),array('uid2'=>NOW_UID));
+        return $this->json(array('error'=>true,'info'=>'清空成功'));
+    }
 
     //{hook a_ajax_fun}
 }

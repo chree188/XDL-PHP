@@ -112,7 +112,7 @@ $(function () {
          data:{
             id:{$id},
             {if $data['isthread']}
-            forum:forum,
+            fid:forum,
             title:$("#title").val(),
             {/if}
              content:$("#editor").html(),

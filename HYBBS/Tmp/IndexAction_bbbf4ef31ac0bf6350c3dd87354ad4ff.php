@@ -23,6 +23,9 @@ class IndexAction extends HYBBS {
 			$desc = 'btime DESC'; //最新回复
 		
 		
+		
+
+		
 		$data = $this->CacheObj->get("index_index_".$type.'_'.$pageid);
 
 		//获取主题列表

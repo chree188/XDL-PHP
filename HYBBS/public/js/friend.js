@@ -451,3 +451,30 @@ function window_message(avatar,title,content) {
             }  
         }  
     } 
+$(function(){
+    $('.friend-text').keyup(function(){
+        var v = $(this).val();
+
+        $(".friend-div-box .chat-name").each(function(){
+            var _this = $(this);
+            var __this = _this.parent().parent();
+            console.log(_this.text().indexOf(v));
+            if(_this.text().indexOf(v) == -1 ){ //搜索不存在
+                if(!__this.is(":hidden")){
+                    __this.hide();
+                }
+            }
+            else
+            {
+               if(__this.is(":hidden")){
+                    __this.show();
+                }
+            }
+
+            
+        })
+            
+
+    })
+    
+});

@@ -338,28 +338,28 @@
 									<label class="col-lg-2 control-label">手机前端模板</label>
 									<div class="col-lg-10">
 										<input class="form-control" type="text" name="wapview" value="<?php echo $conf['wapview'];?>">
-										<span class="help-block">当用户使用移动设备访问时所使用的模板名称,默认 : hy_boss</span>
+										<span class="help-block">当用户使用移动设备访问时所使用的模板名称,默认 : hy_moblie</span>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-lg-2 control-label">用户中心模板名</label>
 									<div class="col-lg-10">
 										<input class="form-control" type="text" name="wapuserview" value="<?php echo $conf['wapuserview'];?>">
-										<span class="help-block">此处不需要修改,这是用户中心所使用的模板名称 默认:hy_user</span>
+										<span class="help-block">此处不需要修改,这是用户中心所使用的模板名称 默认:hy_moblie</span>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-lg-2 control-label">用户登录注册模板</label>
 									<div class="col-lg-10">
 										<input class="form-control" type="text" name="wapuserview2" value="<?php echo $conf['wapuserview2'];?>">
-										<span class="help-block">如果你有独立的 用户登录模板 可以修改他 否则默认使用:hy_user</span>
+										<span class="help-block">如果你有独立的 用户登录模板 可以修改他 否则默认使用:hy_moblie</span>
 									</div>
 								</div>
 	                            <div class="form-group">
 									<label class="col-lg-2 control-label">信息提示Message模板</label>
 									<div class="col-lg-10">
 										<input class="form-control" type="text" name="wapmessview" value="<?php echo $conf['wapmessview'];?>">
-										<span class="help-block">此处是Message 信息提示页模板 默认:hy_message</span>
+										<span class="help-block">此处是Message 信息提示页模板 默认:hy_moblie</span>
 									</div>
 								</div>
 								

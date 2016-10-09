@@ -7,7 +7,7 @@ class HYBBS extends Action {
     public $_login=false;   //当前是否登录
     public $_theme;
     public $_forum=array();
-    
+
     public $conf;       //Config/conf.php array
     public $_group = 3; //当前用户组 3 = 游客
     public $_usergroup=array();
@@ -23,6 +23,7 @@ class HYBBS extends Action {
         if(isset($_SERVER['HYBBS'])) //防止多次执行 构造函数
             return;
 
+        
         //{hook a_hybbs_init}
 
         //加载Conf.php配置

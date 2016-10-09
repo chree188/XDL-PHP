@@ -116,70 +116,67 @@ class HY
             $DEBUG_CLASS = self::$_CLASS;
             require HY_PATH . 'View/Debug.php';
         }
+
+        
+        //print_r(hook::$include_file);
+        //print_r(hook::$re_php);
     }
     public static function hy_exception($e){
-        // 避免死循环
-        DEBUG && ($_SERVER['exception'] = 1);
-        //log::write($e->getMessage().' File: '.$e->getFile().' ['.$e->getLine().']');
         header('HTTP/1.1 404 Not Found'); 
         header('status: 404 Not Found');
+
         $s = '';
         $log = New \HY\Logs;
-        $log->log( $e->getMessage() . ' on line ' . $e->getLine()."\r\n");
+        $text = $e->getMessage() .'  #发生错误的文件位于: '. $e->getFile() .' #行数: ' . $e->getLine(). ' #发生时间: '.date("Y-m-d H:i:s")."\r\n";
+
+        $text = str_replace('syntax error, unexpected','语法错误, 意外',$text);
+        $text = str_replace('Call to undefined function','调用了未定义的函数',$text);
+        
+        $log->log($text);
         if (DEBUG) {
-            try {
-                $s = exception::to_html($e);
-            } catch (Exception $e) {
-                $s = get_class($e) . ' thrown within the exception handler. Message: ' . $e->getMessage() . ' on line ' . $e->getLine();
+            if(IS_AJAX){
+                header('HTTP/1.1 200 OK'); 
+                header('Content-Type:application/json; charset=utf-8');
+                die(json_encode(array('error'=>false,'info'=>$text,'data'=>$text)));
             }
-            echo $s;
+            else{
+                include HY_PATH . 'View/exec.php';
+            }
         } else {
             $s = $e->getMessage();
             include C("error_404");
             
         }
         
-        
-
-        
-        die;
     }
-    public static function hy_error($errno, $errstr, $errfile, $errline){
+    public static function hy_error($Error_Type, $Error_str,$Error_file, $Error_line){
 
         if(isset($_SERVER['ob_start'])){
             unset($_SERVER['ob_start']);
             ob_end_clean();
         }
-        $errortype = array(E_ERROR => 'Error', E_WARNING => 'Warning', E_PARSE => 'Parsing Error', E_NOTICE => 'Notice', E_CORE_ERROR => 'Core Error', E_CORE_WARNING => 'Core Warning', E_COMPILE_ERROR => 'Compile Error', E_COMPILE_WARNING => 'Compile Warning', E_USER_ERROR => 'User Error', E_USER_WARNING => 'User Warning', E_USER_NOTICE => 'User Notice', E_STRICT => 'Runtime Notice');
-        $errnostr = isset($errortype[$errno]) ? $errortype[$errno] : 'Unknonw';
-        $s = "[{$errnostr}] : {$errstr} in File {$errfile}, Line: {$errline}";
-        $log = New \HY\Logs;
-        $log->log($s."\r\n\r\n");
-
-        //echo $errstr;
-        if (DEBUG && empty($_SERVER['exception'])) {
-
-            $fy = str_replace("Notice",'通知',$s);
-            $fy = str_replace("Notice",'通知',$fy);
-            $fy = str_replace("Warning",'警告',$fy);
-            $fy = str_replace("Line",'错误行',$fy);
-            $fy = str_replace("Undefined index",'数组索引不存在',$fy);
-            
-
-
-            $fy = str_replace("Undefined variable",'变量未定义',$fy);
-            $fy = str_replace("in File",'错误来自于文件:',$fy);
-
-
-
-
-
-            
-
-            //如果你看到这条注释,请看顶部的错误信息, 非以上代码问题
-            throw new \Exception($s . '</dd><dd><b style="width:100px">错误翻译:</b><font color="red">'.$fy.'</font>');
-        } else { // 继续运行
-            
+        $Error_China = array(
+            E_ERROR => '错误', 
+            E_WARNING => '警告', 
+            E_PARSE => '解析错误', 
+            E_NOTICE => '注意', 
+            E_CORE_ERROR => '核心错误', 
+            E_CORE_WARNING => '核心警告', 
+            E_COMPILE_ERROR => '编译错误', 
+            E_COMPILE_WARNING => '编译警告', 
+            E_USER_ERROR => '用户错误', 
+            E_USER_WARNING => '用户警告', 
+            E_USER_NOTICE => 'User Notice', 
+            E_STRICT => 'Runtime Notice'
+        );
+        $Error_Mun = isset($Error_China[$Error_Type]) ? $Error_China[$Error_Type] : '未知';
+        $s = "错误类型({$Error_Mun}) : {$Error_str}";
+        
+        if (DEBUG) {
+            throw new \Exception($s);
+        } else {
+            $log = New \HY\Logs;
+            $log->log($s.' #错误来自于:'.$Error_file.' #行数:'.$Error_line."\r\n\r\n");
         }
 
 
@@ -202,8 +199,27 @@ class HY
             $file = MYLIB_PATH . $info[1] . '.php';
         } elseif ($info[0] == 'Model') {
             $file = MODEL_PATH . str_replace('Model', '', $info[1]) . '.php';
+            hook::$include_file[]=$file;
+            if (PLUGIN_ON) {
+                //插件机制
+                $file1 = TMP_PATH . $info[1] . '_' . MD5('Model/' . $info[1]) . C("tmp_file_suffix");
+                if (!is_file($file1) || DEBUG) {
+                    // 临时Action不存在
+                    //include_once LIB_PATH . 'hook.php';
+                    if (!is_file($file)) {
+                        throw new \Exception('控制器 ' . $class . ' 不存在!');
+                    }
+                    $code = file_get_contents($file);
+                    $code = hook::re($code,$file);
+                    hook::put(hook::encode($code), $file1);
+                }
+                $file = $file1;
+            }
+            
+
         } elseif ($info[0] == 'Action') {
             $file = ACTION_PATH . str_replace('Action', '', $info[1]) . '.php';
+            hook::$include_file[]=$file;
             if (PLUGIN_ON) {
                 //插件机制
                 $file1 = TMP_PATH . $info[1] . '_' . MD5('Action/' . $info[1]) . C("tmp_file_suffix");
@@ -214,10 +230,12 @@ class HY
                         throw new \Exception('控制器 ' . $class . ' 不存在!');
                     }
                     $code = file_get_contents($file);
+                    $code = hook::re($code,$file);
                     hook::put(hook::encode($code), $file1);
                 }
                 $file = $file1;
             }
+            
         } elseif ($info[0] == 'HY' && $info[1] == 'Model') {
             include HY_PATH . 'HY_SQL.php';
             $file = HY_PATH . 'Model.php';
@@ -229,8 +247,6 @@ class HY
             $file = LIB_PATH . 'hook.php';
         } elseif ($info[0] == 'HY' && $info[1] == 'Logs') {
             $file = HY_PATH . 'class/Logs.php';
-        } elseif ($info[0] == 'HY' && $info[1] == 'exception') {
-            $file = LIB_PATH . 'exception.php';
         } elseif ($info[0] == 'HY' && $info[1] == 'Cache' && $agrs==2) {
             $file = HY_PATH . 'class/Cache.php';
             

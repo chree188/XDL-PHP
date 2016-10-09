@@ -40,7 +40,7 @@
 	            {else}
 	            发表于
 	            {/if}
-	            <span class="time">{php echo humandate($v['atime']);}</span>
+	            <span class="time">{if $v['posts']}{php echo humandate($v['btime']);}{else}{php echo humandate($v['atime']);}{/if}</span>
 	        </li>
 	        <!--{hook t_m_thread_list_9}-->
 	    </ul>

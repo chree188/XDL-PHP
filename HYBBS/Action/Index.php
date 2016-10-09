@@ -22,6 +22,9 @@ class IndexAction extends HYBBS {
 		if($type == 'Btime')
 			$desc = 'btime DESC'; //最新回复
 		
+		
+		
+
 		//{hook a_index_index_11}
 		$data = $this->CacheObj->get("index_index_".$type.'_'.$pageid);
 

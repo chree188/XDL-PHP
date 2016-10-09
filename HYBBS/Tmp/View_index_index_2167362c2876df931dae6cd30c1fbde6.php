@@ -211,17 +211,7 @@
 </div>
 <?php if (IS_LOGIN): ?>
 <div class="friend-box">
-	<div style="
-	position: absolute;
-    left: 0;
-    top: 0;
-    color: #a2a2a2;
-    padding: 1px 10px 5px 10px;
-    font-size: 21px;
-    border: solid 2px #4c4c4c;
-    margin: 10px;
-    line-height: 21px;
-    border-radius: 5px;cursor: pointer;" onclick="$('.friend-box').toggleClass('friend-box-a')">×</div>
+	<div class="friend-box-close" onclick="$('.friend-box').toggleClass('friend-box-a')">×</div>
 	<div class="friend-info-box">
 		<img src="<?php echo WWW;?><?php echo $user['avatar']['b'];?>">
 		<h2><?php echo $user['user'];?> </h2>
@@ -237,9 +227,9 @@
 		<a href="<?php echo WWW;?>user<?php echo EXP;?>out">退出账号</a>
 		</p>
 		<p>
-		
+		<a href="javascript:void(0);" onclick="clear_mess()">清空未读</a>
 		<?php if ($user['group'] == C('ADMIN_GROUP')): ?>
-
+		<span>|</span>
 		<a href="<?php echo WWW;?>admin">管理后台</a>
 		<?php endif ?>
 		</p>
@@ -257,7 +247,7 @@
 	})
 	</script>
 	<div class="friend-div-box">
-		<input type="text" class="friend-text" placeholder="Search">
+		<input type="text" class="friend-text" placeholder="搜索好友名">
 		<img src="<?php echo WWW;?>View/hy_friend/cog.png" style="padding-top: 7px;padding-left: 7px;font-size: 18px;display: inline-block;"></span>
 	</div>
 	<div class="friend-title">

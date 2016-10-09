@@ -22,7 +22,7 @@
       })
       </script>
       <!--{hook t_m_forum_thread_6}-->
-		<i class="icon icon-sort Select-caret"></i>
+		<img src="{#WWW}View/hy_moblie/sort.png" class="Select-caret">
 	</span>
   <!--{hook t_m_forum_thread_7}-->
   <div class="rebtn bor" >
@@ -73,6 +73,9 @@ var index_body = new IScroll('#index_body', {
 
 window.forum_text1=false;
 window.forum_text2=false;
+window.is_loading = false;
+window.forum_page = 2;
+
 index_body.on('scroll',function(){
   //console.log(this);
   gd_b1(this.y);
@@ -82,14 +85,34 @@ index_body.on('scroll',function(){
     window.forum_text1=true;
     
  
-    $("#forum-body-top .icon-undo2").addClass("fa-spin1").next().text('释放你的爪');
+    $("#forum-body-top .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
 
 
-  }else if(this.distY < -200){
-    if(window.forum_text2)
+  }else if(this.y - this.maxScrollY < 0){
+    if(window.is_loading)
       return;
-    window.forum_text2=true;
-    $("#forum-body-bottom .icon-undo2").addClass("fa-spin1").next().text('释放你的爪');
+    window.is_loading = true;
+    
+    
+    $("#forum-body-bottom .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
+    index_body.refresh();
+    var href='{#WWW}f{#EXP}{$fid}{#EXP}{$type}{#EXP}'+forum_page++;
+    window.history.pushState("","",href);
+
+    $.ajax({
+      url:href,
+      dataType:'html',
+      success:function(e){
+        window.is_loading=false;
+        $("#forum-list").append('<div class="hy-box page-hr"><div class="page-hr1">第 '+(window.forum_page-1)+' 页</div><div class="page-hr1"></div></div>');
+        $("#forum-list").append(e.match(/<list id="forum-list">([\s\S]*?)<\/list>/)[1]);
+        $("#forum-body-bottom").removeClass("loading");
+        $("#forum-body-bottom .icon-undo2").removeClass("fa-spin1").next().text('数据加载中...');
+        index_body.refresh();
+        //$("a[ajax=true]").click(ajax_click);
+        
+      }
+    })
   }else{
     window.forum_text1=false;
     window.forum_text2=false;
@@ -110,8 +133,7 @@ $('#index_body').on('touchend', function (e) {
   }
 });
 
-window.is_loading = false;
-window.forum_page = 2;
+
 index_body.on('scrollEnd',function(){  
 
   window.forum_text1=false;
@@ -144,38 +166,17 @@ index_body.on('scrollEnd',function(){
         $("#forum-body-top .icon-undo2").removeClass("fa-spin1").next().text('下拉刷新内容');
         $("#forum-list").html(e.match(/<list id="forum-list">([\s\S]*?)<\/list>/)[1]);
         index_body.refresh();
+        //$("a[ajax=true]").click(ajax_click);
         
       }
     })
 
-	}else if(this.distY < -200){
-    if(window.is_loading)
-      return;
-    window.is_loading = true;
-    
-    
-    $("#forum-body-bottom .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
-    index_body.refresh();
-    var href='{#WWW}f{#EXP}{$fid}{#EXP}{$type}{#EXP}'+forum_page++;
-    window.history.pushState("","",href);
-
-    $.ajax({
-      url:href,
-      dataType:'html',
-      success:function(e){
-      	window.is_loading=false;
-      	$("#forum-list").append(e.match(/<list id="forum-list">([\s\S]*?)<\/list>/)[1]);
-        $("#forum-body-bottom").removeClass("loading");
-        $("#forum-body-bottom .icon-undo2").removeClass("fa-spin1").next().text('向上拉继续加载');
-        index_body.refresh();
-        
-      }
-    })
+	
   }
             
 });  
 })
 </script>
 </section>
-
+{include b_menu}
 {include f}

@@ -106,7 +106,7 @@
                 {/if}
                 get_jsonp();
                 $("#re").click(function(){
-                    window.pre = $('<pre id="code" style="width: 100%;padding: 10px;display: block;background: #000;color: chartreuse;font-size: 16px;"></pre>')
+                    window.pre = $('<pre id="code" style="width: 100%;padding: 10px;display: block;background: #000;color: chartreuse;font-size: 16px;white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ white-space: -pre-wrap; /* Opera 4-6 */ white-space: -o-pre-wrap; /* Opera 7 */ word-wrap: break-word; /* Internet Explorer 5.5+ */ "></pre>')
                     $("#tmpimg").html(window.pre);
                     add_text("更新插件 : "+$("#name2").text());
                     $.ajax({
@@ -159,7 +159,7 @@
 
                 });
                 $("#down").click(function(){
-                    window.pre = $('<pre id="code" style="width: 100%;padding: 10px;display: block;background: #000;color: chartreuse;font-size: 16px;"></pre>')
+                    window.pre = $('<pre id="code" style="width: 100%;padding: 10px;display: block;background: #000;color: chartreuse;font-size: 16px;white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ white-space: -pre-wrap; /* Opera 4-6 */ white-space: -o-pre-wrap; /* Opera 7 */ word-wrap: break-word; /* Internet Explorer 5.5+ */ "></pre>')
                     $("#tmpimg ").html(window.pre);
 
 

@@ -6,7 +6,7 @@ class ThreadModel extends Model {
     //通过文章ID 获取文章
     //文章ID
     public function read($id){
-        //{hook m_thread_read_1}
+        
         return $this->find("*",array(
             'id'=>$id
         ));
@@ -14,7 +14,7 @@ class ThreadModel extends Model {
     //通过文章ID获取文章标题
     //文章ID
     public function get_title($id){
-        //{hook m_thread_get_title_1}
+        
         return $this->find("title",array(
             'id'=>$id
         ));
@@ -22,7 +22,7 @@ class ThreadModel extends Model {
     //删除文章
     //主题ID
     public function del($id){
-        //{hook m_thread_del_1}
+        
         $this->delete(array(
             'id'=>$id
         ));
@@ -33,9 +33,9 @@ class ThreadModel extends Model {
     // 类型 + - 
     // 数值
     public function update_int($id,$key,$type = "+",$size = 1){
-        //{hook m_thread_update_int_1}
+        
         $key .= ($type=='+') ? '[+]' : '[-]';
-        //{hook m_thread_update_int_2}
+        
         $this->update(array(
             $key=>$size
         ),array(
@@ -49,7 +49,7 @@ class ThreadModel extends Model {
     //分类ID - 指定ID
     //用户ID - 指定用户
     public function read_list($pageid , $size = 10,$order = "id DESC",$fid = -1,$uid = 0 ){
-        //{hook m_thread_read_list_1}
+        
         $data = array(
 
             "ORDER"=>$order,
@@ -58,22 +58,22 @@ class ThreadModel extends Model {
                 $size
             )
         );
-        //{hook m_thread_read_list_2}
+        
         if($fid != -1 && $uid != 0){
             $data['AND']=array(
                 'fid'=>$fid,
                 'uid'=>$uid,
             );
-            //{hook m_thread_read_list_3}
+            
         }elseif($fid != -1 && $uid == 0){
             $data['fid']=$fid;
-            //{hook m_thread_read_list_4}
+            
         }elseif($fid == -1 && $uid != 0){
             $data['uid']=$uid;
-            //{hook m_thread_read_list_5}
+            
         }
 
-        //{hook m_thread_read_list_6}
+        
         return $this->select('*',$data);
     }
     //----------搜索主题
@@ -86,7 +86,7 @@ class ThreadModel extends Model {
     //用户ID
     // 
     public function search_list($pageid,$size,$key,$order = "id DESC",$fid = -1,$uid = 0){
-        //{hook m_thread_search_list_1}
+        
         $data = $this->select(
             "*",
             array(
@@ -98,24 +98,24 @@ class ThreadModel extends Model {
                     )
                 )
             );
-        //{hook m_thread_search_list_2}
+        
         return $data;
     }
 
     public function format(&$thread_list){
-        //{hook m_thread_format_1}
+        
         if(empty($thread_list))
             return;
         static $user_tmp = array();
         $User = M("User");
-        //{hook m_thread_format_2}
+        
         foreach ($thread_list as  &$v){
-            //{hook m_thread_format_3}
+            
             if(empty($user_tmp[$v['uid']])){
                 $user_tmp[$v['uid']] = $User->id_to_user($v['uid']);
                 
             }
-            //{hook m_thread_format_4}
+            
 
             if($v['buid']){
                 if(empty($user_tmp[$v['buid']])){
@@ -126,7 +126,7 @@ class ThreadModel extends Model {
                 $v['buser'] = $user_tmp[$v['buid']];
                 $v['buser_avatar'] =$User->avatar($v['buser']);
             }
-            //{hook m_thread_format_5}
+            
             //UID获取用户名
             $v['user'] = $user_tmp[$v['uid']];
             //摘要去掉标签
@@ -137,7 +137,7 @@ class ThreadModel extends Model {
                 $v['image']=explode(",", $v['img']);
                 $v['image_count']=count($v['image'])-1;
             }
-            //{hook m_thread_format_6}
+            
 
         }
 
@@ -145,10 +145,10 @@ class ThreadModel extends Model {
 
     //判断用户是否回复过该主题
     public function is_user_post($uid,$tid){
-        //{hook m_thread_is_user_post_1}
+        
         return S("Post")->has(array("AND"=>array('uid'=>$uid,'tid'=>$tid)));
     }
-    //{hook m_thread_fun}
+    
 
 
 

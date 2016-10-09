@@ -1,3 +1,7 @@
+
+function log(a){
+	console.log(a);
+}
 function open_thread(url){
 window.location.href = url;
 }
@@ -462,39 +466,7 @@ $(document).ready(function(){
 var touchmove_handler = function (e) {
         e.preventDefault();
     };
-$(function(){
-
-	
-
-	if(action_name !='My' && action_name !='Post'){
-		document.addEventListener('touchmove', touchmove_handler, false);
-	}
-	
-
-	function iframe_forum_size(){
-		$(".iframe_forum").height($(window).height() - $("#iframe-forum-top").height() -40);
-	}
-	iframe_forum_size();
-	if($(".iframe_forum").length != 0){
-		new IScroll('.iframe_forum', {
-		  	preventDefault: false,
-		  	preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ },
-		  	shrinkScrollbars:'scale'
-		});
-	}
-	$(window).resize(iframe_forum_size);
-
-
-
-	
-
-	 $(".iframe_forum a").click(function(){
-	 	$(".iframe_forum a").removeClass('active');
-	 	$(this).addClass('active');
-	 });
-
-
-	 function ajax_click(){
+function ajax_click(){
 	 	console.log('链接点击');
 		var _this = $(this);
 		var href = _this.attr('href');
@@ -530,6 +502,33 @@ $(function(){
 				dataType:'html',
 				
 				success:function(data){
+					// zz = /<script.*?src.*?="([\s\S]*?)".*?>.*?<\/script>/ig;
+					// //console.log(zz.exec(data));
+					// var result = [];
+					// var body = data.match(/<body.*?>([\s\S]*?)<\/body>/)[1];
+					// //log(body);
+					// while(img = zz.exec(body)){
+					//     result.push(img[1]);
+					// }
+					//console.log(result);
+					$.ajaxSetup({ async: false, cache: true });
+					// $(body).find("script").each(function(){
+					// 	var src = $(this).attr('src');
+					// 	$.getScript(src);
+					// 	if(src != undefined)
+					// 		log(src);
+					// 	//else
+					// 		//log($(this).html());
+						
+					// })
+
+					//console.log(data);
+					//console.log(data.match(/<script.*?src.*?="([\s\S]*?)".*?>.*?<\/script>/ig,"$2"));
+					// var js_arr = data.match(/<script.*?src.*?=\"([\s\S]*?)\".*?>.*?<\/script>/ig);
+					// console.log(js_arr);
+					// for(o in js_arr){
+					// 	console.log(js_arr[o].match(/<script.*?src.*?="([\s\S]*?)".*?>.*?<\/script>/ig));
+					// }
 					if(iframe == 'true'){
 						$(".body").html(data.match(/<section class="body".*?>([\s\S]*?)<\/section>/)[1]);
 						$(".body a[ajax=true]").click(ajax_click);
@@ -555,6 +554,40 @@ $(function(){
 		
 		return false;
 	 }
+	 
+$(function(){
+
+	
+
+	if(action_name !='My' && action_name !='Post'){
+		document.addEventListener('touchmove', touchmove_handler, false);
+	}
+	
+
+	function iframe_forum_size(){
+		$(".iframe_forum").height($(window).height() - $("#iframe-forum-top").height() -40);
+	}
+	iframe_forum_size();
+	if($(".iframe_forum").length != 0){
+		new IScroll('.iframe_forum', {
+		  	preventDefault: false,
+		  	preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ },
+		  	shrinkScrollbars:'scale'
+		});
+	}
+	$(window).resize(iframe_forum_size);
+
+
+
+	
+
+	 $(".iframe_forum a").click(function(){
+	 	$(".iframe_forum a").removeClass('active');
+	 	$(this).addClass('active');
+	 });
+
+
+	 
 	$("a[ajax=true]").click(ajax_click);
 	// $('a').on('ajax:beforeSend', function(event, xhr, settings) {
 	//   if (history && history.pushState) {

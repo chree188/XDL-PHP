@@ -17,6 +17,18 @@
     -o-transition: all .5s ease;
     
 }
+.friend-box-close{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #a2a2a2;
+    padding: 1px 10px 5px 10px;
+    font-size: 21px;
+    border: solid 2px #4c4c4c;
+    margin: 10px;
+    line-height: 21px;
+    border-radius: 5px;cursor: pointer;
+}
 .friend-box-a{
     right: 0;
 }
@@ -36,11 +48,12 @@
     margin:0 10px;
 }
 .friend-info-box a{
-        color: #fff;
+    color: #fff;
+    outline: 0;
 }
 .friend-info-box p{
     font-size: 16px;
-        margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .friend-box::-webkit-scrollbar {
@@ -68,6 +81,7 @@
 	padding: 10px;
 }
 .friend-text{
+        outline: 0;
 	display: block;
     height: 20px;
     padding: 6px 12px;
@@ -545,3 +559,4 @@ width: 100%;
 .lt-close:hover{
     color: red;
 }
+

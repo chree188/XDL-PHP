@@ -175,46 +175,47 @@ function rand_code($size){ //去除了比较相似的字符 比如:0,O I J L 等
   }
   return $str;
 }
-function del_cache_file($conf){
+function del_cache_file($conf,$cache = false){
   deldir(TMP_PATH);
-  
-  if($conf['cache_type'])
-      C("DATA_CACHE_TYPE",$conf['cache_type']);
-  if($conf['cache_table'])
-      C("DATA_CACHE_TABLE",$conf['cache_table']);
+    if($cache){
+    
+    if($conf['cache_type'])
+        C("DATA_CACHE_TYPE",$conf['cache_type']);
+    if($conf['cache_table'])
+        C("DATA_CACHE_TABLE",$conf['cache_table']);
 
-  if($conf['cache_key'])
-      C("DATA_CACHE_KEY",$conf['cache_key']);
-  if($conf['cache_time'])
-      C("DATA_CACHE_TIME",$conf['cache_time']);
-  
+    if($conf['cache_key'])
+        C("DATA_CACHE_KEY",$conf['cache_key']);
+    if($conf['cache_time'])
+        C("DATA_CACHE_TIME",$conf['cache_time']);
+    
 
-  if($conf['cache_pr'])
-      C("DATA_CACHE_PREFIX",$conf['cache_pr']);
-  if($conf['cache_ys'] == 'on')
-      C("DATA_CACHE_COMPRESS",true);
-  if($conf['cache_outtime'])
-      C("DATA_CACHE_TIMEOUT",$conf['cache_outtime']);
-  if($conf['cache_redis_ip'])
-      C("REDIS_HOST",$conf['cache_redis_ip']);
-  if($conf['cache_redis_port'])
-      C("REDIS_PORT",$conf['cache_redis_port']);
+    if($conf['cache_pr'])
+        C("DATA_CACHE_PREFIX",$conf['cache_pr']);
+    if($conf['cache_ys'] == 'on')
+        C("DATA_CACHE_COMPRESS",true);
+    if($conf['cache_outtime'])
+        C("DATA_CACHE_TIMEOUT",$conf['cache_outtime']);
+    if($conf['cache_redis_ip'])
+        C("REDIS_HOST",$conf['cache_redis_ip']);
+    if($conf['cache_redis_port'])
+        C("REDIS_PORT",$conf['cache_redis_port']);
 
-  if($conf['cache_mem_ip'])
-      C("MEMCACHE_HOST",$conf['cache_mem_ip']);
-  if($conf['cache_mem_port'])
-      C("MEMCACHE_PORT",$conf['cache_mem_port']);
-  if($conf['cache_memd_ip']){
-      $arr = explode("\r\n",$conf['cache_memd_ip']);
-      $options=array();
-      foreach ($arr as $v) {
-          array_push($options,explode(":",$v));
-      }
-      C("MEMCACHED_SERVER",$options);
+    if($conf['cache_mem_ip'])
+        C("MEMCACHE_HOST",$conf['cache_mem_ip']);
+    if($conf['cache_mem_port'])
+        C("MEMCACHE_PORT",$conf['cache_mem_port']);
+    if($conf['cache_memd_ip']){
+        $arr = explode("\r\n",$conf['cache_memd_ip']);
+        $options=array();
+        foreach ($arr as $v) {
+            array_push($options,explode(":",$v));
+        }
+        C("MEMCACHED_SERVER",$options);
+    }
+
+    cache(array())->clear();
   }
-
-  cache(array())->clear();
-
 }
 
 function log_time(){

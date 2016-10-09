@@ -68,12 +68,13 @@ abstract class Action
             }
             
             $content = file_get_contents($tpl_path);
+            hook::$include_file[]=$tpl_path;
 
             //获取 模板文件
             $this->Tpl = new \HY\Tpl();
             $this->Tpl->view = $this->view;
             
-            $content = $this->Tpl->init($content, $this->var);
+            $content = $this->Tpl->init($content,$tpl_path);
             put_tmp_file($tmp_path, $content);
         }
         //print_r($content);

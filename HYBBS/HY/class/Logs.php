@@ -4,6 +4,8 @@ namespace HY;
 
 class Logs{
 	public function log($content){
-		file_put_contents(TMP_PATH . 'log.txt',$content, FILE_APPEND);
+		if(!is_file(TMP_PATH . 'log.php'))
+			file_put_contents(TMP_PATH . 'log.php','<?php die(); ?>');
+		file_put_contents(TMP_PATH . 'log.php',$content, FILE_APPEND);
 	}
 }

@@ -2,17 +2,19 @@
 namespace HY;
 
 class Tpl{
-    public $var     =   array();
+
     public $view='';
 
-    public function init($content,$var) {
-        $this->var = $var;
+    public function init($content,$file_path) {
+        
         $content = $this->parseInclude($content); //include 遍历
 
         //'/({)([^\d\w\s{}].+?)(})/is'
         ///({)(.+?)(})/is
         if(PLUGIN_ON){ //hook 模板
+            $content = hook::re($content,$file_path);
             $content = hook::encode($content);
+
         }
 
         
@@ -158,7 +160,9 @@ class Tpl{
         else{
             $path.=C('tpl_suffix');
         }
+        hook::$include_file[]=$path;
         $content = file_get_contents( $path);
+        $content = hook::re($content,$path);
         $content = $this->parseInclude($content); //递归调用
         $this->view = $tmp_view;
         return $content;

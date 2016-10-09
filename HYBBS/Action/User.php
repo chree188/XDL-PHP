@@ -225,6 +225,8 @@ class UserAction extends HYBBS {
                 
                 //密码正确
                 if($data['pass'] == $UserLib->md5_md5($pass,$data['salt'])){//登录成功
+                    $sum = S("Friend")->sum("c",array('uid1'=>$data['id']));
+                    M("Chat_count")->update(array('c'=>$sum),array('uid'=>$data['id']));
 
                     //{hook a_user_login_52}
                     //更新用户所有缓存 一个星期更新缓存

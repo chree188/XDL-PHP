@@ -1,14 +1,10 @@
 {include h}
 {include forum_header}
-<section class="body"  id="index_body">
+<section class="body"  id="index_body" style="padding:0 ">
 	<!--{hook t_m_forum_index_1}-->
-	<div class="hy-box hy-bo-b hy-bo-t" style="margin-top:10px">
-	    <div class="hy-input-box">
-	        <input type="text" placeholder="搜索论坛">
-	    </div>
-	</div>
+	
 	<!--{hook t_m_forum_index_2}-->
-	<div class="hy-list hy-bo-t hy-bo-b">
+	<div class="hy-list hy-bo-t hy-bo-b" style="margin-top:0">
 	    {foreach $forum as $key => $v}
 	    <!--{hook t_m_forum_index_3}-->
 	    <a href="<?php echo WWW.URL('forum','',EXP.$v['id']); ?>"> 
@@ -21,5 +17,25 @@
 	</div>
 	<!--{hook t_m_forum_index_5}-->
 </section>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var thread_body = new IScroll('#index_body', {
+		disableMouse: true,
+	    disablePointer: true,
+	    mouseWheel: true,
+	    scrollbars: true,
+	  	fadeScrollbars:true,
+	  	preventDefault: false,
+	  	preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ },
+	  	shrinkScrollbars:'scale'
+	    
+	  
+	});
+	setTimeout(function(){thread_body.refresh();},1000);
 
+});
+</script>
+
+{include b_menu}
 {include f}

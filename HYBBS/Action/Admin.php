@@ -48,8 +48,9 @@ class AdminAction extends HYBBS {
         if(IS_POST){
             $one1 = X("post.one1");
             $one2 = X("post.one2");
+            $one3 = X("post.one3") ? true : false;
             if($one1){
-                del_cache_file($this->conf);
+                del_cache_file($this->conf,$one3);
             }
             if($one2){
                 $Forum = S("Forum");

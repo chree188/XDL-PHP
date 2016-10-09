@@ -36,6 +36,7 @@ class ForumAction extends HYBBS {
                 }
             }
         }
+
         ///$id = intval(METHOD_NAME); //分类ID
         //echo $id;
         //print_r($this->_forum);
@@ -76,13 +77,15 @@ class ForumAction extends HYBBS {
 
         if(empty($data) || DEBUG){
             //{hook a_forum_empty_4}
-
+            
+            
             $data = $Thread->read_list($pageid,$this->conf['forumlist'],$desc,$id); //$id = 分类ID
             $Thread->format($data);
             foreach ($data as $key => $value) {
                 if($value['top'] != 0)
                     unset($data[$key]);
             }
+            
             $this->CacheObj->set("forum_data_{$id}_{$pageid}_{$type}",$data);
         }
 		
@@ -131,4 +134,5 @@ class ForumAction extends HYBBS {
 		$this->display('forum_thread');
     }
     //{hook a_forum_fun}
+    
 }

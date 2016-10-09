@@ -1,10 +1,10 @@
 <?php
 
 /*
-    HY 1.4.1
+    HY 1.4.3
  
 */
-define('HY_V','1.4.1');
+define('HY_V','1.4.3');
 $GLOBALS['START_TIME'] = microtime(TRUE);
 
 date_default_timezone_set('PRC');

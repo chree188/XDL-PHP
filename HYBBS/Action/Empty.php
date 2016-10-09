@@ -10,12 +10,18 @@ class EmptyAction extends HYBBS {
     public function index(){
         //{hook a_empty_index_v}
         $_GET['type'] = ACTION_NAME;
+        if($_GET['type'] != 'New' && $_GET['type'] != 'Btime')
+            E('不存在该页面');
+
         $_GET['pageid'] = intval(isset($_GET['HY_URL'][1]) ? $_GET['HY_URL'][1] : 1) or $pageid=1;
         A("Index")->Index();
     }
     public function _empty(){
         //{hook a_empty_empty_v}
         $_GET['type'] = ACTION_NAME;
+        if($_GET['type'] != 'New' && $_GET['type'] != 'Btime')
+            E('不存在该页面');
+        
         $_GET['pageid'] = intval(isset($_GET['HY_URL'][1]) ? $_GET['HY_URL'][1] : 1) or $pageid=1;
         A("Index")->Index();
     }

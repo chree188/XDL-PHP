@@ -162,7 +162,7 @@ span.pics {
     left: 0;
     right: 0;
     top: 50px;
-    bottom: 0;
+    bottom: 50px;
     padding: 10px 0;
     overflow: hidden;
 
@@ -1042,11 +1042,11 @@ display: block;
 }
 .Select-caret {
         
-    position: absolute;
+        position: absolute;
     color: #7089a9;
     right: 10px;
     top: 12px;
-    font-size: 13px;
+    width: 8px;
 }
 .FormControl:focus, .FormControl.focus {
     background-color: #fff;
@@ -1226,4 +1226,48 @@ display: block;
 .badge-z{
     background: #8d23a9
 }
+.page-hr .page-hr2{
+    position: absolute;
 
+    background: #d7d7d7;
+    width: 100%;
+    height: 1px;
+    top: 27px;
+    z-index: 0;
+}
+.page-hr .page-hr1{
+    position: absolute;
+    margin: 0 auto;
+    left: 40%;
+    background: #FFF;
+    z-index: 1;
+    right: 40%;
+    color: #a1a1a1;
+}
+.page-hr{
+    text-align: center;
+    position: relative;
+    margin-bottom: 0;
+    padding: 19px 0;
+
+    
+}
+
+.hy-footer-nav a span{
+        color: #0d7dbb !important
+}
+.hy-footer-c{
+        background: #0d7dbb;
+            
+}
+.hy-footer-nav a .icon-plus{
+    color: #FFF !important;
+}
+.hy-footer-nav a {
+    color: #0d7dbb;
+    font-weight: 400;
+}
+.hy-footer-nav a.a {
+    color: #0d7dbb;
+    font-weight: 400;
+}

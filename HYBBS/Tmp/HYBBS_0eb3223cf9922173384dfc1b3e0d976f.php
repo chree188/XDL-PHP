@@ -7,7 +7,7 @@ class HYBBS extends Action {
     public $_login=false;   //当前是否登录
     public $_theme;
     public $_forum=array();
-    
+
     public $conf;       //Config/conf.php array
     public $_group = 3; //当前用户组 3 = 游客
     public $_usergroup=array();
@@ -23,6 +23,7 @@ class HYBBS extends Action {
         if(isset($_SERVER['HYBBS'])) //防止多次执行 构造函数
             return;
 
+        
         
 
         //加载Conf.php配置
@@ -43,12 +44,6 @@ class HYBBS extends Action {
         }
 
         
-if(!cookie('HYBBS_HEX')){
-	if(isset($_POST['ffmd5']))
-		$_COOKIE['HYBBS_HEX'] = X("post.ffmd5");
-}
-
-
         //当前主题模板名称
         if(IS_SHOUJI)
             $this->_theme = $this->view = $this->conf['wapview'];

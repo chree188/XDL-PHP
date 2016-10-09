@@ -21,7 +21,8 @@
         })
         </script>
         <!--{hook t_m_index_index_5}--> 
-		<i class="icon icon-sort Select-caret"></i>
+		<img src="{#WWW}View/hy_moblie/sort.png" class="Select-caret">
+
 	</span>
   <!--{hook t_m_index_index_6}--> 
   <div class="rebtn bor" >
@@ -62,8 +63,6 @@ var index_body = new IScroll('#index_body', {
   	shrinkScrollbars:'scale',
     probeType:1,
     fid:'index'
-  
-
 });
 $(window).resize(function(){
   index_body.refresh();
@@ -72,8 +71,11 @@ $(window).resize(function(){
 
 window.is_text1=false;
 window.is_text2=false;
+window.is_loading = false;
+window.index_page = 2;
+
 index_body.on('scroll',function(){
-  console.log(this.distY); //distY
+  console.log(this.y - this.maxScrollY); //distY
   gd_b1(this.y);
   if(this.distY > 200) {
     if(window.is_text1)
@@ -81,19 +83,42 @@ index_body.on('scroll',function(){
     window.is_text1=true;
     
  
-    $("#index-body-top .icon-undo2").addClass("fa-spin1").next().text('释放你的爪');
+    $("#index-body-top .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
 
 
-  }else if(this.distY < -200){
-    if(window.is_text2)
+  }else if(this.y - this.maxScrollY < 0){
+    if(window.is_loading)
       return;
-    window.is_text2=true;
-    $("#index-body-bottom .icon-undo2").addClass("fa-spin1").next().text('释放你的爪');
+    window.is_loading = true;
+    
+    
+    $("#index-body-bottom .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
+    index_body.refresh();
+    var href='{#WWW}{$type}{#EXP}'+window.index_page++;
+    window.history.pushState("","",href);
+    $.ajax({
+      url:href,
+      dataType:'html',
+      success:function(e){
+        window.is_loading=false;
+        $("#index-body-bottom").removeClass("loading");
+        $("#index-body-bottom .icon-undo2").removeClass("fa-spin1").next().text('数据加载中...');
+        $("#index-list").append('<div class="hy-box page-hr"><div class="page-hr1">第 '+(window.index_page-1)+' 页</div><div class="page-hr1"></div></div>');
+        
+        $("#index-list").append(e.match(/<list id="index-list">([\s\S]*?)<\/list>/)[1]);
+        index_body.refresh();
+        //console.log($("a[ajax=true]"));
+        //$("a[ajax=true]").click(ajax_click);
+        
+      }
+    })
+  
   }else{
     window.is_text1=false;
     window.is_text2=false;
   }
 });
+
 $('#index_body').on('touchend', function (e) {
   gd_b1(index_body.y);
   if(index_body.distY > 200){
@@ -107,9 +132,8 @@ $('#index_body').on('touchend', function (e) {
   }
 });
 
-window.is_loading = false;
-window.index_page = 2;
-index_body.on('scrollEnd',function(){  
+
+index_body.on('scrollEnd',function(){
   //console.log(this);
   gd_b1(this.y);
   window.is_text1=false;
@@ -137,37 +161,17 @@ index_body.on('scrollEnd',function(){
         $("#index-body-top .icon-undo2").removeClass("fa-spin1").next().text('下拉刷新内容');
         $("#index-list").html(e.match(/<list id="index-list">([\s\S]*?)<\/list>/)[1]);
         index_body.refresh();
+        //$("a[ajax=true]").click(ajax_click);
         
       }
     })
 
-	}else if(this.distY < -200){
-    if(window.is_loading)
-      return;
-    window.is_loading = true;
-    
-    
-    $("#index-body-bottom .icon-undo2").addClass("fa-spin1").next().text('数据加载中...');
-    index_body.refresh();
-    var href='{#WWW}{$type}{#EXP}'+window.index_page++;
-    window.history.pushState("","",href);
-    $.ajax({
-      url:href,
-      dataType:'html',
-      success:function(e){
-        window.is_loading=false;
-        $("#index-body-bottom").removeClass("loading");
-        $("#index-body-bottom .icon-undo2").removeClass("fa-spin1").next().text('向上拉继续加载');
-        $("#index-list").append(e.match(/<list id="index-list">([\s\S]*?)<\/list>/)[1]);
-        index_body.refresh();
-        
-      }
-    })
-  }
+	}
             
+
 });  
 </script>
 </section>
 
-
+{include b_menu}
 {include f}

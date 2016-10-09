@@ -145,7 +145,7 @@
                     <form action="" method="post" id="formToggleLine" class="form-horizontal no-margin form-border">
                     
                     <div class="form-group">
-						<label class="col-lg-2 control-label">论坛缓存</label>
+						<label class="col-lg-2 control-label">文件组建缓存</label>
 						<div class="col-lg-10">
 							<div class="checkbox inline-block">
 								<div class="custom-checkbox">
@@ -153,11 +153,27 @@
 									<label for="inlineCheckbox1"></label>
 								</div>
 								<div class="inline-block vertical-top">
-									所有论坛缓存
+									缓存文件(Tmp)
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="form-group">
+						<label class="col-lg-2 control-label">数据缓存</label>
+						<div class="col-lg-10">
+							<div class="checkbox inline-block">
+								<div class="custom-checkbox">
+									<input name="one3" type="checkbox" id="inlineCheckbox2" class="checkbox-red">
+									<label for="inlineCheckbox2"></label>
+								</div>
+								<div class="inline-block vertical-top">
+									数据缓存
+								</div>
+							</div>
+						</div>
+					</div>
+
+
                     
 					<div class="form-group">
 						<label class="col-lg-2 control-label">重构板块主题与评论数量</label>
@@ -523,50 +539,52 @@ foreach ($able as $key=>$value) {
 
 <script type="text/javascript">
 
-	function openA(obj){
-		$("#open-mess").html('');
-		$("#jdt").stop(true,true);
+	// function openA(obj){
+	// 	$(obj).attr('disabled','disabled');
+	// 	$("#open-mess").html('');
+	// 	$("#jdt").stop(true,true);
 		
-		add_mess('升级任务正在执行，请勿关闭该页面！','success');
-		add_mess('正在下载最新论坛程序包！','success');
-		$("#jdt").css('wdith',"0%").animate({width:"50%"},10000);
-		$.ajax({
-			url: "<?php echo WWW;?>admin<?php echo EXP;?>update",
-			type:"POST",
-			cache: false,
-			data:{gn:'down'},
-			dataType: 'json'
-	    }).then(function(e) {
-	         if(!e.error)
-	         	return add_mess(e.info,'danger');
-	        $("#jdt").stop(true,true);
-	        $("#jdt").animate({width:"100%"},10000);
-	        add_mess(e.info,'success');
-	        $.ajax({
-				url: "<?php echo WWW;?>admin<?php echo EXP;?>update",
-				type:"POST",
-				cache: false,
-				data:{gn:'unzip'},
-				dataType: 'json'
-		    }).then(function(e) {
-		        if(!e.error)
-		         	return add_mess(e.info,'danger');
+	// 	add_mess('升级任务正在执行，请勿关闭该页面！','success');
+	// 	add_mess('正在下载最新论坛程序包！','success');
+	// 	$("#jdt").css('wdith',"0%").animate({width:"50%"},10000);
+	// 	$.ajax({
+	// 		url: "<?php echo WWW;?>admin<?php echo EXP;?>update",
+	// 		type:"POST",
+	// 		cache: false,
+	// 		data:{gn:'down'},
+	// 		dataType: 'json'
+	//     }).then(function(e) {
+	//          if(!e.error)
+	//          	return add_mess(e.info,'danger');
+	//         $("#jdt").stop(true,true);
+	//         $("#jdt").animate({width:"100%"},10000);
+	//         add_mess(e.info,'success');
+	//         $.ajax({
+	// 			url: "<?php echo WWW;?>admin<?php echo EXP;?>update",
+	// 			type:"POST",
+	// 			cache: false,
+	// 			data:{gn:'unzip'},
+	// 			dataType: 'json'
+	// 	    }).then(function(e) {
+	// 	        if(!e.error)
+	// 	         	return add_mess(e.info,'danger');
 		        
-		        $("#jdt").stop(true,true);
-	        	add_mess(e.info,'success');
+	// 	        $("#jdt").stop(true,true);
+	//         	add_mess(e.info,'success');
 	        	
-		   }, function() {
+	// 	   }, function() {
 
-		     	add_mess('访问本地服务器出错！Error = 2','danger');
-		   });
-	   }, function() {
-	     	add_mess('访问本地服务器出错！Error = 1','danger');
-	   });
-	}
+	// 	     	add_mess('访问本地服务器出错！Error = 2','danger');
+	// 	   });
+	//    }, function() {
+	//      	add_mess('访问本地服务器出错！Error = 1','danger');
+	//    });
+	// }
 	function add_mess(info,on){
 		$("#open-mess").html($("#open-mess").html()+'<label class="label label-'+on+'" style="margin-bottom:5px;display: inline-block;">'+info+'</label>\r\n');
 	}
 	function openA(obj){
+		$(obj).attr('disabled','disabled');
 		$("#open-mess").html('');
 		$("#jdt").stop(true,true);
 		
@@ -580,6 +598,7 @@ foreach ($able as $key=>$value) {
 			data:{gn:'down'},
 			dataType: 'json'
 	    }).then(function(e) {
+	    	$(obj).removeAttr('disabled');
 	         if(!e.error)
 	         	return add_mess(e.info,'danger');
 	        $("#jdt").stop(true,true);
@@ -592,6 +611,7 @@ foreach ($able as $key=>$value) {
 				data:{gn:'unzip'},
 				dataType: 'json'
 		    }).then(function(e) {
+		    	$(obj).removeAttr('disabled');
 		        if(!e.error)
 		         	return add_mess(e.info,'danger');
 		        
@@ -601,6 +621,7 @@ foreach ($able as $key=>$value) {
 		        $("#jdt").animate({width:"80%"},10000);
 	        	add_mess('正在升级中...','success');
 	        	$.get(e.url,function(e){
+	        		$(obj).removeAttr('disabled');
 	        		if(e == '0')
 	        			return add_mess('升级失败，原因：升级压缩包丢失！','danger');
 	        		if(e == '1'){
@@ -615,12 +636,15 @@ foreach ($able as $key=>$value) {
 							data:{gn:'sql'},
 							dataType: 'json'
 					    }).then(function(e) {
+					    	$(obj).removeAttr('disabled');
 					    	$("#jdt").stop(true,true);
+					    	window.location.reload();
 					    	if(!e.error)
 					    		return add_mess(e.info,'danger');
 					    	return add_mess(e.info,'success');
 
 					    }, function() {
+					    	$(obj).removeAttr('disabled');
 					     	add_mess('访问本地服务器出错！Error = 3','danger');
 					   	});
 	        			return;
@@ -630,16 +654,20 @@ foreach ($able as $key=>$value) {
 	        	},'html');
 		         
 		   }, function() {
+		   		$(obj).removeAttr('disabled');
+		   		$("#jdt").stop(true,true);
 		     	add_mess('访问本地服务器出错！Error = 2','danger');
 		   });
 	   }, function() {
+	   		$(obj).removeAttr('disabled');
+	   		$("#jdt").stop(true,true);
 	     	add_mess('访问本地服务器出错！Error = 1','danger');
 	   });
 
 
 	}
 	function add_mess(info,on){
-		$("#open-mess").html($("#open-mess").html()+'<label class="label label-'+on+'" style="margin-bottom:5px;display: inline-block;">'+info+'</label>\r\n');
+		$("#open-mess").html($("#open-mess").html()+'<label class="label label-'+on+'" style="margin-bottom:5px;display: ;    line-height: 3;">'+info+'</label>\r\n');
 	}
 
 	$.get("<?php echo WWW;?>admin<?php echo EXP;?>hybbsupdate",function(e){

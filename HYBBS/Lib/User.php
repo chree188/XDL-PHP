@@ -4,13 +4,6 @@ namespace Lib;
 class User{
     //用户名检查 , 仅允许数字与字母 长度5-18   去前后空
 	public function check_user(&$username){
-		/*$user = strtolower(trim($user));
-		if (!ctype_alnum($user)){
-  			return '违法，只能使用数字与字母组合！ 切勿输入非法符号与中文！';
-		} elseif(mb_strlen($user) > 18 || mb_strlen($user) < 5){
-			return '抱歉，账号长度仅支持 最少 5 个字符 最大 18 个字符。';
-		}
-		return '';*/
 		$username = trim($username);
 		$username = strtolower($username);
 		if(empty($username)) {
@@ -35,20 +28,14 @@ class User{
 		return true;
 	}
 	public function check_email(&$email) {
-		//$emaildefault = array('admin', 'system');
+		
 		if(empty($email)) {
 			return 'EMAIL 不能为空';
-		//} elseif(utf8::strlen($email) > 32) {
-		//	return 'Email 长度不能大于 32 个字符。';
 		} elseif(!preg_match("/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/", $email)) {
 			return 'Email 格式不对';
 		} elseif(mb_strlen($email) < 6) {
 			return 'Email 太短';
-		//} elseif(str_replace($emaildefault, '', $email) != $email) {
-		//	return 'Email 含有非法关键词';
 		}
-
-		// hook usre_model_check_email_end.php
 		return '';
 	}
 	public function md5_md5($s, $salt = '') {
