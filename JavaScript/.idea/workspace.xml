@@ -1,86 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/DEBUG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Plugin/Simditor/on" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Plugin/hy_moblie_editor/on" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/AjaxAction_288c4406de96ff012258a8eaa1f07e2c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/MyAction_51787cc5afca088fb50ffde0dd6bc11a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/PostAction_bc509d89317bac8ec1dd183a993410ed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/UserAction_949c079e477d2a330a331fef6288de95.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_login_e72c88ed2a04044f2575bab4e9a9824f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_message_647a7bd0202db855b4dc8a60d29d3f5c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_post_index_5811e9699bcebac79d3148036f180b2a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_user_add_69746ddc42fb7e46903367be01af925b.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_user_file_db2fb0b81c2b827a00a76e4812fead92.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_user_index_65718e4aade33c107d384b67f167e210.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_user_login_e4cf085c6e3452d5b2b814877216ad33.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_user_op_a9ad2851e4b3222f2236de16a9f20be6.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_user_post_115678e4f31edd444bd2527260c9690d.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_user_thread_09961d7d259f6c1cb89177c8b0b89bb1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/cache/feb35109409d2207fee55685f0e21fff.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/log.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Action/Admin.php" afterPath="$PROJECT_DIR$/../HYBBS/Action/Admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Action/Ajax.php" afterPath="$PROJECT_DIR$/../HYBBS/Action/Ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Action/Empty.php" afterPath="$PROJECT_DIR$/../HYBBS/Action/Empty.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Action/Forum.php" afterPath="$PROJECT_DIR$/../HYBBS/Action/Forum.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Action/HYBBS.php" afterPath="$PROJECT_DIR$/../HYBBS/Action/HYBBS.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Action/Index.php" afterPath="$PROJECT_DIR$/../HYBBS/Action/Index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Action/User.php" afterPath="$PROJECT_DIR$/../HYBBS/Action/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Conf/conf.php" afterPath="$PROJECT_DIR$/../HYBBS/Conf/conf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/HY/Action.php" afterPath="$PROJECT_DIR$/../HYBBS/HY/Action.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/HY/HY.php" afterPath="$PROJECT_DIR$/../HYBBS/HY/HY.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/HY/Tpl.php" afterPath="$PROJECT_DIR$/../HYBBS/HY/Tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/HY/class/Logs.php" afterPath="$PROJECT_DIR$/../HYBBS/HY/class/Logs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/HY/lib/HY.lib.php" afterPath="$PROJECT_DIR$/../HYBBS/HY/lib/HY.lib.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/HY/lib/hook.php" afterPath="$PROJECT_DIR$/../HYBBS/HY/lib/hook.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Lib/User.php" afterPath="$PROJECT_DIR$/../HYBBS/Lib/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Lib/function.php" afterPath="$PROJECT_DIR$/../HYBBS/Lib/function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Chat.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Chat_count.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Chat_count.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Count.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Count.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/File.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Fileinfo.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Fileinfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Forum.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Forum.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Friend.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Friend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Ol.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Ol.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Post.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Thread.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Thread.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/User.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Model/Usergroup.php" afterPath="$PROJECT_DIR$/../HYBBS/Model/Usergroup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Plugin/hy_moblie_editor/conf.php" afterPath="$PROJECT_DIR$/../HYBBS/Plugin/hy_moblie_editor/conf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Plugin/hy_moblie_editor/t_m_post_edit.hook" afterPath="$PROJECT_DIR$/../HYBBS/Plugin/hy_moblie_editor/t_m_post_edit.hook" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/AdminAction_7305a22810c94cd5fcdc5a42219908c1.php" afterPath="$PROJECT_DIR$/../HYBBS/Tmp/AdminAction_7305a22810c94cd5fcdc5a42219908c1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/EmptyAction_09e314ff44101b5f838683bd59e9738f.php" afterPath="$PROJECT_DIR$/../HYBBS/Tmp/EmptyAction_09e314ff44101b5f838683bd59e9738f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/HYBBS_0eb3223cf9922173384dfc1b3e0d976f.php" afterPath="$PROJECT_DIR$/../HYBBS/Tmp/HYBBS_0eb3223cf9922173384dfc1b3e0d976f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/IndexAction_bbbf4ef31ac0bf6350c3dd87354ad4ff.php" afterPath="$PROJECT_DIR$/../HYBBS/Tmp/IndexAction_bbbf4ef31ac0bf6350c3dd87354ad4ff.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_index_a1a8fd312d5736c4d1e9b578c68e2a00.php" afterPath="$PROJECT_DIR$/../HYBBS/Tmp/View_index_a1a8fd312d5736c4d1e9b578c68e2a00.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_index_index_2167362c2876df931dae6cd30c1fbde6.php" afterPath="$PROJECT_DIR$/../HYBBS/Tmp/View_index_index_2167362c2876df931dae6cd30c1fbde6.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/View_op_4a853fdaca571019e226a44372b97b07.php" afterPath="$PROJECT_DIR$/../HYBBS/Tmp/View_op_4a853fdaca571019e226a44372b97b07.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/cache/0abcc0e276b6d6c6288d252f8ab2460b.php" afterPath="$PROJECT_DIR$/../HYBBS/Tmp/cache/0abcc0e276b6d6c6288d252f8ab2460b.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/Tmp/cache/9052dc43773c75c1b1fdef7e760de942.php" afterPath="$PROJECT_DIR$/../HYBBS/Tmp/cache/9052dc43773c75c1b1fdef7e760de942.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/admin/codeol.html" afterPath="$PROJECT_DIR$/../HYBBS/View/admin/codeol.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/admin/index.html" afterPath="$PROJECT_DIR$/../HYBBS/View/admin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/admin/op.html" afterPath="$PROJECT_DIR$/../HYBBS/View/admin/op.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_boss/forum_thread.html" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_boss/forum_thread.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_boss/js/app.js" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_boss/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_friend/index.html" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_friend/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/app.css" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/app.js" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/b_menu.html" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/b_menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/forum_index.html" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/forum_index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/forum_thread.html" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/forum_thread.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/index_index.html" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/index_index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/search_index.html" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/search_index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/thread_list.html" afterPath="$PROJECT_DIR$/../HYBBS/View/hy_moblie/thread_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/index.php" afterPath="$PROJECT_DIR$/../HYBBS/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/public/css/friend.css" afterPath="$PROJECT_DIR$/../HYBBS/public/css/friend.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HYBBS/public/js/friend.js" afterPath="$PROJECT_DIR$/../HYBBS/public/js/friend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js11/7.html" afterPath="$PROJECT_DIR$/js11/7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js11/7.php" afterPath="$PROJECT_DIR$/js11/7.php" />
-    </list>
+    <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="" />
     <ignored path="JavaScript.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -386,7 +307,7 @@
       <workItem from="1475894937465" duration="1692000" />
       <workItem from="1475919866453" duration="653000" />
       <workItem from="1475920575381" duration="12169000" />
-      <workItem from="1475975193115" duration="5738000" />
+      <workItem from="1475975193115" duration="6025000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -700,7 +621,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127788000" />
+    <option name="totallyTimeSpent" value="128075000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
