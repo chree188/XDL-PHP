@@ -2,7 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jQuery/index.html" afterPath="$PROJECT_DIR$/jQuery/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/BlueEgg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv001.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv002.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv003.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv004.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv005.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv006.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv007.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv008.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv009.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv010.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv011.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv012.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv015.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv016.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv017.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv018.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/Meinv019.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/RedEgg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/error.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/home.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/loading2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/theme.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/z5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/imgs/z6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/1-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/1-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/2-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/2-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/3-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/3-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js13/jquery-1.8.3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScript.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jQuery/index.html">
+      <file leaf-file-name="3-2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js13/3-2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+            <state relative-caret-position="399">
+              <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -56,12 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js7/11.html" />
-        <option value="$PROJECT_DIR$/js7/12.html" />
-        <option value="$PROJECT_DIR$/js7/13.html" />
-        <option value="$PROJECT_DIR$/js8/1.html" />
-        <option value="$PROJECT_DIR$/js8/2.html" />
-        <option value="$PROJECT_DIR$/js8/3.html" />
         <option value="$PROJECT_DIR$/js8/4.html" />
         <option value="$PROJECT_DIR$/js8/5.html" />
         <option value="$PROJECT_DIR$/js8/6.html" />
@@ -107,6 +141,12 @@
         <option value="$PROJECT_DIR$/js12/jsonp/index.html" />
         <option value="$PROJECT_DIR$/js12/6.html" />
         <option value="$PROJECT_DIR$/jQuery/index.html" />
+        <option value="$PROJECT_DIR$/js13/1-1.html" />
+        <option value="$PROJECT_DIR$/js13/1-2.html" />
+        <option value="$PROJECT_DIR$/js13/2-1.html" />
+        <option value="$PROJECT_DIR$/js13/2-2.html" />
+        <option value="$PROJECT_DIR$/js13/3-1.html" />
+        <option value="$PROJECT_DIR$/js13/3-2.html" />
       </list>
     </option>
   </component>
@@ -122,8 +162,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="273" />
-    <option name="y" value="86" />
+    <option name="x" value="649" />
+    <option name="y" value="64" />
     <option name="width" value="1239" />
     <option name="height" value="839" />
   </component>
@@ -152,6 +192,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,14 +222,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jQuery" />
+              <option name="myItemId" value="js13" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,18 +242,36 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PHP\wamp64\www\JavaScript\js13" />
       <recent name="D:\PHP\wamp64\www\JavaScript\js12\jsonp" />
       <recent name="D:\PHP\wamp64\www\JavaScript\js12" />
       <recent name="D:\PHP\wamp64\www\JavaScript\js11" />
       <recent name="D:\PHP\wamp64\www\JavaScript\js8" />
-      <recent name="D:\PHP\wamp64\www\JavaScript\js7" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -294,6 +352,7 @@
       <workItem from="1476011893098" duration="1444000" />
       <workItem from="1476013363825" duration="2191000" />
       <workItem from="1476060061459" duration="6140000" />
+      <workItem from="1476099271687" duration="1993000" />
     </task>
     <task id="LOCAL-00001" summary="9.19 update2">
       <created>1474271553604</created>
@@ -635,7 +694,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144807000" />
+    <option name="totallyTimeSpent" value="146800000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -647,28 +706,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="273" y="86" width="1239" height="839" extended-state="0" />
+    <frame x="649" y="64" width="1239" height="839" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.117402166" sideWeight="0.49463806" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25815603" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24798928" sideWeight="0.5087427" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34042552" sideWeight="0.49125728" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34042552" sideWeight="0.49125728" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2323064" sideWeight="0.49463806" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20283689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20399667" sideWeight="0.5053619" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -767,48 +826,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js8/7.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js8/8.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js10/1-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2730">
-          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js10/2-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js10/2-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js10/3-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js10/3-1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1049,9 +1066,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="1" column="12241" selection-start-line="1" selection-start-column="12241" selection-end-line="1" selection-end-column="12241" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,7 +1123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1117,6 +1130,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js13/1-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="117" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js13/1-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js13/2-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1171">
+          <caret line="94" column="7" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js13/2-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="94" column="7" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js13/3-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js13/3-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
           <folding />
         </state>
       </provider>
