@@ -1,56 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="10.10 update2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/BlueEgg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv001.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv002.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv003.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv004.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv005.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv006.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv007.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv008.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv009.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv010.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv011.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv012.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv013.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv014.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv015.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv016.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv017.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv018.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/Meinv019.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/RedEgg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/error.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/home.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/loading2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/theme.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/z5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/imgs/z6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/7.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/p/1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/p/2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/p/3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/p/4.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/p/5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/p/6.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/p/Model.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/p/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js14/p/jsonp.php" />
+    <list default="true" id="58c3b6f9-1d56-424e-b9ec-ea8873d8393b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScript.iws" />
@@ -352,14 +303,7 @@
       <workItem from="1476060061459" duration="6140000" />
       <workItem from="1476099271687" duration="12958000" />
       <workItem from="1476147744284" duration="2520000" />
-      <workItem from="1476194505762" duration="605000" />
-    </task>
-    <task id="LOCAL-00002" summary="9.19 update3">
-      <created>1474273264375</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1474273264375</updated>
+      <workItem from="1476194505762" duration="679000" />
     </task>
     <task id="LOCAL-00003" summary="9.19 update4">
       <created>1474274583894</created>
@@ -697,11 +641,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476106757964</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="10.11 update2">
+      <created>1476195134864</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1476195134864</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160890000" />
+    <option name="totallyTimeSpent" value="160964000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -718,8 +669,8 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.117402166" sideWeight="0.49463806" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25815603" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24798928" sideWeight="0.5087427" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33900708" sideWeight="0.49125728" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33617023" sideWeight="0.5154038" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33617023" sideWeight="0.48459616" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2323064" sideWeight="0.49463806" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20283689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20399667" sideWeight="0.5053619" order="0" side_tool="true" content_ui="tabs" />
@@ -789,7 +740,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="9.25 update" />
     <MESSAGE value="9.25 update1" />
     <MESSAGE value="9.26 update" />
     <MESSAGE value="9.26 update1" />
@@ -814,7 +764,8 @@
     <MESSAGE value="10.9 update5" />
     <MESSAGE value="10.9 update6" />
     <MESSAGE value="10.10 update2" />
-    <option name="LAST_COMMIT_MESSAGE" value="10.10 update2" />
+    <MESSAGE value="10.11 update2" />
+    <option name="LAST_COMMIT_MESSAGE" value="10.11 update2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
