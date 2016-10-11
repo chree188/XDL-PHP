@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<h1>JQ - JSONP</h1>
+<hr>
+<ul id="list">
+    <li>《悯农》---李绅(唐)</li>
+    <li>锄禾日当午</li>
+    <li>汗滴禾下土</li>
+    <li>谁知盘中餐</li>
+    <li>粒粒皆辛苦</li>
+</ul>
+
+<script>
+    $(function () {
+        $('#list li').each(function (i, n) {
+            console.log(i + ' : ' + n + this + ' : ' + $(this).index());
+        });
+        console.log($('#list li').size());
+        console.log($('#list li').get(1));
+    });
+
+</script>
+</body>
+</html>

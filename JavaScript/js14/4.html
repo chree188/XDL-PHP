@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<h1>JQ - Ajax</h1>
+<hr>
+<button id="btn">加载</button>
+
+<div id="box"></div>
+
+<script>
+    $(function () {
+        $('#btn').click(function () {
+            // $('#box').load('./p/1.php');
+
+            // GET 参1 url  参2  是执行的回调函数
+            /*$.get('./p/1.php',function(data){
+             console.log(data);
+             $('#box').append(data);
+             })*/
+
+            //POST 参1 url  参2  是执行的回调函数
+            /*$.post('./p/1.php',function(data){
+             console.log(data);
+             $('#box').append(data);
+             })*/
+
+            //ajax
+            $.ajax({
+                type: 'get',//请求方式
+                url: './p/1.php', // 请求的URL
+                //请求成功,指定的回调函数
+                success: function (data) {
+                    $('#box').append(data + '<br>');
+                }
+            })
+        })
+    })
+
+</script>
+</body>
+</html>
