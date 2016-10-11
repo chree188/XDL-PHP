@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>找元素</title>
     <script src="jquery-1.8.3.min.js"></script>
-
 </head>
 <body>
 <div>
@@ -24,7 +23,18 @@
 <p>用jquery的选择器配合筛选最少以10中方式找到内容为糯米的a链接并弹出内容糯米</p>
 <script>
     $(function(){
-        alert($());
+//        alert($("ol li:eq(2) > a").html());
+//        alert($("a:last").html());
+//        alert($("ul li:eq(6) > a").html());
+//        alert($('a').last().html());
+//        alert($('ol li a').eq(2).html());
+//        alert($('a').eq(5).html());
+//        alert($('a').last().html());
+//        alert($('li a').last().html());
+//        alert($('a:contains("糯米")').html());
+//        alert($('li a:gt(4)').html());
+//        alert($('.test a:last').html());
+        alert($('.test a:eq(2)').html());
     })
 </script>
 </body>
