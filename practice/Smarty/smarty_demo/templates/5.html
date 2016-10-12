@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title><{$title}></title>
+</head>
+<body>
+    <h1><{$title}></h1>
+    <!-- 方式1 -->
+    <{assign var = 'username' value = '小艳艳'}>
+    <p><{$username}></p>
+
+    <!-- 方式2 -->
+    <{assign 'age' '18'}>
+    <p><{$age}></p>
+
+    <!-- 方式3 -->
+    <{$class = 's50'}>
+    <p><{$class}></p>
+
+    <{literal}>
+        <p><{$class}></p><p><{$class}></p><p><{$class}></p><p><{$class}></p><p><{$class}></p>
+    <{/literal}>
+</body>
+</html>

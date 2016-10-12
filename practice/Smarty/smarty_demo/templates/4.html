@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title><{$title}></title>
+</head>
+<body>
+    <h1><{$title}></h1>
+
+    <p>b1: <{$b1}></p>
+    <p>b2: <{$b2}></p>
+
+    <!-- <p>arr: <{$arr}></p> -->
+    <p>arr: <{$arr[0]}></p>
+    <p>arr: <{$arr[3]}></p>
+    <p>arr: <{$arr.2}></p>
+    <p>arr: <{$arr.4}></p>
+
+    <p>list: <{$list['name']}></p>
+    <p>list: <{$list.sex}></p>
+
+    <p>obj: <{$obj->name}></p>
+    <p>obj: <{$obj->getInfo()}></p>
+
+    <p><{time()}></p>
+    <p><{date('Y-m-d H:i:s')}></p>
+
+    <p><{substr($title, 0, 6)}></p>
+    <p><{implode(',',$arr)}></p>
+</body>
+</html>
