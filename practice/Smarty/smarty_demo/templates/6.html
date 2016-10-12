@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title><{$title}></title>
+</head>
+<body>
+    <h1><{$title}></h1>
+
+    <table border="1" width="500" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>name</th>
+            <th>age</th>
+            <th>sex</th>
+        </tr>
+        <{foreach $list as $v}>
+        <tr>
+            <td><{$v.id}></td>
+            <td><{$v['name']}></td>
+            <td><{$v.age}></td>
+            <td>
+                <{if $v.sex == '0'}>女
+                <{elseif $v.sex == '1'}>男
+                <{else}>保密
+                <{/if}>
+            </td>
+        </tr>
+        <{/foreach}>
+    </table>
+    <{var_dump($smarty.server)}>
+
+</body>
+</html>
