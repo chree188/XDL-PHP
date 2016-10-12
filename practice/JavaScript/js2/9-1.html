@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <h1>JS函数</h1>
+    <hr>
+
+    <script>
+//        实现 所有参数相加
+        function sum() {
+//            console.log(arguments);
+            var sum = 0;
+            for (var i= 0; i< arguments.length; i++) {
+//                循环相加
+                sum += arguments[i];
+            }
+            return sum;//返回结果
+        }
+        console.log(sum(1,2,3,4,5));
+        console.log(sum(10,20,30,40,50));
+    </script>
+</body>
+</html>

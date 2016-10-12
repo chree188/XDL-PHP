@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <style>
+        #box{
+            width: 800px;
+            border: 1px solid #999;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajax</h1>
+    <hr>
+    <button onclick="loadHtml()">加载</button>
+    <br>
+    <div id="box"></div>
+
+    <script>
+        function loadHtml() {
+//            创建 请求对象
+            var xhr = new XMLHttpRequest();
+//            事件回调
+            xhr.onreadystatechange = function () {
+                if (xhr.status == 200 && xhr.readyState == 4) {
+                    /*var str = 'var a = {name:"yanyan"}';
+                    eval(str);//把字串 JS代码来执行
+                    alert(a);*/
+
+//                    清空box内的所有内容
+                    box.innerHTML = '';
+//                    获取json数据
+                    var jsonStr = xhr.responseText;
+                    eval(`var obj = ${jsonStr}`);
+//                    console.log(obj);
+
+//                    把数据以表格的形式输出
+//                    创建table并设置属性
+                    var table = document.createElement('table');
+                    table.width = 800;
+                    table.border = 1;
+                    table.cellSpacing = 0;
+                    table.cellPadding = 5;
+                    table.id = 'table';
+
+//                    将table添加到box中
+                    box.appendChild(table);
+
+//                    添加单元行
+                    var tr = table.insertRow(0);
+//                    添加th表头
+                    addTH(tr,['id','name','sex','age','provice']);
+
+//                    添加单元格数据
+                    for (var i = 0;i < obj.length;i++) {
+                        var tr = table.insertRow(i+1);
+                        tr.insertCell(0).innerHTML = obj[i].id;
+                        tr.insertCell(1).innerHTML = obj[i].name;
+                        tr.insertCell(2).innerHTML = obj[i].sex;
+                        tr.insertCell(3).innerHTML = obj[i].age;
+                        tr.insertCell(4).innerHTML = obj[i].province;
+                    }
+                }
+            };
+
+//            请求初始化
+            xhr.open('get','4.php',true);
+//            正式发送请求
+            xhr.send();
+        }
+
+//        给tr添加th的函数
+        function addTH(tr,data) {
+            for (var i = 0;i < data.length;i++) {
+                var th = document.createElement('th');
+                th.innerHTML = data[i];
+                tr.appendChild(th);
+            }
+        }
+    </script>
+</body>
+</html>

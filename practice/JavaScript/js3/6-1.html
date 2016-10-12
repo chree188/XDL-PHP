@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 数组</title>
+</head>
+<body>
+    <h1>JS 数组</h1>
+    <hr>
+
+    <script>
+        var list = ['丽丽','艳艳','静静','红红','达达','花花','小芳','悦悦'];
+
+//        遍历数组
+        for (var i=0; i<list.length; i++) {
+            document.write(i + ':' + list[i] + '<br>');
+        }
+        document.write('<hr>');
+//        遍历数组
+        for (var i in list) {
+            document.write(i + ':' + list[i] + '<br>');
+        }
+
+        document.write('<hr>');
+
+        var obj = {
+            name:"士兵76",
+            age:40,
+            sex:"男的"
+        };
+        console.log(obj.length);//for循环无法遍历对象
+
+//        for in 专业遍历对象三十年
+        for (var i in obj) {
+            document.write(i + ':' + obj[i] + '<br>');
+        }
+    </script>
+</body>
+</html>

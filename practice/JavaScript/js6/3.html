@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <h1>表单事件</h1>
+    <hr>
+    搜索:
+    <input type="text" id="s" value="请输入搜索内容" name="" placeholder="请输入搜索内容" style="color: #ccc">
+
+    <script>
+        var input = document.getElementById('s');
+        input.onfocus = function () {
+//            console.log('啊,我获取到了焦点!!!!');
+            this.value = '';
+            this.style.color = '#000';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <h1>JS 函数</h1>
+    <hr>
+
+    <script>
+//        声明函数 function 关键字
+        function demo(m,n) {
+            console.log(m + '宣' + n + '好久了...');
+        }
+        demo('小静静','小达达');
+        demo('小静静','小达达','老王');
+        demo('小静静'); //少参 会返回undefined
+
+//        默认参数
+        function test(m,n) {
+//            如果没有传值,就赋值
+            if (n === undefined) {
+                n = '小黑';
+            }
+            console.log(m + '和' + n + '跳舞');
+        }
+        test('小白');
+        test('小白','小绿');
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <h1>input</h1>
+    <hr>
+    <input type="text" id="text">
+    <br>
+    <textarea name="" id="content" cols="40" rows="20">
+程序员必看书单
+第一阶段:
+《细说php》
+《C语言程序与设计》
+《C++进阶宝典》
+《JAVA从入门到精通》
+第二阶段:
+《教你怎么不生气》
+《佛经》
+《老子》
+《沉默的愤怒》
+《JAVA从入门到放弃》
+第三阶段:
+《颈椎病康复指南》
+《腰椎间盘突出日常护理》
+《高血压降压宝典》
+《高血压降压宝典》
+《精神病症状学》
+第四阶段:
+《活着》
+    </textarea>
+    <button onclick="selectAll()">全选</button>
+    <button onclick="copyContent()">复制</button>
+
+    <script>
+        text.focus();//获取焦点 直接输
+
+        function selectAll() {
+            content.select();
+        }
+
+        function copyContent() {
+//            判断 是否能访问剪切板
+            if (window.clipboardData) {
+                clipboardData.setData('text',content.value);
+                alert('已复制到剪切板!');
+            } else {
+                content.select();
+                alert('请按Ctrl + C 进行复制!');
+            }
+        }
+    </script>
+</body>
+</html>

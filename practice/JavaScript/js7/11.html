@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <h1>跑马灯</h1>
+    <hr>
+    <font id="myfont" size="6"></font>
+
+    <script>
+        var myfont = document.getElementById('myfont');
+        var msg = 'javascript and php';
+
+//        定义一个函数 将第n个字符套一个font标签
+        function pink(num,str) {
+//            java <font>s</font> cript
+            var tmp = str.substr(0,num);
+            tmp += '<font color="red" size="7">' + str[num] + '</font>';
+            tmp += str.substr(num + 1);
+            return tmp;
+        }
+
+//        myfont.innerHTML = pink(4,msg);
+        var num = 0;
+        setInterval(function () {
+            if (num >= msg.length) num = 0;
+            myfont.innerHTML = pink(num,msg);
+            num++;
+        },50);
+    </script>
+</body>
+</html>

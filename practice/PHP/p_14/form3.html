@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文件上传</title>
+	</head>
+	<body>
+		<h3>1 单文件上传</h3>
+		<form action="3-1.php" method="post" enctype="multipart/form-data">
+			<!--文件名：<input type="text" name="picname" />最大支持1M<br /><br />-->
+			文件：<input type="file" name="pic" />
+			<input type="submit" value="上传" />
+		</form>
+		<!-- 文件上传在客户端form表单中要做的设置
+		1 method提交方式 必须是post方式
+		2 enctype="multipart/form-data"  编码方式必须是这种
+		multiple多选 复选
+		3 表单项中的 type应该是file -->
+	</body>
+</html>

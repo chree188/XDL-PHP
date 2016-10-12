@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <style>
+        #box {
+            width: 800px;
+            border: 1px solid #999;
+            padding: 20px;
+            float: left;
+        }
+
+        #addbox {
+            width: 300px;
+            position: fixed;
+            right: 0px;;
+        }
+    </style>
+</head>
+<body>
+<h1>Ajax</h1>
+<hr>
+<br>
+<div id="box"></div>
+<div id="addbox">
+    <form onsubmit="return addData()" name="addForm">
+        姓名: <input type="text" name="name"><br>
+        性别:
+        <label><input type="radio" name="sex" value="woman">女</label>
+        <label><input type="radio" name="sex" value="man">男</label><br>
+        年龄: <input type="text" name="age"><br>
+        <button>提交</button>
+    </form>
+    <hr>
+    <form onsubmit="return delData()" name="delForm">
+        要删除的ID号: <input type="text" name="id" size="10"><br>
+        <button>删除</button>
+    </form>
+</div>
+
+<script>
+    //        声明函数 添加表单数据
+    function addData() {
+//            获取表单数据
+        var name = document.addForm.name.value;
+        var sex = document.addForm.sex.value;
+        var age = document.addForm.age.value;
+
+//            创建请求对象
+        var xhr = new XMLHttpRequest();
+
+//            事件回调
+        xhr.onreadystatechange = function () {
+            if (xhr.status == 200 && xhr.readyState == 4) {
+                if (xhr.responseText > 0) {
+                    alert('添加成功');
+//                        loadHtml();
+                    var tr = table.insertRow(table.rows.length);
+                    tr.insertCell(0).innerHTML = xhr.responseText;
+                    tr.insertCell(1).innerHTML = name;
+                    tr.insertCell(2).innerHTML = sex;
+                    tr.insertCell(3).innerHTML = age;
+                    tr.insertCell(4).innerHTML = '';
+                } else {
+                    alert('添加失败!');
+                }
+            }
+        };
+
+//            请求初始化
+        xhr.open('post', '5.php', true);
+//            设置请求头
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//            正式发送请求
+        xhr.send(`name=${name}&sex=${sex}&age=${age}`);
+        return false;
+    }
+    /*****************************************************/
+
+//    声明函数 删除表单数据
+    function delData() {
+        //            获取表单数据
+        var id = document.delForm.id.value;
+
+//            创建请求对象
+        var xhr = new XMLHttpRequest();
+
+//            事件回调
+        xhr.onreadystatechange = function () {
+            if (xhr.status == 200 && xhr.readyState == 4) {
+                if (xhr.responseText > 0) {
+                    alert('删除成功');
+                    loadHtml();
+                } else {
+                    alert('删除失败!');
+                }
+            }
+        };
+
+//            请求初始化
+        xhr.open('post', '7.php', true);
+//            设置请求头
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//            正式发送请求
+        xhr.send(id);
+        return false;
+    }
+    /********************************************************/
+
+    loadHtml();
+    function loadHtml() {
+//            创建 请求对象
+        var xhr = new XMLHttpRequest();
+//            事件回调
+        xhr.onreadystatechange = function () {
+            if (xhr.status == 200 && xhr.readyState == 4) {
+                /*var str = 'var a = {name:"yanyan"}';
+                 eval(str);//把字串当JS代码来执行
+                 alert(a);*/
+
+//                    清空box内的所有内容
+                box.innerHTML = '';
+//                    获取json数据
+                var jsonStr = xhr.responseText;
+                eval(`var obj = ${jsonStr}`);
+//                    console.log(obj);
+
+//                    把数据以表格的形式输出
+//                    创建table并设置属性
+                var table = document.createElement('table');
+                table.width = 800;
+                table.border = 1;
+                table.cellSpacing = 0;
+                table.cellPadding = 5;
+                table.id = 'table';
+
+//                    将table添加到box中
+                box.appendChild(table);
+
+//                    添加单元行
+                var tr = table.insertRow(0);
+//                    添加TH表头
+                addTH(tr, ['id', 'name', 'sex', 'age', 'province']);
+
+//                    添加单元格数据
+                for (var i = 0; i < obj.length; i++) {
+                    var tr = table.insertRow(i + 1);
+                    tr.insertCell(0).innerHTML = obj[i].id;
+                    tr.insertCell(1).innerHTML = obj[i].name;
+                    tr.insertCell(2).innerHTML = obj[i].sex;
+                    tr.insertCell(3).innerHTML = obj[i].age;
+                    tr.insertCell(4).innerHTML = obj[i].province;
+                }
+            }
+        };
+
+//            请求初始化
+        xhr.open('get', '4.php', true);
+//            正式发送请求
+        xhr.send();
+    }
+    /*************************************************************/
+
+    //        给tr添加th的函数
+    function addTH(tr, data) {
+        for (var i = 0; i < data.length; i++) {
+            var th = document.createElement('th');
+            th.innerHTML = data[i];
+            tr.appendChild(th);
+        }
+    }
+</script>
+</body>
+</html>

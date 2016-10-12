@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <h1>内置对象</h1>
+    <hr>
+
+    <script>
+        /*var str = new String('伯母您好,我是您儿子的女朋友..');
+        var str = String('我有两个女朋友,一个叫左手,另一个叫右手..');*/
+
+        var str = 'I am cuicui, I xuan you, do you zao?上海!';
+
+        document.write(str + '<br>');
+        console.log(str);
+//        字串长度,与编码无关,中文也占一个长度
+        document.write('长度: ' + str.length + '<br>');
+
+        document.write('anchor: ' + str.anchor('p1') + '<br>');
+        document.write('bold: ' + str.bold() + '<br>');
+        document.write('<hr>');
+
+        document.write('charAt: ' + str.charAt(3) + '<br>');
+        document.write('数组方式: ' + str[10] + '<br>');
+        document.write('<hr>');
+
+//        返回第一次出现该字串的位置
+        document.write('indexOf: ' + str.indexOf('you') + '<br>');
+//        返回最后一次出现该字串的位置
+        document.write('lastIndexOf: ' + str.lastIndexOf('you') + '<br>');
+//        没出现返回的是-1,如果大于等于0,则包含这个字串.
+//        判断一个字串中,是否包含某个指定的字串或字符
+        document.write('indexOf: ' + str.indexOf('sb') + '<br>');
+        document.write('<hr>');
+
+//        concat 连接字串 可以有多个值
+        document.write('concat: ' + str.concat('AA') + '<br>');
+        document.write('concat: ' + str.concat('AA',[1,2,3,99]) + '<br>');
+        document.write('<hr>');
+
+//        substr(start, length) 截取字串,无指定长度,则截取到字串结尾
+        document.write('substr: ' + str.substr(20) + '<br>');
+        document.write('substr: ' + str.substr(3,6) + '<br>');
+//        substring(start, end) 截取字串 不包含end
+        document.write('substring: ' + str.substring(3,6) + '<br>');
+//        document.write('substring: ' + str.substring(-3,-1) + '<br>');//null
+//        slice(start, end) 截取字串 不包含end,值允许有负值
+        document.write('slice: ' + str.slice(3,6) + '<br>');
+        document.write('slice: ' + str.slice(-3,-1) + '<br>');
+        document.write('<hr>');
+
+//        大小写
+        document.write('大写: ' + str.toUpperCase() + '<br>');
+        document.write('小写: ' + str.toLowerCase() + '<br>');
+        document.write('<hr>');
+
+//        替换
+        document.write('replace: ' + str.replace('you','你') + '<br>');
+//        支持正则处理 JS 的正则 不需要加引号
+        document.write('replace: ' + str.replace(/you/g,'你') + '<br>');
+        document.write('replace: ' + str.replace(/\w/g,'啪') + '<br>');
+
+//        match匹配第一个出现的结果 参数就是正则
+//        成功返回 匹配到的字串,失败返回null
+        document.write('match: ' + str.match(/\w{6}/) + '<br>');
+        document.write('match: ' + str.match(/\w{56}/) + '<br>');//null
+
+//        正则验证 匹配第一个出现的位置,不匹配返回-1
+        document.write('search: ' + str.search(/\w{6}/) + '<br>');
+        document.write('search: ' + str.search(/\w{66}/) + '<br>');//-1
+
+//        split   把字串 分割为数组 explode();
+        console.log(str.split(','));
+        console.log(str.split(/[, ]/));//按逗号和空格分割
+    </script>
+</body>
+</html>

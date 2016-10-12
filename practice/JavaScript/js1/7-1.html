@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <h1>JS中的数据类型转换</h1>
+    <hr>
+
+    <script>
+//        隐式转换
+//        数字环境 / 字符串环境 / 布尔值环境
+
+//        数字环境  - * /
+        console.log(100 - '10');    //90
+        console.log(100 * 'hehe');  //NaN
+        console.log(100 / true);    //100
+
+//        字串环境 +
+        console.log(100 + '100');
+        console.log(100 + 100);
+
+//        布尔值环境
+        if (null) {
+            console.log(1);
+        } else {
+            console.log(0);
+        }
+
+//        无穷大问题
+        console.log(100 / 0);   //Infinity 无穷大
+        console.log(0 / 0); //NaN
+        console.log(0 / -1);    //+0/-0
+
+//        浮点精度问题
+        console.log(0.1 + 0.2); //0.300000000004
+        console.log((0.1 + 0.2).toFixed(2));    //0.30
+    </script>
+</body>
+</html>

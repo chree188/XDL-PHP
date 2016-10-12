@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #div {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .com {
+            width: 25%;
+            float: left;
+            margin: 0 auto;
+        }
+
+        .nav {
+            padding: 0 50px;
+            height: 45px;
+            line-height: 45px;
+            background-color: #333;
+            color: #fff;
+            display: block;
+            cursor: pointer;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        li {
+            list-style: none;
+            height: 25px;
+            line-height: 25px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .ul {
+            background-color: #333;
+            color: #fff;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+    <div class="com">
+        <span class="nav">HTML/CSS</span>
+        <ul class="ul">
+            <li>HTML</li>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>CSS3</li>
+            <li>Bootstrap</li>
+            <li>Foundation</li>
+        </ul>
+    </div>
+    <div class="com">
+        <span class="nav">JavaScript</span>
+        <ul class="ul">
+            <li>JavaScript</li>
+            <li>HTML DOM</li>
+            <li>jQuery</li>
+            <li>AngularJS</li>
+            <li>React</li>
+            <li>jQuery UI</li>
+            <li>jQuery EasyUI</li>
+            <li>Node.js</li>
+            <li>AJAX</li>
+            <li>JSON</li>
+            <li>Highcharts</li>
+        </ul>
+    </div>
+    <div class="com">
+        <span class="nav">服务端</span>
+        <ul class="ul">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Python3</li>
+            <li>Django</li>
+            <li>Linux</li>
+            <li>Docker</li>
+            <li>Ruby</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>Perl</li>
+            <li>Servlet</li>
+            <li>JSP</li>
+            <li>Lua</li>
+            <li>Scala</li>
+            <li>Go</li>
+            <li>ASP</li>
+        </ul>
+    </div>
+    <div class="com">
+        <span class="nav">数据库</span>
+        <ul class="ul">
+            <li>SQL</li>
+            <li>Mysql</li>
+            <li>SQLite</li>
+            <li>MongoDB</li>
+            <li>Redis</li>
+            <li>Memcached</li>
+        </ul>
+    </div>
+    <div class="clear" style="clear:both"></div>
+</div>
+
+<script>
+    var div = document.getElementById('div');
+    var spans = div.getElementsByTagName('span');
+    var uls = div.getElementsByTagName('ul');
+    var lis = div.getElementsByTagName('li');
+
+    for (var i = 0; i < spans.length; i++) {
+        spans[i].index = i;
+        spans[i].onmouseover = function () {
+            for (var j = 0; j < spans.length; j++) {
+                uls[j].style.display = 'none';
+            }
+            spans[this.index].style.backgroundColor = '#fff';
+            spans[this.index].style.color = '#333';
+            uls[this.index].style.display = 'block';
+        }
+        spans[i].onmouseout = function () {
+            spans[this.index].style.backgroundColor = '#333';
+            spans[this.index].style.color = '#fff';
+        }
+    }
+
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = function () {
+            this.style.backgroundColor = '#ccc';
+        };
+        //鼠标移走
+        lis[i].onmouseout = function () {
+            this.style.backgroundColor = '#fff';
+        }
+    }
+</script>
+</body>
+</html>

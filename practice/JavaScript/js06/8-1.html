@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input{
+				width: 400px;
+				height: 40px;
+				line-height: 40px;
+			}
+			#box{
+				width: 800px;
+				height: 300px;
+				padding: 20px;
+				border: 1px solid #999;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>表单事件</h1>
+		<hr />
+			<input type="text" id="text" />
+			<br />
+			<br />
+			<br />
+			<div id="box"></div>
+		
+		<script type="text/javascript">
+			var ipt	= document.getElementById('text');
+			var div = document.getElementById('box');
+//			显示文字
+			/*ipt.onchange = function(){
+				div.innerHTML = ipt.value;
+			}*/
+			
+//			实时显示文本内容
+			ipt.oninput = iii;	//非IE
+			ipt.onpropertychange = iii;	//IE
+			
+			function iii(){
+				div.innerHTML = ipt.value;
+			}
+		</script>
+	</body>
+</html>

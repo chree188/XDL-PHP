@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<h1>JQ - Ajax</h1>
+<hr>
+<form id="my">
+    加数1 <input type="text" id="num1" name="a"><br>
+    加数2 <input type="text" id="num2" name="b"><br>
+</form>
+
+<button id="btn">相加</button>
+
+<hr>
+<div id="box"></div>
+
+<script>
+    $(function () {
+        $('#btn').click(function () {
+
+            /*//得到参数
+             //var num1 = $('#num1').val();
+             //var num2 = $('#num2').val();
+
+             //将表单数据串行化 成url形式
+             var info = $('#my input').serialize();
+             console.log(info);
+
+             //JSON字串形式传参
+             $.get('./p/2.php',info,function(data){
+             $('#box').html(data);
+             })*/
+
+            //将表单数据串行化 成url形式
+            var info = $('#my input').serialize();
+            console.log(info);
+
+            $.ajax({
+                type: 'post',
+                url: './p/3.php',
+                data: info,
+                success: function (data) {
+                    $('#box').html(data);
+                }
+            })
+        })
+    })
+
+</script>
+</body>
+</html>

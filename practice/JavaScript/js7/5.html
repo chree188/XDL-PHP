@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <h1>其他事件</h1>
+    <hr>
+    <div id="box"></div>
+
+    <script>
+        window.onresize = function () {
+            box.innerHTML = Math.random();
+
+//            随机背景色
+            /*var r = Math.floor(Math.random() * 1000000 % 256);
+            var g = Math.floor(Math.random() * 1000000 % 256);
+            var b = Math.floor(Math.random() * 1000000 % 256);
+            document.body.style.backgroundColor = `rgb(${r},${g},${b})`;*/
+
+//            #ff0000
+//            00~ff : 0~256 256种颜色 RGB总共:256*256*256=16777216 -1
+            var color = '#' + Math.floor(Math.random() * 16777215).toString(16);//16进制表示颜色
+            console.log(color);
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>文字滚动</h1>
+    <hr>
+    <p id="msg">上课不认真听讲,一般有三种情况: 1.心中有个妹子 2.手里有个手机 3.身边坐个逗比</p>
+    <p id="mssg">上课不认真听讲,一般有三种情况: 1.心中有个妹子 2.手里有个手机 3.身边坐个逗比</p>
+    <hr>
+
+    <script>
+        var msg = document.getElementById('msg');
+        var mssg =document.getElementById('mssg');
+        function test() {
+            var str = msg.innerHTML;
+            msg.innerHTML = str.substr(1) + str.charAt(0);
+        }
+
+        function text() {
+            var str = mssg.innerHTML;
+            str = str.split('');
+            str.push(str.shift());
+            mssg.innerHTML = str.join('');
+        }
+        setInterval('test()',100);
+        setInterval('text()',100);
+    </script>
+</body>
+</html>

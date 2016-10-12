@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 数组</title>
+</head>
+<body>
+    <h1>JS 数组</h1>
+    <hr>
+
+    <script>
+        var list = [];
+
+//        list[] = '艳艳';
+        list[0] = '静静';
+        list[1] = '翠翠';
+
+        list[11] = '圆圆';
+
+        list['name'] = '妹妹';//js没有关联数组
+
+        document.write(list);
+
+        console.log(list);
+        console.log('长度: '+list.length);
+        console.log(typeof (list));
+        console.log(list.constructor);
+        console.log(list[0]);
+
+//        多维数组
+        var arr = [[1,2,3],['a','b','c'],['A','B','C']];
+        console.log(arr);
+        console.log(arr[2]);
+        console.log(arr[2][0]);
+
+    </script>
+</body>
+</html>

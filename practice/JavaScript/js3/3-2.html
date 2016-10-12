@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 创建对象</title>
+</head>
+<body>
+    <h1>JS 对象</h1>
+    <hr>
+
+    <script>
+        var obj = {
+            name:"丽丽",
+            age:17,
+            sex:"女",
+            getInfo:function () {
+                console.log('呵呵哒....');
+            }
+        };
+        console.log(obj);
+        obj.getInfo();
+
+//        删除属性 delete
+        delete obj.sex;
+        delete obj.getInfo;
+
+        console.log(obj);
+        obj.getInfo();//不存在了
+    </script>
+</body>
+</html>
