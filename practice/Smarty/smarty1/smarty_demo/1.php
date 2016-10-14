@@ -12,7 +12,7 @@ require './libs/Smarty.class.php';
 
 //2.实例化模板引擎
 $smarty = new Smarty();
-//var_dump($smarty);
+//var_dump($smarty2);
 
 //3.初始化配置
 

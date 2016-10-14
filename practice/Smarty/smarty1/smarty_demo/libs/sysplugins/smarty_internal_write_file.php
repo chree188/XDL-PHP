@@ -20,7 +20,7 @@ class Smarty_Internal_Write_File
      *
      * @param  string $_filepath complete filepath
      * @param  string $_contents file content
-     * @param  Smarty $smarty    smarty instance
+     * @param  Smarty $smarty    smarty2 instance
      *
      * @throws SmartyException
      * @return boolean true

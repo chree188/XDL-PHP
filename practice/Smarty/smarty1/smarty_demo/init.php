@@ -12,7 +12,7 @@ require './libs/Smarty.class.php';
 
 //2.实例化模版引擎
 $smarty = new Smarty();
-// var_dump($smarty);
+// var_dump($smarty2);
 
 //3.初始化配置
 //配置  模版文件目录
@@ -25,7 +25,7 @@ $smarty->config_dir = './configs';
 $smarty->cache_dir = './caches';
 
 /*//配置Smarty链式配置
-$smarty->setTemplateDir('./templates')
+$smarty2->setTemplateDir('./templates')
        ->setCompileDir('./templates_c')
        ->setConfigDir('./configs')
        ->setCacheDir('./caches');*/

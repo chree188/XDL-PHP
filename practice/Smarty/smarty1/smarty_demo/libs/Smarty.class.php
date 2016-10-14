@@ -18,7 +18,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * For questions, help, comments, discussion, etc., please join the
  * Smarty mailing list. Send a blank e-mail to
- * smarty-discussion-subscribe@googlegroups.com
+ * smarty2-discussion-subscribe@googlegroups.com
  *
  * @link      http://www.smarty.net/
  * @copyright 2015 New Digital Group, Inc.
@@ -109,7 +109,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      */
 
     /**
-     * smarty version
+     * smarty2 version
      */
     const SMARTY_VERSION = '3.1.27';
 
@@ -472,7 +472,7 @@ class Smarty extends Smarty_Internal_TemplateBase
     public $debug_tpl = null;
 
     /**
-     * When set, smarty uses this value as error_reporting-level.
+     * When set, smarty2 uses this value as error_reporting-level.
      *
      * @var int
      */
@@ -689,7 +689,7 @@ class Smarty extends Smarty_Internal_TemplateBase
     public $escape_html = false;
 
     /**
-     * global internal smarty vars
+     * global internal smarty2 vars
      *
      * @var array
      */
@@ -1394,7 +1394,7 @@ class Smarty extends Smarty_Internal_TemplateBase
         $_name_parts = explode('_', $plugin_name, 3);
         // class name must have three parts to be valid plugin
         // count($_name_parts) < 3 === !isset($_name_parts[2])
-        if (!isset($_name_parts[2]) || strtolower($_name_parts[0]) !== 'smarty') {
+        if (!isset($_name_parts[2]) || strtolower($_name_parts[0]) !== 'smarty2') {
             throw new SmartyException("plugin {$plugin_name} is not a valid name format");
         }
         // if type is "internal", get plugin from sysplugins
@@ -1748,7 +1748,7 @@ class Smarty extends Smarty_Internal_TemplateBase
         }
 
         // pass to next error handler if this error did not occur inside SMARTY_DIR
-        // or the error was within smarty but masked to be ignored
+        // or the error was within smarty2 but masked to be ignored
         if (!$_is_muted_directory || ($errno && $errno & error_reporting())) {
             if (Smarty::$_previous_error_handler) {
                 return call_user_func(Smarty::$_previous_error_handler, $errno, $errstr, $errfile, $errline, $errcontext);

@@ -185,7 +185,7 @@ abstract class Smarty_CacheResource
             $type = $smarty->caching_type;
         }
 
-        // try smarty's cache
+        // try smarty2's cache
         if (isset($smarty->_cacheresource_handlers[$type])) {
             return $smarty->_cacheresource_handlers[$type];
         }

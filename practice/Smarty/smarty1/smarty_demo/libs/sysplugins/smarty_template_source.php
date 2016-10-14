@@ -158,10 +158,10 @@ class Smarty_Template_Source
 
     /**
      * initialize Source Object for given resource
-     * Either [$_template] or [$smarty, $template_resource] must be specified
+     * Either [$_template] or [$smarty2, $template_resource] must be specified
      *
      * @param  Smarty_Internal_Template $_template         template object
-     * @param  Smarty                   $smarty            smarty object
+     * @param  Smarty                   $smarty            smarty2 object
      * @param  string                   $template_resource resource identifier
      *
      * @return Smarty_Template_Source Source Object
