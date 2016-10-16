@@ -8,16 +8,16 @@
  */
 
 //用户控制器
-class UserController
+class UserController extends Controller
 {
     public function index()
     {
-        echo '我们都是用户...';
         $model = new Model('user');
-        echo '<pre>';
-            print_r($model->select());
-        echo '</pre>';
+        $this->assign('list',$model->select());
+        $this->display('User/index.html');
     }
+
+
     public function add()
     {
         echo 'User add';

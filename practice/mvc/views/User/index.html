@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+    <h1>用户列表</h1>
+    <table border="1" width="800">
+        <tr>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>籍贯</td>
+        </tr>
+        <{foreach $list as $v}>
+        <tr>
+            <td><{$v.id}></td>
+            <td><{$v.name}></td>
+            <td>
+                <{if $v.sex == 0}>女
+                <{elseif $v.sex == 1}>男
+                <{else}>人妖
+                <{/if}>
+            </td>
+            <td><{$v.age}></td>
+            <td><{$v.province}></td>
+        </tr>
+        <{/foreach}>
+    </table>
+</body>
+</html>
