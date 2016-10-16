@@ -1,0 +1,28 @@
+<{extends file="User/index.html"}>
+<{block name="main"}>
+    <form action="./index.php?c=User&a=update" method="post" class="h3 mt20">
+        <input type="hidden" name="id" value="<{$data.id}>">
+        name:
+        <input type="text" name="name" value="<{$data.name}>" placeholder="请输入用户名"><br><br>
+        sex:
+        <label><input type="radio" name="sex" value="0" <{if $data.sex == 0}>checked<{/if}> >女</label>
+        <label>        <input type="radio" name="sex" value="1" <{if $data.sex == 1}>checked<{/if}> >男</label>
+        <label>        <input type="radio" name="sex" value="2" <{if $data.sex == 2}>checked<{/if}> >保密</label><br><br>
+        age:
+        <input type="text" name="age" value="<{$data.age}>"><br><br>
+        province:
+        <select name="province">
+            <option value="江苏" <{if $data.province == '江苏'}>selected<{/if}> >江苏</option>
+            <option value="上海" <{if $data.province == '上海'}>selected<{/if}> >上海</option>
+            <option value="新疆" <{if $data.province == '新疆'}>selected<{/if}> >新疆</option>
+            <option value="浙江" <{if $data.province == '浙江'}>selected<{/if}> >浙江</option>
+            <option value="北京" <{if $data.province == '北京'}>selected<{/if}> >北京</option>
+            <option value="深圳" <{if $data.province == '深圳'}>selected<{/if}> >深圳</option>
+            <option value="纽约" <{if $data.province == '纽约'}>selected<{/if}> >纽约</option>
+        </select><br><br>
+        <input type="hidden" name="vcode" value="7998">
+        <input type="hidden" name="hehe" value="你来打我啊!">
+        <input type="hidden" name="haha" value="就不打你">
+        <input type="submit" value="保存">
+    </form>
+<{/block}>

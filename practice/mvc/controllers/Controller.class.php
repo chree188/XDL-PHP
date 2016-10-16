@@ -6,7 +6,6 @@
  * Date: 2016/10/16
  * Time: 12:01
  */
-
 class Controller extends Smarty
 {
     public function __construct()
@@ -17,12 +16,23 @@ class Controller extends Smarty
             ->setConfigDir('./configs')
             ->setCacheDir('./runtim/caches');
         //配置 模板变量的定界符
-        $this->left_delimiter = '<{';
-        $this->right_delimiter = '}>';
+        $this->left_delimiter = LEFT_D;
+        $this->right_delimiter = RIGHT_D;
         //缓存的配置
-        $this->caching = false;
+        $this->caching = CACHING;
         //缓存时间
-        $this->cache_lifetime = 30;
+        $this->cache_lifetime = CACHE_LIFETIME;
+    }
+
+//    跳转
+    public function redirect($message, $url = null)
+    {
+        echo "<script>alert('{$message}')</script>";
+        if (empty($url)) {
+            echo "<script>history.back()</script>";
+        } else {
+            echo "<script>location.href='{$url}'</script>";
+        }
     }
 
 //    处理调用不存在的方法

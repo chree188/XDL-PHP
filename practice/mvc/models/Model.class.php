@@ -166,7 +166,7 @@ class Model
         $set = implode(',',$list);
 
         //SQL  主键=值  $data['id']
-        echo $sql = "UPDATE {$this->tabName} SET {$set} WHERE `{$this->pk}`='{$data[$this->pk]}'";
+        $sql = "UPDATE {$this->tabName} SET {$set} WHERE `{$this->pk}`='{$data[$this->pk]}'";
         return $this->execute($sql);
     }
 
