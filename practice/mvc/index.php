@@ -10,12 +10,21 @@ header("content-type:text/html;charset=utf-8");
 
 //导入 配置文件+model类
 require './configs/config.php';
-require './models/Model.class.php';
 
-//导入所有的控制器
-require './controllers/IndexController.class.php';
-require './controllers/UserController.class.php';
-require './controllers/GoodsController.class.php';
+//自动加载类
+function __autoload($classname)
+{
+    if (file_exists("./models/{$classname}.class.php")) {
+        require "./models/{$classname}.class.php";
+    } elseif (file_exists("./controllers/{$classname}.class.php")) {
+        require "./controllers/{$classname}.class.php";
+    } else {
+        header('HTTP/1.0 404 not found');//非IE
+        header('Status:404 not found');//兼容IE
+        echo "<h1>404 NOT FOUND</h1>";
+        exit;
+    }
+}
 
 //获取用户的参数
 //获取控制器名
