@@ -17,7 +17,7 @@ class UserController extends Controller
     {
 //        调用执行 父级的构造方法
         parent::__construct();
-        $this->model = new Model('s50_user');
+        $this->model = new Model('user');
     }
 
     public function index()
