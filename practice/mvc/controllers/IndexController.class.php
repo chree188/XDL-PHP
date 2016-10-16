@@ -12,6 +12,7 @@ class IndexController
 {
     public function index()
     {
-        echo '首页非我莫属!!';
+        global $smarty;
+        $smarty->display('Index/index.html');
     }
 }
