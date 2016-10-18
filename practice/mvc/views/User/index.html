@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" id="ht">
 <head>
     <meta charset="UTF-8">
-    <title><{$title}></title>
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/my.css">
 </head>
@@ -10,8 +9,8 @@
     <div class="container">
         <h1><span class="glyphicon glyphicon-user"></span><{$title}></h1>
         <div class="center-block mt20">
-            <a href="./index.php?c=User&a=index" class="btn btn-info glyphicon glyphicon-home">首页</a>
-            <a href="./index.php?c=User&a=add" class="btn btn-success glyphicon glyphicon-plus">添加</a>
+            <button class="btn btn-info glyphicon glyphicon-home" id="indexBtn">首页</a>
+            <button class="btn btn-success glyphicon glyphicon-plus" id="addBtn">添加</button>
         </div>
         <{block name="main"}>
         <table class="table table-hover mt20">
@@ -36,8 +35,8 @@
                 <td><{$v.age}></td>
                 <td><{$v.province}></td>
                 <td class="col-md-2">
-                    <a href="./index.php?c=User&a=edit&id=<{$v.id}>" class="btn btn-primary glyphicon glyphicon-wrench">编辑</a>
-                    <a href="./index.php?c=User&a=del&id=<{$v.id}>" class="btn btn-danger glyphicon glyphicon-trash">删除</a>
+                    <a href="./index.php?c=User&a=edit&id=<{$v.id}>" class="btn btn-primary glyphicon glyphicon-wrench" id="edit">编辑</a>
+                    <a href="./index.php?c=User&a=del&id=<{$v.id}>" class="btn btn-danger glyphicon glyphicon-trash" id="del">删除</a>
                 </td>
             </tr>
             <{/foreach}>
@@ -46,5 +45,6 @@
     </div><!--END container-->
     <script src="./public/js/jquery.min.js"></script>
     <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/myAjax.js"></script>
 </body>
 </html>
