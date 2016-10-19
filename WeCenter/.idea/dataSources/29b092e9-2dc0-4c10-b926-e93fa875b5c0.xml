@@ -1,0 +1,4523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - we@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="we">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="21cake"/>
+    <schema id="3" name="apple_bbs"/>
+    <schema id="4" name="hybbs"/>
+    <schema id="5" name="information_schema"/>
+    <schema id="6" name="lamp_shop"/>
+    <schema id="7" name="myshop"/>
+    <schema id="8" name="mysql"/>
+    <schema id="9" name="opensns"/>
+    <schema id="10" name="performance_schema"/>
+    <schema id="11" name="php"/>
+    <schema id="12" name="qt_vipmg"/>
+    <schema id="13" name="s50"/>
+    <schema id="14" name="sys"/>
+    <schema id="15" name="typecho"/>
+    <schema id="16" name="vipmg"/>
+    <schema id="17" name="we7"/>
+    <table id="18" parent="1" name="aws_active_data"/>
+    <table id="19" parent="1" name="aws_answer">
+      <comment>回答</comment>
+    </table>
+    <table id="20" parent="1" name="aws_answer_comments"/>
+    <table id="21" parent="1" name="aws_answer_thanks"/>
+    <table id="22" parent="1" name="aws_answer_uninterested"/>
+    <table id="23" parent="1" name="aws_answer_vote"/>
+    <table id="24" parent="1" name="aws_approval"/>
+    <table id="25" parent="1" name="aws_article"/>
+    <table id="26" parent="1" name="aws_article_comments"/>
+    <table id="27" parent="1" name="aws_article_vote"/>
+    <table id="28" parent="1" name="aws_attach"/>
+    <table id="29" parent="1" name="aws_category"/>
+    <table id="30" parent="1" name="aws_draft"/>
+    <table id="31" parent="1" name="aws_edm_task"/>
+    <table id="32" parent="1" name="aws_edm_taskdata"/>
+    <table id="33" parent="1" name="aws_edm_unsubscription"/>
+    <table id="34" parent="1" name="aws_edm_userdata"/>
+    <table id="35" parent="1" name="aws_edm_usergroup"/>
+    <table id="36" parent="1" name="aws_education_experience">
+      <comment>教育经历</comment>
+    </table>
+    <table id="37" parent="1" name="aws_favorite"/>
+    <table id="38" parent="1" name="aws_favorite_tag"/>
+    <table id="39" parent="1" name="aws_feature"/>
+    <table id="40" parent="1" name="aws_feature_topic"/>
+    <table id="41" parent="1" name="aws_geo_location"/>
+    <table id="42" parent="1" name="aws_help_chapter">
+      <comment>帮助中心</comment>
+    </table>
+    <table id="43" parent="1" name="aws_inbox"/>
+    <table id="44" parent="1" name="aws_inbox_dialog"/>
+    <table id="45" parent="1" name="aws_integral_log"/>
+    <table id="46" parent="1" name="aws_invitation"/>
+    <table id="47" parent="1" name="aws_jobs"/>
+    <table id="48" parent="1" name="aws_mail_queue"/>
+    <table id="49" parent="1" name="aws_nav_menu"/>
+    <table id="50" parent="1" name="aws_notification">
+      <comment>系统通知</comment>
+    </table>
+    <table id="51" parent="1" name="aws_notification_data">
+      <comment>系统通知数据表</comment>
+    </table>
+    <table id="52" parent="1" name="aws_pages"/>
+    <table id="53" parent="1" name="aws_posts_index"/>
+    <table id="54" parent="1" name="aws_question">
+      <comment>问题列表</comment>
+    </table>
+    <table id="55" parent="1" name="aws_question_comments"/>
+    <table id="56" parent="1" name="aws_question_focus">
+      <comment>问题关注表</comment>
+    </table>
+    <table id="57" parent="1" name="aws_question_invite">
+      <comment>邀请问答</comment>
+    </table>
+    <table id="58" parent="1" name="aws_question_thanks"/>
+    <table id="59" parent="1" name="aws_question_uninterested">
+      <comment>问题不感兴趣表</comment>
+    </table>
+    <table id="60" parent="1" name="aws_received_email">
+      <comment>已导入邮件列表</comment>
+    </table>
+    <table id="61" parent="1" name="aws_receiving_email_config">
+      <comment>邮件账号列表</comment>
+    </table>
+    <table id="62" parent="1" name="aws_redirect"/>
+    <table id="63" parent="1" name="aws_related_links"/>
+    <table id="64" parent="1" name="aws_related_topic"/>
+    <table id="65" parent="1" name="aws_report"/>
+    <table id="66" parent="1" name="aws_reputation_category"/>
+    <table id="67" parent="1" name="aws_reputation_topic"/>
+    <table id="68" parent="1" name="aws_school">
+      <comment>学校</comment>
+    </table>
+    <table id="69" parent="1" name="aws_search_cache"/>
+    <table id="70" parent="1" name="aws_sessions"/>
+    <table id="71" parent="1" name="aws_system_setting">
+      <comment>系统设置</comment>
+    </table>
+    <table id="72" parent="1" name="aws_topic">
+      <comment>话题</comment>
+    </table>
+    <table id="73" parent="1" name="aws_topic_focus">
+      <comment>话题关注表</comment>
+    </table>
+    <table id="74" parent="1" name="aws_topic_merge"/>
+    <table id="75" parent="1" name="aws_topic_relation"/>
+    <table id="76" parent="1" name="aws_user_action_history">
+      <comment>用户操作记录</comment>
+    </table>
+    <table id="77" parent="1" name="aws_user_action_history_data"/>
+    <table id="78" parent="1" name="aws_user_action_history_fresh"/>
+    <table id="79" parent="1" name="aws_user_follow">
+      <comment>用户关注表</comment>
+    </table>
+    <table id="80" parent="1" name="aws_users"/>
+    <table id="81" parent="1" name="aws_users_attrib">
+      <comment>用户附加属性表</comment>
+    </table>
+    <table id="82" parent="1" name="aws_users_facebook"/>
+    <table id="83" parent="1" name="aws_users_google"/>
+    <table id="84" parent="1" name="aws_users_group">
+      <comment>用户组</comment>
+    </table>
+    <table id="85" parent="1" name="aws_users_notification_setting">
+      <comment>通知设定</comment>
+    </table>
+    <table id="86" parent="1" name="aws_users_online">
+      <comment>在线用户列表</comment>
+    </table>
+    <table id="87" parent="1" name="aws_users_qq"/>
+    <table id="88" parent="1" name="aws_users_sina"/>
+    <table id="89" parent="1" name="aws_users_twitter"/>
+    <table id="90" parent="1" name="aws_users_ucenter"/>
+    <table id="91" parent="1" name="aws_users_weixin"/>
+    <table id="92" parent="1" name="aws_verify_apply"/>
+    <table id="93" parent="1" name="aws_weibo_msg">
+      <comment>新浪微博消息列表</comment>
+    </table>
+    <table id="94" parent="1" name="aws_weixin_accounts">
+      <comment>微信多账号设置</comment>
+    </table>
+    <table id="95" parent="1" name="aws_weixin_login"/>
+    <table id="96" parent="1" name="aws_weixin_message"/>
+    <table id="97" parent="1" name="aws_weixin_msg">
+      <comment>微信群发列表</comment>
+    </table>
+    <table id="98" parent="1" name="aws_weixin_qr_code">
+      <comment>微信二维码</comment>
+    </table>
+    <table id="99" parent="1" name="aws_weixin_reply_rule"/>
+    <table id="100" parent="1" name="aws_weixin_third_party_api">
+      <comment>微信第三方接入</comment>
+    </table>
+    <table id="101" parent="1" name="aws_work_experience">
+      <comment>工作经历</comment>
+    </table>
+    <column id="102" parent="18" name="active_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="103" parent="18" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="104" parent="18" name="expire_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="105" parent="18" name="active_code">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="106" parent="18" name="active_type_code">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="107" parent="18" name="add_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="108" parent="18" name="add_ip">
+      <data-type>bigint(12)|0</data-type>
+    </column>
+    <column id="109" parent="18" name="active_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="110" parent="18" name="active_ip">
+      <data-type>bigint(12)|0</data-type>
+    </column>
+    <index id="111" parent="18" name="active_code">
+      <columns>active_code</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="112" parent="18" name="active_type_code">
+      <columns>active_type_code</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="113" parent="18" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="114" parent="18" name="PRIMARY">
+      <columns>active_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="115" parent="19" name="answer_id">
+      <comment>回答id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="116" parent="19" name="question_id">
+      <comment>问题id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="117" parent="19" name="answer_content">
+      <comment>回答内容</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="118" parent="19" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="119" parent="19" name="against_count">
+      <comment>反对人数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="120" parent="19" name="agree_count">
+      <comment>支持人数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="121" parent="19" name="uid">
+      <comment>发布问题用户ID</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="122" parent="19" name="comment_count">
+      <comment>评论总数</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="123" parent="19" name="uninterested_count">
+      <comment>不感兴趣</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="124" parent="19" name="thanks_count">
+      <comment>感谢数量</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="125" parent="19" name="category_id">
+      <comment>分类id</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="126" parent="19" name="has_attach">
+      <comment>是否存在附件</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="127" parent="19" name="ip">
+      <data-type>bigint(11)|0</data-type>
+    </column>
+    <column id="128" parent="19" name="force_fold">
+      <comment>强制折叠</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="129" parent="19" name="anonymous">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="130" parent="19" name="publish_source">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <index id="131" parent="19" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="132" parent="19" name="against_count">
+      <columns>against_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="133" parent="19" name="agree_count">
+      <columns>agree_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="134" parent="19" name="anonymous">
+      <columns>anonymous</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="135" parent="19" name="force_fold">
+      <columns>force_fold</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="136" parent="19" name="publich_source">
+      <columns>publish_source</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="137" parent="19" name="question_id">
+      <columns>question_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="138" parent="19" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="139" parent="19" name="uninterested_count">
+      <columns>uninterested_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="140" parent="19" name="PRIMARY">
+      <columns>answer_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="141" parent="20" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="142" parent="20" name="answer_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="143" parent="20" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="144" parent="20" name="message">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="145" parent="20" name="time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="146" parent="20" name="answer_id">
+      <columns>answer_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="147" parent="20" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="148" parent="20" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="149" parent="21" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="150" parent="21" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="151" parent="21" name="answer_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="152" parent="21" name="user_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="153" parent="21" name="time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="154" parent="21" name="answer_id">
+      <columns>answer_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="155" parent="21" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="156" parent="22" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="157" parent="22" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="158" parent="22" name="answer_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="159" parent="22" name="user_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="160" parent="22" name="time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="161" parent="22" name="answer_id">
+      <columns>answer_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="162" parent="22" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="163" parent="23" name="voter_id">
+      <comment>自动ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="164" parent="23" name="answer_id">
+      <comment>回复id</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="165" parent="23" name="answer_uid">
+      <comment>回复作者id</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="166" parent="23" name="vote_uid">
+      <comment>用户ID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="167" parent="23" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="168" parent="23" name="vote_value">
+      <comment>-1反对 1 支持</comment>
+      <mandatory>1</mandatory>
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="169" parent="23" name="reputation_factor">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="170" parent="23" name="answer_id">
+      <columns>answer_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="171" parent="23" name="vote_value">
+      <columns>vote_value</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="172" parent="23" name="PRIMARY">
+      <columns>voter_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="173" parent="24" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="174" parent="24" name="type">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="175" parent="24" name="data">
+      <mandatory>1</mandatory>
+      <data-type>mediumtext|0</data-type>
+    </column>
+    <column id="176" parent="24" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="177" parent="24" name="time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="178" parent="24" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="179" parent="24" name="type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="180" parent="24" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="181" parent="24" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="182" parent="25" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="183" parent="25" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="184" parent="25" name="title">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="185" parent="25" name="message">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="186" parent="25" name="comments">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="187" parent="25" name="views">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="188" parent="25" name="add_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="189" parent="25" name="has_attach">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="190" parent="25" name="lock">
+      <mandatory>1</mandatory>
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="191" parent="25" name="votes">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="192" parent="25" name="title_fulltext">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="193" parent="25" name="category_id">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="194" parent="25" name="is_recommend">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="195" parent="25" name="chapter_id">
+      <data-type>int(10) unsigned|0</data-type>
+    </column>
+    <column id="196" parent="25" name="sort">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(2) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="197" parent="25" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="198" parent="25" name="category_id">
+      <columns>category_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="199" parent="25" name="chapter_id">
+      <columns>chapter_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="200" parent="25" name="comments">
+      <columns>comments</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="201" parent="25" name="has_attach">
+      <columns>has_attach</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="202" parent="25" name="is_recommend">
+      <columns>is_recommend</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="203" parent="25" name="lock">
+      <columns>lock</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="204" parent="25" name="sort">
+      <columns>sort</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="205" parent="25" name="title_fulltext">
+      <columns>title_fulltext</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="206" parent="25" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="207" parent="25" name="views">
+      <columns>views</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="208" parent="25" name="votes">
+      <columns>votes</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="209" parent="25" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="210" parent="26" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="211" parent="26" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="212" parent="26" name="article_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="213" parent="26" name="message">
+      <mandatory>1</mandatory>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="214" parent="26" name="add_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="215" parent="26" name="at_uid">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="216" parent="26" name="votes">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="217" parent="26" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="218" parent="26" name="article_id">
+      <columns>article_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="219" parent="26" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="220" parent="26" name="votes">
+      <columns>votes</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="221" parent="26" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="222" parent="27" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="223" parent="27" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="224" parent="27" name="type">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="225" parent="27" name="item_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="226" parent="27" name="rating">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="227" parent="27" name="time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="228" parent="27" name="reputation_factor">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="229" parent="27" name="item_uid">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="230" parent="27" name="item_id">
+      <columns>item_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="231" parent="27" name="item_uid">
+      <columns>item_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="232" parent="27" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="233" parent="27" name="type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="234" parent="27" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="235" parent="27" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="236" parent="28" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="237" parent="28" name="file_name">
+      <comment>附件名称</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="238" parent="28" name="access_key">
+      <comment>批次 Key</comment>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="239" parent="28" name="add_time">
+      <comment>上传时间</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="240" parent="28" name="file_location">
+      <comment>文件位置</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="241" parent="28" name="is_image">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="242" parent="28" name="item_type">
+      <comment>关联类型</comment>
+      <data-type>varchar(32)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="243" parent="28" name="item_id">
+      <comment>关联 ID</comment>
+      <data-type>bigint(20)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="244" parent="28" name="wait_approval">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="245" parent="28" name="access_key">
+      <columns>access_key</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="246" parent="28" name="fetch">
+      <columns>item_id
+item_type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="247" parent="28" name="is_image">
+      <columns>is_image</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="248" parent="28" name="wait_approval">
+      <columns>wait_approval</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="249" parent="28" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="250" parent="29" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="251" parent="29" name="title">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="252" parent="29" name="type">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="253" parent="29" name="icon">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="254" parent="29" name="parent_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="255" parent="29" name="sort">
+      <data-type>smallint(6)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="256" parent="29" name="url_token">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <index id="257" parent="29" name="parent_id">
+      <columns>parent_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="258" parent="29" name="title">
+      <columns>title</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="259" parent="29" name="url_token">
+      <columns>url_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="260" parent="29" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="261" parent="30" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="262" parent="30" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="263" parent="30" name="type">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="264" parent="30" name="item_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="265" parent="30" name="data">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="266" parent="30" name="time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="267" parent="30" name="item_id">
+      <columns>item_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="268" parent="30" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="269" parent="30" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="270" parent="30" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="271" parent="31" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="272" parent="31" name="title">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="273" parent="31" name="message">
+      <mandatory>1</mandatory>
+      <data-type>mediumtext|0</data-type>
+    </column>
+    <column id="274" parent="31" name="subject">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="275" parent="31" name="from_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="276" parent="31" name="time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="277" parent="31" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="278" parent="32" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="279" parent="32" name="taskid">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="280" parent="32" name="email">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="281" parent="32" name="sent_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="282" parent="32" name="view_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="283" parent="32" name="sent_time">
+      <columns>sent_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="284" parent="32" name="taskid">
+      <columns>taskid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="285" parent="32" name="view_time">
+      <columns>view_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="286" parent="32" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="287" parent="33" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="288" parent="33" name="email">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="289" parent="33" name="time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="290" parent="33" name="email">
+      <columns>email</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="291" parent="33" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="292" parent="34" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="293" parent="34" name="usergroup">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="294" parent="34" name="email">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <index id="295" parent="34" name="usergroup">
+      <columns>usergroup</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="296" parent="34" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="297" parent="35" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="298" parent="35" name="title">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="299" parent="35" name="time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="300" parent="35" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="301" parent="36" name="education_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="302" parent="36" name="uid">
+      <comment>用户UID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="303" parent="36" name="education_years">
+      <comment>入学年份</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="304" parent="36" name="school_name">
+      <comment>学校名</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="305" parent="36" name="school_type">
+      <comment>学校类别</comment>
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="306" parent="36" name="departments">
+      <comment>院系</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="307" parent="36" name="add_time">
+      <comment>记录添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="308" parent="36" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="309" parent="36" name="PRIMARY">
+      <columns>education_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="310" parent="37" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="311" parent="37" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="312" parent="37" name="item_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="313" parent="37" name="time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="314" parent="37" name="type">
+      <mandatory>1</mandatory>
+      <data-type>varchar(16)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <index id="315" parent="37" name="item_id">
+      <columns>item_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="316" parent="37" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="317" parent="37" name="type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="318" parent="37" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="319" parent="37" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="320" parent="38" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="321" parent="38" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="322" parent="38" name="title">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="323" parent="38" name="item_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="324" parent="38" name="type">
+      <mandatory>1</mandatory>
+      <data-type>varchar(16)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <index id="325" parent="38" name="item_id">
+      <columns>item_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="326" parent="38" name="title">
+      <columns>title</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="327" parent="38" name="type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="328" parent="38" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="329" parent="38" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="330" parent="39" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="331" parent="39" name="title">
+      <comment>专题标题</comment>
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="332" parent="39" name="description">
+      <comment>专题描述</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="333" parent="39" name="icon">
+      <comment>专题图标</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="334" parent="39" name="topic_count">
+      <comment>话题计数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="335" parent="39" name="css">
+      <comment>自定义CSS</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="336" parent="39" name="url_token">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="337" parent="39" name="seo_title">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="338" parent="39" name="enabled">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="339" parent="39" name="enabled">
+      <columns>enabled</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="340" parent="39" name="title">
+      <columns>title</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="341" parent="39" name="url_token">
+      <columns>url_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="342" parent="39" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="343" parent="40" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="344" parent="40" name="feature_id">
+      <comment>专题ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="345" parent="40" name="topic_id">
+      <comment>话题ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="346" parent="40" name="feature_id">
+      <columns>feature_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="347" parent="40" name="topic_id">
+      <columns>topic_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="348" parent="40" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="349" parent="41" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="350" parent="41" name="item_type">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="351" parent="41" name="item_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="352" parent="41" name="latitude">
+      <mandatory>1</mandatory>
+      <data-type>float|0</data-type>
+    </column>
+    <column id="353" parent="41" name="longitude">
+      <mandatory>1</mandatory>
+      <data-type>float|0</data-type>
+    </column>
+    <column id="354" parent="41" name="add_time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="355" parent="41" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="356" parent="41" name="geo_location">
+      <columns>latitude
+longitude</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="357" parent="41" name="item_id">
+      <columns>item_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="358" parent="41" name="item_type">
+      <columns>item_type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="359" parent="41" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="360" parent="42" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="361" parent="42" name="title">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="362" parent="42" name="description">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="363" parent="42" name="url_token">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="364" parent="42" name="sort">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(2) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="365" parent="42" name="sort">
+      <columns>sort</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="366" parent="42" name="title">
+      <columns>title</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="367" parent="42" name="url_token">
+      <columns>url_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="368" parent="42" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="369" parent="43" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="370" parent="43" name="uid">
+      <comment>发送者 ID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="371" parent="43" name="dialog_id">
+      <comment>对话id</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="372" parent="43" name="message">
+      <comment>内容</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="373" parent="43" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="374" parent="43" name="sender_remove">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="375" parent="43" name="recipient_remove">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="376" parent="43" name="receipt">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="377" parent="43" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="378" parent="43" name="dialog_id">
+      <columns>dialog_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="379" parent="43" name="recipient_remove">
+      <columns>recipient_remove</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="380" parent="43" name="sender_receipt">
+      <columns>receipt</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="381" parent="43" name="sender_remove">
+      <columns>sender_remove</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="382" parent="43" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="383" parent="43" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="384" parent="44" name="id">
+      <comment>对话ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="385" parent="44" name="sender_uid">
+      <comment>发送者UID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="386" parent="44" name="sender_unread">
+      <comment>发送者未读</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="387" parent="44" name="recipient_uid">
+      <comment>接收者UID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="388" parent="44" name="recipient_unread">
+      <comment>接收者未读</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="389" parent="44" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="390" parent="44" name="update_time">
+      <comment>最后更新时间</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="391" parent="44" name="sender_count">
+      <comment>发送者显示对话条数</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="392" parent="44" name="recipient_count">
+      <comment>接收者显示对话条数</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="393" parent="44" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="394" parent="44" name="recipient_uid">
+      <columns>recipient_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="395" parent="44" name="sender_uid">
+      <columns>sender_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="396" parent="44" name="update_time">
+      <columns>update_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="397" parent="44" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="398" parent="45" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="399" parent="45" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="400" parent="45" name="action">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="401" parent="45" name="integral">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="402" parent="45" name="note">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="403" parent="45" name="balance">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="404" parent="45" name="item_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="405" parent="45" name="time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="406" parent="45" name="action">
+      <columns>action</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="407" parent="45" name="integral">
+      <columns>integral</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="408" parent="45" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="409" parent="45" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="410" parent="45" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="411" parent="46" name="invitation_id">
+      <comment>激活ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="412" parent="46" name="uid">
+      <comment>用户ID</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="413" parent="46" name="invitation_code">
+      <comment>激活码</comment>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="414" parent="46" name="invitation_email">
+      <comment>激活email</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="415" parent="46" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="416" parent="46" name="add_ip">
+      <comment>添加IP</comment>
+      <data-type>bigint(12)|0</data-type>
+    </column>
+    <column id="417" parent="46" name="active_expire">
+      <comment>激活过期</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="418" parent="46" name="active_time">
+      <comment>激活时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="419" parent="46" name="active_ip">
+      <comment>激活IP</comment>
+      <data-type>bigint(12)|0</data-type>
+    </column>
+    <column id="420" parent="46" name="active_status">
+      <comment>1已使用0未使用-1已删除</comment>
+      <data-type>tinyint(4)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="421" parent="46" name="active_uid">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="422" parent="46" name="active_ip">
+      <columns>active_ip</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="423" parent="46" name="active_status">
+      <columns>active_status</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="424" parent="46" name="active_time">
+      <columns>active_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="425" parent="46" name="invitation_code">
+      <columns>invitation_code</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="426" parent="46" name="invitation_email">
+      <columns>invitation_email</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="427" parent="46" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="428" parent="46" name="PRIMARY">
+      <columns>invitation_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="429" parent="47" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="430" parent="47" name="job_name">
+      <comment>职位名</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <key id="431" parent="47" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="432" parent="48" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="433" parent="48" name="send_to">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="434" parent="48" name="subject">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="435" parent="48" name="message">
+      <mandatory>1</mandatory>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="436" parent="48" name="is_error">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="437" parent="48" name="error_message">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <index id="438" parent="48" name="is_error">
+      <columns>is_error</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="439" parent="48" name="send_to">
+      <columns>send_to</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="440" parent="48" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="441" parent="49" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="442" parent="49" name="title">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="443" parent="49" name="description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="444" parent="49" name="type">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="445" parent="49" name="type_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="446" parent="49" name="link">
+      <comment>链接</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="447" parent="49" name="icon">
+      <comment>图标</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="448" parent="49" name="sort">
+      <comment>排序</comment>
+      <data-type>smallint(6)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="449" parent="49" name="parent_id">
+      <columns>link</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="450" parent="49" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="451" parent="50" name="notification_id">
+      <comment>自增ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="452" parent="50" name="sender_uid">
+      <comment>发送者ID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="453" parent="50" name="recipient_uid">
+      <comment>接收者ID</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="454" parent="50" name="action_type">
+      <comment>操作类型</comment>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="455" parent="50" name="model_type">
+      <mandatory>1</mandatory>
+      <data-type>smallint(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="456" parent="50" name="source_id">
+      <comment>关联 ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(16)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="457" parent="50" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="458" parent="50" name="read_flag">
+      <comment>阅读状态</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="459" parent="50" name="action_type">
+      <columns>action_type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="460" parent="50" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="461" parent="50" name="model_type">
+      <columns>model_type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="462" parent="50" name="recipient_read_flag">
+      <columns>recipient_uid
+read_flag</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="463" parent="50" name="sender_uid">
+      <columns>sender_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="464" parent="50" name="source_id">
+      <columns>source_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="465" parent="50" name="PRIMARY">
+      <columns>notification_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="466" parent="51" name="notification_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+    </column>
+    <column id="467" parent="51" name="data">
+      <data-type>text|0</data-type>
+    </column>
+    <key id="468" parent="51" name="PRIMARY">
+      <columns>notification_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="469" parent="52" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="470" parent="52" name="url_token">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="471" parent="52" name="title">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="472" parent="52" name="keywords">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="473" parent="52" name="description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="474" parent="52" name="contents">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="475" parent="52" name="enabled">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="476" parent="52" name="enabled">
+      <columns>enabled</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="477" parent="52" name="url_token">
+      <columns>url_token</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="478" parent="52" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="479" parent="52" name="url_token">
+      <columns>url_token</columns>
+      <underlying-index>url_token</underlying-index>
+    </key>
+    <column id="480" parent="53" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="481" parent="53" name="post_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="482" parent="53" name="post_type">
+      <mandatory>1</mandatory>
+      <data-type>varchar(16)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="483" parent="53" name="add_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="484" parent="53" name="update_time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="485" parent="53" name="category_id">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="486" parent="53" name="is_recommend">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="487" parent="53" name="view_count">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="488" parent="53" name="anonymous">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="489" parent="53" name="popular_value">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="490" parent="53" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="491" parent="53" name="lock">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="492" parent="53" name="agree_count">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="493" parent="53" name="answer_count">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="494" parent="53" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="495" parent="53" name="agree_count">
+      <columns>agree_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="496" parent="53" name="anonymous">
+      <columns>anonymous</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="497" parent="53" name="answer_count">
+      <columns>answer_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="498" parent="53" name="category_id">
+      <columns>category_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="499" parent="53" name="is_recommend">
+      <columns>is_recommend</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="500" parent="53" name="lock">
+      <columns>lock</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="501" parent="53" name="popular_value">
+      <columns>popular_value</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="502" parent="53" name="post_id">
+      <columns>post_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="503" parent="53" name="post_type">
+      <columns>post_type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="504" parent="53" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="505" parent="53" name="update_time">
+      <columns>update_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="506" parent="53" name="view_count">
+      <columns>view_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="507" parent="53" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="508" parent="54" name="question_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="509" parent="54" name="question_content">
+      <comment>问题内容</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="510" parent="54" name="question_detail">
+      <comment>问题说明</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="511" parent="54" name="add_time">
+      <comment>添加时间</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="512" parent="54" name="update_time">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="513" parent="54" name="published_uid">
+      <comment>发布用户UID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="514" parent="54" name="answer_count">
+      <comment>回答计数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="515" parent="54" name="answer_users">
+      <comment>回答人数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="516" parent="54" name="view_count">
+      <comment>浏览次数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="517" parent="54" name="focus_count">
+      <comment>关注数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="518" parent="54" name="comment_count">
+      <comment>评论数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="519" parent="54" name="action_history_id">
+      <comment>动作的记录表的关连id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="520" parent="54" name="category_id">
+      <comment>分类 ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="521" parent="54" name="agree_count">
+      <comment>回复赞同数总和</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="522" parent="54" name="against_count">
+      <comment>回复反对数总和</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="523" parent="54" name="best_answer">
+      <comment>最佳回复 ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="524" parent="54" name="has_attach">
+      <comment>是否存在附件</comment>
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="525" parent="54" name="unverified_modify">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="526" parent="54" name="unverified_modify_count">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="527" parent="54" name="ip">
+      <data-type>bigint(11)|0</data-type>
+    </column>
+    <column id="528" parent="54" name="last_answer">
+      <comment>最后回答 ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="529" parent="54" name="popular_value">
+      <mandatory>1</mandatory>
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="530" parent="54" name="popular_value_update">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="531" parent="54" name="lock">
+      <comment>是否锁定</comment>
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="532" parent="54" name="anonymous">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="533" parent="54" name="thanks_count">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="534" parent="54" name="question_content_fulltext">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="535" parent="54" name="is_recommend">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="536" parent="54" name="weibo_msg_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="537" parent="54" name="received_email_id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="538" parent="54" name="chapter_id">
+      <data-type>int(10) unsigned|0</data-type>
+    </column>
+    <column id="539" parent="54" name="sort">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(2) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="540" parent="54" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="541" parent="54" name="against_count">
+      <columns>against_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="542" parent="54" name="agree_count">
+      <columns>agree_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="543" parent="54" name="anonymous">
+      <columns>anonymous</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="544" parent="54" name="answer_count">
+      <columns>answer_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="545" parent="54" name="best_answer">
+      <columns>best_answer</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="546" parent="54" name="category_id">
+      <columns>category_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="547" parent="54" name="chapter_id">
+      <columns>chapter_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="548" parent="54" name="is_recommend">
+      <columns>is_recommend</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="549" parent="54" name="lock">
+      <columns>lock</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="550" parent="54" name="popular_value">
+      <columns>popular_value</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="551" parent="54" name="popular_value_update">
+      <columns>popular_value_update</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="552" parent="54" name="published_uid">
+      <columns>published_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="553" parent="54" name="question_content">
+      <columns>question_content</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="554" parent="54" name="question_content_fulltext">
+      <columns>question_content_fulltext</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="555" parent="54" name="received_email_id">
+      <columns>received_email_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="556" parent="54" name="sort">
+      <columns>sort</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="557" parent="54" name="thanks_count">
+      <columns>thanks_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="558" parent="54" name="unverified_modify_count">
+      <columns>unverified_modify_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="559" parent="54" name="update_time">
+      <columns>update_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="560" parent="54" name="weibo_msg_id">
+      <columns>weibo_msg_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="561" parent="54" name="PRIMARY">
+      <columns>question_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="562" parent="55" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="563" parent="55" name="question_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="564" parent="55" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="565" parent="55" name="message">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="566" parent="55" name="time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="567" parent="55" name="question_id">
+      <columns>question_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="568" parent="55" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="569" parent="55" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="570" parent="56" name="focus_id">
+      <comment>自增ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="571" parent="56" name="question_id">
+      <comment>话题ID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="572" parent="56" name="uid">
+      <comment>用户UID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="573" parent="56" name="add_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="574" parent="56" name="question_id">
+      <columns>question_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="575" parent="56" name="question_uid">
+      <columns>question_id
+uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="576" parent="56" name="PRIMARY">
+      <columns>focus_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="577" parent="57" name="question_invite_id">
+      <comment>自增ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="578" parent="57" name="question_id">
+      <comment>问题ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="579" parent="57" name="sender_uid">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="580" parent="57" name="recipients_uid">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="581" parent="57" name="email">
+      <comment>受邀Email</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="582" parent="57" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="583" parent="57" name="available_time">
+      <comment>生效时间</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="584" parent="57" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="585" parent="57" name="question_id">
+      <columns>question_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="586" parent="57" name="recipients_uid">
+      <columns>recipients_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="587" parent="57" name="sender_uid">
+      <columns>sender_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="588" parent="57" name="PRIMARY">
+      <columns>question_invite_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="589" parent="58" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="590" parent="58" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="591" parent="58" name="question_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="592" parent="58" name="user_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="593" parent="58" name="time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="594" parent="58" name="question_id">
+      <columns>question_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="595" parent="58" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="596" parent="59" name="interested_id">
+      <comment>自增ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="597" parent="59" name="question_id">
+      <comment>话题ID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="598" parent="59" name="uid">
+      <comment>用户UID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="599" parent="59" name="add_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="600" parent="59" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="601" parent="59" name="PRIMARY">
+      <columns>interested_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="602" parent="60" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="603" parent="60" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="604" parent="60" name="config_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="605" parent="60" name="message_id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="606" parent="60" name="date">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="607" parent="60" name="from">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="608" parent="60" name="subject">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="609" parent="60" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="610" parent="60" name="question_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="611" parent="60" name="ticket_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="612" parent="60" name="config_id">
+      <columns>config_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="613" parent="60" name="date">
+      <columns>date</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="614" parent="60" name="message_id">
+      <columns>message_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="615" parent="60" name="ticket_id">
+      <columns>ticket_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="616" parent="60" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="617" parent="60" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="618" parent="61" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="619" parent="61" name="protocol">
+      <mandatory>1</mandatory>
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <column id="620" parent="61" name="server">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="621" parent="61" name="ssl">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="622" parent="61" name="port">
+      <data-type>smallint(5)|0</data-type>
+    </column>
+    <column id="623" parent="61" name="username">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="624" parent="61" name="password">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="625" parent="61" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="626" parent="61" name="access_key">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="627" parent="61" name="has_attach">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="628" parent="61" name="server">
+      <columns>server</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="629" parent="61" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="630" parent="61" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="631" parent="62" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="632" parent="62" name="item_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="633" parent="62" name="target_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="634" parent="62" name="time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="635" parent="62" name="uid">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="636" parent="62" name="item_id">
+      <columns>item_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="637" parent="62" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="638" parent="62" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="639" parent="63" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="640" parent="63" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="641" parent="63" name="item_type">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="642" parent="63" name="item_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="643" parent="63" name="link">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="644" parent="63" name="add_time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="645" parent="63" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="646" parent="63" name="item_id">
+      <columns>item_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="647" parent="63" name="item_type">
+      <columns>item_type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="648" parent="63" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="649" parent="63" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="650" parent="64" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="651" parent="64" name="topic_id">
+      <comment>话题 ID</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="652" parent="64" name="related_id">
+      <comment>相关话题 ID</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="653" parent="64" name="related_id">
+      <columns>related_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="654" parent="64" name="topic_id">
+      <columns>topic_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="655" parent="64" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="656" parent="65" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="657" parent="65" name="uid">
+      <comment>举报用户id</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="658" parent="65" name="type">
+      <comment>类别</comment>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="659" parent="65" name="target_id">
+      <comment>ID</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="660" parent="65" name="reason">
+      <comment>举报理由</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="661" parent="65" name="url">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="662" parent="65" name="add_time">
+      <comment>举报时间</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="663" parent="65" name="status">
+      <comment>是否处理</comment>
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="664" parent="65" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="665" parent="65" name="status">
+      <columns>status</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="666" parent="65" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="667" parent="66" name="auto_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="668" parent="66" name="uid">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="669" parent="66" name="category_id">
+      <data-type>smallint(4)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="670" parent="66" name="update_time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="671" parent="66" name="reputation">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="672" parent="66" name="thanks_count">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="673" parent="66" name="agree_count">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="674" parent="66" name="question_count">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="675" parent="66" name="uid_category_id">
+      <columns>uid
+category_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="676" parent="66" name="PRIMARY">
+      <columns>auto_id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="677" parent="66" name="uid_category_id">
+      <columns>uid
+category_id</columns>
+      <underlying-index>uid_category_id</underlying-index>
+    </key>
+    <column id="678" parent="67" name="auto_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="679" parent="67" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="680" parent="67" name="topic_id">
+      <comment>话题ID</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="681" parent="67" name="topic_count">
+      <comment>威望问题话题计数</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="682" parent="67" name="update_time">
+      <comment>更新时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="683" parent="67" name="agree_count">
+      <comment>赞成</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="684" parent="67" name="thanks_count">
+      <comment>感谢</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="685" parent="67" name="reputation">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="686" parent="67" name="reputation">
+      <columns>reputation</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="687" parent="67" name="topic_count">
+      <columns>topic_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="688" parent="67" name="topic_id">
+      <columns>topic_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="689" parent="67" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="690" parent="67" name="PRIMARY">
+      <columns>auto_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="691" parent="68" name="school_id">
+      <comment>自增ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="692" parent="68" name="school_type">
+      <comment>学校类型ID</comment>
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="693" parent="68" name="school_code">
+      <comment>学校编码</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="694" parent="68" name="school_name">
+      <comment>学校名称</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="695" parent="68" name="area_code">
+      <comment>地区代码</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="696" parent="68" name="PRIMARY">
+      <columns>school_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="697" parent="69" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="698" parent="69" name="hash">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="699" parent="69" name="data">
+      <mandatory>1</mandatory>
+      <data-type>mediumtext|0</data-type>
+    </column>
+    <column id="700" parent="69" name="time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="701" parent="69" name="hash">
+      <columns>hash</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="702" parent="69" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="703" parent="69" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="704" parent="70" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="705" parent="70" name="modified">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="706" parent="70" name="data">
+      <mandatory>1</mandatory>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="707" parent="70" name="lifetime">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="708" parent="70" name="lifetime">
+      <columns>lifetime</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="709" parent="70" name="modified">
+      <columns>modified</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="710" parent="70" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="711" parent="71" name="id">
+      <comment>id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="712" parent="71" name="varname">
+      <comment>字段名</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="713" parent="71" name="value">
+      <comment>变量值</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <index id="714" parent="71" name="varname">
+      <columns>varname</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="715" parent="71" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="716" parent="71" name="varname">
+      <columns>varname</columns>
+      <underlying-index>varname</underlying-index>
+    </key>
+    <column id="717" parent="72" name="topic_id">
+      <comment>话题id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="718" parent="72" name="topic_title">
+      <comment>话题标题</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="719" parent="72" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="720" parent="72" name="discuss_count">
+      <comment>讨论计数</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="721" parent="72" name="topic_description">
+      <comment>话题描述</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="722" parent="72" name="topic_pic">
+      <comment>话题图片</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="723" parent="72" name="topic_lock">
+      <comment>话题是否锁定 1 锁定 0 未锁定</comment>
+      <mandatory>1</mandatory>
+      <data-type>tinyint(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="724" parent="72" name="focus_count">
+      <comment>关注计数</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="725" parent="72" name="user_related">
+      <comment>是否被用户关联</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="726" parent="72" name="url_token">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="727" parent="72" name="merged_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="728" parent="72" name="seo_title">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="729" parent="72" name="parent_id">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="730" parent="72" name="is_parent">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="731" parent="72" name="discuss_count_last_week">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="732" parent="72" name="discuss_count_last_month">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="733" parent="72" name="discuss_count_update">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="734" parent="72" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="735" parent="72" name="discuss_count">
+      <columns>discuss_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="736" parent="72" name="discuss_count_last_month">
+      <columns>discuss_count_last_month</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="737" parent="72" name="discuss_count_last_week">
+      <columns>discuss_count_last_week</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="738" parent="72" name="discuss_count_update">
+      <columns>discuss_count_update</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="739" parent="72" name="focus_count">
+      <columns>focus_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="740" parent="72" name="is_parent">
+      <columns>is_parent</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="741" parent="72" name="merged_id">
+      <columns>merged_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="742" parent="72" name="parent_id">
+      <columns>parent_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="743" parent="72" name="topic_lock">
+      <columns>topic_lock</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="744" parent="72" name="topic_title">
+      <columns>topic_title</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="745" parent="72" name="url_token">
+      <columns>url_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="746" parent="72" name="user_related">
+      <columns>user_related</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="747" parent="72" name="PRIMARY">
+      <columns>topic_id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="748" parent="72" name="topic_title">
+      <columns>topic_title</columns>
+      <underlying-index>topic_title</underlying-index>
+    </key>
+    <column id="749" parent="73" name="focus_id">
+      <comment>自增ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="750" parent="73" name="topic_id">
+      <comment>话题ID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="751" parent="73" name="uid">
+      <comment>用户UID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="752" parent="73" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="753" parent="73" name="topic_id">
+      <columns>topic_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="754" parent="73" name="topic_uid">
+      <columns>topic_id
+uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="755" parent="73" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="756" parent="73" name="PRIMARY">
+      <columns>focus_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="757" parent="74" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="758" parent="74" name="source_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="759" parent="74" name="target_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="760" parent="74" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="761" parent="74" name="time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="762" parent="74" name="source_id">
+      <columns>source_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="763" parent="74" name="target_id">
+      <columns>target_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="764" parent="74" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="765" parent="74" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="766" parent="75" name="id">
+      <comment>自增 ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="767" parent="75" name="topic_id">
+      <comment>话题id</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="768" parent="75" name="item_id">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="769" parent="75" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="770" parent="75" name="uid">
+      <comment>用户ID</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="771" parent="75" name="type">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <index id="772" parent="75" name="item_id">
+      <columns>item_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="773" parent="75" name="topic_id">
+      <columns>topic_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="774" parent="75" name="type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="775" parent="75" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="776" parent="75" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="777" parent="76" name="history_id">
+      <comment>自增ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="778" parent="76" name="uid">
+      <comment>用户id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="779" parent="76" name="associate_type">
+      <comment>关联类型: 1 问题 2 回答 3 评论 4 话题</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="780" parent="76" name="associate_action">
+      <comment>操作类型</comment>
+      <data-type>smallint(3)|0</data-type>
+    </column>
+    <column id="781" parent="76" name="associate_id">
+      <comment>关联ID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="782" parent="76" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="783" parent="76" name="associate_attached">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="784" parent="76" name="anonymous">
+      <comment>是否匿名</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="785" parent="76" name="fold_status">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="786" parent="76" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="787" parent="76" name="anonymous">
+      <columns>anonymous</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="788" parent="76" name="associate">
+      <columns>associate_type
+associate_action</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="789" parent="76" name="associate_attached">
+      <columns>associate_attached</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="790" parent="76" name="associate_id">
+      <columns>associate_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="791" parent="76" name="associate_with_id">
+      <columns>associate_id
+associate_type
+associate_action</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="792" parent="76" name="associate_with_uid">
+      <columns>uid
+associate_type
+associate_action</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="793" parent="76" name="fold_status">
+      <columns>fold_status</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="794" parent="76" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="795" parent="76" name="PRIMARY">
+      <columns>history_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="796" parent="77" name="history_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+    </column>
+    <column id="797" parent="77" name="associate_content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="798" parent="77" name="associate_attached">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="799" parent="77" name="addon_data">
+      <comment>附加数据</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <key id="800" parent="77" name="PRIMARY">
+      <columns>history_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="801" parent="78" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="802" parent="78" name="history_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="803" parent="78" name="associate_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="804" parent="78" name="associate_type">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="805" parent="78" name="associate_action">
+      <mandatory>1</mandatory>
+      <data-type>smallint(3)|0</data-type>
+    </column>
+    <column id="806" parent="78" name="add_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="807" parent="78" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="808" parent="78" name="anonymous">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="809" parent="78" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="810" parent="78" name="anonymous">
+      <columns>anonymous</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="811" parent="78" name="associate">
+      <columns>associate_type
+associate_action</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="812" parent="78" name="associate_with_id">
+      <columns>id
+associate_type
+associate_action</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="813" parent="78" name="associate_with_uid">
+      <columns>uid
+associate_type
+associate_action</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="814" parent="78" name="history_id">
+      <columns>history_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="815" parent="78" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="816" parent="78" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="817" parent="79" name="follow_id">
+      <comment>自增ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="818" parent="79" name="fans_uid">
+      <comment>关注人的UID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="819" parent="79" name="friend_uid">
+      <comment>被关注人的uid</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="820" parent="79" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="821" parent="79" name="fans_uid">
+      <columns>fans_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="822" parent="79" name="friend_uid">
+      <columns>friend_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="823" parent="79" name="user_follow">
+      <columns>fans_uid
+friend_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="824" parent="79" name="PRIMARY">
+      <columns>follow_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="825" parent="80" name="uid">
+      <comment>用户的 UID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="826" parent="80" name="user_name">
+      <comment>用户名</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="827" parent="80" name="email">
+      <comment>EMAIL</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="828" parent="80" name="mobile">
+      <comment>用户手机</comment>
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="829" parent="80" name="password">
+      <comment>用户密码</comment>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="830" parent="80" name="salt">
+      <comment>用户附加混淆码</comment>
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="831" parent="80" name="avatar_file">
+      <comment>头像文件</comment>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="832" parent="80" name="sex">
+      <comment>性别</comment>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="833" parent="80" name="birthday">
+      <comment>生日</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="834" parent="80" name="province">
+      <comment>省</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="835" parent="80" name="city">
+      <comment>市</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="836" parent="80" name="job_id">
+      <comment>职业ID</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="837" parent="80" name="reg_time">
+      <comment>注册时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="838" parent="80" name="reg_ip">
+      <comment>注册IP</comment>
+      <data-type>bigint(12)|0</data-type>
+    </column>
+    <column id="839" parent="80" name="last_login">
+      <comment>最后登录时间</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="840" parent="80" name="last_ip">
+      <comment>最后登录 IP</comment>
+      <data-type>bigint(12)|0</data-type>
+    </column>
+    <column id="841" parent="80" name="online_time">
+      <comment>在线时间</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="842" parent="80" name="last_active">
+      <comment>最后活跃时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="843" parent="80" name="notification_unread">
+      <comment>未读系统通知</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="844" parent="80" name="inbox_unread">
+      <comment>未读短信息</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="845" parent="80" name="inbox_recv">
+      <comment>0-所有人可以发给我,1-我关注的人</comment>
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="846" parent="80" name="fans_count">
+      <comment>粉丝数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="847" parent="80" name="friend_count">
+      <comment>观众数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="848" parent="80" name="invite_count">
+      <comment>邀请我回答数量</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="849" parent="80" name="article_count">
+      <comment>文章数量</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="850" parent="80" name="question_count">
+      <comment>问题数量</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="851" parent="80" name="answer_count">
+      <comment>回答数量</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="852" parent="80" name="topic_focus_count">
+      <comment>关注话题数量</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="853" parent="80" name="invitation_available">
+      <comment>邀请数量</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="854" parent="80" name="group_id">
+      <comment>用户组</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="855" parent="80" name="reputation_group">
+      <comment>威望对应组</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="856" parent="80" name="forbidden">
+      <comment>是否禁止用户</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="857" parent="80" name="valid_email">
+      <comment>邮箱验证</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="858" parent="80" name="is_first_login">
+      <comment>首次登录标记</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="859" parent="80" name="agree_count">
+      <comment>赞同数量</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="860" parent="80" name="thanks_count">
+      <comment>感谢数量</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="861" parent="80" name="views_count">
+      <comment>个人主页查看数量</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="862" parent="80" name="reputation">
+      <comment>威望</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="863" parent="80" name="reputation_update_time">
+      <comment>威望更新</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="864" parent="80" name="weibo_visit">
+      <comment>微博允许访问</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="865" parent="80" name="integral">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="866" parent="80" name="draft_count">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="867" parent="80" name="common_email">
+      <comment>常用邮箱</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="868" parent="80" name="url_token">
+      <comment>个性网址</comment>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="869" parent="80" name="url_token_update">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="870" parent="80" name="verified">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="871" parent="80" name="default_timezone">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="872" parent="80" name="email_settings">
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="873" parent="80" name="weixin_settings">
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="874" parent="80" name="recent_topics">
+      <data-type>text|0</data-type>
+    </column>
+    <index id="875" parent="80" name="agree_count">
+      <columns>agree_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="876" parent="80" name="answer_count">
+      <columns>answer_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="877" parent="80" name="email">
+      <columns>email</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="878" parent="80" name="forbidden">
+      <columns>forbidden</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="879" parent="80" name="group_id">
+      <columns>group_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="880" parent="80" name="integral">
+      <columns>integral</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="881" parent="80" name="last_active">
+      <columns>last_active</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="882" parent="80" name="reputation">
+      <columns>reputation</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="883" parent="80" name="reputation_update_time">
+      <columns>reputation_update_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="884" parent="80" name="thanks_count">
+      <columns>thanks_count</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="885" parent="80" name="url_token">
+      <columns>url_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="886" parent="80" name="user_name">
+      <columns>user_name</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="887" parent="80" name="valid_email">
+      <columns>valid_email</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="888" parent="80" name="verified">
+      <columns>verified</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="889" parent="80" name="PRIMARY">
+      <columns>uid</columns>
+      <primary>1</primary>
+    </key>
+    <column id="890" parent="81" name="id">
+      <comment>自增id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="891" parent="81" name="uid">
+      <comment>用户UID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="892" parent="81" name="introduction">
+      <comment>个人简介</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="893" parent="81" name="signature">
+      <comment>个人签名</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="894" parent="81" name="qq">
+      <data-type>bigint(15)|0</data-type>
+    </column>
+    <column id="895" parent="81" name="homepage">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <index id="896" parent="81" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="897" parent="81" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="898" parent="82" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20) unsigned|0</data-type>
+    </column>
+    <column id="899" parent="82" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+    </column>
+    <column id="900" parent="82" name="name">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="901" parent="82" name="email">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="902" parent="82" name="link">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="903" parent="82" name="gender">
+      <data-type>varchar(8)|0</data-type>
+    </column>
+    <column id="904" parent="82" name="locale">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="905" parent="82" name="timezone">
+      <data-type>tinyint(3)|0</data-type>
+    </column>
+    <column id="906" parent="82" name="picture">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="907" parent="82" name="access_token">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="908" parent="82" name="expires_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="909" parent="82" name="add_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="910" parent="82" name="access_token">
+      <columns>access_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="911" parent="82" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="912" parent="82" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="913" parent="82" name="uid">
+      <columns>uid</columns>
+      <underlying-index>uid</underlying-index>
+    </key>
+    <column id="914" parent="83" name="id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="915" parent="83" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+    </column>
+    <column id="916" parent="83" name="name">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="917" parent="83" name="locale">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="918" parent="83" name="picture">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="919" parent="83" name="gender">
+      <data-type>varchar(8)|0</data-type>
+    </column>
+    <column id="920" parent="83" name="email">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="921" parent="83" name="link">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="922" parent="83" name="add_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="923" parent="83" name="access_token">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="924" parent="83" name="refresh_token">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="925" parent="83" name="expires_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="926" parent="83" name="access_token">
+      <columns>access_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="927" parent="83" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="928" parent="83" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="929" parent="83" name="uid">
+      <columns>uid</columns>
+      <underlying-index>uid</underlying-index>
+    </key>
+    <column id="930" parent="84" name="group_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="931" parent="84" name="type">
+      <comment>0-会员组 1-系统组</comment>
+      <data-type>tinyint(3)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="932" parent="84" name="custom">
+      <comment>是否自定义</comment>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="933" parent="84" name="group_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="934" parent="84" name="reputation_lower">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="935" parent="84" name="reputation_higer">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="936" parent="84" name="reputation_factor">
+      <comment>威望系数</comment>
+      <data-type>float|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="937" parent="84" name="permission">
+      <comment>权限设置</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <index id="938" parent="84" name="custom">
+      <columns>custom</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="939" parent="84" name="type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="940" parent="84" name="PRIMARY">
+      <columns>group_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="941" parent="85" name="notice_setting_id">
+      <comment>自增id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="942" parent="85" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="943" parent="85" name="data">
+      <comment>设置数据</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <index id="944" parent="85" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="945" parent="85" name="PRIMARY">
+      <columns>notice_setting_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="946" parent="86" name="uid">
+      <comment>用户 ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="947" parent="86" name="last_active">
+      <comment>上次活动时间</comment>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="948" parent="86" name="ip">
+      <comment>客户端ip</comment>
+      <data-type>bigint(12)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="949" parent="86" name="active_url">
+      <comment>停留页面</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="950" parent="86" name="user_agent">
+      <comment>用户客户端信息</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <index id="951" parent="86" name="last_active">
+      <columns>last_active</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="952" parent="86" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <column id="953" parent="87" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="954" parent="87" name="uid">
+      <comment>用户在本地的UID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="955" parent="87" name="nickname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="956" parent="87" name="openid">
+      <data-type>varchar(128)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="957" parent="87" name="gender">
+      <data-type>varchar(8)|0</data-type>
+    </column>
+    <column id="958" parent="87" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="959" parent="87" name="access_token">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="960" parent="87" name="refresh_token">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="961" parent="87" name="expires_time">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="962" parent="87" name="figureurl">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <index id="963" parent="87" name="access_token">
+      <columns>access_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="964" parent="87" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="965" parent="87" name="openid">
+      <columns>openid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="966" parent="87" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="967" parent="87" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="968" parent="88" name="id">
+      <comment>新浪用户 ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>bigint(11)|0</data-type>
+    </column>
+    <column id="969" parent="88" name="uid">
+      <comment>用户在本地的UID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="970" parent="88" name="name">
+      <comment>微博昵称</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="971" parent="88" name="location">
+      <comment>地址</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="972" parent="88" name="description">
+      <comment>个人描述</comment>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="973" parent="88" name="url">
+      <comment>用户博客地址</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="974" parent="88" name="profile_image_url">
+      <comment>Sina 自定义头像地址</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="975" parent="88" name="gender">
+      <data-type>varchar(8)|0</data-type>
+    </column>
+    <column id="976" parent="88" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="977" parent="88" name="expires_time">
+      <comment>过期时间</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="978" parent="88" name="access_token">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="979" parent="88" name="last_msg_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="980" parent="88" name="access_token">
+      <columns>access_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="981" parent="88" name="last_msg_id">
+      <columns>last_msg_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="982" parent="88" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="983" parent="88" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="984" parent="88" name="uid">
+      <columns>uid</columns>
+      <underlying-index>uid</underlying-index>
+    </key>
+    <column id="985" parent="89" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20) unsigned|0</data-type>
+    </column>
+    <column id="986" parent="89" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+    </column>
+    <column id="987" parent="89" name="name">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="988" parent="89" name="screen_name">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="989" parent="89" name="location">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="990" parent="89" name="time_zone">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="991" parent="89" name="lang">
+      <data-type>varchar(16)|0</data-type>
+    </column>
+    <column id="992" parent="89" name="profile_image_url">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="993" parent="89" name="add_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="994" parent="89" name="access_token">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;a:2:{s:11:&quot;oauth_token&quot;;s:0:&quot;&quot;;s:18:&quot;oauth_token_secret&quot;;s:0:&quot;&quot;;}&apos;</default-expression>
+    </column>
+    <index id="995" parent="89" name="access_token">
+      <columns>access_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="996" parent="89" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="997" parent="89" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="998" parent="89" name="uid">
+      <columns>uid</columns>
+      <underlying-index>uid</underlying-index>
+    </key>
+    <column id="999" parent="90" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1000" parent="90" name="uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1001" parent="90" name="uc_uid">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1002" parent="90" name="username">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1003" parent="90" name="email">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <index id="1004" parent="90" name="email">
+      <columns>email</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1005" parent="90" name="uc_uid">
+      <columns>uc_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1006" parent="90" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1007" parent="90" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1008" parent="91" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1009" parent="91" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1010" parent="91" name="openid">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1011" parent="91" name="expires_in">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1012" parent="91" name="access_token">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1013" parent="91" name="refresh_token">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1014" parent="91" name="scope">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="1015" parent="91" name="headimgurl">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1016" parent="91" name="nickname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="1017" parent="91" name="sex">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1018" parent="91" name="province">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="1019" parent="91" name="city">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="1020" parent="91" name="country">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="1021" parent="91" name="add_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1022" parent="91" name="latitude">
+      <data-type>float|0</data-type>
+    </column>
+    <column id="1023" parent="91" name="longitude">
+      <data-type>float|0</data-type>
+    </column>
+    <column id="1024" parent="91" name="location_update">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="1025" parent="91" name="add_time">
+      <columns>add_time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1026" parent="91" name="city">
+      <columns>city</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1027" parent="91" name="country">
+      <columns>country</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1028" parent="91" name="expires_in">
+      <columns>expires_in</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1029" parent="91" name="latitude">
+      <columns>latitude
+longitude</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1030" parent="91" name="location_update">
+      <columns>location_update</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1031" parent="91" name="openid">
+      <columns>openid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1032" parent="91" name="province">
+      <columns>province</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1033" parent="91" name="scope">
+      <columns>scope</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1034" parent="91" name="sex">
+      <columns>sex</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1035" parent="91" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="1036" parent="91" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="1037" parent="91" name="uid">
+      <columns>uid</columns>
+      <underlying-index>uid</underlying-index>
+    </key>
+    <column id="1038" parent="92" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1039" parent="92" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1040" parent="92" name="reason">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1041" parent="92" name="attach">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1042" parent="92" name="time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1043" parent="92" name="name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1044" parent="92" name="data">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="1045" parent="92" name="status">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1046" parent="92" name="type">
+      <data-type>varchar(16)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <index id="1047" parent="92" name="name">
+      <columns>name
+status</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1048" parent="92" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1049" parent="92" name="type">
+      <columns>type</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1050" parent="92" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1051" parent="92" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1052" parent="93" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="1053" parent="93" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1054" parent="93" name="msg_author_uid">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="1055" parent="93" name="text">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1056" parent="93" name="access_key">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="1057" parent="93" name="has_attach">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1058" parent="93" name="uid">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1059" parent="93" name="weibo_uid">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="1060" parent="93" name="question_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1061" parent="93" name="ticket_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="1062" parent="93" name="created_at">
+      <columns>created_at</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1063" parent="93" name="question_id">
+      <columns>question_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1064" parent="93" name="ticket_id">
+      <columns>ticket_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1065" parent="93" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1066" parent="93" name="weibo_uid">
+      <columns>weibo_uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1067" parent="93" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1068" parent="94" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1069" parent="94" name="weixin_mp_token">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1070" parent="94" name="weixin_account_role">
+      <data-type>varchar(20)|0</data-type>
+      <default-expression>&apos;base&apos;</default-expression>
+    </column>
+    <column id="1071" parent="94" name="weixin_app_id">
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="1072" parent="94" name="weixin_app_secret">
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="1073" parent="94" name="weixin_mp_menu">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="1074" parent="94" name="weixin_subscribe_message_key">
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="1075" parent="94" name="weixin_no_result_message_key">
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="1076" parent="94" name="weixin_encoding_aes_key">
+      <data-type>varchar(43)|0</data-type>
+    </column>
+    <index id="1077" parent="94" name="weixin_account_role">
+      <columns>weixin_account_role</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1078" parent="94" name="weixin_app_id">
+      <columns>weixin_app_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1079" parent="94" name="weixin_mp_token">
+      <columns>weixin_mp_token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1080" parent="94" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1081" parent="95" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1082" parent="95" name="token">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1083" parent="95" name="uid">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1084" parent="95" name="session_id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="1085" parent="95" name="expire">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="1086" parent="95" name="expire">
+      <columns>expire</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1087" parent="95" name="session_id">
+      <columns>session_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1088" parent="95" name="token">
+      <columns>token</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1089" parent="95" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1090" parent="96" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1091" parent="96" name="weixin_id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="1092" parent="96" name="content">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1093" parent="96" name="action">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="1094" parent="96" name="time">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="1095" parent="96" name="time">
+      <columns>time</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1096" parent="96" name="weixin_id">
+      <columns>weixin_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1097" parent="96" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1098" parent="97" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1099" parent="97" name="msg_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="1100" parent="97" name="group_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;未分组&apos;</default-expression>
+    </column>
+    <column id="1101" parent="97" name="status">
+      <mandatory>1</mandatory>
+      <data-type>varchar(15)|0</data-type>
+      <default-expression>&apos;unsent&apos;</default-expression>
+    </column>
+    <column id="1102" parent="97" name="error_num">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1103" parent="97" name="main_msg">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="1104" parent="97" name="articles_info">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="1105" parent="97" name="questions_info">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="1106" parent="97" name="create_time">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1107" parent="97" name="filter_count">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="1108" parent="97" name="group_name">
+      <columns>group_name</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1109" parent="97" name="msg_id">
+      <columns>msg_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1110" parent="97" name="status">
+      <columns>status</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1111" parent="97" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1112" parent="98" name="scene_id">
+      <mandatory>1</mandatory>
+      <data-type>mediumint(5)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1113" parent="98" name="ticket">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1114" parent="98" name="description">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1115" parent="98" name="subscribe_num">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="1116" parent="98" name="subscribe_num">
+      <columns>subscribe_num</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1117" parent="98" name="ticket">
+      <columns>ticket</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1118" parent="98" name="PRIMARY">
+      <columns>scene_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1119" parent="99" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1120" parent="99" name="account_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1121" parent="99" name="keyword">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1122" parent="99" name="title">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1123" parent="99" name="image_file">
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="1124" parent="99" name="description">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="1125" parent="99" name="link">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1126" parent="99" name="enabled">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1127" parent="99" name="sort_status">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="1128" parent="99" name="account_id">
+      <columns>account_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1129" parent="99" name="enabled">
+      <columns>enabled</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1130" parent="99" name="keyword">
+      <columns>keyword</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1131" parent="99" name="sort_status">
+      <columns>sort_status</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1132" parent="99" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1133" parent="100" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1134" parent="100" name="account_id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1135" parent="100" name="url">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1136" parent="100" name="token">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1137" parent="100" name="enabled">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1138" parent="100" name="rank">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(2) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="1139" parent="100" name="account_id">
+      <columns>account_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1140" parent="100" name="enabled">
+      <columns>enabled</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="1141" parent="100" name="rank">
+      <columns>rank</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1142" parent="100" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1143" parent="101" name="work_id">
+      <comment>自增ID</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1144" parent="101" name="uid">
+      <comment>用户ID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1145" parent="101" name="start_year">
+      <comment>开始年份</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1146" parent="101" name="end_year">
+      <comment>结束年月</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1147" parent="101" name="company_name">
+      <comment>公司名</comment>
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="1148" parent="101" name="job_id">
+      <comment>职位ID</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1149" parent="101" name="add_time">
+      <comment>添加时间</comment>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <index id="1150" parent="101" name="uid">
+      <columns>uid</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1151" parent="101" name="PRIMARY">
+      <columns>work_id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
