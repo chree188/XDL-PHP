@@ -2,30 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f172088d-fe9b-4f95-b73b-81645375d3f7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/100efa0ecb7269fd047246e2546a9c93.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/1cbc1959adbe84ef479bf0398d9aee6e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/3b6566894107a073890fa08f00f907aa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/5a5818645cafda32f1449e32ca2f19dc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/758f9c3db34b6ac8a65e5af370b0e64d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/83408012ae5cb410cbd048a624bf2a39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/8fe9e4b6b9816042024a0bee2b81775e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/af01817201b95f9795ec39ae0c3b0c28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/b53d508ebb01a1a206c48ab035c06435.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/b60ba4a2cbf1d5fe7503e28c5e4c52f9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/cc98152d2e7c3ac5f08742a020ea14f0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/captcha/cdab5af7dfc19fac88b61d8a5aaac55a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/52d44a--7/52d44a---ffbjavmyadywgig_cache_db_rows_cache_737b2e04ee2ea75008325cb18efbe571" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/52d44a--7/52d44a---internal-metadatas---ffbjavmyadywgig_cache_db_rows_cache_737b2e04ee2ea75008325cb18efbe571" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/plugins_model.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/plugins_table.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--0/52d44a---internal-metadatas---ffbjavmyadywgig_cache_nav_menu_list" afterPath="$PROJECT_DIR$/cache/52d44a--0/52d44a---internal-metadatas---ffbjavmyadywgig_cache_nav_menu_list" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--0/52d44a---internal-metadatas---ffbjavmyadywgig_cache_user_group_99" afterPath="$PROJECT_DIR$/cache/52d44a--0/52d44a---internal-metadatas---ffbjavmyadywgig_cache_user_group_99" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--2/52d44a---ffbjavmyadywgig_cache_crond_timer_day" afterPath="$PROJECT_DIR$/cache/52d44a--2/52d44a---ffbjavmyadywgig_cache_crond_timer_day" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--2/52d44a---ffbjavmyadywgig_cache_crond_timer_hour" afterPath="$PROJECT_DIR$/cache/52d44a--2/52d44a---ffbjavmyadywgig_cache_crond_timer_hour" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--2/52d44a---ffbjavmyadywgig_cache_crond_timer_week" afterPath="$PROJECT_DIR$/cache/52d44a--2/52d44a---ffbjavmyadywgig_cache_crond_timer_week" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--2/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_day" afterPath="$PROJECT_DIR$/cache/52d44a--2/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_day" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--2/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_hour" afterPath="$PROJECT_DIR$/cache/52d44a--2/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_hour" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--2/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_week" afterPath="$PROJECT_DIR$/cache/52d44a--2/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_week" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--3/52d44a---internal-metadatas---ffbjavmyadywgig_cache_ffbjavmyadywgig_group_nav_menu" afterPath="$PROJECT_DIR$/cache/52d44a--3/52d44a---internal-metadatas---ffbjavmyadywgig_cache_ffbjavmyadywgig_group_nav_menu" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--5/52d44a---ffbjavmyadywgig_cache_crond_timer_minute" afterPath="$PROJECT_DIR$/cache/52d44a--5/52d44a---ffbjavmyadywgig_cache_crond_timer_minute" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--5/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_minute" afterPath="$PROJECT_DIR$/cache/52d44a--5/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_minute" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--6/52d44a---internal-metadatas---ffbjavmyadywgig_cache_admin_notifications" afterPath="$PROJECT_DIR$/cache/52d44a--6/52d44a---internal-metadatas---ffbjavmyadywgig_cache_admin_notifications" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--6/52d44a---internal-metadatas---ffbjavmyadywgig_cache_square_hot_topic_list_total_rows" afterPath="$PROJECT_DIR$/cache/52d44a--6/52d44a---internal-metadatas---ffbjavmyadywgig_cache_square_hot_topic_list_total_rows" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--7/52d44a---internal-metadatas---ffbjavmyadywgig_cache_db_rows_cache_737b2e04ee2ea75008325cb18efbe571" afterPath="$PROJECT_DIR$/cache/52d44a--7/52d44a---internal-metadatas---ffbjavmyadywgig_cache_db_rows_cache_737b2e04ee2ea75008325cb18efbe571" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--7/52d44a---internal-metadatas---ffbjavmyadywgig_cache_ffbjavmyadywgig_group_users_group" afterPath="$PROJECT_DIR$/cache/52d44a--7/52d44a---internal-metadatas---ffbjavmyadywgig_cache_ffbjavmyadywgig_group_users_group" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--8/52d44a---ffbjavmyadywgig_cache_crond_timer_half_hour" afterPath="$PROJECT_DIR$/cache/52d44a--8/52d44a---ffbjavmyadywgig_cache_crond_timer_half_hour" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--8/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_half_hour" afterPath="$PROJECT_DIR$/cache/52d44a--8/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_half_hour" />
@@ -36,6 +31,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--a/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_ten_minutes" afterPath="$PROJECT_DIR$/cache/52d44a--a/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_ten_minutes" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--b/52d44a---ffbjavmyadywgig_cache_crond_timer_five_minutes" afterPath="$PROJECT_DIR$/cache/52d44a--b/52d44a---ffbjavmyadywgig_cache_crond_timer_five_minutes" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--b/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_five_minutes" afterPath="$PROJECT_DIR$/cache/52d44a--b/52d44a---internal-metadatas---ffbjavmyadywgig_cache_crond_timer_five_minutes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--e/52d44a---ffbjavmyadywgig_cache_reputation_calculate_start" afterPath="$PROJECT_DIR$/cache/52d44a--e/52d44a---ffbjavmyadywgig_cache_reputation_calculate_start" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--e/52d44a---internal-metadatas---ffbjavmyadywgig_cache_reputation_calculate_start" afterPath="$PROJECT_DIR$/cache/52d44a--e/52d44a---internal-metadatas---ffbjavmyadywgig_cache_reputation_calculate_start" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--f/52d44a---ffbjavmyadywgig_cache_ffbjavmyadywgig_group_crond" afterPath="$PROJECT_DIR$/cache/52d44a--f/52d44a---ffbjavmyadywgig_cache_ffbjavmyadywgig_group_crond" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/52d44a--f/52d44a---internal-metadatas---ffbjavmyadywgig_cache_ffbjavmyadywgig_group_crond" afterPath="$PROJECT_DIR$/cache/52d44a--f/52d44a---internal-metadatas---ffbjavmyadywgig_cache_ffbjavmyadywgig_group_crond" />
@@ -59,23 +55,24 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - we@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="WeCenter" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="header_meta.tpl.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/default/global/header_meta.tpl.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="777">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -88,8 +85,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="430" />
-    <option name="y" value="131" />
+    <option name="x" value="418" />
+    <option name="y" value="55" />
     <option name="width" value="1293" />
     <option name="height" value="818" />
   </component>
@@ -118,46 +115,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeCenter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeCenter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeCenter" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeCenter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeCenter" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -174,31 +136,32 @@
       <option name="presentableId" value="Default" />
       <updated>1477030365951</updated>
       <workItem from="1477030369571" duration="1424000" />
+      <workItem from="1477292072204" duration="635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1424000" />
+    <option name="totallyTimeSpent" value="2059000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="430" y="131" width="1293" height="818" extended-state="0" />
-    <editor active="false" />
+    <frame x="418" y="55" width="1293" height="818" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24979724" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2538524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32927817" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32927817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -220,15 +183,14 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="dbDummy://dbtable:/2369366f/29b092e9-2dc0-4c10-b926-e93fa875b5c0/we.aws_users_qq">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -236,9 +198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -246,7 +205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-36916">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -254,7 +212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8146">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -262,7 +219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -270,7 +226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -278,7 +233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -296,7 +250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -304,7 +257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-40">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -312,7 +264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -320,7 +271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -328,9 +278,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4559">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#419#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -338,7 +285,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1997">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -346,6 +292,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/global/header_meta.tpl.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
           <folding />
         </state>
       </provider>

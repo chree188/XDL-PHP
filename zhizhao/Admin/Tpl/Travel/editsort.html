@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/www.w3.org/1999/xhtml">
+<head>
+<title>编辑栏目分类</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/basic.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/travel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+</head>
+<body leftmargin="8" topmargin="8" background='__IMG__/allbg.gif'>
+    <!--快捷操作导航开始-->
+    <div class="kuaijie">
+        <div class="kuaijieTitle">&nbsp;栏目快捷操作</div>
+        <div class="caozuo">
+        	&nbsp;&nbsp;<a href="{@:U(APP_NAME .'/Travel/sortlist')@}" title="" class="kjsort" target="main">栏目分类管理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<a href="{@:U(APP_NAME .'/Travel/detailslist')@}" title="" class="kjcontent" target="main">栏目详情管理</a>
+        </div>
+    </div>
+    <!--快捷操作导航结束-->
+    <div class="art_list_title">
+    	<div class="sort_left">&nbsp;编辑栏目分类</div>
+    </div>
+    <div class="addsort_content">
+    	<form action="{@:U(APP_NAME.'/Travel/editsort')@}" method="POST">
+        	 <input type="hidden" name="id" value="{@$result.id@}" />
+        	<table>
+            	<tr>
+                	<td>分类名称：</td>
+                    <td><input type="text" class="input1 w200" name="sort_name" />(ID:{@$result.id@})</td>
+                </tr>
+                <tr>
+                	<td>分类状态：</td>
+                    <td>
+                    	<input type="radio" name="status" value="1" checked="checked" />&nbsp;启用&nbsp;
+                        <input type="radio" name="status" value="1" />&nbsp;禁用&nbsp;
+                        <span class="note">* 分类被禁用以后，前台将不会显示该分类及其下面的数据</span>
+                    </td>
+                </tr>
+                <tr>
+                	<td colspan="2" align="center"><input type="submit" value="保存添加" class="input1" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* CSS Document */
+.searchWord { width:648px; height:50px; line-height:50px; color:#111; font-size:15px; color:#111; font-family: "Microsoft yahei","Century Gothic";}
+.fontRed { color:#F30; font-size:14px; font-weight:600; font-family: "Microsoft yahei","Century Gothic"; }
+.fontRed2 { color:#F30; font-size:14px; font-weight:500; font-family: "Microsoft yahei","Century Gothic"; }
+.searchList { width:648px; margin-bottom:30px; }
+.searchList ul { width:648px;}
+.searchList ul li { width:648px; position:relative; z-index:10; padding:14px 0 14px 2px; border-bottom:1px solid #EEE;}
+.searchList ul li a { color:#333; font-size:13px; font-family: "Microsoft yahei","Century Gothic";}
+.searchList ul li a:hover {color:#F30; }
+.searchList ul li span.otherItem { position:absolute; right:15px; z-index:20; color:#999; }
+.fpage { width:648px; height:25px; background:#FFF; line-height:25px; text-align:center; font-size:14px; color:#333;  }
+.fpage a { color:#484848; font-size:14px; padding:2px 10px; display:inline-block; background:#FFF; margin-right:5px; border:1px solid #DDD; border-radius:4px;  }
+.fpage .current { color:#FFF; font-size:14px; padding:2px 10px; display:inline-block; background:#0DA4D3; margin-right:5px; border-radius:4px; }
+.fpage a:hover { color:#FFF; background:#0DA4D3; }

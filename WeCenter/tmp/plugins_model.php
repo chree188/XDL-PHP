@@ -1,1 +1,0 @@
-a:2:{s:18:"aws_external_class";s:64:"D:\PHP\wamp64\www\WeCenter/plugins/aws_external/aws_external.php";s:26:"aws_offical_external_class";s:80:"D:\PHP\wamp64\www\WeCenter/plugins/aws_offical_external/aws_offical_external.php";}

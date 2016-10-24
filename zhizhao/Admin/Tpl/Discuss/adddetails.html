@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/www.w3.org/1999/xhtml">
+<head>
+<title>添加图文</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/basic.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/discuss.css" rel="stylesheet" type="text/css" />
+<link href='__STATIC__/editor/themes/default/default.css' rel='stylesheet' type='text/css' />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/kindeditor.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/lang/zh_CN.js"></script>
+<script type="text/javascript" language="javascript">
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('#contentid');
+		K('#uploadid').click(function() {
+			editor.loadPlugin('image', function() {
+				editor.plugin.imageDialog({
+					imageUrl : K('#picid').val(),
+					clickFn : function(url, title, width, height, border, align) {
+						K('#picid').val(url);
+						editor.hideDialog();
+							}
+						});
+					});
+				});
+	});
+</script>
+</head>
+<body leftmargin="8" topmargin="8" background='__IMG__/allbg.gif'>
+    <!--快捷操作导航开始-->
+    <div class="kuaijie">
+        <div class="kuaijieTitle">&nbsp;栏目快捷操作</div>
+        <div class="caozuo">
+        	&nbsp;&nbsp;<a href="{@:U(APP_NAME .'/Discuss/sortlist')@}" title="" class="kjsort" target="main">栏目分类管理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<a href="{@:U(APP_NAME .'/Discuss/detailslist')@}" title="" class="kjcontent" target="main">栏目详情管理</a>
+        </div>
+    </div>
+    <!--快捷操作导航结束-->
+    <div class="art_list_title">
+    	<div class="sort_left">&nbsp;栏目详情管理--添加图文</div>
+    </div>
+    <div class="addsort_content">
+    	<form action="" method="POST">
+        	<table>
+            	<tr>
+                	<td>图文名称：</td>
+                    <td><input type="text" class="input1 w300" name="discuss_name" /></td>
+                </tr>
+                <tr>
+                    <td class="tr">所属分类：</td>
+                    <td>
+                        <select name="parent_id" class="select1 w280">
+                            <volist name="sortList" id="sort">
+                                <option value="{@$sort.id@}">{@$sort.html@}|--{@$sort.sort_name@}</option>
+                            </volist>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                	<td>图文状态：</td>
+                    <td>
+                    	<input type="radio" name="status" value="1" checked="checked" />&nbsp;启用&nbsp;
+                        <input type="radio" name="status" value="0" />&nbsp;禁用&nbsp;
+                        <span class="note">* 图文被禁用以后，前台将不会显示该条图文</span>
+                    </td>
+                </tr>
+                <tr>
+                	<td>发布人：</td>
+                    <td><input type="text" class="input1 w100" name="author" /></td>
+                </tr>
+                <tr>
+                	<td>缩略图：</td>
+                    <td><input type="text" class="input1 w250" name="discuss_pic" id="picid" />&nbsp;&nbsp;<input type="button" name="upload_pic" class="input1 w70" style="cursor:pointer;" value="上传图片" id="uploadid" /></td>
+                </tr>
+                <tr>
+                	<td>内容编辑：</td>
+                    <td><textarea name="content" class="w700 h300" id="contentid"></textarea></td>
+                </tr>
+                <tr>
+                	<td colspan="2" align="center"><input type="submit" value="保存添加" class="input1w70" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

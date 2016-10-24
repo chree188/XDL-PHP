@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>私信详情_会员中心_支招网</title>
+<link rel="Shortcut Icon" href="__IMG__/favicon.ico" type="image/x-icon"/>
+<link type="text/css" href="__STATIC__/Style/Css/base.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/public.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/member.css" rel="stylesheet" />
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+</head>
+<body>
+<div id="all">
+  <div id="header" class="mb20"> 
+    <!-- header start --> 
+    <include file="Common:top" /> 
+    <!-- header end --> 
+  </div>
+  <div id="page" class="mc  cls"> 
+    <!-- page start -->
+    <div id="left">
+		<include file="Common:mleft" /> 
+    </div>
+    <div id="right">
+    	<div class="artcileBox">
+        	<div class="artcileTitle"><h4>我的私信</h4></div>
+            <div class="article_tab">
+                <div class="letter_tab_con">
+                	<div class="letterContent">
+                    	<table>
+                        	<tr>
+                            	<td class="tdLeft">私信人：</td>
+                                <td class="tdRight">{@$letterContent.send_user@}</td>
+                            </tr>
+                        	<tr>
+                            	<td class="tdLeft">标题：</td>
+                                <td class="tdRight">{@$letterContent.title@}</td>
+                            </tr>
+                        	<tr>
+                            	<td class="tdLeft">内容：</td>
+                                <td class="tdRight">{@$letterContent.content@}</td>
+                            </tr>
+                        	<tr>
+                            	<td class="tdLeft">时间：</td>
+                                <td class="tdRight">{@$letterContent.time|date="Y-m-d H:i:s",###@}</td>
+                            </tr>
+                        	<tr>
+                          		<td class="tdLeft"></td>
+                                <td  class="tdRight"><a href="{@:U(APP_NAME.'/Member/addLetter',array('user_id'=>$letterContent["send_uid"]))@}" title="回复TA" class="replyLetter">回复TA</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cb"></div>
+    <!-- page end --> 
+  </div>
+  <div id="footer" class="mc cls"> 
+    <!-- footer start --> 
+    <include file="Common:footer" /> 
+    <!-- footer end --> 
+  </div>
+</div>
+</body>
+</html>

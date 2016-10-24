@@ -1,0 +1,29 @@
+<div class='userinfo'>
+<dl>
+  <dt> <a href=""><img src="{@$userInfo.face@}" width='56' height='56'/></a> </dt>
+  <dd class='username'>{@$userInfo.username@}</dd>
+  <dd>金币：<a href="javascript:;">{@$userInfo.point@}</a></dd>
+  <dd>等级：<a href="javascript:;">LV{@$userInfo.exp|exp_to_level@}</a></dd>
+</dl>
+<table>
+  <tr>
+    <td>提问数</td>
+    <td>回答数</td>
+    <td class='last'>采纳率</td>
+  </tr>
+  <tr>
+    <td><a href="">{@$userInfo.ask_num@}</a></td>
+    <td><a href="">{@$answerNumAll@}</a></td>
+    <td class='last'><a href=""><php>echo ($adoptNumAll / $answerNumAll) * 100 .'%';</php></a></td>
+  </tr>
+</table>
+</div>
+<ul>
+<li class='mysetup <if condition="ACTION_NAME eq 'index'">cur</if>'><a href="{@:U(APP_NAME .'/Member/index')@}">账户信息</a> </li>
+<li class='myarticle <if condition="ACTION_NAME eq 'comment'">cur</if>'><a href="{@:U(APP_NAME .'/Member/comment')@}">我的消息</a> </li>
+<li class='mymessage <if condition="ACTION_NAME eq 'article'">cur</if>'><a href="{@:U(APP_NAME .'/Member/article')@}">我的提问</a> </li>
+<li class='myletter <if condition="ACTION_NAME eq 'answer'">cur</if>'><a href="{@:U(APP_NAME .'/Member/answer')@}">我的回答</a> </li>
+<li class='myletter <if condition="ACTION_NAME eq 'letter'">cur</if>'><a href="{@:U(APP_NAME .'/Member/letter')@}">我的私信</a> </li>
+    <li class='myletter <if condition="ACTION_NAME eq 'tobest'">cur</if>'><a href="{@:U(APP_NAME .'/Member/tobest')@}">我的被采纳</a> </li>
+<li class='mycollect <if condition="ACTION_NAME eq 'collect'">cur</if>'> <a href="{@:U(APP_NAME .'/Member/collect')@}">我的金币</a> </li>
+</ul>

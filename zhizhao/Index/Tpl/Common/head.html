@@ -1,0 +1,210 @@
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/kindeditor.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/lang/zh_CN.js"></script>
+<script type="text/javascript" language="javascript">
+/* 编辑器配置 */
+
+	/* 富文本编辑器（不带分隔符） */
+	function getEditor(textareaName) {
+		KindEditor.ready(function(K) {
+			var editor = K.create('textarea[name="'+textareaName+'"]', {
+				allowFileManager : false,
+				minWidth : 400,
+				minHeight : 220,
+				items : [
+					 'fontsize','forecolor','fontname', 'formatblock', 'bold',
+					'italic', 'underline', 'link', '|', 'image', 
+					'hr','justifyleft', 'justifycenter', 'justifyright',
+
+				]
+			});
+		});
+	}
+	/* 精简版富文本编辑器 */
+	function getMiniEditor(textareaName) {
+		KindEditor.ready(function(K) {
+			var editor = K.create('textarea[name="'+textareaName+'"]', {
+				allowFileManager : true,
+				minWidth : 650,
+				minHeight : 200,
+				items : [
+					'link', 'unlink', 'formatblock', 'fontname', 'fontsize', '|', 
+					'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', '|',
+					'strikethrough', 'lineheight', 'removeformat', '|', 'fullscreen',
+				]
+			});
+		});
+	}
+
+	/* 富文本编辑器（带分隔符） */
+	function getEditor2(textareaName) {
+		KindEditor.ready(function(K) {
+			var editor = K.create('textarea[name="'+textareaName+'"]', {
+				allowFileManager : true,
+				minWidth : 650,
+				minHeight : 200,
+				items : [
+					'source', '|', 'undo', 'redo', '|', 'print', 'code', 'cut', 'copy', 'paste',
+					'plainpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+					'justifyfull', 'subscript',
+					'superscript', 'clearhtml', 'selectall', '|', 'pagebreak',
+					'link', 'unlink', '|', 'fullscreen', '/',
+					'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+					'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
+					'flash', 'media', 'insertfile', '|', 'table', 'hr', 'emoticons', 'baidumap', '|', 'about'
+				]
+			});
+		});
+	}
+
+	/* 上传图片按钮(网络上传+本地上传) */
+	function getImage(inputName, buttonId, fn) {
+		KindEditor.ready(function(K) {
+			var editor = K.editor({
+				allowFileManager : true
+			});
+			K('#'+buttonId).click(function() {
+				editor.loadPlugin('image', function() {
+					editor.plugin.imageDialog({
+						imageUrl : K('input[name="'+inputName+'"]').val(),
+						clickFn : function(url, title, width, height, border, align) {
+							K('input[name="'+inputName+'"]').val(url);
+							K('#url').attr('src', url);
+							if (typeof fn == 'function') fn(url);
+							editor.hideDialog();
+						}
+					});
+				});
+			});
+		});
+	}
+
+	/* 颜色选择器 */
+	function getColorPicker(inputName, buttonId) {
+		KindEditor.ready(function(K) {
+			var colorpicker;
+			K('#'+buttonId).bind('click', function(e) {
+				e.stopPropagation();
+				if (colorpicker) {
+					colorpicker.remove();
+					colorpicker = null;
+					return;
+				}
+				var colorpickerPos = K('#'+buttonId).pos();
+				colorpicker = K.colorpicker({
+					x : colorpickerPos.x,
+					y : colorpickerPos.y + K('#'+buttonId).height(),
+					z : 19811214,
+					selectedColor : 'default',
+					noColor : '无颜色',
+					click : function(color) {
+						K('input[name="'+inputName+'"]').val(color);
+						colorpicker.remove();
+						colorpicker = null;
+					}
+				});
+			});
+			K(document).click(function() {
+				if (colorpicker) {
+					colorpicker.remove();
+					colorpicker = null;
+				}
+			});
+		});
+	}
+</script>
+<script type="text/javascript" language="javascript">
+	/* 确定执行删除操作 */
+	function getDelete(string) {
+		if (confirm(string)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/* 按钮点击提交到指定页面 */
+	function btnSubmit(form, url) {
+		$(form).attr('action', url).submit();
+	}
+</script>
+<script type="text/javascript">
+	var validate = {
+		title : false,
+		sort_id : false,
+        reward : false,
+		content : false
+	};
+	$(function(){
+		//js验证
+		var addArticle = $('form[name=addArticle]');
+		addArticle.submit(function(){
+			var isOk = validate.title && validate.sort_id && validate.reward;
+			if( isOk ){
+				return true;		
+			}
+			$('input[name=title]' , addArticle).trigger('blur');
+			$('select[name=sort_id]' , addArticle).trigger('blur');
+            $('select[name=reward]' , addArticle).trigger('blur');
+			return false; 
+		});
+		//验证标题
+		$('input[name=title]',addArticle).blur(function(){
+			var title = $(this).val();
+			var msgContent = $(this).next('.msgContent');
+			if(title == ''){
+				msg = '标题不能为空';
+				msgContent.html(msg).removeClass('none');
+				validate.title = false;
+				return;	
+			}else {
+				msg = '';
+				msgContent.html(msg).addClass('none');
+				validate.title = true;
+				return;	
+			}
+		}).keyup(function(){
+			$(this).triggerHandler('blur');	
+		});
+		//验证分类
+		$('select[name=sort_id]',addArticle).blur(function(){
+			var sort_id = $(this).val();
+			var msgContent = $(this).next('.msgContent');
+			if(sort_id == 0){
+				msg = '请选择分类';
+				msgContent.html(msg).removeClass('none');
+				validate.sort_id = false;
+				return;	
+			}else {
+				msg = '';
+				msgContent.html(msg).addClass('none');
+				validate.sort_id = true;
+				return;	
+			}
+		}).keyup(function(){
+			$(this).triggerHandler('blur');	
+		}).focus(function(){
+			$(this).triggerHandler('blur');	
+		});
+        //验证悬赏金币
+        $('select[name=reward]',addArticle).blur(function(){
+            var reward = $(this).val();
+            var msgContent = $(this).next('.msgContent');
+            if(reward == -1){
+                msg = '请选择悬赏的金币';
+                msgContent.html(msg).removeClass('none');
+                validate.reward = false;
+                return;
+            }else {
+                msg = '';
+                msgContent.html(msg).addClass('none');
+                validate.reward = true;
+                return;
+            }
+        }).keyup(function(){
+                    $(this).triggerHandler('blur');
+                }).focus(function(){
+                    $(this).triggerHandler('blur');
+                });
+	})
+</script>

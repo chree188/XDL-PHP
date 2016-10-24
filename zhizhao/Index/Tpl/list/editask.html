@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>编辑问题_支招网</title>
+    <link rel="Shortcut Icon" href="__IMG__/favicon.ico" type="image/x-icon"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link type="text/css" href="__STATIC__/Style/Css/base.css" rel="stylesheet" />
+    <link type="text/css" href="__CSS__/public.css" rel="stylesheet" />
+    <link type="text/css" href="__CSS__/list.css" rel="stylesheet" />
+    <include file="Common:head" />
+</head>
+<body>
+<div id="all">
+    <div id="header" class="mb20">
+        <!-- header start -->
+        <include file="Common:top" />
+        <!-- header end -->
+    </div>
+    <div id="page" class="mc  cls">
+        <!-- page start -->
+        <div class="leftBox fl">
+            <!--左边盒子开始-->
+            <div class="addBoxWrap">
+                <div class="addBox">
+                    <div class="addBoxTop">
+                        <div class="addBoxTopL fl"><img src="{@$userInfo.face@}" alt="" /></div>
+                        <div class="addBoxTopR fr">
+                            <h5>{@$userInfo.username@}</h5>
+                            <p>编辑问题</p>
+                        </div>
+                        <div class="cb"></div>
+                    </div>
+                    <div class="addBoxCon">
+                        <form action="{@:U(APP_NAME .'/List/handleEditAsk')@}" method="POST" name="addArticle">
+                            <input type="hidden" name="uid" value="{@:session('uid')@}">
+                            <input type="hidden" name="aid" value="{@$article.id@}">
+                            <ul>
+                                <li>
+                                    <span class="item3 fl"><b>*</b>标题</span>
+                                    <input type="text" name="title" class="text1 fl" value="{@$article.ask_name@}" />
+                                    <div class="msgContent fl none"></div>
+                                    <div class="cb"></div>
+                                </li>
+                                <li>
+                                    <span class="item3 fl"><b>*</b>分类</span>
+                                    <select name="sort_id" class="select">
+                                        <option value="0" <in name="article.sort_id" value="0">selected="selected"</in>>请选择分类</option>
+                                        <volist name="sortList" id="va">
+                                            <option value="{@$va.id@}" <in name="article.sort_id" value="$va.id">selected="selected"</in>>{@$va.sort_name@}</option>
+                                        </volist>
+                                    </select>
+                                    <div class="msgContent fl none"></div>
+                                    <div class="cb"></div>
+                                </li>
+                                <li>
+                                    <span class="item3 fl"><b>*</b>悬赏</span>
+                                    <select name="reward" class="select2">
+                                        <option value="-1" <in name="article.reward" value="-1">selected="selected"</in>>请选择悬赏金币( 当前金币 {@$userInfo.point@} )</option>
+                                        <option value="0" <elt name="userInfo['point']" value="0">disabled="disabled"</elt>  <in name="article.reward" value="0">selected="selected"</in>>0</option>
+                                        <option value="5" <elt name="userInfo['point']" value="5">disabled="disabled"</elt>  <in name="article.reward" value="5">selected="selected"</in>>5</option>
+                                        <option value="10" <elt name="userInfo['point']" value="10">disabled="disabled"</elt> <in name="article.reward" value="10">selected="selected"</in>>10</option>
+                                        <option value="15" <elt name="userInfo['point']" value="15">disabled="disabled"</elt> <in name="article.reward" value="15">selected="selected"</in>>15</option>
+                                        <option value="20" <elt name="userInfo['point']" value="20">disabled="disabled"</elt> <in name="article.reward" value="20">selected="selected"</in>>20</option>
+                                        <option value="30" <elt name="userInfo['point']" value="30">disabled="disabled"</elt> <in name="article.reward" value="30">selected="selected"</in>>30</option>
+                                        <option value="50" <elt name="userInfo['point']" value="50">disabled="disabled"</elt> <in name="article.reward" value="50">selected="selected"</in>>50</option>
+                                        <option value="100" <elt name="userInfo['point']" value="100">disabled="disabled"</elt> <in name="article.reward" value="100">selected="selected"</in>>100</option>
+                                    </select>
+                                    <div class="msgContent fl none"></div>
+                                    <div class="cb"></div>
+                                </li>
+                                <li>
+                                    <span class="item3 fl"><b>*</b>内容</span>
+                                    <textarea name="content" class="textarea2 fl" id="content">{@$article.content@}</textarea>
+                                    <script type="text/javascript" language="javascript">getEditor("content");</script>
+                                    <div class="msgContent fl none"></div>
+                                    <div class="cb"></div>
+                                </li>
+                                <li>
+                                    <span class="item3 fl"></span>
+                                    <input type="submit" value="提交" class="sub1 fl" />
+                                    <div class="cb"></div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--左边盒子结束-->
+        </div>
+        <div class="rightBox fr">
+            <!--右边盒子开始-->
+            <div class="tipBox">
+                <div class="tipTitle">编辑问题</div>
+                <div class="tipCon">
+                    <ul>
+                        <li>请完整输入问题的标题，悬赏，内容，并选择恰当的分类；</li>
+                        <li>乱发问题，干扰网站内容的用户，会受到文章删除，账号锁定的惩罚；</li>
+                    </ul>
+                </div>
+            </div>
+            <!--右边盒子结束-->
+        </div>
+        <div class="cb"></div>
+        <!-- page end -->
+    </div>
+    <div id="footer" class="mc cls">
+        <!-- footer start -->
+        <include file="Common:footer" />
+        <!-- footer end -->
+    </div>
+</div>
+</body>
+</html>

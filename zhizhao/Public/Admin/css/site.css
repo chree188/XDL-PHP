@@ -1,0 +1,5 @@
+/* CSS Document */
+.siteBox{width:98%; background:#FFFCED; border:1px solid #FEDBA1; margin:8px;}
+.siteBox .siteTitle{width:100%; background:url(../images/dlgtitle.gif) repeat-x left top; height:28px; line-height:28px; color:#3B5995; font-weight:bold; font-size:14px; font-family:宋体; margin-bottom:8px;} 
+.siteContent table{margin-left:14px;}
+.siteContent table td{padding:5px 0;}

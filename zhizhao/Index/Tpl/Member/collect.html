@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的金币_会员中心_支招网</title>
+<link rel="Shortcut Icon" href="__IMG__/favicon.ico" type="image/x-icon"/>
+<link type="text/css" href="__STATIC__/Style/Css/base.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/public.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/member.css" rel="stylesheet" />
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+</head>
+<body>
+<div id="all">
+  <div id="header" class="mb20"> 
+    <!-- header start --> 
+    <include file="Common:top" /> 
+    <!-- header end --> 
+  </div>
+  <div id="page" class="mc  cls"> 
+    <!-- page start -->
+    <div id="left">
+		<include file="Common:mleft" /> 
+    </div>
+    <div id="right">
+    	<div class="artcileBox">
+        	<div class="artcileTitle">
+                <h4>我的金币</h4>
+                <p style="font-size:13px; font-family: 微软雅黑; text-indent: 2em; ">您现在共有金币<font color="orange"> {@$userInfo.point@} </font></p>
+            </div>
+            <br/>
+            <div class="leveTitle">
+                <h5>金币获取</h5>
+            </div>
+            <div class="leveContent">
+                <table class="table">
+                    <tr>
+                        <th>操作</th>
+                        <th>获得金币数</th>
+                    </tr>
+                    <tr>
+                        <td>每天登录</td>
+                        <td>{@$Think.config.LEVEL_LOGIN@}</td>
+                    </tr>
+                    <tr>
+                        <td>发布文章</td>
+                        <td>{@$Think.config.LEVEL_ARTICLE@}</td>
+                    </tr>
+                    <tr>
+                        <td>评论</td>
+                        <td>{@$Think.config.LEVEL_COMMENT@}</td>
+                    </tr>
+                    <tr>
+                        <td>私信</td>
+                        <td>{@$Think.config.LEVEL_LETTER@}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="cb"></div>
+    <!-- page end --> 
+  </div>
+  <div id="footer" class="mc cls"> 
+    <!-- footer start --> 
+    <include file="Common:footer" /> 
+    <!-- footer end --> 
+  </div>
+</div>
+</body>
+</html>

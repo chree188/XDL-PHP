@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>flash+js音乐播放器-www.97zzw.com</title>
+<link href="Css/css.css" type="text/css" rel="stylesheet" />
+</head>
+<body style="background:#000;">
+<div id="player"></div>
+<div class="DreambackMusicPlayer">
+  <div id="MusicPlayer">
+    <div id="PlayBtn" class="play" title="暂停"></div>
+    <div id="PrevBtn" title="上一曲"></div>
+    <div id="NextBtn" title="下一曲"></div>
+    <div id="TimeBar"> <span id="CurTime">00:00</span>/<span id="TotalTime">00:00</span> </div>
+    <div id="FullProgressBar">
+      <div id="LoadProgressBar" style="width:0;"></div>
+      <div id="PlayProgressBar" style="width:0;"></div>
+      <div id="CurrentPlay" style="top:-5px;left:-10px;"></div>
+    </div>
+    <div id="SoundBtn"></div>
+    <div id="SoundBar">
+      <div id="CurSoundBar" style="width:25px;"></div>
+      <div id="CurSound" style="top:-7px;left:15px;"></div>
+    </div>
+    <a href="" target="_blank" id="DownLoadBtn" title="下载"></a> </div>
+  <div id="MusicList">
+    <ul>
+      <li>
+        <textarea>http://www.97zzw.com/mp3/together.mp3</textarea>
+       在一起</li>
+      <li>
+        <textarea>http://ting.baidu.com/data/music/file?link=http://zhangmenshiting.baidu.com/data2/music/1658207/15803401346727661.mp3?xcode=44001cdc1d2852c31d07286be822d843</textarea>
+        road trip-darin</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/城市稻草人.mp3</textarea>
+        城市稻草人</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/大城小爱.mp3</textarea>
+        大城小爱-王力宏</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/开不了口.mp3</textarea>
+        开不了口-周杰伦</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/恋人未满.mp3</textarea>
+        恋人未满-S.H.E</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/他一定很爱你.mp3</textarea>
+        他一定很爱你-阿杜</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/最熟悉的陌生人.mp3</textarea>
+        最熟悉的陌生人-萧亚轩</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/最炫民族风.mp3</textarea>
+        最炫民族风-凤凰组合</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/爱我别走.mp3</textarea>
+        爱我别走-张震岳</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/半糖主义.mp3</textarea>
+        半糖主义-S.H.E</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/城市稻草人.mp3</textarea>
+        城市稻草人</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/大城小爱.mp3</textarea>
+        大城小爱-王力宏</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/开不了口.mp3</textarea>
+        开不了口-周杰伦</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/恋人未满.mp3</textarea>
+        恋人未满-S.H.E</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/他一定很爱你.mp3</textarea>
+        他一定很爱你-阿杜</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/最熟悉的陌生人.mp3</textarea>
+        最熟悉的陌生人-萧亚轩</li>
+      <li>
+        <textarea>http://www.qinfu168.com/uploads/video/最炫民族风.mp3</textarea>
+        最炫民族风-凤凰组合</li>
+    </ul>
+    <div id="ListScrollBar" style="top:0;left:479px;"></div>
+  </div>
+</div>
+<script type="text/javascript" src="MusicPlay.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	MusicPlay.create('player','MusicPlay.swf');
+}
+</script>
+</body>
+</html>

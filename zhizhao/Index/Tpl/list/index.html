@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{@$pageTitle@}</title>
+<meta name="keywords" content="泰部落，泰语学习，泰语入门，泰语资料下载，泰语词汇阅读，泰国旅游攻略，游记分享，泰语问答交流"/>
+<meta name="description" content="泰部落，致力于打造成一个发现、分享只关于泰语学习，泰国旅游的社区。"/>
+<link type="text/css" href="__STATIC__/Style/Css/base.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/public.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/list.css" rel="stylesheet" />
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="__STATIC__/Jquery-tabs/jquery.tabs.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.recommendBox').tabs({
+			togger : '.recommendTitle li',  //触发器class
+			toggerFocus : 'currentRec',  //触发器焦点class
+			tabs : '.recommendCon li',  //选项卡class，支持多选项卡操作，选项卡间用",'分隔
+			toggerMode : 'mouseenter',  //触发模式，默认为click，可以填入jQuery事件名称
+			defaultTabs : '0'  //默认开启选项卡，默认开启第一个
+		});
+	});
+</script>
+</head>
+<body>
+<div id="all">
+	<div id="header">
+		<include file="Common:top" />
+    </div>
+    <div id="page" class="mc  cls mt20">
+    	<!--page开始-->
+        <div class="bannerList mb20"><img src="{@$listBanner@}" alt="banner" /></div>
+		<div class="leftBox fl">
+			<div class="sortBox">
+            	<a href="__APP__/list/index/sid/{@$Think.get.sid@}/sort/1.html" title="最新" <eq name="Think.get.sort" value="1">class="currentSort"</eq>>最新</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="__APP__/list/index/sid/{@$Think.get.sid@}/sort/2.html" title="最悬赏" <eq name="Think.get.sort" value="2">class="currentSort"</eq>>最悬赏</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="__APP__/list/index/sid/{@$Think.get.sid@}/sort/3.html" title="最支招" <eq name="Think.get.sort" value="3">class="currentSort"</eq>>最支招</a>
+            </div>
+            <div class="listBox">
+            	<ul>
+                    <volist name="askList" id="va" empty="该栏目还没有人求支招">
+                	    <li>
+                            <a href="__APP__/List/detail/id/{@$va.id@}.html" title="{@$va.ask_name@}">{@$va.ask_name|msubstr=0,28@}</a>
+                            <span class="otherItem">{@$va.comment_num@}人支招&nbsp;&nbsp;{@$va.username@}&nbsp;&nbsp;{@$va.add_time|time_format@}</span>
+                       </li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="fpageBox">
+            	{@$page@}
+            </div>
+        </div>
+		<div class="rightBox fr">
+        	<include file="Common:right" />
+        </div>
+        <div class="cb"></div>
+        <!--page结束-->
+    </div>
+    <div id="footer">
+		<include file="Common:footer" />
+    </div>
+</div>
+</body>
+</html>

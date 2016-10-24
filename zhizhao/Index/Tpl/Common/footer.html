@@ -1,0 +1,41 @@
+<div class="footerCon mc cls">
+  <div class="linkBox fl">
+    <div class="linkTitle">
+      <h4>友情链接</h4>
+    </div>
+    <div class="linkCon">
+      <ul>
+          <volist name="linkList" id="va">
+             <li><a href="{@$va.link_url@}" title="{@$va.link_name@}" target="_blank">{@$va.link_name@}</a></li>
+          </volist>
+      </ul>
+    </div>
+  </div>
+  <div class="aboutBox fl">
+    <div class="aboutTitle">
+      <h4>关于我们</h4>
+    </div>
+    <div class="aboutCon">
+      <p>{@$aboutUs|strip_tags@}</p>
+    </div>
+  </div>
+  <div class="weixinBox fl">
+    <div class="weixinTitle">
+      <h4>扫码关注微信</h4>
+    </div>
+    <div class="weixinCon"> <img src="{@$weixin@}" alt="微信" /> </div>
+  </div>
+  <div class="cb"></div>
+</div>
+<div class="copyBox">
+  <div class="copyCon mc cls"> Copyright © 2014 {@$siteInfo.site_name@} All Rights Reserved-{@$siteInfo.icp@} </div>
+</div>
+<script type="text/javascript" src="__STATIC__/Gototop/gotoTop.js"></script>
+<script type="text/javascript">
+	$(function(){
+	    $(".backToTop").goToTop(); 
+			$(window).bind('scroll resize',function(){ 
+				$(".backToTop").goToTop(); 
+		}); 
+	});
+</script>

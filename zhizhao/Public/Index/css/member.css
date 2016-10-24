@@ -1,0 +1,249 @@
+/* CSS Document */
+#left {
+    width: 220px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+#left .userinfo {
+    width: 198px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    padding: 10px;
+    border: 1px solid #EEE;
+    background: #FFF;
+    border-bottom: none;
+}
+#left .userinfo dl {
+    width: 198px;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #DFDFDF;
+    text-align: left;
+}
+#left .userinfo dl dt {
+    float: left;
+    width: 48px;
+    height: 58px;
+    margin-right: 20px;
+    padding: 5px 0;
+}
+#left .userinfo dl dd {
+    width: 128px;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+    font-size: 12px;
+    color: #111;
+}
+#left .userinfo dl dd a { color:#454545; font-size:10px; font-family:微软雅黑;  }
+#left .userinfo dl dd a:hover { color:#0AB18F; }
+#left .userinfo dl .username{
+    color: #111;
+	font-size: 14px;
+	padding-bottom:4px;
+    text-decoration: none;
+}
+#left .userinfo table {
+    width: 198px;
+    height: 28px;
+    margin: 5px 0;
+}
+#left .userinfo table td {
+    text-align: center;
+    color: #111;
+    border-right: 1px dotted #DFDFDF;
+}
+#left .userinfo table tr .last {
+    border: none;
+}
+#left .userinfo table td a {
+    color:#13a4fe;
+	font-size:10px;
+	font-family:微软雅黑; 
+}
+#left .userinfo table td a:hover {
+	text-decoration:none; 
+	color:#13a4fe;
+}
+
+#left ul {
+	width: 220px;
+	height: auto;
+	overflow: hidden;
+	margin-top: 20px;
+	background: #FFF;
+	border-bottom: 1px solid #DFDFDF;
+}
+#left ul li {
+	width: 218px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 3em;
+	/*background: url(../images/member_icon.jpg) no-repeat;*/
+	border-left: 1px solid #DFDFDF;
+	border-right: 1px solid #DFDFDF;
+}
+#left ul li a:hover { text-decoration:underline; color:#13a4fe; }
+#left ul .mysetup {
+	background-position: 25px 10px;
+}
+#left ul .myarticle {
+	background-position: 25px -26px;
+}
+#left ul .mymessage {
+	background-position: 25px -60px;
+}
+#left ul .myletter {
+	background-position: 25px -96px;
+}
+#left ul .mycollect {
+	background-position: 25px -134px;
+}
+#left ul .cur {
+	width : 219px;
+	height: 34px;
+	line-height: 34px;
+	border-right: none;
+	background-color: #fff;
+	border-top: 1px solid #DFDFDF;
+	border-bottom: 1px solid #DFDFDF;
+}
+#left ul .cur a{
+	color: #13a4fe;
+}
+#left ul li a{
+	color: #111;
+}
+#right {
+    width: 710px;
+    height: auto;
+    overflow: hidden;
+    float: right;
+    background: url(../Images/member-bg.png) no-repeat;
+    padding: 10px 20px;
+	min-height:880px;
+    text-align: left;
+}
+/*表单共用样式*/
+.sub1 {	width: 80px; height: 28px; line-height: 28px; background: #13a4fe; border: 1px solid #13a4fe; border-radius: 4px; cursor: pointer; color: #fff; }
+.sub2 {	width: 80px; height: 24px; line-height: 24px; background: #13a4fe; border: 1px solid #13a4fe;cursor: pointer; color: #fff; }
+.text1 { width:220px; height:12px; padding:6px 0 6px 4px; border:1px solid #BDBDBD;}
+.text2 { width:280px; height:12px; padding:6px 0 6px 4px; border:1px solid #BDBDBD;}
+.textarea1 { width:280px; height:60px; overflow-x:hidden; resize:none; border:1px solid #BDBDBD; font-size:14px; font-family:微软雅黑; color:#333; }
+/*账户信息设置*/
+.setup_title { width:710px; margin-bottom:18px; }
+.setup_title h4 { width:682px; background:url(../images/member_icon2.jpg) no-repeat left center; padding-left:28px; font-weight:normal; font-size:15px; color:#111; font-family:微软雅黑; }
+.setup_tab { width:710px; }
+.setup_tab_title { width:710px; height:35px;  border-bottom: 1px solid #EEE; margin-bottom:20px;}
+.setup_tab_title ul { width:710px; }
+.setup_tab_title ul li { width:108px; float:left; text-align:center; height:34px; line-height:34px; border: 1px solid #EEE;  margin-right:5px; cursor:pointer; background:#FBFBFB; font-size:14px; font-family:微软雅黑; color:#111;   }
+.setup_tab_title ul li.current { border-bottom:1px solid #FFF; background:#FFF; color:#13a4fe;}
+.setup_tab_title ul li:hover { color:#13a4fe; background:#FFF; }
+.setup_tab_con { width:700px; padding:0 5px; }
+.setup_tab_con ul { width:700px; }
+.setup_tab_con ul li { width:700px; }
+.setup_tab_con ul li .messageBox { width:550px; margin:0 auto;  }
+.setup_tab_con ul li .messageBox dl { width:550px; }
+.setup_tab_con ul li .messageBox dl dd { width:550px; font-size:14px; font-family:微软雅黑; color:#333; padding:10px 0;}
+.setup_tab_con ul li .avatarBox { width:500px; margin:0 auto;}
+.setup_tab_con ul li .avatarBox .editFace { width:500px; padding-top: 10px;}
+.setup_tab_con ul li .avatarBox .editFace img { padding-bottom:25px; }
+.setup_tab_con ul li .avatarBox .editFace p { padding-bottom:25px;  }
+.setup_tab_con ul li .passwordBox { width:500px; margin:0 auto;}
+.setup_tab_con ul li .passwordBox dl { width:500px; padding-top:20px;  }
+.setup_tab_con ul li .passwordBox dl dd{ width:500px; padding-bottom:10px;   }
+.setup_tab_con ul li .passwordBox dl dd .item1 { width:88px; height:30px; display:inline-block; text-align:right; font-size:14px; font-family:微软雅黑; }
+.setup_tab_con ul li .leveBox { width:650px; margin:0 auto; }
+.setup_tab_con ul li .leveBox  .title { width:650px; height:30px; line-height:30px; color:#333;  font: 15px/1.5 '微软雅黑';}
+.setup_tab_con ul li .leveBox .con { width:650px; height:30px; line-height:30px; color:#454545; font: 14px/1.5 '微软雅黑'; margin-bottom:8px; }
+.setup_tab_con ul li .leveBox .con .orange { color:#0AB18F; padding:0 4px; }
+.setup_tab_con ul li .leveBox .leveTitle { width:650px; margin-bottom:15px;  }
+.setup_tab_con ul li .leveBox .leveTitle h5 { width:60px; border-bottom:1px solid #0AB18F; font-weight:normal;color:#333;  font: 15px/1.5 '微软雅黑';}
+.setup_tab_con ul li .leveBox .leveContent { width:650px; }
+.setup_tab_con ul li .leveBox .table { width:100%; }
+.setup_tab_con ul li .leveBox .table th,.setup_tab_con ul li .leveBox .table td { width:325px; height:30px; line-height:30px; text-align:center; border:1px solid #E0E0E0}
+.setup_tab_con ul li .leveBox .table th { background:#F8F8F8; color:#333; font: 14px/1.5 '微软雅黑'; }
+.setup_tab_con ul li .leveBox .table td { color:#454545; font-size:13px; font-family:微软雅黑; }
+.setup_tab_con ul li .leveBox .table tr.dangqian { background:#FFFEF1;  }
+.setup_tab_con ul li .leveBox .table tr.dangqian td span {font-size:14px; font-family:微软雅黑; }
+span.modifyName { width:75px; height:18px; padding:4px 6px; background:#13a4fe; color:#FFF; font-size:13px; font-family:微软雅黑; cursor:pointer; margin-left:80px; text-align:center; vertical-align:middle;}
+span.modifyInt{ width:75px; height:18px; padding:4px 6px; background:#13a4fe; color:#FFF; font-size:13px; font-family:微软雅黑; cursor:pointer; margin-left:80px; margin-top:12px;  display:inline-block; text-align:center; vertical-align:middle; }
+/*修改用户名弹出框*/
+#popName { width:350px; height: auto; overflow: hidden; position: absolute; z-index: 999; background: #FFF; border:4px solid #DFDFDF; padding-left:4px;}
+#popName  .popNameTitle { width:350px; height:30px; line-height:30px; margin-bottom:12px; background:#F9F9F9; border-bottom:1px solid #F5F5F5; }
+#popName  .popNameTitle p { display:inline; color:#111; font-family:微软雅黑; font-size:14px; text-align:left; }
+a.close-window { width:30px; height:24px; display:inline-block; background:url(../images/close.png) no-repeat left top; text-indent:-9999px; text-align:right; position:absolute; z-index:30; right:2px; bottom:2px; }
+a.close-window:hover { background:url(../images/close.png) no-repeat right top;}
+.popNameCon { width:350px; background:#FDFDFD; }
+.popNameCon table { width:100%; }
+.popNameCon table td { padding:10px 0; color:#333; font-size:14px; font-family:微软雅黑;}
+/*修改个性签名弹出框*/
+#popintr { width:350px; height: auto; overflow: hidden; position: absolute; z-index: 999; background: #FFF; border:4px solid #DFDFDF; padding-left:4px;}
+#popintr .popintrTitle { width:350px; height:30px; line-height:30px; margin-bottom:12px; background:#F9F9F9; border-bottom:1px solid #F5F5F5; }
+#popintr .popintrTitle p { display:inline; color:#111; font-family:微软雅黑; font-size:14px; text-align:left; }
+.popintrCon { width:350px; background:#FDFDFD; }
+.popintrCon table { width:100%; }
+.popintrCon table td { padding:10px 0; color:#333; font-size:14px; font-family:微软雅黑;}
+/*我的文章*/
+.artcileBox { width:710px; }
+.artcileTitle { width:710px; height:32px; line-height:32px; margin-bottom:15px; }
+.artcileTitle h4 { color:#111; font-size:15px; font-family:微软雅黑; font-weight:500;  }
+.article_tab { width:710px; }
+.article_tab_title { width:710px; height:35px;  border-bottom: 1px solid #EEE; margin-bottom:20px;}
+.article_tab_title ul { width:710px; }
+.article_tab_title ul li { width:108px; float:left; text-align:center; height:34px; line-height:34px; border: 1px solid #EEE;  margin-right:5px; cursor:pointer; background:#FBFBFB; }
+.article_tab_title ul li a { width:108px; display:inline-block; font-size:14px; font-family:微软雅黑; color:#111;}
+.article_tab_title ul li.current { border-bottom:1px solid #FFF; background:#FFF;}
+.article_tab_title ul li.current a { color:#13a4fe;}
+.article_tab_title ul li a:hover { color:#13a4fe; background:#FFF; }
+.article_tab_con { width:710px; }
+.article_tab_con ul { width:710px; }
+.article_tab_con ul li{ width:710px; padding:5px 0; position:relative; z-index:10;  }
+.article_tab_con ul li a { color:#333; font-size:14px; font-family:微软雅黑; }
+.article_tab_con ul li a:hover { text-decoration:underline; color:#666;  }
+.article_tab_con ul li .date { position:absolute; right:0; bottom:0; font-size:14px; font-family:微软雅黑; color:#777; }
+/*评论消息*/
+.comment_tab_con { width:710px; }
+.comment_tab_con ul { width:710px; }
+.comment_tab_con ul li { width:710px; padding-bottom:12px; border-bottom:1px solid #EEE; margin-bottom:15px; }
+.comment_tab_con ul li .imgBox { width:44px; height:44px; }
+.comment_tab_con ul li .imgBox img { width:44px; height:44px; }
+.comment_tab_con ul li .textBox { width:655px; height:auto; color:#111; font-size:13px; font-family: "Microsoft yahei","Century Gothic";}
+.comment_tab_con ul li .textBox a { color:#F63; font-size:14px; font-family: "Microsoft yahei","Century Gothic";}
+.comment_tab_con ul li .textBox a:hover { padding-left:2px; text-decoration:underline; }
+/*私信信息*/
+.letter_tab_con { width:710px; }
+.letter_tab_con ul { width:710px; }
+.letter_tab_con ul li { width:710px; padding-bottom:12px; border-bottom:1px solid #EEE; margin-bottom:15px; }
+.letter_tab_con ul li .imgBox { width:44px; height:44px; }
+.letter_tab_con ul li .imgBox img { width:44px; height:44px; }
+.letter_tab_con ul li .textBox { width:655px; height:auto; color:#111; font-size:13px; font-family: "Microsoft yahei","Century Gothic";}
+.letter_tab_con ul li .textBox a { color:#F63; font-size:14px; font-family: "Microsoft yahei","Century Gothic";}
+.letter_tab_con ul li .textBox a:hover { padding-left:2px; text-decoration:underline; }
+/*私信详情内容*/
+.letterContent { width:710px; }
+.letterContent table { width:100%; font-size:14px; font-family: "Microsoft yahei","Century Gothic";}
+.letterContent table td { padding-bottom:12px; }
+.letterContent table td.tdLeft { width:80px; text-align:left; }
+.letterContent table td.tdRight .replyLetter { width:80px; height:20px; padding:5px 12px; display:inline-block; background:#EC6941; color:#FFF; text-align:center;  }
+.letterContent table td.tdRight .replyLetter:hover { background:#13a4fe; }
+
+.fpage { width:710px; padding-top:30px; text-align:center; }
+.fpage a { color:#484848; font-size:14px; padding:2px 10px; display:inline-block; background:#FFF; margin-right:5px; border:1px solid #DDD; border-radius:4px;  }
+.fpage .current { color:#FFF; font-size:14px; padding:2px 10px; display:inline-block; background:#0DA4D3; margin-right:5px; border-radius:4px; }
+.fpage a:hover { color:#FFF; background:#0DA4D3; }
+a.deleteRead { color:#13a4fe; font-size:14px; font-family: "Microsoft yahei","Century Gothic";}
+a.deleteRead:hover { text-decoration:underline;}
+
+.artcileBox .leveTitle { width:650px; margin-bottom:15px;  }
+.artcileBox .leveTitle h5 { width:60px; border-bottom:1px solid #0AB18F; font-weight:normal;color:#333;  font: 15px/1.5 '微软雅黑';}
+.artcileBox .leveContent { width:650px; }
+.artcileBox .table { width:100%; }
+.artcileBox .table th,.artcileBox .table td { width:325px; height:30px; line-height:30px; text-align:center; border:1px solid #E0E0E0}
+.artcileBox .table th { background:#F8F8F8; color:#333; font: 14px/1.5 '微软雅黑'; }
+.artcileBox .table td { color:#454545; font-size:13px; font-family:微软雅黑; }

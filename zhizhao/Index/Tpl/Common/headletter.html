@@ -1,0 +1,23 @@
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/kindeditor.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/lang/zh_CN.js"></script>
+<script type="text/javascript" language="javascript">
+/* 编辑器配置 */
+
+	/* 富文本编辑器（不带分隔符） */
+	function getEditor(textareaName) {
+		KindEditor.ready(function(K) {
+			var editor = K.create('textarea[name="'+textareaName+'"]', {
+				allowFileManager : false,
+				minWidth : 400,
+				minHeight : 220,
+				items : [
+					 'fontsize','forecolor','fontname', 'formatblock', 'bold',
+					'italic', 'underline', 'link', '|', 'image', 
+					'hr','justifyleft', 'justifycenter', 'justifyright',
+
+				]
+			});
+		});
+	}
+</script>

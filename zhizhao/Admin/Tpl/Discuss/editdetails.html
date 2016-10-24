@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/www.w3.org/1999/xhtml">
+<head>
+<title>编辑详情</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/basic.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/discuss.css" rel="stylesheet" type="text/css" />
+<link href='__STATIC__/editor/themes/default/default.css' rel='stylesheet' type='text/css' />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/kindeditor.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/lang/zh_CN.js"></script>
+<script type="text/javascript" language="javascript">
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('#contentid');
+		K('#uploadid').click(function() {
+			editor.loadPlugin('image', function() {
+				editor.plugin.imageDialog({
+					imageUrl : K('#picid').val(),
+					clickFn : function(url, title, width, height, border, align) {
+						K('#picid').val(url);
+						editor.hideDialog();
+							}
+						});
+					});
+				});
+	});
+</script>
+</head>
+<body leftmargin="8" topmargin="8" background='__IMG__/allbg.gif'>
+    <!--快捷操作导航开始-->
+    <div class="kuaijie">
+        <div class="kuaijieTitle">&nbsp;栏目快捷操作</div>
+        <div class="caozuo">
+        	&nbsp;&nbsp;<a href="{@:U(APP_NAME .'/Discuss/sortlist')@}" title="" class="kjsort" target="main">栏目分类管理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<a href="{@:U(APP_NAME .'/Discuss/detailslist')@}" title="" class="kjcontent" target="main">栏目详情管理</a>
+        </div>
+    </div>
+    <!--快捷操作导航结束-->
+    <div class="art_list_title">
+    	<div class="sort_left">&nbsp;栏目详情管理--编辑图文</div>
+    </div>
+    <div class="addsort_content">
+    	<form action="{@:U(APP_NAME.'/Discuss/editdetails')@}" method="POST">
+        	<input type="hidden" name="id" value="{@$id@}">
+        	<table>
+            	<tr>
+                	<td>图文名称：</td>
+                    <td>{@$data.discuss_name@}</td>
+                </tr>
+                <tr>
+                    <td class="tl">所属分类：</td>
+                    <td>
+						<php>
+                        	if($data["sort_id"] == 1){
+                            	echo '泰学习';
+                           	}else if($data['sort_id'] == 2){
+                            	echo '泰旅游';
+                           	}else if($data['sort_id'] == 3){
+                            	echo '泰娱乐';
+                            }else if($data['sort_id'] == 4){
+                            	echo '泰生活';
+                           	}else if($data['sort_id'] == 5){
+                            	echo '泰职场';
+                            }else if($data['sort_id'] == 6){
+                            	echo '泰招聘';
+                            }else if($data['sort_id'] == 7){
+                            	echo '泰YY';
+                            }
+                            
+                        </php>
+                    </td>
+                </tr>
+                <tr>
+                	<td>图文状态：</td>
+                    <td>
+                    	<input type="radio" name="status" value="1" <in name="data.status" value="1">checked="checked"</in> />&nbsp;启用&nbsp;
+                        <input type="radio" name="status" value="0" <in name="data.status" value="0">checked="checked"</in> />&nbsp;禁用&nbsp;
+                        <span class="note">* 图文被禁用以后，前台将不会显示该条图文</span>
+                    </td>
+                </tr>
+                <tr>
+                	<td>是否设置为推荐：</td>
+                    <td>
+                    	<input type="radio" name="tags" value="1" <in name="data.tags" value="1">checked="checked"</in> />&nbsp;启用&nbsp;
+                        <input type="radio" name="tags" value="0" <in name="data.tags" value="0">checked="checked"</in> />&nbsp;未启用&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                	<td colspan="2" align="center"><input type="submit" value="保存添加" class="input1w70" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

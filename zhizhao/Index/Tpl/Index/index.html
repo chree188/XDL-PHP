@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页-支招网</title>
+<meta name="keywords" content="泰部落，泰语学习，泰语入门，泰语资料下载，泰语词汇阅读，泰国旅游攻略，游记分享，泰语问答交流"/>
+<meta name="description" content="泰部落，致力于打造成一个发现、分享只关于泰语学习，泰国旅游的社区。"/>
+<link type="text/css" href="__STATIC__/Style/Css/base.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/public.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/index.css" rel="stylesheet" />
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="__STATIC__/Jquery-hy_slide/Js/jquery-hy_slide.js"></script>
+<script type="text/javascript" src="__STATIC__/Jquery-tabs/jquery.tabs.js"></script>
+<script type="text/javascript" src="__JS__/index.js"></script>
+</head>
+<body>
+<div id="all">
+	<div id="header">
+		<include file="Common:top" />
+    </div>
+    <div id="page" class="mc  cls mt20">
+    	<!--page开始-->
+		<div class="leftBox fl">
+            <div class="bannerBox">
+        	<!--焦点图开始-->
+            	<div class="focusBox">
+                	<ul class="hySlideContent">
+                        <volist name="indexFocus" id="va">
+                       	  <li><a href="{@$va.ad_url@}" title="{@$va.ad_explain@}"><img src="{@$va.ad_pic@}" alt="{@$va.ad_explain@}" /></a></li>
+                        </volist>
+                    </ul>
+                </div>
+                <div class="triggerBox">
+					<div class="triggerbtn1">←</div>
+                    <div class="triggerbtn2">→</div>
+                </div>
+                <div class="description">
+                    <span class="des_content"><a href="{@$va.ad_url@}" title="" target="_blank">{@$indexFocus[0]['ad_explain']@}</a></span>
+                </div>
+            <!--焦点图结束-->
+            </div>
+        	<div class="noAnswer">
+            	<!--待解决问题盒子开始-->
+                <div class="title">
+                	<div class="titleLeft fl">
+                    	<h3>待解决的问题</h3>
+                    </div>
+                    <div class="titleRight fr hidden">
+                    	<a href="" title="">更多. . .</a>
+                    </div>
+                    <div class="cb"></div>
+                </div>
+                <div class="noAnswerList">
+                	<ul>
+                        <volist name="noAnswerList" id="va">
+                            <li><a href="__APP__/List/index/sid/{@$va.sort_id@}/sort/1.html" style="color:#348fd5;">[ {@$va.sort_name@} ] </a><a href="__APP__/List/detail/id/{@$va.id@}.html" title="{@$va.ask_name@}">{@$va.ask_name|msubstr=0,24@}</a><span class="other">{@$va.username@}&nbsp;&nbsp;&nbsp;&nbsp;{@$va.comment_num@}人支招&nbsp;&nbsp;&nbsp;&nbsp;{@$va.add_time|time_format@}</span></li>
+                        </volist>
+                    </ul>
+                </div>
+                <!--待解决问题盒子结束-->
+            </div>
+            <div class="pointBox">
+            	<!--悬赏最高开始-->
+                <div class="title">
+                	<div class="titleLeft fl">
+                    	<h3>悬赏最高</h3>
+                    </div>
+                    <div class="titleRight fr hidden">
+                    	<a href="" title="">更多. . .</a>
+                    </div>
+                    <div class="cb"></div>
+                </div>
+                <div class="pointList">
+                	<ul>
+                        <volist name="rewardList" id="va">
+                            <li><a href="__APP__/List/index/sid/{@$va.sort_id@}/sort/1.html" style="color:#348fd5;">[ {@$va.sort_name@} ] </a><a href="__APP__/List/detail/id/{@$va.id@}.html" title="{@$va.ask_name@}">{@$va.ask_name|msubstr=0,24@}</a><span class="other">{@$va.username@}&nbsp;&nbsp;&nbsp;&nbsp;{@$va.comment_num@}人支招&nbsp;&nbsp;&nbsp;&nbsp;{@$va.add_time|time_format@}</span></li>
+                        </volist>
+                    </ul>
+                </div>
+                <!--悬赏最高结束-->
+            </div>
+        </div>
+		<div class="rightBox fr">
+        	<!--未登录时 显示的的登录盒子-->
+            <div class="loginGo pr none">
+            	<form action="" method="post">
+                	<input type="text" name="username" class="loginText mb15" />
+                    <input type="password" name="password"  class="loginText mb15" />
+                    <input type="submit" name="sub" class="loginBtn" value="登 录" />
+                    <a href="" class="registerGo">现在注册→</a>
+                </form>
+            </div>
+        	<include file="Common:right" />
+        </div>
+        <div class="cb"></div>
+        <!--page结束-->
+    </div>
+    <div id="footer">
+		<include file="Common:footer" />
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" href="__CSS__/basic.css" type="text/css" />
+<link href="__CSS__/style.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/menu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/leftmenu.js"></script>
+<base target="main" />
+</head>
+
+<body target="main">
+<table width="180" align="left" border='0' cellspacing='0' cellpadding='0' style="text-align:left;">
+  <tr>
+    <td valign='top' style='padding-top:10px' width='20'><a id='link1' class='mmac'>
+      <div onclick="ShowMainMenu(1)">核心</div>
+      </a> <a id='link2' class='mm'>
+      <div onclick="ShowMainMenu(2)">用户</div>
+      </a> <a id='link3' class='mm'>
+      <div onclick="ShowMainMenu(3)">系统</div>
+      </a> <a id='link4' class='mm'>
+      <div onclick="ShowMainMenu(4)">其他</div>
+      </a>
+      <div class='mmf'></div></td>
+    <td width='160' id='mainct' valign="top"><!--核心开始-->
+      
+      <div id='ct1'>
+        <dl class='bitem' id='sunitems1_1'>
+          <dt onClick='showHide("items1_1")'><b>核心栏目操作</b></dt>
+          <dd style='display:block' class='sitem' id='items1_1'>
+            <ul class='sitemu'>
+        	  <li><a href='{@:U(APP_NAME .'/Ask/sortlist')@}' target='main'>网站分类详情</a> </li>
+            </ul>
+          </dd>
+        </dl>
+        <dl class='bitem' id='sunitems2_1'>
+          <dt onClick='showHide("items2_1")'><b>常用功能操作</b></dt>
+          <dd style='display:block' class='sitem' id='items2_1'>
+            <ul class='sitemu'>
+              <li>
+                <div class='items'>
+                  <div class='fllct'><a href='{@:U(APP_NAME .'/Ad/sortlist')@}' target='main'>广告管理</a></div>
+                </div>
+              </li>
+              <li>
+                <div class='items'>
+                  <div class='fllct'><a href='__APP__/Link/detailslist' target='main'>友情链接</a></div>
+                </div>
+              </li>
+              <li>
+                <div class='items'>
+                  <div class='fllct'><a href='__APP__/Single/singlelist' target='main'>单页管理</a></div>
+                </div>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      
+      <!--核心结束--> 
+      
+      <!--用户开始-->
+      
+      <div id='ct2' style="display:none">
+        <dl id="sunitems1_2" class="bitem">
+          <dt onclick="showHide('items1_2')"><b>后台管理员管理</b></dt>
+          <dd id="items1_2" class="sitem">
+            <ul class="sitemu">
+              <li><a target="main" href="{@:U(APP_NAME .'/Admin/adminlist')@}">管理员列表</a> </li>
+              <li><a target="main" href="{@:U(APP_NAME .'/Admin/addadmin')@}">添加后台管理员</a> </li>
+            </ul>
+          </dd>
+        </dl>
+        <dl id="sunitems1_5" class="bitem">
+          <dt onclick="showHide('items1_5')"><b>会员管理</b></dt>
+          <dd id="items1_5" class="sitem">
+            <ul class="sitemu">
+              <li><a target="main" href="{@:U(APP_NAME .'/Admin/memberlist')@}">会员列表</a> </li>
+              <li><a target="main" href="{@:U(APP_NAME .'/Admin/memberpoint')@}">积分奖励规则</a> </li>
+              <li><a target="main" href="{@:U(APP_NAME .'/Admin/memberlevel')@}">经验级别规则</a> </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      
+      <!--用户结束--> 
+      
+      <!--系统开始-->
+      
+      <div id='ct3' style="display:none">
+        <dl id="sunitems1_3" class="bitem">
+          <dt onclick="showHide('items1_3')"><b>系统操作</b></dt>
+          <dd id="items1_3" class="sitem">
+            <ul class="sitemu">
+              <li><a target="main" href="{@:U(APP_NAME .'/Site/site')@}">站点设置</a> </li>
+              <li><a target="main" href="{@:U(APP_NAME .'/Index/clearcache')@}" target="main">清理缓存</a>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      
+      <!--系统结束-->
+      <!--其他 开始-->
+      
+<!--      <div id='ct4' style="display:none">
+        <dl id="sunitems1_4" class="bitem">
+          <dt onclick="showHide('items1_4')"><b>其他操作</b></dt>
+          <dd id="items1_4" class="sitem">
+            <ul class="sitemu">
+              <li><a target="main" href="__APP__/Config/index">测试1</a> </li>
+              <li><a target="main" href="__APP__/Clearcache/index">测试2</a>
+              <li><a target="main" href="__APP__/Backupdata/index">测试3</a>
+              <li><a target="main" href="__APP__/Restoredata/index">测试4</a> </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+-->      
+      <!--其他结束-->
+      </td>
+  </tr>
+  <tr>
+    <td width='26'></td>
+    <td width='160' valign='top'><img src='__IMG__/idnbgfoot.gif' /></td>
+  </tr>
+</table>
+</body>
+</html>

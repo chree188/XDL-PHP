@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{@$askCon.ask_name@}_支招网</title>
+<link rel="Shortcut Icon" href="__IMG__/favicon.ico" type="image/x-icon"/>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<link type="text/css" href="__STATIC__/Style/Css/base.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/public.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/detail.css" rel="stylesheet" />
+<link type="text/css" href="__STATIC__/jNotify/jNotify.jquery.css" rel="stylesheet" />
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="__STATIC__/Jquery-tabs/jquery.tabs.js"></script>
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery.autogrow.js"></script>
+<script type="text/javascript">
+    var CONTROL = "__APP__/List/";
+    var ArticleId = "{@$askCon.id@}";
+    var UserId = "{@:session('uid')@}";
+</script>
+<script type="text/javascript" src="__JS__/detail.js"></script>
+</head>
+<body>
+<div id="all">
+  <div id="header" class="mb20"> 
+    <!-- header start --> 
+    <include file="Common:top" /> 
+    <!-- header end --> 
+  </div>
+  <div id="page" class="mc  cls"> 
+    <!-- page start -->
+    <div class="leftBox fl"> 
+      <!--左边盒子开始-->
+      <div class="titleBox">
+        <h2>{@$askCon.ask_name@}</h2>
+        <p><a href="">{@$askCon.username@}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布于：{@$askCon.add_time|time_format@}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;被围观：{@$askCon.click_number@} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;悬赏：<font color="#F30">{@$askCon.reward@}</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<if condition="isset($_SESSION['uid']) && isset($_SESSION['username']) && $_SESSION['uid'] eq $askCon['uid']"><a href="{@:U(APP_NAME.'/List/editAsk/',array('id'=>$askCon['id']))@}" class="editA">[&nbsp;编辑&nbsp;]</a></if></p>
+      </div>
+      <div class="contentBox">
+        {@$askCon.content@}
+      </div>
+      <!--采纳最佳答案盒子-->
+        <notempty name="bestList">
+       <div class="bestBox">
+         <div class="bestTitle"><h4>最佳支招</h4></div>
+         <div class="bestCon">
+             <div class="bestConL fl">
+                <img src="{@$bestList.face@}" alt="{@$bestList.username@}" />
+             </div>
+             <div class="bestConR fr">
+                <div class="bestConRTop"><span class="username">{@$bestList.username@}</span><span class="date">{@$bestList.time|time_format@}</span></div>
+                <div class="bestConRCon">
+                    {@$bestList.comment@}
+                </div>
+             </div>
+             <div class="cb"></div>
+         </div>
+      </div>
+      </notempty>
+      <!--评论盒子-->
+      <div class="commentBox">
+        <div class="commentTitle">支招（{@$askCon.comment_num@}人）</div>
+        <div class="commentCon" id="commentList">
+        <notempty name="commentList">
+            <!--评论列表开始-->
+            <ul>
+            	<volist name="commentList" id="va">
+                  <li class="commentParent">
+                    <div class="imgBox fl"><a href="__APP__/User/index/uid/{@$va.comment_uid@}.html"><img src="{@$va.comment_face@}" alt="" /></a></div>
+                    <div class="textBox fr">
+                      <p class="name"><a href="__APP__/User/index/uid/{@$va.comment_uid@}.html">{@$va.comment_username@}</a></p>
+                      <p class="word">{@$va.comment@}</p>
+                      <p class="other">{@$va.time|time_format@} <if condition="isset($_SESSION[uid]) && isset($_SESSION['username'])">&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;"  class="answer_btn">回复</a></if>&nbsp;&nbsp;&nbsp;&nbsp;<if condition="isset($_SESSION['uid']) && $va['comment_uid'] eq $_SESSION['uid']"><a href="{@:U(APP_NAME.'/List/deleteComment',array('cid'=>$va["id"],'aid'=>$askCon["id"],'item'=>md5($va['time'])))@}" class="delete_btn">删除</a></if>&nbsp;&nbsp;&nbsp;&nbsp;<if condition="isset($_SESSION['uid']) && ($askCon['uid'] eq $_SESSION['uid']) && ($askCon['solve'] eq '0')"><a href="{@:U(APP_NAME.'/List/handleBest',array('aid'=>$askCon['id'],'cid'=>$va["id"],'uid'=>$va['comment_uid'],'auid'=>$askCon['uid'],'reward'=>$askCon['reward']))@}" title="最佳支招">最佳支招</a></if>
+                      </p>
+                      <div class="answerBox none">
+                      	<form action="__APP__/List/handleCommentS" method="post" name="commentSon">
+                        	<div class="answerBoxCon">
+                            	<div class="answerFace fl"><img src="{@$userInfo.face@}" alt="" /></div>
+                            	<div class="answerText fr">
+                                	<input type="hidden" name="aid" value="{@$askCon.id@}"/>
+                    				<input type="hidden" name="commentUid" value="{@:session('uid')@}"/>
+									<input type="hidden" name="pid" value="{@$va.id@}"/>
+                                    <input type="hidden" name="replyUid" value="{@$va.comment_uid@}"/>
+                                	<textarea name="comment" class="answerTextCon"></textarea>
+                               	</div>
+                           		<div class="cb"></div>
+                            </div>
+                            <div class="answerBtnBox"><a href="javascript:;" title="取消" class="answer_cancel">取消</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" title="评论" class="answer_sub"  parentID="{@$va.id@}">提交</a>
+                            </div>
+                       	</form>
+                      </div>
+                    </div>
+                    <div class="cb"></div>
+                  </li>
+                  <volist name="va.child" id="value">
+                      <li class="commentSon">
+                        <div class="imgBox fl"><a href="__APP__/User/index/uid/{@$value.comment_uid@}.html"><img src="{@$value.comment_face@}" alt="" /></a></div>
+                        <div class="textBox fr">
+                          <p class="name"><a href="__APP__/User/index/uid/{@$value.comment_uid@}.html">{@$value.comment_username@}</a> 回复 <a href="__APP__/User/index/uid/{@$value.reply_uid@}.html">{@$value.reply_username@}</a></p>
+                          <p class="word">{@$value.comment@}</p>
+                          <p class="other">{@$value.time|time_format@} <if condition="isset($_SESSION[uid]) && isset($_SESSION['username'])">&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;"  class="answer_btn">回复</a></if>&nbsp;&nbsp;&nbsp;&nbsp;<if condition="isset($_SESSION['uid']) && $value['comment_uid'] eq $_SESSION['uid']"><a href="{@:U(APP_NAME.'/List/deleteComment',array('cid'=>$value["id"],'aid'=>$askCon["id"],'item'=>md5($value['time'])))@}" class="delete_btn">删除</a></if></p>
+                          <div class="answerBox none">
+                            <form action="__APP__/List/handleCommentS" method="post" name="commentSon">
+                                <div class="answerBoxCon">
+                                    <div class="answerFace fl"><img src="{@$userInfo.face@}" alt="" /></div>
+                                    <div class="answerText fr">
+                                        <input type="hidden" name="aid" value="{@$askCon.id@}"/>
+                                        <input type="hidden" name="commentUid" value="{@:session('uid')@}"/>
+                                        <input type="hidden" name="pid" value="{@$va.id@}"/>
+                                        <input type="hidden" name="replyUid" value="{@$value.comment_uid@}"/>
+                                        <textarea name="comment" class="answerTextCon"></textarea>
+                                    </div>
+                                    <div class="cb"></div>
+                                </div>
+                                <div class="answerBtnBox"><a href="javascript:;" title="取消" class="answer_cancel">取消</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" title="提交" class="answer_sub">提交</a>
+                                </div>
+                            </form>
+                          </div>            
+                        </div>
+                        <div class="cb"></div>
+                      </li>
+                  </volist>
+              </volist>
+            </ul>
+            <!--评论列表结束-->
+        <else/>
+        <div class="noComment">还没有人支招，快来抢沙发...</div>
+        </notempty>
+      </div>
+      <div class="replyBox"> 
+        <!--回复盒子开始-->
+        <if condition="isset($_SESSION[uid]) && isset($_SESSION['username'])">
+        <form action="{@:U('/List/handleCommentP')@}" method="POST" id="commentParent">
+            <div class="replyCon">
+              <div class="replyFace fl"> <a href="javascript:;" title=""><img src="{@$userInfo.face@}" alt="" /></a> </div>
+              <div class="replyText fr">
+                    <input type="hidden" name="aid" value="{@$askCon.id@}"/>
+                    <input type="hidden" name="commentUid" value="{@:session('uid')@}"/>
+                    <input type="hidden" name="replyUid" value="{@$askCon.uid@}"/>
+                    <textarea name="comment" class="replyTexCon" onfocus="if(this.value == '我有更好的答案...') this.value = ''" onblur="if(this.value =='') this.value = '我有更好的答案...'">我有更好的答案...</textarea>
+              </div>
+              <div class="cb"></div>
+            </div>
+            <div class="replyBtnBox"><a href="javascript:;" title="评论" id="reply_sub">提交</a> </div>
+        </form>
+        <else/>
+        <p class="noLogin">您需要登录后才可以支招 <a href="{@:U(APP_NAME.'/Login/index')@}">登录</a> | <a href="{@:U(APP_NAME.'/Login/register')@}">立即注册</a></p>
+        </if>
+        <!--回复盒子结束--> 
+      </div>
+    </div>
+    <!--左边盒子结束--> 
+  </div>
+  <div class="rightBox fr"> 
+    <!--右边盒子开始-->
+      <div class="authorBox">
+          <div class="authorBoxL fl"><a href="__APP__/User/index/uid/{@$askCon.uid@}.html" title="前往{@$askCon.username@}的个人主页"><img src="{@$askCon.face@}" alt="{@$askCon.username@}" /></a></div>
+          <div class="authorBoxR fr">
+              <p class="author_name">{@$askCon.username@}</p>
+              <p class="author_level">金币：{@$askCon.point@}&nbsp;&nbsp;&nbsp;&nbsp;等级：LV{@$askCon.exp|exp_to_level@}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{@:U(APP_NAME.'/Member/addLetter',array('user_id'=>$askCon["uid"]))@}" title="私信他">私信TA</a></p>
+          </div>
+          <div class="cb"></div>
+      </div>
+      <include file="Common:right" />
+    <!--右边盒子结束--> 
+  </div>
+  <div class="cb"></div>
+  <!-- page end --> 
+</div>
+<div id="footer" class="mc cls"> 
+  <!-- footer start --> 
+  <include file="Common:footer" /> 
+  <!-- footer end --> 
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/www.w3.org/1999/xhtml">
+<head>
+<title>会员列表</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/basic.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/study.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+</head>
+<body leftmargin="8" topmargin="8" background='__IMG__/allbg.gif'>
+    <!--快捷操作导航开始-->
+    <div class="kuaijie">
+        <div class="kuaijieTitle">&nbsp;栏目快捷操作</div>
+        <div class="caozuo">
+        	&nbsp;&nbsp;<a href="{@:U(APP_NAME .'/Admin/memberlist')@}" title="" class="kjsort">会员列表</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<a href="javascript:;" title="" class="kjcontent hidden">添加会员</a>
+        </div>
+    </div>
+    <!--快捷操作导航结束-->
+    <div class="art_list_title">
+    	<div class="sort_left fl">&nbsp;后台管理员列表</div>
+        <div class="sort_right fr"></div>
+        <div class="cb"></div>
+    </div>
+    <!--图文列表开始 -->
+    <div class="art_list">
+    	<form method="POST" action="{@:U(APP_NAME .'/Goods/sortsequence')@}">
+        	<table class="tableList">
+            	<thead>
+                	<tr class="top_thead">
+                        <th width="40" align="center">ID</th>
+                        <th align="left">会员名称</th>
+                        <th align="left">注册时间</th>
+                        <th align="left">上一次登录时间</th>
+                        <th align="left">邮箱</th>
+                        <th align="left">锁定状态</th>
+                        <th width="320" align="left">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<volist name="list" id="data">
+                        <tr>
+                            <td align="center">{@$data.id@}</td>
+                            <td align="left">{@$data.username@}</td>
+                            <td align="left">{@$data.reg_time|date="Y-m-d H:i:s",###@}</td>
+                            <td align="left"><empty name="data['login_time']">还未登录过<else/>{@$data.login_time|date="Y-m-d H:i:s",###@}</empty></td>
+                            <td align="left">{@$data.email@}</td>
+                            <td align="left" style="color:#F00;"><in name="data['lock']" value="1">未锁定<else/>锁定</in></td>
+                            <td align="left">
+                                <in name="data['lock']" value="1"><a href="{@:U(APP_NAME .'/Admin/memberLock/',array('lock'=>0,'id'=>$data['id']))@}" title="锁定">锁定</a><else/><a href="{@:U(APP_NAME .'/Admin/memberLock/',array('lock'=>1,'id'=>$data['id']))@}" title="解锁">解锁</a></in>
+                                &nbsp;</td>
+                        </tr>
+                   	</volist>
+                </tbody>
+                <tfoot>
+                	<tr>
+                    	<td colspan="7" align="center">{@$page@}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+    <!--图文列表结束 -->
+</body>
+</html>

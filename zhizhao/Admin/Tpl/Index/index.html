@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>支招网后台管理系统</title>
+<link href="__CSS__/frame.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+<script language="javascript" type="text/javascript">
+	window.onload=function (){
+		setInterval("$Id('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+	}
+	
+	$(document).ready(function(){
+		$("#togglemenu").click(function(){
+			if($("body").attr("class")=="showmenu"){
+				$("body").attr("class","hidemenu");
+				$(this).html("显示菜单");
+			}else{
+				$("body").attr("class","showmenu");
+				$(this).html("隐藏菜单");
+			}
+		});
+	});
+</script>
+</head>
+<body class="showmenu">
+<div class="head">
+  <div class="top">
+    <div class="top_logo">
+      <div id="time"></div>
+    </div>
+    <div class="top_link">
+      <ul>
+        <li class="welcome">您好：<eq name='username' value="admin">超级管理员<else/>{@$username@}</eq>&nbsp;欢迎登录后台网站系统</li>
+        <li><a href="__APP__/Index/menu" target="menu">主菜单</a></li>
+        <li><a href="__APP__/Index/main" target="main" >系统主页</a></li>
+        <li><a href="__ROOT__/" target="_blank">网站主页</a></li>
+        <li><a href="http://www.baidu.com" target="_blank">技术支持</a></li>  <!-- target="main"就将在main这个框架里面显示网页-->
+        <li><a href="{@:U(APP_NAME .'/Index/clearcache')@}" target="main">清空缓存</a></li>
+        <li><a href="{@:U(APP_NAME .'/Index/logout')@}" target="_top">安全退出</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="topnav">
+    <div class="menuact"> <a href="#" id="togglemenu">隐藏菜单</a></div>
+  </div>
+</div>
+<div class="left">
+  <div class="menu" id="menu">
+    <iframe src="{@:U(APP_NAME .'/Index/menu')@}" id="menufra" name="menu" frameborder="0"/>
+    </iframe>
+  </div>
+</div>
+<div class="right">
+  <div class="main">
+    <iframe id="main" name="main" frameborder="0" src="{@:U(APP_NAME .'/Index/main')@}"></iframe>
+  </div>
+</div>
+</body>
+</html>

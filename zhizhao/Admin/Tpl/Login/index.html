@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理系统</title>
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+<link href="__CSS__/login.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript">
+$(function(){
+	$('#login').css({
+		position:'absolute',
+		left:($(window).width() - $('#login').outerWidth())/2,
+		top:($(window).height() - $('#login').outerHeight())/2 + $(document).scrollTop()
+	})
+});
+function keydown(e){
+	var e = e || event;
+	if (e.keyCode==13)
+	{
+		document.login.submit();
+	}
+}
+function show(obj){
+obj.src="__URL__/verify/"+Math.random();
+}
+</script>
+</head>
+<body>
+<form method='post' name="login" id="loginform" action="{@:U(APP_NAME .'/Login/login')@}">
+  <div id="login">
+  	<div class="login_title"><h1>管理登录</h1></div>
+    <div class="logo fl">
+    </div>
+    <div class="content fr">
+    	<ul>
+        	<li>
+            	<span class="item1">用户名：</span>
+                <input type="text" name="username" class="text1" />
+            </li>
+        	<li>
+            	<span class="item1">密&nbsp;&nbsp;&nbsp;码：</span>
+                <input type="password" name="password" class="text1" />
+            </li>
+        	<li>
+            	<span class="item1 fl">验证码：</span>
+                <input type="text" name="verify" class="text2 fl" style="margin-left:4px;" />
+                <span class="fl" style="margin-left:8px; "><img class="code" id="verifyImg" src="__APP__/Login/verify" onclick="show(this);" alt="点击刷新验证码" title="点击刷新验证码" /></span>
+                <div class="cb"></div>
+            </li>
+        	<li>
+            	<span class="item1"></span>
+                <input type="submit" value="登录" class="sub1" />
+            </li>
+        </ul>
+    </div>
+    <div class="power">Copyright © 支招网 All rights reseved.</div>
+    <div class="cb"></div>
+  </div>
+</form>
+</body>
+</html>

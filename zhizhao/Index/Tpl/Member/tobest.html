@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>我的被采纳_会员中心_支招网</title>
+    <link rel="Shortcut Icon" href="__IMG__/favicon.ico" type="image/x-icon"/>
+    <link type="text/css" href="__STATIC__/Style/Css/base.css" rel="stylesheet" />
+    <link type="text/css" href="__CSS__/public.css" rel="stylesheet" />
+    <link type="text/css" href="__CSS__/member.css" rel="stylesheet" />
+    <script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+</head>
+<body>
+<div id="all">
+    <div id="header" class="mb20">
+        <!-- header start -->
+        <include file="Common:top" />
+        <!-- header end -->
+    </div>
+    <div id="page" class="mc  cls">
+        <!-- page start -->
+        <div id="left">
+            <include file="Common:mleft" />
+        </div>
+        <div id="right">
+            <div class="artcileBox">
+                <div class="artcileTitle"><h4>我的被采纳</h4></div>
+                <div class="article_tab">
+                    <div class="article_tab_title none">
+                        <ul>
+                            <li <in name="Think.get.sort" value="">class="current"</in>><a href="{@:U(APP_NAME.'/Member/article')@}">全部</a></li>
+                            <li <in name="Think.get.sort" value="1">class="current"</in>><a href="{@:U(APP_NAME.'/Member/article',array('sort'=>1))@}">生活</a></li>
+                            <li <in name="Think.get.sort" value="2">class="current"</in>><a href="{@:U(APP_NAME.'/Member/article',array('sort'=>2))@}">情感</a></li>
+                            <li <in name="Think.get.sort" value="3">class="current"</in>><a href="{@:U(APP_NAME.'/Member/article',array('sort'=>3))@}">健康</a></li>
+                            <li <in name="Think.get.sort" value="3">class="current"</in>><a href="{@:U(APP_NAME.'/Member/article',array('sort'=>3))@}">职场</a></li>
+                            <li <in name="Think.get.sort" value="3">class="current"</in>><a href="{@:U(APP_NAME.'/Member/article',array('sort'=>3))@}">公益</a></li>
+                        </ul>
+                    </div>
+                    <div class="article_tab_con">
+                        <!--调十二条-->
+                        <ul>
+                            <volist name="noticeBest" id="va" empty="暂无被采纳">
+                                <li style="font-size: 14px;">恭喜您在&nbsp;&nbsp;<a href="{@:U(APP_NAME.'/Member/msBest',array('id'=>$va['id']))@}" style="color:#F30;">{@$va.article_name@}</a>&nbsp;&nbsp;&nbsp;&nbsp;文章中被采纳为最佳支招！</li>
+                            </volist>
+                        </ul>
+                    </div>
+                    <div class="fpage">
+                        {@$page@}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cb"></div>
+        <!-- page end -->
+    </div>
+    <div id="footer" class="mc cls">
+        <!-- footer start -->
+        <include file="Common:footer" />
+        <!-- footer end -->
+    </div>
+</div>
+</body>
+</html>

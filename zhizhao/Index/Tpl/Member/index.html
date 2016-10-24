@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>账户信息_会员中心_支招网</title>
+<link rel="Shortcut Icon" href="__IMG__/favicon.ico" type="image/x-icon"/>
+<link type="text/css" href="__STATIC__/Style/Css/base.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/public.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/member.css" rel="stylesheet" />
+<link type="text/css" href="__STATIC__/Uploadify/uploadify.css" rel="stylesheet" />
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="__STATIC__/Jquery-tabs/jquery.tabs.js"></script>
+<script type="text/javascript" src="__STATIC__/Uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript">
+	var STATIC = '__STATIC__';
+	var uploadUrl = '{@:U(APP_NAME ."/Member/uploadFace")@}';
+	var sid = '{@:session_id()@}';
+	var UPLOAD = '__ROOT__/Uploads/';
+</script>
+<script type="text/javascript" src="__JS__/member.js"></script>
+</head>
+<body>
+<div id="all">
+  <div id="header" class="mb20"> 
+    <!-- header start --> 
+    <include file="Common:top" /> 
+    <!-- header end --> 
+  </div>
+  <div id="page" class="mc  cls"> 
+    <!-- page start -->
+    <div id="left">
+    	<include file="Common:mleft" /> 
+    </div>
+    <div id="right">
+      <div class="setup_title">
+        <h4>账户信息</h4>
+      </div>
+      <div class="setup_tab">
+        <div class="setup_tab_title">
+          <ul>
+            <li class="current">基本信息</li>
+            <li>修改头像</li>
+            <li>修改密码</li>
+            <li>经验等级</li>
+          </ul>
+        </div>
+        <div class="setup_tab_con">
+          <ul>
+            <li>
+              <div class="messageBox">
+                <dl>
+                  <dd>用户名 ： {@$userInfo.username@}<span class="modifyName">修改用户名</span></dd>
+                  <dd>注册时间 ： {@$userInfo.reg_time|date="Y-m-d H:i:s",###@}</dd>
+                  <dd>上一次登录时间 ： {@$userInfo.login_time|date="Y-m-d H:i:s",###@}</dd>
+                  <dd>绑定邮箱 ： {@$userInfo.email@}</dd>
+                  <dd>个性签名 ： {@$userInfo.introduce@} <br/><span class="modifyInt">修改签名</span></dd>
+                </dl>
+              </div>
+            </li>
+            <li>
+              <div class="avatarBox">
+                <form action="__APP__/Member/editFace" method="POST">
+                  <div class="editFace"> <img src="<eq name='userInfo["face"]' value='__IMG__/face.jpg'>__IMG__/noface.gif<else/>{@$userInfo.face@}</eq>" width="180" height="180" id="faceImg" />
+                    <p>
+                      <input type="file" name="face" id="face" />
+                    </p>
+                    <p>
+                      <input type="hidden" name="facePath" value="">
+                      <input type="submit" value="保存修改" class="sub1" />
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li>
+              <div class="passwordBox">
+                <form action="__APP__/Member/pwdNew" method="POST">
+                <input type="hidden" name="uid" value="{@:session('uid')@}">
+                  <dl>
+                    <dd><span class="item1">当前密码：</span>
+                      <input type="text" name="oldpass" class="text1" />
+                    </dd>
+                    <dd><span class="item1">新密码：</span>
+                      <input type="text" name="newpass" class="text1" />
+                    </dd>
+                    <dd><span class="item1">重复新密码：</span>
+                      <input type="text" name="renewpass" class="text1" />
+                    </dd>
+                    <dd><span class="item1"></span>
+                      <input type="submit" value="保存修改" class="sub1" />
+                    </dd>
+                  </dl>
+                </form>
+              </div>
+            </li>
+            <li>
+              <div class="leveBox">
+              	<p class="title">我的等级</p>
+                <p class="con">恭喜您已经升到<span class="orange">LV{@$userInfo.exp|exp_to_level@}</span>级啦，当前经验值<span class="orange">{@$userInfo.exp@}</span>，距下一级还需<span class="orange"><?php echo C('LV' .(exp_to_level($userInfo['exp']) + 1)) - $userInfo['exp'];?></span>经验值！</p>
+                <div class="leveTitle">
+                	<h5>等级规则</h5>
+                </div>
+                <div class="leveContent mb15">
+                	<table class="table">
+                    	<tr>
+                        	<th>等级</th>
+                            <th>经验值</th>
+                        </tr>
+                        <for start="1" end="21" name="i">
+                        	<if condition="exp_to_level($userInfo['exp']) neq $i">
+                                <tr>
+                                    <td>{@$i@}</td>
+                                    <td><?php echo C('LV'.$i);?></td>
+                                </tr>
+                           	<else/>
+                                <tr class="dangqian">
+                                    <td>您现在<span style="color:#0ab18f"> {@$userInfo.exp|exp_to_level@} </span>级</td>
+                                    <td><span style="color:#0ab18f;"><?php echo C('LV'.$i);?></span></td>
+                                </tr>
+                            </if>
+                       </for> 
+                    </table>
+                </div>
+                <div class="leveTitle">
+                	<h5>经验获取</h5>
+                </div>
+                <div class="leveContent mb10">
+                	<table class="table">
+                    	<tr>
+                        	<th>操作</th>
+                            <th>获得经验值</th>
+                        </tr>
+                        <tr>
+                        	<td>每天登录</td>
+                            <td>{@$Think.config.POINT_LOGIN@}</td>
+                        </tr>
+                        <tr>
+                        	<td>发布文章</td>
+                            <td>{@$Think.config.POINT_ARTICLE@}</td>
+                        </tr>
+                        <tr>
+                        	<td>评论</td>
+                            <td>{@$Think.config.POINT_COMMENT@}</td>
+                        </tr>
+                        <tr>
+                        	<td>私信</td>
+                            <td>{@$Think.config.POINT_LETTER@}</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cb"></div>
+    <!-- page end --> 
+  </div>
+    <div id="footer" class="mc cls"> 
+    <!-- footer start --> 
+  	  <include file="Common:footer" /> 
+    <!-- footer end --> 
+  </div>
+</div>
+  <!--弹出框-->
+  	<!--修改用户名-->
+  	<div id="popName" class="none">
+    	<div class="popNameTitle pr z20">
+			<p>修改用户名</p>
+			<a href="" title='关闭' class='close-window'></a>
+        </div>
+        <div class="popNameCon">
+        	<form action="__APP__/Member/nameNew" method="POST" name="nameNew">
+            <input type="hidden" name="uid" value="{@:session('uid')@}">
+            <table>
+            	<tr>
+                	<td>用户名：</td>
+                	<td><input type="text" name="username" class="text2" /></td>
+                </tr>
+            	<tr>
+                	<td></td>
+                	<td><input type="submit" class="sub2" value="提交" /></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+    <!--修改个性签名-->
+    <div id="popintr" class="none">
+    	<div class="popintrTitle pr z20">
+			<p>修改个性签名</p>
+			<a href="" title='关闭' class='close-window'></a>
+        </div>
+        <div class="popintrCon">
+        	<form action="{@:U(APP_NAME .'/Member/introduceNew')@}" method="POST">
+            <input type="hidden" name="uid" value="{@:session('uid')@}">
+            <table>
+            	<tr>
+                	<td>签名：</td>
+                	<td><textarea name="introduce" class="textarea1"></textarea></td>
+                </tr>
+            	<tr>
+                	<td></td>
+                	<td><input type="submit" class="sub2" value="提交" /></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

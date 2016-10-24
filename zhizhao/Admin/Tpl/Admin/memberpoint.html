@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/www.w3.org/1999/xhtml">
+<head>
+<title>积分奖励规则设置</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/basic.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/site.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+</head>
+<body leftmargin="8" topmargin="8" background='__IMG__/allbg.gif'>
+    <!--快捷操作导航开始-->
+    <div class="siteBox">
+        <div class="siteTitle">&nbsp;积分奖励规则设置</div>
+        <div class="siteContent">
+        	<form action="{@:U(APP_NAME.'/Admin/memberpoint/')@}" method="POST">
+            	<table>
+                	<tr>
+                    	<td>登录：</td>
+                        <td><input type="text" class="input1 w250" name="point_login" value="{@$Think.config.point_login@}" /></td>
+                    </tr>
+                	<tr>
+                    	<td>发布文章：</td>
+                        <td><input type="text" class="input1 w250" name="point_article" value="{@$Think.config.point_article@}" /></td>
+                    </tr>
+                	<tr>
+                    	<td>评论：</td>
+                        <td><input type="text" class="input1 w250" name="point_comment" value="{@$Think.config.point_comment@}" /></td>
+                    </tr>
+                	<tr>
+                    	<td>私信：</td>
+                        <td><input type="text" class="input1 w250" name="point_letter" value="{@$Think.config.point_letter@}" /></td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" align="center"><input type="submit" value="提交保存" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!--快捷操作导航结束-->
+</body>
+</html>

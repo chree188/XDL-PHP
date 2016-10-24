@@ -1,0 +1,79 @@
+<div class="topBox mc cls">
+  <div class="logoBox fl">
+    <h1><a href="/" title="首页_支招网"><img src="__IMG__/logo.png" alt="首页_支招网" /></a></h1>
+  </div>
+  <div class="navBox fl">
+    <ul>
+      <li><a href="/" title="首页" <eq name="MODULE_NAME" value="Index">class="cur"</eq>>首页</a></li>
+      <li><a href="{@:U(APP_NAME.'/List/index',array('sid'=>1,'sort'=>1))@}" title="生活" <if condition="($Think.get.sid eq 1) or ($askCon['sort_name'] eq '生活')">class="cur"</if>>生活</a></li>
+      <li><a href="{@:U(APP_NAME.'/List/index',array('sid'=>2,'sort'=>1))@}" title="情感" <if condition="($Think.get.sid eq 2) or ($askCon['sort_name'] eq '情感')">class="cur"</if>>情感</a></li>
+      <li><a href="{@:U(APP_NAME.'/List/index',array('sid'=>3,'sort'=>1))@}" title="健康" <if condition="($Think.get.sid eq 3) or ($askCon['sort_name'] eq '健康')">class="cur"</if>>健康</a></li>
+      <li><a href="{@:U(APP_NAME.'/List/index',array('sid'=>4,'sort'=>1))@}" title="职场" <if condition="($Think.get.sid eq 4) or ($askCon['sort_name'] eq '职场')">class="cur"</if>>职场</a></li>
+      <li><a href="{@:U(APP_NAME.'/List/index',array('sid'=>5,'sort'=>1))@}" title="公益" <if condition="($Think.get.sid eq 5) or ($askCon['sort_name'] eq '公益')">class="cur"</if>>公益</a></li>
+    </ul>
+  </div>
+  <div class="searchBox fl">
+    <form action="__APP__/search" method="GET" class="search_form">
+      <input type="text" name="word" class="sinput" placeholder="输入 回车搜索" x-webkit-speech />
+      <input type="submit" value="搜索" class="sbtn" id="searchTrigger" />
+    </form>
+  </div>
+  <div class="loginBox fr">
+    <empty name="userInfo">
+      <div class="loginFalse"> <a href="{@:U(APP_NAME .'/Login/index')@}" title="登录">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{@:U(APP_NAME .'/Login/register')@}" title="注册">注册</a> </div>
+      <else />
+      <div class="loginTrue">
+        <div class="loginMess fl">
+          <div class="loginMessCon"><a href="javascript:;" class="tongzhi" title="通知中心"><img src="__IMG__/message.jpg" alt="" /><span class="tipNum <elt name="tipNums" value="0">none
+            </elt>
+            ">{@$tipNums@}</span></a></div>
+          <div class="loginMessSon">
+            <ul>
+              <li><a href="{@:U(APP_NAME.'/Member/comment')@}" title="我的消息">我的消息&nbsp;(&nbsp;<span class="alinkred">{@$commentNum@}</span>&nbsp;)</a></li>
+              <li><a href="{@:U(APP_NAME.'/Member/letter')@}" title="我的私信">我的私信&nbsp;(&nbsp;<span class="alinkred">{@$letterNum@}</span>&nbsp;)</a></li>
+              <li><a href="{@:U(APP_NAME.'/Member/tobest')@}" title="我被采纳">我被采纳&nbsp;(&nbsp;<span class="alinkred">{@$bestNum@}</span>&nbsp;)</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="loginMan fr">
+          <div class="loginManCon"><a href="__APP__/User/index/uid/{@:session('uid')@}.html" title="到我的个人主页"><img src="{@$userInfo.face@}" alt="" /><i class="no_pic"></i></a></div>
+          <div class="loginManConSon">
+            <ul>
+              <li><a href="{@:U(APP_NAME.'/Member/index')@}" title="账户信息">账户信息</a></li>
+              <li><a href="{@:U(APP_NAME.'/Member/article')@}" title="我的文章">我的提问</a></li>
+              <li><a href="{@:U(APP_NAME.'/Member/comment')@}" title="我的评论">我的评论</a></li>
+              <li><a href="{@:U(APP_NAME.'/Member/letter')@}" title="我的私信">我的私信</a></li>
+              <li><a href="{@:U(APP_NAME.'/Member/answer')@}" title="我的回答">我的回答</a></li>
+              <li><a href="{@:U(APP_NAME .'/Login/logout')@}" title="">退出登录</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cb"></div>
+      </div>
+    </empty>
+  </div>
+  <div class="cb"></div>
+</div>
+<!--头部消息下拉菜单--> 
+<script type="text/javascript">
+            $(function(){
+                var loginMessSon = $('.loginMessSon');
+                $('.loginMess').mouseenter(function(){
+                    loginMessSon.show();
+                }).mouseleave(function(){
+                    loginMessSon.hide();
+                });
+                var loginManConSon = $('.loginManConSon');
+                $('.loginMan').mouseenter(function(){
+                    loginManConSon.show();
+                }).mouseleave(function(){
+                    loginManConSon.hide();
+                });
+                //搜索 
+                $('#searchTrigger').click(function(){
+                    if($('.sinput').val() == ''){
+                        return false;	
+                    }
+                });
+            });
+        </script> 

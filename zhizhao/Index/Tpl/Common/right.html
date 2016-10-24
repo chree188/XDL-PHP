@@ -1,0 +1,46 @@
+<!--发布问题BOX-->
+<div class="publishBox">
+	<a href="{@:U(APP_NAME.'/List/addAsk')@}" title="发布问题">&nbsp;+ 发布问题</a>
+</div>
+<!--TAB选项卡推荐开始-->
+<div class="recommendBox">
+    <div class="recommendTitle">		
+        <ul>
+            <li class="currentRec">最新. . .</li>
+            <li>最悬赏. . .</li>
+            <li>最支招. . .</li>
+        </ul>
+    </div>
+    <div class="recommendCon">
+        <ul>
+            <li class="recommendBest">
+                <div class="tabContent">
+                    <dl>
+                        <volist name="newAllList" id="va">
+                          <dd><a href="__APP__/List/detail/id/{@$va.id@}.html" title="{@$va.ask_name@}">{@$va.ask_name|msubstr=0,18@}</a></dd>
+                        </volist>
+                    </dl>
+                </div>
+            </li>
+            <li class="recommendBest none">
+                <div class="tabContent">
+                    <dl>
+                        <volist name="rewardAllList" id="va">
+                            <dd><a href="__APP__/List/detail/id/{@$va.id@}.html" title="{@$va.ask_name@}">{@$va.ask_name|msubstr=0,18@}</a></dd>
+                        </volist>
+                    </dl>
+                </div>
+            </li>
+            <li class="recommendBest none">
+                <div class="tabContent">
+                    <dl>
+                        <volist name="commentAllList" id="va">
+                            <dd><a href="__APP__/List/detail/id/{@$va.id@}.html" title="{@$va.ask_name@}">{@$va.ask_name|msubstr=0,18@}</a></dd>
+                        </volist>
+                    </dl>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--TAB选项卡推荐结束-->

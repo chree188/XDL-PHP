@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户登录_支招网</title>
+<link rel="Shortcut Icon" href="__IMG__/favicon.ico" type="image/x-icon"/>
+<link type="text/css" href="__STATIC__/Style/Css/base.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/public.css" rel="stylesheet" />
+<link type="text/css" href="__CSS__/login.css" rel="stylesheet" />
+<script type="text/javascript" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+	var CONTROL = "__APP__/Login/";
+</script>
+<script type="text/javascript" src="__JS__/validate.js"></script>
+</head>
+<body>
+<div id="all">
+  <div id="header" class="mb20"> 
+    <!-- header start --> 
+    <include file="Common:top" /> 
+    <!-- header end --> 
+  </div>
+  <div id="page" class="mc cls"> 
+    <!-- page start -->
+    <div class="loginWrap">
+      <div class="loginTitle">
+        <h3>用户注册<span>已经有账号？点此 <a href="{@:U(APP_NAME.'/Login/index')@}">登录</a></span></h3>
+      </div>
+      <div class="loginContent">
+        <form action="{@:U(APP_NAME.'/Login/handleReg')@}" method="post" name="register">
+          <table>
+            <tr><td class="w80 tc item1">用户名</td><td><input type="text" name="username" class="text1 w300" /><span></span></td></tr>
+            <tr><td class="w80 tc item1">邮&nbsp;&nbsp;&nbsp;箱</td><td><input type="text" name="email" class="text1 w300" /><span></span></td></tr>
+            <tr><td class="w80 tc item1">密&nbsp;&nbsp;&nbsp;码</td><td><input type="password" name="password" class="text1 w300" /><span></span></td></tr>
+            <tr><td class="w80 tc item1">确认密码</td><td><input type="password" name="repassword" class="text1 w300" /><span></span></td></tr>
+            <tr>
+               <td class="w80 tc">验证码</td>
+               <td><span class="fl"><input type="text" name="verify" class="text1 w80" /></span><span class="fl mt5 ml5"><img class="code" id="verifyImg" src="__APP__/Login/verify" onclick="show(this);" alt="点击刷新验证码" title="点击刷新验证码" /></span><span class="msg fl mt5"></span><div class="cb"></div></td>
+            </tr>
+            <tr><td class="w80 tc item1"></td><td><input type="submit" value="注册" class="sub1" /></td></tr>
+          </table>
+        </form>
+      </div>
+    </div>
+	<script type="text/javascript">
+        function show(obj){
+            obj.src="__URL__/verify/"+Math.random();
+        }
+    </script>
+    <!-- page end --> 
+  </div>
+  <div id="footer" class="mc cls"> 
+    <!-- footer start --> 
+    <include file="Common:footer" /> 
+    <!-- footer end --> 
+  </div>
+</div>
+</body>
+</html>

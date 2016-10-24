@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/www.w3.org/1999/xhtml">
+<head>
+<title>站点参数设置</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/basic.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/site.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+</head>
+<body leftmargin="8" topmargin="8" background='__IMG__/allbg.gif'>
+    <!--快捷操作导航开始-->
+    <div class="siteBox">
+        <div class="siteTitle">&nbsp;站点参数设置</div>
+        <div class="siteContent">
+        	<form action="{@:U(APP_NAME.'/Site/site/')@}" method="POST">
+            	<input type="hidden" name="id" value="{@$data.id@}" />
+            	<table>
+                	<tr>
+                    	<td>站点名称：</td>
+                        <td><input type="text" class="input1 w250" name="site_name" value="{@$data.site_name@}" /><span class="note">* 站点名称，将显示在网页title，网站底部等处</span></td>
+                    </tr>
+                	<tr>
+                    	<td>站点URL：</td>
+                        <td><input type="text" class="input1 w250" name="site_url" value="{@$data.site_url@}" /><span class="note">* 站点URL，将显示在网站底部等需要向客户提供网站URL处</span></td>
+                    </tr>
+                	<tr>
+                    	<td>公司名称：</td>
+                        <td><input type="text" class="input1 w250" name="company" value="{@$data.company@}" /></td>
+                    </tr>
+                	<tr>
+                    	<td>公司地址：</td>
+                        <td><input type="text" class="input1 w250" name="address" value="{@$data.address@}" /></td>
+                    </tr>
+                	<tr>
+                    	<td>邮政编码：</td>
+                        <td><input type="text" class="input1 w250" name="zipcode" value="{@$data.zipcode@}" /></td>
+                    </tr>
+                	<tr>
+                    	<td>固定电话：</td>
+                        <td><input type="text" class="input1 w250" name="telephone" value="{@$data.telephone@}" /></td>
+                    </tr>
+                	<tr>
+                    	<td>电子邮箱：</td>
+                        <td><input type="text" class="input1 w250" name="cellphone" value="{@$data.cellphone@}" /></td>
+                    </tr>
+                	<tr>
+                    	<td>邮政编码：</td>
+                        <td><input type="text" class="input1 w250" name="email" value="{@$data.email@}" /></td>
+                    </tr>
+                	<tr>
+                    	<td>网站备案信息：</td>
+                        <td><input type="text" class="input1 w250" name="icp" value="{@$data.icp@}" /><span class="note">* 在这里填入网站的备案信息（备案号），没有备案信息请留空</span></td>
+                    </tr>
+                	<tr>
+                    	<td>第三方代码：：</td>
+                        <td><textarea name="third_code" class="w250 h100">{@$data.third_code@}</textarea><span class="note">* 第三方代码，如第三方客服代码，统计代码等</span></td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" align="center"><input type="submit" value="提交保存" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!--快捷操作导航结束-->
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* CSS Document */
+/*添加文章*/
+.addBoxWrap { width:646px;  border:1px solid #DFDFDF;  }
+.addBox { width:606px;  padding:18px 20px; }
+.addBoxTop { width:606px; height:56px; margin-bottom:20px; }
+.addBoxTopL { width:56px; height:56px; }
+.addBoxTopL img { width:56px; height:56px; }
+.addBoxTopR { width:540px; height:56px; }
+.addBoxTopR h5 { color:#111; font-size:14px; font-family: "Microsoft yahei","Century Gothic"; font-weight:500; padding-bottom:8px; padding-top:4px; }
+.addBoxTopR p { color:#C0C0C0; font-size:14px; font-family: "Microsoft yahei","Century Gothic"; }
+.addBoxCon { width:586px; padding:0 10px;  }
+.addBoxCon ul { width:586px;}
+.addBoxCon ul li{ width:586px; margin-bottom:15px; }
+.addBoxCon ul li .msgContent { width:522px; padding:8px 0 0px 58px;  color:#F00; }
+.addBoxCon ul li .item3 { width:60px; height:32px; line-height:32px; display:inline-block; text-align:center; margin-right:8px; color:#111; font-family: "Microsoft yahei","Century Gothic"; font-size:14px;   }
+.addBoxCon ul li .item3 b { font-style:normal; font-weight:normal; color:#0AB18F; padding-right:4px; }
+.addBoxCon ul li .text1 { width:380px; height:14px; padding:8px 0 8px 4px; border:1px solid #CCCCCC; color:#222; font-size:14px; font-family: "Microsoft yahei","Century Gothic";}
+.addBoxCon ul li .select {width:150px; padding:3px; height:30px; border:1px solid #CCCCCC; color:#222; font-size:14px; font-family: "Microsoft yahei","Century Gothic";  }
+.addBoxCon ul li .textarea1 { width:522px; height:60px; border:1px solid #CCCCCC; resize:none; overflow:hidden; color:#222; font-size:14px; font-family: "Microsoft yahei","Century Gothic"; margin-bottom:20px;  }
+.addBoxCon ul li .textarea2 { width:510px; border:1px solid #CCCCCC; resize:none; overflow:hidden; color:#222; font-size:14px; font-family: "Microsoft yahei","Century Gothic"; margin-bottom:20px;}
+.addBoxCon ul li .sub1 { padding:0 24px; height:30px; line-height:21px;  font-size:15px; cursor:pointer; border:1px solid #348FD4; background:#348FD4; color:#FFF; font-weight:500;  }
+.tipBox { width:313px;  border:1px solid #DFDFDF;}
+.tipTitle { width:300px; height:40px; line-height:40px; background:#FBFBFB; border-bottom:1px solid #D4D4D4; font-size:15px; font-weight:600; color:#111; padding-left:13px; font-family: "Century Gothic","Microsoft yahei"; margin-bottom:10px; }
+.tipCon { width:286px; padding-left:13px; padding-right:14px; height:328px; }
+.tipCon ul { width:286px; }
+.tipCon ul li { width:286px; color: #454545; padding-bottom:5px;  background:url(../images/li_icon.jpg) no-repeat left 5px;  padding-left:12px; }
+.letterP{ color:#111; font-size:14px; font-family: "Microsoft yahei","Century Gothic"; height:30px; line-height:30px;}
