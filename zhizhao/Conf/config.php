@@ -6,7 +6,7 @@ return array (
   'DB_USER' => 'root',
   'DB_PWD' => 'zwt12345',
   'DB_PORT' => '3306',
-  'DB_PREFIX' => 'yrq_',
+  'DB_PREFIX' => 'zz_',
   'TMPL_PARSE_STRING' => 
   array (
     '__STATIC__' => '/Public/Static',
