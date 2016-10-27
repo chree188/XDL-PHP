@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<title>百度天气查询</title>
+	<link rel="stylesheet" href="__PUBLIC__/Dist/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="__PUBLIC__/Dist/css/bootstrap-theme.min.css"> -->
+	<style>
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>百度天气查询</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<form action="" method="post" class="form">
+					<div class="input-group">
+						<span class="input-group-addon">请输入城市名称</span>
+						<input type="text" class="form-control" name="city" placeholder="<{$Think.post.city}>">
+						<span class="input-group-btn">
+							<button class="btn btn-default">提交</button>
+						</span>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+		<div style="height:20px;"></div>
+
+		<div class="row">
+
+			<div class="col-md-12">
+				<?php
+				if (!empty($error)) {
+				?>
+				<p class="alert alert-danger">城市错误！</p>
+				<?php
+				}
+				?>
+
+				<p>
+					<{$results->retData->city}>
+					<{$results->retData->today->date}>
+					<{$results->retData->today->week}>
+				</p>
+
+				<p>
+					<{$results->retData->today->type}>
+					<{$results->retData->today->curTemp}>
+					<{$results->retData->today->lowtemp}> ~ <{$results->retData->today->hightemp}>
+				</p>
+				<p>
+					<{$results->retData->today->fengxiang}>
+					<{$results->retData->today->fengli}>
+				</p>
+				<div class="row" style="height:10px"></div>
+				<div class="row">
+				<?php
+				foreach($results->retData->forecast as $v):
+				?>
+
+					<div class="col-md-3">
+					<p><{$v->date}> <{$v->week}></p>
+					<p><{$v->type}></p>
+					<p><{$v->lowtemp}> ~ <{$v->hightemp}></p>
+					<p><{$v->fengxiang}>  <{$v->fengli}></p>
+					</div>
+				<?php
+				endforeach;
+				?>
+				<div>
+
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

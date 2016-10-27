@@ -1,0 +1,85 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<title>地址联动 自动选择省份</title>
+	<style>
+
+	</style>
+	<script src="/s51/object06/api_demo/think_demo/Public/Js/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="/s51/object06/api_demo/think_demo/Public/Dist/css/bootstrap.min.css">
+	<script>
+		$(function(){
+			$.ajax({
+				url:'<?php echo U('Ip/area');?>',
+				async:false,
+				data:{upid:0},
+				type:'post',
+				success:function(data){
+					for(var i = 0; i < data.length; i ++){
+						$("#prov").append("<option value='"+data[i].id+"'>"+data[i].name+"</option>");
+					}
+					//设置默认
+					$("#prov option[value='<?php echo ($id); ?>']").attr('selected', true);
+				},
+				dataType:'json',
+			});
+
+			//隐藏select
+
+			$("#prov,#city,#area").change(function(){
+				//获取value
+				var upid = $(this).val();
+				//定义变量
+				var $_this = $(this);
+				//ajax获取子地址
+				$.ajax({
+					url:'<?php echo U('Ip/area');?>',
+					data:{upid:upid},
+					type:'post',
+					success:function(data){
+						if  (data.length === 0) {
+							$_this.nextAll('select').hide();
+							return;
+						}
+						$_this.next('select').empty().show();
+						for(var i = 0; i < data.length; i ++){
+							$_this.next('select').append("<option value='"+data[i].id+"'>"+data[i].name+"</option>");
+						}
+						//触发给select的change事件
+						$_this.next('select').trigger('change');
+					},
+					dataType:'json',
+				});
+			});
+
+			//触发省的change
+			$("#prov").trigger('change');
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>ajax  -- 地址联动效果</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<form action="" class="form-inline">
+					<div class="form-group">
+						<select id="prov" class="form-control"></select>
+						<select id="city" class="form-control"></select>
+						<select id="area" class="form-control"></select>
+						<select id="street" class="form-control"></select>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
