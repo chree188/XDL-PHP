@@ -17,7 +17,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-6" id="allmap" style="height:400px;"></div>
+			<div class="col-md-6" id="allmap" style="width:300px; height:300px;"></div>
 		</div>
 
 	</div>

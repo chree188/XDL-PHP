@@ -1,0 +1,188 @@
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>2</templateId>
+                    <datas><data>6666</data><data>30</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=3F05E9B3FF7678583DCD66A46C54CE46
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>30</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=BCD89C4E552C5F2403B2640307550B1E
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=7EF45B061E898E1EB0FA6A637532F199
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=943F6F7EBD6286F31A6E6834F9083E50
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=656C56B03B2E8A5D76F6262C6C065DF3
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=D2FDDD866F0E4F5F6EB9C41667958C43
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=1562E99557D8FB0B60CCD1A065F682FB
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=1562E99557D8FB0B60CCD1A065F682FB
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=65A3ECDB137781A0FCA049893811D041
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=1BA728D51BA89B8F5930466327A9DAB8
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=25C99D3B3A3F8AEB72A4E9F6C4B91723
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>6666</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=183BB1E6A55A3914439FE76B555DB789
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>111109</statusCode>
+    <statusMsg>【账号】请求地址Sig校验失败</statusMsg>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777398039</to> 
+                    <appId>8aaf07085805254b01581858b182098a</appId>
+                    <templateId>1</templateId>
+                    <datas><data>QQQ</data><data>WWW</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8aaf07085805254b01581858b0d80985/SMS/TemplateSMS?sig=D8590BC3F5CB2DFDF4C4861F5CE99E6B
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>000000</statusCode>
+    <TemplateSMS>
+        <smsMessageSid>c04df5be5a764fea923ea66814ce2c53</smsMessageSid>
+        <dateCreated>20161031103610</dateCreated>
+    </TemplateSMS>
+</Response>
+
+request body = <TemplateSMS>
+                    <to>13777399387</to> 
+                    <appId>8a216da85805311d0158185bad9d0878</appId>
+                    <templateId>1</templateId>
+                    <datas><data>8020</data><data>10</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da85805311d0158185baccd0873/SMS/TemplateSMS?sig=6C4B963A254D1B46074D7EE19D8741BE
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Response>
+    <statusCode>000000</statusCode>
+    <TemplateSMS>
+        <smsMessageSid>625b2b32c352418fbad0b2e16ce9dafd</smsMessageSid>
+        <dateCreated>20161031103813</dateCreated>
+    </TemplateSMS>
+</Response>
+

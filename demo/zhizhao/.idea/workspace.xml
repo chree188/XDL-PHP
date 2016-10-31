@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c4bffb1-8678-4ca9-b5fd-079223cc2fbe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Index/Logs/16_10_28.log" afterPath="$PROJECT_DIR$/Runtime/Index/Logs/16_10_28.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Home/View/Map/baidu.html" afterPath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Home/View/Map/baidu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Runtime/Cache/Home/601f5f95b9fa6f8f23f99123eaf592f8.php" afterPath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Runtime/Cache/Home/601f5f95b9fa6f8f23f99123eaf592f8.php" />
     </list>
     <ignored path="zhizhao.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +32,11 @@
     <favorites_list name="zhizhao" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MemberAction.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Index/Lib/Action/MemberAction.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4976">
+            <state relative-caret-position="5565">
               <caret line="265" column="44" selection-start-line="265" selection-start-column="44" selection-end-line="265" selection-end-column="44" />
               <folding />
             </state>
@@ -46,7 +46,7 @@
       <file leaf-file-name="comment.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Index/Tpl/Member/comment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
+            <state relative-caret-position="-189">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -119,11 +119,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhizhao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,17 +213,18 @@
       <workItem from="1477620185661" duration="1287000" />
       <workItem from="1477630765705" duration="3435000" />
       <workItem from="1477641395146" duration="912000" />
+      <workItem from="1477874702787" duration="624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50923000" />
+    <option name="totallyTimeSpent" value="51547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="261" y="81" width="1500" height="834" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28333333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17847222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -507,7 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,7 +595,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Index/Lib/Action/MemberAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4976">
+        <state relative-caret-position="5565">
           <caret line="265" column="44" selection-start-line="265" selection-start-column="44" selection-end-line="265" selection-end-column="44" />
           <folding />
         </state>
@@ -596,7 +603,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Index/Tpl/Member/comment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
+        <state relative-caret-position="-189">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
