@@ -211,7 +211,7 @@
                         	<th>等级</th>
                             <th>经验值</th>
                         </tr>
-                        <?php $__FOR_START_879__=1;$__FOR_END_879__=21;for($i=$__FOR_START_879__;$i < $__FOR_END_879__;$i+=1){ if(exp_to_level($userInfo['exp']) != $i): ?><tr>
+                        <?php $__FOR_START_4388__=1;$__FOR_END_4388__=21;for($i=$__FOR_START_4388__;$i < $__FOR_END_4388__;$i+=1){ if(exp_to_level($userInfo['exp']) != $i): ?><tr>
                                     <td><?php echo ($i); ?></td>
                                     <td><?php echo C('LV'.$i);?></td>
                                 </tr>

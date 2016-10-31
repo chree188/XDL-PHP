@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c4bffb1-8678-4ca9-b5fd-079223cc2fbe" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl580dc6529de59.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl581067de41479.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106b2f848be.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106c647a6bd.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106d862fa6d.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106dc9e9f55.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106e18e5b17.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl5812c8eaa7c7e.jpeg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uploads/image/20140505/20140505071229_91048.jpg" afterPath="$PROJECT_DIR$/Uploads/image/20140505/20140505071229_91048.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uploads/image/20140505/20140505092231_57875.png" afterPath="$PROJECT_DIR$/Uploads/image/20140505/20140505092231_57875.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Home/View/Map/baidu.html" afterPath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Home/View/Map/baidu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Runtime/Cache/Home/601f5f95b9fa6f8f23f99123eaf592f8.php" afterPath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Runtime/Cache/Home/601f5f95b9fa6f8f23f99123eaf592f8.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Index/Tpl/Index/index.html" afterPath="$PROJECT_DIR$/Index/Tpl/Index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Index/Cache/229e9d4d2dc754066c0aabe38533f7b2.php" afterPath="$PROJECT_DIR$/Runtime/Index/Cache/229e9d4d2dc754066c0aabe38533f7b2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Index/Cache/f9c22b8b40e560036663a0ce7ed378ae.php" afterPath="$PROJECT_DIR$/Runtime/Index/Cache/f9c22b8b40e560036663a0ce7ed378ae.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Index/Logs/16_10_31.log" afterPath="$PROJECT_DIR$/Runtime/Index/Logs/16_10_31.log" />
     </list>
     <ignored path="zhizhao.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +58,8 @@
       <file leaf-file-name="comment.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Index/Tpl/Member/comment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-189">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-63">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -69,7 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Conf/config.php" />
         <option value="$PROJECT_DIR$/Class/Image.class.php" />
         <option value="$PROJECT_DIR$/Index/Tpl/list/index.html" />
         <option value="$PROJECT_DIR$/Index/Tpl/Common/base.html" />
@@ -78,6 +89,7 @@
         <option value="$PROJECT_DIR$/Index/Lib/Action/LoginAction.class.php" />
         <option value="$PROJECT_DIR$/Public/Index/js/validate.js" />
         <option value="$PROJECT_DIR$/Index/Lib/Action/CommonAction.class.php" />
+        <option value="$PROJECT_DIR$/Conf/config.php" />
       </list>
     </option>
   </component>
@@ -127,6 +139,30 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="zhizhao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhizhao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhizhao" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhizhao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhizhao" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Conf" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -214,17 +250,19 @@
       <workItem from="1477630765705" duration="3435000" />
       <workItem from="1477641395146" duration="912000" />
       <workItem from="1477874702787" duration="624000" />
+      <workItem from="1477889408468" duration="596000" />
+      <workItem from="1477893201602" duration="2638000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51547000" />
+    <option name="totallyTimeSpent" value="54781000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="261" y="81" width="1500" height="834" extended-state="0" />
+    <frame x="261" y="81" width="1500" height="834" extended-state="1" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17847222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18263888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -268,20 +306,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Admin/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Conf/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Class/ThumbHandler.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -565,13 +589,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Static/jNotify/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-189">
@@ -601,10 +618,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Conf/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/IndexAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Index/Tpl/Member/comment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-63">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding />
         </state>
       </provider>
