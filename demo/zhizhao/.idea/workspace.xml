@@ -2,21 +2,88 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c4bffb1-8678-4ca9-b5fd-079223cc2fbe" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl580dc6529de59.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl581067de41479.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106b2f848be.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106c647a6bd.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106d862fa6d.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106dc9e9f55.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl58106e18e5b17.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/Face/2016_10/tbl5812c8eaa7c7e.jpeg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uploads/image/20140505/20140505071229_91048.jpg" afterPath="$PROJECT_DIR$/Uploads/image/20140505/20140505071229_91048.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uploads/image/20140505/20140505092231_57875.png" afterPath="$PROJECT_DIR$/Uploads/image/20140505/20140505092231_57875.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/attachment/attachment.js" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/attachment/attachment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/charts/chart.config.js" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/charts/chart.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/charts/charts.css" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/charts/charts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/charts/charts.js" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/charts/charts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/map/show.html" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/map/show.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/preview/preview.html" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/preview/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittable.css" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittable.html" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittable.js" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittd.html" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittip.html" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/table/edittip.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/dialogs/wordimage/tangram.js" afterPath="$PROJECT_DIR$/../utf8-php/dialogs/wordimage/tangram.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/php/action_crawler.php" afterPath="$PROJECT_DIR$/../utf8-php/php/action_crawler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/php/action_list.php" afterPath="$PROJECT_DIR$/../utf8-php/php/action_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/php/action_upload.php" afterPath="$PROJECT_DIR$/../utf8-php/php/action_upload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/php/config.json" afterPath="$PROJECT_DIR$/../utf8-php/php/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/php/controller.php" afterPath="$PROJECT_DIR$/../utf8-php/php/controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/themes/default/css/ueditor.css" afterPath="$PROJECT_DIR$/../utf8-php/themes/default/css/ueditor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/themes/default/css/ueditor.min.css" afterPath="$PROJECT_DIR$/../utf8-php/themes/default/css/ueditor.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/SyntaxHighlighter/shCore.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/SyntaxHighlighter/shCore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/codemirror/codemirror.css" afterPath="$PROJECT_DIR$/../utf8-php/third-party/codemirror/codemirror.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/mootools-adapter.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/mootools-adapter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/mootools-adapter.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/mootools-adapter.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/prototype-adapter.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/prototype-adapter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/prototype-adapter.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/prototype-adapter.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/standalone-framework.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/standalone-framework.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/standalone-framework.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/adapters/standalone-framework.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/highcharts-more.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/highcharts-more.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/highcharts-more.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/highcharts-more.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/highcharts.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/highcharts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/highcharts.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/highcharts.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/annotations.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/annotations.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/annotations.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/annotations.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/canvas-tools.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/canvas-tools.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/canvas-tools.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/canvas-tools.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/data.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/data.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/data.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/drilldown.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/drilldown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/drilldown.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/drilldown.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/exporting.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/exporting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/exporting.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/exporting.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/funnel.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/funnel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/funnel.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/funnel.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/heatmap.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/heatmap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/heatmap.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/heatmap.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/map.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/map.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/map.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/no-data-to-display.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/no-data-to-display.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/no-data-to-display.src.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/modules/no-data-to-display.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/dark-blue.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/dark-blue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/dark-green.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/dark-green.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/gray.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/gray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/grid.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/skies.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/highcharts/themes/skies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/jquery-1.10.2.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/jquery-1.10.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/jquery-1.10.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/video-js/font/vjs.svg" afterPath="$PROJECT_DIR$/../utf8-php/third-party/video-js/font/vjs.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/video-js/video-js.css" afterPath="$PROJECT_DIR$/../utf8-php/third-party/video-js/video-js.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/video-js/video-js.min.css" afterPath="$PROJECT_DIR$/../utf8-php/third-party/video-js/video-js.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/video-js/video.dev.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/video-js/video.dev.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/video-js/video.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/video-js/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.css" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.custom.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.custom.min.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.flashonly.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.flashonly.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.flashonly.min.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.flashonly.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.html5only.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.html5only.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.html5only.min.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.html5only.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.min.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.withoutimage.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.withoutimage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.withoutimage.min.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/webuploader/webuploader.withoutimage.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/zeroclipboard/ZeroClipboard.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/zeroclipboard/ZeroClipboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/third-party/zeroclipboard/ZeroClipboard.min.js" afterPath="$PROJECT_DIR$/../utf8-php/third-party/zeroclipboard/ZeroClipboard.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/ueditor.all.js" afterPath="$PROJECT_DIR$/../utf8-php/ueditor.all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/ueditor.all.min.js" afterPath="$PROJECT_DIR$/../utf8-php/ueditor.all.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/ueditor.config.js" afterPath="$PROJECT_DIR$/../utf8-php/ueditor.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/ueditor.parse.js" afterPath="$PROJECT_DIR$/../utf8-php/ueditor.parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../utf8-php/ueditor.parse.min.js" afterPath="$PROJECT_DIR$/../utf8-php/ueditor.parse.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Index/Tpl/Index/index.html" afterPath="$PROJECT_DIR$/Index/Tpl/Index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Index/Cache/229e9d4d2dc754066c0aabe38533f7b2.php" afterPath="$PROJECT_DIR$/Runtime/Index/Cache/229e9d4d2dc754066c0aabe38533f7b2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Index/Cache/f9c22b8b40e560036663a0ce7ed378ae.php" afterPath="$PROJECT_DIR$/Runtime/Index/Cache/f9c22b8b40e560036663a0ce7ed378ae.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Index/Logs/16_10_31.log" afterPath="$PROJECT_DIR$/Runtime/Index/Logs/16_10_31.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Runtime/Logs/Home/16_10_31.log" afterPath="$PROJECT_DIR$/../../practice/Object/API_DEMO/think_demo/Application/Runtime/Logs/Home/16_10_31.log" />
     </list>
     <ignored path="zhizhao.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,28 +111,7 @@
     <favorites_list name="zhizhao" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MemberAction.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Index/Lib/Action/MemberAction.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5565">
-              <caret line="265" column="44" selection-start-line="265" selection-start-column="44" selection-end-line="265" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comment.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Index/Tpl/Member/comment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-63">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -101,8 +147,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="261" />
-    <option name="y" value="81" />
+    <option name="x" value="248" />
+    <option name="y" value="185" />
     <option name="width" value="1500" />
     <option name="height" value="834" />
   </component>
@@ -148,20 +194,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="zhizhao" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhizhao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhizhao" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Conf" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -251,18 +283,18 @@
       <workItem from="1477641395146" duration="912000" />
       <workItem from="1477874702787" duration="624000" />
       <workItem from="1477889408468" duration="596000" />
-      <workItem from="1477893201602" duration="2638000" />
+      <workItem from="1477893201602" duration="4451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54781000" />
+    <option name="totallyTimeSpent" value="56594000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="261" y="81" width="1500" height="834" extended-state="1" />
+    <frame x="248" y="185" width="1500" height="834" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18263888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18263888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -610,14 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Index/Lib/Action/MemberAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5565">
-          <caret line="265" column="44" selection-start-line="265" selection-start-column="44" selection-end-line="265" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Conf/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -644,8 +668,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Index/Tpl/Member/comment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="546">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index/Lib/Action/MemberAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4998">
+          <caret line="265" column="44" selection-start-line="265" selection-start-column="44" selection-end-line="265" selection-end-column="44" />
           <folding />
         </state>
       </provider>
