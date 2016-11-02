@@ -5,7 +5,7 @@
 	public function _initialize(){
 		//后台登陆判断
 		if(!isset($_SESSION['admin_id'])){
-			$this->redirect('admin.php/Login/index');	
+			$this->redirect('admin.php/Login/index');
 		}
 	}
 	/*
