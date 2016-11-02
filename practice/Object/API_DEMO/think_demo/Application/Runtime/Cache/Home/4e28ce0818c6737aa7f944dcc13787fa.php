@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>天气查询</title>
-	<link rel="stylesheet" href="/s51/object06/api_demo/think_demo/Public/Dist/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="/s51/object06/api_demo/think_demo/Public/Dist/css/bootstrap-theme.min.css"> -->
+	<link rel="stylesheet" href="/practice/Object/API_DEMO/think_demo/Public/Dist/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="/practice/Object/API_DEMO/think_demo/Public/Dist/css/bootstrap-theme.min.css"> -->
 	<style>
 
 	</style>

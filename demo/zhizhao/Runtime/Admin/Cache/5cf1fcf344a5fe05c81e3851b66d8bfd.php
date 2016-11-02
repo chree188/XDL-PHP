@@ -1,0 +1,78 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/www.w3.org/1999/xhtml">
+<head>
+<title>详情列表</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/basic.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/ad.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.checkAll').click(function(){
+			var checkOne = $('.checkone');
+			$(this).attr('checked') ? checkOne.attr('checked','checked') : checkOne.removeAttr('checked');
+		});
+	})
+</script>
+</head>
+<body leftmargin="8" topmargin="8" background='__IMG__/allbg.gif'>
+    <!--快捷操作导航开始-->
+    <div class="kuaijie">
+        <div class="kuaijieTitle">&nbsp;栏目快捷操作</div>
+        <div class="caozuo">
+        	&nbsp;&nbsp;<a href="<?php echo U(APP_NAME .'/Ad/sortlist');?>" title="" class="kjsort" target="main">栏目分类管理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<a href="<?php echo U(APP_NAME .'/Ad/detailslist');?>" title="" class="kjcontent" target="main">栏目详情管理</a>
+        </div>
+    </div>
+    <!--快捷操作导航结束-->
+    <div class="art_list_title">
+    	<div class="sort_left fl">&nbsp;广告详情管理</div>
+        <div class="sort_right fr"><input type="button" value="添加广告" name="addSort" onclick="location.href='<?php echo U(APP_NAME .'/Ad/adddetails');?>'" />&nbsp;&nbsp;</div>
+        <div class="cb"></div>
+    </div>
+    <div class="art_list">
+    	<form method="POST" action="<?php echo U(APP_NAME .'/Ad/deletedetails/');?>" name="form">
+        	<table class="tableList">
+            	<thead>
+                	<tr class="top_thead">
+                    	<th width="60">&nbsp;选择</th>
+                        <th width="40" align="center">ID</th>
+                        <th align="left">广告名称</th>
+                        <th width="80" align="left">状态</th>
+                        <th align="left" width="250">所属分类</th>
+                         <th align="left" width="200">广告开始-结束时间</th>
+                        <th width="200" align="left">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<?php if(is_array($list)): foreach($list as $key=>$data): ?><tr>
+                            <td align="left"><input type="checkbox" name="id[]" value="<?php echo ($data["id"]); ?>" class="checkone"/></td>
+                            <td align="center"><?php echo ($data["id"]); ?></td>
+                            <td align="left"><a href="<?php echo U(APP_NAME .'/Ad/editDetails/',array('id'=>$data['id']));?>" style="<?php if(in_array(($data["use_tag"]), explode(',',"0"))): ?>color:red;<?php else: ?>color:black;<?php endif; ?>"><?php echo ($data["ad_name"]); ?></a></td>
+                            <td align="left"><?php if(in_array(($data['status']), explode(',',"1"))): ?>启用<?php else: ?>禁用<?php endif; ?></td>
+                            <td align="left"><?php if(!empty($data['sort_name'])): echo ($data["sort_name"]); else: ?>未分类<?php endif; ?></td>
+                            <td align="left"><?php echo (date("Y-m-d", $data["start_time"])); ?> - <?php echo (date("Y-m-d", $data["end_time"])); ?></td>
+                            <td align="left">&nbsp;<a href="<?php echo U(APP_NAME .'/Ad/editdetails/',array('id'=>$data['id']));?>" title="编辑数据">编辑数据</a><!--&nbsp;|&nbsp;<a href="<?php echo U(APP_NAME .'/Ad/deleteAd/',array('id'=>$data['id']));?>" title="删除数据">删除数据</a>--></td>
+                        </tr><?php endforeach; endif; ?>
+                </tbody>
+                <tfoot>
+                	<tr>
+                    	<td align="left"><input type="checkbox" class="checkAll"  /></td>
+                        <td colspan="6"><input type="submit"  value="删除所选" class="deleteAll" /></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+    <div class="fpage">
+    	<?php echo ($page); ?>
+    </div>
+    <div class="tip" style="text-align:center;">
+    	<span class="note">*  广告位超出广告的时间以后，将不会在前台显示；所以，请定期检查广告位是否在使用中</span>
+    	<br/>
+        <span class="note">* 广告名称变红，表示当前该广告不会在前台显示，原因可能是因为管理员手动禁用了该广告，也可能是广告尚未上线或到期了</span>
+    </div>
+</body>
+</html>
