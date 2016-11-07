@@ -103,11 +103,11 @@ class AdminAction extends CommonAction {
 	public function memberPoint() {
 		if(IS_POST){
 			$POST = deep_htmlspecialchars($_POST);
-			$file = './Conf/Config.php';
+			$file = './Conf/config.php';
 			$config = array_merge(include $file, array_change_key_case($POST,CASE_UPPER)); //把表单中发送过来的键值小写-大写
 			$str = "<?php\r\nreturn " .var_export($config,true) .";\r\n?>"; //把数组转成字符串 方便下面函数重新写入
 			if(file_put_contents($file,$str)){
-				$this->success('修改成功',$_SERVER['HTTP_REFERER']);	
+				$this->success('修改成功',$_SERVER['HTTP_REFERER']);
 			}else{
 				$this->error('修改失败');
 			}

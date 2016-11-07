@@ -28,7 +28,7 @@ return array (
   ),
   'POINT_LOGIN' => '5',
   'POINT_ARTICLE' => '5',
-  'POINT_COMMENT' => '1',
+  'POINT_COMMENT' => '2',
   'POINT_LETTER' => '2',
   'POINT_COLLECT' => '1',
   'POINT_ZAN' => '1',
