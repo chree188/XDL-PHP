@@ -1,0 +1,23 @@
+/* CSS Document */
+/*这是后来自己定义的样式 ------文章模块*/
+.kuaijie{width:98%; background:#FFFCED; border:1px solid #FEDBA1; margin:8px;}
+.kuaijie .kuaijieTitle{width:100%; background:url(../images/dlgtitle.gif) repeat-x left top; height:28px; line-height:28px; color:#3B5995; font-weight:bold; font-size:14px; font-family:宋体; margin-bottom:8px;} 
+.kuaijie .caozuo{width:100%; height:50px; line-height:50px;}
+.kuaijie .caozuo a.kjsort{background:url(../images/addnews.gif) no-repeat left center; padding-left:18px; height:18px; width:auto;}
+.kuaijie .caozuo a.kjcontent{background:url(../images/manage1.gif) no-repeat left center; padding-left:18px; height:18px; width:auto;}
+.art_list_title{width:98%; margin:8px; height:28px; border:1px solid #FEDBA1; font-size:14px; line-height:28px; background:url(../images/dlgtitle.gif) repeat-x left top;}
+.sort_left{font-weight:bold; color:#3B5995; font-size:14px;}
+.sort_right{font-size:14px; }
+.sort_right input{padding: 0px 5px; height: 22px; line-height: 22px; border-top: 1px #DCDCDC solid; border-left: 1px #DCDCDC solid; border-right: 1px #888888 solid; border-bottom: 1px #888888 solid;}
+.art_list{width:98%; height:auto; margin:8px; }
+.art_list table.tableList{text-align:left; width:100%;}
+.art_list table.tableList thead{height:30px;}
+.art_list table.tableList thead th{border:1px solid #FEDBA1; height:30px; line-height:30px; font-size:13px; color:#111;}
+.art_list table.tableList tbody{width:100%; height:auto;}
+.art_list table.tableList tbody tr,.art_list table.tableList tbody td{border:1px solid #FEDBA1; height:30px; line-height:30px; font-size:13px;}
+.art_list table.tableList tfoot{width:100%; height:30px;}
+.art_list table.tableList tfoot tr,.art_list table.tableList tbody td{border:1px solid #FEDBA1; height:30px; line-height:30px; font-size:13px;}
+.addsort_content{width:98%; height:auto; margin:8px;}
+.addsort_content tr,.art_list table.tableList tbody td{border:1px solid #FEDBA1; height:40px; line-height:40px; font-size:13px;}
+.fpage{width:98%; height:30px; margin:8px; line-height:30px; font-size:12px !important; font-family:'微软雅黑'; background:#FFFCED; border:1px solid #FEDBA1; text-align:center;}
+.fpage a:hover{color:red; text-decoration:underline;}

@@ -1,0 +1,97 @@
+<script charset="utf-8" src="__STATIC__/Autogrow/jquery-1.8.0.min.js"></script>
+
+<script type="text/javascript" language="javascript">
+    /* 确定执行删除操作 */
+    function getDelete(string) {
+        if (confirm(string)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /* 按钮点击提交到指定页面 */
+    function btnSubmit(form, url) {
+        $(form).attr('action', url).submit();
+    }
+</script>
+<script type="text/javascript">
+    var validate = {
+        title: false,
+        sort_id: false,
+        reward: false,
+        content: false
+    };
+    $(function () {
+        //js验证
+        var addArticle = $('form[name=addArticle]');
+        addArticle.submit(function () {
+            var isOk = validate.title && validate.sort_id && validate.reward;
+            if (isOk) {
+                return true;
+            }
+            $('input[name=title]', addArticle).trigger('blur');
+            $('select[name=sort_id]', addArticle).trigger('blur');
+            $('select[name=reward]', addArticle).trigger('blur');
+            return false;
+        });
+        //验证标题
+        $('input[name=title]', addArticle).blur(function () {
+            var title = $(this).val();
+            var msgContent = $(this).next('.msgContent');
+            if (title == '') {
+                msg = '标题不能为空';
+                msgContent.html(msg).removeClass('none');
+                validate.title = false;
+                return;
+            } else {
+                msg = '';
+                msgContent.html(msg).addClass('none');
+                validate.title = true;
+                return;
+            }
+        }).keyup(function () {
+            $(this).triggerHandler('blur');
+        });
+        //验证分类
+        $('select[name=sort_id]', addArticle).blur(function () {
+            var sort_id = $(this).val();
+            var msgContent = $(this).next('.msgContent');
+            if (sort_id == 0) {
+                msg = '请选择分类';
+                msgContent.html(msg).removeClass('none');
+                validate.sort_id = false;
+                return;
+            } else {
+                msg = '';
+                msgContent.html(msg).addClass('none');
+                validate.sort_id = true;
+                return;
+            }
+        }).keyup(function () {
+            $(this).triggerHandler('blur');
+        }).focus(function () {
+            $(this).triggerHandler('blur');
+        });
+        //验证悬赏金币
+        $('select[name=reward]', addArticle).blur(function () {
+            var reward = $(this).val();
+            var msgContent = $(this).next('.msgContent');
+            if (reward == -1) {
+                msg = '请选择悬赏的金币';
+                msgContent.html(msg).removeClass('none');
+                validate.reward = false;
+                return;
+            } else {
+                msg = '';
+                msgContent.html(msg).addClass('none');
+                validate.reward = true;
+                return;
+            }
+        }).keyup(function () {
+            $(this).triggerHandler('blur');
+        }).focus(function () {
+            $(this).triggerHandler('blur');
+        });
+    })
+</script>

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* 演示页样式 */
+#page { padding:50px;}
+
+.hyBox {}
+.hyBox th { background:#EEF3F8;  border:1px #6790AD solid; font-weight:normal;}
+.hyBox td { border:1px #6790AD solid; line-height:30px; padding:0 5px;}
+
+.demoBox1 { width:400px;}
+.demoBox2 { width:1000px;}
+pre { width:85%; font-size:12px; line-height:14px; background:#FFFDDE; border:1px #DBDBDB solid; padding:5px;}
+
+.demo1 .mainBox { width:306px; height:468px; border:1px #DBDBDB solid; overflow:hidden;}
+.demo1 .mainBox .content { height:100%;}
+.demo1 .mainBox .content li { width:300px; height:150px; padding:3px;}
+.demo1 .mainBox .content li img { width:300px; height:150px;}
+.demo1 .mainBox .trigger { right:10px; bottom:10px;}
+.demo1 .mainBox .trigger li { float:left; display:inline; margin-left:3px; width:18px; height:18px; line-height:18px; cursor:pointer; text-align:center; background:#6790AD; border:1px #EEF3F8 solid; color:#FFFFFF;}
+.demo1 .mainBox .trigger li.selected { background:#FF8800;}
+
+.demo2 .mainBox { width:918px; height:156px; border:1px #DBDBDB solid; overflow:hidden;}
+.demo2 .mainBox .content { height:100%;}
+.demo2 .mainBox .content li { width:300px; height:150px; padding:3px; float:left; display:inline;}
+.demo2 .mainBox .content li img { width:300px; height:150px;}
+.demo2 .mainBox .trigger { right:10px; bottom:10px;}
+.demo2 .mainBox .trigger li { float:left; display:inline; margin-left:3px; width:18px; height:18px; line-height:18px; cursor:pointer; text-align:center; background:#6790AD; border:1px #EEF3F8 solid; color:#FFFFFF;}
+.demo2 .mainBox .trigger li.selected { background:#FF8800;}
+
+.demo3 .mainBox { width:406px; height:206px; border:1px #DBDBDB solid; overflow:hidden;}
+.demo3 .mainBox .content { height:100%;}
+.demo3 .mainBox .content li { width:400px; height:200px; padding:3px; position:absolute; left:0; top:0;}
+.demo3 .mainBox .content li img { width:400px; height:200px;}
+.demo3 .mainBox .trigger { right:10px; bottom:10px;}
+.demo3 .mainBox .trigger li { float:left; display:inline; margin-left:3px; width:18px; height:18px; line-height:18px; cursor:pointer; text-align:center; background:#6790AD; border:1px #EEF3F8 solid; color:#FFFFFF;}
+.demo3 .mainBox .trigger li.selected { background:#FF8800;}

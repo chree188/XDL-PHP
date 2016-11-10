@@ -1,0 +1,44 @@
+/* CSS Document */
+/*轮播*/
+.bannerBox { width:648x; height:240px; position:relative; z-index:10; overflow:hidden; margin-bottom:20px;}
+.bannerBox .focusBox { width:648px; height:240px; position:relative; z-index:20; overflow:hidden;}
+.bannerBox .focusBox ul { width:648px; height:240px; position:relative; z-index:999;}
+.bannerBox .focusBox ul li { width:648px; height:240px; display:inline; float:left;}
+.bannerBox .focusBox img { width:648px; height:240px;}
+.bannerBox .triggerBox .triggerbtn1 { width:35px; height:22px; background:#000; position:absolute; left:0; bottom:0; z-index:9999; color:#FFF; filter:alpha(opacity=50); -moz-opacity:0.50; opacity:0.50; cursor:pointer; text-align:center; }
+.bannerBox .triggerBox .triggerbtn2 { width:35px; height:22px; background:#000; position:absolute; right:0; bottom:0; z-index:9999; color:#FFF; filter:alpha(opacity=50); -moz-opacity:0.50; opacity:0.50; cursor:pointer; text-align:center; }
+.description .des_content { width:300px; height:30px; background:#3B3839; position:absolute; right:0; top:80px; z-index:9999; filter:alpha(opacity=50); -moz-opacity:0.50; opacity:0.50; line-height:30px; font-size:16px; font-family: "Microsoft yahei","Century Gothic"; font-weight:500; }
+.description .des_content a { color:#FFF;}
+/*尚未解决盒子*/
+.noAnswer { width: 648px; margin-bottom:20px; }
+.noAnswer .title { width:648px; margin-bottom:12px;  }
+.noAnswer .titleLeft { width:200px; text-align:left; border-left:3px solid #13a4fe; padding-left:5px;  }
+.noAnswer .titleLeft h3 { width:200px; height:14px; line-height:14px; text-align:left; color:#111; font-size:14px; font-weight:500;  }
+.noAnswer .titleRight { width:400px; text-align:right; color:#444; font-size:14px;  }
+.noAnswer .titleRight a { color:#454545;  }
+.noAnswer .titleRight a:hover { color:#EC6941; text-decoration:underline;  }
+.noAnswerList { width:648px; }
+.noAnswerList ul li{ width:648px; position:relative; z-index:10; padding: 10px 0 10px 2px; }
+.noAnswerList ul li a { color: #111; font-size: 13px; font-family: "Microsoft yahei","Century Gothic"; }
+.noAnswerList ul li a:hover { color:#EC6941; }
+.noAnswerList ul li .other { position:absolute; right:10px; bottom:10px; z-index:20; font-size:12px; font-family: "Microsoft yahei","Century Gothic"; color: #888; }
+/*悬赏最高*/
+.pointBox { width: 648px; }
+.pointBox .title { width:648px; margin-bottom:12px;  }
+.pointBox .titleLeft { width:200px; text-align:left; border-left:3px solid #13a4fe; padding-left:5px;  }
+.pointBox .titleLeft h3 { width:200px; height:14px; line-height:14px; text-align:left; color:#111; font-size:14px; font-weight:500;  }
+.pointBox .titleRight { width:400px; text-align:right; color:#444; font-size:14px;  }
+.pointBox .titleRight a { color:#454545;  }
+.pointBox .titleRight a:hover { color:#EC6941; text-decoration:underline;  }
+.pointList { width:648px; }
+.pointList ul li{ width:648px; position:relative; z-index:10; padding: 10px 0 10px 2px; }
+.pointList ul li a { color: #000; font-size: 13px; font-family: "Microsoft yahei","Century Gothic"; }
+.pointList ul li a:hover { color:#EC6941; }
+.pointList ul li .other { position:absolute; right:10px; bottom:10px; z-index:20; font-size:12px; font-family: "Microsoft yahei","Century Gothic"; color: #454545; }
+/*右边 登录盒子*/
+.loginGo { width:305px; background:#F8F8F8; margin-bottom:15px; }
+.loginGo form { width:270px; margin:0 auto; padding:12px 0; }
+.loginGo .loginText { width:250px; height:18px; border: 1px solid #ddd; border-radius: 3px; padding: 5px 10px; }
+.loginGo .loginBtn { color: #fff; font-size: 14px; line-height: 22px; border: 0 none; padding: 4px 15px; background: #13a4fe; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; cursor: pointer; }
+.loginGo  a.registerGo { position:absolute; bottom:15px; right:15px; z-index:30; color:#999; font-size:13px; }
+.loginGo  a.registerGo:hover { text-decoration:underline; }

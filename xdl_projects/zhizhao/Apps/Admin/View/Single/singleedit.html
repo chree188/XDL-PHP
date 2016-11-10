@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>添加单页</title>
+<meta charset="utf-8" />
+<link rel="Shortcut Icon" href="__IMG__/favicon.ico" type="image/x-icon"/>
+<link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/basic.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/travel.css" rel="stylesheet" type="text/css" />
+<link href='__STATIC__/editor/themes/default/default.css' rel='stylesheet' type='text/css' />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/kindeditor.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="__STATIC__/editor/lang/zh_CN.js"></script>
+<script type="text/javascript" language="javascript">
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('#contentid');
+		K('#uploadid').click(function() {
+			editor.loadPlugin('image', function() {
+				editor.plugin.imageDialog({
+					imageUrl : K('#picid').val(),
+					clickFn : function(url, title, width, height, border, align) {
+						K('#picid').val(url);
+						editor.hideDialog();
+							}
+						});
+					});
+				});
+	});
+</script>
+</head>
+<body leftmargin="8" topmargin="8" background='__IMG__/allbg.gif'>
+    <!--快捷操作导航开始-->
+    <div class="kuaijie">
+        <div class="kuaijieTitle">&nbsp;栏目快捷操作</div>
+        <div class="caozuo">
+        	&nbsp;&nbsp;<a href="<{:U(APP_NAME .'/Single/singlelist')}>" title="" class="kjsort" target="main">单页列表管理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<a href="<{:U(APP_NAME .'/Single/singleadd')}>" title="" class="kjcontent" target="main">添加单页</a>
+        </div>
+    </div>
+    <!--快捷操作导航结束-->
+    <div class="art_list_title">
+    	<div class="sort_left">&nbsp;栏目详情管理--编辑单页</div>
+    </div>
+    <div class="addsort_content">
+    	<form action="__APP__/Admin/Single/singleedit" method="POST">
+        <input type="hidden" name="id" value="<{$data.id}>">
+        	<table>
+            	<tr>
+                	<td>单页名称：</td>
+                    <td><input type="text" class="input1 w300" name="title" value="<{$data.title}>" /></td>
+                </tr>
+                <tr>
+                	<td>单页状态：</td>
+                    <td>
+                    	<input type="radio" name="status" value="1" <in name="data.status" value="1">checked="checked"</in> />&nbsp;启用&nbsp;
+                        <input type="radio" name="status" value="0" <in name="data.status" value="0">checked="checked"</in> />&nbsp;禁用&nbsp;
+                        <span class="note">* 单页被禁用以后，前台将不会显示该条单页</span>
+                    </td>
+                </tr>
+                <tr>
+                	<td>内容编辑：</td>
+                    <br/>
+                    <!-- 加载百度UE编辑器 -->
+                    <!-- 加载编辑器的容器 -->
+                    <td><textarea id="container" name="content" style="width:700px; height:300px;"><{$data.content}></textarea></td>
+                    <!-- 编辑器配置文件 -->
+                    <script type="text/javascript" src="__STATIC__/Editor/ueditor.config.js"></script>
+                    <!-- 编辑器源码文件 -->
+                    <script type="text/javascript" src="__STATIC__/Editor/ueditor.all.js"></script>
+                    <!-- 实例化编辑器 -->
+                    <script type="text/javascript">
+                        var ue = UE.getEditor('container',{
+                            toolbars: [
+                                ['undo','redo','fontfamily','fontsize','forecolor','bold','italic','insertorderedlist','justifyleft',
+                                    'justifycenter','autotypeset','emotion','date','link','drafts','removeformat','horizontal','source','insertcode',]
+                            ],
+                            elementPathEnabled:false,
+                        });
+                    </script>
+                    <!-- 加载百度UE编辑器END -->
+                </tr>
+                <tr>
+                	<td colspan="2" align="center"><input type="submit" value="保存添加" class="input1w70" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

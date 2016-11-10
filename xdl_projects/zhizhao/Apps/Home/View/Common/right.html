@@ -1,0 +1,108 @@
+<!--发布问题BOX-->
+<div class="publishBox">
+    <a href="<{:U(APP_NAME.'/List/addAsk')}>" title="发布问题">&nbsp;+ 发布问题</a>
+</div>
+<!--TAB选项卡推荐开始-->
+<div class="recommendBox">
+    <div class="recommendTitle">
+        <ul>
+            <li class="currentRec">最新. . .</li>
+            <li>最悬赏. . .</li>
+            <li>最支招. . .</li>
+        </ul>
+    </div>
+    <div class="recommendCon">
+        <ul>
+            <li class="recommendBest">
+                <div class="tabContent">
+                    <dl>
+                        <volist name="newAllList" id="va">
+                            <dd><a href="__APP__/home/List/detail/id/<{$va.id}>.html" title="<{$va.ask_name}>"><{$va.ask_name|msubstr=0,18}></a>
+                            </dd>
+                        </volist>
+                    </dl>
+                </div>
+            </li>
+            <li class="recommendBest none">
+                <div class="tabContent">
+                    <dl>
+                        <volist name="rewardAllList" id="va">
+                            <dd><a href="__APP__/home/List/detail/id/<{$va.id}>.html" title="<{$va.ask_name}>"><{$va.ask_name|msubstr=0,18}></a>
+                            </dd>
+                        </volist>
+                    </dl>
+                </div>
+            </li>
+            <li class="recommendBest none">
+                <div class="tabContent">
+                    <dl>
+                        <volist name="commentAllList" id="va">
+                            <dd><a href="__APP__/home/List/detail/id/<{$va.id}>.html" title="<{$va.ask_name}>"><{$va.ask_name|msubstr=0,18}></a>
+                            </dd>
+                        </volist>
+                    </dl>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--TAB选项卡推荐结束-->
+<hr>
+<!-- 高德地图 -->
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=80dfdfa94b2b1e619d324f73f058aaa3"></script>
+    <div class="row">
+        <div class="col-md-6" id="container" style="width:300px; height:200px;"></div>
+    </div>
+<script type="text/javascript">
+    /* 高德地图API */
+    //设置打开中心点位置
+    var map = new AMap.Map('container',{
+        zoom: 10,
+        center: [121.440007,31.292884]
+    });
+    //添加地图控件 工具条、比例尺、类别切换
+    AMap.plugin(['AMap.Scale',],
+            function(){
+                map.addControl(new AMap.Scale());
+            });
+    //设置点标记为 兄弟连校区
+    var marker = new AMap.Marker({
+        position: [121.440007,31.292884],
+        map:map
+    });
+    //信息窗体创建
+    var infowindow = new AMap.InfoWindow({
+        content: '<h3><img src=\" https://www.lgstatic.com/thumbnail_300x300/i/image/M00/35/23/CgqKkVdX6CGAa1WGAACAuS8CBBU058.jpg\" width="35" height="30"/>' +
+        '支招网Team</h1><div>地址 : 上海市闸北区万荣路1188号<br>龙软信息服务外包产业园F栋4楼S51期。</div>',
+        offset: new AMap.Pixel(0, -30),
+        size:new AMap.Size(230,0)
+    });
+    //显示信息窗体
+    infowindow.open(map,new AMap.LngLat(121.440007,31.292884));
+    //鼠标点击marker弹出信息窗体
+    AMap.event.addListener(marker, 'click', function() {
+        infowindow.open(map,new AMap.LngLat(121.440007,31.292884));
+    });
+
+    /*//构建信息窗体中显示的内容
+        //构建信息窗体中显示的内容
+        var info = [];
+        info.push("<div><img src=\" https://www.lgstatic.com/thumbnail_300x300/i/image/M00/35/23/CgqKkVdX6CGAa1WGAACAuS8CBBU058.jpg\" /> ");
+        info.push("<div style=\"padding:0px 0px 0px 4px;\"><b>支招网Team</b>");
+        info.push("电话 : 021-12345678   邮编 : 123456");
+        info.push("地址 : 上海市闸北区万荣路1188号龙软万荣基地F懂4楼S51期.</div></div>");
+
+        var infoWindow = new AMap.InfoWindow({
+            content: info.join("<br/>")  //使用默认信息窗体框样式，显示信息内容
+        });
+        infoWindow.open(map, [121.440007,31.292884]);
+
+        //鼠标点击marker弹出信息窗体
+        AMap.event.addListener(marker, 'click', function() {
+            infoWindow.open(map, marker.getPosition());
+        });*/
+</script>
+<div class="page-header">
+    <h4>支招网Team工作室地址:兄弟连上海校区</h4>
+</div>
+<!--高德地图结束-->

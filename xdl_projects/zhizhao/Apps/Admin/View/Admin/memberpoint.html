@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>积分奖励规则设置</title>
+<meta charset="utf-8" />
+<link rel="Shortcut Icon" href="__IMG__/favicon.ico" type="image/x-icon"/>
+<link href="__CSS__/base.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/basic.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/site.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="__JS__/common.js"></script>
+</head>
+<body leftmargin="8" topmargin="8" background='__IMG__/allbg.gif'>
+    <!--快捷操作导航开始-->
+    <div class="siteBox">
+        <div class="siteTitle">&nbsp;积分奖励规则设置</div>
+        <div class="siteContent">
+        	<form action="<{:U(APP_NAME.'/memberpoint/')}>" method="POST">
+            	<table>
+                	<tr>
+                    	<td>登录：</td>
+                        <td><input type="text" class="input1 w250" name="point_login" value="<{$Think.config.point_login}>" /></td>
+                    </tr>
+                	<tr>
+                    	<td>发布文章：</td>
+                        <td><input type="text" class="input1 w250" name="point_article" value="<{$Think.config.point_article}>" /></td>
+                    </tr>
+                	<tr>
+                    	<td>评论：</td>
+                        <td><input type="text" class="input1 w250" name="point_comment" value="<{$Think.config.point_comment}>" /></td>
+                    </tr>
+                	<tr>
+                    	<td>私信：</td>
+                        <td><input type="text" class="input1 w250" name="point_letter" value="<{$Think.config.point_letter}>" /></td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" align="center"><input type="submit" value="提交保存" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!--快捷操作导航结束-->
+</body>
+</html>
